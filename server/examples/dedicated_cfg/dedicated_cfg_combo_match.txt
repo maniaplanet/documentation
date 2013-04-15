@@ -80,7 +80,7 @@
 		<gsp_name></gsp_name>						<!-- Game Server Provider name and info url -->
 		<gsp_url></gsp_url>						<!-- If you're a server hoster, you can use this to advertise your services -->
 
-		<xmlrpc_port>5000</xmlrpc_port>
+		<xmlrpc_port>5050</xmlrpc_port>
 		<xmlrpc_allowremote>False</xmlrpc_allowremote>			<!-- If you specify an ip adress here, it'll be the only accepted adress. this will improve security. -->
 		
 		<blacklist_url></blacklist_url>
