@@ -1,12 +1,10 @@
 How to start a lobby ?
 ======================
 
-
 Requirements
 ------------
 
-* The title installed on your computer. You can get titles from NADEO on the manialink `store`.
-* Windows or Linux dedicated server.
+* Windows or Linux dedicated server with SSH access.
 * MySQL server.
 
 Initial set up
@@ -27,18 +25,31 @@ For the example, we will have **lobbyLogin** (with the password **lobbyPassword*
 ##### Lobby
 
 * Download the proposed [dedicated_cfg_combo_lobby.txt](examples/dedicated_cfg/dedicated_cfg_combo_lobby.txt) file. Search `CHANGE_ME` and replace with the correct values.
+* Copy the config file to `DedicatedServerDir/UserData/Config/`.
 * Start the server with the command line : 
 	* Unix: 	`./ManiaPlanetServer /dedicated_cfg=dedicated_cfg_combo_lobby.txt /game_settings="MatchSettings/SMStormCombo1.txt"
 	* Windoww: 	`ManiaPlanetServer.exe /dedicated_cfg=dedicated_cfg_combo_lobby.txt /game_settings="MatchSettings/SMStormCombo1.txt"
 
-##### Match server
+##### Match server(s)
 
 * Download the proposed [dedicated_cfg_combo_match.txt](examples/dedicated_cfg/dedicated_cfg_combo_match.txt) file. Search `CHANGE_ME` and replace with the correct values.
+* Copy the config file to `DedicatedServerDir/UserData/Config/`.
 * Start the server with the command line : 
 	* Unix: 	`./ManiaPlanetServer /dedicated_cfg=dedicated_cfg_combo_match.txt /game_settings="MatchSettings/SMStormCombo1.txt"
 	* Windoww: 	`ManiaPlanetServer.exe /dedicated_cfg=dedicated_cfg_combo_match.txt /game_settings="MatchSettings/SMStormCombo1.txt"
 
 #### 2 - Starting ManiaLive
 
+##### Lobby
+
 * Download latest ManiaLive + matchmaking plugin : http://code.google.com/p/manialive/downloads/list?q=label:matchmaking
-* Download the proposed [manialive_combo_lobby.ini](examples/manialive/manialive_combo_lobby.ini) 
+* Download the proposed [manialive_combo_lobby.ini](examples/manialive/manialive_combo_lobby.ini) and copy it to the `ManiaLiveDir/Config`
+* Copy the config file to the `ManiaLiveDir/Config`.
+* Start manialib : `php bootstrapper.php --manialive_cfg=manialive_combo_lobby.ini`
+
+##### Match server(s)
+
+* Download latest ManiaLive + matchmaking plugin : http://code.google.com/p/manialive/downloads/list?q=label:matchmaking
+* Download the proposed [manialive_combo_match.ini](examples/manialive/manialive_combo_match.ini) and copy it to the `ManiaLiveDir/Config/`
+* Copy the config file to the `ManiaLiveDir/Config`.
+* Start manialib : `php bootstrapper.php --manialive_cfg=manialive_combo_match.ini`
