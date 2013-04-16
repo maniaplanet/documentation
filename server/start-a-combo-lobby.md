@@ -45,11 +45,11 @@ For the example, we will have **lobbyLogin** (with the password **lobbyPassword*
 * Download latest ManiaLive + matchmaking plugin : http://code.google.com/p/manialive/downloads/list?q=label:matchmaking
 * Download the proposed [manialive_combo_lobby.ini](examples/manialive/manialive_combo_lobby.ini) and copy it to the `ManiaLiveDir/Config`
 * Copy the config file to the `ManiaLiveDir/Config`.
-* Start manialib : `php bootstrapper.php --manialive_cfg=manialive_combo_lobby.ini`
+* Start ManiaLive : `php bootstrapper.php --manialive_cfg=manialive_combo_lobby.ini`
 
 ##### Match server(s)
 
 * Download latest ManiaLive + matchmaking plugin : http://code.google.com/p/manialive/downloads/list?q=label:matchmaking
 * Download the proposed [manialive_combo_match.ini](examples/manialive/manialive_combo_match.ini) and copy it to the `ManiaLiveDir/Config/`
 * Copy the config file to the `ManiaLiveDir/Config`.
-* Start manialib : `php bootstrapper.php --manialive_cfg=manialive_combo_match.ini`
+* Start ManiaLive : `php bootstrapper.php --manialive_cfg=manialive_combo_match.ini`
