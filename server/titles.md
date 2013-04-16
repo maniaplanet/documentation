@@ -13,6 +13,9 @@ This table can help you starting a server :
   <tr>
     <td>Elite</td><td>SMStormElite@nadeolabs</td><td>MatchSettings/SMStormElite1.txt</td>
   </tr>
+  <tr>
+    <td>Joust</td><td>SMStormJoust@nadeolabs</td><td>MatchSettings/SMStormJoust1.txt</td>
+  </tr>
 </table>
 
 *Your title is not on the list? Contact the title author*
