@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<playlist>
+	<gameinfos>
+		<game_mode>0</game_mode>
+		<chat_time>10000</chat_time>
+		<finishtimeout>1</finishtimeout>
+		<allwarmupduration>0</allwarmupduration>
+		<disablerespawn>0</disablerespawn>
+		<forceshowallopponents>0</forceshowallopponents>
+		<script_name>ShootMania\Joust.Script.txt</script_name>
+		<rounds_pointslimit>50</rounds_pointslimit>
+		<rounds_usenewrules>0</rounds_usenewrules>
+		<rounds_forcedlaps>0</rounds_forcedlaps>
+		<rounds_pointslimitnewrules>5</rounds_pointslimitnewrules>
+		<team_pointslimit>5</team_pointslimit>
+		<team_maxpoints>6</team_maxpoints>
+		<team_usenewrules>0</team_usenewrules>
+		<team_pointslimitnewrules>5</team_pointslimitnewrules>
+		<timeattack_limit>300000</timeattack_limit>
+		<timeattack_synchstartperiod>0</timeattack_synchstartperiod>
+		<laps_nblaps>5</laps_nblaps>
+		<laps_timelimit>0</laps_timelimit>
+		<cup_pointslimit>100</cup_pointslimit>
+		<cup_roundsperchallenge>5</cup_roundsperchallenge>
+		<cup_nbwinners>3</cup_nbwinners>
+		<cup_warmupduration>2</cup_warmupduration>
+	</gameinfos>
+
+	<hotseat>
+		<game_mode>0</game_mode>
+		<time_limit>300000</time_limit>
+		<rounds_count>5</rounds_count>
+	</hotseat>
+
+	<filter>
+		<is_lan>1</is_lan>
+		<is_internet>1</is_internet>
+		<is_solo>0</is_solo>
+		<is_hotseat>0</is_hotseat>
+		<sort_index>1000</sort_index>
+		<random_map_order>0</random_map_order>
+	</filter>
+
+	<mode_script_settings>
+		<!-- Default : <setting name="S_UseScriptCallbacks" type="boolean" value="0"/> -->
+		<!-- Default : <setting name="S_RoundPointsToWin" type="integer" value="7"/> -->
+		<!-- Default : <setting name="S_RoundPointsGap" type="integer" value="2"/> -->
+		<!-- Default : <setting name="S_RoundPointsLimit" type="integer" value="11"/> -->
+		<!-- Default : <setting name="S_RoundTimeLimit" type="integer" value="0"/> -->
+		<!-- Default : <setting name="S_PoleTimeLimit" type="integer" value="60"/> -->
+		<!-- Default : <setting name="S_MatchPointsToWin" type="integer" value="3"/> -->
+		<!-- Default : <setting name="S_MatchPointsGap" type="integer" value="0"/> -->
+		<!-- Default : <setting name="S_MatchPointsLimit" type="integer" value="3"/> -->
+		<!-- Default : <setting name="S_MatchmakingSleep" type="integer" value="0"/> -->
+		<!-- Default : <setting name="S_UsePlayerClublinks" type="boolean" value="0"/> -->
+		<!-- Default : <setting name="S_ForceClublinkTeam1" type="text" value=""/> -->
+		<!-- Default : <setting name="S_ForceClublinkTeam2" type="text" value=""/> -->
+		<!-- Default : <setting name="S_UseLobby" type="boolean" value="0"/> -->
+		<!-- Default : <setting name="S_LobbyTimePerMap" type="integer" value="86400"/> -->
+		<!-- Default : <setting name="S_UseWarmup" type="boolean" value="0"/> -->
+	</mode_script_settings>
+
+	<startindex>1</startindex>
+	<map>
+		<file>ShootMania\Joust\Joust - Alleys.Map.Gbx</file>
+		<ident>JSvMLrHV74tAhJKXNqlnTPnQmu0</ident>
+	</map>
+	<map>
+		<file>ShootMania\Joust\Joust - BrightSide.Map.Gbx</file>
+		<ident>FtorCSdoNqBFQXaFDdjzKGCjwR5</ident>
+	</map>
+	<map>
+		<file>ShootMania\Joust\Joust - DangerousWaters.Map.Gbx</file>
+		<ident>oObFRq06C4dGmCqWSZC60p2XNvl</ident>
+	</map>
+	<map>
+		<file>ShootMania\Joust\Joust - DuskDuel.Map.Gbx</file>
+		<ident>seTlibFDTYZJossvU_queP6sduj</ident>
+	</map>
+	<map>
+		<file>ShootMania\Joust\Joust - MorningRuins.Map.Gbx</file>
+		<ident>KMN1zXUSFFuwQLbnFeeW1EKAlyi</ident>
+	</map>
+	<map>
+		<file>ShootMania\Joust\Joust - NightGlider.Map.Gbx</file>
+		<ident>ukcBZujPFxGpPljmS_02ZwMRKW8</ident>
+	</map>
+	<map>
+		<file>ShootMania\Joust\Joust - RideTheHill.Map.Gbx</file>
+		<ident>efL7usgCwULc6yG4OBk7dq4KoE6</ident>
+	</map>
+	<map>
+		<file>ShootMania\Joust\Joust - Tangled.Map.Gbx</file>
+		<ident>7_v7S3Yls3J9vObjlpUQyCEE4V0</ident>
+	</map>
+	<map>
+		<file>ShootMania\Joust\Joust - WatchYourStep.Map.Gbx</file>
+		<ident>KFwqU202SvhjXGYy_tTJqhG4D80</ident>
+	</map>
+</playlist>

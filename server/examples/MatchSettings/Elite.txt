@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<playlist>
+	<gameinfos>
+		<game_mode>0</game_mode>
+		<chat_time>10000</chat_time>
+		<finishtimeout>1</finishtimeout>
+		<allwarmupduration>0</allwarmupduration>
+		<disablerespawn>0</disablerespawn>
+		<forceshowallopponents>0</forceshowallopponents>
+		<script_name>ShootMania\Elite.Script.txt</script_name>
+		<rounds_pointslimit>50</rounds_pointslimit>
+		<rounds_usenewrules>0</rounds_usenewrules>
+		<rounds_forcedlaps>0</rounds_forcedlaps>
+		<rounds_pointslimitnewrules>5</rounds_pointslimitnewrules>
+		<team_pointslimit>5</team_pointslimit>
+		<team_maxpoints>6</team_maxpoints>
+		<team_usenewrules>0</team_usenewrules>
+		<team_pointslimitnewrules>5</team_pointslimitnewrules>
+		<timeattack_limit>300000</timeattack_limit>
+		<timeattack_synchstartperiod>0</timeattack_synchstartperiod>
+		<laps_nblaps>5</laps_nblaps>
+		<laps_timelimit>0</laps_timelimit>
+		<cup_pointslimit>100</cup_pointslimit>
+		<cup_roundsperchallenge>5</cup_roundsperchallenge>
+		<cup_nbwinners>3</cup_nbwinners>
+		<cup_warmupduration>2</cup_warmupduration>
+	</gameinfos>
+
+	<hotseat>
+		<game_mode>0</game_mode>
+		<time_limit>300000</time_limit>
+		<rounds_count>5</rounds_count>
+	</hotseat>
+
+	<filter>
+		<is_lan>1</is_lan>
+		<is_internet>1</is_internet>
+		<is_solo>0</is_solo>
+		<is_hotseat>0</is_hotseat>
+		<sort_index>1000</sort_index>
+		<random_map_order>0</random_map_order>
+	</filter>
+
+	<mode_script_settings>
+		<!-- Default : <setting name="S_UseScriptCallbacks" type="boolean" value="0"/> -->
+		<!-- Default : <setting name="S_Mode" type="integer" value="0"/> -->
+		<!-- Default : <setting name="S_TimeLimit" type="integer" value="60"/> -->
+		<!-- Default : <setting name="S_TimePole" type="integer" value="15"/> -->
+		<!-- Default : <setting name="S_TimeCapture" type="real" value="1.5"/> -->
+		<!-- Default : <setting name="S_WarmUpDuration" type="integer" value="90"/> -->
+		<!-- Default : <setting name="S_MapWin" type="integer" value="2"/> -->
+		<!-- Default : <setting name="S_SubmatchWin" type="integer" value="3"/> -->
+		<!-- Default : <setting name="S_TurnGap" type="integer" value="2"/> -->
+		<!-- Default : <setting name="S_TurnLimit" type="integer" value="8"/> -->
+		<!-- Default : <setting name="S_DeciderTurnLimit" type="integer" value="16"/> -->
+		<!-- Default : <setting name="S_SleepMultiplier" type="real" value="1"/> -->
+		<!-- Default : <setting name="S_MatchmakingSleep" type="integer" value="0"/> -->
+		<!-- Default : <setting name="S_UsePlayerClublinks" type="boolean" value="0"/> -->
+		<!-- Default : <setting name="S_ForceClublinkTeam1" type="text" value=""/> -->
+		<!-- Default : <setting name="S_ForceClublinkTeam2" type="text" value=""/> -->
+		<!-- Default : <setting name="S_TurnWin" type="integer" value="6"/> -->
+		<!-- Default : <setting name="S_UseDraft" type="boolean" value="0"/> -->
+		<!-- Default : <setting name="S_DraftBanNb" type="integer" value="4"/> -->
+		<!-- Default : <setting name="S_DraftPickNb" type="integer" value="3"/> -->
+		<!-- Default : <setting name="S_UseEliteB2" type="boolean" value="0"/> -->
+		<!-- Default : <setting name="S_UseWeaponSelection" type="boolean" value="0"/> -->
+		<!-- Default : <setting name="S_DisplayLaser" type="boolean" value="1"/> -->
+		<!-- Default : <setting name="S_UseLobby" type="boolean" value="0"/> -->
+		<!-- Default : <setting name="S_LobbyTimePerMap" type="integer" value="86400"/> -->
+	</mode_script_settings>
+
+	<startindex>1</startindex>
+	<map>
+		<file>ShootMania\Elite\Elite - WindOfChange.Map.Gbx</file>
+		<ident>uiS9Q7DcDLCfC82LqQVgys6pGRj</ident>
+	</map>
+	<map>
+		<file>ShootMania\Elite\Elite - WatchYourBack.Map.Gbx</file>
+		<ident>hfkFkY7TjLjZshC4Eb2ZDr0z6Ab</ident>
+	</map>
+	<map>
+		<file>ShootMania\Elite\Elite - TheCastle.Map.Gbx</file>
+		<ident>Av1BTegBaTkrMcry4WMbPMN1a38</ident>
+	</map>
+	<map>
+		<file>ShootMania\Elite\Elite - SeaOfDreams.Map.Gbx</file>
+		<ident>xfagF0IWAKjmnxu_7RDJAH_aVXe</ident>
+	</map>
+	<map>
+		<file>ShootMania\Elite\Elite - Fortress.Map.Gbx</file>
+		<ident>NI5pdSjqul65zaGE7yCUK79G1g0</ident>
+	</map>
+	<map>
+		<file>ShootMania\Elite\Elite - FaceToFace.Map.Gbx</file>
+		<ident>7D6boGBaDtOB4TRraeXecM468bk</ident>
+	</map>
+	<map>
+		<file>ShootMania\Elite\Elite - EyeOfTheStorm.Map.Gbx</file>
+		<ident>gDaAoUadV9sk4ROucUMqO9QVPzd</ident>
+	</map>
+	<map>
+		<file>ShootMania\Elite\Elite - Excursion.Map.Gbx</file>
+		<ident>77e6s1ADiufGlp67zoxeXrW36S9</ident>
+	</map>
+	<map>
+		<file>ShootMania\Elite\Elite - CrossRoads.Map.Gbx</file>
+		<ident>JmWo4IpTNgJP4ob8B_655qBPBz2</ident>
+	</map>
+	<map>
+		<file>ShootMania\Elite\Elite - Collided.Map.Gbx</file>
+		<ident>DT0uNMXI42yIhVu4rnzd_PZj5Dg</ident>
+	</map>
+	<map>
+		<file>ShootMania\Elite\Elite - CastleCrasher.Map.Gbx</file>
+		<ident>figLzm0577FC2u6DmVvj7axTfbe</ident>
+	</map>
+</playlist>
