@@ -62,7 +62,7 @@ How to change the maps used ?
 
 In order to change the map pool, you have to cutomize the MatchSettings file instead of using the embedded one. 
 
-* The default MatchSettings is available here: [Combo](example/MatchSettings/Combo.txt)
+* The default MatchSettings is available here: [Combo](examples/MatchSettings/Combo.txt)
 * Copy and paste it in the following directory: `DedicatedServerDir/UserData/Maps/MatchSettings` and add or remove the maps you want.
 * Start the server with the modified command line: 
 	* Unix: 	`./ManiaPlanetServer /dedicated_cfg=dedicated_cfg_combo_lobby.txt /game_settings="MatchSettings/Combo.txt"`
