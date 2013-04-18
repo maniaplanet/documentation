@@ -1,5 +1,5 @@
-Basic server informations
-=========================
+Basic server information
+========================
 
 You can download latest ManiaPlanet via this permalink : http://files.maniaplanet.com/ManiaPlanet2Beta/ManiaPlanetBetaServer_latest.zip
 
