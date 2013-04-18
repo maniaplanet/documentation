@@ -6,16 +6,13 @@ ManiaPlanet dedicated server command line
     <th>Option Name</th><th>Role</th>
   </tr>
   <tr>
-    <td>/dedicated_cfg=xxx</td><td>Specify a configuration file "dedicated_cfg.txt" to use. (xxx = name of the file in GameData/Config/)</td>
+    <td>/dedicated_cfg=xxx</td><td>Specify a configuration file "dedicated_cfg.txt" to use. (xxx = name of the file in UserData/Config/)</td>
   </tr>
   <tr>
-    <td>/game_settings=xxx </td><td>Specify a match settings file to use. (xxx = absolute file name or relative to GameData/Tracks/)</td>
+    <td>/game_settings=xxx </td><td>Specify a match settings file to use. (xxx = absolute file name or relative to UserData/Maps/MatchSettings)</td>
   </tr>
   <tr>
     <td>/lan</td><td>Must be specified to join or create a LAN game (that is, not an internet server)</td>
-  </tr>
-  <tr>
-    <td>/game_settings=xxx </td><td>Specify a match settings file to use. (xxx = absolute file name or relative to GameData/Tracks/)</td>
   </tr>
   <tr>
     <td>/forceip=xxx(:xx)</td><td>Forces the public ip address to this value. optionally with a port as well.</td>
