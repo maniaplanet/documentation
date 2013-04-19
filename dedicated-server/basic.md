@@ -10,7 +10,7 @@ The minimal command line is `ManiaPlanetServer /Title=TitleId /dedicated_cfg=Ded
 *[Complete list of ManiaPlanetServer arguments](command-line.md)*
 
 * *TitleId*: the identifier of the title you want to start. Check the table below to get the correct value.
-* *DedicatedCfgFile*: the server configuration file. It is a text (XML) file located in your `ManiaPlanetServer/UserData/Config` folder. You should configure at least the **server name** (tag ` <name>`), and your **dedicated login** (tag `login`) and **dedicated password** (tag `password`).
+* *DedicatedCfgFile*: the server configuration file. It is a text (XML) file located in your `ManiaPlanetServer/UserData/Config` folder. You should configure at least the **server name** (tag ` <name>`), and your **dedicated login** (tag `<login>`) and **dedicated password** (tag `<password>`).
 * *MatchSettingsFile*: it is the game mode configuration. There are *MatchSettings* file bundled in each title, use the table below to get the default one. 
 
 This table summerize the information you need:
@@ -38,4 +38,17 @@ This table summerize the information you need:
     <td>Joust</td><td>SMStormJoust@nadeolabs</td><td>MatchSettings/SMStormJoust1.txt</td>
   </tr>
 </table>
+
+Advanced
+--------
+
+### Server administration
+
+There is no console (like *rcon* in *Source* games) bundled in the ManiaPlanetServer. Instead a powerful XML-RPC interface is provided by the server. In order to use it, you will need a **Server Controller**.
+
+Nadeo is developing and supporting *ManiaLive*, but other are available:
+
+* ManiaLive: https://code.google.com/p/manialive/
+
+
 
