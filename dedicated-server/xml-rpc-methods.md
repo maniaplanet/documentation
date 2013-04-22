@@ -1,0 +1,1 @@
+[Latest XML-RPC methods available here](methods/2013-04-17.md)
