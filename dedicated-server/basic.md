@@ -69,7 +69,7 @@ The **XML-RPC port (5000) SHOULD NOT BE OPEN** unless you change the `<authoriza
 
 If you run multiple servers on the same host, ports numbers are automatically increased by one for each instance: second server will have 2351 for general usage, 3451 for P2P et 5001 for xml-rpc.
 
-**You can test if your network configuration is correct using: http://www.yougetsignal.com/tools/open-ports/**
+*You can test if your network configuration is correct using: http://www.yougetsignal.com/tools/open-ports/*
 
 
 Advanced
