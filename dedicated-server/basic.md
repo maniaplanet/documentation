@@ -32,6 +32,9 @@ This table summerize the information you need:
     <td>Storm</td><td>SMStorm</td><td><em>Check the ManiaPlanetServer/UserData/Maps/MatchSettings/ folder</em></td>
   </tr>
   <tr>
+    <td>Royal</td><td>SMStormRoyal@nadeolabs</td><td>MatchSettings/Royal.Script.txt</td>
+  </tr>
+  <tr>
     <td>Combo</td><td>SMStormCombo@nadeolabs</td><td>MatchSettings/SMStormCombo1.txt</td>
   </tr>
   <tr>
