@@ -51,7 +51,7 @@ ManiaPlanet dedicated server command line
 	<td colspan="2"></td>
   </tr>
   <tr>
-    <td>/verbose_rpc_full</td><td>(linux) Doesn't detach the process.</td>
+    <td>/verbose_rpc_full</td><td>(Debug option) Display the whole contents of the xml-rpc requests the dedicated server receives.</td>
   </tr>
   <tr>
     <td>/verbose_rpc </td><td>(Debug option) Displays the xml-rpc requests the dedicated server receives, but only the name of the XmlRpc? command and some parameters.</td>
