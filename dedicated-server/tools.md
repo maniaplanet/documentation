@@ -45,7 +45,7 @@ Dedicated server tools
 <td>FAST 4</td><td>Slig</td><td><a href="http://www.tm-forum.com/viewforum.php?f=126">Info</a></td><td><a href="http://slig.info/fast4.0/3rd_party_plugins/">Repository</a></td>
 </tr>
 <tr>
-<td>XAseco 2</td><td>Xymph </td><td>http://www.xaseco.org</td><td><a href="http://www.tm-forum.com/viewforum.php?f=127">Forum</a></td><td><a href="http://plugins.xaseco.org/browse2.php">Repository</a></td>
+<td>XAseco 2</td><td>Xymph </td><td>http://www.xaseco.org</td><td><a href="http://plugins.xaseco.org/browse2.php">Repository</a></td>
 </tr>
 <tr>
 <td></td><td> </td><td> </td>
