@@ -52,12 +52,12 @@ Dedicated server tools
 </tr>
 </table>
 
-Other known ServerControllers
+Other known Server Controllers
+
 - TmGery2 by gery
 - BOG by mikey
 - Blue Server Control by ??
 - JSControl by Tiggs
-- 
 
 ## Scripts
 
