@@ -1,0 +1,64 @@
+---
+---
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- meta -->
+        <meta charset="utf-8" />
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="{{ site.author.name }}">
+        <meta name="viewport" content="width=device-width">
+
+
+        <!-- include -->
+        <link rel="stylesheet" href="/css/styles.css" />
+
+        <title>{{ page.title }}</title>
+    </head>
+    <body>
+      <header id="top">
+        <div class="wrapper">
+        <div id="gobywan"></div>
+          <ul>
+            <li><a class="extra" href="/equipe.html">L'équipe</a></li>
+            <li><a class="extra" href="/apropos.html">A propos</a></li>
+            <li><a class="extra" href="/galerie.html">Galerie</a></li>
+            <li><a class="extra" href="/projets/">Projets</a></li>
+            <li><a class="extra" href="/coupes/">Coupes</a></li>
+          </ul>
+          <h1><a href="/">{{ site.name }}</a></h1>
+        </div>
+      </header>
+      <div class="wrapper">
+            {{ content }}
+
+            {% if paginator.total_pages > 1 %}
+            <nav>
+                {% if paginator.previous_page %}
+                <a href="{{ site.url }}page{{paginator.previous_page}}">Previous</a>
+                {% else %}
+                <span>Previous</span>
+                {% endif %}
+                {% if paginator.next_page %}
+                <a href="{{ site.url }}page{{paginator.next_page}}" class="right">Next</a>
+                {% else %}
+                <span class="right">Next</span>
+                {% endif %}
+            </nav>
+            {% endif %}
+
+            <footer>
+              <a class="top" href="#top">Top</a>
+              Powered by <a href="https://github.com/mojombo/jekyll/">Jekyll</a> | Theme <a href="https://github.com/fmonniot/jekyll-holo-theme">Holo</a> by <a href="http://francois.monniot.eu">François Monniot</a>
+            </footer>
+        </div>
+        <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+        <script src="/js/main.js"></script>
+        {% if page.url == "/galerie.html" %}
+        <script src="/js/galleria/galleria-1.2.9.min.js"></script>
+        <script src="/js/galleria/plugins/flickr/galleria.flickr.min.js"></script>
+        <script src="/js/galleria.js"></script>
+        {% endif %}
+    </body>
+</html>
