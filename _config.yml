@@ -1,3 +1,4 @@
 name: ManiaPlanet documentation
 pygments: true
 timezone: Europe/Paris
+markdown: rdiscount
