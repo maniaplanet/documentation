@@ -1,0 +1,190 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100);
+
+@import "pygments_solarized.css";
+body {
+  background: #dedede;
+  color: #000000;
+  font-family: Roboto, Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #1171b2;
+}
+a:hover {
+  color: #44c6f6;
+}
+p {
+  font-size: 1em;
+  font-weight: 300;
+  margin: 0 0 1em 0;
+}
+h1 {
+  color: #393935;
+  font-size: 2em;
+  font-weight: 100;
+  line-height: 1em;
+  margin: 0;
+}
+h2 {
+  color: #5b5b57;
+  font-size: 1.75em;
+  font-weight: 100;
+  line-height: 1em;
+  margin: 0;
+}
+footer a {
+  color: #888888;
+}
+footer a:hover {
+  color: #44c6f6;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font: inherit;
+}
+table tr {
+  background-color: #FFFFFF;
+  border-top: 1px solid #CCCCCC;
+}
+table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+table th,
+table td {
+  border: 1px solid #CCCCCC;
+  padding: 6px 13px;
+}
+.wrapper {
+  margin: 0 auto;
+  padding: 1em;
+  width: 70%;
+}
+.right {
+  float: right;
+}
+header#top {
+  background: #ffffff;
+  box-shadow: 0 2px 6px #aaaaaa;
+  margin-bottom: 1em;
+}
+header#top .wrapper {
+  width: 70%;
+}
+header#top ul {
+  float: right;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header#top ul li {
+  float: right;
+}
+header#top ul li a {
+  display: inline-block;
+  font-size: 1em;
+  color: #1171b2;
+  padding: 0.5em;
+}
+header#top ul li a:hover {
+  color: #44c6f6;
+}
+.wrapper nav {
+  padding: 0 8% 1em;
+}
+.wrapper nav span {
+  color: #999999;
+}
+.wrapper footer {
+  border-top: 1px solid #d2d2c8;
+  color: #9a9a9a;
+  font-size: 0.7em;
+  padding: 1em 0.3em 0 0.5em;
+}
+.wrapper footer a {
+  color: #888888;
+}
+.wrapper footer a:hover {
+  color: #44c6f6;
+}
+.wrapper footer .top {
+  float: right;
+}
+.wrapper article {
+  padding: 1em 4.5em;
+  position: relative;
+}
+.wrapper article .content {
+  background: #ffffff;
+  border: 1px solid #d2d2c8;
+  border-radius: 4px;
+  box-shadow: 0 4px 2px -2px #aaaaaa;
+  padding: 1em;
+}
+.wrapper article .content header {
+  min-height: 3em;
+  min-width: 100%;
+}
+.wrapper article .content section {
+  padding: 0 1em;
+}
+.wrapper article .content section h1,
+.wrapper article .content section h2,
+.wrapper article .content section h3 {
+  padding: 0.5em 0;
+}
+.wrapper article .content footer {
+  border-top: 1px solid #d2d2c8;
+  color: #cacaca;
+  font-size: 0.8em;
+  margin: 0 1em;
+}
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: 94%;
+  }
+}
+@media screen and (max-width: 800px) {
+  header#top {
+    margin-bottom: 0;
+  }
+  .wrapper article {
+    padding: 1em;
+  }
+}
+@media screen and (max-width: 480px) {
+  header#top .wrapper {
+    padding: 0.2em 0;
+    width: 98%;
+  }
+  header#top .wrapper ul a {
+    padding-right: 0;
+  }
+  .wrapper {
+    padding: 0;
+    width: 100%;
+  }
+  .wrapper article .content {
+    padding: 0.5em;
+  }
+  .wrapper article .content section {
+    padding: 0 0.5em;
+  }
+}
+@media screen and (max-width: 320px) {
+  .wrapper article {
+    padding: 1em 0;
+  }
+  .wrapper article .content {
+    border-left: none;
+    border-radius: 0;
+    border-right: none;
+  }
+  .wrapper article .content section {
+    padding: 0;
+  }
+}
