@@ -1,4 +1,4 @@
-ManiaPlanet dedicated server command line
+﻿ManiaPlanet dedicated server command line
 =========================================
 
 <table>

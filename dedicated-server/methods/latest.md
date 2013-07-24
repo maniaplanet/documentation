@@ -1,4 +1,4 @@
-|Method (arguments)|Return Type|Help|
+﻿|Method (arguments)|Return Type|Help|
 |---|---|---|
 |**system.listMethods()**|array|Return an array of all available XML-RPC methods on this server.|<br/>
 |**system.methodSignature(string)**|array|Given the name of a method, return an array of legal signatures. Each signature is an array of strings.  The first item of each signature is the return type, and any others items are parameter types.|<br/>

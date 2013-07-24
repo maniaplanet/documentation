@@ -1,4 +1,4 @@
----
+﻿---
 layout: static
 title: Basic dedicated guide
 description: Quick start

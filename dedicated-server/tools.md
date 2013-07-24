@@ -1,4 +1,4 @@
----
+﻿---
 layout: static
 title: Frequent errors dedicated
 description: FAQ
