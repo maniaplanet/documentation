@@ -1,4 +1,10 @@
-﻿ManiaPlanet dedicated server command line
+---
+layout: static
+title: Frequent errors dedicated
+description: FAQ
+---
+
+ManiaPlanet dedicated server command line
 =========================================
 
 <table>

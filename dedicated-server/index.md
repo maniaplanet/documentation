@@ -1,4 +1,4 @@
-﻿---
+---
 layout: static
 title: Dedicated server
 description: Dedicated server help
