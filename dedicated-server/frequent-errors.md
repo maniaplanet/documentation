@@ -1,3 +1,9 @@
+---
+layout: static
+title: Frequent errors dedicated
+description: FAQ
+---
+
 ManiaPlanetServer frequent errors
 =================================
 

@@ -1,3 +1,9 @@
+---
+layout: static
+title: Basic dedicated guide
+description: Quick start
+---
+
 Quick Start
 -----------
 note: Dedicated server package contains both the Linux and the Windows versions of the dedicated server.
