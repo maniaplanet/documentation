@@ -56,8 +56,8 @@ make sure that the tags are in place, if there is error with xml filesyntax, the
 
 **Sections on Config-file:**
 
-```
-  <authorization_levels>
+
+	<authorization_levels>
 		<level>
 			<name>SuperAdmin</name>
 			<password>SuperAdmin</password>
@@ -71,17 +71,19 @@ make sure that the tags are in place, if there is error with xml filesyntax, the
 			<password>User</password>
 		</level>
 	</authorization_levels>
-```
+
+	
 Authorization levels section is used for authenticating the dedicated server controllers. 
 Change this only if you open the xml-rpc port later to public.
 
-```
-  <masterserver_account>
+
+	<masterserver_account>
 		<login>   </login>
 		<password>   </password>
 		<validation_key>   </validation_key>
 	</masterserver_account>
-```
+
+	
 Masterserver_account section: this is where you fill in your dedicated server login and password that you created earlier. 
 If you want to enable Planets transactions for your server fill in the `<validation_key>`, use your own ManiaPlanet account validation key here. The validation key has been sent in email message when you created your ManiaPlanet account. If you have forgotten your validation key you can get a new one [here](https://player.maniaplanet.com/account/validation-code). You also need to send in-game mail with initial 100 Planets to the server login. After this the donate plugins works and server planets transactions are enabled. 
 
@@ -156,7 +158,7 @@ Starting the server
 
 The minimal command line to start the server is `ManiaPlanetServer /Title=TitleId /dedicated_cfg=DedicatedCfgFile /game_settings=MatchSettingsFile`.
 
-*[Complete list of ManiaPlanetServer arguments](command-line.md)*
+*[Complete list of ManiaPlanetServer arguments](command-line.html)*
 
 * *TitleId*: the identifier of the title you want to start. Check the table above to get the correct value.
 * *DedicatedCfgFile*: the server configuration file. It is a text (XML) file located in your `ManiaPlanetServer/UserData/Config` folder. You should configure at least the **server name** (tag ` <name>`), and your **dedicated login** (tag `<login>`) and **dedicated password** (tag `<password>`).
@@ -181,9 +183,10 @@ Advanced
 
 ### Server administration
 
-There is no console (like *rcon* in *Source* games) bundled in the ManiaPlanetServer. Instead a powerful XML-RPC interface is provided by the server. In order to use it, you will need a [Server Controller](tools.md#server-controllers).
+There is no console (like *rcon* in *Source* games) bundled in the ManiaPlanetServer. Instead a powerful XML-RPC interface is provided by the server.
 
-Nadeo is developing and supporting *ManiaLive* | [Website](https://code.google.com/p/manialive/) | [QuickStart](manialive.md)
+In order to use it, you will need a [Server Controller](tools.html#server-controllers).
+
 
 
 

@@ -21,6 +21,12 @@ ManiaPlanet dedicated server command line
 	<td colspan="2"></td>
   </tr>
   <tr>
+    <td>/servername=xxx </td><td>Override the server name</td>
+  </tr>
+  <tr>
+	<td colspan="2"></td>
+  </tr>
+  <tr>
 	<td>/login=xxx</td><td>Dedicated login to do an internet server</td>
   </tr>
   <tr>
