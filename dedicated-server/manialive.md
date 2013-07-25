@@ -1,3 +1,9 @@
+---
+layout: static
+title: ManiaLive quick start
+description: ManiaLive - ManiaPlanet server  controller
+---
+
 ManiaLive
 =========
 
@@ -37,7 +43,7 @@ Command Line
     <td>--user=xxx</td><td> xxx represents the name of the user to use for the communication. It should be User, Admin or SuperAdmin</td>
   </tr>
   <tr>
-    <td>password=xxx</td><td>xxx represents the password relative to the user selected</td>
+    <td>--password=xxx</td><td>xxx represents the password relative to the user selected</td>
   </tr>
   <tr>
     <td>--manialive_cfg=xxx</td><td>xxx represents the name of the ManiaLive configuration file. This file should be present in the ManiaLive config file. </td>

@@ -10,7 +10,10 @@ description: Dedicated server help
 * [Command line](command-line.html)
 * [Frequent errors](frequent-errors.html)
 
+# Dedicated tools
+
 * [Dedicated tools](tools.html)
+* [ManiaLive](manialive.html)
 
 # XML-RPC reference
 
