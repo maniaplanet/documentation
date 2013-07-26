@@ -34,7 +34,7 @@ description: FAQ
 <th>Controller name</th><th>Author</th><th>Info/Download</th><th>Plugins repository</th>
 </tr>
 <tr>
-<td>[ManiaLive](manialive.html)</td><td>NadeoLive</td><td><a href="http://www.manialive.com/">http://www.manialive.com</a>a></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=47">Forum</a></td>
+<td><a href="http://maniaplanet.github.io/documentation/dedicated-server/manialive.html">ManiaLive</a></td><td>NadeoLive</td><td><a href="http://www.manialive.com/">http://www.manialive.com</a></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=47">Forum</a></td>
 </tr>
 <tr>
 <td>FoxControl</td><td> matrix142, jensoo7, Libero, cyrilw</td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=328">Info</a></td><td>All plugins are installed by default</td>
@@ -46,7 +46,7 @@ description: FAQ
 <td>FAST 4</td><td>Slig</td><td><a href="http://www.tm-forum.com/viewforum.php?f=126">Info</a></td><td><a href="http://slig.info/fast4.0/3rd_party_plugins/">Repository</a></td>
 </tr>
 <tr>
-<td>XAseco 2</td><td>Xymph </td><td><a href="http://www.xaseco.org/">http://www.xaseco.org</a>a></td><td><a href="http://plugins.xaseco.org/browse2.php">Repository</a></td>
+<td>XAseco 2</td><td>Xymph </td><td><a href="http://www.xaseco.org/">http://www.xaseco.org</a></td><td><a href="http://plugins.xaseco.org/browse2.php">Repository</a></td>
 </tr>
 <tr>
 <td>TMGery</td><td>Gery</td><td><a href="http://forum.maniaplanet.com/viewtopic.php?f=261&t=6464">Forum</a></td><td></td>
