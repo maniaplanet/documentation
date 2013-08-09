@@ -6,8 +6,8 @@ description: ManiaScript help
 
 # General
 
-* [How to generate the documentation](generate-doc.html)
-* [Useful links](links.html)
+* [How to generate the documentation](general/generate-doc.html)
+* [Useful links](general/links.html)
 
 # Tutorial
 
