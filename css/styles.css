@@ -1,13 +1,15 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,100);
-
 @import "pygments_solarized.css";
 body {
   background: #dedede;
   color: #000000;
-  font-family: Roboto, Arial, sans-serif;
+  font-family: Arial, sans-serif;
   font-size: 1em;
   margin: 0;
   padding: 0;
+}
+code {
+  background-color: rgb(238, 238, 238);
+  padding: 1px 5px;
 }
 a {
   text-decoration: none;
@@ -134,7 +136,7 @@ header#top ul li a:hover {
 .wrapper article .content section h1,
 .wrapper article .content section h2,
 .wrapper article .content section h3 {
-  padding: 0.5em 0;
+  padding: 0;
 }
 .wrapper article .content footer {
   border-top: 1px solid #d2d2c8;
