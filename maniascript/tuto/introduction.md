@@ -124,19 +124,18 @@ ManiaPlanet stocks its data in two directories. The original Nadeo data are save
 Something to be aware of is, if a file has the same name in the same folder in `ProgramData\ManiaPlanet` and `Documents\ManiaPlanet`, ManiaPlanet ignores the one in `ProgramData\ManiaPlanet` and uses the one in `Documents\ManiaPlanet` instead. It's really useful if you want to customize some elements, like the scripts. You don't have to modify the original ones, just copy them at the same location inside your ManiaPlanet directory.
 
 The `Scripts` folder uses this structure:
-```
-Scripts
-|-EditorPlugins
-|-Libs
-  |-Nadeo
-    |-ShootMania
-    |-TrackMania
-|-MapTypes
-  |-ShootMania
-  |-TrackMania
-|-Modes
-  |-ShootMania
-  |-TrackMania
-```
+
+    Scripts
+    |-EditorPlugins
+    |-Libs
+      |-Nadeo
+        |-ShootMania
+        |-TrackMania
+    |-MapTypes
+      |-ShootMania
+      |-TrackMania
+    |-Modes
+      |-ShootMania
+      |-TrackMania
 
 By default your `Scripts` folder will be empty. You'll have to create the sub-folders yourself. You're free to organize them as you wish, but it's highly recommended to stick to the structure presented above. Especially because of the merge of the two ManiaPlanet folders.
