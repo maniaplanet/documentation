@@ -109,9 +109,11 @@ You can find the latest [Nadeo's scripts on GitHub](https://github.com/maniaplan
 It's the default path, so maybe you changed it during the installation process. The ProgramData directory is an hidden directory, so you have to edit your Windows settings to display it.
 
 Inside the folder you will find a lot of .zip. They contain the default ManiaPlanet data. The ones we are interested in are:
+
 - ShootMania_extras.zip
 - TrackMania_extras.zip
 - ManiaPlanet_extras.zip
+
 If you unzip these directories on your desktop you'll find a `Scripts` folder inside with all the Nadeo scripts.
 
 
