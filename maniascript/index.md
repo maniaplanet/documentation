@@ -25,3 +25,8 @@ description: ManiaScript help
         - [External tools](tuto/introduction.html#external-tools)
     - [How to extract the Nadeo script](tuto/introduction.html#how-to-extract-the-nadeo-scripts)
     - [Script folder structure](tuto/introduction.html#script-folder-structure)
+- [Your first script](tuto/your-first-script.html)
+    - [Create a basic script](tuto/your-first-script.html#create-a-basic-script)
+    - [Create a map](tuto/your-first-script.html#create-a-map)
+    - [Create a server](tuto/your-first-script.html#create-a-server)
+    - [Script review](tuto/your-first-script.html#script-review)
