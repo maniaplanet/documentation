@@ -133,6 +133,9 @@ header#top ul li a:hover {
 .wrapper article .content section {
   padding: 0 1em;
 }
+.wrapper article .content img {
+  max-width: 100%;
+}
 .wrapper article .content section h1,
 .wrapper article .content section h2,
 .wrapper article .content section h3 {
