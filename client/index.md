@@ -7,3 +7,4 @@ description: Maniaplanet client help
 # Maniaplanet client help
 
 * [Command line](command-line.html)
+* [ManiaPlanet debugger](debugger.html)
