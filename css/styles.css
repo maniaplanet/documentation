@@ -23,6 +23,9 @@ p {
   font-weight: 300;
   margin: 0 0 1em 0;
 }
+strong {
+  font-weight: 600;
+}
 h1 {
   color: #393935;
   font-size: 2em;
@@ -37,6 +40,28 @@ h2 {
   line-height: 1em;
   margin: 0;
 }
+
+/* Categories list */
+#categories ul {
+  padding: 0;
+  list-style-type: none;
+  width: 400px;
+} 
+
+#categories li {
+  border: 1px dotted #999;
+  border-width: 1px 0;
+  margin: 5px 0;
+}
+
+#categories li a { 
+  display: block;
+  font: bold 120% Arial, sans-serif;
+  padding: 5px;
+  text-decoration: none;
+}
+/* categories list end */
+
 footer a {
   color: #888888;
 }

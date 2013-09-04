@@ -6,21 +6,21 @@ description: Quick start
 
 Quick Start
 -----------
-note: Dedicated server package contains both the Linux and the Windows versions of the dedicated server.
+[class:note][Dedicated server package contains both the Linux and the Windows versions of the dedicated server].
 
-1. Download the latest dedicated server at http://files.maniaplanet.com/ManiaPlanet2Beta/ManiaPlanetBetaServer_latest.zip 
-2. Create a server account at [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers)
-3. Change the server settings *DedicatedCfgFile* to match your server account, this file needs to be located at `UserData\Config`
-4. Create a new (or use predefined) *MatchSettingsFile* this file needs to be located in `UserData\Maps\MatchSettings` 
-5. Create a new launcher to launch the server with commandline options: `ManiaPlanetServer /Title=TitleId /dedicated_cfg=DedicatedCfgFile /game_settings=MatchSettingsFile`
-6. (optional) Start a dedicated server controller
+1. [Download the latest dedicated server](http://files.maniaplanet.com/ManiaPlanet2Beta/ManiaPlanetBetaServer_latest.zip).
+2. Using your ManiaPlanet login, create a **server login** at [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers).
+3. Change the server settings *DedicatedCfgFile* to match your server login, this file needs to be located at `UserData\Config`.
+4. Create a new (or use predefined) *MatchSettingsFile* this file needs to be located in `UserData\Maps\MatchSettings`. 
+5. Create a new launcher to launch the server with commandline options: `ManiaPlanetServer /Title=TitleId /dedicated_cfg=DedicatedCfgFile /game_settings=MatchSettingsFile`.
+6. (optional) Start a dedicated server controller.
 
 
-####Dedicated Server Account
+####Dedicated Server Login
 
-To start an Internet server, you will need a **dedicated account** (which is different from your ManiaPlanet login). Dedicated server can be run in Lan-mode without a dedicated login defined. The **dedicated account** can be created at your [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers) and you can have multiple dedicated server accounts for each ManiaPlanet title. Just fill in the desired login-name and choose password and server location where you want it to bind. After you create the server, it binds to your maniaplanet account and you can edit the details and reset the password if needed.
+To start an Internet server, you will need a **dedicated login** (which is different from your ManiaPlanet login). Dedicated server can be run in Lan-mode without a dedicated login defined. The **dedicated login** can be created at your [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers) and you can have multiple dedicated server accounts for each ManiaPlanet title. Just fill in the desired login-name and choose password and server location where you want it to bind. After you create the server, it binds to your maniaplanet account and you can edit the details and reset the password if needed.
 
-The newly created dedicated servers will be at the lowest ladder rank which is 0-50k, this means the players visiting your server will gain ladder point up to 50 000. To raise the ladder rank of your server, visit the [advanced ladder server page](https://player.maniaplanet.com/advanced/ladder-servers) section in your ManiaPlanet player page.
+The newly created dedicated servers will be at the lowest ladder rank which is 0-50k, this means the players visiting your server will gain ladder point as long as they have no more than 50 000 ladder points. To raise the ladder rank of your server, visit the [advanced ladder server page](https://player.maniaplanet.com/advanced/ladder-servers) section in your ManiaPlanet player page.
 <table>
   <tr>
   <th>Description</th><th>Limits</th><th>Deposit</th>
@@ -52,7 +52,7 @@ Dedicated config file a XML-file, where the config variables goes between tags, 
 starting tag: `<tag>`
 ending tag: `</tag>`
 
-make sure that the tags are in place, if there is error with xml filesyntax, the dedicated just won't start without any error messages.
+Make sure that the tags are in place, if there is error with xml filesyntax, the dedicated just won't start without any error messages.
 
 **Sections on Config-file:**
 
@@ -114,7 +114,7 @@ If you run multiple servers on the same host, ports numbers are automatically in
 
 Note: if you run same dedicated server instance on the same host: the dedicated servers ports must start from 5000 and every new dedicated server port has to be increased by 1, and there can not be any gaps between the ports. Othervice you can't connect to any server...
 
-*You can test if your network configuration is correct using: http://www.yougetsignal.com/tools/open-ports/*
+*You can test if your network configuration is correct using: <http://www.yougetsignal.com/tools/open-ports/>*
 
 
 
