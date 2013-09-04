@@ -6,7 +6,7 @@ description: Quick start
 
 Quick Start
 -----------
-[class:note][Dedicated server package contains both the Linux and the Windows versions of the dedicated server].
+[Dedicated server package contains both the Linux and the Windows versions of the dedicated server][class:note].
 
 1. [Download the latest dedicated server](http://files.maniaplanet.com/ManiaPlanet2Beta/ManiaPlanetBetaServer_latest.zip).
 2. Using your ManiaPlanet login, create a **server login** at [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers).
