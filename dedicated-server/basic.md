@@ -8,12 +8,14 @@ Quick Start
 -----------
 [Dedicated server package contains both the Linux and the Windows versions of the dedicated server][class:note].
 
-1. [Download the latest dedicated server](http://files.maniaplanet.com/ManiaPlanet2Beta/ManiaPlanetBetaServer_latest.zip).
-2. Using your ManiaPlanet login, create a **server login** at [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers).
-3. Change the server settings *DedicatedCfgFile* to match your server login, this file needs to be located at `UserData\Config`.
-4. Create a new (or use predefined) *MatchSettingsFile* this file needs to be located in `UserData\Maps\MatchSettings`. 
-5. Create a new launcher to launch the server with commandline options: `ManiaPlanetServer /Title=TitleId /dedicated_cfg=DedicatedCfgFile /game_settings=MatchSettingsFile`.
-6. (optional) Start a dedicated server controller.
+Using Debian/Ubuntu? You can use our [APT repository](../tools/apt.html).
+
+1. Download the latest dedicated server at http://files.maniaplanet.com/ManiaPlanet2Beta/ManiaPlanetBetaServer_latest.zip 
+2. Create a server account at [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers)
+3. Change the server settings *DedicatedCfgFile* to match your server account, this file needs to be located at `UserData\Config`
+4. Create a new (or use predefined) *MatchSettingsFile* this file needs to be located in `UserData\Maps\MatchSettings` 
+5. Create a new launcher to launch the server with commandline options: `ManiaPlanetServer /Title=TitleId /dedicated_cfg=DedicatedCfgFile /game_settings=MatchSettingsFile`
+6. (optional) Start a dedicated server controller
 
 
 ####Dedicated Server Login
