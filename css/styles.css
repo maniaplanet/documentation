@@ -165,6 +165,7 @@ header#top ul li a:hover {
 .wrapper article .content section h2,
 .wrapper article .content section h3 {
   padding: 0;
+  margin-top: 0.2em;
 }
 .wrapper article .content footer {
   border-top: 1px solid #d2d2c8;

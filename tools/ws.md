@@ -4,4 +4,4 @@ title: WebServices
 description: TODO
 ---
 
-Nothing to see here
+*You can get help on the [ManiaPlanet Web Services forum](http://forum.maniaplanet.com/viewforum.php?f=282).*
