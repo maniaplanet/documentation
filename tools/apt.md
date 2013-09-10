@@ -7,10 +7,10 @@ description: ManiaPlanet APT repository
 ## Available packages
 
 package 				        | description								| install dir
---------------------------------|-------------------------------------------|-------------------------------------
+--------------------------------|-------------------------------------------|-------------------------------------------
 maniaplanet-server 				| ManiaPlanet dedicated package				| /opt/maniaplanet-server/
 manialiave              		| ManiaLive latest package (+ some plugins) | /opt/manialive/
-maniaplanet-competition-manager | ManiaPlanet competition manager			| /opt/maniaplanet-competition-manager
+maniaplanet-competition-manager | ManiaPlanet competition manager			| /var/lib/maniaplanet-competition-manager/
 
 ## Usage
 

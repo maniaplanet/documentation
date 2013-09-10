@@ -5,7 +5,7 @@ description: Maniaplanet client command line documentation
 ---
 
 Maniaplanet client command line
-=========================================
+===============================
 
 <table>
   <tr>
