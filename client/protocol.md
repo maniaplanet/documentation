@@ -21,7 +21,8 @@ maniaplanet://#qspectate=serverlogin 					| QuickSpectate a server to join as Sp
 maniaplanet://url 										| Open an URL into the in-game browser
 maniaplanet:///:manialink 								| Open a manialink into the in-game browser (please note the three slashes and the colon)
 maniaplanet://#qjoin=serverlogin@TITLEID				| Quickjoin a serverlogin through Titlepack 
-
+maniaplanet://#mailto=login								| Send a message to a preferred login
+maniaplanet://#score=scoremeta							| Link is generated in game to send scores that one can challenge on another computer
 
 ## TitleId?
 
