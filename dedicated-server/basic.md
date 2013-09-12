@@ -6,7 +6,9 @@ description: Quick start
 
 Quick Start
 -----------
-note: Dedicated server package contains both the Linux and the Windows versions of the dedicated server.
+[Dedicated server package contains both the Linux and the Windows versions of the dedicated server][class:note].
+
+Using Debian/Ubuntu? You can use our [APT repository](../tools/apt.html).
 
 1. Download the latest dedicated server at http://files.maniaplanet.com/ManiaPlanet2Beta/ManiaPlanetBetaServer_latest.zip 
 2. Create a server account at [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers)
@@ -16,11 +18,11 @@ note: Dedicated server package contains both the Linux and the Windows versions 
 6. (optional) Start a dedicated server controller
 
 
-####Dedicated Server Account
+####Dedicated Server Login
 
-To start an Internet server, you will need a **dedicated account** (which is different from your ManiaPlanet login). Dedicated server can be run in Lan-mode without a dedicated login defined. The **dedicated account** can be created at your [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers) and you can have multiple dedicated server accounts for each ManiaPlanet title. Just fill in the desired login-name and choose password and server location where you want it to bind. After you create the server, it binds to your maniaplanet account and you can edit the details and reset the password if needed.
+To start an Internet server, you will need a **dedicated login** (which is different from your ManiaPlanet login). Dedicated server can be run in Lan-mode without a dedicated login defined. The **dedicated login** can be created at your [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers) and you can have multiple dedicated server accounts for each ManiaPlanet title. Just fill in the desired login-name and choose password and server location where you want it to bind. After you create the server, it binds to your maniaplanet account and you can edit the details and reset the password if needed.
 
-The newly created dedicated servers will be at the lowest ladder rank which is 0-50k, this means the players visiting your server will gain ladder point up to 50 000. To raise the ladder rank of your server, visit the [advanced ladder server page](https://player.maniaplanet.com/advanced/ladder-servers) section in your ManiaPlanet player page.
+The newly created dedicated servers will be at the lowest ladder rank which is 0-50k, this means the players visiting your server will gain ladder point as long as they have no more than 50 000 ladder points. To raise the ladder rank of your server, visit the [advanced ladder server page](https://player.maniaplanet.com/advanced/ladder-servers) section in your ManiaPlanet player page.
 <table>
   <tr>
   <th>Description</th><th>Limits</th><th>Deposit</th>
@@ -48,14 +50,14 @@ The newly created dedicated servers will be at the lowest ladder rank which is 0
 *DedicatedCfgFile* is located at `UserData\Config`.
 To run multiple servers, just use the same server with different commandline arguments to start the servers.
 
-Dedicated config file a XML-file, where the config variables goes between tags, which are 
-starting tag: `<tag>`
-ending tag: `</tag>`
+Dedicated config file a XML-file, where the config variables goes between tags, which are:
 
-make sure that the tags are in place, if there is error with xml filesyntax, the dedicated just won't start without any error messages.
+* starting tag: `<tag>`
+* ending tag: `</tag>`
+
+Make sure that the tags are in place, if there is error with xml filesyntax, the dedicated just won't start without any error messages. You can copy paste the content in an (xml validator)[http://www.validome.org/xml/] to verify it.
 
 **Sections on Config-file:**
-
 
 	<authorization_levels>
 		<level>
@@ -85,7 +87,7 @@ Change this only if you open the xml-rpc port later to public.
 
 	
 Masterserver_account section: this is where you fill in your dedicated server login and password that you created earlier. 
-If you want to enable Planets transactions for your server fill in the `<validation_key>`, use your own ManiaPlanet account validation key here. The validation key has been sent in email message when you created your ManiaPlanet account. If you have forgotten your validation key you can get a new one [here](https://player.maniaplanet.com/account/validation-code). You also need to send in-game mail with initial 100 Planets to the server login. After this the donate plugins works and server planets transactions are enabled. 
+If you want to enable Planets transactions for your server fill in the `<validation_key>`, use your own ManiaPlanet account validation key here. The validation key has been sent in email message when you created your ManiaPlanet account. If you have forgotten your validation key you can get a new one [on the player page](https://player.maniaplanet.com/account/validation-code). You also need to send in-game mail with initial 100 Planets to the server login. After this the donate plugins works and server planets transactions are enabled. 
 
 ####Network configuration
 
@@ -114,42 +116,14 @@ If you run multiple servers on the same host, ports numbers are automatically in
 
 Note: if you run same dedicated server instance on the same host: the dedicated servers ports must start from 5000 and every new dedicated server port has to be increased by 1, and there can not be any gaps between the ports. Othervice you can't connect to any server...
 
-*You can test if your network configuration is correct using: http://www.yougetsignal.com/tools/open-ports/*
-
+*You can test if your network configuration is correct using: <http://www.yougetsignal.com/tools/open-ports/>*
 
 
 ####MatchSettings File
 
 There are *MatchSettings* file bundled in each title, use the table below to get the default one. 
 
-This table summerize the information you need:
-
-<table>
-  <tr>
-    <th>Title name</th><th>Title Id</th><th>MatchSettings file(s)</th>
-  </tr>
-  <tr>
-    <td>Stadium</td><td>TMStadium</td><td>MatchSettings/TMStadiumA.txt</td>
-  </tr>
-  <tr>
-    <td>Canyon</td><td>TMCanyon</td><td>MatchSettings/TMCanyonA.txt</td>
-  </tr>
-  <tr>
-    <td>Storm</td><td>SMStorm</td><td><em>Check the ManiaPlanetServer/UserData/Maps/MatchSettings/ folder</em></td>
-  </tr>
-  <tr>
-    <td>Royal</td><td>SMStormRoyal@nadeolabs</td><td>MatchSettings/Royal.Script.txt</td>
-  </tr>
-  <tr>
-    <td>Combo</td><td>SMStormCombo@nadeolabs</td><td>MatchSettings/SMStormCombo1.txt</td>
-  </tr>
-  <tr>
-    <td>Elite</td><td>SMStormElite@nadeolabs</td><td>MatchSettings/SMStormElite1.txt</td>
-  </tr>
-  <tr>
-    <td>Joust</td><td>SMStormJoust@nadeolabs</td><td>MatchSettings/SMStormJoust1.txt</td>
-  </tr>
-</table>
+[This table summerize the information you need](titleids.html).
 
 Examples to start the server with Shootmania:Storm Elite: `ManiaPlanetServer /Title=SMStormElite@nadeolabs /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/SMStormElite1.txt`.
 
@@ -160,7 +134,7 @@ The minimal command line to start the server is `ManiaPlanetServer /Title=TitleI
 
 *[Complete list of ManiaPlanetServer arguments](command-line.html)*
 
-* *TitleId*: the identifier of the title you want to start. Check the table above to get the correct value.
+* *TitleId*: the identifier of the title you want to start. Check [this table](titleids.html) to get the correct value.
 * *DedicatedCfgFile*: the server configuration file. It is a text (XML) file located in your `ManiaPlanetServer/UserData/Config` folder. You should configure at least the **server name** (tag ` <name>`), and your **dedicated login** (tag `<login>`) and **dedicated password** (tag `<password>`).
 * *MatchSettingsFile*: it is the game mode configuration. It is a text (XML) file located in your `ManiaPlanetServer/UserData/Maps/MatchSettings` folder.
 
@@ -187,6 +161,8 @@ There is no console (like *rcon* in *Source* games) bundled in the ManiaPlanetSe
 
 In order to use it, you will need a [Server Controller](tools.html#server-controllers).
 
+## Help
 
+You can get help on the [dedicated server forum](http://forum.maniaplanet.com/viewforum.php?f=261).
 
 
