@@ -52,14 +52,12 @@ h1 {
   color: #393935;
   font-size: 2em;
   font-weight: 100;
-  /*line-height: 1em;*/
   margin: 0;
 }
 h2 {
   color: #5b5b57;
   font-size: 1.75em;
   font-weight: 100;
-  /*line-height: 1em;*/
   margin: 0;
 }
 
@@ -122,6 +120,9 @@ header#top {
 }
 header#top .wrapper {
   width: 70%;
+}
+header#top h1 {
+  line-height: 1em;
 }
 header#top ul {
   float: right;
