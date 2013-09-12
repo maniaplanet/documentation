@@ -7,10 +7,31 @@ body {
   margin: 0;
   padding: 0;
 }
-code {
-  background-color: rgb(238, 238, 238);
-  padding: 1px 5px;
+
+code, pre {
+  font-family: Consolas, "Liberation Mono", Courier, monospace;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 3px;
 }
+pre {
+  margin: 15px 0px;
+  padding: 6px 10px;
+  line-height: 19px;
+  overflow: auto;
+}
+code {
+  margin: 0px 2px;
+  padding: 0px 5px;
+}
+pre code {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+
 a {
   text-decoration: none;
   color: #1171b2;
