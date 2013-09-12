@@ -6,6 +6,7 @@ body {
   font-size: 1em;
   margin: 0;
   padding: 0;
+  line-height: 1.7;
 }
 
 code, pre {
@@ -51,14 +52,14 @@ h1 {
   color: #393935;
   font-size: 2em;
   font-weight: 100;
-  line-height: 1em;
+  /*line-height: 1em;*/
   margin: 0;
 }
 h2 {
   color: #5b5b57;
   font-size: 1.75em;
   font-weight: 100;
-  line-height: 1em;
+  /*line-height: 1em;*/
   margin: 0;
 }
 
