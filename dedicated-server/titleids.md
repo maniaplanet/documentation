@@ -18,10 +18,13 @@ description: ManiaPlanet titlesIds list
     <td>Canyon</td><td>TMCanyon</td><td>MatchSettings/TMCanyonA.txt</td>
   </tr>
   <tr>
+    <td>TrackMania 2</td><td>Trackmania_2@nadeolabs</td><td></td>
+  </tr>
+  <tr>
     <td>Storm</td><td>SMStorm</td><td><em>Check the ManiaPlanetServer/UserData/Maps/MatchSettings/ folder</em></td>
   </tr>
   <tr>
-    <td>Royal</td><td>SMStormRoyal@nadeolabs</td><td>MatchSettings/Royal.Script.txt</td>
+    <td>Royal</td><td>SMStormRoyal@nadeolabs</td><td>MatchSettings/SMStormRoyal1.txt (Standard) and MatchSettings/SMStormRoyal2.txt (Beginner)</td>
   </tr>
   <tr>
     <td>Combo</td><td>SMStormCombo@nadeolabs</td><td>MatchSettings/SMStormCombo1.txt</td>
