@@ -14,12 +14,14 @@ It bundles multiple tools:
 
 ## Presentation
 
+![Easy management](./img/compet3.png)
+Create your competition in a few clicks.
+
 ![Bracket generator](./img/compet1.png)
+Brackets are generated automatically.
 
 ![Results](./img/compet2.png)
-
-![Easy management](./img/compet3.png)
-
+Results are casted directly from server.
 
 ## Instructions
 
