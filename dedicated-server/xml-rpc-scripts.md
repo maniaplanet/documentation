@@ -189,6 +189,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### BeginMatch
 * Note : This callback is sent at the beginning of each match
 * Data Example : 
+
     {
         "Timestamp": 8907890,
         "MatchNumber": 1
@@ -197,6 +198,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### BeginMap
 * Note : This callback is sent at the beginning of each map
 * Data Example : 
+
     {
         "Timestamp": 8910190,
         "MapNumber": 1
@@ -205,6 +207,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### BeginSubmatch
 * Note : This callback is sent at the beginning of each submatch
 * Data Example : 
+
     {
         "Timestamp": 8910190,
         "SubmatchNumber": 1
@@ -213,6 +216,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### BeginTurn
 * Note : This callback is sent at the beginning of each turn
 * Data Example : 
+
     {
         "Timestamp": 2793470,
         "TurnNumber": 2,
@@ -261,6 +265,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### OnCapture
 * Note : This callback is sent when the attacker captured the pole
 * Data Example : 
+
     {
         "Timestamp": 1329230,
         "StartTime": 1279720,
@@ -297,6 +302,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### OnHit
 * Note : This callback is sent when a player hit another player
 * Data Example : 
+
     {
         "Timestamp": 161900,
         "StartTime": 156830,
@@ -346,6 +352,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### OnArmorEmpty
 * Note : This callback is sent when a player reaches 0 armor (eliminated by another player, falling in an offzone)
 * Data Example : 
+
     {
         "Timestamp": 10117060,
         "StartTime": 10080830,
@@ -394,6 +401,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### OnPlayerRequestRespawn
 * Note : This callback is sent when a player requests a respawn.
 * Data Example : 
+
     {
         "Timestamp": 142460,
         "StartTime": 100460,
@@ -425,6 +433,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### OnShoot
 * Note : This callback is sent when a player shoots.
 * Data Example : 
+
     {
         "Timestamp": 1784110,
         "StartTime": 1778750,
@@ -457,6 +466,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### OnNearMiss
 * Note : This callback is sent when the attacker shot a Laser near a defender without hitting him.
 * Data Example : 
+
     {
         "Timestamp": 710280,
         "StartTime": 702670,
@@ -503,6 +513,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### EndTurn
 * Note : This callback is sent at the end of each turn.
 * Data Example : 
+
     {
         "Timestamp": 6909440,
         "TurnNumber": 1,
@@ -575,6 +586,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### EndSubmatch
 * Note : This callback is sent at the end of each submatch.
 * Data Example : 
+
     {
         "Timestamp": 7699950,
         "SubmatchNumber": 1
@@ -584,6 +596,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### EndMap
 * Note : This callback is sent at the end of each map.
 * Data Example : 
+
     {
         "Timestamp": 7699950,
         "MapNumber": 1,
@@ -633,6 +646,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### EndMatch
 * Note : This callback is sent at the end of each match.
 * Data Example : 
+
     {
         "Timestamp": 8380990,
         "MatchNumber": 1,
@@ -644,6 +658,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### BeginWarmup
 * Note : This callback is sent at the beginning of the warm up.
 * Data Example : 
+
     {
         "Timestamp": 8911200,
         "AllReady": false
@@ -652,6 +667,7 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### EndWarmup
 * Note : This callback is sent at the end of the warm up.
 * Data Example : 
+
     {
         "Timestamp": 8925780,
         "AllReady": true
@@ -676,7 +692,7 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 
 ## Lobby TriggerModeScriptEvent
 
-##### 
+##### LibXmlRpc_Lobby_SetRoundDuration
 * Note : Define a SetRoundDuration inside LobbyMode
 * String1 : "LibXmlRpc_Lobby_SetRoundDuration"
 * String2 :  "6000" (Time in seconds)
@@ -684,32 +700,32 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 
 ## Common TriggerModeScriptEvent
 
-##### 
+##### LibXmlRpc_DisableAltMenu
 * Note : Hide the scores table on alt key for a player:
 * String1 : "LibXmlRpc_DisableAltMenu"
 * String2 :  "LoginOfThePlayer"
 
-##### 
+##### LibXmlRpc_EnableAltMenu
 * Note : Display the scores table on alt key for player:
 * String1 : "LibXmlRpc_EnableAltMenu"
 * String2 :  "LoginOfThePlayer"
 
-##### 
+##### LibXmlRpc_GetRankings
 * Note : Invoke the LibXmlRpc_Rankings script callback
 * String1 : "LibXmlRpc_GetRankings"
 * String2 :  ""
 
-##### 
+##### LibXmlRpc_GetScores
 * Note : Invoke the LibXmlRpc_Scores script callback
 * String1 : "LibXmlRpc_GetScores"
 * String2 :  ""
 
-##### 
+##### WarmUp_Extend
 * Note : Extend the warm up timer for x milliseconds:
 * String1 : "WarmUp_Extend"
 * String2 :  "60000" (time in ms)
 
-##### 
+##### WarmUp_Stop
 * Note : Stop the warm up:
 * String1 : "WarmUp_Stop"
 * String2 :  ""

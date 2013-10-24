@@ -54,17 +54,32 @@ h1 {
   font-weight: 100;
   margin: 0;
 }
-article h1{
-  border-bottom: 1px solid #ddd;
-}
 h2 {
   color: #5b5b57;
   font-size: 1.75em;
   font-weight: 100;
   margin: 0;
 }
-article h2 {
+
+
+
+.wrapper article .content section h1 {
+  border-bottom: 1px solid #ddd;
+}
+.wrapper article .content section h2 {
   border-bottom: 1px solid #eee;
+}
+.wrapper article .content section h3 {
+  margin: 0;
+}
+.wrapper article .content section h4 {
+  margin: 0;
+}
+.wrapper article .content section h5 {
+  margin: 0;
+}
+.wrapper article .content section h6 {
+  margin: 0;
 }
 
 /* Categories list */
