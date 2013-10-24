@@ -53,12 +53,14 @@ h1 {
   font-size: 2em;
   font-weight: 100;
   margin: 0;
+  border-bottom: 1px solid #ddd;
 }
 h2 {
   color: #5b5b57;
   font-size: 1.75em;
   font-weight: 100;
   margin: 0;
+  border-bottom: 1px solid #eee;
 }
 
 /* Categories list */

@@ -24,3 +24,4 @@ A dedicated server application which allows you to run a server for any ManiaPla
 # XML-RPC reference
 
 * [Latest methods reference](methods/latest.html)
+* [Scripts methods and callbacks reference](xml-rpc-scripts.html)
