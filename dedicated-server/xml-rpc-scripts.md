@@ -190,488 +190,488 @@ Param1 is the name of the callback and Param2 contains the data.
 * Note : This callback is sent at the beginning of each match
 * Data Example : 
 
-    {
-        "Timestamp": 8907890,
-        "MatchNumber": 1
-    }
+        {
+            "Timestamp": 8907890,
+            "MatchNumber": 1
+        }
 
 ##### BeginMap
 * Note : This callback is sent at the beginning of each map
 * Data Example : 
 
-    {
-        "Timestamp": 8910190,
-        "MapNumber": 1
-    }
+        {
+            "Timestamp": 8910190,
+            "MapNumber": 1
+        }
 
 ##### BeginSubmatch
 * Note : This callback is sent at the beginning of each submatch
 * Data Example : 
 
-    {
-        "Timestamp": 8910190,
-        "SubmatchNumber": 1
-    }
+        {
+            "Timestamp": 8910190,
+            "SubmatchNumber": 1
+        }
 
 ##### BeginTurn
 * Note : This callback is sent at the beginning of each turn
 * Data Example : 
 
-    {
-        "Timestamp": 2793470,
-        "TurnNumber": 2,
-        "StartTime": 2796470,
-        "EndTime": 2856470,
-        "PoleTime": 2841470,
-        "AttackingClan": 2,
-        "DefendingClan": 1,
-        "AttackingPlayer": {
-            "Login": "eole2",
-            "Name": "$aafV².$fffAessi",
-            "CurrentClan": 2,
-            "Armor": 300,
-            "ArmorMax": 300,
-            "IsTouchingGround": false,
-            "IsCapturing": false,
-            "IsInOffZone": false,
-            "Score": {
-                "AtkPoints": 0,
-                "DefPoints": 3,
-                "GoalAverage": 2
-            }
-        },
-        "DefendingPlayers": [
-            {
-                "Login": "eole",
-                "CurrentClan": 1,
-                "AtkPoints": 0,
-                "DefPoints": 0
+        {
+            "Timestamp": 2793470,
+            "TurnNumber": 2,
+            "StartTime": 2796470,
+            "EndTime": 2856470,
+            "PoleTime": 2841470,
+            "AttackingClan": 2,
+            "DefendingClan": 1,
+            "AttackingPlayer": {
+                "Login": "eole2",
+                "Name": "$aafV².$fffAessi",
+                "CurrentClan": 2,
+                "Armor": 300,
+                "ArmorMax": 300,
+                "IsTouchingGround": false,
+                "IsCapturing": false,
+                "IsInOffZone": false,
+                "Score": {
+                    "AtkPoints": 0,
+                    "DefPoints": 3,
+                    "GoalAverage": 2
+                }
             },
-            {
-                "Login": "test2",
-                "CurrentClan": 1,
-                "AtkPoints": 0,
-                "DefPoints": 0
-            },
-            {
-                "Login": "test3",
-                "CurrentClan": 1,
-                "AtkPoints": 0,
-                "DefPoints": 0
-            }
-        ]
-    }
+            "DefendingPlayers": [
+                {
+                    "Login": "eole",
+                    "CurrentClan": 1,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                },
+                {
+                    "Login": "test2",
+                    "CurrentClan": 1,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                },
+                {
+                    "Login": "test3",
+                    "CurrentClan": 1,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                }
+            ]
+        }
 
 ##### OnCapture
 * Note : This callback is sent when the attacker captured the pole
 * Data Example : 
 
-    {
-        "Timestamp": 1329230,
-        "StartTime": 1279720,
-        "EndTime": 1339720,
-        "PoleTime": 1324720,
-        "Event": {
-            "Type": "EType::OnCapture",
-            "Damage": 0,
-            "WeaponNum": 0,
-            "MissDist": 0,
-            "Player": {
-                "Login": "eole2",
-                "Name": "$aafV².$fffAessi",
-                "CurrentClan": 2,
-                "Armor": 100,
-                "ArmorMax": 100,
-                "IsTouchingGround": true,
-                "IsCapturing": true,
-                "IsInOffZone": false,
-                "Score": {
-                    "AtkPoints": 0,
-                    "DefPoints": 0,
-                    "GoalAverage": -3
+        {
+            "Timestamp": 1329230,
+            "StartTime": 1279720,
+            "EndTime": 1339720,
+            "PoleTime": 1324720,
+            "Event": {
+                "Type": "EType::OnCapture",
+                "Damage": 0,
+                "WeaponNum": 0,
+                "MissDist": 0,
+                "Player": {
+                    "Login": "eole2",
+                    "Name": "$aafV².$fffAessi",
+                    "CurrentClan": 2,
+                    "Armor": 100,
+                    "ArmorMax": 100,
+                    "IsTouchingGround": true,
+                    "IsCapturing": true,
+                    "IsInOffZone": false,
+                    "Score": {
+                        "AtkPoints": 0,
+                        "DefPoints": 0,
+                        "GoalAverage": -3
+                    }
+                },
+                "Pole": {
+                    "Tag": "Goal A",
+                    "Order": 0,
+                    "Captured": false
                 }
-            },
-            "Pole": {
-                "Tag": "Goal A",
-                "Order": 0,
-                "Captured": false
             }
         }
-    }
 
 ##### OnHit
 * Note : This callback is sent when a player hit another player
 * Data Example : 
 
-    {
-        "Timestamp": 161900,
-        "StartTime": 156830,
-        "EndTime": 216830,
-        "PoleTime": 201830,
-        "Event": {
-            "Type": "EType::OnHit",
-            "Damage": 100,
-            "WeaponNum": 1,
-            "MissDist": 0,
-            "HitDist": 2.34118,
-            "Shooter": {
-                "Login": "eole2",
-                "Name": "$aafV².$fffAessi",
-                "CurrentClan": 2,
-                "Armor": 100,
-                "ArmorMax": 100,
-                "IsTouchingGround": true,
-                "IsCapturing": false,
-                "IsInOffZone": false,
-                "Score": {
-                    "AtkPoints": 0,
-                    "DefPoints": 1,
-                    "GoalAverage": 0
+        {
+            "Timestamp": 161900,
+            "StartTime": 156830,
+            "EndTime": 216830,
+            "PoleTime": 201830,
+            "Event": {
+                "Type": "EType::OnHit",
+                "Damage": 100,
+                "WeaponNum": 1,
+                "MissDist": 0,
+                "HitDist": 2.34118,
+                "Shooter": {
+                    "Login": "eole2",
+                    "Name": "$aafV².$fffAessi",
+                    "CurrentClan": 2,
+                    "Armor": 100,
+                    "ArmorMax": 100,
+                    "IsTouchingGround": true,
+                    "IsCapturing": false,
+                    "IsInOffZone": false,
+                    "Score": {
+                        "AtkPoints": 0,
+                        "DefPoints": 1,
+                        "GoalAverage": 0
+                    },
+                    "Position": [45.65, 1.267, 6.498]
                 },
-                "Position": [45.65, 1.267, 6.498]
-            },
-            "Victim": {
-                "Login": "eole",
-                "Name": "$i$888b$fff`$888Side.$fffEole",
-                "CurrentClan": 1,
-                "Armor": 100,
-                "ArmorMax": 100,
-                "IsTouchingGround": true,
-                "IsCapturing": false,
-                "IsInOffZone": false,
-                "Score": {
-                    "AtkPoints": 0,
-                    "DefPoints": 0,
-                    "GoalAverage": -2
-                },
-                "Position": [68.167495, 45.423, 6.19]
+                "Victim": {
+                    "Login": "eole",
+                    "Name": "$i$888b$fff`$888Side.$fffEole",
+                    "CurrentClan": 1,
+                    "Armor": 100,
+                    "ArmorMax": 100,
+                    "IsTouchingGround": true,
+                    "IsCapturing": false,
+                    "IsInOffZone": false,
+                    "Score": {
+                        "AtkPoints": 0,
+                        "DefPoints": 0,
+                        "GoalAverage": -2
+                    },
+                    "Position": [68.167495, 45.423, 6.19]
+                }
             }
         }
-    }
 
 ##### OnArmorEmpty
 * Note : This callback is sent when a player reaches 0 armor (eliminated by another player, falling in an offzone)
 * Data Example : 
 
-    {
-        "Timestamp": 10117060,
-        "StartTime": 10080830,
-        "EndTime": 10140830,
-        "PoleTime": 10125830,
-        "Event": {
-            "Type": "EType::OnArmorEmpty",
-            "Damage": 0,
-            "WeaponNum": 0,
-            "MissDist": 0,
-            "Shooter": {
-                "Login": "eole2",
-                "Name": "$aafV².$fffAessi",
-                "CurrentClan": 2,
-                "Armor": 100,
-                "ArmorMax": 100,
-                "IsTouchingGround": true,
-                "IsCapturing": true,
-                "IsInOffZone": false,
-                "Score": {
-                    "AtkPoints": 0,
-                    "DefPoints": 0,
-                    "GoalAverage": 0
+        {
+            "Timestamp": 10117060,
+            "StartTime": 10080830,
+            "EndTime": 10140830,
+            "PoleTime": 10125830,
+            "Event": {
+                "Type": "EType::OnArmorEmpty",
+                "Damage": 0,
+                "WeaponNum": 0,
+                "MissDist": 0,
+                "Shooter": {
+                    "Login": "eole2",
+                    "Name": "$aafV².$fffAessi",
+                    "CurrentClan": 2,
+                    "Armor": 100,
+                    "ArmorMax": 100,
+                    "IsTouchingGround": true,
+                    "IsCapturing": true,
+                    "IsInOffZone": false,
+                    "Score": {
+                        "AtkPoints": 0,
+                        "DefPoints": 0,
+                        "GoalAverage": 0
+                    },
+                    "Position": [145.12, 10.2654, 0.144]
                 },
-                "Position": [145.12, 10.2654, 0.144]
-            },
-            "Victim": {
-                "Login": "eole",
-                "Name": "$i$888b$fff`$888Side.$fffEole",
-                "CurrentClan": 1,
-                "Armor": 0,
-                "ArmorMax": 100,
-                "IsTouchingGround": true,
-                "IsCapturing": true,
-                "IsInOffZone": false,
-                "Score": {
-                    "AtkPoints": 0,
-                    "DefPoints": 0,
-                    "GoalAverage": -1
-                },
-                "Position": [95.45, 58.65, 9.157]
+                "Victim": {
+                    "Login": "eole",
+                    "Name": "$i$888b$fff`$888Side.$fffEole",
+                    "CurrentClan": 1,
+                    "Armor": 0,
+                    "ArmorMax": 100,
+                    "IsTouchingGround": true,
+                    "IsCapturing": true,
+                    "IsInOffZone": false,
+                    "Score": {
+                        "AtkPoints": 0,
+                        "DefPoints": 0,
+                        "GoalAverage": -1
+                    },
+                    "Position": [95.45, 58.65, 9.157]
+                }
             }
         }
-    }
 
 ##### OnPlayerRequestRespawn
 * Note : This callback is sent when a player requests a respawn.
 * Data Example : 
 
-    {
-        "Timestamp": 142460,
-        "StartTime": 100460,
-        "EndTime": 160460,
-        "PoleTime": 145460,
-        "Event": {
-            "Type": "EType::OnPlayerRequestRespawn",
-            "Damage": 0,
-            "WeaponNum": 0,
-            "MissDist": 0,
-            "Player": {
-                "Login": "eole",
-                "Name": "$i$888b$fff`$888Side.$fffEole",
-                "CurrentClan": 1,
-                "Armor": 100,
-                "ArmorMax": 100,
-                "IsTouchingGround": true,
-                "IsCapturing": false,
-                "IsInOffZone": false,
-                "Score": {
-                    "AtkPoints": 0,
-                    "DefPoints": 0,
-                    "GoalAverage": 0
+        {
+            "Timestamp": 142460,
+            "StartTime": 100460,
+            "EndTime": 160460,
+            "PoleTime": 145460,
+            "Event": {
+                "Type": "EType::OnPlayerRequestRespawn",
+                "Damage": 0,
+                "WeaponNum": 0,
+                "MissDist": 0,
+                "Player": {
+                    "Login": "eole",
+                    "Name": "$i$888b$fff`$888Side.$fffEole",
+                    "CurrentClan": 1,
+                    "Armor": 100,
+                    "ArmorMax": 100,
+                    "IsTouchingGround": true,
+                    "IsCapturing": false,
+                    "IsInOffZone": false,
+                    "Score": {
+                        "AtkPoints": 0,
+                        "DefPoints": 0,
+                        "GoalAverage": 0
+                    }
                 }
             }
         }
-    }
 
 ##### OnShoot
 * Note : This callback is sent when a player shoots.
 * Data Example : 
 
-    {
-        "Timestamp": 1784110,
-        "StartTime": 1778750,
-        "EndTime": 1838750,
-        "PoleTime": 1823750,
-        "Event": {
-            "Type": "EType::OnShoot",
-            "Damage": 0,
-            "WeaponNum": 1,
-            "MissDist": 0,
-            "Shooter": {
-                "Login": "eole2",
-                "Name": "$aafV².$fffAessi",
-                "CurrentClan": 2,
-                "Armor": 100,
-                "ArmorMax": 100,
-                "IsTouchingGround": true,
-                "IsCapturing": false,
-                "IsInOffZone": false,
-                "Score": {
-                    "AtkPoints": 0,
-                    "DefPoints": 0,
-                    "GoalAverage": 0
-                },
-                "Position": [193.142, 0.995464, 159.373]
+        {
+            "Timestamp": 1784110,
+            "StartTime": 1778750,
+            "EndTime": 1838750,
+            "PoleTime": 1823750,
+            "Event": {
+                "Type": "EType::OnShoot",
+                "Damage": 0,
+                "WeaponNum": 1,
+                "MissDist": 0,
+                "Shooter": {
+                    "Login": "eole2",
+                    "Name": "$aafV².$fffAessi",
+                    "CurrentClan": 2,
+                    "Armor": 100,
+                    "ArmorMax": 100,
+                    "IsTouchingGround": true,
+                    "IsCapturing": false,
+                    "IsInOffZone": false,
+                    "Score": {
+                        "AtkPoints": 0,
+                        "DefPoints": 0,
+                        "GoalAverage": 0
+                    },
+                    "Position": [193.142, 0.995464, 159.373]
+                }
             }
         }
-    }
 
 ##### OnNearMiss
 * Note : This callback is sent when the attacker shot a Laser near a defender without hitting him.
 * Data Example : 
 
-    {
-        "Timestamp": 710280,
-        "StartTime": 702670,
-        "EndTime": 762670,
-        "PoleTime": 747670,
-        "Event": {
-            "Type": "EType::OnNearMiss",
-            "Damage": 0,
-            "WeaponNum": 0,
-            "MissDist": 0.0256433,
-            "Shooter": {
-                "Login": "eole",
-                "Name": "$i$888b$fff`$888Side.$fffEole",
-                "CurrentClan": 1,
-                "Armor": 100,
-                "ArmorMax": 100,
-                "IsTouchingGround": true,
-                "IsCapturing": false,
-                "IsInOffZone": false,
-                "Score": {
-                    "AtkPoints": 0,
-                    "DefPoints": 0,
-                    "GoalAverage": 0
-                }
-            },
-            "Victim": {
-                "Login": "eole2",
-                "Name": "$aafV².$fffAessi",
-                "CurrentClan": 2,
-                "Armor": 100,
-                "ArmorMax": 100,
-                "IsTouchingGround": true,
-                "IsCapturing": false,
-                "IsInOffZone": false,
-                "Score": {
-                    "AtkPoints": 0,
-                    "DefPoints": 0,
-                    "GoalAverage": 0
+        {
+            "Timestamp": 710280,
+            "StartTime": 702670,
+            "EndTime": 762670,
+            "PoleTime": 747670,
+            "Event": {
+                "Type": "EType::OnNearMiss",
+                "Damage": 0,
+                "WeaponNum": 0,
+                "MissDist": 0.0256433,
+                "Shooter": {
+                    "Login": "eole",
+                    "Name": "$i$888b$fff`$888Side.$fffEole",
+                    "CurrentClan": 1,
+                    "Armor": 100,
+                    "ArmorMax": 100,
+                    "IsTouchingGround": true,
+                    "IsCapturing": false,
+                    "IsInOffZone": false,
+                    "Score": {
+                        "AtkPoints": 0,
+                        "DefPoints": 0,
+                        "GoalAverage": 0
+                    }
+                },
+                "Victim": {
+                    "Login": "eole2",
+                    "Name": "$aafV².$fffAessi",
+                    "CurrentClan": 2,
+                    "Armor": 100,
+                    "ArmorMax": 100,
+                    "IsTouchingGround": true,
+                    "IsCapturing": false,
+                    "IsInOffZone": false,
+                    "Score": {
+                        "AtkPoints": 0,
+                        "DefPoints": 0,
+                        "GoalAverage": 0
+                    }
                 }
             }
         }
-    }
 
 ##### EndTurn
 * Note : This callback is sent at the end of each turn.
 * Data Example : 
 
-    {
-        "Timestamp": 6909440,
-        "TurnNumber": 1,
-        "StartTime": 6903090,
-        "EndTime": 6909440,
-        "PoleTime": 6894440,
-        "AttackingClan": 2,
-        "DefendingClan": 1,
-        "AttackingPlayer": {
-            "Login": "eole2",
-            "Name": "$aafV².$fffAessi",
-            "CurrentClan": 2,
-            "Armor": 100,
-            "ArmorMax": 100,
-            "IsTouchingGround": false,
-            "IsCapturing": false,
-            "IsInOffZone": false,
-            "Score": {
-                "AtkPoints": 1,
-                "DefPoints": 0,
-                "GoalAverage": 3
-            }
-        },
-        "TurnWinnerClan": 2,
-        "WinType": "DefenseEliminated",
-        "Clan1RoundScore": 0,
-        "Clan2RoundScore": 1,
-        "Clan1MapScore": 0,
-        "Clan2MapScore": 0,
-        "ScoresTable": [
-            {
-                "Login": "eole",
-                "CurrentClan": 1,
-                "AtkPoints": 0,
-                "DefPoints": 0
-            },
-            {
-                "Login": "test1",
-                "CurrentClan": 1,
-                "AtkPoints": 0,
-                "DefPoints": 0
-            },
-            {
-                "Login": "test2",
-                "CurrentClan": 1,
-                "AtkPoints": 0,
-                "DefPoints": 0
-            },
-            {
+        {
+            "Timestamp": 6909440,
+            "TurnNumber": 1,
+            "StartTime": 6903090,
+            "EndTime": 6909440,
+            "PoleTime": 6894440,
+            "AttackingClan": 2,
+            "DefendingClan": 1,
+            "AttackingPlayer": {
                 "Login": "eole2",
+                "Name": "$aafV².$fffAessi",
                 "CurrentClan": 2,
-                "AtkPoints": 1,
-                "DefPoints": 0
+                "Armor": 100,
+                "ArmorMax": 100,
+                "IsTouchingGround": false,
+                "IsCapturing": false,
+                "IsInOffZone": false,
+                "Score": {
+                    "AtkPoints": 1,
+                    "DefPoints": 0,
+                    "GoalAverage": 3
+                }
             },
-            {
-                "Login": "test3",
-                "CurrentClan": 2,
-                "AtkPoints": 0,
-                "DefPoints": 0
-            },
-            {
-                "Login": "test4",
-                "CurrentClan": 2,
-                "AtkPoints": 0,
-                "DefPoints": 0
-            }
-        ]
-    }
+            "TurnWinnerClan": 2,
+            "WinType": "DefenseEliminated",
+            "Clan1RoundScore": 0,
+            "Clan2RoundScore": 1,
+            "Clan1MapScore": 0,
+            "Clan2MapScore": 0,
+            "ScoresTable": [
+                {
+                    "Login": "eole",
+                    "CurrentClan": 1,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                },
+                {
+                    "Login": "test1",
+                    "CurrentClan": 1,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                },
+                {
+                    "Login": "test2",
+                    "CurrentClan": 1,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                },
+                {
+                    "Login": "eole2",
+                    "CurrentClan": 2,
+                    "AtkPoints": 1,
+                    "DefPoints": 0
+                },
+                {
+                    "Login": "test3",
+                    "CurrentClan": 2,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                },
+                {
+                    "Login": "test4",
+                    "CurrentClan": 2,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                }
+            ]
+        }
 
 ##### EndSubmatch
 * Note : This callback is sent at the end of each submatch.
 * Data Example : 
 
-    {
-        "Timestamp": 7699950,
-        "SubmatchNumber": 1
-    }
+        {
+            "Timestamp": 7699950,
+            "SubmatchNumber": 1
+        }
 
 
 ##### EndMap
 * Note : This callback is sent at the end of each map.
 * Data Example : 
 
-    {
-        "Timestamp": 7699950,
-        "MapNumber": 1,
-        "MapWinnerClan": 2,
-        "Clan1MapScore": 0,
-        "Clan2MapScore": 0,
-        "ScoresTable": [
-            {
-                "Login": "eole",
-                "CurrentClan": 1,
-                "AtkPoints": 0,
-                "DefPoints": 0
-            },
-            {
-                "Login": "test1",
-                "CurrentClan": 1,
-                "AtkPoints": 0,
-                "DefPoints": 0
-            },
-            {
-                "Login": "test2",
-                "CurrentClan": 1,
-                "AtkPoints": 0,
-                "DefPoints": 0
-            },
-            {
-                "Login": "eole2",
-                "CurrentClan": 2,
-                "AtkPoints": 1,
-                "DefPoints": 0
-            },
-            {
-                "Login": "test3",
-                "CurrentClan": 2,
-                "AtkPoints": 0,
-                "DefPoints": 0
-            },
-            {
-                "Login": "test4",
-                "CurrentClan": 2,
-                "AtkPoints": 0,
-                "DefPoints": 0
-            }
-        ]
-    }
+        {
+            "Timestamp": 7699950,
+            "MapNumber": 1,
+            "MapWinnerClan": 2,
+            "Clan1MapScore": 0,
+            "Clan2MapScore": 0,
+            "ScoresTable": [
+                {
+                    "Login": "eole",
+                    "CurrentClan": 1,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                },
+                {
+                    "Login": "test1",
+                    "CurrentClan": 1,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                },
+                {
+                    "Login": "test2",
+                    "CurrentClan": 1,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                },
+                {
+                    "Login": "eole2",
+                    "CurrentClan": 2,
+                    "AtkPoints": 1,
+                    "DefPoints": 0
+                },
+                {
+                    "Login": "test3",
+                    "CurrentClan": 2,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                },
+                {
+                    "Login": "test4",
+                    "CurrentClan": 2,
+                    "AtkPoints": 0,
+                    "DefPoints": 0
+                }
+            ]
+        }
 
 ##### EndMatch
 * Note : This callback is sent at the end of each match.
 * Data Example : 
 
-    {
-        "Timestamp": 8380990,
-        "MatchNumber": 1,
-        "MatchWinnerClan": 1,
-        "Clan1MapScore": 1,
-        "Clan2MapScore": 0
-    }
+        {
+            "Timestamp": 8380990,
+            "MatchNumber": 1,
+            "MatchWinnerClan": 1,
+            "Clan1MapScore": 1,
+            "Clan2MapScore": 0
+        }
 
 ##### BeginWarmup
 * Note : This callback is sent at the beginning of the warm up.
 * Data Example : 
 
-    {
-        "Timestamp": 8911200,
-        "AllReady": false
-    }
+        {
+            "Timestamp": 8911200,
+            "AllReady": false
+        }
 
 ##### EndWarmup
 * Note : This callback is sent at the end of the warm up.
 * Data Example : 
 
-    {
-        "Timestamp": 8925780,
-        "AllReady": true
-    }
+        {
+            "Timestamp": 8925780,
+            "AllReady": true
+        }
 
 ##### MatchmakingGetOrder
 * Note : The server sends this callback and then waits during 5 seconds to receive the "MatchmakingSetOrder" script event.
