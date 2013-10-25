@@ -4,6 +4,8 @@ title: Content creation
 description: Help on content creation: game mode, maps, videos, ...
 ---
 
-* [ManiaScript](../maniascript)
-* [MediaTracker](../mediatracker)
-* [Title Pack](../title)
+# Content creation
+
+* [ManiaScript]({{ site.url }}maniascript/)
+* [MediaTracker]({{ site.url }}mediatracker/)
+* [Title Pack]({{ site.url }}title/)
