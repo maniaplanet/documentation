@@ -8,7 +8,8 @@ Tutorial
 ========
 
 * [ManiaScript syntax basics](http://forum.maniaplanet.com/viewtopic.php?f=279&t=1672)
-* ManiaLink/ManiaScript tutorial by Marcel [English](http://forum.funtrackers.net/showthread.php?tid=607) / [German](http://www.mania-community.de/showthread.php?1482-ManiaPlanet-ManiaLinks)
+* [steeffeen's Knowledge-Dump](http://blog.steeffeen.com)
+* [ManiaLink/ManiaScript tutorial by Marcel](http://forum.funtrackers.net/showthread.php?tid=607) ([German version](http://www.mania-community.de/showthread.php?1482-ManiaPlanet-ManiaLinks))
 * [ManiaScript tutorial by destroflyer (German)](http://destroflyer.mania-community.de/maniascript/page.php)
 
 Server
