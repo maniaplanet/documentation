@@ -11,6 +11,7 @@ A dedicated server application which allows you to run a server for any ManiaPla
 * [Quick start](basic.html)
 * [Command line](command-line.html)
 * [Frequent errors](frequent-errors.html)
+* [Lobbies](lobby.html)
 
 # Dedicated tools
 
