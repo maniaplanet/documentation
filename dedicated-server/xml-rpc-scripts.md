@@ -189,11 +189,12 @@ Param1 is the name of the callback and Param2 contains the data.
 ##### BeginMatch
 * Note : This callback is sent at the beginning of each match
 * Data Example : 
-
-        {
-            "Timestamp": 8907890,
-            "MatchNumber": 1
-        }
+{% highlight javascript %}
+{
+    "Timestamp": 8907890,
+    "MatchNumber": 1
+}
+{% endhighlight %}
 
 ##### BeginMap
 * Note : This callback is sent at the beginning of each map
