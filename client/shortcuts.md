@@ -7,22 +7,22 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 # Script editor
 
 * F12: open the script editor
-* ctrl + g: open the log window / open the debug window / close the debug window 
-* ctrl + a: select all
-* ctrl + z: undo
-* ctrl + y: redo
-* ctrl + f: search
-* ctrl + g: go to line #
-* ctrl + h: search and replace
-* ctrl + c: copy the selection
-* ctrl + x: cut the selection
-* ctrl + v: paste the selection
-* ctrl + home: go to the beginning the script
-* ctrl + end: go to the end of the script
-* ctrl + numpad+: increase the font size
-* ctrl + numpad-: decrease the font size
-* ctrl + F3: quick search next on the selection
-* ctrl + shift + F3: quick search previous on the selection
+* Ctrl + g: open the log window / open the debug window / close the debug window 
+* Ctrl + a: select all
+* Ctrl + z: undo
+* Ctrl + y: redo
+* Ctrl + f: search
+* Ctrl + g: go to line #
+* Ctrl + h: search and replace
+* Ctrl + c: copy the selection
+* Ctrl + x: cut the selection
+* Ctrl + v: paste the selection
+* Ctrl + home: go to the beginning the script
+* Ctrl + end: go to the end of the script
+* Ctrl + numpad+: increase the font size
+* Ctrl + numpad-: decrease the font size
+* Ctrl + F3: quick search next on the selection
+* Ctrl + shift + F3: quick search previous on the selection
 
 
 # Painter / Model selection
