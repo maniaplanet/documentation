@@ -1,6 +1,6 @@
 ---
 layout: static
-title: Frequent errors dedicated
+title: Command line options of the dedicated server
 description: FAQ
 ---
 
