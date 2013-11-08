@@ -24,13 +24,27 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 * Ctrl + F3: quick search next on the selection
 * Ctrl + shift + F3: quick search previous on the selection
 
+# Media Tracker
+
+* TAB: hide / show the GUI
+* Direction arrows: move custom camera position
+* PG Up: raise the camera position
+* Pg Dn: lower the camera position
+* numpad+: increase movement speed when positioning the camera
+* numpad-: decrease movement speed when positioning the camera
+* numpad/ (also numpad*): jumps between start and end of the currently selected track
+* Pos1 (or home): jumps to the start of the complete timeline
+* End: jumps to the end of the complete timeline
+* Backspace: jumps to the start of the complete timeline and starts the playback at normal speed
+* Enter: inserts a key at the actual time to the currently selected track
+* Ctrl + H: Show helpers (press again to hide helpers)
 
 # Painter / Model selection
 
 ## Common
 
 * H : Show / hide help
-* Ctrl + A : Switch bewtween auto / manual camera
+* Ctrl + A : Switch between auto / manual camera
 * Ctrl + H : Show / hide helpers
 * Ctrl + R : Reload skin
 * Ctrl + X : Show / hide debug info
