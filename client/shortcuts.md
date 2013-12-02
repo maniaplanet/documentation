@@ -72,10 +72,10 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 
 ## ShootMania:
 
-* Ctrl + E : Next evolution evolution models
+* Ctrl + E : Next evolution models
 * Ctrl + K : Show / hide skeleton
 * Ctrl + S : Switch between speaking / not speaking
 * Ctrl + T : Switch between teams
-* Shift + E : Switch between iddle / eliminated animation
-* Shift + P : Switch between iddle / Ref pose
+* Shift + E : Switch between idle / eliminated animation
+* Shift + P : Switch between idle / Ref pose
 * Shift + S : Next energy step
