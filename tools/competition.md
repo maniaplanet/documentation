@@ -14,16 +14,24 @@ It bundles multiple tools:
 
 ## Presentation
 
-![Easy management](./img/compet3.png)
 Create your competition in a few clicks.
 
-![Bracket generator](./img/compet1.png)
+![Easy management](./img/compet3.png)
+
 Brackets are generated automatically.
 
-![Results](./img/compet2.png)
+![Bracket generator](./img/compet1.png)
+
 Results are casted directly from server.
 
+![Results](./img/compet2.png)
+
+
 ## Instructions
+
+### Requirements
+
+ManiaPlanet Competition Manager requires a powerful dedicated server because it will run multiple ManiaPlanet dedicated software at the same time.
 
 ### Preparation
 
@@ -50,7 +58,7 @@ An [Apache alias](https://httpd.apache.org/docs/2.4/mod/mod_alias.html) has been
 
 1. Download latest [Maniaplanet competition manager package](http://code.google.com/p/maniaplanet-competition-manager/downloads/list).
 2. Extract it where you want.
-3. Run the setup script. It will create `app.ini` file in the `config/` directory. You can modify the file but running the setup script again will erase your modifications. 
+3. Run the setup script with command line. It will create `app.ini` file in the `config/` directory. You can modify the file but running the setup script again will erase your modifications. 
 It will also create the `CompetitionManager` MySQL base and table. It it does not work, you can execute `competition.sql`. 
 
 ## Help
