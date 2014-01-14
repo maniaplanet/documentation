@@ -43,7 +43,7 @@ In Script : `TriggerPageAction("enter")`
 * "home"
 * "back"
 
-## In Game
+### In Game
 
 * "maniaplanet:quitserver"
 * "maniaplanet:savereplay"
