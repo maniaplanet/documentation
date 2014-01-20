@@ -18,10 +18,8 @@ if (!$client->query('system.listMethods')) {
 	die('An error occurred - ' . $client->getErrorCode() . ':' . $client->getErrorMessage());
 }
 $methods = $client->getResponse();
-print "|Method (arguments)|Return Type|Help|\n";
-print "|---|---|---|\n";
+print "<table><tr><th>Method (arguments)</th><th>Return Type</th><th>Help</th></tr>";
 foreach ($methods as $m) {
-	//print ' - **' . $m."**<br/>\n";
 	if ($client->query('system.methodSignature', $m)) {
 		$signatures = $client->getResponse();
 	} else {
@@ -33,7 +31,7 @@ foreach ($methods as $m) {
 		$help = "no help";
 	}
 
-	print '|**';
+	print '<tr><td>';
 	foreach ($signatures as $sig) {
 		$is_retval = 1;
 		$is_firstarg = 1;
@@ -51,9 +49,9 @@ foreach ($methods as $m) {
 				$is_firstarg = 0;
 			}
 		}
-		print ")**|$ret_type|";
+		print ")</td><td>$ret_type</td><td>";
 	}
-	print $help."|<br/>\n";
+	print $help."</td></tr>";
 }
 
 $client->Terminate();
