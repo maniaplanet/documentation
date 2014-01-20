@@ -53,7 +53,7 @@ foreach ($methods as $m) {
 	}
 	print $help."</td></tr>";
 }
-
+print '</table>';
 $client->Terminate();
 
 ?>
