@@ -1,51 +1,51 @@
 <!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <!-- meta -->
-        <meta charset="utf-8" />
-        <meta name="keywords" content="" />
-        <meta name="description" content="" />
-        <meta name="author" content="{{ site.author.name }}">
-        <meta name="viewport" content="width=device-width">
+<html lang="en">
+  <head>
+    <!-- meta -->
+    <meta charset="utf-8" />
+    <meta name="keywords" content="maniaplanet, shootmania, trackmania, manialink, maniascript, titlepack" />
+    <meta name="description" content="ManiaPlanet technical documentation (maniascript, titlepack, manialink)" />
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="viewport" content="width=device-width">
 
+    <!-- include -->
+    <link rel="stylesheet" href="{{ site.url }}css/styles.css" />
 
-        <!-- include -->
-        <link rel="stylesheet" href="http://maniaplanet.github.io/documentation/css/styles.css" />
-
-        <title>{{ page.title }}</title>
-    </head>
-    <body>
-		<a href="https://github.com/maniaplanet/documentation"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
-      <header id="top">
-        <div class="wrapper">
-        <div id="gobywan"></div>
-          <ul>
-            <li><a class="extra" href="{{ site.url }}/dedicated-server/">Dedicated</a></li>
-          </ul>
-          <h1><a href="{{ site.url }}">{{ site.name }}</a></h1>
-        </div>
-      </header>
+    <title>ManiaPlanet Documentation -- {{ page.title }}</title>
+  </head>
+  <body>
+    <a href="http://github.com/maniaplanet/documentation"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <header id="top">
       <div class="wrapper">
-            {{ content }}
+      <div id="gobywan"></div>
+        <ul>
+          <li><a class="extra" href="{{ site.url }}">Home</a></li>
+          <li><a class="extra" href="{{ site.url }}help.html">Get help</a>
+        </ul>
+        <h1><a href="{{ site.url }}">{{ site.name }}</a></h1>
+      </div>
+    </header>
+    <div class="wrapper">
+      {{ content }}
 
-            <footer>
-              <a class="top" href="#top">Top</a>
-              Powered by <a href="https://github.com/mojombo/jekyll/">Jekyll</a> | Theme <a href="https://github.com/fmonniot/jekyll-holo-theme">Holo</a> by <a href="http://francois.monniot.eu">François Monniot</a>
-            </footer>
-        </div>
-        <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
-		<script type="text/javascript">
+      <footer>
+        <a class="top" href="#top">Top</a>
+        Powered by <a href="http://github.com/mojombo/jekyll/">Jekyll</a> | Theme based on <a href="https://github.com/fmonniot/jekyll-holo-theme">Holo</a> by <a href="http://francois.monniot.eu">François Monniot</a>
+      </footer>
+    </div>
+    <script src="//code.jquery.com/jquery-2.0.0.min.js"></script>
+  	<script type="text/javascript">
 
-		  var _gaq = _gaq || [];
-		  _gaq.push(['_setAccount', 'UA-22426969-16']);
-		  _gaq.push(['_trackPageview']);
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-22426969-16']);
+      _gaq.push(['_trackPageview']);
 
-		  (function() {
-			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		  })();
+      (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
 
-		</script>
-    </body>
+    </script>
+  </body>
 </html>

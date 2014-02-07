@@ -1,3 +1,9 @@
+---
+layout: static
+title: Start a lobby
+description: Start a lobby using ManiaLive
+---
+
 How to start a lobby ?
 ======================
 

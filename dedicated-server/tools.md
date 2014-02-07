@@ -60,6 +60,9 @@ description: FAQ
 <tr>
 <td>JsControl</td><td>TGYoshi</td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=453">Forum</a></td><td></td>
 </tr>
+<tr>
+<td>MPAseco</td><td>Kremsy, TheM, ManiaTwister</td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=450">Forum</a></td><td><a href="http://www.mpaseco.org/plugins">Repository</a></td>
+</tr>
 </table>
 
 ## Scripts

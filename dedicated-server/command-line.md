@@ -1,6 +1,6 @@
 ---
 layout: static
-title: Frequent errors dedicated
+title: Command line options of the dedicated server
 description: FAQ
 ---
 
@@ -67,6 +67,15 @@ ManiaPlanet dedicated server command line
   </tr>
   <tr>
     <td>/verbose_rpc </td><td>(Debug option) Displays the xml-rpc requests the dedicated server receives, but only the name of the XmlRpc? command and some parameters.</td>
+  </tr>
+  <tr>
+	<td colspan="2"></td>
+  </tr>
+  <tr>
+	<td>/spectate=xxx</td><td>Joins a server as spectator. (xxx = the server ip adress with optional port, or the server login.) (this is used to start a relay server)</td>
+  </tr>
+  <tr>
+	<td>/serverpassword=xxx</td><td>Password to use to join the server if the server is private.</td>
   </tr>
 </table>
 
