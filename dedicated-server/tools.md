@@ -49,9 +49,6 @@ description: FAQ
 <td>XAseco 2</td><td>Xymph </td><td><img src="../img/yes.png" /></td><td><img src="../img/no.png" /></td><td><a href="http://www.tm-forum.com/viewforum.php?f=127">Forum</a></td><td><a href="http://www.xaseco.org/">XAseco.org</a></td><td><a href="http://plugins.xaseco.org/browse2.php">Repository</a></td>
 </tr>
 <tr>
-<td>BOG (Based on Gery)</td><td>Mikey</td><td><img src="../img/yes.png" /></td><td><img src="../img/no.png" /></td><td><a href="http://forum.maniaplanet.com/viewtopic.php?f=261&t=6464">Forum</a></td><td></td><td></td>
-</tr>
-<tr>
 <td>MPAseco</td><td>Kremsy, TheM, ManiaTwister</td><td><img src="../img/no.png" /></td><td><img src="../img/yes.png" /></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=450">Forum</a></td><td><a href="http://www.mpaseco.org/">MPAseco.org</a></td><td><a href="http://www.mpaseco.org/plugins">Repository</a></td>
 </tr>
 <tr>
