@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class ManiaLib\Application\Tracking\GoogleAnalytics | ManiaLive</title>
+
+	<script type="text/javascript" src="resources/combined.js?2626317727"></script>
+	<script type="text/javascript" src="elementlist.js?1788296020"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li class="active"><a href="namespace-ManiaLib.html">ManiaLib<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-ManiaLib.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.Filters.html">Filters</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Rendering.html">Rendering</a>
+						</li>
+				<li class="active"><a href="namespace-ManiaLib.Application.Tracking.html">Tracking</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Views.html">Views</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Cache.html">Cache<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Cache.Drivers.html">Drivers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Database.html">Database</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.html">Cards<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Dialogs.html">Dialogs</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Navigation.html">Navigation</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Layouts.html">Layouts</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.html">Maniacode<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.Elements.html">Elements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLib.ManiaScript.html">ManiaScript</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLib.WebServices.html">WebServices</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.html">ManiaLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Application.html">Application</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Config.html">Config</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Data.html">Data</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Database.MySQL.html">MySQL</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.SQLite.html">SQLite</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.DedicatedApi.html">DedicatedApi<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.DedicatedApi.Callback.html">Callback</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.html">Features<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Features.Admin.html">Admin</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.ChatCommand.html">ChatCommand</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.Tick.html">Tick</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.PluginHandler.html">PluginHandler</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Utilities.html">Utilities</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.html">ManiaLivePlugins<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.html">MatchMakingLobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.GUI.html">GUI</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.html">Lobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.html">Helpers</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.html">MatchMakers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Match.html">Match</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.MatchSettings.html">MatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Services.html">Services</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Views.html">Views</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.html">NadeoLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.AutoTweet.html">AutoTweet</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.XmlRpcScript.html">XmlRpcScript</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.html">Standard<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.html">Admin<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.html">AutoQueue<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagManiaLive.html">AutoTagManiaLive</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagMatchSettings.html">AutoTagMatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Bill.html">Bill</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.InstanceLimiter.html">InstanceLimiter</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.html">MapVote<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.html">Menubar<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.html">PluginManager<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.html">Profiler<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.html">TeamSpeak<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Tasks.html">Tasks</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.html">TeamSpeak3<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.html">Adapter<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Blacklist.html">Blacklist</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.FileTransfer.html">FileTransfer</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.html">ServerQuery</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.TSDNS.html">TSDNS</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Update.html">Update</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Profiler.html">Profiler</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Signal.html">Signal</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.html">Node</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Transport.html">Transport</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Viewer.html">Viewer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TrustCircle.html">TrustCircle</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Maniaplanet.html">Maniaplanet<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.html">DedicatedServer<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Xmlrpc.html">Xmlrpc</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Maniaplanet.WebServices.html">WebServices<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaConnect.html">ManiaConnect</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaHome.html">ManiaHome</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-ManiaLib.Application.Tracking.Config.html">Config</a></li>
+				<li><a href="class-ManiaLib.Application.Tracking.EventTracker.html">EventTracker</a></li>
+				<li><a href="class-ManiaLib.Application.Tracking.Filter.html">Filter</a></li>
+				<li class="active"><a href="class-ManiaLib.Application.Tracking.GoogleAnalytics.html">GoogleAnalytics</a></li>
+				<li><a href="class-ManiaLib.Application.Tracking.View.html">View</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-ManiaLib.Application.Tracking.html" title="Summary of ManiaLib\Application\Tracking"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class GoogleAnalytics</h1>
+
+
+	<div class="description">
+	
+<p>Google Analytics tracking in Manialinks</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-ManiaLib.html">ManiaLib</a>\<a href="namespace-ManiaLib.Application.html">Application</a>\<a href="namespace-ManiaLib.Application.Tracking.html">Tracking</a><br />
+		
+
+		<b>Located at</b> vendor/maniaplanet/manialib/libraries/ManiaLib/Application/Tracking/GoogleAnalytics.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>mixed <var>$account</var></span>, <span>mixed <var>$cookieNameSuffix</var> = <span class="php-keyword1">null</span></span>, <span>mixed <var>$domainName</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="loadCookie" id="_loadCookie">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_loadCookie">#</a>
+		<code>loadCookie( )</code>
+
+		<div class="description short">
+			
+<p>Loads cookie information</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Loads cookie information</p>
+
+
+
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<a
+href="http://services.google.com/analytics/breeze/en/ga_cookies/index.html">http://services.google.com/analytics/breeze/en/ga_cookies/index.html</a><br />
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTrackingURL" id="_getTrackingURL">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTrackingURL">#</a>
+		<code>getTrackingURL( )</code>
+
+		<div class="description short">
+			
+<p>Computes the tracking URL and returns it. Its is a 1*1 gif image that should
+be called by the client.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Computes the tracking URL and returns it. Its is a 1*1 gif image that should
+be called by the client.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEventTrackingURL" id="_getEventTrackingURL">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEventTrackingURL">#</a>
+		<code>getEventTrackingURL( <span>mixed <var>$category</var></span>, <span>mixed <var>$action</var></span>, <span>mixed <var>$label</var></span>, <span>mixed <var>$value</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Experimentation about using Event Tracking in manialinks. Because I don't
+know the exact algorithm to encode data in utme, you should only use
+alphanumeric chars in the parameters for now. To quote official doc: "Value is
+encoded. Used for events and custom variables."</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Experimentation about using Event Tracking in manialinks. Because I don't
+know the exact algorithm to encode data in utme, you should only use
+alphanumeric chars in the parameters for now. To quote official doc: "Value is
+encoded. Used for events and custom variables."</p>
+
+
+
+
+
+
+				<h4>See</h4>
+				<div class="list">
+						<a
+href="https://developers.google.com/analytics/resources/articles/gaTrackingTroubleshooting#gifParameters">https://developers.google.com/analytics/resources/articles/gaTrackingTroubleshooting#gifParameters</a><br />
+				</div>
+				<h4>Beta</h4>
+				<div class="list">
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getDomainHash" id="_getDomainHash">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getDomainHash">#</a>
+		<code>getDomainHash( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="GA_TRACKING_URL" id="GA_TRACKING_URL">
+
+		<td class="attributes"><code>string</code></td>
+		<td class="name"><code>
+<b>GA_TRACKING_URL</b>		</code></td>
+		<td class="value"><code><span class="php-quote">'http://www.google-analytics.com/__utm.gif'</span></code></td>
+		<td class="description"><div>
+			<a href="#GA_TRACKING_URL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="trackingQuad" id="$trackingQuad">
+		<td class="attributes"><code>
+			public  
+			<code><a href="class-ManiaLib.Gui.Elements.Quad.html">ManiaLib\Gui\Elements\Quad</a></code>
+		</code></td>
+
+		<td class="name">
+<var>$trackingQuad</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$trackingQuad" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmwv" id="$utmwv">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+<var>$utmwv</var>		</td>
+		<td class="value"><code><span class="php-quote">'4.8.6'</span></code></td>
+		<td class="description"><div>
+			<a href="#$utmwv" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Urchin version</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Urchin version</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmhn" id="$utmhn">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$utmhn</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$utmhn" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Hostname</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Hostname</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmcs" id="$utmcs">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+<var>$utmcs</var>		</td>
+		<td class="value"><code><span class="php-quote">'UTF-8'</span></code></td>
+		<td class="description"><div>
+			<a href="#$utmcs" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Charsert</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Charsert</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmsr" id="$utmsr">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+<var>$utmsr</var>		</td>
+		<td class="value"><code><span class="php-quote">'-'</span></code></td>
+		<td class="description"><div>
+			<a href="#$utmsr" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Screen resolution</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Screen resolution</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmsc" id="$utmsc">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+<var>$utmsc</var>		</td>
+		<td class="value"><code><span class="php-quote">'-'</span></code></td>
+		<td class="description"><div>
+			<a href="#$utmsc" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Color-depth</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Color-depth</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmul" id="$utmul">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$utmul</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$utmul" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Language</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Language</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmje" id="$utmje">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+<var>$utmje</var>		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$utmje" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Java enabled</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Java enabled</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmfl" id="$utmfl">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+<var>$utmfl</var>		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$utmfl" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Flash version</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Flash version</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmhid" id="$utmhid">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$utmhid</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$utmhid" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Random</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Random</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmr" id="$utmr">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+<var>$utmr</var>		</td>
+		<td class="value"><code><span class="php-num">0</span></code></td>
+		<td class="description"><div>
+			<a href="#$utmr" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Referer</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Referer</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmp" id="$utmp">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$utmp</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$utmp" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Route</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Route</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmac" id="$utmac">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$utmac</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$utmac" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Google Analytics account</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Google Analytics account</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmn" id="$utmn">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$utmn</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$utmn" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Random</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Random</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmu" id="$utmu">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$utmu</var>		</td>
+		<td class="value"><code><span class="php-keyword1">null</span></code></td>
+		<td class="description"><div>
+			<a href="#$utmu" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+					<h4>See</h4>
+					<div class="list">
+							<a
+href="http://stackoverflow.com/questions/6236895/what-is-utmu-parameter-in-google-analytics-utm-gif-request">http://stackoverflow.com/questions/6236895/what-is-utmu-parameter-in-google-analytics-utm-gif-request</a><br />
+					</div>
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmcr" id="$utmcr">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+<var>$utmcr</var>		</td>
+		<td class="value"><code><span class="php-num">1</span></code></td>
+		<td class="description"><div>
+			<a href="#$utmcr" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Carriage return (?)</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Carriage return (?)</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmdt" id="$utmdt">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$utmdt</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$utmdt" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Document title</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Document title</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utmcc" id="$utmcc">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$utmcc</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$utmcc" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cookie</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cookie</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="__utma" id="$__utma">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$__utma</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$__utma" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cookie var</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cookie var</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="__utmb" id="$__utmb">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$__utmb</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$__utmb" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cookie var</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cookie var</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="__utmc" id="$__utmc">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$__utmc</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$__utmc" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cookie var</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cookie var</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="__utmz" id="$__utmz">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$__utmz</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$__utmz" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Cookie var</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Cookie var</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="utme" id="$utme">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$utme</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$utme" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Event tracking</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Event tracking</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="domainHash" id="$domainHash">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$domainHash</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$domainHash" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="visitorId" id="$visitorId">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$visitorId</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$visitorId" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="cookieNameSuffix" id="$cookieNameSuffix">
+		<td class="attributes"><code>
+			protected  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$cookieNameSuffix</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$cookieNameSuffix" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ManiaLive API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

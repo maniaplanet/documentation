@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\AbstractDistance | ManiaLive</title>
+
+	<script type="text/javascript" src="resources/combined.js?2626317727"></script>
+	<script type="text/javascript" src="elementlist.js?1788296020"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-ManiaLib.html">ManiaLib<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.Filters.html">Filters</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Rendering.html">Rendering</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Tracking.html">Tracking</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Views.html">Views</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Cache.html">Cache<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Cache.Drivers.html">Drivers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Database.html">Database</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.html">Cards<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Dialogs.html">Dialogs</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Navigation.html">Navigation</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Layouts.html">Layouts</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.html">Maniacode<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.Elements.html">Elements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLib.ManiaScript.html">ManiaScript</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLib.WebServices.html">WebServices</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.html">ManiaLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Application.html">Application</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Config.html">Config</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Data.html">Data</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Database.MySQL.html">MySQL</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.SQLite.html">SQLite</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.DedicatedApi.html">DedicatedApi<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.DedicatedApi.Callback.html">Callback</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.html">Features<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Features.Admin.html">Admin</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.ChatCommand.html">ChatCommand</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.Tick.html">Tick</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.PluginHandler.html">PluginHandler</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Utilities.html">Utilities</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.html">ManiaLivePlugins<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-ManiaLivePlugins.MatchMakingLobby.html">MatchMakingLobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.GUI.html">GUI</a>
+						</li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.html">Lobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.html">Helpers</a>
+						</li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.html">MatchMakers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Match.html">Match</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.MatchSettings.html">MatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Services.html">Services</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Views.html">Views</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.html">NadeoLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.AutoTweet.html">AutoTweet</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.XmlRpcScript.html">XmlRpcScript</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.html">Standard<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.html">Admin<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.html">AutoQueue<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagManiaLive.html">AutoTagManiaLive</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagMatchSettings.html">AutoTagMatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Bill.html">Bill</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.InstanceLimiter.html">InstanceLimiter</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.html">MapVote<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.html">Menubar<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.html">PluginManager<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.html">Profiler<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.html">TeamSpeak<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Tasks.html">Tasks</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.html">TeamSpeak3<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.html">Adapter<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Blacklist.html">Blacklist</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.FileTransfer.html">FileTransfer</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.html">ServerQuery</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.TSDNS.html">TSDNS</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Update.html">Update</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Profiler.html">Profiler</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Signal.html">Signal</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.html">Node</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Transport.html">Transport</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Viewer.html">Viewer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TrustCircle.html">TrustCircle</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Maniaplanet.html">Maniaplanet<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.html">DedicatedServer<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Xmlrpc.html">Xmlrpc</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Maniaplanet.WebServices.html">WebServices<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaConnect.html">ManiaConnect</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaHome.html">ManiaHome</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.AbstractAllies.html">AbstractAllies</a></li>
+				<li class="active"><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.AbstractDistance.html">AbstractDistance</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.AbstractLadderPointsDistance.html">AbstractLadderPointsDistance</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.Combo.html">Combo</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.DistanceCombo.html">DistanceCombo</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.DistanceElite.html">DistanceElite</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.DistanceHeroes.html">DistanceHeroes</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.Elite.html">Elite</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.ElitePractice.html">ElitePractice</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.Heroes.html">Heroes</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.Joust.html">Joust</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.MatchMakerInterface.html">MatchMakerInterface</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.html" title="Summary of ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class AbstractDistance</h1>
+
+
+	<div class="description">
+	
+<p>Extend this and implement the two abstracts methods to have a distance based
+match maker</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-ManiaLib.Utils.Singleton.html"><span>ManiaLib\Utils\Singleton</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\AbstractDistance</span></b>			
+			 implements 
+				<a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.MatchMakerInterface.html"><span>ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\MatchMakerInterface</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.AbstractLadderPointsDistance.html">ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\AbstractLadderPointsDistance</a>
+	</div>
+
+	<div>
+		<h4>Indirect known subclasses</h4>
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.DistanceCombo.html">ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\DistanceCombo</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.DistanceElite.html">ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\DistanceElite</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.DistanceHeroes.html">ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\DistanceHeroes</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.ElitePractice.html">ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\ElitePractice</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.Joust.html">ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\Joust</a>
+	</div>
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br />
+		
+		<b>Namespace:</b> <a href="namespace-ManiaLivePlugins.html">ManiaLivePlugins</a>\<a href="namespace-ManiaLivePlugins.MatchMakingLobby.html">MatchMakingLobby</a>\<a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.html">Lobby</a>\<a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.html">MatchMakers</a><br />
+		
+
+		<b>Located at</b> vendor/maniaplanet/matchmaking-lobby/MatchMakingLobby/Lobby/MatchMakers/AbstractDistance.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="playersDistance" id="_playersDistance">
+
+		<td class="attributes"><code>
+			abstract protected 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_playersDistance">#</a>
+		<code>playersDistance( <span>string <var>$p1</var></span>, <span>string <var>$p2</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the distance between two players</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the distance between two players</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$p1</var></dt>
+					<dd><code>string</code><br>$p1</dd>
+					<dt><var>$p2</var></dt>
+					<dd><code>string</code><br>$p2</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="teamsDistance" id="_teamsDistance">
+
+		<td class="attributes"><code>
+			abstract protected 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_teamsDistance">#</a>
+		<code>teamsDistance( <span>string <var>$t1</var></span>, <span>string <var>$t2</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the distance between two teams</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the distance between two teams</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$t1</var></dt>
+					<dd><code>string</code><br>$p1</dd>
+					<dt><var>$t2</var></dt>
+					<dd><code>string</code><br>$p2</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dispatch" id="_dispatch">
+
+		<td class="attributes"><code>
+			abstract protected 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_dispatch">#</a>
+		<code>dispatch( <span>string[] <var>$players</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$players</var></dt>
+					<dd><code>string[]</code></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="run" id="_run">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_run">#</a>
+		<code>run( <span>array <var>$players</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Entry point for the match making</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Entry point for the match making</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$players</var></dt>
+					<dd><code>array</code><br>$players</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a></code></code><br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.MatchMakerInterface.html#_run">ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\MatchMakerInterface::run()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getTeams" id="_getTeams">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.Team.html">ManiaLivePlugins\MatchMakingLobby\Lobby\Helpers\Team</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getTeams">#</a>
+		<code>getTeams( <span>array <var>$players</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>This function is usually not used from the outside world We are using it in
+order to share functionalities between match makers</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This function is usually not used from the outside world We are using it in
+order to share functionalities between match makers</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$players</var></dt>
+					<dd><code>array</code><br>$players Login of all players to match</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.Team.html">ManiaLivePlugins\MatchMakingLobby\Lobby\Helpers\Team</a></code></code><br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.MatchMakerInterface.html#_getTeams">ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\MatchMakerInterface::getTeams()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMatches" id="_getMatches">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMatches">#</a>
+		<code>getMatches( <span>array <var>$teams</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>This function is usually not used from the outside world We are using it in
+order to share functionalities between match makers</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This function is usually not used from the outside world We are using it in
+order to share functionalities between match makers</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$teams</var></dt>
+					<dd><code>array</code><br>$teams</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a>[]</code></code><br />
+				</div>
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.MatchMakerInterface.html#_getMatches">ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\MatchMakerInterface::getMatches()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="buildPlayersGraph" id="_buildPlayersGraph">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_buildPlayersGraph">#</a>
+		<code>buildPlayersGraph( <span>array <var>$players</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="buildTeamsGraph" id="_buildTeamsGraph">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_buildTeamsGraph">#</a>
+		<code>buildTeamsGraph( <span>array <var>$teams</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="buildGraph" id="_buildGraph">
+
+		<td class="attributes"><code>
+			 protected 
+			type
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_buildGraph">#</a>
+		<code>buildGraph( <span><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.DistanciableObject.html">ManiaLivePlugins\MatchMakingLobby\Lobby\Helpers\DistanciableObject</a>[]</code> <var>&amp; $graph</var></span>, <span>mixed <var>$distanceComputeCallback</var></span>, <span>array <var>$objects</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Create a graph where each ready player is a node</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create a graph where each ready player is a node</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$graph</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.DistanciableObject.html">ManiaLivePlugins\MatchMakingLobby\Lobby\Helpers\DistanciableObject</a>[]</code></code><br>$bannedPlayers</dd>
+					<dt><var>$distanceComputeCallback</var></dt>
+					<dd></dd>
+					<dt><var>$objects</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>type</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-ManiaLib.Utils.Singleton.html#methods">ManiaLib\Utils\Singleton</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-ManiaLib.Utils.Singleton.html#___clone">__clone()</a>, 
+			<a href="class-ManiaLib.Utils.Singleton.html#___construct">__construct()</a>, 
+			<a href="class-ManiaLib.Utils.Singleton.html#_getInstance">getInstance()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.MatchMakerInterface.html#methods">ManiaLivePlugins\MatchMakingLobby\Lobby\MatchMakers\MatchMakerInterface</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.MatchMakerInterface.html#_findClosePlayer">findClosePlayer()</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.MatchMakerInterface.html#_getBackup">getBackup()</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.MatchMakerInterface.html#_getNumberOfTeam">getNumberOfTeam()</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.MatchMakerInterface.html#_getPlayersPerMatch">getPlayersPerMatch()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="WAITING_STEP" id="WAITING_STEP">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>WAITING_STEP</b>		</code></td>
+		<td class="value"><code><span class="php-num">60</span></code></td>
+		<td class="description"><div>
+			<a href="#WAITING_STEP" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Lower waiting step = faster decrease</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Lower waiting step = faster decrease</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DISTANCE_PLAYERS_THRESHOLD" id="DISTANCE_PLAYERS_THRESHOLD">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>DISTANCE_PLAYERS_THRESHOLD</b>		</code></td>
+		<td class="value"><code><span class="php-num">15000</span></code></td>
+		<td class="description"><div>
+			<a href="#DISTANCE_PLAYERS_THRESHOLD" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Threshold used to make team with near players</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Threshold used to make team with near players</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="DISTANCE_TEAMS_THRESHOLD" id="DISTANCE_TEAMS_THRESHOLD">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>DISTANCE_TEAMS_THRESHOLD</b>		</code></td>
+		<td class="value"><code><span class="php-num">30000</span></code></td>
+		<td class="description"><div>
+			<a href="#DISTANCE_TEAMS_THRESHOLD" class="anchor">#</a>
+
+			<div class="description short">
+				
+<p>Threshold used to matchmake teams</p>
+
+			</div>
+
+			<div class="description detailed hidden">
+				
+<p>Threshold used to matchmake teams</p>
+
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="playerGraph" id="$playerGraph">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.Graph.html">ManiaLivePlugins\MatchMakingLobby\Lobby\Helpers\Graph</a></code>
+		</code></td>
+
+		<td class="name">
+<var>$playerGraph</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$playerGraph" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="teamsGraph" id="$teamsGraph">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.Graph.html">ManiaLivePlugins\MatchMakingLobby\Lobby\Helpers\Graph</a></code>
+		</code></td>
+
+		<td class="name">
+<var>$teamsGraph</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$teamsGraph" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-ManiaLib.Utils.Singleton.html#properties">ManiaLib\Utils\Singleton</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-ManiaLib.Utils.Singleton.html#$instances"><var>$instances</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ManiaLive API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

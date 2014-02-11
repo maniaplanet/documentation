@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Interface ManiaLive\Event\Listener | ManiaLive</title>
+
+	<script type="text/javascript" src="resources/combined.js?2626317727"></script>
+	<script type="text/javascript" src="elementlist.js?1788296020"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-ManiaLib.html">ManiaLib<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.Filters.html">Filters</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Rendering.html">Rendering</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Tracking.html">Tracking</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Views.html">Views</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Cache.html">Cache<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Cache.Drivers.html">Drivers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Database.html">Database</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.html">Cards<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Dialogs.html">Dialogs</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Navigation.html">Navigation</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Layouts.html">Layouts</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.html">Maniacode<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.Elements.html">Elements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLib.ManiaScript.html">ManiaScript</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLib.WebServices.html">WebServices</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-ManiaLive.html">ManiaLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Application.html">Application</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Config.html">Config</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Data.html">Data</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Database.MySQL.html">MySQL</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.SQLite.html">SQLite</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.DedicatedApi.html">DedicatedApi<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.DedicatedApi.Callback.html">Callback</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-ManiaLive.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.html">Features<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Features.Admin.html">Admin</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.ChatCommand.html">ChatCommand</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.Tick.html">Tick</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.PluginHandler.html">PluginHandler</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Utilities.html">Utilities</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.html">ManiaLivePlugins<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.html">MatchMakingLobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.GUI.html">GUI</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.html">Lobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.html">Helpers</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.html">MatchMakers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Match.html">Match</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.MatchSettings.html">MatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Services.html">Services</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Views.html">Views</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.html">NadeoLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.AutoTweet.html">AutoTweet</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.XmlRpcScript.html">XmlRpcScript</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.html">Standard<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.html">Admin<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.html">AutoQueue<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagManiaLive.html">AutoTagManiaLive</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagMatchSettings.html">AutoTagMatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Bill.html">Bill</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.InstanceLimiter.html">InstanceLimiter</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.html">MapVote<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.html">Menubar<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.html">PluginManager<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.html">Profiler<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.html">TeamSpeak<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Tasks.html">Tasks</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.html">TeamSpeak3<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.html">Adapter<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Blacklist.html">Blacklist</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.FileTransfer.html">FileTransfer</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.html">ServerQuery</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.TSDNS.html">TSDNS</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Update.html">Update</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Profiler.html">Profiler</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Signal.html">Signal</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.html">Node</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Transport.html">Transport</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Viewer.html">Viewer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TrustCircle.html">TrustCircle</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Maniaplanet.html">Maniaplanet<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.html">DedicatedServer<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Xmlrpc.html">Xmlrpc</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Maniaplanet.WebServices.html">WebServices<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaConnect.html">ManiaConnect</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaHome.html">ManiaHome</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-ManiaLive.Event.Dispatcher.html">Dispatcher</a></li>
+				<li><a href="class-ManiaLive.Event.Event.html">Event</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-ManiaLive.Event.Listener.html">Listener</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-ManiaLive.Event.html" title="Summary of ManiaLive\Event"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Interface Listener</h1>
+
+
+
+
+
+
+
+	<div>
+		<h4>Direct known implementers</h4>
+			<a href="class-ManiaLive.Application.Listener.html">ManiaLive\Application\Listener</a>, 
+			<a href="class-ManiaLive.Data.Listener.html">ManiaLive\Data\Listener</a>, 
+			<a href="class-ManiaLive.DedicatedApi.Callback.Listener.html">ManiaLive\DedicatedApi\Callback\Listener</a>, 
+			<a href="class-ManiaLive.Features.Tick.Listener.html">ManiaLive\Features\Tick\Listener</a>, 
+			<a href="class-ManiaLive.PluginHandler.Listener.html">ManiaLive\PluginHandler\Listener</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Services.AllyListener.html">ManiaLivePlugins\MatchMakingLobby\Services\AllyListener</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Profiler.Listener.html">ManiaLivePlugins\Standard\Profiler\Listener</a>
+	</div>
+
+	<div>
+		<h4>Indirect known implementers</h4>
+			<a href="class-ManiaLive.Application.Adapter.html">ManiaLive\Application\Adapter</a>, 
+			<a href="class-ManiaLive.Data.Storage.html">ManiaLive\Data\Storage</a>, 
+			<a href="class-ManiaLive.Gui.Panel.html">ManiaLive\Gui\Panel</a>, 
+			<a href="class-ManiaLive.Gui.Window.html">ManiaLive\Gui\Window</a>, 
+			<a href="class-ManiaLive.Gui.Windows.Dialog.html">ManiaLive\Gui\Windows\Dialog</a>, 
+			<a href="class-ManiaLive.Gui.Windows.Info.html">ManiaLive\Gui\Windows\Info</a>, 
+			<a href="class-ManiaLive.Gui.Windows.Shortkey.html">ManiaLive\Gui\Windows\Shortkey</a>, 
+			<a href="class-ManiaLive.Gui.Windows.Thumbnail.html">ManiaLive\Gui\Windows\Thumbnail</a>, 
+			<a href="class-ManiaLive.PluginHandler.Plugin.html">ManiaLive\PluginHandler\Plugin</a>, 
+			<a href="class-ManiaLive.PluginHandler.PluginHandler.html">ManiaLive\PluginHandler\PluginHandler</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Lobby.Plugin.html">ManiaLivePlugins\MatchMakingLobby\Lobby\Plugin</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Match.Plugin.html">ManiaLivePlugins\MatchMakingLobby\Match\Plugin</a>, 
+			<a href="class-ManiaLive.Database.MySQL.Connection.html">ManiaLive\Database\MySQL\Connection</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Services.AllyService.html">ManiaLivePlugins\MatchMakingLobby\Services\AllyService</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.AbstractPlayerList.html">ManiaLivePlugins\MatchMakingLobby\Windows\AbstractPlayerList</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.Alert.html">ManiaLivePlugins\MatchMakingLobby\Windows\Alert</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.AlertPlay.html">ManiaLivePlugins\MatchMakingLobby\Windows\AlertPlay</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.AlertReady.html">ManiaLivePlugins\MatchMakingLobby\Windows\AlertReady</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.Dialog.html">ManiaLivePlugins\MatchMakingLobby\Windows\Dialog</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.Help.html">ManiaLivePlugins\MatchMakingLobby\Windows\Help</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.Label.html">ManiaLivePlugins\MatchMakingLobby\Windows\Label</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.LobbyWindow.html">ManiaLivePlugins\MatchMakingLobby\Windows\LobbyWindow</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.MasterList.html">ManiaLivePlugins\MatchMakingLobby\Windows\MasterList</a>, 
+			<a href="class-ManiaLive.DedicatedApi.Callback.Adapter.html">ManiaLive\DedicatedApi\Callback\Adapter</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.PlayerList.html">ManiaLivePlugins\MatchMakingLobby\Windows\PlayerList</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.Splash.html">ManiaLivePlugins\MatchMakingLobby\Windows\Splash</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.StartMatch.html">ManiaLivePlugins\MatchMakingLobby\Windows\StartMatch</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.StartSoloMatch.html">ManiaLivePlugins\MatchMakingLobby\Windows\StartSoloMatch</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.TooManyAllies.html">ManiaLivePlugins\MatchMakingLobby\Windows\TooManyAllies</a>, 
+			<a href="class-ManiaLivePlugins.MatchMakingLobby.Windows.WaitingScreen.html">ManiaLivePlugins\MatchMakingLobby\Windows\WaitingScreen</a>, 
+			<a href="class-ManiaLivePlugins.NadeoLive.AutoTweet.Plugin.html">ManiaLivePlugins\NadeoLive\AutoTweet\Plugin</a>, 
+			<a href="class-ManiaLivePlugins.NadeoLive.XmlRpcScript.Plugin.html">ManiaLivePlugins\NadeoLive\XmlRpcScript\Plugin</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Admin.Admin.html">ManiaLivePlugins\Standard\Admin\Admin</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Admin.Gui.Windows.ChooseMode.html">ManiaLivePlugins\Standard\Admin\Gui\Windows\ChooseMode</a>, 
+			<a href="class-ManiaLive.Features.ChatCommand.Interpreter.html">ManiaLive\Features\ChatCommand\Interpreter</a>, 
+			<a href="class-ManiaLivePlugins.Standard.AutoQueue.AutoQueue.html">ManiaLivePlugins\Standard\AutoQueue\AutoQueue</a>, 
+			<a href="class-ManiaLivePlugins.Standard.AutoQueue.Gui.Windows.FreeSpot.html">ManiaLivePlugins\Standard\AutoQueue\Gui\Windows\FreeSpot</a>, 
+			<a href="class-ManiaLivePlugins.Standard.AutoQueue.Gui.Windows.Queue.html">ManiaLivePlugins\Standard\AutoQueue\Gui\Windows\Queue</a>, 
+			<a href="class-ManiaLivePlugins.Standard.AutoTagManiaLive.Plugin.html">ManiaLivePlugins\Standard\AutoTagManiaLive\Plugin</a>, 
+			<a href="class-ManiaLivePlugins.Standard.AutoTagMatchSettings.Plugin.html">ManiaLivePlugins\Standard\AutoTagMatchSettings\Plugin</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Bill.Plugin.html">ManiaLivePlugins\Standard\Bill\Plugin</a>, 
+			<a href="class-ManiaLivePlugins.Standard.InstanceLimiter.InstanceLimiter.html">ManiaLivePlugins\Standard\InstanceLimiter\InstanceLimiter</a>, 
+			<a href="class-ManiaLivePlugins.Standard.MapVote.Gui.Windows.Vote.html">ManiaLivePlugins\Standard\MapVote\Gui\Windows\Vote</a>, 
+			<a href="class-ManiaLivePlugins.Standard.MapVote.MapVote.html">ManiaLivePlugins\Standard\MapVote\MapVote</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Menubar.Gui.Windows.Menu.html">ManiaLivePlugins\Standard\Menubar\Gui\Windows\Menu</a>, 
+			<a href="class-ManiaLive.Features.EchoHandler.html">ManiaLive\Features\EchoHandler</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Menubar.Menubar.html">ManiaLivePlugins\Standard\Menubar\Menubar</a>, 
+			<a href="class-ManiaLivePlugins.Standard.PluginManager.Gui.Windows.Manager.html">ManiaLivePlugins\Standard\PluginManager\Gui\Windows\Manager</a>, 
+			<a href="class-ManiaLivePlugins.Standard.PluginManager.PluginManager.html">ManiaLivePlugins\Standard\PluginManager\PluginManager</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Profiler.Gui.Controls.MemoryTab.html">ManiaLivePlugins\Standard\Profiler\Gui\Controls\MemoryTab</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Profiler.Gui.Controls.NetGraphTab.html">ManiaLivePlugins\Standard\Profiler\Gui\Controls\NetGraphTab</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Profiler.Gui.Controls.OverviewTab.html">ManiaLivePlugins\Standard\Profiler\Gui\Controls\OverviewTab</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Profiler.Gui.Controls.PluginsTab.html">ManiaLivePlugins\Standard\Profiler\Gui\Controls\PluginsTab</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Profiler.Gui.Controls.SpeedGraphTab.html">ManiaLivePlugins\Standard\Profiler\Gui\Controls\SpeedGraphTab</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Profiler.Gui.Windows.Stats.html">ManiaLivePlugins\Standard\Profiler\Gui\Windows\Stats</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Profiler.Monitor.html">ManiaLivePlugins\Standard\Profiler\Monitor</a>, 
+			<a href="class-ManiaLive.Features.Tick.Ticker.html">ManiaLive\Features\Tick\Ticker</a>, 
+			<a href="class-ManiaLivePlugins.Standard.Profiler.Profiler.html">ManiaLivePlugins\Standard\Profiler\Profiler</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.Connection.html">ManiaLivePlugins\Standard\TeamSpeak\Connection</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.Windows.Main.html">ManiaLivePlugins\Standard\TeamSpeak\Windows\Main</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TrustCircle.TrustCircle.html">ManiaLivePlugins\Standard\TrustCircle\TrustCircle</a>, 
+			<a href="class-ManiaLive.Gui.ActionHandler.html">ManiaLive\Gui\ActionHandler</a>, 
+			<a href="class-ManiaLive.Gui.GuiHandler.html">ManiaLive\Gui\GuiHandler</a>, 
+			<a href="class-ManiaLive.Gui.ManagedWindow.html">ManiaLive\Gui\ManagedWindow</a>
+	</div>
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-ManiaLive.html">ManiaLive</a>\<a href="namespace-ManiaLive.Event.html">Event</a><br />
+		
+
+		<b>Located at</b> vendor/maniaplanet/manialive-lib/ManiaLive/Event/Listener.php<br />
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ManiaLive API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

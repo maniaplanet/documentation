@@ -1,0 +1,1545 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Interface ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Helper\Signal\SignalInterface | ManiaLive</title>
+
+	<script type="text/javascript" src="resources/combined.js?2626317727"></script>
+	<script type="text/javascript" src="elementlist.js?1788296020"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-ManiaLib.html">ManiaLib<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.Filters.html">Filters</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Rendering.html">Rendering</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Tracking.html">Tracking</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Views.html">Views</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Cache.html">Cache<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Cache.Drivers.html">Drivers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Database.html">Database</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.html">Cards<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Dialogs.html">Dialogs</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Navigation.html">Navigation</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Layouts.html">Layouts</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.html">Maniacode<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.Elements.html">Elements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLib.ManiaScript.html">ManiaScript</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLib.WebServices.html">WebServices</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.html">ManiaLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Application.html">Application</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Config.html">Config</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Data.html">Data</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Database.MySQL.html">MySQL</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.SQLite.html">SQLite</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.DedicatedApi.html">DedicatedApi<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.DedicatedApi.Callback.html">Callback</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.html">Features<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Features.Admin.html">Admin</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.ChatCommand.html">ChatCommand</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.Tick.html">Tick</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.PluginHandler.html">PluginHandler</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Utilities.html">Utilities</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.html">ManiaLivePlugins<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.html">MatchMakingLobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.GUI.html">GUI</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.html">Lobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.html">Helpers</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.html">MatchMakers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Match.html">Match</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.MatchSettings.html">MatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Services.html">Services</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Views.html">Views</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.html">NadeoLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.AutoTweet.html">AutoTweet</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.XmlRpcScript.html">XmlRpcScript</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.Standard.html">Standard<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.html">Admin<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.html">AutoQueue<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagManiaLive.html">AutoTagManiaLive</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagMatchSettings.html">AutoTagMatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Bill.html">Bill</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.InstanceLimiter.html">InstanceLimiter</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.html">MapVote<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.html">Menubar<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.html">PluginManager<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.html">Profiler<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.html">TeamSpeak<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Tasks.html">Tasks</a>
+						</li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.html">TeamSpeak3<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.html">Adapter<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Blacklist.html">Blacklist</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.FileTransfer.html">FileTransfer</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.html">ServerQuery</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.TSDNS.html">TSDNS</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Update.html">Update</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Profiler.html">Profiler</a>
+						</li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Signal.html">Signal</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.html">Node</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Transport.html">Transport</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Viewer.html">Viewer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TrustCircle.html">TrustCircle</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Maniaplanet.html">Maniaplanet<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.html">DedicatedServer<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Xmlrpc.html">Xmlrpc</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Maniaplanet.WebServices.html">WebServices<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaConnect.html">ManiaConnect</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaHome.html">ManiaHome</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Signal.Handler.html">Handler</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li class="active"><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Signal.SignalInterface.html">SignalInterface</a></li>
+			</ul>
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Signal.Exception.html">Exception</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Signal.html" title="Summary of ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Helper\Signal"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Interface SignalInterface</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-ManiaLivePlugins.html">ManiaLivePlugins</a>\<a href="namespace-ManiaLivePlugins.Standard.html">Standard</a>\<a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.html">TeamSpeak</a>\<a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.html">TeamSpeak3</a>\<a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.html">Helper</a>\<a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Signal.html">Signal</a><br />
+		
+
+				<b>Brief:</b>
+				Interface class describing the layout for TeamSpeak3_Helper_Signal callbacks.<br />
+				<b>Class:</b>
+				TeamSpeak3_Helper_Signal_Interface<br />
+		<b>Located at</b> vendor/maniaplanet/manialive-plugins/Standard/TeamSpeak/TeamSpeak3/Helper/Signal/SignalInterface.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="onConnect" id="_onConnect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onConnect">#</a>
+		<code>onConnect( <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.AbstractAdapter.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\AbstractAdapter</a></code> <var>$adapter</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for '&lt;adapter&gt;Connected' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for '&lt;adapter&gt;Connected' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("serverqueryConnected",
+array($object, "onConnect")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("filetransferConnected",
+array($object, "onConnect")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("blacklistConnected",
+array($object, "onConnect")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("updateConnected",
+array($object, "onConnect"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$adapter</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.AbstractAdapter.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\AbstractAdapter</a></code></code><br>$adapter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onDisconnect" id="_onDisconnect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onDisconnect">#</a>
+		<code>onDisconnect( )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for '&lt;adapter&gt;Disconnected' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for '&lt;adapter&gt;Disconnected' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("serverqueryDisconnected",
+array($object, "onDisconnect")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("filetransferDisconnected",
+array($object, "onDisconnect")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("blacklistDisconnected",
+array($object, "onDisconnect")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("updateDisconnected",
+array($object, "onDisconnect"));</h1>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onCommandStarted" id="_onCommandStarted">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onCommandStarted">#</a>
+		<code>onCommandStarted( <span>string <var>$cmd</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'serverqueryCommandStarted' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'serverqueryCommandStarted' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("serverqueryCommandStarted",
+array($object, "onCommandStarted"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cmd</var></dt>
+					<dd><code>string</code><br>$cmd</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onCommandFinished" id="_onCommandFinished">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onCommandFinished">#</a>
+		<code>onCommandFinished( <span>string <var>$cmd</var></span>, <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Reply.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Reply</a></code> <var>$reply</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'serverqueryCommandFinished' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'serverqueryCommandFinished' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("serverqueryCommandFinished",
+array($object, "onCommandFinished"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cmd</var></dt>
+					<dd><code>string</code><br>$cmd</dd>
+					<dt><var>$reply</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Reply.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Reply</a></code></code><br>$reply</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onEvent" id="_onEvent">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onEvent">#</a>
+		<code>onEvent( <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Event.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Event</a></code> <var>$event</var></span>, <span>ManiaLivePlugins\Standard\TeamSpeak\Node\Host <var>$host</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'notifyEvent' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'notifyEvent' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("notifyEvent",
+array($object, "onEvent"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Event.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Event</a></code></code><br>$event</dd>
+					<dt><var>$host</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Host.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Host</a></code></code><br>$host</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onError" id="_onError">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onError">#</a>
+		<code>onError( <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Reply.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Reply</a></code> <var>$reply</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'notifyError' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'notifyError' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("notifyError",
+array($object, "onError"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$reply</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Reply.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Reply</a></code></code><br>$reply</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onServerselected" id="_onServerselected">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onServerselected">#</a>
+		<code>onServerselected( <span>ManiaLivePlugins\Standard\TeamSpeak\Node\Host <var>$host</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'notifyServerselected' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'notifyServerselected' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("notifyServerselected",
+array($object, "onServerselected"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$host</var></dt>
+					<dd><code>ManiaLivePlugins\Standard\TeamSpeak\Node\Host</code><br>$host</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onServercreated" id="_onServercreated">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onServercreated">#</a>
+		<code>onServercreated( <span>ManiaLivePlugins\Standard\TeamSpeak\Node\Host <var>$host</var></span>, <span>integer <var>$sid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'notifyServercreated' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'notifyServercreated' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("notifyServercreated",
+array($object, "onServercreated"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$host</var></dt>
+					<dd><code>ManiaLivePlugins\Standard\TeamSpeak\Node\Host</code><br>$host</dd>
+					<dt><var>$sid</var></dt>
+					<dd><code>integer</code><br>$sid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onServerdeleted" id="_onServerdeleted">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onServerdeleted">#</a>
+		<code>onServerdeleted( <span>ManiaLivePlugins\Standard\TeamSpeak\Node\Host <var>$host</var></span>, <span>integer <var>$sid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'notifyServerdeleted' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'notifyServerdeleted' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("notifyServerdeleted",
+array($object, "onServerdeleted"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$host</var></dt>
+					<dd><code>ManiaLivePlugins\Standard\TeamSpeak\Node\Host</code><br>$host</dd>
+					<dt><var>$sid</var></dt>
+					<dd><code>integer</code><br>$sid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onServerstarted" id="_onServerstarted">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onServerstarted">#</a>
+		<code>onServerstarted( <span>ManiaLivePlugins\Standard\TeamSpeak\Node\Host <var>$host</var></span>, <span>integer <var>$sid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'notifyServerstarted' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'notifyServerstarted' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("notifyServerstarted",
+array($object, "onServerstarted"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$host</var></dt>
+					<dd><code>ManiaLivePlugins\Standard\TeamSpeak\Node\Host</code><br>$host</dd>
+					<dt><var>$sid</var></dt>
+					<dd><code>integer</code><br>$sid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onServerstopped" id="_onServerstopped">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onServerstopped">#</a>
+		<code>onServerstopped( <span>ManiaLivePlugins\Standard\TeamSpeak\Node\Host <var>$host</var></span>, <span>integer <var>$sid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'notifyServerstopped' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'notifyServerstopped' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("notifyServerstopped",
+array($object, "onServerstopped"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$host</var></dt>
+					<dd><code>ManiaLivePlugins\Standard\TeamSpeak\Node\Host</code><br>$host</dd>
+					<dt><var>$sid</var></dt>
+					<dd><code>integer</code><br>$sid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onServershutdown" id="_onServershutdown">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onServershutdown">#</a>
+		<code>onServershutdown( <span>ManiaLivePlugins\Standard\TeamSpeak\Node\Host <var>$host</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'notifyServershutdown' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'notifyServershutdown' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("notifyServershutdown",
+array($object, "onServershutdown"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$host</var></dt>
+					<dd><code>ManiaLivePlugins\Standard\TeamSpeak\Node\Host</code><br>$host</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onLogin" id="_onLogin">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onLogin">#</a>
+		<code>onLogin( <span>ManiaLivePlugins\Standard\TeamSpeak\Node\Host <var>$host</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'notifyLogin' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'notifyLogin' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("notifyLogin",
+array($object, "onLogin"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$host</var></dt>
+					<dd><code>ManiaLivePlugins\Standard\TeamSpeak\Node\Host</code><br>$host</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onLogout" id="_onLogout">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onLogout">#</a>
+		<code>onLogout( <span>ManiaLivePlugins\Standard\TeamSpeak\Node\Host <var>$host</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'notifyLogout' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'notifyLogout' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("notifyLogout",
+array($object, "onLogout"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$host</var></dt>
+					<dd><code>ManiaLivePlugins\Standard\TeamSpeak\Node\Host</code><br>$host</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onTokencreated" id="_onTokencreated">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onTokencreated">#</a>
+		<code>onTokencreated( <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Server.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Server</a></code> <var>$server</var></span>, <span>string <var>$token</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'notifyTokencreated' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'notifyTokencreated' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("notifyTokencreated",
+array($object, "onTokencreated"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$server</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Server.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Server</a></code></code><br>$server</dd>
+					<dt><var>$token</var></dt>
+					<dd><code>string</code><br>$token</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onFtHandshake" id="_onFtHandshake">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onFtHandshake">#</a>
+		<code>onFtHandshake( <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.FileTransfer.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\FileTransfer</a></code> <var>$adapter</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'filetransferHandshake' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'filetransferHandshake' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("filetransferHandshake",
+array($object, "onFtHandshake"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$adapter</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.FileTransfer.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\FileTransfer</a></code></code><br>$adapter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onFtUploadStarted" id="_onFtUploadStarted">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onFtUploadStarted">#</a>
+		<code>onFtUploadStarted( <span>string <var>$ftkey</var></span>, <span>integer <var>$seek</var></span>, <span>integer <var>$size</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'filetransferUploadStarted' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'filetransferUploadStarted' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("filetransferUploadStarted",
+array($object, "onFtUploadStarted"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ftkey</var></dt>
+					<dd><code>string</code><br>$ftkey</dd>
+					<dt><var>$seek</var></dt>
+					<dd><code>integer</code><br>$seek</dd>
+					<dt><var>$size</var></dt>
+					<dd><code>integer</code><br>$size</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onFtUploadProgress" id="_onFtUploadProgress">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onFtUploadProgress">#</a>
+		<code>onFtUploadProgress( <span>string <var>$ftkey</var></span>, <span>integer <var>$seek</var></span>, <span>integer <var>$size</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'filetransferUploadProgress' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'filetransferUploadProgress' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("filetransferUploadProgress",
+array($object, "onFtUploadProgress"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ftkey</var></dt>
+					<dd><code>string</code><br>$ftkey</dd>
+					<dt><var>$seek</var></dt>
+					<dd><code>integer</code><br>$seek</dd>
+					<dt><var>$size</var></dt>
+					<dd><code>integer</code><br>$size</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onFtUploadFinished" id="_onFtUploadFinished">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onFtUploadFinished">#</a>
+		<code>onFtUploadFinished( <span>string <var>$ftkey</var></span>, <span>integer <var>$seek</var></span>, <span>integer <var>$size</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'filetransferUploadFinished' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'filetransferUploadFinished' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("filetransferUploadFinished",
+array($object, "onFtUploadFinished"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ftkey</var></dt>
+					<dd><code>string</code><br>$ftkey</dd>
+					<dt><var>$seek</var></dt>
+					<dd><code>integer</code><br>$seek</dd>
+					<dt><var>$size</var></dt>
+					<dd><code>integer</code><br>$size</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onFtDownloadStarted" id="_onFtDownloadStarted">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onFtDownloadStarted">#</a>
+		<code>onFtDownloadStarted( <span>string <var>$ftkey</var></span>, <span>integer <var>$buff</var></span>, <span>integer <var>$size</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'filetransferDownloadStarted' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'filetransferDownloadStarted' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("filetransferDownloadStarted",
+array($object, "onFtDownloadStarted"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ftkey</var></dt>
+					<dd><code>string</code><br>$ftkey</dd>
+					<dt><var>$buff</var></dt>
+					<dd><code>integer</code><br>$buff</dd>
+					<dt><var>$size</var></dt>
+					<dd><code>integer</code><br>$size</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onFtDownloadProgress" id="_onFtDownloadProgress">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onFtDownloadProgress">#</a>
+		<code>onFtDownloadProgress( <span>string <var>$ftkey</var></span>, <span>integer <var>$buff</var></span>, <span>integer <var>$size</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'filetransferDownloadProgress' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'filetransferDownloadProgress' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("filetransferDownloadProgress",
+array($object, "onFtDownloadProgress"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ftkey</var></dt>
+					<dd><code>string</code><br>$ftkey</dd>
+					<dt><var>$buff</var></dt>
+					<dd><code>integer</code><br>$buff</dd>
+					<dt><var>$size</var></dt>
+					<dd><code>integer</code><br>$size</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onFtDownloadFinished" id="_onFtDownloadFinished">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onFtDownloadFinished">#</a>
+		<code>onFtDownloadFinished( <span>string <var>$ftkey</var></span>, <span>integer <var>$buff</var></span>, <span>integer <var>$size</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'filetransferDownloadFinished' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'filetransferDownloadFinished' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("filetransferDownloadFinished",
+array($object, "onFtDownloadFinished"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ftkey</var></dt>
+					<dd><code>string</code><br>$ftkey</dd>
+					<dt><var>$buff</var></dt>
+					<dd><code>integer</code><br>$buff</dd>
+					<dt><var>$size</var></dt>
+					<dd><code>integer</code><br>$size</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onDebugDataRead" id="_onDebugDataRead">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onDebugDataRead">#</a>
+		<code>onDebugDataRead( <span>string <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for '&lt;adapter&gt;DataRead' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for '&lt;adapter&gt;DataRead' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("serverqueryDataRead",
+array($object, "onDebugDataRead")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("filetransferDataRead",
+array($object, "onDebugDataRead")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("blacklistDataRead",
+array($object, "onDebugDataRead")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("updateDataRead",
+array($object, "onDebugDataRead"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onDebugDataSend" id="_onDebugDataSend">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onDebugDataSend">#</a>
+		<code>onDebugDataSend( <span>string <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for '&lt;adapter&gt;DataSend' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for '&lt;adapter&gt;DataSend' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("serverqueryDataSend",
+array($object, "onDebugDataSend")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("filetransferDataSend",
+array($object, "onDebugDataSend")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("blacklistDataSend",
+array($object, "onDebugDataSend")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("updateDataSend",
+array($object, "onDebugDataSend"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onWaitTimeout" id="_onWaitTimeout">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onWaitTimeout">#</a>
+		<code>onWaitTimeout( <span>integer <var>$time</var></span>, <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.AbstractAdapter.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\AbstractAdapter</a></code> <var>$adapter</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for '&lt;adapter&gt;WaitTimeout' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for '&lt;adapter&gt;WaitTimeout' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("serverqueryWaitTimeout",
+array($object, "onWaitTimeout")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("filetransferWaitTimeout",
+array($object, "onWaitTimeout")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("blacklistWaitTimeout",
+array($object, "onWaitTimeout")); -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("updateWaitTimeout",
+array($object, "onWaitTimeout"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$time</var></dt>
+					<dd><code>integer</code><br>$time</dd>
+					<dt><var>$adapter</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.AbstractAdapter.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\AbstractAdapter</a></code></code><br>$adapter</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onException" id="_onException">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onException">#</a>
+		<code>onException( <span>ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Helper\Signal\ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Exception <var>$e</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Possible callback for 'errorException' signals.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Possible callback for 'errorException' signals.</p>
+
+<h1>Examples === -
+TeamSpeak3_Helper_Signal::getInstance()-&gt;subscribe("errorException",
+array($object, "onException"));</h1>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$e</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Exception</a></code></code><br>$e</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ManiaLive API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

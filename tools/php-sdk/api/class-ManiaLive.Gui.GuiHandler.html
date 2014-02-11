@@ -1,0 +1,2309 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class ManiaLive\Gui\GuiHandler | ManiaLive</title>
+
+	<script type="text/javascript" src="resources/combined.js?2626317727"></script>
+	<script type="text/javascript" src="elementlist.js?1788296020"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-ManiaLib.html">ManiaLib<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.Filters.html">Filters</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Rendering.html">Rendering</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Tracking.html">Tracking</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Views.html">Views</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Cache.html">Cache<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Cache.Drivers.html">Drivers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Database.html">Database</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.html">Cards<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Dialogs.html">Dialogs</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Navigation.html">Navigation</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Layouts.html">Layouts</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.html">Maniacode<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.Elements.html">Elements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLib.ManiaScript.html">ManiaScript</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLib.WebServices.html">WebServices</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-ManiaLive.html">ManiaLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Application.html">Application</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Config.html">Config</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Data.html">Data</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Database.MySQL.html">MySQL</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.SQLite.html">SQLite</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.DedicatedApi.html">DedicatedApi<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.DedicatedApi.Callback.html">Callback</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.html">Features<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Features.Admin.html">Admin</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.ChatCommand.html">ChatCommand</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.Tick.html">Tick</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-ManiaLive.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.PluginHandler.html">PluginHandler</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Utilities.html">Utilities</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.html">ManiaLivePlugins<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.html">MatchMakingLobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.GUI.html">GUI</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.html">Lobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.html">Helpers</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.html">MatchMakers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Match.html">Match</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.MatchSettings.html">MatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Services.html">Services</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Views.html">Views</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.html">NadeoLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.AutoTweet.html">AutoTweet</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.XmlRpcScript.html">XmlRpcScript</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.html">Standard<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.html">Admin<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.html">AutoQueue<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagManiaLive.html">AutoTagManiaLive</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagMatchSettings.html">AutoTagMatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Bill.html">Bill</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.InstanceLimiter.html">InstanceLimiter</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.html">MapVote<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.html">Menubar<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.html">PluginManager<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.html">Profiler<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.html">TeamSpeak<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Tasks.html">Tasks</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.html">TeamSpeak3<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.html">Adapter<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Blacklist.html">Blacklist</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.FileTransfer.html">FileTransfer</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.html">ServerQuery</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.TSDNS.html">TSDNS</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Update.html">Update</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Profiler.html">Profiler</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Signal.html">Signal</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.html">Node</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Transport.html">Transport</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Viewer.html">Viewer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TrustCircle.html">TrustCircle</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Maniaplanet.html">Maniaplanet<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.html">DedicatedServer<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Xmlrpc.html">Xmlrpc</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Maniaplanet.WebServices.html">WebServices<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaConnect.html">ManiaConnect</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaHome.html">ManiaHome</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-ManiaLive.Gui.ActionHandler.html">ActionHandler</a></li>
+				<li><a href="class-ManiaLive.Gui.Container.html">Container</a></li>
+				<li><a href="class-ManiaLive.Gui.Control.html">Control</a></li>
+				<li><a href="class-ManiaLive.Gui.CustomUI.html">CustomUI</a></li>
+				<li><a href="class-ManiaLive.Gui.Element.html">Element</a></li>
+				<li><a href="class-ManiaLive.Gui.Group.html">Group</a></li>
+				<li class="active"><a href="class-ManiaLive.Gui.GuiHandler.html">GuiHandler</a></li>
+				<li><a href="class-ManiaLive.Gui.ManagedWindow.html">ManagedWindow</a></li>
+				<li><a href="class-ManiaLive.Gui.Manialinks.html">Manialinks</a></li>
+				<li><a href="class-ManiaLive.Gui.Panel.html">Panel</a></li>
+				<li><a href="class-ManiaLive.Gui.Window.html">Window</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-ManiaLive.Gui.Containable.html">Containable</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-ManiaLive.Gui.html" title="Summary of ManiaLive\Gui"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class GuiHandler</h1>
+
+
+	<div class="description">
+	
+<p>Description of GuiHandler</p>
+
+	</div>
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-ManiaLib.Utils.Singleton.html"><span>ManiaLib\Utils\Singleton</span></a>
+			
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>ManiaLive\Gui\GuiHandler</span></b>			
+			 implements 
+				<a href="class-ManiaLive.Application.Listener.html"><span>ManiaLive\Application\Listener</span></a>, 
+			
+				<a href="class-ManiaLive.Data.Listener.html"><span>ManiaLive\Data\Listener</span></a>, 
+			
+				<a href="class-ManiaLive.DedicatedApi.Callback.Listener.html"><span>ManiaLive\DedicatedApi\Callback\Listener</span></a>
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br />
+		
+		<b>Namespace:</b> <a href="namespace-ManiaLive.html">ManiaLive</a>\<a href="namespace-ManiaLive.Gui.html">Gui</a><br />
+		
+
+		<b>Located at</b> vendor/maniaplanet/manialive-lib/ManiaLive/Gui/GuiHandler.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-ManiaLib.Utils.Singleton.html#___construct">ManiaLib\Utils\Singleton::__construct()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAverageSendingTimes" id="_getAverageSendingTimes">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAverageSendingTimes">#</a>
+		<code>getAverageSendingTimes( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="toggleGui" id="_toggleGui">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_toggleGui">#</a>
+		<code>toggleGui( <span>mixed <var>$login</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addtoShow" id="_addtoShow">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addtoShow">#</a>
+		<code>addtoShow( <span><code><a href="class-ManiaLive.Gui.Window.html">ManiaLive\Gui\Window</a></code> <var>$window</var></span>, <span>mixed <var>$recipients</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addToHide" id="_addToHide">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addToHide">#</a>
+		<code>addToHide( <span><code><a href="class-ManiaLive.Gui.Window.html">ManiaLive\Gui\Window</a></code> <var>$window</var></span>, <span>mixed <var>$recipients</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addToRedraw" id="_addToRedraw">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addToRedraw">#</a>
+		<code>addToRedraw( <span><code><a href="class-ManiaLive.Gui.Window.html">ManiaLive\Gui\Window</a></code> <var>$window</var></span>, <span>mixed <var>$recipients</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sendToTaskbar" id="_sendToTaskbar">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sendToTaskbar">#</a>
+		<code>sendToTaskbar( <span>mixed <var>$login</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onThumbnailClosed" id="_onThumbnailClosed">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onThumbnailClosed">#</a>
+		<code>onThumbnailClosed( <span>mixed <var>$login</var></span>, <span><code><a href="class-ManiaLive.Gui.Windows.Thumbnail.html">ManiaLive\Gui\Windows\Thumbnail</a></code> <var>$thumbnail</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addModal" id="_addModal">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addModal">#</a>
+		<code>addModal( <span><code><a href="class-ManiaLive.Gui.Window.html">ManiaLive\Gui\Window</a></code> <var>$modal</var></span>, <span>mixed <var>$recipients</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onModalClosed" id="_onModalClosed">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onModalClosed">#</a>
+		<code>onModalClosed( <span>mixed <var>$login</var></span>, <span><code><a href="class-ManiaLive.Gui.Window.html">ManiaLive\Gui\Window</a></code> <var>$window</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getThumbnail" id="_getThumbnail">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getThumbnail">#</a>
+		<code>getThumbnail( <span><code><a href="class-ManiaLive.Gui.ManagedWindow.html">ManiaLive\Gui\ManagedWindow</a></code> <var>$window</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onInit" id="_onInit">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onInit">#</a>
+		<code>onInit( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.Application.Listener.html#_onInit">ManiaLive\Application\Listener::onInit()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onRun" id="_onRun">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onRun">#</a>
+		<code>onRun( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.Application.Listener.html#_onRun">ManiaLive\Application\Listener::onRun()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPreLoop" id="_onPreLoop">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPreLoop">#</a>
+		<code>onPreLoop( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.Application.Listener.html#_onPreLoop">ManiaLive\Application\Listener::onPreLoop()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPostLoop" id="_onPostLoop">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPostLoop">#</a>
+		<code>onPostLoop( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.Application.Listener.html#_onPostLoop">ManiaLive\Application\Listener::onPostLoop()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onTerminate" id="_onTerminate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onTerminate">#</a>
+		<code>onTerminate( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.Application.Listener.html#_onTerminate">ManiaLive\Application\Listener::onTerminate()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerNewBestTime" id="_onPlayerNewBestTime">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerNewBestTime">#</a>
+		<code>onPlayerNewBestTime( <span><code><a href="class-Maniaplanet.DedicatedServer.Structures.Player.html">Maniaplanet\DedicatedServer\Structures\Player</a></code> <var>$player</var></span>, <span>integer <var>$oldBest</var></span>, <span>integer <var>$newBest</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Event lauch when a player beat his best Time</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Event lauch when a player beat his best Time</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$player</var></dt>
+					<dd><code><code><a href="class-Maniaplanet.DedicatedServer.Structures.Player.html">Maniaplanet\DedicatedServer\Structures\Player</a></code></code><br>$player</dd>
+					<dt><var>$oldBest</var></dt>
+					<dd><code>integer</code><br>$oldBest</dd>
+					<dt><var>$newBest</var></dt>
+					<dd><code>integer</code><br>$newBest</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.Data.Listener.html#_onPlayerNewBestTime">ManiaLive\Data\Listener::onPlayerNewBestTime()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerNewRank" id="_onPlayerNewRank">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerNewRank">#</a>
+		<code>onPlayerNewRank( <span><code><a href="class-Maniaplanet.DedicatedServer.Structures.Player.html">Maniaplanet\DedicatedServer\Structures\Player</a></code> <var>$player</var></span>, <span>integer <var>$oldRank</var></span>, <span>integer <var>$newRank</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Event lauch when player's rank change</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Event lauch when player's rank change</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$player</var></dt>
+					<dd><code><code><a href="class-Maniaplanet.DedicatedServer.Structures.Player.html">Maniaplanet\DedicatedServer\Structures\Player</a></code></code><br>$player</dd>
+					<dt><var>$oldRank</var></dt>
+					<dd><code>integer</code><br>$oldRank</dd>
+					<dt><var>$newRank</var></dt>
+					<dd><code>integer</code><br>$newRank</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.Data.Listener.html#_onPlayerNewRank">ManiaLive\Data\Listener::onPlayerNewRank()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerNewBestScore" id="_onPlayerNewBestScore">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerNewBestScore">#</a>
+		<code>onPlayerNewBestScore( <span><code><a href="class-Maniaplanet.DedicatedServer.Structures.Player.html">Maniaplanet\DedicatedServer\Structures\Player</a></code> <var>$player</var></span>, <span>integer <var>$oldScore</var></span>, <span>integer <var>$newScore</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Event lauch when beat his best score</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Event lauch when beat his best score</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$player</var></dt>
+					<dd><code><code><a href="class-Maniaplanet.DedicatedServer.Structures.Player.html">Maniaplanet\DedicatedServer\Structures\Player</a></code></code><br>$player</dd>
+					<dt><var>$oldScore</var></dt>
+					<dd><code>integer</code><br>$oldScore</dd>
+					<dt><var>$newScore</var></dt>
+					<dd><code>integer</code><br>$newScore</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.Data.Listener.html#_onPlayerNewBestScore">ManiaLive\Data\Listener::onPlayerNewBestScore()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerChangeSide" id="_onPlayerChangeSide">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerChangeSide">#</a>
+		<code>onPlayerChangeSide( <span><code><a href="class-Maniaplanet.DedicatedServer.Structures.Player.html">Maniaplanet\DedicatedServer\Structures\Player</a></code> <var>$player</var></span>, <span>string <var>$oldSide</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Event lauch when the player change to spectator or to player</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Event lauch when the player change to spectator or to player</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$player</var></dt>
+					<dd><code><code><a href="class-Maniaplanet.DedicatedServer.Structures.Player.html">Maniaplanet\DedicatedServer\Structures\Player</a></code></code><br>$player</dd>
+					<dt><var>$oldSide</var></dt>
+					<dd><code>string</code><br>$oldSide - it can take 2 values spectator or player</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.Data.Listener.html#_onPlayerChangeSide">ManiaLive\Data\Listener::onPlayerChangeSide()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerFinishLap" id="_onPlayerFinishLap">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerFinishLap">#</a>
+		<code>onPlayerFinishLap( <span><code><a href="class-Maniaplanet.DedicatedServer.Structures.Player.html">Maniaplanet\DedicatedServer\Structures\Player</a></code> <var>$player</var></span>, <span>integer <var>$timeOrScore</var></span>, <span>integer <var>$checkpoints</var></span>, <span>mixed <var>$nbLap</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Event launched when a player finishes a lap.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Event launched when a player finishes a lap.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$player</var></dt>
+					<dd><code><code><a href="class-Maniaplanet.DedicatedServer.Structures.Player.html">Maniaplanet\DedicatedServer\Structures\Player</a></code></code><br>$player</dd>
+					<dt><var>$timeOrScore</var></dt>
+					<dd><code>integer</code><br>$time</dd>
+					<dt><var>$checkpoints</var></dt>
+					<dd><code>integer</code><br>$nbLap</dd>
+					<dt><var>$nbLap</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.Data.Listener.html#_onPlayerFinishLap">ManiaLive\Data\Listener::onPlayerFinishLap()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerChangeTeam" id="_onPlayerChangeTeam">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerChangeTeam">#</a>
+		<code>onPlayerChangeTeam( <span>string <var>$login</var></span>, <span>integer <var>$formerTeamId</var></span>, <span>integer <var>$newTeamId</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Event fired when a player change team in a team mode</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Event fired when a player change team in a team mode</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login</dd>
+					<dt><var>$formerTeamId</var></dt>
+					<dd><code>integer</code><br>$formerTeamId</dd>
+					<dt><var>$newTeamId</var></dt>
+					<dd><code>integer</code><br>$newTeamId</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.Data.Listener.html#_onPlayerChangeTeam">ManiaLive\Data\Listener::onPlayerChangeTeam()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerJoinGame" id="_onPlayerJoinGame">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerJoinGame">#</a>
+		<code>onPlayerJoinGame( <span>string <var>$login</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Event fired when a player has finished to connect and is able to interact
+with other players</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Event fired when a player has finished to connect and is able to interact
+with other players</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.Data.Listener.html#_onPlayerJoinGame">ManiaLive\Data\Listener::onPlayerJoinGame()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerConnect" id="_onPlayerConnect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerConnect">#</a>
+		<code>onPlayerConnect( <span>string <var>$login</var></span>, <span>boolean <var>$isSpectator</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when a Player join the server</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when a Player join the server</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login</dd>
+					<dt><var>$isSpectator</var></dt>
+					<dd><code>boolean</code><br>$isSpectator</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onPlayerConnect">ManiaLive\DedicatedApi\Callback\Listener::onPlayerConnect()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerDisconnect" id="_onPlayerDisconnect">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerDisconnect">#</a>
+		<code>onPlayerDisconnect( <span>string <var>$login</var></span>, <span>mixed <var>$disconnectionReason</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when a Player quit the server</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when a Player quit the server</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login</dd>
+					<dt><var>$disconnectionReason</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onPlayerDisconnect">ManiaLive\DedicatedApi\Callback\Listener::onPlayerDisconnect()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onBeginMap" id="_onBeginMap">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onBeginMap">#</a>
+		<code>onBeginMap( <span>SMapInfo <var>$map</var></span>, <span>boolean <var>$warmUp</var></span>, <span>boolean <var>$matchContinuation</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when a map begin</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when a map begin</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$map</var></dt>
+					<dd><code>SMapInfo</code><br>$map</dd>
+					<dt><var>$warmUp</var></dt>
+					<dd><code>boolean</code><br>$warmUp</dd>
+					<dt><var>$matchContinuation</var></dt>
+					<dd><code>boolean</code><br>$matchContinuation</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onBeginMap">ManiaLive\DedicatedApi\Callback\Listener::onBeginMap()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onBeginMatch" id="_onBeginMatch">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onBeginMatch">#</a>
+		<code>onBeginMatch( )</code>
+
+		<div class="description short">
+			
+<p>Method called when the Race Begin</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when the Race Begin</p>
+
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onBeginMatch">ManiaLive\DedicatedApi\Callback\Listener::onBeginMatch()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onBeginRound" id="_onBeginRound">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onBeginRound">#</a>
+		<code>onBeginRound( )</code>
+
+		<div class="description short">
+			
+<p>Method called on Round beginning</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called on Round beginning</p>
+
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onBeginRound">ManiaLive\DedicatedApi\Callback\Listener::onBeginRound()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onBillUpdated" id="_onBillUpdated">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onBillUpdated">#</a>
+		<code>onBillUpdated( <span>integer <var>$billId</var></span>, <span>integer <var>$state</var></span>, <span>string <var>$stateName</var></span>, <span>integer <var>$transactionId</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when a bill is updated</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when a bill is updated</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$billId</var></dt>
+					<dd><code>integer</code><br>$billId</dd>
+					<dt><var>$state</var></dt>
+					<dd><code>integer</code><br>$state</dd>
+					<dt><var>$stateName</var></dt>
+					<dd><code>string</code><br>$stateName</dd>
+					<dt><var>$transactionId</var></dt>
+					<dd><code>integer</code><br>$transactionId</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onBillUpdated">ManiaLive\DedicatedApi\Callback\Listener::onBillUpdated()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onMapListModified" id="_onMapListModified">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onMapListModified">#</a>
+		<code>onMapListModified( <span>integer <var>$curMapIndex</var></span>, <span>integer <var>$nextMapIndex</var></span>, <span>boolean <var>$isListModified</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when the map list is modified</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when the map list is modified</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$curMapIndex</var></dt>
+					<dd><code>integer</code><br>$curMapIndex</dd>
+					<dt><var>$nextMapIndex</var></dt>
+					<dd><code>integer</code><br>$nextMapIndex</dd>
+					<dt><var>$isListModified</var></dt>
+					<dd><code>boolean</code><br>$isListModified</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onMapListModified">ManiaLive\DedicatedApi\Callback\Listener::onMapListModified()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onEcho" id="_onEcho">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onEcho">#</a>
+		<code>onEcho( <span>string <var>$internal</var></span>, <span>string <var>$public</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when the dedicated Method Echo is called</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when the dedicated Method Echo is called</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$internal</var></dt>
+					<dd><code>string</code><br>$internal</dd>
+					<dt><var>$public</var></dt>
+					<dd><code>string</code><br>$public</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onEcho">ManiaLive\DedicatedApi\Callback\Listener::onEcho()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onEndMap" id="_onEndMap">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onEndMap">#</a>
+		<code>onEndMap( <span>SPlayerRanking[] <var>$rankings</var></span>, <span>SMapInfo <var>$map</var></span>, <span>boolean <var>$wasWarmUp</var></span>, <span>boolean <var>$matchContinuesOnNextMap</var></span>, <span>boolean <var>$restartMap</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when a map end</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when a map end</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rankings</var></dt>
+					<dd><code>SPlayerRanking[]</code><br>$rankings</dd>
+					<dt><var>$map</var></dt>
+					<dd><code>SMapInfo</code><br>$map</dd>
+					<dt><var>$wasWarmUp</var></dt>
+					<dd><code>boolean</code><br>$wasWarmUp</dd>
+					<dt><var>$matchContinuesOnNextMap</var></dt>
+					<dd><code>boolean</code><br>$matchContinuesOnNextMap</dd>
+					<dt><var>$restartMap</var></dt>
+					<dd><code>boolean</code><br>$restartMap</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onEndMap">ManiaLive\DedicatedApi\Callback\Listener::onEndMap()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onEndMatch" id="_onEndMatch">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onEndMatch">#</a>
+		<code>onEndMatch( <span>SPlayerRanking[] <var>$rankings</var></span>, <span>integer|SMapInfo <var>$winnerTeamOrMap</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when the Race Ended struct of SPlayerRanking is a part of the
+structure of Maniaplanet\DedicatedServer\Structures\Player object struct
+SPlayerRanking { string Login; string NickName; int PlayerId; int Rank; [for
+legacy TrackMania modes also: int BestTime; int[] BestCheckpoints; int Score;
+int NbrLapsFinished; double LadderScore; ] }</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when the Race Ended struct of SPlayerRanking is a part of the
+structure of Maniaplanet\DedicatedServer\Structures\Player object struct
+SPlayerRanking { string Login; string NickName; int PlayerId; int Rank; [for
+legacy TrackMania modes also: int BestTime; int[] BestCheckpoints; int Score;
+int NbrLapsFinished; double LadderScore; ] }</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rankings</var></dt>
+					<dd><code>SPlayerRanking[]</code><br>$rankings</dd>
+					<dt><var>$winnerTeamOrMap</var></dt>
+					<dd><code>integer|SMapInfo</code><br>$winnerTeamOrMap Winner team if API version &gt;= 2012-06-19, else the map</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onEndMatch">ManiaLive\DedicatedApi\Callback\Listener::onEndMatch()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onEndRound" id="_onEndRound">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onEndRound">#</a>
+		<code>onEndRound( )</code>
+
+		<div class="description short">
+			
+<p>Method called on Round ending</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called on Round ending</p>
+
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onEndRound">ManiaLive\DedicatedApi\Callback\Listener::onEndRound()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onManualFlowControlTransition" id="_onManualFlowControlTransition">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onManualFlowControlTransition">#</a>
+		<code>onManualFlowControlTransition( <span>string <var>$transition</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when the Flow Control is manual</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when the Flow Control is manual</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$transition</var></dt>
+					<dd><code>string</code><br>$transition</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onManualFlowControlTransition">ManiaLive\DedicatedApi\Callback\Listener::onManualFlowControlTransition()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerChat" id="_onPlayerChat">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerChat">#</a>
+		<code>onPlayerChat( <span>integer <var>$playerUid</var></span>, <span>string <var>$login</var></span>, <span>string <var>$text</var></span>, <span>boolean <var>$isRegistredCmd</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when a Player chat on the server</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when a Player chat on the server</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerUid</var></dt>
+					<dd><code>integer</code><br>$playerUid</dd>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login</dd>
+					<dt><var>$text</var></dt>
+					<dd><code>string</code><br>$text</dd>
+					<dt><var>$isRegistredCmd</var></dt>
+					<dd><code>boolean</code><br>$isRegistredCmd</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onPlayerChat">ManiaLive\DedicatedApi\Callback\Listener::onPlayerChat()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerCheckpoint" id="_onPlayerCheckpoint">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerCheckpoint">#</a>
+		<code>onPlayerCheckpoint( <span>integer <var>$playerUid</var></span>, <span>string <var>$login</var></span>, <span>integer <var>$timeOrScore</var></span>, <span>integer <var>$curLap</var></span>, <span>integer <var>$checkpointIndex</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when a player cross a checkPoint</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when a player cross a checkPoint</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerUid</var></dt>
+					<dd><code>integer</code><br>$playerUid</dd>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login</dd>
+					<dt><var>$timeOrScore</var></dt>
+					<dd><code>integer</code><br>$timeOrScore</dd>
+					<dt><var>$curLap</var></dt>
+					<dd><code>integer</code><br>$curLap</dd>
+					<dt><var>$checkpointIndex</var></dt>
+					<dd><code>integer</code><br>$checkpointIndex</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onPlayerCheckpoint">ManiaLive\DedicatedApi\Callback\Listener::onPlayerCheckpoint()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerFinish" id="_onPlayerFinish">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerFinish">#</a>
+		<code>onPlayerFinish( <span>integer <var>$playerUid</var></span>, <span>string <var>$login</var></span>, <span>integer <var>$timeOrScore</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when a player finish a round</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when a player finish a round</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerUid</var></dt>
+					<dd><code>integer</code><br>$playerUid</dd>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login</dd>
+					<dt><var>$timeOrScore</var></dt>
+					<dd><code>integer</code><br>$timeOrScore</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onPlayerFinish">ManiaLive\DedicatedApi\Callback\Listener::onPlayerFinish()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerIncoherence" id="_onPlayerIncoherence">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerIncoherence">#</a>
+		<code>onPlayerIncoherence( <span>integer <var>$playerUid</var></span>, <span>string <var>$login</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when there is an incoherence with a player data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when there is an incoherence with a player data</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerUid</var></dt>
+					<dd><code>integer</code><br>$playerUid</dd>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onPlayerIncoherence">ManiaLive\DedicatedApi\Callback\Listener::onPlayerIncoherence()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerInfoChanged" id="_onPlayerInfoChanged">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerInfoChanged">#</a>
+		<code>onPlayerInfoChanged( <span>SPlayerInfo <var>$playerInfo</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when player info changed</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when player info changed</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerInfo</var></dt>
+					<dd><code>SPlayerInfo</code><br>$playerInfo</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onPlayerInfoChanged">ManiaLive\DedicatedApi\Callback\Listener::onPlayerInfoChanged()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerManialinkPageAnswer" id="_onPlayerManialinkPageAnswer">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerManialinkPageAnswer">#</a>
+		<code>onPlayerManialinkPageAnswer( <span>integer <var>$playerUid</var></span>, <span>string <var>$login</var></span>, <span>integer <var>$answer</var></span>, <span>array <var>$entries</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when a Answer to a Manialink Page difference with previous TM:
+this is not called if the player doesn't answer, and thus '0' is also a valid
+answer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when a Answer to a Manialink Page difference with previous TM:
+this is not called if the player doesn't answer, and thus '0' is also a valid
+answer.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerUid</var></dt>
+					<dd><code>integer</code><br>$playerUid</dd>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login</dd>
+					<dt><var>$answer</var></dt>
+					<dd><code>integer</code><br>$answer</dd>
+					<dt><var>$entries</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onPlayerManialinkPageAnswer">ManiaLive\DedicatedApi\Callback\Listener::onPlayerManialinkPageAnswer()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onServerStart" id="_onServerStart">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onServerStart">#</a>
+		<code>onServerStart( )</code>
+
+		<div class="description short">
+			
+<p>Method called when the server starts</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when the server starts</p>
+
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onServerStart">ManiaLive\DedicatedApi\Callback\Listener::onServerStart()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onServerStop" id="_onServerStop">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onServerStop">#</a>
+		<code>onServerStop( )</code>
+
+		<div class="description short">
+			
+<p>Method called when the server stops</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when the server stops</p>
+
+
+
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onServerStop">ManiaLive\DedicatedApi\Callback\Listener::onServerStop()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onStatusChanged" id="_onStatusChanged">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onStatusChanged">#</a>
+		<code>onStatusChanged( <span>integer <var>$statusCode</var></span>, <span>string <var>$statusName</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when the server status change</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when the server status change</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$statusCode</var></dt>
+					<dd><code>integer</code><br>StatusCode</dd>
+					<dt><var>$statusName</var></dt>
+					<dd><code>string</code><br>StatsName</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onStatusChanged">ManiaLive\DedicatedApi\Callback\Listener::onStatusChanged()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onTunnelDataReceived" id="_onTunnelDataReceived">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onTunnelDataReceived">#</a>
+		<code>onTunnelDataReceived( <span>integer <var>$playerUid</var></span>, <span>string <var>$login</var></span>, <span>base64 <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called server receive data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called server receive data</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerUid</var></dt>
+					<dd><code>integer</code><br>$playerUid</dd>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login</dd>
+					<dt><var>$data</var></dt>
+					<dd><code>base64</code><br>$data</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onTunnelDataReceived">ManiaLive\DedicatedApi\Callback\Listener::onTunnelDataReceived()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onVoteUpdated" id="_onVoteUpdated">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onVoteUpdated">#</a>
+		<code>onVoteUpdated( <span>string <var>$stateName</var></span>, <span>string <var>$login</var></span>, <span>string <var>$cmdName</var></span>, <span>string <var>$cmdParam</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when a vote change of State</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when a vote change of State</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$stateName</var></dt>
+					<dd><code>string</code><br>$stateName can be NewVote, VoteCancelled, votePassed, voteFailed</dd>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login the login of the player who start the vote if empty the server start the
+vote</dd>
+					<dt><var>$cmdName</var></dt>
+					<dd><code>string</code><br>$cmdName the command used for the vote</dd>
+					<dt><var>$cmdParam</var></dt>
+					<dd><code>string</code><br>$cmdParam the parameters of the vote</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onVoteUpdated">ManiaLive\DedicatedApi\Callback\Listener::onVoteUpdated()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onModeScriptCallback" id="_onModeScriptCallback">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onModeScriptCallback">#</a>
+		<code>onModeScriptCallback( <span>string <var>$param1</var></span>, <span>string <var>$param2</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param1</var></dt>
+					<dd><code>string</code></dd>
+					<dt><var>$param2</var></dt>
+					<dd><code>string</code></dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onModeScriptCallback">ManiaLive\DedicatedApi\Callback\Listener::onModeScriptCallback()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="onPlayerAlliesChanged" id="_onPlayerAlliesChanged">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_onPlayerAlliesChanged">#</a>
+		<code>onPlayerAlliesChanged( <span>string <var>$login</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Method called when the player in parameter has changed its allies</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Method called when the player in parameter has changed its allies</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login</dd>
+				</dl></div>
+
+
+
+
+
+				<h4>Implementation of</h4>
+				<div class="list"><code><a href="class-ManiaLive.DedicatedApi.Callback.Listener.html#_onPlayerAlliesChanged">ManiaLive\DedicatedApi\Callback\Listener::onPlayerAlliesChanged()</a></code></div>
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-ManiaLib.Utils.Singleton.html#methods">ManiaLib\Utils\Singleton</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-ManiaLib.Utils.Singleton.html#___clone">__clone()</a>, 
+			<a href="class-ManiaLib.Utils.Singleton.html#_getInstance">getInstance()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+	<table class="summary" id="constants">
+	<caption>Constants summary</caption>
+	<tr data-order="MAX_THUMBNAILS" id="MAX_THUMBNAILS">
+
+		<td class="attributes"><code>integer</code></td>
+		<td class="name"><code>
+<b>MAX_THUMBNAILS</b>		</code></td>
+		<td class="value"><code><span class="php-num">5</span></code></td>
+		<td class="description"><div>
+			<a href="#MAX_THUMBNAILS" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	<tr data-order="NEXT_IS_MODAL" id="NEXT_IS_MODAL">
+
+		<td class="attributes"><code>float</code></td>
+		<td class="name"><code>
+<b>NEXT_IS_MODAL</b>		</code></td>
+		<td class="value"><code><span class="php-num">0xFA15EADD</span></code></td>
+		<td class="description"><div>
+			<a href="#NEXT_IS_MODAL" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+	<table class="summary inherited">
+	<caption>Properties inherited from <a href="class-ManiaLib.Utils.Singleton.html#properties">ManiaLib\Utils\Singleton</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-ManiaLib.Utils.Singleton.html#$instances"><var>$instances</var></a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ManiaLive API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

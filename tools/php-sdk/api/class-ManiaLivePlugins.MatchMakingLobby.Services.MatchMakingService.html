@@ -1,0 +1,1980 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class ManiaLivePlugins\MatchMakingLobby\Services\MatchMakingService | ManiaLive</title>
+
+	<script type="text/javascript" src="resources/combined.js?2626317727"></script>
+	<script type="text/javascript" src="elementlist.js?1788296020"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-ManiaLib.html">ManiaLib<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.Filters.html">Filters</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Rendering.html">Rendering</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Tracking.html">Tracking</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Views.html">Views</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Cache.html">Cache<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Cache.Drivers.html">Drivers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Database.html">Database</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.html">Cards<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Dialogs.html">Dialogs</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Navigation.html">Navigation</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Layouts.html">Layouts</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.html">Maniacode<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.Elements.html">Elements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLib.ManiaScript.html">ManiaScript</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLib.WebServices.html">WebServices</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.html">ManiaLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Application.html">Application</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Config.html">Config</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Data.html">Data</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Database.MySQL.html">MySQL</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.SQLite.html">SQLite</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.DedicatedApi.html">DedicatedApi<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.DedicatedApi.Callback.html">Callback</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.html">Features<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Features.Admin.html">Admin</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.ChatCommand.html">ChatCommand</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.Tick.html">Tick</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.PluginHandler.html">PluginHandler</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Utilities.html">Utilities</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.html">ManiaLivePlugins<span></span></a>
+						<ul>
+				<li class="active"><a href="namespace-ManiaLivePlugins.MatchMakingLobby.html">MatchMakingLobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.GUI.html">GUI</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.html">Lobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.html">Helpers</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.html">MatchMakers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Match.html">Match</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.MatchSettings.html">MatchSettings</a>
+						</li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Services.html">Services</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Views.html">Views</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.html">NadeoLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.AutoTweet.html">AutoTweet</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.XmlRpcScript.html">XmlRpcScript</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.html">Standard<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.html">Admin<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.html">AutoQueue<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagManiaLive.html">AutoTagManiaLive</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagMatchSettings.html">AutoTagMatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Bill.html">Bill</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.InstanceLimiter.html">InstanceLimiter</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.html">MapVote<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.html">Menubar<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.html">PluginManager<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.html">Profiler<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.html">TeamSpeak<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Tasks.html">Tasks</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.html">TeamSpeak3<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.html">Adapter<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Blacklist.html">Blacklist</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.FileTransfer.html">FileTransfer</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.html">ServerQuery</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.TSDNS.html">TSDNS</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Update.html">Update</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Profiler.html">Profiler</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Signal.html">Signal</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.html">Node</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Transport.html">Transport</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Viewer.html">Viewer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TrustCircle.html">TrustCircle</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Maniaplanet.html">Maniaplanet<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.html">DedicatedServer<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Xmlrpc.html">Xmlrpc</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Maniaplanet.WebServices.html">WebServices<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaConnect.html">ManiaConnect</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaHome.html">ManiaHome</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Ally.html">Ally</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.AllyEvent.html">AllyEvent</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.AllyService.html">AllyService</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Lobby.html">Lobby</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">Match</a></li>
+				<li class="active"><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.MatchMakingService.html">MatchMakingService</a></li>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.PlayerInfo.html">PlayerInfo</a></li>
+			</ul>
+
+			<h3>Interfaces</h3>
+			<ul>
+				<li><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.AllyListener.html">AllyListener</a></li>
+			</ul>
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-ManiaLivePlugins.MatchMakingLobby.Services.html" title="Summary of ManiaLivePlugins\MatchMakingLobby\Services"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class MatchMakingService</h1>
+
+
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-ManiaLivePlugins.html">ManiaLivePlugins</a>\<a href="namespace-ManiaLivePlugins.MatchMakingLobby.html">MatchMakingLobby</a>\<a href="namespace-ManiaLivePlugins.MatchMakingLobby.Services.html">Services</a><br />
+		
+
+		<b>Located at</b> vendor/maniaplanet/matchmaking-lobby/MatchMakingLobby/Services/MatchMakingService.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLobby" id="_getLobby">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Lobby.html">ManiaLivePlugins\MatchMakingLobby\Services\Lobby</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLobby">#</a>
+		<code>getLobby( <span>string <var>$lobbyLogin</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get lobby information</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get lobby information</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Lobby.html">ManiaLivePlugins\MatchMakingLobby\Services\Lobby</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMatch" id="_getMatch">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMatch">#</a>
+		<code>getMatch( <span>string <var>$matchId</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get matchServer information</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get matchServer information</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$matchId</var></dt>
+					<dd><code>string</code><br>$serverLogin</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMatches" id="_getMatches">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a>[]</code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMatches">#</a>
+		<code>getMatches( <span>array <var>$matchIds</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$matchIds</var></dt>
+					<dd><code>int[]</code><br>$matchIds</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a>[]</code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getServerCurrentMatchId" id="_getServerCurrentMatchId">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getServerCurrentMatchId">#</a>
+		<code>getServerCurrentMatchId( <span>string <var>$serverLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$serverLogin</var></dt>
+					<dd><code>string</code><br>$serverLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getServerCurrentMatch" id="_getServerCurrentMatch">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getServerCurrentMatch">#</a>
+		<code>getServerCurrentMatch( <span>string <var>$serverLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$serverLogin</var></dt>
+					<dd><code>string</code><br>$serverLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCurrentLobbyMatches" id="_getCurrentLobbyMatches">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCurrentLobbyMatches">#</a>
+		<code>getCurrentLobbyMatches( <span>string <var>$lobbyLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$serverLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getEndedMatchesSince" id="_getEndedMatchesSince">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getEndedMatchesSince">#</a>
+		<code>getEndedMatchesSince( <span>mixed <var>$lobbyLogin</var></span>, <span>mixed <var>$scriptName</var></span>, <span>mixed <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getCurrentLobbyMatchIds" id="_getCurrentLobbyMatchIds">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getCurrentLobbyMatchIds">#</a>
+		<code>getCurrentLobbyMatchIds( <span>string <var>$lobbyLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cancelMatch" id="_cancelMatch">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cancelMatch">#</a>
+		<code>cancelMatch( <span><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a></code> <var>$match</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMatchesNeedingBackup" id="_getMatchesNeedingBackup">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMatchesNeedingBackup">#</a>
+		<code>getMatchesNeedingBackup( <span>mixed <var>$lobbyLogin</var></span>, <span>mixed <var>$scriptName</var></span>, <span>mixed <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getMatchQuitters" id="_getMatchQuitters">
+
+		<td class="attributes"><code>
+			 public 
+			string[]
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getMatchQuitters">#</a>
+		<code>getMatchQuitters( <span>integer <var>$matchId</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get login of players who have quit the match (quitters or gave up)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get login of players who have quit the match (quitters or gave up)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$matchId</var></dt>
+					<dd><code>integer</code><br>$matchId</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string[]</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPlayersJustFinishedAllMatches" id="_getPlayersJustFinishedAllMatches">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPlayersJustFinishedAllMatches">#</a>
+		<code>getPlayersJustFinishedAllMatches( <span>mixed <var>$lobbyLogin</var></span>, <span>array <var>$guest</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPlayersPlayingCount" id="_getPlayersPlayingCount">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPlayersPlayingCount">#</a>
+		<code>getPlayersPlayingCount( <span>string <var>$lobbyLogin</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the number of match currently played for the lobby</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the number of match currently played for the lobby</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPlayersPlaying" id="_getPlayersPlaying">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPlayersPlaying">#</a>
+		<code>getPlayersPlaying( <span>mixed <var>$lobbyLogin</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLiveMatchServersCount" id="_getLiveMatchServersCount">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLiveMatchServersCount">#</a>
+		<code>getLiveMatchServersCount( <span>string <var>$lobbyLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the number of server the lobby can use</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the number of server the lobby can use</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLeaveCount" id="_getLeaveCount">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLeaveCount">#</a>
+		<code>getLeaveCount( <span>string <var>$playerLogin</var></span>, <span>mixed <var>$lobbyLogin</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the number of time the player quit a match for this lobby</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the number of time the player quit a match for this lobby</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerLogin</var></dt>
+					<dd><code>string</code><br>$playerLogin</dd>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="updateMatchScores" id="_updateMatchScores">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_updateMatchScores">#</a>
+		<code>updateMatchScores( <span>mixed <var>$matchId</var></span>, <span>mixed <var>$matchPointsTeam1</var></span>, <span>mixed <var>$matchPointsTeam2</var></span>, <span>mixed <var>$mapPointsTeam1</var></span>, <span>mixed <var>$mapPointsTeam2</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="countAvailableServer" id="_countAvailableServer">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_countAvailableServer">#</a>
+		<code>countAvailableServer( <span>string <var>$lobbyLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get number of server available to host a match for the lobby</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get number of server available to host a match for the lobby</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the match server login<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAvailableServer" id="_getAvailableServer">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAvailableServer">#</a>
+		<code>getAvailableServer( <span>string <var>$lobbyLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get a server available to host a match for the lobby</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get a server available to host a match for the lobby</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>the match server login<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isInMatch" id="_isInMatch">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isInMatch">#</a>
+		<code>isInMatch( <span>string <var>$playerLogin</var></span>, <span>string <var>$lobbyLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerLogin</var></dt>
+					<dd><code>string</code><br>$playerLogin</dd>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPlayerCurrentMatchId" id="_getPlayerCurrentMatchId">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPlayerCurrentMatchId">#</a>
+		<code>getPlayerCurrentMatchId( <span>string <var>$playerLogin</var></span>, <span>string <var>$lobbyLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerLogin</var></dt>
+					<dd><code>string</code><br>$playerLogin</dd>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPlayerCurrentMatch" id="_getPlayerCurrentMatch">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPlayerCurrentMatch">#</a>
+		<code>getPlayerCurrentMatch( <span>mixed <var>$playerLogin</var></span>, <span>mixed <var>$lobbyLogin</var></span>, <span>mixed <var>$scriptName</var></span>, <span>mixed <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPlayerLatestMatch" id="_getPlayerLatestMatch">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPlayerLatestMatch">#</a>
+		<code>getPlayerLatestMatch( <span>string <var>$playerLogin</var></span>, <span>string <var>$lobbyLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the rank of the last match of a player</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the rank of the last match of a player</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerLogin</var></dt>
+					<dd><code>string</code><br>$playerLogin</dd>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLobbyLatestMatches" id="_getLobbyLatestMatches">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLobbyLatestMatches">#</a>
+		<code>getLobbyLatestMatches( <span>integer <var>$length</var></span>, <span>string <var>$lobbyLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+<p>return the requested number of match ended</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>return the requested number of match ended</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$length</var></dt>
+					<dd><code>integer</code><br>$length</dd>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getAverageTimeBetweenMatches" id="_getAverageTimeBetweenMatches">
+
+		<td class="attributes"><code>
+			 public 
+			float
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getAverageTimeBetweenMatches">#</a>
+		<code>getAverageTimeBetweenMatches( <span>string <var>$lobbyLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get average time between two match. This time is compute with matches over
+the last hour If there is not anough matches in database, it returns -1</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get average time between two match. This time is compute with matches over
+the last hour If there is not anough matches in database, it returns -1</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>float</code><br>Number of seconds<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="updateMatchState" id="_updateMatchState">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_updateMatchState">#</a>
+		<code>updateMatchState( <span>integer <var>$matchId</var></span>, <span>integer <var>$state</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Updates match state</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Updates match state</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$matchId</var></dt>
+					<dd><code>integer</code><br>$matchId</dd>
+					<dt><var>$state</var></dt>
+					<dd><code>integer</code><br>$state</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerMatch" id="_registerMatch">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerMatch">#</a>
+		<code>registerMatch( <span>string <var>$serverLogin</var></span>, <span><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a></code> <var>$match</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span>, <span>mixed <var>$lobbyLogin</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Register a match in database, the match Server will use this to ready up</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Register a match in database, the match Server will use this to ready up</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$serverLogin</var></dt>
+					<dd><code>string</code><br>$serverLogin</dd>
+					<dt><var>$match</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.MatchMakingLobby.Services.Match.html">ManiaLivePlugins\MatchMakingLobby\Services\Match</a></code></code><br>$match</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br>$matchId<br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addMatchPlayer" id="_addMatchPlayer">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addMatchPlayer">#</a>
+		<code>addMatchPlayer( <span>integer <var>$matchId</var></span>, <span>string <var>$login</var></span>, <span>integer <var>$teamId</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$matchId</var></dt>
+					<dd><code>integer</code><br>$matchId</dd>
+					<dt><var>$login</var></dt>
+					<dd><code>string</code><br>$login</dd>
+					<dt><var>$teamId</var></dt>
+					<dd><code>integer</code><br>$teamId</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="updatePlayerState" id="_updatePlayerState">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_updatePlayerState">#</a>
+		<code>updatePlayerState( <span>string <var>$playerLogin</var></span>, <span>integer <var>$matchId</var></span>, <span>integer <var>$state</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the new player state</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the new player state</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerLogin</var></dt>
+					<dd><code>string</code><br>$playerLogin</dd>
+					<dt><var>$matchId</var></dt>
+					<dd><code>integer</code><br>$matchId</dd>
+					<dt><var>$state</var></dt>
+					<dd><code>integer</code><br>$state</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="updatePlayerRank" id="_updatePlayerRank">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_updatePlayerRank">#</a>
+		<code>updatePlayerRank( <span>string <var>$playerLogin</var></span>, <span>integer <var>$matchId</var></span>, <span>integer <var>$rank</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Register the player rank on his match</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Register the player rank on his match</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$playerLogin</var></dt>
+					<dd><code>string</code><br>$playerLogin</dd>
+					<dt><var>$matchId</var></dt>
+					<dd><code>integer</code><br>$matchId</dd>
+					<dt><var>$rank</var></dt>
+					<dd><code>integer</code><br>$rank</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerMatchServer" id="_registerMatchServer">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerMatchServer">#</a>
+		<code>registerMatchServer( <span>string <var>$serverLogin</var></span>, <span>string <var>$lobbyLogin</var></span>, <span>string <var>$state</var></span>, <span>mixed <var>$scriptName</var></span>, <span>mixed <var>$titleIdString</var></span>, <span>mixed <var>$currentMap</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Register a server as match server</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Register a server as match server</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$serverLogin</var></dt>
+					<dd><code>string</code><br>$serverLogin</dd>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+					<dt><var>$state</var></dt>
+					<dd><code>string</code><br>$state</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd></dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd></dd>
+					<dt><var>$currentMap</var></dt>
+					<dd></dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="updateServerCurrentMatchId" id="_updateServerCurrentMatchId">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_updateServerCurrentMatchId">#</a>
+		<code>updateServerCurrentMatchId( <span>mixed <var>$matchId</var></span>, <span>mixed <var>$serverLogin</var></span>, <span>mixed <var>$scriptName</var></span>, <span>mixed <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="registerLobby" id="_registerLobby">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_registerLobby">#</a>
+		<code>registerLobby( <span>string <var>$lobbyLogin</var></span>, <span>integer <var>$readyPlayersCount</var></span>, <span>integer <var>$connectedPlayersCount</var></span>, <span>string <var>$serverName</var></span>, <span>string <var>$backLink</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Register a lobby server in the system</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Register a lobby server in the system</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+					<dt><var>$readyPlayersCount</var></dt>
+					<dd><code>integer</code><br>$readyPlayersCount</dd>
+					<dt><var>$connectedPlayersCount</var></dt>
+					<dd><code>integer</code><br>$connectedPlayersCount</dd>
+					<dt><var>$serverName</var></dt>
+					<dd><code>string</code><br>$serverName</dd>
+					<dt><var>$backLink</var></dt>
+					<dd><code>string</code><br>$backLink</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPlayerTotalPenalty" id="_getPlayerTotalPenalty">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPlayerTotalPenalty">#</a>
+		<code>getPlayerTotalPenalty( <span>mixed <var>$playerLogin</var></span>, <span>mixed <var>$lobbyLogin</var></span>, <span>mixed <var>$scriptName</var></span>, <span>mixed <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getPlayerPenalty" id="_getPlayerPenalty">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getPlayerPenalty">#</a>
+		<code>getPlayerPenalty( <span>mixed <var>$playerLogin</var></span>, <span>mixed <var>$lobbyLogin</var></span>, <span>mixed <var>$scriptName</var></span>, <span>mixed <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="increasePlayerPenalty" id="_increasePlayerPenalty">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_increasePlayerPenalty">#</a>
+		<code>increasePlayerPenalty( <span>mixed <var>$playerLogin</var></span>, <span>mixed <var>$by</var></span>, <span>mixed <var>$lobbyLogin</var></span>, <span>mixed <var>$scriptName</var></span>, <span>mixed <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="decreasePlayerPenalty" id="_decreasePlayerPenalty">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_decreasePlayerPenalty">#</a>
+		<code>decreasePlayerPenalty( <span>mixed <var>$playerLogin</var></span>, <span>mixed <var>$by</var></span>, <span>mixed <var>$lobbyLogin</var></span>, <span>mixed <var>$scriptName</var></span>, <span>mixed <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addMaster" id="_addMaster">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addMaster">#</a>
+		<code>addMaster( <span>mixed <var>$playerLogin</var></span>, <span>mixed <var>$nickName</var></span>, <span>mixed <var>$ladderPoints</var></span>, <span>mixed <var>$lobbyLogin</var></span>, <span>mixed <var>$scriptName</var></span>, <span>mixed <var>$titleIdString</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getLatestMasters" id="_getLatestMasters">
+
+		<td class="attributes"><code>
+			 public 
+			type
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getLatestMasters">#</a>
+		<code>getLatestMasters( <span>string <var>$lobbyLogin</var></span>, <span>string <var>$scriptName</var></span>, <span>string <var>$titleIdString</var></span>, <span>integer <var>$lastId</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$lobbyLogin</var></dt>
+					<dd><code>string</code><br>$lobbyLogin</dd>
+					<dt><var>$scriptName</var></dt>
+					<dd><code>string</code><br>$scriptName</dd>
+					<dt><var>$titleIdString</var></dt>
+					<dd><code>string</code><br>$titleIdString</dd>
+					<dt><var>$lastId</var></dt>
+					<dd><code>integer</code><br>$lastId</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>type</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createTables" id="_createTables">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_createTables">#</a>
+		<code>createTables( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+	<table class="summary" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="db" id="$db">
+		<td class="attributes"><code>
+			protected  
+			<code><a href="class-ManiaLive.Database.MySQL.Connection.html">ManiaLive\Database\MySQL\Connection</a></code>
+		</code></td>
+
+		<td class="name">
+<var>$db</var>		</td>
+		<td class="value"><code></code></td>
+		<td class="description"><div>
+			<a href="#$db" class="anchor">#</a>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ManiaLive API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

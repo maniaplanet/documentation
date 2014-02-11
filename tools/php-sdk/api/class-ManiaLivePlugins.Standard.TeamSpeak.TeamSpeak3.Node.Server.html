@@ -1,0 +1,5899 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="generator" content="ApiGen 2.8.0" />
+
+	<title>Class ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Server | ManiaLive</title>
+
+	<script type="text/javascript" src="resources/combined.js?2626317727"></script>
+	<script type="text/javascript" src="elementlist.js?1788296020"></script>
+	<link rel="stylesheet" type="text/css" media="all" href="resources/style.css?3505392360" />
+
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Namespaces</h3>
+			<ul>
+				<li><a href="namespace-ManiaLib.html">ManiaLib<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.html">Application<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Application.Filters.html">Filters</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Rendering.html">Rendering</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Tracking.html">Tracking</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Application.Views.html">Views</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Cache.html">Cache<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Cache.Drivers.html">Drivers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Database.html">Database</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.html">Cards<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Dialogs.html">Dialogs</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Cards.Navigation.html">Navigation</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLib.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Layouts.html">Layouts</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.html">Maniacode<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLib.Gui.Maniacode.Elements.html">Elements</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLib.ManiaScript.html">ManiaScript</a>
+						</li>
+				<li><a href="namespace-ManiaLib.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLib.WebServices.html">WebServices</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.html">ManiaLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Application.html">Application</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Config.html">Config</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Data.html">Data</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.html">Database<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Database.MySQL.html">MySQL</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Database.SQLite.html">SQLite</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.DedicatedApi.html">DedicatedApi<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.DedicatedApi.Callback.html">Callback</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.Event.html">Event</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.html">Features<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Features.Admin.html">Admin</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.ChatCommand.html">ChatCommand</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Features.Tick.html">Tick</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLive.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Elements.html">Elements</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLive.PluginHandler.html">PluginHandler</a>
+						</li>
+				<li><a href="namespace-ManiaLive.Utilities.html">Utilities</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.html">ManiaLivePlugins<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.html">MatchMakingLobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.GUI.html">GUI</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.html">Lobby<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.Helpers.html">Helpers</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Lobby.MatchMakers.html">MatchMakers</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Match.html">Match</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.MatchSettings.html">MatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Services.html">Services</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Utils.html">Utils</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Views.html">Views</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.MatchMakingLobby.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.html">NadeoLive<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.AutoTweet.html">AutoTweet</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.NadeoLive.XmlRpcScript.html">XmlRpcScript</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.Standard.html">Standard<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.html">Admin<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Admin.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.html">AutoQueue<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoQueue.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagManiaLive.html">AutoTagManiaLive</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.AutoTagMatchSettings.html">AutoTagMatchSettings</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Bill.html">Bill</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.InstanceLimiter.html">InstanceLimiter</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.html">MapVote<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.MapVote.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.html">Menubar<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Menubar.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.html">PluginManager<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.PluginManager.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.html">Profiler<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.html">Gui<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.Profiler.Gui.Windows.html">Windows</a>
+						</li>
+							</ul></li></ul></li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.html">TeamSpeak<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Controls.html">Controls</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Tasks.html">Tasks</a>
+						</li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.html">TeamSpeak3<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.html">Adapter<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Blacklist.html">Blacklist</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.FileTransfer.html">FileTransfer</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.html">ServerQuery</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.TSDNS.html">TSDNS</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.Update.html">Update</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.html">Helper<span></span></a>
+						<ul>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Profiler.html">Profiler</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.Signal.html">Signal</a>
+						</li>
+							</ul></li>
+				<li class="active"><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.html">Node</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Transport.html">Transport</a>
+						</li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Viewer.html">Viewer</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.Windows.html">Windows</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-ManiaLivePlugins.Standard.TrustCircle.html">TrustCircle</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-Maniaplanet.html">Maniaplanet<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.html">DedicatedServer<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Structures.html">Structures</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.DedicatedServer.Xmlrpc.html">Xmlrpc</a>
+						</li>
+							</ul></li>
+				<li><a href="namespace-Maniaplanet.WebServices.html">WebServices<span></span></a>
+						<ul>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaConnect.html">ManiaConnect</a>
+						</li>
+				<li><a href="namespace-Maniaplanet.WebServices.ManiaHome.html">ManiaHome</a>
+						</li>
+							</ul></li></ul></li>
+				<li><a href="namespace-None.html">None</a>
+						</li>
+				<li><a href="namespace-PHP.html">PHP</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr />
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html">AbstractNode</a></li>
+				<li><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Channel.html">Channel</a></li>
+				<li><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Channelgroup.html">Channelgroup</a></li>
+				<li><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Client.html">Client</a></li>
+				<li><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Host.html">Host</a></li>
+				<li class="active"><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Server.html">Server</a></li>
+				<li><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Servergroup.html">Servergroup</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Exception.html">Exception</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="" />
+		<input type="hidden" name="ie" value="UTF-8" />
+		<input type="text" name="q" class="text" />
+		<input type="submit" value="Search" />
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.html" title="Summary of ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node"><span>Namespace</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class Server</h1>
+
+
+
+	<dl class="tree">
+		<dd style="padding-left:0px">
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html"><span>ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\AbstractNode</span></a>
+			
+			 implements 
+				<a href="class-RecursiveIterator.html"><span>RecursiveIterator</span></a>, 
+			
+				<a href="class-ArrayAccess.html"><span>ArrayAccess</span></a>, 
+			
+				<a href="class-Countable.html"><span>Countable</span></a>
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by" />
+<b><span>ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Server</span></b>			
+			
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-ManiaLivePlugins.html">ManiaLivePlugins</a>\<a href="namespace-ManiaLivePlugins.Standard.html">Standard</a>\<a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.html">TeamSpeak</a>\<a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.html">TeamSpeak3</a>\<a href="namespace-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.html">Node</a><br />
+		
+
+				<b>Brief:</b>
+				Class describing a TeamSpeak 3 virtual server and all it's parameters.<br />
+				<b>Class:</b>
+				TeamSpeak3_Node_Server<br />
+		<b>Located at</b> vendor/maniaplanet/manialive-plugins/Standard/TeamSpeak/TeamSpeak3/Node/Server.php<br />
+	</div>
+
+
+
+	<table class="summary" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Server.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Server</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Host.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Host</a></code> <var>$host</var></span>, <span>array <var>$info</var></span>, <span>string <var>$index</var> = <span class="php-quote">&quot;virtualserver_id&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>The TeamSpeak3_Node_Server constructor.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The TeamSpeak3_Node_Server constructor.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$host</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Host.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Host</a></code></code><br>$host</dd>
+					<dt><var>$info</var></dt>
+					<dd><code>array</code><br>$info</dd>
+					<dt><var>$index</var></dt>
+					<dd><code>string</code><br>$index</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Server.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Server</a></code></code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="request" id="_request">
+
+		<td class="attributes"><code>
+			 public 
+			TeamSpeak3_Adapter_ServerQuery_Reply
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_request">#</a>
+		<code>request( <span>string <var>$cmd</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sends a prepared command to the server and returns the result.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sends a prepared command to the server and returns the result.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cmd</var></dt>
+					<dd><code>string</code><br>$cmd</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>TeamSpeak3_Adapter_ServerQuery_Reply</code><br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_request">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\AbstractNode::request()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelList" id="_channelList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelList">#</a>
+		<code>channelList( <span>array <var>$filter</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Returns an array filled with TeamSpeak3_Node_Channel objects.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an array filled with TeamSpeak3_Node_Channel objects.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filter</var></dt>
+					<dd><code>array</code><br>$filter</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelListReset" id="_channelListReset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelListReset">#</a>
+		<code>channelListReset( )</code>
+
+		<div class="description short">
+			
+<p>Resets the list of channels online.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Resets the list of channels online.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelCreate" id="_channelCreate">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelCreate">#</a>
+		<code>channelCreate( <span>array <var>$properties</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a new channel using given properties and returns the new ID.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a new channel using given properties and returns the new ID.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$properties</var></dt>
+					<dd><code>array</code><br>$properties</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelDelete" id="_channelDelete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelDelete">#</a>
+		<code>channelDelete( <span>integer <var>$cid</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Deletes the channel specified by $cid.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes the channel specified by $cid.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$force</var></dt>
+					<dd><code>boolean</code><br>$force</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelMove" id="_channelMove">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelMove">#</a>
+		<code>channelMove( <span>integer <var>$cid</var></span>, <span>integer <var>$pid</var></span>, <span>integer <var>$order</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Moves the channel specified by $cid to the parent channel specified with
+$pid.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Moves the channel specified by $cid to the parent channel specified with
+$pid.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$pid</var></dt>
+					<dd><code>integer</code><br>$pid</dd>
+					<dt><var>$order</var></dt>
+					<dd><code>integer</code><br>$order</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelIsSpacer" id="_channelIsSpacer">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelIsSpacer">#</a>
+		<code>channelIsSpacer( <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Channel.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Channel</a></code> <var>$channel</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns TRUE if the given TeamSpeak3_Node_Channel object is a spacer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns TRUE if the given TeamSpeak3_Node_Channel object is a spacer.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$channel</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Channel.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Channel</a></code></code><br>$channel</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelSpacerCreate" id="_channelSpacerCreate">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelSpacerCreate">#</a>
+		<code>channelSpacerCreate( <span>string <var>$ident</var></span>, <span>mixed <var>$type</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#SPACER_SOLIDLINE">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>SPACER_SOLIDLINE</b></a></code></span>, <span>integer <var>$align</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#SPACER_ALIGN_REPEAT">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>SPACER_ALIGN_REPEAT</b></a></code></span>, <span>integer <var>$order</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a new channel spacer and returns the new ID. The first parameter
+$ident is used to create a unique spacer name on the virtual server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a new channel spacer and returns the new ID. The first parameter
+$ident is used to create a unique spacer name on the virtual server.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ident</var></dt>
+					<dd><code>string</code><br>$ident</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>mixed</code><br>$type</dd>
+					<dt><var>$align</var></dt>
+					<dd><code>integer</code><br>$align</dd>
+					<dt><var>$order</var></dt>
+					<dd><code>integer</code><br>$order</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelSpacerGetType" id="_channelSpacerGetType">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelSpacerGetType">#</a>
+		<code>channelSpacerGetType( <span>integer <var>$cid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the possible type of a channel spacer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the possible type of a channel spacer.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelSpacerGetAlign" id="_channelSpacerGetAlign">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelSpacerGetAlign">#</a>
+		<code>channelSpacerGetAlign( <span>integer <var>$cid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the possible alignment of a channel spacer.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the possible alignment of a channel spacer.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelPermList" id="_channelPermList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelPermList">#</a>
+		<code>channelPermList( <span>integer <var>$cid</var></span>, <span>boolean <var>$permsid</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of permissions defined for a specific channel.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of permissions defined for a specific channel.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$permsid</var></dt>
+					<dd><code>boolean</code><br>$permsid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelPermAssign" id="_channelPermAssign">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelPermAssign">#</a>
+		<code>channelPermAssign( <span>integer <var>$cid</var></span>, <span>integer <var>$permid</var></span>, <span>integer <var>$permvalue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a set of specified permissions to a channel. Multiple permissions can be
+added by providing the two parameters of each permission.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a set of specified permissions to a channel. Multiple permissions can be
+added by providing the two parameters of each permission.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$permid</var></dt>
+					<dd><code>integer</code><br>$permid</dd>
+					<dt><var>$permvalue</var></dt>
+					<dd><code>integer</code><br>$permvalue</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelPermRemove" id="_channelPermRemove">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelPermRemove">#</a>
+		<code>channelPermRemove( <span>integer <var>$cid</var></span>, <span>integer <var>$permid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a set of specified permissions from a channel. Multiple permissions
+can be removed at once.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a set of specified permissions from a channel. Multiple permissions
+can be removed at once.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$permid</var></dt>
+					<dd><code>integer</code><br>$permid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelClientPermList" id="_channelClientPermList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelClientPermList">#</a>
+		<code>channelClientPermList( <span>integer <var>$cid</var></span>, <span>integer <var>$cldbid</var></span>, <span>boolean <var>$permsid</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of permissions defined for a client in a specific channel.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of permissions defined for a client in a specific channel.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>integer</code><br>$cldbid</dd>
+					<dt><var>$permsid</var></dt>
+					<dd><code>boolean</code><br>$permsid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelClientPermAssign" id="_channelClientPermAssign">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelClientPermAssign">#</a>
+		<code>channelClientPermAssign( <span>integer <var>$cid</var></span>, <span>integer <var>$cldbid</var></span>, <span>integer <var>$permid</var></span>, <span>integer <var>$permvalue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a set of specified permissions to a client in a specific channel.
+Multiple permissions can be added by providing the two parameters of each
+permission.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a set of specified permissions to a client in a specific channel.
+Multiple permissions can be added by providing the two parameters of each
+permission.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>integer</code><br>$cldbid</dd>
+					<dt><var>$permid</var></dt>
+					<dd><code>integer</code><br>$permid</dd>
+					<dt><var>$permvalue</var></dt>
+					<dd><code>integer</code><br>$permvalue</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelClientPermRemove" id="_channelClientPermRemove">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelClientPermRemove">#</a>
+		<code>channelClientPermRemove( <span>integer <var>$cid</var></span>, <span>integer <var>$cldbid</var></span>, <span>integer <var>$permid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a set of specified permissions from a client in a specific channel.
+Multiple permissions can be removed at once.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a set of specified permissions from a client in a specific channel.
+Multiple permissions can be removed at once.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>integer</code><br>$cldbid</dd>
+					<dt><var>$permid</var></dt>
+					<dd><code>integer</code><br>$permid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelFileList" id="_channelFileList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelFileList">#</a>
+		<code>channelFileList( <span>integer <var>$cid</var></span>, <span>string <var>$cpw</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$path</var> = <span class="php-quote">&quot;/&quot;</span></span>, <span>boolean <var>$recursive</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of files and directories stored in the specified channels file
+repository.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of files and directories stored in the specified channels file
+repository.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$cpw</var></dt>
+					<dd><code>string</code><br>$cpw</dd>
+					<dt><var>$path</var></dt>
+					<dd><code>string</code><br>$path</dd>
+					<dt><var>$recursive</var></dt>
+					<dd><code>boolean</code><br>$recursive</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelFileInfo" id="_channelFileInfo">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelFileInfo">#</a>
+		<code>channelFileInfo( <span>integer <var>$cid</var></span>, <span>string <var>$cpw</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$name</var> = <span class="php-quote">&quot;/&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns detailed information about the specified file stored in a channels
+file repository.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns detailed information about the specified file stored in a channels
+file repository.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$cpw</var></dt>
+					<dd><code>string</code><br>$cpw</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelFileRename" id="_channelFileRename">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelFileRename">#</a>
+		<code>channelFileRename( <span>integer <var>$cid</var></span>, <span>string <var>$cpw</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$oldname</var> = <span class="php-quote">&quot;/&quot;</span></span>, <span>string <var>$newname</var> = <span class="php-quote">&quot;/&quot;</span></span>, <span>integer <var>$tcid</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$tcpw</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Renames a file in a channels file repository. If the two parameters $tcid and
+$tcpw are specified, the file will be moved into another channels file
+repository.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Renames a file in a channels file repository. If the two parameters $tcid and
+$tcpw are specified, the file will be moved into another channels file
+repository.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$cpw</var></dt>
+					<dd><code>string</code><br>$cpw</dd>
+					<dt><var>$oldname</var></dt>
+					<dd><code>string</code><br>$oldname</dd>
+					<dt><var>$newname</var></dt>
+					<dd><code>string</code><br>$newname</dd>
+					<dt><var>$tcid</var></dt>
+					<dd><code>integer</code><br>$tcid</dd>
+					<dt><var>$tcpw</var></dt>
+					<dd><code>string</code><br>$tcpw</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelFileDelete" id="_channelFileDelete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelFileDelete">#</a>
+		<code>channelFileDelete( <span>integer <var>$cid</var></span>, <span>string <var>$cpw</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$name</var> = <span class="php-quote">&quot;/&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Deletes one or more files stored in a channels file repository.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes one or more files stored in a channels file repository.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$cpw</var></dt>
+					<dd><code>string</code><br>$cpw</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelDirCreate" id="_channelDirCreate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelDirCreate">#</a>
+		<code>channelDirCreate( <span>integer <var>$cid</var></span>, <span>string <var>$cpw</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>string <var>$dirname</var> = <span class="php-quote">&quot;/&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates new directory in a channels file repository.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates new directory in a channels file repository.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$cpw</var></dt>
+					<dd><code>string</code><br>$cpw</dd>
+					<dt><var>$dirname</var></dt>
+					<dd><code>string</code><br>$dirname</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGetLevel" id="_channelGetLevel">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGetLevel">#</a>
+		<code>channelGetLevel( <span>integer <var>$cid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the level of a channel.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the level of a channel.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGetPathway" id="_channelGetPathway">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGetPathway">#</a>
+		<code>channelGetPathway( <span>integer <var>$cid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the pathway of a channel which can be used as a clients default
+channel.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the pathway of a channel which can be used as a clients default
+channel.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGetById" id="_channelGetById">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Channel.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Channel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGetById">#</a>
+		<code>channelGetById( <span>integer <var>$cid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the TeamSpeak3_Node_Channel object matching the given ID.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the TeamSpeak3_Node_Channel object matching the given ID.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Channel.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Channel</a></code></code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGetByName" id="_channelGetByName">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Channel.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Channel</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGetByName">#</a>
+		<code>channelGetByName( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the TeamSpeak3_Node_Channel object matching the given name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the TeamSpeak3_Node_Channel object matching the given name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Channel.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Channel</a></code></code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientList" id="_clientList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientList">#</a>
+		<code>clientList( <span>array <var>$filter</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Returns an array filled with TeamSpeak3_Node_Client objects.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an array filled with TeamSpeak3_Node_Client objects.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filter</var></dt>
+					<dd><code>array</code><br>$filter</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientListReset" id="_clientListReset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientListReset">#</a>
+		<code>clientListReset( )</code>
+
+		<div class="description short">
+			
+<p>Resets the list of clients online.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Resets the list of clients online.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientFind" id="_clientFind">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientFind">#</a>
+		<code>clientFind( <span>string <var>$pattern</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of clients matching a given name pattern.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of clients matching a given name pattern.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pattern</var></dt>
+					<dd><code>string</code><br>$pattern</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientListDb" id="_clientListDb">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientListDb">#</a>
+		<code>clientListDb( <span>integer <var>$offset</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$limit</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of client identities known by the virtual server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of client identities known by the virtual server.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$offset</var></dt>
+					<dd><code>integer</code><br>$offset</dd>
+					<dt><var>$limit</var></dt>
+					<dd><code>integer</code><br>$limit</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientInfoDb" id="_clientInfoDb">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientInfoDb">#</a>
+		<code>clientInfoDb( <span>integer <var>$cldbid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of properties from the database for the client specified by
+$cldbid.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of properties from the database for the client specified by
+$cldbid.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>integer</code><br>$cldbid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientFindDb" id="_clientFindDb">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientFindDb">#</a>
+		<code>clientFindDb( <span>string <var>$pattern</var></span>, <span>boolean <var>$uid</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of client database IDs matching a given pattern. You can
+either search for a clients last known nickname or his unique identity by using
+the $uid option.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of client database IDs matching a given pattern. You can
+either search for a clients last known nickname or his unique identity by using
+the $uid option.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$pattern</var></dt>
+					<dd><code>string</code><br>$pattern</dd>
+					<dt><var>$uid</var></dt>
+					<dd><code>boolean</code><br>$uid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientCount" id="_clientCount">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientCount">#</a>
+		<code>clientCount( )</code>
+
+		<div class="description short">
+			
+<p>Returns the number of regular clients online.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the number of regular clients online.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientGetById" id="_clientGetById">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Client.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Client</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientGetById">#</a>
+		<code>clientGetById( <span>integer <var>$clid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the TeamSpeak3_Node_Client object matching the given ID.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the TeamSpeak3_Node_Client object matching the given ID.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$clid</var></dt>
+					<dd><code>integer</code><br>$clid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Client.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Client</a></code></code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientGetByName" id="_clientGetByName">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Client.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Client</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientGetByName">#</a>
+		<code>clientGetByName( <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the TeamSpeak3_Node_Client object matching the given name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the TeamSpeak3_Node_Client object matching the given name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Client.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Client</a></code></code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientGetByUid" id="_clientGetByUid">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Client.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Client</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientGetByUid">#</a>
+		<code>clientGetByUid( <span>string <var>$uid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the TeamSpeak3_Node_Client object matching the given unique
+identifier.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the TeamSpeak3_Node_Client object matching the given unique
+identifier.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$uid</var></dt>
+					<dd><code>string</code><br>$uid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Client.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Client</a></code></code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientGetNameByUid" id="_clientGetNameByUid">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientGetNameByUid">#</a>
+		<code>clientGetNameByUid( <span>string <var>$cluid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns an array containing the last known nickname and the database ID of
+the client matching the unique identifier specified with $cluid.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an array containing the last known nickname and the database ID of
+the client matching the unique identifier specified with $cluid.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cluid</var></dt>
+					<dd><code>string</code><br>$cluid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientGetNameByDbid" id="_clientGetNameByDbid">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientGetNameByDbid">#</a>
+		<code>clientGetNameByDbid( <span>string <var>$cldbid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns an array containing the last known nickname and the unique identifier
+of the client matching the database ID specified with $cldbid.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an array containing the last known nickname and the unique identifier
+of the client matching the database ID specified with $cldbid.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>string</code><br>$cldbid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientGetServerGroupsByDbid" id="_clientGetServerGroupsByDbid">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientGetServerGroupsByDbid">#</a>
+		<code>clientGetServerGroupsByDbid( <span>string <var>$cldbid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns an array containing the names and IDs of all server groups the client
+specified with $cldbid is is currently residing in.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an array containing the names and IDs of all server groups the client
+specified with $cldbid is is currently residing in.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>string</code><br>$cldbid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientMove" id="_clientMove">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientMove">#</a>
+		<code>clientMove( <span>integer <var>$clid</var></span>, <span>integer <var>$cid</var></span>, <span>string <var>$cpw</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Moves a client to another channel.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Moves a client to another channel.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$clid</var></dt>
+					<dd><code>integer</code><br>$clid</dd>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$cpw</var></dt>
+					<dd><code>string</code><br>$cpw</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientKick" id="_clientKick">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientKick">#</a>
+		<code>clientKick( <span>integer <var>$clid</var></span>, <span>integer <var>$reasonid</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#KICK_CHANNEL">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>KICK_CHANNEL</b></a></code></span>, <span>string <var>$reasonmsg</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Kicks one or more clients from their currently joined channel or from the
+server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Kicks one or more clients from their currently joined channel or from the
+server.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$clid</var></dt>
+					<dd><code>integer</code><br>$clid</dd>
+					<dt><var>$reasonid</var></dt>
+					<dd><code>integer</code><br>$reasonid</dd>
+					<dt><var>$reasonmsg</var></dt>
+					<dd><code>string</code><br>$reasonmsg</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientPoke" id="_clientPoke">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientPoke">#</a>
+		<code>clientPoke( <span>integer <var>$clid</var></span>, <span>string <var>$msg</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sends a poke message to a client.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sends a poke message to a client.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$clid</var></dt>
+					<dd><code>integer</code><br>$clid</dd>
+					<dt><var>$msg</var></dt>
+					<dd><code>string</code><br>$msg</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientBan" id="_clientBan">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientBan">#</a>
+		<code>clientBan( <span>integer <var>$clid</var></span>, <span>integer <var>$timeseconds</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$reason</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Bans the client specified with ID $clid from the server. Please note that
+this will create two separate ban rules for the targeted clients IP address and
+his unique identifier.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Bans the client specified with ID $clid from the server. Please note that
+this will create two separate ban rules for the targeted clients IP address and
+his unique identifier.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$clid</var></dt>
+					<dd><code>integer</code><br>$clid</dd>
+					<dt><var>$timeseconds</var></dt>
+					<dd><code>integer</code><br>$timeseconds</dd>
+					<dt><var>$reason</var></dt>
+					<dd><code>string</code><br>$reason</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientModifyDb" id="_clientModifyDb">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientModifyDb">#</a>
+		<code>clientModifyDb( <span>string <var>$cldbid</var></span>, <span>array <var>$properties</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Changes the clients properties using given properties.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Changes the clients properties using given properties.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>string</code><br>$cldbid</dd>
+					<dt><var>$properties</var></dt>
+					<dd><code>array</code><br>$properties</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientDeleteDb" id="_clientDeleteDb">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientDeleteDb">#</a>
+		<code>clientDeleteDb( <span>string <var>$cldbid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Deletes a clients properties from the database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes a clients properties from the database.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>string</code><br>$cldbid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientSetChannelGroup" id="_clientSetChannelGroup">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientSetChannelGroup">#</a>
+		<code>clientSetChannelGroup( <span>integer <var>$cldbid</var></span>, <span>integer <var>$cid</var></span>, <span>integer <var>$cgid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sets the channel group of a client to the ID specified.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sets the channel group of a client to the ID specified.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>integer</code><br>$cldbid</dd>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$cgid</var></dt>
+					<dd><code>integer</code><br>$cgid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientPermList" id="_clientPermList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientPermList">#</a>
+		<code>clientPermList( <span>integer <var>$cldbid</var></span>, <span>boolean <var>$permsid</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of permissions defined for a client.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of permissions defined for a client.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>integer</code><br>$cldbid</dd>
+					<dt><var>$permsid</var></dt>
+					<dd><code>boolean</code><br>$permsid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientPermAssign" id="_clientPermAssign">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientPermAssign">#</a>
+		<code>clientPermAssign( <span>integer <var>$cldbid</var></span>, <span>integer <var>$permid</var></span>, <span>integer <var>$permvalue</var></span>, <span>integer <var>$permskip</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a set of specified permissions to a client. Multiple permissions can be
+added by providing the three parameters of each permission.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a set of specified permissions to a client. Multiple permissions can be
+added by providing the three parameters of each permission.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>integer</code><br>$cldbid</dd>
+					<dt><var>$permid</var></dt>
+					<dd><code>integer</code><br>$permid</dd>
+					<dt><var>$permvalue</var></dt>
+					<dd><code>integer</code><br>$permvalue</dd>
+					<dt><var>$permskip</var></dt>
+					<dd><code>integer</code><br>$permskip</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="clientPermRemove" id="_clientPermRemove">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_clientPermRemove">#</a>
+		<code>clientPermRemove( <span>integer <var>$cldbid</var></span>, <span>integer <var>$permid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a set of specified permissions from a client. Multiple permissions
+can be removed at once.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a set of specified permissions from a client. Multiple permissions
+can be removed at once.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>integer</code><br>$cldbid</dd>
+					<dt><var>$permid</var></dt>
+					<dd><code>integer</code><br>$permid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupList" id="_serverGroupList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupList">#</a>
+		<code>serverGroupList( <span>array <var>$filter</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of server groups available.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of server groups available.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filter</var></dt>
+					<dd><code>filter</code><br>$filter</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupListReset" id="_serverGroupListReset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupListReset">#</a>
+		<code>serverGroupListReset( )</code>
+
+		<div class="description short">
+			
+<p>Resets the list of server groups.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Resets the list of server groups.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupCreate" id="_serverGroupCreate">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupCreate">#</a>
+		<code>serverGroupCreate( <span>string <var>$name</var></span>, <span>integer <var>$type</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#GROUP_DBTYPE_REGULAR">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>GROUP_DBTYPE_REGULAR</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a new server group using the name specified with $name and returns
+its ID.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a new server group using the name specified with $name and returns
+its ID.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupCopy" id="_serverGroupCopy">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupCopy">#</a>
+		<code>serverGroupCopy( <span>integer <var>$ssgid</var></span>, <span>string <var>$name</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$tsgid</var> = <span class="php-num">0</span></span>, <span>integer <var>$type</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#GROUP_DBTYPE_REGULAR">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>GROUP_DBTYPE_REGULAR</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a copy of an existing server group specified by $ssgid and returns
+the new groups ID.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a copy of an existing server group specified by $ssgid and returns
+the new groups ID.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ssgid</var></dt>
+					<dd><code>integer</code><br>$ssgid</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$tsgid</var></dt>
+					<dd><code>integer</code><br>$tsgid</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupRename" id="_serverGroupRename">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupRename">#</a>
+		<code>serverGroupRename( <span>integer <var>$sgid</var></span>, <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Renames the server group specified with $sgid.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Renames the server group specified with $sgid.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sgid</var></dt>
+					<dd><code>integer</code><br>$sgid</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupDelete" id="_serverGroupDelete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupDelete">#</a>
+		<code>serverGroupDelete( <span>integer <var>$sgid</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Deletes the server group specified with $sgid. If $force is set to 1, the
+server group will be deleted even if there are clients within.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes the server group specified with $sgid. If $force is set to 1, the
+server group will be deleted even if there are clients within.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sgid</var></dt>
+					<dd><code>integer</code><br>$sgid</dd>
+					<dt><var>$force</var></dt>
+					<dd><code>boolean</code><br>$force</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupGetById" id="_serverGroupGetById">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Servergroup.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Servergroup</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupGetById">#</a>
+		<code>serverGroupGetById( <span>integer <var>$sgid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the TeamSpeak3_Node_Servergroup object matching the given ID.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the TeamSpeak3_Node_Servergroup object matching the given ID.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sgid</var></dt>
+					<dd><code>integer</code><br>$sgid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Servergroup.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Servergroup</a></code></code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupGetByName" id="_serverGroupGetByName">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Servergroup.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Servergroup</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupGetByName">#</a>
+		<code>serverGroupGetByName( <span>string <var>$name</var></span>, <span>integer <var>$type</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#GROUP_DBTYPE_REGULAR">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>GROUP_DBTYPE_REGULAR</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the TeamSpeak3_Node_Servergroup object matching the given name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the TeamSpeak3_Node_Servergroup object matching the given name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Servergroup.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Servergroup</a></code></code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupPermList" id="_serverGroupPermList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupPermList">#</a>
+		<code>serverGroupPermList( <span>integer <var>$sgid</var></span>, <span>boolean <var>$permsid</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of permissions assigned to the server group specified.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of permissions assigned to the server group specified.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sgid</var></dt>
+					<dd><code>integer</code><br>$sgid</dd>
+					<dt><var>$permsid</var></dt>
+					<dd><code>boolean</code><br>$permsid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupPermAssign" id="_serverGroupPermAssign">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupPermAssign">#</a>
+		<code>serverGroupPermAssign( <span>integer <var>$sgid</var></span>, <span>integer <var>$permid</var></span>, <span>integer <var>$permvalue</var></span>, <span>integer <var>$permnegated</var> = <span class="php-keyword1">FALSE</span></span>, <span>integer <var>$permskip</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a set of specified permissions to the server group specified. Multiple
+permissions can be added by providing the four parameters of each permission in
+separate arrays.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a set of specified permissions to the server group specified. Multiple
+permissions can be added by providing the four parameters of each permission in
+separate arrays.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sgid</var></dt>
+					<dd><code>integer</code><br>$sgid</dd>
+					<dt><var>$permid</var></dt>
+					<dd><code>integer</code><br>$permid</dd>
+					<dt><var>$permvalue</var></dt>
+					<dd><code>integer</code><br>$permvalue</dd>
+					<dt><var>$permnegated</var></dt>
+					<dd><code>integer</code><br>$permnegated</dd>
+					<dt><var>$permskip</var></dt>
+					<dd><code>integer</code><br>$permskip</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupPermRemove" id="_serverGroupPermRemove">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupPermRemove">#</a>
+		<code>serverGroupPermRemove( <span>integer <var>$sgid</var></span>, <span>integer <var>$permid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a set of specified permissions from the server group specified with
+$sgid. Multiple permissions can be removed at once.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a set of specified permissions from the server group specified with
+$sgid. Multiple permissions can be removed at once.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sgid</var></dt>
+					<dd><code>integer</code><br>$sgid</dd>
+					<dt><var>$permid</var></dt>
+					<dd><code>integer</code><br>$permid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupClientList" id="_serverGroupClientList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupClientList">#</a>
+		<code>serverGroupClientList( <span>integer <var>$sgid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of clients assigned to the server group specified.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of clients assigned to the server group specified.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sgid</var></dt>
+					<dd><code>integer</code><br>$sgid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupClientAdd" id="_serverGroupClientAdd">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupClientAdd">#</a>
+		<code>serverGroupClientAdd( <span>integer <var>$sgid</var></span>, <span>integer <var>$cldbid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a client to the server group specified. Please note that a client cannot
+be added to default groups or template groups.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a client to the server group specified. Please note that a client cannot
+be added to default groups or template groups.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sgid</var></dt>
+					<dd><code>integer</code><br>$sgid</dd>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>integer</code><br>$cldbid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupClientDel" id="_serverGroupClientDel">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupClientDel">#</a>
+		<code>serverGroupClientDel( <span>integer <var>$sgid</var></span>, <span>integer <var>$cldbid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a client from the server group specified.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a client from the server group specified.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$sgid</var></dt>
+					<dd><code>integer</code><br>$sgid</dd>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>integer</code><br>$cldbid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupGetProfiles" id="_serverGroupGetProfiles">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupGetProfiles">#</a>
+		<code>serverGroupGetProfiles( )</code>
+
+		<div class="description short">
+			
+<p>Returns an ordered array of regular server groups available based on a
+pre-defined set of rules.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an ordered array of regular server groups available based on a
+pre-defined set of rules.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="serverGroupIdentify" id="_serverGroupIdentify">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Servergroup.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Servergroup</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_serverGroupIdentify">#</a>
+		<code>serverGroupIdentify( <span>integer <var>$mode</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#GROUP_IDENTIFIY_STRONGEST">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>GROUP_IDENTIFIY_STRONGEST</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Tries to identify the post powerful/weakest server group on the virtual
+server and returns the ID.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Tries to identify the post powerful/weakest server group on the virtual
+server and returns the ID.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mode</var></dt>
+					<dd><code>integer</code><br>$mode</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Servergroup.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Servergroup</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGroupList" id="_channelGroupList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGroupList">#</a>
+		<code>channelGroupList( <span>array <var>$filter</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of channel groups available.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of channel groups available.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$filter</var></dt>
+					<dd><code>array</code><br>$filter</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGroupListReset" id="_channelGroupListReset">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGroupListReset">#</a>
+		<code>channelGroupListReset( )</code>
+
+		<div class="description short">
+			
+<p>Resets the list of channel groups.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Resets the list of channel groups.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGroupCreate" id="_channelGroupCreate">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGroupCreate">#</a>
+		<code>channelGroupCreate( <span>string <var>$name</var></span>, <span>integer <var>$type</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#GROUP_DBTYPE_REGULAR">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>GROUP_DBTYPE_REGULAR</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a new channel group using the name specified with $name and returns
+its ID.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a new channel group using the name specified with $name and returns
+its ID.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGroupCopy" id="_channelGroupCopy">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGroupCopy">#</a>
+		<code>channelGroupCopy( <span>integer <var>$scgid</var></span>, <span>string <var>$name</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$tcgid</var> = <span class="php-num">0</span></span>, <span>integer <var>$type</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#GROUP_DBTYPE_REGULAR">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>GROUP_DBTYPE_REGULAR</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a copy of an existing channel group specified by $scgid and returns
+the new groups ID.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a copy of an existing channel group specified by $scgid and returns
+the new groups ID.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$scgid</var></dt>
+					<dd><code>integer</code><br>$scgid</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$tcgid</var></dt>
+					<dd><code>integer</code><br>$tcgid</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGroupRename" id="_channelGroupRename">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGroupRename">#</a>
+		<code>channelGroupRename( <span>integer <var>$cgid</var></span>, <span>string <var>$name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Renames the channel group specified with $cgid.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Renames the channel group specified with $cgid.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cgid</var></dt>
+					<dd><code>integer</code><br>$cgid</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGroupDelete" id="_channelGroupDelete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGroupDelete">#</a>
+		<code>channelGroupDelete( <span>integer <var>$cgid</var></span>, <span>boolean <var>$force</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Deletes the channel group specified with $cgid. If $force is set to 1, the
+channel group will be deleted even if there are clients within.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes the channel group specified with $cgid. If $force is set to 1, the
+channel group will be deleted even if there are clients within.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cgid</var></dt>
+					<dd><code>integer</code><br>$sgid</dd>
+					<dt><var>$force</var></dt>
+					<dd><code>boolean</code><br>$force</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGroupGetById" id="_channelGroupGetById">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Channelgroup.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Channelgroup</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGroupGetById">#</a>
+		<code>channelGroupGetById( <span>integer <var>$cgid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the TeamSpeak3_Node_Channelgroup object matching the given ID.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the TeamSpeak3_Node_Channelgroup object matching the given ID.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cgid</var></dt>
+					<dd><code>integer</code><br>$cgid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Channelgroup.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Channelgroup</a></code></code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGroupGetByName" id="_channelGroupGetByName">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Channelgroup.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Channelgroup</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGroupGetByName">#</a>
+		<code>channelGroupGetByName( <span>string <var>$name</var></span>, <span>integer <var>$type</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#GROUP_DBTYPE_REGULAR">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>GROUP_DBTYPE_REGULAR</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the TeamSpeak3_Node_Channelgroup object matching the given name.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the TeamSpeak3_Node_Channelgroup object matching the given name.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Channelgroup.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Channelgroup</a></code></code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGroupPermList" id="_channelGroupPermList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGroupPermList">#</a>
+		<code>channelGroupPermList( <span>integer <var>$cgid</var></span>, <span>boolean <var>$permsid</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of permissions assigned to the channel group specified.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of permissions assigned to the channel group specified.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cgid</var></dt>
+					<dd><code>integer</code><br>$cgid</dd>
+					<dt><var>$permsid</var></dt>
+					<dd><code>boolean</code><br>$permsid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGroupPermAssign" id="_channelGroupPermAssign">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGroupPermAssign">#</a>
+		<code>channelGroupPermAssign( <span>integer <var>$cgid</var></span>, <span>integer <var>$permid</var></span>, <span>integer <var>$permvalue</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a set of specified permissions to the channel group specified. Multiple
+permissions can be added by providing the two parameters of each permission in
+separate arrays.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a set of specified permissions to the channel group specified. Multiple
+permissions can be added by providing the two parameters of each permission in
+separate arrays.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cgid</var></dt>
+					<dd><code>integer</code><br>$cgid</dd>
+					<dt><var>$permid</var></dt>
+					<dd><code>integer</code><br>$permid</dd>
+					<dt><var>$permvalue</var></dt>
+					<dd><code>integer</code><br>$permvalue</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGroupPermRemove" id="_channelGroupPermRemove">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGroupPermRemove">#</a>
+		<code>channelGroupPermRemove( <span>integer <var>$cgid</var></span>, <span>integer <var>$permid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes a set of specified permissions from the channel group specified with
+$cgid. Multiple permissions can be removed at once.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes a set of specified permissions from the channel group specified with
+$cgid. Multiple permissions can be removed at once.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cgid</var></dt>
+					<dd><code>integer</code><br>$cgid</dd>
+					<dt><var>$permid</var></dt>
+					<dd><code>integer</code><br>$permid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="channelGroupClientList" id="_channelGroupClientList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_channelGroupClientList">#</a>
+		<code>channelGroupClientList( <span>integer <var>$cgid</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$cid</var> = <span class="php-keyword1">null</span></span>, <span>integer <var>$cldbid</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns all the client and/or channel IDs currently assigned to channel
+groups. All three parameters are optional so you're free to choose the most
+suitable combination for your requirements.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns all the client and/or channel IDs currently assigned to channel
+groups. All three parameters are optional so you're free to choose the most
+suitable combination for your requirements.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cgid</var></dt>
+					<dd><code>integer</code><br>$cgid</dd>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>integer</code><br>$cldbid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="permReset" id="_permReset">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.String.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Helper\String</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_permReset">#</a>
+		<code>permReset( )</code>
+
+		<div class="description short">
+			
+<p>Restores the default permission settings on the virtual server and returns a
+new initial administrator privilege key.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Restores the default permission settings on the virtual server and returns a
+new initial administrator privilege key.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.String.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Helper\String</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="permRemoveAny" id="_permRemoveAny">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_permRemoveAny">#</a>
+		<code>permRemoveAny( <span>integer <var>$permid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Removes any assignment of the permission specified with $permid on the
+selected virtual server and returns the number of removed assignments on
+success.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Removes any assignment of the permission specified with $permid on the
+selected virtual server and returns the number of removed assignments on
+success.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$permid</var></dt>
+					<dd><code>integer</code><br>$permid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="transferInitUpload" id="_transferInitUpload">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_transferInitUpload">#</a>
+		<code>transferInitUpload( <span>integer <var>$clientftfid</var></span>, <span>integer <var>$cid</var></span>, <span>string <var>$name</var></span>, <span>integer <var>$size</var></span>, <span>string <var>$cpw</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>boolean <var>$overwrite</var> = <span class="php-keyword1">FALSE</span></span>, <span>boolean <var>$resume</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Initializes a file transfer upload. $clientftfid is an arbitrary ID to
+identify the file transfer on client-side.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initializes a file transfer upload. $clientftfid is an arbitrary ID to
+identify the file transfer on client-side.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$clientftfid</var></dt>
+					<dd><code>integer</code><br>$clientftfid</dd>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$size</var></dt>
+					<dd><code>integer</code><br>$size</dd>
+					<dt><var>$cpw</var></dt>
+					<dd><code>string</code><br>$cpw</dd>
+					<dt><var>$overwrite</var></dt>
+					<dd><code>boolean</code><br>$overwrite</dd>
+					<dt><var>$resume</var></dt>
+					<dd><code>boolean</code><br>$resume</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="transferInitDownload" id="_transferInitDownload">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_transferInitDownload">#</a>
+		<code>transferInitDownload( <span>integer <var>$clientftfid</var></span>, <span>integer <var>$cid</var></span>, <span>string <var>$name</var></span>, <span>string <var>$cpw</var> = <span class="php-quote">&quot;&quot;</span></span>, <span>integer <var>$seekpos</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Initializes a file transfer download. $clientftfid is an arbitrary ID to
+identify the file transfer on client-side.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Initializes a file transfer download. $clientftfid is an arbitrary ID to
+identify the file transfer on client-side.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$clientftfid</var></dt>
+					<dd><code>integer</code><br>$clientftfid</dd>
+					<dt><var>$cid</var></dt>
+					<dd><code>integer</code><br>$cid</dd>
+					<dt><var>$name</var></dt>
+					<dd><code>string</code><br>$name</dd>
+					<dt><var>$cpw</var></dt>
+					<dd><code>string</code><br>$cpw</dd>
+					<dt><var>$seekpos</var></dt>
+					<dd><code>integer</code><br>$seekpos</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+				<h4>Throws</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Adapter.ServerQuery.Exception.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Adapter\ServerQuery\Exception</a></code></code><br />
+				</div>
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="transferList" id="_transferList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_transferList">#</a>
+		<code>transferList( )</code>
+
+		<div class="description short">
+			
+<p>Displays a list of running file transfers on the selected virtual server. The
+output contains the path to which a file is uploaded to, the current transfer
+rate in bytes per second, etc.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Displays a list of running file transfers on the selected virtual server. The
+output contains the path to which a file is uploaded to, the current transfer
+rate in bytes per second, etc.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="transferStop" id="_transferStop">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_transferStop">#</a>
+		<code>transferStop( <span>integer <var>$serverftfid</var></span>, <span>boolean <var>$delete</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Stops the running file transfer with server-side ID $serverftfid.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Stops the running file transfer with server-side ID $serverftfid.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$serverftfid</var></dt>
+					<dd><code>integer</code><br>$serverftfid</dd>
+					<dt><var>$delete</var></dt>
+					<dd><code>boolean</code><br>$delete</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="iconDownload" id="_iconDownload">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.String.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Helper\String</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_iconDownload">#</a>
+		<code>iconDownload( )</code>
+
+		<div class="description short">
+			
+<p>Downloads and returns the servers icon file content.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Downloads and returns the servers icon file content.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.String.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Helper\String</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="iconUpload" id="_iconUpload">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_iconUpload">#</a>
+		<code>iconUpload( <span>string <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Uploads a given icon file content to the server and returns the ID of the
+icon.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Uploads a given icon file content to the server and returns the ID of the
+icon.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="modify" id="_modify">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_modify">#</a>
+		<code>modify( <span>array <var>$properties</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Changes the virtual server configuration using given properties.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Changes the virtual server configuration using given properties.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$properties</var></dt>
+					<dd><code>array</code><br>$properties</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="message" id="_message">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_message">#</a>
+		<code>message( <span>string <var>$msg</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sends a text message to all clients on the virtual server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sends a text message to all clients on the virtual server.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msg</var></dt>
+					<dd><code>string</code><br>$msg</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="messageList" id="_messageList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_messageList">#</a>
+		<code>messageList( )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of offline messages you've received. The output contains the
+senders unique identifier, the messages subject, etc.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of offline messages you've received. The output contains the
+senders unique identifier, the messages subject, etc.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="messageCreate" id="_messageCreate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_messageCreate">#</a>
+		<code>messageCreate( <span>string <var>$cluid</var></span>, <span>string <var>$subject</var></span>, <span>string <var>$message</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Sends an offline message to the client specified by $cluid.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Sends an offline message to the client specified by $cluid.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cluid</var></dt>
+					<dd><code>string</code><br>$cluid</dd>
+					<dt><var>$subject</var></dt>
+					<dd><code>string</code><br>$subject</dd>
+					<dt><var>$message</var></dt>
+					<dd><code>string</code><br>$message</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="messageDelete" id="_messageDelete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_messageDelete">#</a>
+		<code>messageDelete( <span>integer <var>$msgid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Deletes an existing offline message with ID $msgid from your inbox.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes an existing offline message with ID $msgid from your inbox.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msgid</var></dt>
+					<dd><code>integer</code><br>$msgid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="messageRead" id="_messageRead">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_messageRead">#</a>
+		<code>messageRead( <span>integer <var>$msgid</var></span>, <span>boolean <var>$flag_read</var> = <span class="php-keyword1">TRUE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns an existing offline message with ID $msgid from your inbox.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an existing offline message with ID $msgid from your inbox.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$msgid</var></dt>
+					<dd><code>integer</code><br>$msgid</dd>
+					<dt><var>$flag_read</var></dt>
+					<dd><code>boolean</code><br>$flag_read</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="snapshotCreate" id="_snapshotCreate">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_snapshotCreate">#</a>
+		<code>snapshotCreate( <span>string <var>$mode</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#SNAPSHOT_STRING">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>SNAPSHOT_STRING</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates and returns snapshot data for the selected virtual server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates and returns snapshot data for the selected virtual server.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mode</var></dt>
+					<dd><code>string</code><br>$mode</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="snapshotDeploy" id="_snapshotDeploy">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_snapshotDeploy">#</a>
+		<code>snapshotDeploy( <span>string <var>$data</var></span>, <span>string <var>$mode</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#SNAPSHOT_STRING">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>SNAPSHOT_STRING</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Deploys snapshot data on the selected virtual server. If no virtual server is
+selected (ID 0), the data will be used to create a new virtual server from
+scratch.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deploys snapshot data on the selected virtual server. If no virtual server is
+selected (ID 0), the data will be used to create a new virtual server from
+scratch.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd><code>string</code><br>$data</dd>
+					<dt><var>$mode</var></dt>
+					<dd><code>string</code><br>$mode</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="notifyRegister" id="_notifyRegister">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_notifyRegister">#</a>
+		<code>notifyRegister( <span>string <var>$event</var></span>, <span>integer <var>$id</var> = <span class="php-num">0</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Registers for a specified category of events on a virtual server to receive
+notification messages. Depending on the notifications you've registered for, the
+server will send you a message on every event.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Registers for a specified category of events on a virtual server to receive
+notification messages. Depending on the notifications you've registered for, the
+server will send you a message on every event.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$event</var></dt>
+					<dd><code>string</code><br>$event</dd>
+					<dt><var>$id</var></dt>
+					<dd><code>integer</code><br>$id</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="notifyUnregister" id="_notifyUnregister">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_notifyUnregister">#</a>
+		<code>notifyUnregister( )</code>
+
+		<div class="description short">
+			
+<p>Unregisters all events previously registered with servernotifyregister so you
+will no longer receive notification messages.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unregisters all events previously registered with servernotifyregister so you
+will no longer receive notification messages.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="privilegeKeyList" id="_privilegeKeyList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_privilegeKeyList">#</a>
+		<code>privilegeKeyList( <span>boolean <var>$resolve</var> = <span class="php-keyword1">FALSE</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of privilege keys (tokens) available. If $resolve is set to
+TRUE the values of token_id1 and token_id2 will be translated into the
+appropriate group and/or channel names.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of privilege keys (tokens) available. If $resolve is set to
+TRUE the values of token_id1 and token_id2 will be translated into the
+appropriate group and/or channel names.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$resolve</var></dt>
+					<dd><code>boolean</code><br>$resolve</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="privilegeKeyCreate" id="_privilegeKeyCreate">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.String.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Helper\String</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_privilegeKeyCreate">#</a>
+		<code>privilegeKeyCreate( <span>integer <var>$type</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#TOKEN_SERVERGROUP">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>TOKEN_SERVERGROUP</b></a></code></span>, <span>integer <var>$id1</var></span>, <span>integer <var>$id2</var> = <span class="php-num">0</span></span>, <span>string <var>$description</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$customset</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a new privilege key (token) and returns the key.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a new privilege key (token) and returns the key.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$type</var></dt>
+					<dd><code>integer</code><br>$type</dd>
+					<dt><var>$id1</var></dt>
+					<dd><code>integer</code><br>$id1</dd>
+					<dt><var>$id2</var></dt>
+					<dd><code>integer</code><br>$id2</dd>
+					<dt><var>$description</var></dt>
+					<dd><code>string</code><br>$description</dd>
+					<dt><var>$customset</var></dt>
+					<dd><code>string</code><br>$customset</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.String.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Helper\String</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="privilegeKeyDelete" id="_privilegeKeyDelete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_privilegeKeyDelete">#</a>
+		<code>privilegeKeyDelete( <span>string <var>$token</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Deletes a token specified by key $token.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes a token specified by key $token.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$token</var></dt>
+					<dd><code>string</code><br>$token</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="privilegeKeyUse" id="_privilegeKeyUse">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_privilegeKeyUse">#</a>
+		<code>privilegeKeyUse( <span>string <var>$token</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Use a token key gain access to a server or channel group. Please note that
+the server will automatically delete the token after it has been used.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Use a token key gain access to a server or channel group. Please note that
+the server will automatically delete the token after it has been used.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$token</var></dt>
+					<dd><code>string</code><br>$token</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="customSearch" id="_customSearch">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_customSearch">#</a>
+		<code>customSearch( <span>string <var>$ident</var></span>, <span>string <var>$pattern</var> = <span class="php-quote">&quot;%&quot;</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of custom client properties specified by $ident.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of custom client properties specified by $ident.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ident</var></dt>
+					<dd><code>string</code><br>$ident</dd>
+					<dt><var>$pattern</var></dt>
+					<dd><code>string</code><br>$pattern</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="customInfo" id="_customInfo">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_customInfo">#</a>
+		<code>customInfo( <span>integer <var>$cldbid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of custom properties for the client specified by $cldbid.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of custom properties for the client specified by $cldbid.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cldbid</var></dt>
+					<dd><code>integer</code><br>$cldbid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="banList" id="_banList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_banList">#</a>
+		<code>banList( )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of active bans on the selected virtual server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of active bans on the selected virtual server.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="banListClear" id="_banListClear">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_banListClear">#</a>
+		<code>banListClear( )</code>
+
+		<div class="description short">
+			
+<p>Deletes all active ban rules from the server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes all active ban rules from the server.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="banCreate" id="_banCreate">
+
+		<td class="attributes"><code>
+			 public 
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_banCreate">#</a>
+		<code>banCreate( <span>array <var>$rules</var></span>, <span>integer <var>$timeseconds</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$reason</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Adds a new ban rule on the selected virtual server. All parameters are
+optional but at least one of the following rules must be set: ip, name, or
+uid.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Adds a new ban rule on the selected virtual server. All parameters are
+optional but at least one of the following rules must be set: ip, name, or
+uid.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$rules</var></dt>
+					<dd><code>array</code><br>$rules</dd>
+					<dt><var>$timeseconds</var></dt>
+					<dd><code>integer</code><br>$timeseconds</dd>
+					<dt><var>$reason</var></dt>
+					<dd><code>string</code><br>$reason</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="banDelete" id="_banDelete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_banDelete">#</a>
+		<code>banDelete( <span>integer <var>$banid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Deletes the specified ban rule from the server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes the specified ban rule from the server.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$banid</var></dt>
+					<dd><code>integer</code><br>$banid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="complaintList" id="_complaintList">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_complaintList">#</a>
+		<code>complaintList( <span>integer <var>$tcldbid</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a list of complaints on the selected virtual server. If $tcldbid is
+specified, only complaints about the targeted client will be shown.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a list of complaints on the selected virtual server. If $tcldbid is
+specified, only complaints about the targeted client will be shown.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tcldbid</var></dt>
+					<dd><code>integer</code><br>$tcldbid</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="complaintListClear" id="_complaintListClear">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_complaintListClear">#</a>
+		<code>complaintListClear( <span>integer <var>$tcldbid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Deletes all active complaints about the client with database ID $tcldbid from
+the server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes all active complaints about the client with database ID $tcldbid from
+the server.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tcldbid</var></dt>
+					<dd><code>integer</code><br>$tcldbid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="complaintCreate" id="_complaintCreate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_complaintCreate">#</a>
+		<code>complaintCreate( <span>integer <var>$tcldbid</var></span>, <span>string <var>$message</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Submits a complaint about the client with database ID $tcldbid to the
+server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Submits a complaint about the client with database ID $tcldbid to the
+server.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tcldbid</var></dt>
+					<dd><code>integer</code><br>$tcldbid</dd>
+					<dt><var>$message</var></dt>
+					<dd><code>string</code><br>$message</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="complaintDelete" id="_complaintDelete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_complaintDelete">#</a>
+		<code>complaintDelete( <span>integer <var>$tcldbid</var></span>, <span>integer <var>$fcldbid</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Deletes the complaint about the client with ID $tcldbid submitted by the
+client with ID $fcldbid from the server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes the complaint about the client with ID $tcldbid submitted by the
+client with ID $fcldbid from the server.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$tcldbid</var></dt>
+					<dd><code>integer</code><br>$tcldbid</dd>
+					<dt><var>$fcldbid</var></dt>
+					<dd><code>integer</code><br>$fcldbid</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="logView" id="_logView">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_logView">#</a>
+		<code>logView( <span>integer <var>$limitcount</var> = <span class="php-num">30</span></span>, <span>string <var>$comparator</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$timestamp</var> = <span class="php-keyword1">null</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns a specified number of entries from the servers log.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a specified number of entries from the servers log.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$limitcount</var></dt>
+					<dd><code>integer</code><br>$limitcount</dd>
+					<dt><var>$comparator</var></dt>
+					<dd><code>string</code><br>$comparator</dd>
+					<dt><var>$timestamp</var></dt>
+					<dd><code>string</code><br>$timestamp</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="logAdd" id="_logAdd">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_logAdd">#</a>
+		<code>logAdd( <span>string <var>$logmsg</var></span>, <span>integer <var>$loglevel</var> = <code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.TeamSpeak3.html#LOGLEVEL_INFO">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\TeamSpeak3::<b>LOGLEVEL_INFO</b></a></code></span> )</code>
+
+		<div class="description short">
+			
+<p>Writes a custom entry into the virtual server log.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Writes a custom entry into the virtual server log.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$logmsg</var></dt>
+					<dd><code>string</code><br>$logmsg</dd>
+					<dt><var>$loglevel</var></dt>
+					<dd><code>integer</code><br>$loglevel</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="connectionInfo" id="_connectionInfo">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_connectionInfo">#</a>
+		<code>connectionInfo( )</code>
+
+		<div class="description short">
+			
+<p>Returns detailed connection information of the virtual server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns detailed connection information of the virtual server.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="_delete">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_delete">#</a>
+		<code>delete( )</code>
+
+		<div class="description short">
+			
+<p>Deletes the virtual server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Deletes the virtual server.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="start" id="_start">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_start">#</a>
+		<code>start( )</code>
+
+		<div class="description short">
+			
+<p>Starts the virtual server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Starts the virtual server.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="stop" id="_stop">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_stop">#</a>
+		<code>stop( )</code>
+
+		<div class="description short">
+			
+<p>Stops the virtual server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Stops the virtual server.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="selfUpdate" id="_selfUpdate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_selfUpdate">#</a>
+		<code>selfUpdate( <span>array <var>$properties</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Changes the properties of your own client connection.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Changes the properties of your own client connection.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$properties</var></dt>
+					<dd><code>array</code><br>$properties</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="selfUpdateLogin" id="_selfUpdateLogin">
+
+		<td class="attributes"><code>
+			 public 
+			<code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.String.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Helper\String</a></code>
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_selfUpdateLogin">#</a>
+		<code>selfUpdateLogin( <span>string <var>$username</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Updates your own ServerQuery login credentials using a specified username.
+The password will be auto-generated.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Updates your own ServerQuery login credentials using a specified username.
+The password will be auto-generated.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$username</var></dt>
+					<dd><code>string</code><br>$username</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Helper.String.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Helper\String</a></code></code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="selfPermOverview" id="_selfPermOverview">
+
+		<td class="attributes"><code>
+			 public 
+			array
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_selfPermOverview">#</a>
+		<code>selfPermOverview( )</code>
+
+		<div class="description short">
+			
+<p>Returns an array containing the permission overview of your own client.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns an array containing the permission overview of your own client.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>array</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sortClientList" id="_sortClientList">
+
+		<td class="attributes"><code>
+			 protected static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sortClientList">#</a>
+		<code>sortClientList( <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Client.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Client</a></code> <var>$a</var></span>, <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Client.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Client</a></code> <var>$b</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Internal callback funtion for sorting of client objects.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Internal callback funtion for sorting of client objects.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$a</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Client.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Client</a></code></code><br>$a</dd>
+					<dt><var>$b</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.Client.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\Client</a></code></code><br>$b</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sortGroupList" id="_sortGroupList">
+
+		<td class="attributes"><code>
+			 protected static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sortGroupList">#</a>
+		<code>sortGroupList( <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\AbstractNode</a></code> <var>$a</var></span>, <span><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\AbstractNode</a></code> <var>$b</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Internal callback funtion for sorting of group objects.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Internal callback funtion for sorting of group objects.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$a</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\AbstractNode</a></code></code><br>$a</dd>
+					<dt><var>$b</var></dt>
+					<dd><code><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\AbstractNode</a></code></code><br>$b</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="sortFileList" id="_sortFileList">
+
+		<td class="attributes"><code>
+			 protected static
+			integer
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_sortFileList">#</a>
+		<code>sortFileList( <span>array <var>$a</var></span>, <span>array <var>$b</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Internal callback funtion for sorting of file list items.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Internal callback funtion for sorting of file list items.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$a</var></dt>
+					<dd><code>array</code><br>$a</dd>
+					<dt><var>$b</var></dt>
+					<dd><code>array</code><br>$b</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>integer</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isOnline" id="_isOnline">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isOnline">#</a>
+		<code>isOnline( )</code>
+
+		<div class="description short">
+			
+<p>Returns TRUE if the virtual server is online.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns TRUE if the virtual server is online.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isOffline" id="_isOffline">
+
+		<td class="attributes"><code>
+			 public 
+			boolean
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isOffline">#</a>
+		<code>isOffline( )</code>
+
+		<div class="description short">
+			
+<p>Returns TRUE if the virtual server is offline.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns TRUE if the virtual server is offline.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>boolean</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getUniqueId" id="_getUniqueId">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getUniqueId">#</a>
+		<code>getUniqueId( )</code>
+
+		<div class="description short">
+			
+<p>Returns a unique identifier for the node which can be used as a HTML
+property.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a unique identifier for the node which can be used as a HTML
+property.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIcon" id="_getIcon">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getIcon">#</a>
+		<code>getIcon( )</code>
+
+		<div class="description short">
+			
+<p>Returns the name of a possible icon to display the node object.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the name of a possible icon to display the node object.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getSymbol" id="_getSymbol">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getSymbol">#</a>
+		<code>getSymbol( )</code>
+
+		<div class="description short">
+			
+<p>Returns a symbol representing the node.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a symbol representing the node.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__toString" id="___toString">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___toString">#</a>
+		<code>__toString( )</code>
+
+		<div class="description short">
+			
+<p>Returns a string representation of this node.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns a string representation of this node.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br />
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code><a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#___toString">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\AbstractNode::__toString()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#methods">ManiaLivePlugins\Standard\TeamSpeak\TeamSpeak3\Node\AbstractNode</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#___call">__call()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#___sleep">__sleep()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_delStorage">delStorage()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_execute">execute()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_filterList">filterList()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_getClass">getClass()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_getId">getId()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_getInfo">getInfo()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_getParent">getParent()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_getProperty">getProperty()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_getStorage">getStorage()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_getViewer">getViewer()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_iconGetName">iconGetName()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_iconIsLocal">iconIsLocal()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_prepare">prepare()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_setStorage">setStorage()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_toArray">toArray()</a>, 
+			<a href="class-ManiaLivePlugins.Standard.TeamSpeak.TeamSpeak3.Node.AbstractNode.html#_toString">toString()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Countable.html#methods">Countable</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Countable.html#_count">count()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-ArrayAccess.html#methods">ArrayAccess</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-ArrayAccess.html#_offsetExists">offsetExists()</a>, 
+			<a href="class-ArrayAccess.html#_offsetGet">offsetGet()</a>, 
+			<a href="class-ArrayAccess.html#_offsetSet">offsetSet()</a>, 
+			<a href="class-ArrayAccess.html#_offsetUnset">offsetUnset()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-Iterator.html#methods">Iterator</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-Iterator.html#_current">current()</a>, 
+			<a href="class-Iterator.html#_key">key()</a>, 
+			<a href="class-Iterator.html#_next">next()</a>, 
+			<a href="class-Iterator.html#_rewind">rewind()</a>, 
+			<a href="class-Iterator.html#_valid">valid()</a>
+		</code></td>
+	</tr>
+	</table>
+	<table class="summary inherited">
+	<caption>Methods inherited from <a href="class-RecursiveIterator.html#methods">RecursiveIterator</a></caption>
+	<tr>
+		<td><code>
+			<a href="class-RecursiveIterator.html#_getChildren">getChildren()</a>, 
+			<a href="class-RecursiveIterator.html#_hasChildren">hasChildren()</a>
+		</code></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		ManiaLive API documentation generated by <a href="http://apigen.org">ApiGen 2.8.0</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
