@@ -748,6 +748,21 @@
             "CardMain_Quit",
             "CardMain_Tool"
         ]
+    },
+    {
+        "elements": ["frame3d"],
+        "styles": [
+            "BaseStation",
+            "BaseBoxCase",
+            "Titlelogo",
+            "ButtonBack",
+            "ButtonNav",
+            "ButtonH",
+            "Station3x3",
+            "Title",
+            "TitleEditor",
+            "Window"
+        ]
     }
 ]
     
