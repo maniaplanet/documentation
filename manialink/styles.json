@@ -2,7 +2,7 @@
     {
         "elements": ["quad"],
         "styles": ["321Go"],
-        "substyle": [
+        "substyles": [
             "1",
             "2",
             "3",
@@ -12,7 +12,7 @@
     {
         "elements": ["quad"],
         "styles": ["Bgs1"],
-        "substyle": [
+        "substyles": [
             "ArrowDown",
             "ArrowLeft",
             "ArrowRight",
@@ -82,7 +82,7 @@
     {
         "elements": ["quad"],
         "styles": ["Bgs1InRace"],
-        "substyle": [
+        "substyles": [
             "ArrowDown",
             "ArrowLeft",
             "ArrowRight",
@@ -152,7 +152,7 @@
     {
         "elements": ["quad"],
         "styles": ["BgsChallengeMedals"],
-        "substyle": [
+        "substyles": [
             "BgBronze",
             "BgGold",
             "BgNadeo",
@@ -164,7 +164,7 @@
     {
         "elements": ["quad"],
         "styles": ["BgsPlayerCard"],
-        "substyle": [
+        "substyles": [
             "BgActivePlayerCard",
             "BgActivePlayerName",
             "BgActivePlayerScore",
@@ -184,7 +184,7 @@
     {
         "elements": ["quad"],
         "styles": ["Copilot"],
-        "substyle": [
+        "substyles": [
             "Down",
             "DownGood",
             "DownWrong",
@@ -202,7 +202,7 @@
     {
         "elements": ["quad"],
         "styles": ["Emblems"],
-        "substyle": [
+        "substyles": [
             "#0",
             "#1",
             "#2"
@@ -211,7 +211,7 @@
     {
         "elements": ["quad"],
         "styles": ["EnergyBar"],
-        "substyle": [
+        "substyles": [
             "BgText",
             "EnergyBar",
             "EnergyBar_0.25",
@@ -223,7 +223,7 @@
     {
         "elements": ["quad"],
         "styles": ["Hud3dEchelons"],
-        "substyle": [
+        "substyles": [
             "EchelonBronze1",
             "EchelonBronze2",
             "EchelonBronze3",
@@ -238,7 +238,7 @@
     {
         "elements": ["quad"],
         "styles": ["Icons128x128_1"],
-        "substyle": [
+        "substyles": [
             "Advanced",
             "Back",
             "BackFocusable",
@@ -308,7 +308,7 @@
     {
         "elements": ["quad"],
         "styles": ["Icons128x128_Blink"],
-        "substyle": [
+        "substyles": [
             "Advanced",
             "Back",
             "BackFocusable",
@@ -378,7 +378,7 @@
     {
         "elements": ["quad"],
         "styles": ["Icons128x32_1"],
-        "substyle": [
+        "substyles": [
             "Empty",
             "ManiaLinkHome",
             "ManiaLinkSwitch",
@@ -409,7 +409,7 @@
     {
         "elements": ["quad"],
         "styles": ["Icons64x64_1"],
-        "substyle": [
+        "substyles": [
             "3DStereo",
             "Add",
             "ArrowBlue",
@@ -500,7 +500,7 @@
     {
         "elements": ["quad"],
         "styles": ["Icons64x64_2"],
-        "substyle": [
+        "substyles": [
             "ArrowElimination",
             "ArrowHit",
             "Disconnected",
@@ -519,7 +519,7 @@
     {
         "elements": ["quad"],
         "styles": ["ManiaPlanetLogos"],
-        "substyle": [
+        "substyles": [
             "IconPlanets",
             "IconPlanetsPerspective",
             "IconPlanetsSmall",
@@ -532,7 +532,7 @@
     {
         "elements": ["quad"],
         "styles": ["ManiaplanetSystem"],
-        "substyle": [
+        "substyles": [
             "BgDialog",
             "BgDialogAnchor",
             "BgFloat",
@@ -544,7 +544,7 @@
     {
         "elements": ["quad"],
         "styles": ["MedalsBig"],
-        "substyle": [
+        "substyles": [
             "MedalBronze",
             "MedalGold",
             "MedalGoldPerspective",
@@ -557,7 +557,7 @@
     {
         "elements": ["quad"],
         "styles": ["TitleLogos"],
-        "substyle": [
+        "substyles": [
             "Author",
             "Collection",
             "Icon",
@@ -567,7 +567,7 @@
     {
         "elements": ["quad"],
         "styles": ["UIConstruction_Buttons"],
-        "substyle": [
+        "substyles": [
             "ActionMaker",
             "Add",
             "Author",
@@ -627,7 +627,7 @@
     {
         "elements": ["quad"],
         "styles": ["UiSMSpectatorScoreBig"],
-        "substyle": [
+        "substyles": [
             "BotLeft",
             "BotLeftGlass",
             "BotRight",
@@ -691,7 +691,6 @@
             "TextInfoMedium",
             "TextInfoSmall",
             "TextPlayerCardName",
-            "TextPlayerCardScore",
             "TextPlayerCardScore",
             "TextRaceChat",
             "TextRaceChrono",
@@ -765,4 +764,3 @@
         ]
     }
 ]
-    
