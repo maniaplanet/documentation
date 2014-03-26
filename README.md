@@ -1,7 +1,7 @@
 Technical Documentation
 =======================
 
-This project is ment to store technical documentations for ManiaPlanet.
+This project is meant to store technical documentations for ManiaPlanet.
 
 See online: http://maniaplanet.github.io/documentation/
 
