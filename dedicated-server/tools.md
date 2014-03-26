@@ -52,7 +52,7 @@ description: FAQ
 <td>MPAseco</td><td>Kremsy, TheM, ManiaTwister</td><td><img src="../img/no.png" /></td><td><img src="../img/yes.png" /></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=450">Forum</a></td><td><a href="http://www.mpaseco.org/">MPAseco.org</a></td><td><a href="http://www.mpaseco.org/plugins">Repository</a></td>
 </tr>
 <tr>
-<td>ManiaControl</td><td>steeffeen, Kremsy, TheM, Wabbitface</td><td><img src="../img/no.png" /></td><td><img src="../img/yes.png" /></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=479">Forum</a></td><td><a href="http://www.maniacontrol.com/">ManiaControl.com</a></td><td><a href="http://maniacontrol.com/plugins">Repository</a></td>
+<td>ManiaControl</td><td>steeffeen, Kremsy, TheM, Wabbitface</td><td><img src="../img/yes.png" /></td><td><img src="../img/yes.png" /></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=479">Forum</a></td><td><a href="http://www.maniacontrol.com/">ManiaControl.com</a></td><td><a href="http://maniacontrol.com/plugins">Repository</a></td>
 </tr>
 </table>
 
