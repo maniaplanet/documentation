@@ -24,6 +24,8 @@ maniaplanet:///:manialink 								| Open a manialink into the in-game browser (p
 maniaplanet://#mailto=login								| Send a message to a preferred login
 maniaplanet://#score=scoremeta							| Link is generated in game to send scores that one can challenge on another computer
 maniaplanet://#campaign=#1,3@TITLEID        | Play the third map of the first group (usually A03)
+maniaplanet://#openstore=TITLEID            | Will open a URL to the Online Maniaplanet Store according to TitleID
+maniaplanet://#menustations=*               | * can be home, play, store, options
 
 ## TitleId?
 
