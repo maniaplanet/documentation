@@ -35,6 +35,7 @@
             "BgCardList",
             "BgCardOnline",
             "BgCardPlayer",
+            "BgCardProperty",
             "BgCardSystem",
             "BgCardZone",
             "BgColorContour",
@@ -67,6 +68,7 @@
             "BgWindow1",
             "BgWindow2",
             "BgWindow3",
+            "BgWindow4",
             "EnergyBar",
             "EnergyTeam2",
             "Glow",
@@ -105,6 +107,7 @@
             "BgCardList",
             "BgCardOnline",
             "BgCardPlayer",
+            "BgCardProperty",
             "BgCardSystem",
             "BgCardZone",
             "BgColorContour",
@@ -137,6 +140,7 @@
             "BgWindow1",
             "BgWindow2",
             "BgWindow3",
+            "BgWindow4",
             "EnergyBar",
             "EnergyTeam2",
             "Glow",
@@ -233,6 +237,20 @@
             "EchelonSilver1",
             "EchelonSilver2",
             "EchelonSilver3"
+        ]
+    },
+    {
+        "elements": ["quad"],
+        "styles": ["Hud3dIcons"],
+        "substyles": [
+            "Cross",
+            "CrossTargeted",
+            "Player1",
+            "Player2",
+            "Player3",
+            "PointA",
+            "PointB",
+            "PointC"
         ]
     },
     {
@@ -383,6 +401,7 @@
             "ManiaLinkHome",
             "ManiaLinkSwitch",
             "ManiaPlanet",
+            "Minimize",
             "Music",
             "PainterBrush",
             "PainterFill",
@@ -475,6 +494,7 @@
             "ShowRight2",
             "ShowUp",
             "ShowUp2",
+            "ShowUpChanging",
             "SliderCursor",
             "SliderCursor2",
             "StateFavourite",
@@ -512,6 +532,7 @@
             "RocketElimination",
             "RocketHit",
             "ServerNotice",
+            "SortBy",
             "UnknownElimination",
             "UnknownHit"
         ]
@@ -527,6 +548,23 @@
             "ManiaPlanetLogoBlackSmall",
             "ManiaPlanetLogoWhite",
             "ManiaPlanetLogoWhiteSmall"
+        ]
+    },
+    {
+        "elements": ["quad"],
+        "styles": ["ManiaPlanetMainMenu"],
+        "substyles": [
+            "BottomBar",
+            "Highlight",
+            "IconAdd",
+            "IconHome",
+            "IconPlay",
+            "IconQuit",
+            "IconSettings",
+            "IconStore",
+            "MainBg",
+            "TitleBg",
+            "TopBar"
         ]
     },
     {
@@ -570,6 +608,7 @@
         "substyles": [
             "ActionMaker",
             "Add",
+            "AirMapping",
             "Author",
             "AuthorTime",
             "BgEditors",
@@ -586,6 +625,7 @@
             "Down",
             "Drive",
             "Erase",
+            "GhostBlocks",
             "Help",
             "Item",
             "Left",
@@ -675,6 +715,7 @@
             "TextCardInfoSmall",
             "TextCardInfoVerySmall",
             "TextCardMedium",
+            "TextCardMediumWhite",
             "TextCardRaceRank",
             "TextCardScores2",
             "TextCardSmall",
@@ -717,8 +758,11 @@
             "TextTitle3",
             "TextTitle3Header",
             "TextTitleError",
+            "TextToolTipAM",
+            "TextToolTipAMBig",
             "TextValueBig",
             "TextValueMedium",
+            "TextValueMediumSm",
             "TextValueSmall",
             "TextValueSmallSm",
             "TrackerText",
@@ -745,7 +789,8 @@
             "CardButtonSmallXXL",
             "CardButtonSmallXXXL",
             "CardMain_Quit",
-            "CardMain_Tool"
+            "CardMain_Tool",
+            "CardMain_Tool_NoBg"
         ]
     },
     {
