@@ -807,5 +807,19 @@
             "TitleEditor",
             "Window"
         ]
+    },
+    {
+        "elements": ["manialink"],
+        "backgrounds": [
+            "default_image",
+            "True",
+            "1",
+            "hide",
+            "False",
+            "0",
+            "stars",
+            "stations",
+            "title"
+        ]
     }
 ]
