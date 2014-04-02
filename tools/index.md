@@ -9,5 +9,5 @@ description: List of tools
 
 ## Developper tools
 
-* [ManiaPlanet web services](ws.html)
-* [ManiaConnect](maniaconnect.html)
+* [ManiaPlanet web services](ws/index.html)
+* [ManiaConnect](ws/maniaconnect.html)
