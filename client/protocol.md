@@ -59,7 +59,6 @@ command 										| description
  #menustations=									| open the stations menu
  #menustations=home								| open the home tab on the stations menu
  #menustations=play@TITLEID						| open the play station on the title specified (if it is installed)
- #menustations=store?titleid=TITLEID			| open the store tab, on the title page (if it's published in the store)
  #menustations=store?titleUid=TITLEID			| open the store tab, on the title page (if it's published in the store)
  #menustations=store?TITLEID			| open the store tab, on the title page (if it's published in the store)
 
