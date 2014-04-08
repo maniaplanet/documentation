@@ -13,7 +13,7 @@ Importer has been tested with files exported from Blender and 3dsMax (with Fbx 2
 We distinguish 3 types of meshes : **static meshes**, **dynamic meshes** and **characters meshes**  
 The static objects use static meshes, the dynamic object use dynamic meshes, and the characters use character meshes.  
 
-The fbx file to import (and its depening assets (textures)) must be placed in the correct folders
+The fbx file to import (and its depening assets (textures)) must be placed in the correct folders  
 - for item meshes : place in folder *{maniaplanet_user_dir}/Work/Items/{sub_folder_you_want}*
 - for character skin meshes : place in folder *{maniaplanet_user_dir}/Work/Skins/Models/{sub_folder_you_want}*
 
