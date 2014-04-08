@@ -27,7 +27,7 @@ and so on.
 
 Current Release
 -
-importer : http://files.maniaplanet.com/tools/NadeoImporter_2013_03_27.zip
+importer : http://files.maniaplanet.com/tools/NadeoImporter_2014_03_27.zip
 
 sample files : http://files.maniaplanet.com/tools/NadeoImporterSamples2014.zip
 
