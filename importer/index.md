@@ -27,9 +27,9 @@ and so on.
 
 Current Release
 -
-importer  : (http://files.maniaplanet.com/tools/NadeoImporter_2014_04_08.zip)
+importer : http://files.maniaplanet.com/tools/NadeoImporter_2013_03_27.zip
 
-sample files : (http://files.maniaplanet.com/tools/NadeoImporterSamples2014.zip)
+sample files : http://files.maniaplanet.com/tools/NadeoImporterSamples2014.zip
 
 the importer must be unzipped in the `{Maniaplanet_exe_dir}` folder (the same folder that contains `ManiaPlanet.exe`, typically `c:/program files/Maniaplanet` or `c:/Program files (x86)/Maniaplanet` )
 You might neeed administrator rights unzip and to place the importer files here
@@ -44,7 +44,7 @@ Import an character skin
 -
 See the dedicated page : [character skin import](importer_charskin)
 
-Import an car skin
+Import a car skin
 -
 See the dedicated page : [car skin import](importer_carskin)
 
@@ -80,9 +80,9 @@ ChangeLog
 
 Previous releases
 --
-- (http://files.maniaplanet.com/tools/NadeoImporter_2014_04_08.zip)
-- (http://files.maniaplanet.com/tools/NadeoImporter_2013_09_17.zip)
-- (http://files.maniaplanet.com/tools/NadeoImporter_2013_08_21.zip)
+- http://files.maniaplanet.com/tools/NadeoImporter_2014_04_08.zip
+- http://files.maniaplanet.com/tools/NadeoImporter_2013_09_17.zip
+- http://files.maniaplanet.com/tools/NadeoImporter_2013_08_21.zip
 
-sample files : (http://files.maniaplanet.com/tools/NadeoImporterSamples.zip)
+sample files : http://files.maniaplanet.com/tools/NadeoImporterSamples.zip
 
