@@ -65,7 +65,9 @@ Item.xml file structure
 recap example for character items:
 
 ```xml
-<Item Type="Character" Archetype="ShootMania\Items\Characters\ArenaPlayer.Item.gbx" DefaultSkin="Skins\Models\StormManBig\A.zip" SkinFolder="Models\StormManBig" Collection="SMCommon" AuthorName="NadeoSamples">
+<Item Type="Character" Archetype="ShootMania\Items\Characters\ArenaPlayer.Item.gbx" 
+DefaultSkin="Skins\Models\StormManBig\A.zip" SkinFolder="Models\StormManBig" 
+Collection="SMCommon" AuthorName="NadeoSamples">
 ```
 2. Phy and Vis
 --
@@ -144,7 +146,8 @@ recap example for static object :
 		- `TransY` translation distance in meters
 
 recap example for dynamic object :
-```xms
+
+```xml
 <Item Type="DynaObject" Collection="SMCommon">
    <Phy>
       <TriggerShape Type="AABB" min="-0.4 0 -0.4" max="0.4 0.8 0.4"/>
@@ -168,6 +171,7 @@ a character inherits the physics from its archetype. however, you can tune some 
 
 there is no `<vis>` node for characters. the display is defined by the DefaultSkin attribute of the `<Item>` node.
 recap example for character :
+
 ```xml
 <Item Type="Character" Archetype="ShootMania/Items/Characters/ArenaPlayer.Item.gbx" DefaultSkin="Skins/Models/StormManBig/A.zip" SkinFolder="Models/StormManBig" Collection="SMCommon" AuthorName="NadeoSamples">
 	<Phy>
@@ -181,6 +185,7 @@ recap example for character :
 in order to facilitate the item placement in the editor, you can define parameters
 
 - `<Pivots>` : pivot points (instead of the origin of the object)
+
 	```xml
 <Pivots>
 	<Pivot Pos="0 0 0"/>
@@ -192,39 +197,39 @@ in order to facilitate the item placement in the editor, you can define paramete
 Sometimes, several pivots are chosen: you can switch from one to another using the [i]numpad '.'[/i] key.
 
 - `<GridSnap>` : the object can be placed every x meters
- - ex. good parameters for the environment Canyon:
+	- ex. good parameters for the environment Canyon:
 	`<GridSnap HStep="8" VStep="4" />`
- - ex. good parameters for the environment Storm:
+	- ex. good parameters for the environment Storm:
 	`<GridSnap HStep="1" VStep="1" />`
- - ex. you can offset the grid (even if decreasing the grid steps may be a better solution in some cases):
+	- ex. you can offset the grid (even if decreasing the grid steps may be a better solution in some cases):
 	`<GridSnap HStep="1" VStep="1" HOffset="0.5" VOffset="0.3"/>`
 - `<Levitation>` : the object can be placed not only on the ground and on blocks/items but also in the air every x meters)
- - ex. good parameters for the environment Valley:
- `<Levitation VStep="2"/>`
- - ex. you can offset the levels where the object can be placed in the air (as for grid snapping):
- `<Levitation VStep="2" VOffset="1"/>`
- - ex. "ghost mode" (the object ignores existing blocks, it can be placed through them, not on them):
- `<Levitation VStep="4" GhostMode="true" />`
+	- ex. good parameters for the environment Valley:
+	`<Levitation VStep="2"/>`
+	- ex. you can offset the levels where the object can be placed in the air (as for grid snapping):
+	`<Levitation VStep="2" VOffset="1"/>`
+	- ex. "ghost mode" (the object ignores existing blocks, it can be placed through them, not on them):
+	`<Levitation VStep="4" GhostMode="true" />`
 - `<Cube>` special objects with a specific snappig system, easy to place; try to use them in Royal Exp title!
- ex. for a 2-meter box from (0,0,0) to (2,2,2):
- `<Cube Center="1 1 1" Size="2" />`
+	ex. for a 2-meter box from (0,0,0) to (2,2,2):
+	`<Cube Center="1 1 1" Size="2" />`
 - `<PivotSnap>`: when you are about to place a new item B next to an already placed item A, with the mouse cursor on A, B may be offseted in order that B's pivot and A's nearest pivot coincide
- - ex. for a small item, if you want to activate pivot snapping only when this item's pivot and another item's pivot are very close to each other (25cm or less)
+	- ex. for a small item, if you want to activate pivot snapping only when this item's pivot and another item's pivot are very close to each other (25cm or less)
 	`<PivotSnap Distance="0.25" />`
- - ex. if you want to completely deactivate pivot snapping for this item, set the distance to 0
+	- ex. if you want to completely deactivate pivot snapping for this item, set the distance to 0
 	`<PivotSnap Distance="0" />`
- - ex. if you want to let the map editor use the default environment-dependent value, just don't put any PivotSnap tag, or you can put a negative value in the Distance property
+	- ex. if you want to let the map editor use the default environment-dependent value, just don't put any PivotSnap tag, or you can put a negative value in the Distance property
 	`<PivotSnap Distance="-1" />`
 
  Note: If the item you are about to place (B) and the item which is already placed (A) do not have the same pivot-snapping distance value, only the lowest distance is used. 
 
 - `<Options>` : other placement options (default values are "false"). attributes
- - `NotOnItem`: prevents the object from being placed on another item (boolean, default = false)
- - `OneAxisRotation`  : prevents the item from being rotated with arrow keys (you can rotate it around the vertical axis only, with right click, '+' key and '-' key)
- - `ManualPivotSwitch` : the pivot used to place the object won't change automatically; the only way to change it is to press numpad '.' key
- - `"AutoRotation` : the object rotates automatically according to the surface pointed by the mouse cursor
-  - ex. an object that will always be perpendicular to the surface it is placed on:
- `<Options OneAxisRotation="true" AutoRotation="true" />`
-  - ex. if you want to let the user choose the pivot to use but prevent him from placing it on another item:
- `<Options NotOnItem="true" ManualPivotSwitch="true" />`
+	- `NotOnItem`: prevents the object from being placed on another item (boolean, default = false)
+	- `OneAxisRotation`  : prevents the item from being rotated with arrow keys (you can rotate it around the vertical axis only, with right click, '+' key and '-' key)
+	- `ManualPivotSwitch` : the pivot used to place the object won't change automatically; the only way to change it is to press numpad '.' key
+	- `"AutoRotation` : the object rotates automatically according to the surface pointed by the mouse cursor
+	- ex. an object that will always be perpendicular to the surface it is placed on:
+	`<Options OneAxisRotation="true" AutoRotation="true" />`
+	- ex. if you want to let the user choose the pivot to use but prevent him from placing it on another item:
+	`<Options NotOnItem="true" ManualPivotSwitch="true" />`
 	
