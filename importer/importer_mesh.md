@@ -30,7 +30,7 @@ When you import a mesh from a *.fbx* file, a corresponding *.mesh.gbx* file is p
 In order to specify how to import a fbx file, the **recommended** way is now to create a *xxx.meshparams.xml* file along the *xxx.fbx* file, instead of adding command line parameters.
 
 In the samples, you have 2 files :  
-*Work\Items\Samples\StaticObjects\Meshes\Block_Checkers.fbx*
+*Work\Items\Samples\StaticObjects\Meshes\Block_Checkers.fbx*  
 and  
 *Work\Items\Samples\StaticObjects\Meshes\Block_Checkers.meshparams.xml*  
 
@@ -40,7 +40,7 @@ and
 ---
 - Uvs : for most of the static mesh materials, you will need 2 UV layers:
 	- a layer named "Material" : base layer of the material, typically mapping your Diffuse texture)
-	- a layer named "Lightmap" : Mandatory, needed for lightmap calculus in editor.    
+	- a layer named "Lightmap" : Mandatory, needed for lightmap calculus in editor.  
 		**WARNING 1**: for this layer, the UV must not overlap, otherwise it will cause invalid lightmaps !  
 		**WARNING 2**: if you have lods, the Lod0 and Lod1 for a mesh must "share" the same UVs in the lightmap (we write lightmap only for Lod0, Lod1 will just use it)  
 
@@ -73,8 +73,8 @@ Use this when you import checkpoint or finish items. (see the page [item import]
 - Uvs : Dynamic mesh materials don't require lightmap uv channel for static lighting (only 1 uv channel)
 - Lod :You can define up to 3 level of details for a dynamic mesh, by having up to 3 meshes (suffix "_Lod0", "_Lod1", "_Lod2")
 
-- **WARNING for character meshes (used in skins)**
-	There are constraints on the maximum number of vertices of the     Lowest quality mesh (ie the highest Lod number) : 3500 vertexs max at this time.  
+- **WARNING for character meshes (used in skins)**  
+	There are constraints on the maximum number of vertices of the lowest quality mesh (ie the highest Lod number) : 3500 vertexs max at this time.  
 	If your skin doesn't fit the requirements, it won't be transferred in peer to peer, and other players won't see it.  
 	This to avoid unoptimized and costly skins to perturb the gameplay experience of other players.  
 
@@ -82,16 +82,13 @@ Use this when you import checkpoint or finish items. (see the page [item import]
 --
 2.1. MeshParams 
 --
-`<MeshParams>` root node attributes :
-
+`<MeshParams>` root node attributes :  
 - `MeshType` : mandatory. mesh type.  
 	values : `"Static", "Dynamic"`  
-	ex : `<MeshParams MeshType="Static">`
-
+	ex : `<MeshParams MeshType="Static">`  
 - `Collection` : optional. collection of the mesh (if it uses collection materials)  
 	values : `"Storm", "Canyon", "Stadium", "Valley"`  
 	ex : `<MeshParams MeshType="Static" Collection="Storm">`  
-
 - `Scale` : optional. import scale.  
 	ex : `<MeshParams MeshType="Static" Scale="1">`
  
