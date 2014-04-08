@@ -3,7 +3,7 @@ body {
   background: #dedede;
   color: #000000;
   font-family: Arial, sans-serif;
-  font-size: 1em;
+  font-size: 15px;
   margin: 0;
   padding: 0;
   line-height: 1.7;
@@ -15,6 +15,7 @@ div:not(.highlight) code, div:not(.highlight) pre {
   background-color: #f8f8f8;
   border: 1px solid #ddd;
   border-radius: 3px;
+  font-size: 12px;
 }
 div:not(.highlight) pre {
   margin: 15px 0px;
@@ -223,7 +224,7 @@ header#top ul li a:hover {
   font-size: 0.8em;
   margin: 0 1em;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1680px) {
   .wrapper {
     width: 94%;
   }
