@@ -25,7 +25,8 @@ To import an item, type the command :
 ```
 NadeoImporter Item {Item.xml_Filename_Relative_To_WorkFolder}
 ```
-**Note 1** For items using meshes and shapes, (static & dynamic objects), those must have been imported **before** Item import. see the dedicated page : [mesh import](Importer_Mesh) 
+**Note 1** For items using meshes and shapes, (static & dynamic objects), those must have been imported **before** Item import.
+ see the dedicated page : [mesh import](importer_mesh) 
 
 **Note 2** : Once you have imported and item, the only way to play online with it to do it through a Title (add the items to the title during title creation)
 

@@ -38,15 +38,15 @@ the sample files mus be unzipped in the `{maniaplanet_user_dir}` foler (typicall
 
 Import an item
 -
-See the dedicated page : [item import](Importer_Item)
+See the dedicated page : [item import](importer_item)
 
 Import an character skin
 -
-See the dedicated page : [character skin import](Importer_CharSkin)
+See the dedicated page : [character skin import](importer_charskin)
 
 Import an car skin
 -
-See the dedicated page : [car skin import](Importer_CarSkin)
+See the dedicated page : [car skin import](importer_carskin)
 
 
 ChangeLog
