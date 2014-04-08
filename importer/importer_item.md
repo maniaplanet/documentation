@@ -62,8 +62,9 @@ Item.xml file structure
  value : filename of the defaut skin
 - `SkinFolder` : mandatory for character items. folder where to browse skins for this item.
 
-recap example for character items: 
-```
+recap example for character items:
+
+```xml
 <Item Type="Character" Archetype="ShootMania\Items\Characters\ArenaPlayer.Item.gbx" DefaultSkin="Skins\Models\StormManBig\A.zip" SkinFolder="Models\StormManBig" Collection="SMCommon" AuthorName="NadeoSamples">
 ```
 2. Phy and Vis
@@ -99,6 +100,7 @@ Shape.gbx files are automatically generated along the the mesh.gbx when you impo
  (a "socket" is a named location)
 
 recap example for static object :
+
 ```xml
 <Item Type="StaticObject" Collection="Common" AuthorName="NadeoSamples">
 	<Waypoint Type="Checkpoint"/>
