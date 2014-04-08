@@ -82,13 +82,16 @@ Use this when you import checkpoint or finish items. (see the page [item import]
 --
 2.1. MeshParams 
 --
-`<MeshParams>` root node attributes :  
+`<MeshParams>` root node attributes :
+
 - `MeshType` : mandatory. mesh type.  
 	values : `"Static", "Dynamic"`  
-	ex : `<MeshParams MeshType="Static">`  
+	ex : `<MeshParams MeshType="Static">`
+
 - `Collection` : optional. collection of the mesh (if it uses collection materials)  
 	values : `"Storm", "Canyon", "Stadium", "Valley"`  
 	ex : `<MeshParams MeshType="Static" Collection="Storm">`  
+
 - `Scale` : optional. import scale.  
 	ex : `<MeshParams MeshType="Static" Scale="1">`
  
