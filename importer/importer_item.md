@@ -90,10 +90,11 @@ Shape.gbx files are automatically generated along the the mesh.gbx when you impo
 		- `File`: the shape filename. ex : `File="Meshes/Checkpoint.Shape.gbx"` 
 	- `<TriggerShape>` : if your static object needs has a trigger  (for checkpoints or finishs). attributes
 		- `Type`: shape type. "mesh" for static meshes
-		- `File`: the shape filename. ex : `File="Meshes/CheckpointTrigger.Shape.gbx" 
+		- `File`: the shape filename. ex : `File="Meshes/CheckpointTrigger.Shape.gbx`
 - `<Vis>`
 	- `<Mesh>` : the displayed mesh. attributes :
 		- `File`: the mesh filename. ex : `File="Meshes/Checkpoint.Mesh.gbx"`
+		
 		**Warning** : the mesh have been imported as a **static mesh**
 
 - `<Waypoint>`: use this node for defining start, checkpoints, & finishs. attributes :
@@ -135,7 +136,8 @@ recap example for static object :
 - `<Vis>`
 	- `<Mesh>` : the displayed mesh. attributes :
 		- `File`: the mesh filename. ex : `<Mesh File="Meshes/SampleArmor.Mesh.gbx"`
-        **Warning** : the mesh have been imported as a **dynamic mesh**
+        
+		**Warning** : the mesh have been imported as a **dynamic mesh**
 	- `<LightBallSimple>` : a simple light following the dynamic object. attributes :
 		- `Radius` : radius in meters
 		- `sRgb` : color in sRgb
@@ -198,27 +200,37 @@ Sometimes, several pivots are chosen: you can switch from one to another using t
 
 - `<GridSnap>` : the object can be placed every x meters
 	- ex. good parameters for the environment Canyon:
+	
 	`<GridSnap HStep="8" VStep="4" />`
 	- ex. good parameters for the environment Storm:
+	
 	`<GridSnap HStep="1" VStep="1" />`
 	- ex. you can offset the grid (even if decreasing the grid steps may be a better solution in some cases):
+	
 	`<GridSnap HStep="1" VStep="1" HOffset="0.5" VOffset="0.3"/>`
 - `<Levitation>` : the object can be placed not only on the ground and on blocks/items but also in the air every x meters)
 	- ex. good parameters for the environment Valley:
+
 	`<Levitation VStep="2"/>`
 	- ex. you can offset the levels where the object can be placed in the air (as for grid snapping):
+
 	`<Levitation VStep="2" VOffset="1"/>`
 	- ex. "ghost mode" (the object ignores existing blocks, it can be placed through them, not on them):
+
 	`<Levitation VStep="4" GhostMode="true" />`
 - `<Cube>` special objects with a specific snappig system, easy to place; try to use them in Royal Exp title!
 	ex. for a 2-meter box from (0,0,0) to (2,2,2):
+	
 	`<Cube Center="1 1 1" Size="2" />`
 - `<PivotSnap>`: when you are about to place a new item B next to an already placed item A, with the mouse cursor on A, B may be offseted in order that B's pivot and A's nearest pivot coincide
 	- ex. for a small item, if you want to activate pivot snapping only when this item's pivot and another item's pivot are very close to each other (25cm or less)
+	
 	`<PivotSnap Distance="0.25" />`
 	- ex. if you want to completely deactivate pivot snapping for this item, set the distance to 0
+	
 	`<PivotSnap Distance="0" />`
 	- ex. if you want to let the map editor use the default environment-dependent value, just don't put any PivotSnap tag, or you can put a negative value in the Distance property
+	
 	`<PivotSnap Distance="-1" />`
 
  Note: If the item you are about to place (B) and the item which is already placed (A) do not have the same pivot-snapping distance value, only the lowest distance is used. 
@@ -229,7 +241,9 @@ Sometimes, several pivots are chosen: you can switch from one to another using t
 	- `ManualPivotSwitch` : the pivot used to place the object won't change automatically; the only way to change it is to press numpad '.' key
 	- `"AutoRotation` : the object rotates automatically according to the surface pointed by the mouse cursor
 	- ex. an object that will always be perpendicular to the surface it is placed on:
+	
 	`<Options OneAxisRotation="true" AutoRotation="true" />`
 	- ex. if you want to let the user choose the pivot to use but prevent him from placing it on another item:
+	
 	`<Options NotOnItem="true" ManualPivotSwitch="true" />`
 	
