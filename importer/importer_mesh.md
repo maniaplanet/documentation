@@ -39,35 +39,33 @@ and
  1.1 static meshes
 ---
 - Uvs : for most of the static mesh materials, you will need 2 UV layers:
-    - a layer named "Material" : base layer of the material, typically mapping your Diffuse texture)
-    - a layer named "Lightmap" : Mandatory, needed for lightmap calculus in editor.
-    
-    **WARNING 1**: for this layer, the UV must not overlap, otherwise it will cause invalid lightmaps !
-    **WARNING 2**: if you have lods, the Lod0 and Lod1 for a mesh must "share" the same UVs in the lightmap (we write lightmap only for Lod0, Lod1 will just use it)
+	- a layer named "Material" : base layer of the material, typically mapping your Diffuse texture)
+	- a layer named "Lightmap" : Mandatory, needed for lightmap calculus in editor.    
+		**WARNING 1**: for this layer, the UV must not overlap, otherwise it will cause invalid lightmaps !  
+		**WARNING 2**: if you have lods, the Lod0 and Lod1 for a mesh must "share" the same UVs in the lightmap (we write lightmap only for Lod0, Lod1 will just use it)  
 
-    Note :
-    - in blender, it's easy to name your layers
-    - in 3dsMax (wich is classicaly index-based for layers),
-        - the ChannelInfo utility to name your layers (comes with 3dsmax , available in panel Utility->More->Channel info)
-        - or add to the [User Defined Property](http://download.autodesk.com/us/3dsmax/2012help/index.html?url=files/GUID-B7D0424E-6DCB-44D9-AD0B-85B9A1EE3F5-0.htm,topicNumber=d28e3788) (this is what Channel Info will do anyway) :
-MapChannel:1 = BaseMaterial
-MapChannel:2 = LightMap
+	Note :  
+	- in blender, it's easy to name your layers
+	- in 3dsMax (wich is classicaly index-based for layers),
+		- the ChannelInfo utility to name your layers (comes with 3dsmax , available in panel Utility->More->Channel info)
+		- or add to the [User Defined Property](http://download.autodesk.com/us/3dsmax/2012help/index.html?url=files/GUID-B7D0424E-6DCB-44D9-AD0B-85B9A1EE3F5-0.htm,topicNumber=d28e3788) (this is what Channel Info will do anyway) :
+			MapChannel:1 = BaseMaterial
+			MapChannel:2 = LightMap
 
 - Lod : You can define (optionnaly) 2 levels of detail for a static mesh, by having two meshes (one with suffix "_Lod0", one with suffix "_Lod1")
- - Lod0 hightest quality, seen when near,
- - Lod1 lowest quality.
+	- Lod0 hightest quality, seen when near,
+	- Lod1 lowest quality.
 
 ### static meshes shapes
 
-During static mesh import, **shapes** (= collision models)  are created.
-From the file `{meshname.fbx}`, a `{meshname}.shape.gbx` file is created.
-The objects within the fbx file whose name start with `_socket_`(ex : `_socket_start`) are imported as "sockets", that can be used by the items. 
-Use this when you import start or checkpoint items. (see the page [item import](importer_item.md))
+During static mesh import, **shapes** (= collision models)  are created.  
+From the file `{meshname.fbx}`, a `{meshname}.shape.gbx` file is created.  
+The objects within the fbx file whose name start with `_socket_`(ex : `_socket_start`) are imported as "sockets", that can be used by the items.  
+Use this when you import start or checkpoint items. (see the page [item import](importer_item.md))  
 
-If there are objects within in the fbx whose name starts with `_trigger_` (ex : `_trigger_A`), they will be imported as another shape file named `{meshname}Trigger.shape.gbx`.
-This allows you to define a mesh and an associated trigger with a single fbx file.
-Use this when you import checkpoint or finish items. (see the page [item import](importer_item))
-
+If there are objects within in the fbx whose name starts with `_trigger_` (ex : `_trigger_A`), they will be imported as another shape file named `{meshname}Trigger.shape.gbx`.  
+This allows you to define a mesh and an associated trigger with a single fbx file.  
+Use this when you import checkpoint or finish items. (see the page [item import](importer_item))  
 
 
 1.2 non-static meshes (dynamic & character meshes)
@@ -75,17 +73,10 @@ Use this when you import checkpoint or finish items. (see the page [item import]
 - Uvs : Dynamic mesh materials don't require lightmap uv channel for static lighting (only 1 uv channel)
 - Lod :You can define up to 3 level of details for a dynamic mesh, by having up to 3 meshes (suffix "_Lod0", "_Lod1", "_Lod2")
  
-
 - **WARNING for character meshes (used in skins)**
-    
- There are constraints on the maximum number of vertices of the     Lowest quality mesh (ie the highest Lod number) : 3500 vertexs max at this time.
-
- If your skin doesn't fit the requirements, it won't be transferred in peer to peer, and other players won't see it. 
- 
- This to avoid unoptimized and costly skins to perturb the gameplay experience of other players.
-
-
-
+	There are constraints on the maximum number of vertices of the     Lowest quality mesh (ie the highest Lod number) : 3500 vertexs max at this time.  
+	If your skin doesn't fit the requirements, it won't be transferred in peer to peer, and other players won't see it.  
+    This to avoid unoptimized and costly skins to perturb the gameplay experience of other players.  
 
 2. Meshparam.xml file structure
 --
