@@ -1,3 +1,8 @@
+---
+layout: static
+title: Character skin import help 
+description: Character skin import help 
+---
 Character skin import
 ==
 
