@@ -5,6 +5,7 @@ description: Importer help
 ---
 Importer
 =
+** WARNING : USE THE NEW IMPORTER ONLY WITH MANIAPLANET BETA 3** 
 
 The importer is a tool to generate items (static objects, dynamic objects, characters), and also to generate character or vehicle skins.
 
@@ -13,16 +14,22 @@ The source assets must be placed in sub folders of `{maniaplanet_user_dir}/Work`
 The corresponding imported files will created in sub folders of `{maniaplanet_user_dir}` (whithout `/Work`)
 
 for instance: 
-`{maniaplanet_user_dir}\Work\Skins\Models\ArenaPlayer\Susu` => `{maniaplanet_user_dir}\Skins\Models\ArenaPlayer\Susu.zip`
-`{maniaplanet_user_dir}\Work\Items\SMCommon\Pickups\Laser.Item.xml` =>`{maniaplanet_user_dir}\Items\SMCommon\Pickups\Laser.Item.gbx`
-`{maniaplanet_user_dir}\Work\Items\Storm\Dolmen\DolmenHorizontalA.Item.xml` => `{maniaplanet_user_dir}\Items\Storm\Dolmen\Laser.DolmenHorizontalA.gbx`
+`{maniaplanet_user_dir}\Work\Skins\Models\ArenaPlayer\Susu` 
+=> `{maniaplanet_user_dir}\Skins\Models\ArenaPlayer\Susu.zip`
+
+`{maniaplanet_user_dir}\Work\Items\SMCommon\Pickups\Laser.Item.xml` 
+=>`{maniaplanet_user_dir}\Items\SMCommon\Pickups\Laser.Item.gbx`
+
+`{maniaplanet_user_dir}\Work\Items\Storm\Dolmen\DolmenHorizontalA.Item.xml` 
+=> `{maniaplanet_user_dir}\Items\Storm\Dolmen\Laser.DolmenHorizontalA.gbx`
+
 and so on.
 
 Current Release
 -
-importer  : http://files.maniaplanet.com/tools/NadeoImporter_2014_04_08.zip
+importer  : (http://files.maniaplanet.com/tools/NadeoImporter_2014_04_08.zip)
 
-sample files : http://files.maniaplanet.com/tools/NadeoImporterSamples2014.zip
+sample files : (http://files.maniaplanet.com/tools/NadeoImporterSamples2014.zip)
 
 the importer must be unzipped in the `{Maniaplanet_exe_dir}` folder (the same folder that contains `ManiaPlanet.exe`, typically `c:/program files/Maniaplanet` or `c:/Program files (x86)/Maniaplanet` )
 You might neeed administrator rights unzip and to place the importer files here
@@ -31,12 +38,15 @@ the sample files mus be unzipped in the `{maniaplanet_user_dir}` foler (typicall
 
 Import an item
 -
-See the dedicated page : [item import](Importer_Item.md)
+See the dedicated page : [item import](Importer_Item)
 
 Import an character skin
 -
-See the dedicated page : [char skin import](Importer_CharSkin.md)
+See the dedicated page : [character skin import](Importer_CharSkin)
 
+Import an car skin
+-
+See the dedicated page : [car skin import](Importer_CarSkin)
 
 
 ChangeLog
@@ -70,8 +80,9 @@ ChangeLog
 
 Previous releases
 --
-http://files.maniaplanet.com/tools/NadeoImporter_2014_04_08.zip
-http://files.maniaplanet.com/tools/NadeoImporter_2013_09_17.zip
-http://files.maniaplanet.com/tools/NadeoImporter_2013_08_21.zip
-sample files : http://files.maniaplanet.com/tools/NadeoImporterSamples.zip
+- (http://files.maniaplanet.com/tools/NadeoImporter_2014_04_08.zip)
+- (http://files.maniaplanet.com/tools/NadeoImporter_2013_09_17.zip)
+- (http://files.maniaplanet.com/tools/NadeoImporter_2013_08_21.zip)
+
+sample files : (http://files.maniaplanet.com/tools/NadeoImporterSamples.zip)
 

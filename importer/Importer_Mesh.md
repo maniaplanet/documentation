@@ -1,8 +1,3 @@
----
-layout: static
-title: Mesh import help 
-description: Mesh import help 
----
 Mesh import
 ==
 
@@ -14,27 +9,32 @@ We distinguish 3 types of meshes : **static meshes**, **dynamic meshes** and **c
 The static objects use static meshes, the dynamic object use dynamic meshes, and the characters use character meshes.
 
 The fbx file to import (and its depening assets (textures)) must be placed in the correct folders
-- for item meshes : place in folder `{maniaplanet_user_dir}/Work/Items/{sub_folder_you_want}`
-- for character skin meshes : place in folder `{maniaplanet_user_dir}/Work/Skins/Models/{sub_folder_you_want}`
+- for item meshes : place in folder *{maniaplanet_user_dir}/Work/Items/{sub_folder_you_want}*
+- for character skin meshes : place in folder *{maniaplanet_user_dir}/Work/Skins/Models/{sub_folder_you_want}*
 
 To import a mesh, type the command : 
 ```
 NadeoImporter Mesh {fbxSourceFileNameRelativeToWorkFolder}
 ```
 When you import a mesh from a *.fbx* file, a corresponding *.mesh.gbx* file is produced (in the non-work folder)
-In the case of a static mesh, a *.shape.gbx* file is also created.
+**Note** : for static meshes shapes (= collision models) files are also created during import (see below 1.1)
+
+
+
 
 In order to specify how to import a fbx file, the **recommended** way is now to create a *xxx.meshparams.xml* file along the *xxx.fbx* file, instead of adding command line parameters.
 
 In the samples, you have 2 files : 
 
-`Work\Items\Samples\StaticObjects\Meshes\Block_Checkers.fbx`
+*Work\Items\Samples\StaticObjects\Meshes\Block_Checkers.fbx*
 
 and 
 
-`Work\Items\Samples\StaticObjects\Meshes\Block_Checkers.meshparams.xml`
+*Work\Items\Samples\StaticObjects\Meshes\Block_Checkers.meshparams.xml*
 
- static meshes
+1. Mesh types
+--
+ 1.1 static meshes
 ---
 - Uvs : for most of the static mesh materials, you will need 2 UV layers:
     - a layer named "Material" : base layer of the material, typically mapping your Diffuse texture)
@@ -55,8 +55,20 @@ MapChannel:2 = LightMap
  - Lod0 hightest quality, seen when near,
  - Lod1 lowest quality.
 
+### static meshes shapes
 
-non-static meshes (dynamic & character meshes)
+During static mesh import, **shapes** (= collision models)  are created.
+From the file `{meshname.fbx}`, a `{meshname}.shape.gbx` file is created.
+The objects within the fbx file whose name start with `_socket_`(ex : `_socket_start`) are imported as "sockets", that can be used by the items. 
+Use this when you import start or checkpoint items. (see the page [item import](importer_item.md))
+
+If there are objects within in the fbx whose name starts with `_trigger_` (ex : `_trigger_A`), they will be imported as another shape file named `{meshname}Trigger.shape.gbx`.
+This allows you to define a mesh and an associated trigger with a single fbx file.
+Use this when you import checkpoint or finish items. (see the page [item import](importer_item))
+
+
+
+1.2 non-static meshes (dynamic & character meshes)
 --
 - Uvs : Dynamic mesh materials don't require lightmap uv channel for static lighting (only 1 uv channel)
 - Lod :You can define up to 3 level of details for a dynamic mesh, by having up to 3 meshes (suffix "_Lod0", "_Lod1", "_Lod2")
@@ -73,9 +85,9 @@ non-static meshes (dynamic & character meshes)
 
 
 
-meshparam.xml file structure
+2. Meshparam.xml file structure
 --
-1. MeshParams 
+2.1. MeshParams 
 --
  `<MeshParams>` root node attributes :
 
@@ -90,7 +102,7 @@ meshparam.xml file structure
 - `Scale` : optional. import scale.
  ex : `<MeshParams MeshType="Static" Scale="1">`
  
-2. Materials
+2.2. Materials
 -- 
 It's now possible to define materials with more flexibility. 
 
@@ -138,7 +150,7 @@ the fbx material named "A" will be imported as an instance of the TDSN model, us
 and with the physical id `"TechGround"`
 the fbx material named "B" will be displayed as the "BaseGround" material of the storm collection
 
-3. Lights
+2.3. Lights
 --
 It's now possible to create lights  **only for static meshes.** 
 For eah light name present in the fbx file, you can define the corresponding imported light.
@@ -171,7 +183,7 @@ the light intensity varies for maximum to null from  SpotInnerAngle to SpotOuter
 - `NightOnly` : optional. tell if the light is active in night moods.
  values : `"true", "false"`
 
-4.Textures 
+2.4.Textures 
 --
   In the meshparam.xml file, you can now set the import texture parameters (as in command line)
  
@@ -181,10 +193,10 @@ the light intensity varies for maximum to null from  SpotInnerAngle to SpotOuter
  - `HqDds` : opional. `"true"` if you want to use a better - but slower - dds compressor
  
 
-5. Appendix 
+3. Appendix 
 --
-###5.1 material model list
-
+3.1 material model list
+--
 material models uses different texture layers that must follow some conventions :
 
     Diffuse   : {BaseTextureName}_D.tga	24bits, RGB (32bits binary alpha if using Opacity)
@@ -199,7 +211,7 @@ Textures size must be power of two. (2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2
 
 here is a list of material models, with their texture layers.
 
-###5.1.1 static mesh material models
+###3.1.1. static mesh material models
 
 
 - `TDSN` 
@@ -232,7 +244,7 @@ here is a list of material models, with their texture layers.
         Normal
         SelfIllum
 
-###5.1.2 dynamic mesh material models
+###3.1.2. dynamic mesh material models
 
 - `TDSNI`
 		
@@ -253,7 +265,7 @@ here is a list of material models, with their texture layers.
 
 		Energy
 
-###5.1.3 character mesh material models
+###3.1.3. character mesh material models
 
 - `TDSNEM`
 		
@@ -276,7 +288,8 @@ here is a list of material models, with their texture layers.
 		Specular
 
 
-###5.2 material physicsId list
+3.2. material physicsId list
+-
 
 - `Tech` (blue pads = powerpath)
 - `TechArmor` (regen pads)
