@@ -27,7 +27,7 @@ MediaTracker is a tool which allows to create screenshots and videos. Players ar
 A Title Pack is a pack that regroups different kinds of data together. By example you can create a Title Pack with a specific multiplayer game mode, a solo campaign, tons of custom objects for the map editor, special skins for the players, etc. Then set a price in Planets and distribute the pack to let other people play on your own creations easily.
 [More...]({{ site.url }}title/)
 
-# [Title Pack]({{ site.url }}importer/)
+# [Importer]({{ site.url }}importer/)
 
 The importer is a tool that allows you to import assets from external 3d creation software, an to create custom objects, characters and vehicles
 [More...]({{ site.url }}importer/)
