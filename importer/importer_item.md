@@ -43,18 +43,18 @@ Item.xml file structure
  `<Item>` root node attributes :
 
 - `Type` : mandatory. item type
- values : `"StaticObject","DynaObject","Character"`
- ex :`<Item Type="StaticObject" >`
-- AuthorName : optional : author name
- ex :`<Item Type="StaticObject" AuthorName="NadeoSamples">`
+	values : `"StaticObject","DynaObject","Character"`
+	ex :`<Item Type="StaticObject" >`
+- `AuthorName` : optional : author name
+	ex :`<Item Type="StaticObject" AuthorName="NadeoSamples">`
 - `Collection` : optional. collection of the item. (if one of its meshes use collection materials)
- values : `"Storm", "Canyon", "Stadium", "Valley", "SMCommon"`
+	values : `"Storm", "Canyon", "Stadium", "Valley", "SMCommon"`
 - `Archetype`: mandatory for character items. archetype of the character
  value : filename of the archetype 
  available archetypes for shootmania :
- - `"ShootMania/Items/Characters/ArenaPlayer.Item.gbx"`
- - `"ShootMania/Items/Characters/ArenaPlayerSmall.Item.gbx"`
- - `"ShootMania/Items/Characters/Minion.Item.gbx"`
+	- `"ShootMania/Items/Characters/ArenaPlayer.Item.gbx"`
+	- `"ShootMania/Items/Characters/ArenaPlayerSmall.Item.gbx"`
+	- `"ShootMania/Items/Characters/Minion.Item.gbx"`
 
  ex : `<Item Archetype="ShootMania/Items/Characters/ArenaPlayer.Item.gbx">`
  
