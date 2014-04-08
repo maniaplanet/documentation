@@ -25,6 +25,7 @@ To import an item, type the command :
 ```
 NadeoImporter Item {Item.xml_Filename_Relative_To_WorkFolder}
 ```
+
 **Note 1** For items using meshes and shapes, (static & dynamic objects), those must have been imported **before** Item import.
  see the dedicated page : [mesh import](importer_mesh) 
 
@@ -56,6 +57,7 @@ Item.xml file structure
  - `"ShootMania/Items/Characters/Minion.Item.gbx"`
 
  ex : `<Item Archetype="ShootMania/Items/Characters/ArenaPlayer.Item.gbx">`
+ 
 - `DefaultSkin`: mandatory for character items.	name of the default skin for this item.
  value : filename of the defaut skin
 - `SkinFolder` : mandatory for character items. folder where to browse skins for this item.
@@ -79,17 +81,17 @@ Shape.gbx files are automatically generated along the the mesh.gbx when you impo
 --
 
 - `<Phy>`
-    - `<MoveShape>` : the physical part of a static object conains the "moveshape" (ie : the "hard" collision shape).
-   attributes:
-        - `Type`: shape type. "mesh" for static meshes.
-        - `File`: the shape filename. ex : `File="Meshes/Checkpoint.Shape.gbx"` 
-    - `<TriggerShape>` : if your static object needs has a trigger  (for checkpoints or finishs). attributes
-        - `Type`: shape type. "mesh" for static meshes
+	- `<MoveShape>` : the physical part of a static object conains the "moveshape" (ie : the "hard" collision shape).
+	attributes:
+		- `Type`: shape type. "mesh" for static meshes.
+		- `File`: the shape filename. ex : `File="Meshes/Checkpoint.Shape.gbx"` 
+	- `<TriggerShape>` : if your static object needs has a trigger  (for checkpoints or finishs). attributes
+		- `Type`: shape type. "mesh" for static meshes
 		- `File`: the shape filename. ex : `File="Meshes/CheckpointTrigger.Shape.gbx" 
 - `<Vis>`
-    - `<Mesh>` : the displayed mesh. attributes :
-        - `File`: the mesh filename. ex : `File="Meshes/Checkpoint.Mesh.gbx"`
-        **Warning** : the mesh have been imported as a **static mesh**
+	- `<Mesh>` : the displayed mesh. attributes :
+		- `File`: the mesh filename. ex : `File="Meshes/Checkpoint.Mesh.gbx"`
+		**Warning** : the mesh have been imported as a **static mesh**
 
 - `<Waypoint>`: use this node for defining start, checkpoints, & finishs. attributes :
   `Type` : values : `"Start", "Finish", "Checkpoint", "StartFinish"`
@@ -97,7 +99,7 @@ Shape.gbx files are automatically generated along the the mesh.gbx when you impo
  (a "socket" is a named location)
 
 recap example for static object :
-```
+```xml
 <Item Type="StaticObject" Collection="Common" AuthorName="NadeoSamples">
 	<Waypoint Type="Checkpoint"/>
 	<Phy>
@@ -114,33 +116,33 @@ recap example for static object :
 --
 
 - `<Phy>`
-    - `<DynaPointModel>` : this tag allow the object to move according to the "point dynamics" (a ball not rolling). attributes :
-        - `Center` : relative center of the dynamic point
-        - `Radius` : fake ball radius in meters
-        - `Restitution` : restitution coef, between 0 and 1
-        - `Friction` : friction coef, between 0 and 1
-        - `GravityCoef` : coef to make objects fall faster or slower
+	- `<DynaPointModel>` : this tag allow the object to move according to the "point dynamics" (a ball not rolling). attributes :
+		- `Center` : relative center of the dynamic point
+		- `Radius` : fake ball radius in meters
+		- `Restitution` : restitution coef, between 0 and 1
+		- `Friction` : friction coef, between 0 and 1
+		- `GravityCoef` : coef to make objects fall faster or slower
 
-    - `<TriggerShape>` : the shape (currently AABB only) that will be used for object interaction. when a player touches this box, a event will be sent to the script.
-        - `Type` : currently only AABB
-        - `Min` : min coord of AABB (in case of AABB)
-        - `Max` : max coord of AABB (in case of AABB)
+	- `<TriggerShape>` : the shape (currently AABB only) that will be used for object interaction. when a player touches this box, a event will be sent to the script.
+		- `Type` : currently only AABB
+		- `Min` : min coord of AABB (in case of AABB)
+		- `Max` : max coord of AABB (in case of AABB)
 
 - `<Vis>`
-    - `<Mesh>` : the displayed mesh. attributes :
-        - `File`: the mesh filename. ex : `<Mesh File="Meshes/SampleArmor.Mesh.gbx"`
+	- `<Mesh>` : the displayed mesh. attributes :
+		- `File`: the mesh filename. ex : `<Mesh File="Meshes/SampleArmor.Mesh.gbx"`
         **Warning** : the mesh have been imported as a **dynamic mesh**
-    - `<LightBallSimple>` : a simple light following the dynamic object. attributes :
-        - `Radius` : radius in meters
-        - `sRgb` : color in sRgb
-        - `Pos` : relative position of the light, vector in meters
-    - `<LocAnimSimple>` : simple rotation+translation animation (used for pickups). attributes
-        - `RotPeriod` rotation period in milliseconds
-        - `TransPeriod`  translation period milliseconds
-        - `TransY` translation distance in meters
+	- `<LightBallSimple>` : a simple light following the dynamic object. attributes :
+		- `Radius` : radius in meters
+		- `sRgb` : color in sRgb
+		- `Pos` : relative position of the light, vector in meters
+	- `<LocAnimSimple>` : simple rotation+translation animation (used for pickups). attributes
+		- `RotPeriod` rotation period in milliseconds
+		- `TransPeriod`  translation period milliseconds
+		- `TransY` translation distance in meters
 
 recap example for dynamic object :
-```
+```xms
 <Item Type="DynaObject" Collection="SMCommon">
    <Phy>
       <TriggerShape Type="AABB" min="-0.4 0 -0.4" max="0.4 0.8 0.4"/>
@@ -157,14 +159,14 @@ recap example for dynamic object :
 a character inherits the physics from its archetype. however, you can tune some parameters:
 
 - `<Phy>`
-    - `<CharPhyCustom>` : optional customisation of the inherited character physics
-        - `Radius` : radius of the character
-        - `EyesHeight` : height of the eyes of the character (ie : where the camera is placed in first person, and also where the bullets are sent from)
-        - `SpeedCoef` : the speed coef from the archetype
+	- `<CharPhyCustom>` : optional customisation of the inherited character physics
+		- `Radius` : radius of the character
+		- `EyesHeight` : height of the eyes of the character (ie : where the camera is placed in first person, and also where the bullets are sent from)
+		- `SpeedCoef` : the speed coef from the archetype
 
 there is no `<vis>` node for characters. the display is defined by the DefaultSkin attribute of the `<Item>` node.
 recap example for character :
-```
+```xml
 <Item Type="Character" Archetype="ShootMania/Items/Characters/ArenaPlayer.Item.gbx" DefaultSkin="Skins/Models/StormManBig/A.zip" SkinFolder="Models/StormManBig" Collection="SMCommon" AuthorName="NadeoSamples">
 	<Phy>
 		<CharPhyCustom Radius="1.2" EyesHeight="4.8" SpeedCoef="3"/>
@@ -177,7 +179,7 @@ recap example for character :
 in order to facilitate the item placement in the editor, you can define parameters
 
 - `<Pivots>` : pivot points (instead of the origin of the object)
-    ```
+	```xml
 <Pivots>
 	<Pivot Pos="0 0 0"/>
 	<Pivot Pos="0 0 -1.5"/>
