@@ -13,29 +13,26 @@ Importer has been tested with files exported from Blender and 3dsMax (with Fbx 2
 We distinguish 3 types of meshes : **static meshes**, **dynamic meshes** and **characters meshes**  
 The static objects use static meshes, the dynamic object use dynamic meshes, and the characters use character meshes.  
 
-The fbx file to import (and its depening assets (textures)) must be placed in the correct folders  
+The fbx file to import (and its depening assets (textures)) must be placed in the correct folders
+
 - for item meshes : place in folder *{maniaplanet_user_dir}/Work/Items/{sub_folder_you_want}*
 - for character skin meshes : place in folder *{maniaplanet_user_dir}/Work/Skins/Models/{sub_folder_you_want}*
 
 To import a mesh, type the command : 
+
 ```
 NadeoImporter Mesh {fbxSourceFileNameRelativeToWorkFolder}
 ```
-When you import a mesh from a *.fbx* file, a corresponding *.mesh.gbx* file is produced (in the non-work folder)
+
+When you import a mesh from a *.fbx* file, a corresponding *.mesh.gbx* file is produced (in the non-work folder)  
 **Note** : for static meshes shapes (= collision models) files are also created during import (see below 1.1)
-
-
-
 
 In order to specify how to import a fbx file, the **recommended** way is now to create a *xxx.meshparams.xml* file along the *xxx.fbx* file, instead of adding command line parameters.
 
-In the samples, you have 2 files : 
-
+In the samples, you have 2 files :  
 *Work\Items\Samples\StaticObjects\Meshes\Block_Checkers.fbx*
-
-and 
-
-*Work\Items\Samples\StaticObjects\Meshes\Block_Checkers.meshparams.xml*
+and  
+*Work\Items\Samples\StaticObjects\Meshes\Block_Checkers.meshparams.xml*  
 
 1. Mesh types
 --
