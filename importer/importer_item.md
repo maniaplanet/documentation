@@ -175,7 +175,9 @@ there is no `<vis>` node for characters. the display is defined by the DefaultSk
 recap example for character :
 
 ```xml
-<Item Type="Character" Archetype="ShootMania/Items/Characters/ArenaPlayer.Item.gbx" DefaultSkin="Skins/Models/StormManBig/A.zip" SkinFolder="Models/StormManBig" Collection="SMCommon" AuthorName="NadeoSamples">
+<Item Type="Character" Archetype="ShootMania/Items/Characters/ArenaPlayer.Item.gbx" 
+DefaultSkin="Skins/Models/StormManBig/A.zip" SkinFolder="Models/StormManBig" 
+Collection="SMCommon" AuthorName="NadeoSamples">
 	<Phy>
 		<CharPhyCustom Radius="1.2" EyesHeight="4.8" SpeedCoef="3"/>
 	</Phy>
