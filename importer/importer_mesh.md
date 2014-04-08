@@ -6,12 +6,12 @@ description: Mesh import help
 Mesh import
 ==
 
-You can import meshes from the fbx file format (**maximum version 2014.1**)
-Importer has been tested with files exported from Blender and 3dsMax (with Fbx 2012.2 exporter, available at http://usa.autodesk.com/fbx/)
+You can import meshes from the fbx file format (**maximum version 2014.1**)  
+Importer has been tested with files exported from Blender and 3dsMax (with Fbx 2012.2 exporter, available at http://usa.autodesk.com/fbx/)  
 3d file must contain meshes with materials.
 
-We distinguish 3 types of meshes : **static meshes**, **dynamic meshes** and **characters meshes**
-The static objects use static meshes, the dynamic object use dynamic meshes, and the characters use character meshes.
+We distinguish 3 types of meshes : **static meshes**, **dynamic meshes** and **characters meshes**  
+The static objects use static meshes, the dynamic object use dynamic meshes, and the characters use character meshes.  
 
 The fbx file to import (and its depening assets (textures)) must be placed in the correct folders
 - for item meshes : place in folder *{maniaplanet_user_dir}/Work/Items/{sub_folder_you_want}*
