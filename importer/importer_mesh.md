@@ -72,28 +72,28 @@ Use this when you import checkpoint or finish items. (see the page [item import]
 --
 - Uvs : Dynamic mesh materials don't require lightmap uv channel for static lighting (only 1 uv channel)
 - Lod :You can define up to 3 level of details for a dynamic mesh, by having up to 3 meshes (suffix "_Lod0", "_Lod1", "_Lod2")
- 
+
 - **WARNING for character meshes (used in skins)**
 	There are constraints on the maximum number of vertices of the     Lowest quality mesh (ie the highest Lod number) : 3500 vertexs max at this time.  
 	If your skin doesn't fit the requirements, it won't be transferred in peer to peer, and other players won't see it.  
-    This to avoid unoptimized and costly skins to perturb the gameplay experience of other players.  
+	This to avoid unoptimized and costly skins to perturb the gameplay experience of other players.  
 
 2. Meshparam.xml file structure
 --
 2.1. MeshParams 
 --
- `<MeshParams>` root node attributes :
+`<MeshParams>` root node attributes :
 
-- `MeshType` : mandatory. mesh type.
- values : `"Static", "Dynamic"`
- ex : `<MeshParams MeshType="Static">`
+- `MeshType` : mandatory. mesh type.  
+	values : `"Static", "Dynamic"`  
+	ex : `<MeshParams MeshType="Static">`
 
-- `Collection` : optional. collection of the mesh (if it uses collection materials)
- values : `"Storm", "Canyon", "Stadium", "Valley"`
- ex : `<MeshParams MeshType="Static" Collection="Storm">`
+- `Collection` : optional. collection of the mesh (if it uses collection materials)  
+	values : `"Storm", "Canyon", "Stadium", "Valley"`  
+	ex : `<MeshParams MeshType="Static" Collection="Storm">`  
 
-- `Scale` : optional. import scale.
- ex : `<MeshParams MeshType="Static" Scale="1">`
+- `Scale` : optional. import scale.  
+	ex : `<MeshParams MeshType="Static" Scale="1">`
  
 2.2. Materials
 -- 
@@ -109,25 +109,25 @@ the `<Materials>` node contains an array of `<Material>` nodes.
 `<Material>` attributes :
 
 - `Name` : mandatory. the name the fbx material
-- `Model` : mandatory (except if you `"Link"` to an existing material. see below). name of the maniaplanet shading model
- values : (see appendix for more details about the material models)
- for static meshes (ie when MeshType = `"Static"`) : `"TDSN", "TDOSN","TDSNE", "TDSNI", "TDSNI_Night"`
- for dynamic meshes (ie when MeshType = `"Dynamic"`) : `"TDSNI", "TI", "TDSNE", "TE"`
- for character meshes : `"TDSNEM", "TE", "TDOSN", "TDOS"`
+- `Model` : mandatory (except if you `"Link"` to an existing material. see below). name of the maniaplanet shading model  
+	values : (see appendix for more details about the material models)  
+	for static meshes (ie when MeshType = `"Static"`) : `"TDSN", "TDOSN","TDSNE", "TDSNI", "TDSNI_Night"`  
+	for dynamic meshes (ie when MeshType = `"Dynamic"`) : `"TDSNI", "TI", "TDSNE", "TE"`  
+	for character meshes : `"TDSNEM", "TE", "TDOSN", "TDOS"`  
 
-- `BaseTexture` : mandatory in `Model` mode. base texture file name to use for the materials.
- instead of specifying each material layer texture, you just define the base texture name, and from the material model, the importer adds suffixes (ex: _D.tga, _S.tga, _N.tga etc..) and tries to find the files on the disk.
- value : the path of the texture. either relative from the MeshParam.xml folder ( ex : `"../Textures/Checkers"`, or `"Textures/Checkers"`) or absolute ( absolute from the "Work" folder. ex : `"/Items/Samples/StaticObjects/Meshes/Textures/Checkers"`)
+- `BaseTexture` : mandatory in `Model` mode. base texture file name to use for the materials.  
+	instead of specifying each material layer texture, you just define the base texture name, and from the material model, the importer adds suffixes (ex: _D.tga, _S.tga, _N.tga etc..) and tries to find the files on the disk.  
+	value : the path of the texture. either relative from the MeshParam.xml folder ( ex : `"../Textures/Checkers"`, or `"Textures/Checkers"`) or absolute ( absolute from the "Work" folder. ex : `"/Items/Samples/StaticObjects/Meshes/Textures/Checkers"`)  
 
-- `PhysicsId` : mandatory in `Model` mode. specify the physical type of the material.
- used in the game for gameplay (how fast we can go, in shootmania : if we can jump, if the rockets rebound, etc), and also used to decide wich impact effect to display.
- 
- values : see below for the list.
+- `PhysicsId` : mandatory in `Model` mode. specify the physical type of the material.  
+	used in the game for gameplay (how fast we can go, in shootmania : if we can jump, if the rockets rebound, etc), and also used to decide wich impact effect to display.  
+	values : see below for the list.
 
-- `Link` : mandatory if you want to use a library material. (== a predefined material of a collection : storm, canyon, etc)
- in that case, the value is the name of the library material.
- Please note that this material is to use in conjunction with the "Collection" attribute of the `<MeshParams>` node which define the collection.
-  **Note** : the list of library materials can be found in the `NadeoImporterMaterialLib.txt` (that comes along `NadeoImporter.exe`)
+- `Link` : mandatory if you want to use a library material. (== a predefined material of a collection : storm, canyon, etc)  
+	in that case, the value is the name of the library material.  
+	Please note that this material is to use in conjunction with the "Collection" attribute of the `<MeshParams>` node which define the collection.  
+  
+	**Note** : the list of library materials can be found in the `NadeoImporterMaterialLib.txt` (that comes along `NadeoImporter.exe`)
 
 ####recap example :
 
@@ -138,53 +138,52 @@ the `<Materials>` node contains an array of `<Material>` nodes.
 </Materials>
 ```
 
-the fbx material named "A" will be imported as an instance of the TDSN model, using "../Textures/Checkers" for the base texture name,
-( so the importer will look for the files : *../Textures/Checkers_D.tga*, *../Textures/Checkers_S.tga* and *../Textures/Checkers_N.tga*),
-and with the physical id `"TechGround"`
-the fbx material named "B" will be displayed as the "BaseGround" material of the storm collection
+the fbx material named "A" will be imported as an instance of the TDSN model, using "../Textures/Checkers" for the base texture name,  
+( so the importer will look for the files : *../Textures/Checkers_D.tga*, *../Textures/Checkers_S.tga* and *../Textures/Checkers_N.tga*),  
+and with the physical id `"TechGround"`  
+the fbx material named "B" will be displayed as the "BaseGround" material of the storm collection  
 
 2.3. Lights
 --
-It's now possible to create lights  **only for static meshes.** 
-For eah light name present in the fbx file, you can define the corresponding imported light.
+It's now possible to create lights  **only for static meshes.**  
+For eah light name present in the fbx file, you can define the corresponding imported light.  
 
-You can define the light type and the light parameters
+You can define the light type and the light parameters  
 
-the `<Lights>` node contains an array of `<Light>` nodes.
+the `<Lights>` node contains an array of `<Light>` nodes.  
 
 `<Light>` attributes
 
 - `Name` : mandatory. name the fbx light
 - `Type` : mandatory. the type the light
- values : `"Point", "Spot"`
+	values : `"Point", "Spot"`
 - `ColorRgb` :	optional. color of the light (sRGB space)
- value : 6 chars color in r, g, b order.
- ex : `"00ff00"` for pure green
+	value : 6 chars color in r, g, b order.
+	ex : `"00ff00"` for pure green
 
 - `Intensity` : optional. intensity of the light, (no real unit). typical value are 1
 - `Distance` : optional. light influence distance in meters.
- - keep the distance as low as possible in order to keep the lightmap calculus time low. 
- - Many lights with long distance would cause long lightmap calculus time.
- - Prefer `"spot"` lights rather than `"point"` lights for long distances.
+	- keep the distance as low as possible in order to keep the lightmap calculus time low. 
+	- Many lights with long distance would cause long lightmap calculus time.
+	- Prefer `"spot"` lights rather than `"point"` lights for long distances.
 - `PointEmissionRadius` : optional. for point lights only, makes the light come from  ball of radius PointEmissionRadius meters instead of a single point.
 - `PointEmissionLength`	: otpional. for point lights only, makes the light come form a segment of PointEmissionLength meters (along Z axis) instead of a single point
 - `SpotInnerAngle` : optional. for spot lights only. inner angle of the spot in degrees. (angle without attenuation)
 - `SpotOuterAngle` : optional. for spot lights only. outer angle of the spot in degrees. (angle at full attenuation)
-the light intensity varies for maximum to null from  SpotInnerAngle to SpotOuterAngle
+	the light intensity varies for maximum to null from  SpotInnerAngle to SpotOuterAngle
 - `SpotEmissionSizeX` : optional. for spot lights only. size in meters of the emission rectangle along X axis
 - `SpotEmissionSizeY` : optional. for spot lights only. size in meters of the emission rectangle along Y axis
 - `NightOnly` : optional. tell if the light is active in night moods.
- values : `"true", "false"`
+	values : `"true", "false"`
 
 2.4.Textures 
 --
-  In the meshparam.xml file, you can now set the import texture parameters (as in command line)
+In the meshparam.xml file, you can now set the import texture parameters (as in command line)
  
- `<Textures>` attributes :
- 
- - `MaxSize` : optional. in pixels, the max size of the max (width or height) of the imported texture
- - `HqDds` : opional. `"true"` if you want to use a better - but slower - dds compressor
- 
+`<Textures>` attributes :
+
+- `MaxSize` : optional. in pixels, the max size of the max (width or height) of the imported texture
+- `HqDds` : opional. `"true"` if you want to use a better - but slower - dds compressor
 
 3. Appendix 
 --
@@ -199,7 +198,7 @@ material models uses different texture layers that must follow some conventions 
     Energy    : {BaseTextureName}_E.tga	24bits, greyscale (0=> no energy 1=> full energy) (colorized by gameplay)
     TeamMask  : {BaseTextureName}_M.tga	24bits, binary mask (black => not colorizable, white=>colorizable)
 
-The importer converts those textures into the right .dds format.
+The importer converts those textures into the right .dds format.  
 Textures size must be power of two. (2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, (8192 < not supported by very old graphic cards)
 
 here is a list of material models, with their texture layers.
