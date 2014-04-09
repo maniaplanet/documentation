@@ -39,7 +39,7 @@ and
  1.1 static meshes
 ---
 - Uvs : for most of the static mesh materials, you will need 2 UV layers:
-	- a layer named "Material" : base layer of the material, typically mapping your Diffuse texture)
+	- a layer named "BaseMaterial" : base layer of the material, typically mapping your Diffuse texture)
 	- a layer named "Lightmap" : Mandatory, needed for lightmap calculus in editor.  
 		**WARNING 1**: for this layer, the UV must not overlap, otherwise it will cause invalid lightmaps !  
 		**WARNING 2**: if you have lods, the Lod0 and Lod1 for a mesh must "share" the same UVs in the lightmap (we write lightmap only for Lod0, Lod1 will just use it)  
@@ -48,9 +48,9 @@ and
 	- in blender, it's easy to name your layers
 	- in 3dsMax (wich is classicaly index-based for layers),
 		- the ChannelInfo utility to name your layers (comes with 3dsmax , available in panel Utility->More->Channel info)
-		- or add to the [User Defined Property](http://download.autodesk.com/us/3dsmax/2012help/index.html?url=files/GUID-B7D0424E-6DCB-44D9-AD0B-85B9A1EE3F5-0.htm,topicNumber=d28e3788) (this is what Channel Info will do anyway) :
-			MapChannel:1 = BaseMaterial
-			MapChannel:2 = LightMap
+		- or add to the [User Defined Property](http://download.autodesk.com/us/3dsmax/2012help/index.html?url=files/GUID-B7D0424E-6DCB-44D9-AD0B-85B9A1EE3F5-0.htm,topicNumber=d28e3788) (this is what Channel Info will do anyway) :  
+			- MapChannel:1 = BaseMaterial  
+			- MapChannel:2 = LightMap
 
 - Lod : You can define (optionnaly) 2 levels of detail for a static mesh, by having two meshes (one with suffix "_Lod0", one with suffix "_Lod1")
 	- Lod0 hightest quality, seen when near,
@@ -157,7 +157,7 @@ the `<Lights>` node contains an array of `<Light>` nodes.
 - `Name` : mandatory. name the fbx light
 - `Type` : mandatory. the type the light
 	values : `"Point", "Spot"`
-- `ColorRgb` :	optional. color of the light (sRGB space)
+- `sRgb` :	optional. color of the light (sRGB space)
 	value : 6 chars color in r, g, b order.
 	ex : `"00ff00"` for pure green
 
@@ -327,3 +327,5 @@ here is a list of material models, with their texture layers.
 - `TurboRoulette`
 
 
+ChangeLog :
+- 09-04-2014 : light color : sRGB instead of "color", layer name "Material"=>"BaseMaterial"
