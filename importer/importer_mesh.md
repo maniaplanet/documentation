@@ -327,5 +327,5 @@ here is a list of material models, with their texture layers.
 - `TurboRoulette`
 
 
-ChangeLog :
+ChangeLog :  
 - 09-04-2014 : light color : sRGB instead of "color", layer name "Material"=>"BaseMaterial"
