@@ -157,7 +157,7 @@ the `<Lights>` node contains an array of `<Light>` nodes.
 - `Name` : mandatory. name the fbx light
 - `Type` : mandatory. the type the light
 	values : `"Point", "Spot"`
-- `sRgb` :	optional. color of the light (sRGB space)
+- `sRGB` :	optional. color of the light (sRGB space)
 	value : 6 chars color in r, g, b order.
 	ex : `"00ff00"` for pure green
 

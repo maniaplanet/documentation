@@ -6,6 +6,7 @@ description: Importer help
 Importer
 =
 ** WARNING : USE THE NEW IMPORTER ONLY WITH MANIAPLANET BETA 3** 
+** SOME ISSUES (PROPER LIGHTS DISPLAY) ARE CLIENT ISSUES (NOT IMPORTER ISSUES) AND WILL BE IN NEXT CLIENT UPDATE (NOT FIXED IN BUILD 2014_04_02) **
 
 The importer is a tool to generate items (static objects, dynamic objects, characters), and also to generate character or vehicle skins.
 
@@ -21,9 +22,10 @@ and so on.
 
 Current Release
 -
-importer : http://files.maniaplanet.com/tools/NadeoImporter_2014_03_27.zip
+importer : http://files.maniaplanet.com/tools/NadeoImporter_2014_04_09.zip
 
-sample files : http://files.maniaplanet.com/tools/NadeoImporterSamples2014.zip
+sample files : http://files.maniaplanet.com/tools/NadeoImporterSamples_2014_04_09.zip
+
 
 the importer must be unzipped in the `{Maniaplanet_exe_dir}` folder (the same folder that contains `ManiaPlanet.exe`, typically `c:/program files/Maniaplanet` or `c:/Program files (x86)/Maniaplanet` )  
 You might neeed administrator rights unzip and to place the importer files here
@@ -77,11 +79,16 @@ ChangeLog
 2012-09-07	- initial revision
 ```
 
-Previous releases
+All releases
 --
-- http://files.maniaplanet.com/tools/NadeoImporter_2014_04_08.zip
+- http://files.maniaplanet.com/tools/NadeoImporter_2014_04_09.zip
+- http://files.maniaplanet.com/tools/NadeoImporter_2014_03_27.zip
 - http://files.maniaplanet.com/tools/NadeoImporter_2013_09_17.zip
 - http://files.maniaplanet.com/tools/NadeoImporter_2013_08_21.zip
 
-sample files : http://files.maniaplanet.com/tools/NadeoImporterSamples.zip
+sample files : 
+--
+- http://files.maniaplanet.com/tools/NadeoImporterSamples_2014_04_09.zip
+- http://files.maniaplanet.com/tools/NadeoImporterSamples2014.zip
+- http://files.maniaplanet.com/tools/NadeoImporterSamples.zip
 
