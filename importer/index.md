@@ -44,7 +44,7 @@ Import a car skin
 -
 See the dedicated page : [car skin import](importer_carskin)
 
-Import a car mesh
+Import a mesh
 -
 See the dedicated page : [mesh import](importer_mesh)  
 Note : A mesh itself isnt usable in Maniaplanet, but is a component of items and char skins
