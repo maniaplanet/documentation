@@ -34,7 +34,7 @@ description: FAQ
 <th>Controller name</th><th>Author</th><th>TM</th><th>SM</th><th>Forum</th><th>Website</th><th>Plugins repository</th>
 </tr>
 <tr>
-<td><a href="http://maniaplanet.github.io/documentation/dedicated-server/manialive.html">ManiaLive</a></td><td>NadeoLive</td><td><img src="../img/yes.png" /></td><td><img src="../img/yes.png" /></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=463">Forum</a></td><td><a href="http://www.manialive.com/">ManiaLive.com</a></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=47">Forum</a></td>
+<td><a href="http://maniaplanet.github.io/documentation/dedicated-server/manialive">ManiaLive</a></td><td>NadeoLive</td><td><img src="../img/yes.png" /></td><td><img src="../img/yes.png" /></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=463">Forum</a></td><td><a href="http://www.manialive.com/">ManiaLive.com</a></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=47">Forum</a></td>
 </tr>
 <tr>
 <td>FoxControl</td><td> matrix142, jensoo7, Libero, cyrilw</td><td><img src="../img/yes.png" /></td><td><img src="../img/yes.png" /></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=328">Forum</a></td><td> </td><td>All plugins are installed by default</td>

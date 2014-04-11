@@ -6,5 +6,5 @@ description: MediaTracker tips
 
 # Tips
 
-* [Video batch](video-batch.html)
+* [Video batch](video-batch)
 

@@ -35,7 +35,7 @@ ManiaPlanet Competition Manager requires a powerful dedicated server because it 
 
 ### Preparation
 
-* [Create a WebService username/password](https://player.maniaplanet.com/webservices). Do not forget to create the associated [ManiaConnect](maniaconnect.html) application. 
+* [Create a WebService username/password](https://player.maniaplanet.com/webservices). Do not forget to create the associated [ManiaConnect](maniaconnect) application. 
 * Create a manialink URL which points to tour future MPCM installation. It could be `http://example.com/competitions/` or else. 
 * Prepare your MySQL settings (username/password).
 
@@ -43,7 +43,7 @@ ManiaPlanet Competition Manager requires a powerful dedicated server because it 
 
 #### Debian / Ubuntu 
 
-Using our [APT repository](apt.html), install the package `maniaplanet-competition-manager`.
+Using our [APT repository](apt), install the package `maniaplanet-competition-manager`.
 
 Once the package is installed, you have to run the setup script: `$ php /var/lib/maniaplane-competition-manager/setup.php`
 
@@ -52,7 +52,7 @@ When asked, enter the folowing settings:
 * Dedicated path: `/opt/maniaplanet-server/`
 * ManiaLive path: `/opt/manialive/`
 
-An [Apache alias](https://httpd.apache.org/docs/2.4/mod/mod_alias.html) has been created by the package. You shoud be able to access <http://yourdomain.com/maniaplanet-competition-manager/> in your browser. 
+An [Apache alias](https://httpd.apache.org/docs/2.4/mod/mod_alias) has been created by the package. You shoud be able to access <http://yourdomain.com/maniaplanet-competition-manager/> in your browser. 
 
 #### Other
 

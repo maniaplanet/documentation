@@ -28,7 +28,7 @@ On the player page: <http://player.maniaplanet.com/account/authorizations>
 
 ## Get a ManiaConnect access
 
-First you obviously need to have access to the [Maniaplanet Web Services API](ws.html).
+First you obviously need to have access to the [Maniaplanet Web Services API](ws).
 
 Then you need to create a ManiaConnect application. Just go, on the [Maniaplanet Developers Website](https://player.maniaplanet.com/webservices), then to the page to manage your API user and create a ManiaConnect application. It should be pretty straightforward. 
 
@@ -46,7 +46,7 @@ teams 				| Access your teams
 titles 				| Access your titles (installed and owned)
 favorite_servers 	| Access your favorite servers 
 medals				| Access your solo medal count
-offline				| Usable with [ManiaConnect](maniaconnect.html), gives you access to a refresh token
+offline				| Usable with [ManiaConnect](maniaconnect), gives you access to a refresh token
 
 ## Help
 

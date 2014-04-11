@@ -7,7 +7,7 @@ description: How to run a ManiaPlanet lobby
 Lobby
 =====
 
-To run a lobby, you can use our [ManiaLive plugin](start-a-combo-lobby.html) which bundle all the functionnalities you need. 
+To run a lobby, you can use our [ManiaLive plugin](start-a-combo-lobby) which bundle all the functionnalities you need. 
 
 ## Ladder
 
