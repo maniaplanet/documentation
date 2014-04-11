@@ -7,7 +7,8 @@ layout: default
 		<h3>Navigation</h3>
 		<ul>
 		{% assign currentPathArray = page.url | split:"/" %}
-		{% if (page.url == "index.html") %}
+		{% assign currentFile = currentPathArray | last %}
+		{% if (currentFile == "index.html") %}
 			<li class="active"> 
 		{% else %}
 			<li>
