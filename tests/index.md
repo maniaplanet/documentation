@@ -10,7 +10,7 @@ description: Nothing good here
 {% assign pPathArray = p.url | split:"/" %}
 {% if (currentPathArray[0] == pPathArray[0]) %}
 	<li> 
-		{{ p.title }} :: {{ p.description }} :: {{ currentPathArray[0] }} // {{ pPathArray[0] }}
+		{{ p.title }} :: {{ p.description }} :: {{ currentPathArray[1] }} // {{ pPathArray[0] }}
 	</li>
 {% endif %}
 {% endfor %} <!-- page -->
