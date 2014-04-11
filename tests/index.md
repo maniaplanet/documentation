@@ -8,9 +8,9 @@ description: Nothing good here
 {% assign currentPathArray = page.url | split:"/" %}
 {% for p in site.pages %}
 {% assign pPathArray = p.url | split:"/" %}
-{% if (currentPathArray[0] == pPathArray[0]) %}
+{% if (currentPathArray[1] == pPathArray[1]) %}
 	<li> 
-		{{ p.title }} :: {{ p.description }} :: {{ currentPathArray[1] }} // {{ pPathArray[0] }}
+		{{ p.title }} :: {{ p.description }} 
 	</li>
 {% endif %}
 {% endfor %} <!-- page -->
