@@ -3,7 +3,20 @@ layout: default
 ---
 <article>
   <div class="content">
-    <header><a href="{{ site.url }}{{ page.url }}"><h2>{{ page.title }}</h2></a></header>
+    <header>
+		<a href="{{ site.url }}{{ page.url }}"><h2>{{ page.title }}</h2></a>
+		<ul>
+		{% assign currentPathArray = page.url | split:"/" %}
+		{% for p in site.pages %}
+		{% assign pPathArray = p.url | split:"/" %}
+		{% if (currentPathArray[1] == pPathArray[1]) %}
+			<li> 
+				<a href="{{ site.url }}{{ p.url }}" title="{{ p.description }}">{{ p.title }}</a>
+			</li>
+		{% endif %}
+		{% endfor %} <!-- page -->
+		</ul>
+	</header>
     <section>
       {{ content }}
     </section>
