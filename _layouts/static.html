@@ -7,7 +7,11 @@ layout: default
 		<h3>Navigation</h3>
 		<ul>
 		{% assign currentPathArray = page.url | split:"/" %}
-		<li>
+		{% if (page.url == "index.html") %}
+			<li class="active"> 
+		{% else %}
+			<li>
+		{% endif %}
 			<a href="index.html">Index</a>
 		</li>
 		{% for p in site.pages %}
