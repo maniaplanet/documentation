@@ -1,6 +1,6 @@
 ---
 layout: static
-title: Command line options of the dedicated server
+title: Command line options
 description: FAQ
 ---
 
