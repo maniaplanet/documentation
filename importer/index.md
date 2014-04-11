@@ -34,19 +34,19 @@ the sample files mus be unzipped in the `{maniaplanet_user_dir}` foler (typicall
 
 Import an item
 -
-See the dedicated page : [item import](importer_item)
+See the dedicated page: [item import](importer_item.html)
 
 Import an character skin
 -
-See the dedicated page : [character skin import](importer_charskin)
+See the dedicated page: [character skin import](importer_charskin.html)
 
 Import a car skin
 -
-See the dedicated page : [car skin import](importer_carskin)
+See the dedicated page: [car skin import](importer_carskin.html)
 
 Import a mesh
 -
-See the dedicated page : [mesh import](importer_mesh)  
+See the dedicated page: [mesh import](importer_mesh.html)  
 Note : A mesh itself isnt usable in Maniaplanet, but is a component of items and char skins
 
 
