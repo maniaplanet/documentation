@@ -8,5 +8,5 @@ description: Nothing good here
 {% for page in site.pages %}
 <li> {{ page.page }} :: {{ page.categories | join:',' }}
 </li>
-{% endfor % } <!-- page -->
+{% endfor %} <!-- page -->
 </ul>
