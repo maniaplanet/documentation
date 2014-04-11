@@ -11,7 +11,8 @@ layout: default
 			{% assign currentPathArray = page.url | split:"/" %}
 			{% for p in site.pages %}
 			{% assign pPathArray = p.url | split:"/" %}
-			{% if (currentPathArray[1] == pPathArray[1] && pPathArray | last == 'index.html') %}
+			{% assign pFile = pPathArray | last %}
+			{% if (currentPathArray[1] == pPathArray[1] && pFile != 'index.html') %}
 				<li> 
 					<a href="{{ site.url }}{{ p.url }}" title="{{ p.description }}">{{ p.title }}</a>
 				</li>
