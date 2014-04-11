@@ -6,9 +6,7 @@ description: Nothing good here
 
 <ul>
 {% for p in site.pages %}
-{% if p.path == page.path %}
-<li> {{ p.title }} :: {{ p.description }}
+<li> {{ p.title }} :: {{ p.description }} :: {{ p.path | join:',' }}
 </li>
-{% endif %}
 {% endfor %} <!-- page -->
 </ul>
