@@ -23,27 +23,6 @@ Using Debian/Ubuntu? You can use our [APT repository](../tools/apt.html).
 To start an Internet server, you will need a **dedicated login** (which is different from your ManiaPlanet login). Dedicated server can be run in Lan-mode without a dedicated login defined. The **dedicated login** can be created at your [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers) and you can have multiple dedicated server accounts for each ManiaPlanet title. Just fill in the desired login-name and choose password and server location where you want it to bind. After you create the server, it binds to your maniaplanet account and you can edit the details and reset the password if needed.
 
 The newly created dedicated servers will be at the lowest ladder rank which is 0-50k, this means the players visiting your server will gain ladder point as long as they have no more than 50 000 ladder points. To raise the ladder rank of your server, visit the [advanced ladder server page](https://player.maniaplanet.com/advanced/ladder-servers) section in your ManiaPlanet player page.
-<table>
-  <tr>
-  <th>Description</th><th>Limits</th><th>Deposit</th>
-  </tr>
-  <tr>
-  <td>Amateurs place</td><td>0-50k</td><td>10000P</td>
-  </tr>
-  <tr>
-  <td>Serious challengers</td><td>0-70k</td><td>20000P</td>
-  </tr>
-  <tr>
-  <td>Competitive racers</td><td>0-80k</td><td>40000P</td>
-  </tr>
-  <tr>
-  <td>Pro racing</td><td>0-90k</td><td>80000P</td>
-  </tr>
-  <tr>
-  <td>Races of champions</td><td>0-100k</td><td>80000P</td>
-  </tr>
-</table>
-
 
 ####DedicatedConfig file
 
@@ -55,7 +34,7 @@ Dedicated config file a XML-file, where the config variables goes between tags, 
 * starting tag: `<tag>`
 * ending tag: `</tag>`
 
-Make sure that the tags are in place, if there is error with xml filesyntax, the dedicated just won't start without any error messages. You can copy paste the content in an (xml validator)[http://www.validome.org/xml/] to verify it.
+Make sure that the tags are in place, if there is error with xml filesyntax, the dedicated just won't start without any error messages. You can copy paste the content in an [xml validator](http://www.validome.org/xml/) to verify it.
 
 **Sections on Config-file:**
 

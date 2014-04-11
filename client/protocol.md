@@ -23,7 +23,6 @@ maniaplanet://#menustations=*							| * can be home, play, store, options
 maniaplanet://#addbuddy=login 							| Add a buddy
 maniaplanet://#invitebuddy=login 						| Invite a buddy
 maniaplanet://#mailto=login								| Send a message to a preferred login with the in-game mail system
-
 maniaplanet://url 										| Open an URL into the in-game browser
 maniaplanet:///:manialink 								| Open a manialink into the in-game browser (please note the three slashes and the colon)
 
