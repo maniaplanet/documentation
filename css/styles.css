@@ -269,3 +269,15 @@ header#top ul li a:hover {
     padding: 0;
   }
 }
+
+.subnavigation {
+	float:right;
+	background-color: white;
+	padding: 3px;
+	border: 1px solid #D2D2C8;
+	margin-left: 15px;
+	margin-bottom: 15px;
+	padding-left: 15px;
+}
+.subnavigation ul {
+}
