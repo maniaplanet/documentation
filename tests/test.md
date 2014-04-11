@@ -6,7 +6,7 @@ description: Nothing good here
 
 <ul>
 {% for page in site.pages %}
-<li> {{ page.page }} :: {{ page.categories | join:',' }}
+<li> {{ page.title }} :: {{ page.categories | first }}
 </li>
 {% endfor %} <!-- page -->
 </ul>
