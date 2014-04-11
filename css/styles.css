@@ -277,7 +277,7 @@ header#top ul li a:hover {
 	border: 1px solid #D2D2C8;
 	margin-left: 15px;
 	margin-bottom: 15px;
-	padding-left: 15px;
 }
 .subnavigation ul {
+	padding-left: 15px;
 }
