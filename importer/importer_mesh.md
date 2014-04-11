@@ -1,10 +1,8 @@
 ---
 layout: static
-title: Mesh import help 
-description: Mesh import help 
+title: Mesh import
+description: Mesh import
 ---
-Mesh import
-==
 
 You can import meshes from the fbx file format (**maximum version 2014.1**)  
 Importer has been tested with files exported from Blender and 3dsMax (with Fbx 2012.2 exporter, available at http://usa.autodesk.com/fbx/)  

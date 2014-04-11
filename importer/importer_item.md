@@ -1,10 +1,8 @@
 ---
 layout: static
-title: Item import help 
-description: Item import help 
+title: Item import 
+description: Item import 
 ---
-Item import
-=
 
 You can import 3 types of items  
 

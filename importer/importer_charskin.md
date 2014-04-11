@@ -1,12 +1,10 @@
 ---
 layout: static
-title: Character skin import help 
-description: Character skin import help 
+title: Character skin import 
+description: Character skin import
 ---
-Character skin import
-==
 
-character skins can be displayed and selected by players in the profile/models menu, and the scripts can also force skins to players during gameplay.
+Character skins can be displayed and selected by players in the profile/models menu, and the scripts can also force skins to players during gameplay.
 
 The asset files to import must be located in the folder `{maniaplanet_user_dir}/Work/Skins/Models/{name_of_the_model}/{name_of_the_skin}`
 For the default shootmania model (aka 'the shootman'), `{name_of_the_model}` is `ArenaPlayer`
