@@ -4,10 +4,10 @@ title: ManiaPlanet tools
 description: List of tools
 ---
 
-* [ManiaPlanet competition manager](competition)
-* [ManiaPlanet APT repository](apt)
+* [ManiaPlanet competition manager](competition.html)
+* [ManiaPlanet APT repository](apt.html)
 
 ## Developper tools
 
-* [ManiaPlanet web services](ws/index)
-* [ManiaConnect](ws/maniaconnect)
+* [ManiaPlanet web services](ws/index.html)
+* [ManiaConnect](ws/maniaconnect.html)

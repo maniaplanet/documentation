@@ -8,7 +8,7 @@ Quick Start
 -----------
 [Dedicated server package contains both the Linux and the Windows versions of the dedicated server][class:note].
 
-Using Debian/Ubuntu? You can use our [APT repository](../tools/apt).
+Using Debian/Ubuntu? You can use our [APT repository](../tools/apt.html).
 
 1. Download the latest dedicated server at http://files.maniaplanet.com/ManiaPlanet2Beta/ManiaPlanetBetaServer_latest.zip 
 2. Create a server account at [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers)
@@ -102,7 +102,7 @@ Note: if you run same dedicated server instance on the same host: the dedicated 
 
 There are *MatchSettings* file bundled in each title, use the table below to get the default one. 
 
-[This table summerize the information you need](titleids).
+[This table summerize the information you need](titleids.html).
 
 Examples to start the server with Shootmania:Storm Elite: `ManiaPlanetServer /Title=SMStormElite@nadeolabs /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/SMStormElite1.txt`.
 
@@ -111,9 +111,9 @@ Starting the server
 
 The minimal command line to start the server is `ManiaPlanetServer /Title=TitleId /dedicated_cfg=DedicatedCfgFile /game_settings=MatchSettingsFile`.
 
-*[Complete list of ManiaPlanetServer arguments](command-line)*
+*[Complete list of ManiaPlanetServer arguments](command-line.html)*
 
-* *TitleId*: the identifier of the title you want to start. Check [this table](titleids) to get the correct value.
+* *TitleId*: the identifier of the title you want to start. Check [this table](titleids.html) to get the correct value.
 * *DedicatedCfgFile*: the server configuration file. It is a text (XML) file located in your `ManiaPlanetServer/UserData/Config` folder. You should configure at least the **server name** (tag ` <name>`), and your **dedicated login** (tag `<login>`) and **dedicated password** (tag `<password>`).
 * *MatchSettingsFile*: it is the game mode configuration. It is a text (XML) file located in your `ManiaPlanetServer/UserData/Maps/MatchSettings` folder.
 
@@ -138,7 +138,7 @@ Advanced
 
 There is no console (like *rcon* in *Source* games) bundled in the ManiaPlanetServer. Instead a powerful XML-RPC interface is provided by the server.
 
-In order to use it, you will need a [Server Controller](tools#server-controllers).
+In order to use it, you will need a [Server Controller](tools.html#server-controllers).
 
 ## Help
 

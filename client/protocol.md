@@ -28,7 +28,7 @@ maniaplanet:///:manialink 								| Open a manialink into the in-game browser (p
 
 ## TitleId?
 
-You can find the official title ids on [this table](../dedicated-server/titleids).
+You can find the official title ids on [this table](../dedicated-server/titleids.html).
 
 ## Details
 

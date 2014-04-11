@@ -100,7 +100,7 @@ While editing a script
 
 It's not recommended to do that when you begin to write scripts, but you can also edit them with any text editor. __Be aware that ManiaPlanet cache some resources like the scripts. So if you update a script with an external editor it won't be reloaded in the game at the same time.__ Most of the time you have to restart the server running the script to get the new version.
 
-You can check [the links section](../general/links#tools) of the documentation to get some useful tools to enhance the ManiaScript support in different text editors (syntax highlighting and auto-completion).
+You can check [the links section](../general/links.html#tools) of the documentation to get some useful tools to enhance the ManiaScript support in different text editors (syntax highlighting and auto-completion).
 
 
 # <a id="how-to-extract-the-nadeo-scripts"></a>How to extract the Nadeo scripts
