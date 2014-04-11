@@ -27,7 +27,7 @@ ManiaPlanet dedicated server command line
 	<td colspan="2"></td>
   </tr>
   <tr>
-	<td>/login=xxx</td><td>Dedicated login (required for internet server). Create one on your [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers)</td>
+	<td>/login=xxx</td><td>Dedicated login (required for internet server). Create one on your <a href="https://player.maniaplanet.com/advanced/dedicated-servers">PlayerPage</a></td>
   </tr>
   <tr>
 	<td>/password=xxx</td><td>Dedicated password (required for internet server)</td>
