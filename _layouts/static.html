@@ -1,25 +1,27 @@
 ---
 layout: default
 ---
+<div class="subnavigation">
+	<h3>Navigation</h3>
+	<ul>
+	{% assign currentPathArray = page.url | split:"/" %}
+	<li>
+	</li>
+	{% for p in site.pages %}
+	{% assign pPathArray = p.url | split:"/" %}
+	{% assign pFile = pPathArray | last %}
+	{% if (currentPathArray[1] == pPathArray[1] and pFile != 'index.html') %}
+		<li> 
+			<a href="{{ site.url }}{{ p.url }}" title="{{ p.description }}">{{ p.title }}</a>
+		</li>
+	{% endif %}
+	{% endfor %} <!-- page -->
+	</ul>
+</div>
 <article>
   <div class="content">
     <header>
 		<a href="{{ site.url }}{{ page.url }}"><h2>{{ page.title }}</h2></a>
-		<div class="subnavigation">
-			<h3>Navigation</h3>
-			<ul>
-			{% assign currentPathArray = page.url | split:"/" %}
-			{% for p in site.pages %}
-			{% assign pPathArray = p.url | split:"/" %}
-			{% assign pFile = pPathArray | last %}
-			{% if (currentPathArray[1] == pPathArray[1] and pFile != 'index.html') %}
-				<li> 
-					<a href="{{ site.url }}{{ p.url }}" title="{{ p.description }}">{{ p.title }}</a>
-				</li>
-			{% endif %}
-			{% endfor %} <!-- page -->
-			</ul>
-		</div>
 	</header>
     <section>
       {{ content }}
