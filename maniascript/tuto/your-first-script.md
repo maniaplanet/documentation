@@ -32,7 +32,7 @@ We have a basic game mode script and a map, all that is missing now is a server 
 ![Server creation screen](./img/create-server.png)
 
 1. Click on this box until the `Script` option is selected.
-2. Click here to open a window where you can choose `HelloWorld.Script.txt`.
+2. Click here to open a window where you can choose `MyGamemode.Script.txt`.
 
 Once it's done click on the Launch button, select the map you created earlier and click on Play.
 
@@ -252,7 +252,7 @@ If you need to create functions (repetition of the same block of code) for your 
 ## Common variables
 Now we can almost start the "real" work, just a bit of explanation about the type of variables existing in ManiaScript as it can change slighty between programming language.
 
-Here is a list of the common types of variables in ManiaScript:
+Here is a list of the common types of variables in ManiaScript (or how to declare them):
 
 Type        | ManiaScript type  | Example
 ---------   | ----------------- | -------
@@ -261,7 +261,7 @@ Real / Float| Real              | 1.
 Text        | Text              | 'Im a text'
 Boolean     | Boolean           | true
 Ident       | Ident             | (see below)
-Table       | []                | Player[] (table of Players)
+Array       | []                | Player[] (table of Players)
 
 An ident is special kind of variable, it's used to point to an asset (others that images/sound) like a bullet create in the ***ActionMaker***, or a ***skin*** or also an ***aura*** for example.
 
@@ -382,14 +382,15 @@ We look in each event happening during the round. When an event is trigered, acc
     		if (Event.Shooter == Event.Victim || Event.Shooter == Null) {
     			Event.Victim.Score.Points -= 1;
     		} else {
-    		    Event.Shooter.Score.Points += 1;
+    		    Event.Victim.Score.Points -= 1;
+                Event.Shooter.Score.Points += 1;
     		}
     		XmlRpc::OnArmorEmpty(Event);
     		PassOn(Event);
     	} 
 ```
     	
-When a player lose all his armors (when he dies), we remove him one point. Then with `PassOn(Event)` we tell to the server that the event has been processed. Else we give him one point because he has eliminated a player.
+When a player lose all his armors (when he dies), we remove him one point. Then with `PassOn(Event)` we tell to the server that the event has been processed. We give also one point to the shooter if it's not a suicide.
     	
 ```c++
     	// ---------------------------------- //
