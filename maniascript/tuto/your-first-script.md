@@ -815,7 +815,7 @@ For your mode you'll maybe have to drop a dynamic object (like a ball for exampl
     }
 ```
     
-With this function, the object will be dropped in the opposite direction of the deadly shot (in that way you can suppose from where the shot is from).
+With this function, the object will be dropped in the opposite direction of the shot (in that way you can suppose from where the shot is from).
 
 ## The "Actions"
 We'll talk a bit about the `Actions`. An `Action` is a element created in the `ActionMaker` which give you the possibility to build a new weapon or a custom animation for the player.
