@@ -963,7 +963,7 @@ It works like an "input/output" system in simple language. In a logic sense, you
     
 The "for UI" means that the variable is adressed to a specific player (first you have to retrieve the UI of the player with the instruction `declare UI <=> UIManager.GetUI(Player);`).
 
-> **Tip:** Instead of retrieving all the UIs if the variable is addressed for all players, you can specify `for Teams[0]` for FFA modes or `Teams[1]` or `Teams[2]` for a specific team on team modes.
+> **Tip:** Instead of retrieving all the UIs if the variable is addressed for all players, you can specify `for Teams[0]` or `for Teams[1]`.
 
 > **Info:** This type of variable (netwrite/netread) doesn't work with the bots, it'll crash the script if you try do it, so be sure that when you manipulate this type of variable in the script, to exclude the bot from the execution of the code (**Tip:** the bot doesn't have an UI, so you can do a check when you have retrieve the UI of a player by test it with `if(UI != Null)`).
 
