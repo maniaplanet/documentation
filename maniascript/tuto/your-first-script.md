@@ -4,8 +4,6 @@ title: Your first script
 description: Creation of a first simple gamemode, a deathmatch
 ---
 
-[TOC]
-
 # Your first ShootMania game mode
 In this part you'll learn to create your first simple game mode, a deathmatch where the first player to earn 30 points will win the map (using a lightweight version of the Melee gamemode).
 
@@ -16,7 +14,7 @@ Firstly to be able to write your mode ingame, you have to create a text file wit
     #Extends "Modes/ShootMania/ModeBase.Script.txt"
 ```
 
-And then save the file under a name like this: `MyGamemode.Script.txt`.
+And then save the file under a name like this: `MyGamemode.Script.txt` into `C:\Users\MYUSERNAME\Documents\ManiaPlanet\Scripts\Modes\ShootMania` (create the required folders if missing).
 
 Now you can launch a local server with your mode or via the map editor (if you want to create/modify a prototype map at the same time) or as said before you can continue in your IDE/text editor but you'll not be able to test/modify in live your script (through the IDE i mean, you can modify through the script editor ingame).
 
@@ -52,6 +50,8 @@ A gamemode is divided in several part which match each state of a game. A raw st
     #Include "Libs/Nadeo/ShootMania/SM.Script.txt" as SM
     #Include "Libs/Nadeo/ShootMania/Score.Script.txt" as Score
     #Include "Libs/Nadeo/Message.Script.txt" as Message
+    #Include "Libs/Nadeo/Interface.Script.txt" as Interface
+    #Include "Libs/Nadeo/Layers.Script.txt" as Layers
     
     
     // ---------------------------------- //
@@ -82,7 +82,7 @@ A gamemode is divided in several part which match each state of a game. A raw st
     
     ***StartRound***
     ***
-    //Code to executed when a round is started
+    //Code to execute when a round is started
     ***
     
     ***Playloop***
@@ -107,7 +107,7 @@ A gamemode is divided in several part which match each state of a game. A raw st
     List of the functions of the gamemode
 ```
 
-We'll explain each part of the script in the next sections but please not first that the `***StartServer***` code are called "Labels". An explanation of the labels is given in the excellent blog post of Steffen, a very active scripter of the community, here (among others explanations about others things in ManiaScript): http://blog.steeffeen.com/2013/10/labels/
+We'll explain each part of the script in the next sections but please note first that the `***StartServer***` code are called "Labels". An explanation of the labels is given in the excellent blog post of Steffen, a very active scripter of the community, here (among others explanations about others things in ManiaScript): http://blog.steeffeen.com/2013/10/labels/
 
 ### **Library**
 ```c++
@@ -131,7 +131,7 @@ The `CompatibleMapTypes` constant indicate which type(s) of maps is usable with 
 
 `Version` is... well the version of your script, you can format it as you want.
 
-The `Settings` library allow you to create and use a number of parameters (fixed by you and used by the server owner) on your script like the duration of a round ou the number of kill to do to win.
+The `Settings` library allow you to create and use a number of parameters (fixed by you and used by the server owner) on your script like the duration of a round or the number of eliminatations to do to win.
 
 All `#Include` lines indicate that we want to load a library to the script. A library is a collection of functions/variables which contain script mode to do a specific task (like handling the message, manipulate the player scores/scoretable and more). You can also declare a custom library if you have made one and need it for your gamemode.
 
@@ -257,9 +257,9 @@ Here is a list of the common types of variables in ManiaScript (or how to declar
 Type        | ManiaScript type  | Example
 ---------   | ----------------- | -------
 Integer     | Integer           | 1
-Real / Float| Real              | 1.
+Real / Float| Real              | 1.5 (or 1. for a "round" number, the decimal is mandatory)
 Text        | Text              | 'Im a text'
-Boolean     | Boolean           | true
+Boolean     | Boolean           | True
 Ident       | Ident             | (see below)
 Array       | []                | Player[] (table of Players)
 
@@ -272,20 +272,28 @@ An ident is special kind of variable, it's used to point to an asset (others tha
     
     #Const	CompatibleMapTypes	"MeleeArena"
     #Const	Version				"2013-06-24"
-    #Const	ScriptName			"Melee.Script.txt"
+    #Const	ScriptName			"Melee_Tutorial.Script.txt"
     
-    #Include "MathLib" as MathLib
+    #Include "Libs/Nadeo/Settings.Script.txt" as Settings
     #Include "TextLib" as TextLib
-    #Include "Libs/Nadeo/Message.Script.txt" as Message
+    #Include "MathLib" as MathLib
     #Include "Libs/Nadeo/ShootMania/SM.Script.txt" as SM
-    #Include "Libs/Nadeo/Interface.Script.txt" as Interface
     #Include "Libs/Nadeo/ShootMania/Score.Script.txt" as Score
+    #Include "Libs/Nadeo/Message.Script.txt" as Message
+    #Include "Libs/Nadeo/Interface.Script.txt" as Interface
+    #Include "Libs/Nadeo/Layers.Script.txt" as Layers
     
     // ---------------------------------- //
     // Settings
     // ---------------------------------- //
     #Setting S_TimeLimit	600 as _("Time limit")		///< Time limit on a map
     #Setting S_PointLimit	25	as _("Points limit")	///< Points limit on a map
+    
+    // ---------------------------------- //
+    // Globales
+    // ---------------------------------- //
+    declare Ident[]	G_SpawnsList;	 ///< Id of all the BlockSpawns of the map
+	declare Ident	G_LatestSpawnId;	///< Id of the last BlockSpawn used
 ```
 At the beginning of your script, you have to tell to the script to look into the `ModeBase` for the basic working of the script.
 
@@ -339,7 +347,7 @@ Then we indicate to initialize each base possibly present in the map to use the 
     }
 ```
     
-The score of the players are reseted. In this portion of code, we call the class `Score` which stock all the points won by the players during a round (or match).
+The score of the players are reset. In this portion of code, we call the class `Score` which stores all the points won by the players during a round (or match).
 It's also with this class that you can put the scores of the players into the scoretable automatically.
 
 ```c++
@@ -347,7 +355,7 @@ It's also with this class that you can put the scores of the players into the sc
     if (Scores.existskey(0)) LeadId = Scores[0].User.Id;
 ```
     
-The Id of the lead player is also reseted as the match hasn't started yet.
+The Id of the lead player is also reset as the match hasn't started yet.
     
 ```c++
     declare CurrentPointLimit = S_PointLimit;
@@ -373,7 +381,7 @@ It's now time to write what's going on during a round.
     foreach (Event, PendingEvents) {
 ```
     
-We look in each event happening during the round. When an event is trigered, according what we want to do, we do some treatments (only a very few events are listed below, the basic ones).
+We look in each event happening during the round. When an event is triggered, according what we want to do, we do some treatments (only a very few events are listed below, the basic ones).
 
 ```c++
     	// ---------------------------------- //
@@ -390,7 +398,7 @@ We look in each event happening during the round. When an event is trigered, acc
     	} 
 ```
     	
-When a player lose all his armors (when he dies), we remove him one point. Then with `PassOn(Event)` we tell to the server that the event has been processed. We give also one point to the shooter if it's not a suicide.
+When a player loses all his armors (when he is eliminated), we remove him one point. Then with `PassOn(Event)` we tell to the server that the event has been processed. We give also one point to the shooter if it's not a suicide.
     	
 ```c++
     	// ---------------------------------- //
@@ -417,7 +425,7 @@ Basically if the player hit himself (with the `Arrow` or the `Nucleus` for examp
     	} 
 ```
     	
-But if the sender and the receiver are different, we remove the number of armor (life) to the victim (the number of damage is know with the variable `Event.Damage` which can be tempered if you want to modify the damage received.
+But if the sender and the receiver are different, we remove the number of armor (life) to the victim (the number of damage is known with the variable `Event.Damage` which can be tempered if you want to modify the damage received.
     	
 ```c++
     	// ---------------------------------- //
@@ -429,7 +437,7 @@ But if the sender and the receiver are different, we remove the number of armor 
     	} 
 ```
     	
-If a player press the backspace button (the default one to respawn), we remove him one point.
+If a player presses the backspace button (the default one to respawn), we remove him one point.
     	
 ```c++
     	// ---------------------------------- //
@@ -453,7 +461,7 @@ And we validate all others events in their default treatment.
 ```
     
 Outside of the loop of the events, there is some work to do. First we have to let the players spawn if they are eliminated.
-To do so, we create a loop who'll check all the players all the time. If a player is eliminated (by checking his status thanks to `CSmPlayer::ESpawnStatus::NotSpawned`), we ask to script to execute the function `MeleeSpawnPlayer` which will be explained a bit later).
+To do so, we create a loop which checks all the players' status. If a player is eliminated (by checking his status thanks to `CSmPlayer::ESpawnStatus::NotSpawned`), we ask the script to execute the function `MeleeSpawnPlayer` which will be explained a bit later).
     
 ```c++
     // ---------------------------------- //
@@ -550,7 +558,7 @@ We play the sound of the end of the round.
     	UIManager.UIAll.BigMessage = _("|Match|Draw");
     }
     MB_Sleep(2000);
-***
+    
     UIManager.UIAll.UISequence = CUIConfig::EUISequence::EndRound;
     UIManager.UIAll.ScoreTableVisibility = CUIConfig::EVisibility::ForcedVisible;
     MB_Sleep(5000);
@@ -576,7 +584,7 @@ If a podium is present on the map (if not the code will be ignored), we play the
 And finally we revert back the behaviour of the scoretable and the content of the message displayed on the screen.
 
 ### The functions
-But the script is not over yet, we have to create the function who will spawn the players during the round.
+But the script is not over yet, we have to create the function which will spawn the players during the round.
 
 ```c++
     Void MeleeSpawnPlayer(CSmPlayer _Player) {
@@ -585,7 +593,7 @@ But the script is not over yet, we have to create the function who will spawn th
     	}
 ```
     	
-We list all the spawns of the map (i mean the block spawn put by the map creator) if the list is empty.
+We list all the spawns of the map (I mean the block spawn put by the map creator) if the list is empty.
     	
 ```c++
     	declare SpawnId = NullId;
@@ -596,7 +604,7 @@ We list all the spawns of the map (i mean the block spawn put by the map creator
     	}
 ```
     	
-We choose a spawn randomnly which will be used by the player, but it'll not the last spawn used (to prevent to have a player spawning in the same spawn of the last player in few seconds).
+We choose a spawn randomly which will be used by the player, but it won't the last spawn used (to prevent to have a player spawning in the same spawn of the last player in few seconds).
     	
 ```c++
     	G_LatestSpawnId = SpawnId;
@@ -984,7 +992,7 @@ You have to create an "input" variable on the side where you will receive the va
     
     #Const  CompatibleMapTypes  "MeleeArena"
     #Const  Version             "1.0.0"
-    #Const  ScriptName          "Melee_Tuto.Script.txt"
+    #Const  ScriptName          "Melee_Tutorial.Script.txt"
     
     #Include "Libs/Nadeo/Settings.Script.txt" as Settings
     #Include "TextLib" as TextLib
