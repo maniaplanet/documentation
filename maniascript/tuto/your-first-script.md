@@ -312,8 +312,15 @@ For a deathmatch mode (which is very simple), you have only to deactivate the te
     ***StartServer***
     ***
     UseClans = False;
+    
+    ST2::SetStyle("LibST_SMBaseSolo");
+    ST2::SetTeamsMode(False);
+    ST2::SetTeamsScoresVisibility(False);
+    ST2::Build("SM");
     ***
 ```
+We tell the script that's a FFA (Free For All) mode and we build the default scoretable.
+ST2, ScoresTable2 library, is loaded by the ModeBase.
 
 ## Setting up the parameters for the match/map
 
