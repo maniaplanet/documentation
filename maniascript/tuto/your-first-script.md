@@ -133,7 +133,7 @@ The `CompatibleMapTypes` constant indicate which type(s) of maps is usable with 
 
 The `Settings` library allow you to create and use a number of parameters (fixed by you and used by the server owner) on your script like the duration of a round or the number of eliminatations to do to win.
 
-All `#Include` lines indicate that we want to load a library to the script. A library is a collection of functions/variables which contain script mode to do a specific task (like handling the message, manipulate the player scores/scoretable and more). You can also declare a custom library if you have made one and need it for your gamemode.
+All `#Include` lines indicate that we want to load a library to the script. A library is a collection of functions/variables which contain script mode to do a specific task (like handling the message, manipulate the player scores/scoretable and more). You can also declare a custom library if you have made one and need it for your gamemode. It's particularly useful when you have to use the same block of code in several gamemode.
 
 ### Constants
 
