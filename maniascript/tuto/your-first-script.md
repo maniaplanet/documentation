@@ -14,7 +14,7 @@ Firstly to be able to write your mode ingame, you have to create a text file wit
     #Extends "Modes/ShootMania/ModeBase.Script.txt"
 ```
 
-And then save the file under a name like this: `MyGamemode.Script.txt` into `C:\Users\MYUSERNAME\Documents\ManiaPlanet\Scripts\Modes\ShootMania` (create the required folders if missing).
+And then save the file under a name like this: `MyGamemode.Script.txt` in `C:\Users\MYUSERNAME\Documents\ManiaPlanet\Scripts\Modes\ShootMania` (create the required folders if missing).
 
 Now you can launch a local server with your mode or via the map editor (if you want to create/modify a prototype map at the same time) or as said before you can continue in your IDE/text editor but you'll not be able to test/modify in live your script (through the IDE i mean, you can modify through the script editor ingame).
 
@@ -635,7 +635,7 @@ You can download the source of the gamemode on this [link](./assets/Melee_Tuto.S
 Of course what we saw before it's just a glimpse of what's possible with the ManiaScript. I'll show you some more advanced functions to do more things with the script.
 
 ### Specifying parameters for a player
-It's possible to customized the parameters of a player when you spawn him (or while he plays but let's take the first situation).
+It's possible to customize the parameters of a player when you spawn him (or while he plays but let's take the first situation).
 
 Instead of calling the function `SM::SpawnPlayer(_Player, 0, BlockSpawns[SpawnId]);`, we'll create our own function to call to spawn of player.
 
@@ -658,7 +658,7 @@ Instead of calling the function `SM::SpawnPlayer(_Player, 0, BlockSpawns[SpawnId
     	SetPlayerAmmo(_Player, CSmMode::EWeapon::Rocket, 4);
     }
 ```
-All the usable parameters are listed into the `CSmPlayer` class (check the technical documentation about it).
+All the usable parameters are listed in the `CSmPlayer` class (check the technical documentation about it).
 
 ## Spawning a bot
 Spawnig a bot is almost the same as spawning a player. The difference is that you have to put a BotPath on the map where the bot must be spawned.
@@ -685,7 +685,7 @@ The first one is with SendBigMessage which will display... well a big message at
 
 In the example above, the first argument is the text to display. Thanks to `Compose` function of the `TextLib` library, we can put arguments if you want to display messages that are a bit more dynamic. While you're writing the text you can add the text `$<%1$>` to tell the Compose function that you're adding an argurment that you'll fill just after. In the example, we indicate a player name (but it could be anything else). Then we indicate the duration of the message, 3000 milliseconds which equal 3 seconds.
 
-You can specified a receiver if you indicate a CSmPlayer variable as first argument of the `SendBigMessage` function like this:
+You can specify a receiver if you indicate a CSmPlayer variable as first argument of the `SendBigMessage` function like this:
 
 ```c++
     Message::SendBigMessage(ReceiverPlayer, TextLib::Compose("""$<%1$> has scored!""", _Player.Name), 3000, 10);
@@ -699,8 +699,8 @@ Else there is another function to display message, smaller ones, on the HUD, by 
     
 It works like `SendBigMessage`.
 
-## Using the pole on your script
-If you want to use a pole in your script because is a pole based gamemode like Battle or Siege.
+## Using the pole in your script
+If you want to use a pole in your script because it is a pole based gamemode like Battle or Siege.
 
 First you must reset the progression of the pole (to prevent to have a half-captured pole at the beginning of the round):
 
@@ -745,7 +745,7 @@ Then you have to manage the pole during the `Playloop`:
     }
 ```
     
-In this example, we check all the pole of the map and on each of them, we check if there is a player around it, if so we are loading the pole and if the pole is loaded, we give to the player one point and we stop the round. If there is no one, the pole is reseted.
+In this example, we check all the pole of the map and on each of them, we check if there is a player around it, if so we are loading the pole and if the pole is loaded, we give to the player one point and we stop the round. If there is no one, the pole is reset.
 
 ## Create and spawn an object
 If you need to use a dynamic object (a 3D object that can be catched, dropped and can interact with the players and/or the bots).
@@ -867,13 +867,13 @@ The actions can be assigned on the buttons 1, 2, 3 or 4 through `Activable1`, `A
 ## Managing the event of an action
 If you use an action as a weapon, you can't manage exactly the event the same way as a Storm bullet (rocket/nucleus/arrow/laser). You have to manage the fire and hit events on the `OnActionCustomEvent` event instead of `OnHit`.
 
-For a bullet, the state of an action is symbolize with its first parameter: `Event.Param1[0]`. For example if you want to know if a bullet has been fired, you have to compare this parameter with the text `"fire"`.
+For a bullet, the state of an action is symbolized with its first parameter: `Event.Param1[0]`. For example if you want to know if a bullet has been fired, you have to compare this parameter with the text `"fire"`.
 
 If you want to retrieve the damage done by the bullet, you should check the second parameter of the action: `Event.Param2[0]` and be sure that the event sent by action is `"damage"` for the first parameter. Note that the parameter is a Text type, so you have to convert it with the TextLib if you want to use it directly during the calculation of the damage.
 
 Please note also the parameters can be altered by the creator of the action (if he has customized the script of the weapon to do so).
 
-Here is an example on how manage the event of an action:
+Here is an example on how to manage the event of an action:
 
 ```c++
     } else if (Event.Type == CSmModeEvent::EType::OnActionCustomEvent) {
@@ -891,8 +891,8 @@ Here is an example on how manage the event of an action:
     
 You can still manage the death of the players through the `OnArmorEmpty` event.
 
-## The Manialink into the ManiaScript
-It's possible to write some Manialink code into your script. This is useful when you want to display some custom information or even to create a complete custom ingame UI.
+## The Manialink in the ManiaScript
+It's possible to write some Manialink code in your script. This is useful when you want to display some custom information or even to create a complete custom ingame UI.
 
 If you want to do so, you have first to create a text variable which will contain the manialink and then to treat the manialink:
 
@@ -907,17 +907,17 @@ If you want to do so, you have first to create a text variable which will contai
     Layers::Attach("ExampleUI", Player);
 ```
     
-In the example, once you have stocked your manialink into the text variable, you check if a layer (of the UI) already has the desired name for the layer. If not, we create it and then we specify the type of the layer and we attch it to the UI of the player.
+In the example, once you have stocked your manialink in the text variable, you check if a layer (of the UI) already has the desired name for the layer. If not, we create it and then we specify the type of the layer and we attach it to the UI of the player.
 
 > **Tip:** You can add a multilines content text variable by using the delimiter `"""` instead of `""`. By doing this you can write on 10 lines with the formatting and then indicate the end of the content to add in the variable.
 
-At the end of the round (or the map), i recommend to destroy all the layers to not have redondant information on the screen of the player. To destroy the layers, you must use this instruction directly in the script:
+At the end of the round (or the map), I recommend to destroy all the layers to not have redondant information on the screen of the player. To destroy the layers, you must use this instruction directly in the script:
 
 ```c++
     Layers:DestroyAll();
 ```
     
-### ManiaScript into the Manialink
+### ManiaScript in the Manialink
 You can use some ManiaScript in your Manialink too and even to have access to few script elements directly in your Manialink or the ManiaScript of the Manialink.
 
 Please note that you can't use some of the ManiaScript functions and variable while you're in a Manialink.
@@ -957,7 +957,7 @@ First to use some ManiaScript in your Manialink, you have to write the ManiaScri
     }
 ```
 
-In this example you can see how works the ManiaScript in the Manialink. Once you've written your ManiaLink you can start writting your script between the tag `<script><!-- //code --></script>`. In this portion of code you can use the ManiaScript present into the `CSmMIScriptIngame`, `CMlControl` and `CMlPage` classes.
+In this example you can see how works the ManiaScript in the Manialink. Once you've written your ManiaLink you can start writting your script between the tag `<script><!-- //code --></script>`. In this portion of code you can use the ManiaScript present in the `CSmMIScriptIngame`, `CMlControl` and `CMlPage` classes.
 
 Note that you can check several events like the different sort of clicks of the mouse on the elements (like Quad, Label, Gauge, etc).
 
@@ -968,7 +968,7 @@ If you want that the script is running during all the time it's attach to the UI
 > **Tip:** You call variables from the main script if you put a triple brackets between the name of the variable like this: `{{{S_PointLimit}}}`. But with this method you can't manipulate them (like doing calculation, modification). See below to know how to do it properly.
 
 #### Sending ManiaScript script variables to the ManiaScript Manialink variables and vice versa
-First you need to know that the script of the gamemode and the manialink inside are two separate layers which don't communicate between them initially. The script is run on the server while the manialink is read locally on the computer of the player. To make it so, you need to use a "new" type of variable chich will be read by the script and the manialink.
+First you need to know that the script of the gamemode and the manialink inside are two separate layers which don't communicate between them initially. The script is run on the server while the manialink is read locally on the computer of the player. To make it so, you need to use a "new" type of variable which will be read by the script and the manialink.
 
 It works like an "input/output" system in simple language. In a logic sense, you must create first an "output" variable, symbolized with the parameter `netwrite` in ManiaScript. This parameter tell that the variable will register/put a value to send to the other layer (the script or the manialink):
 
