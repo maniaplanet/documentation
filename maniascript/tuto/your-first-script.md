@@ -837,7 +837,7 @@ We'll talk a bit about the `Actions`. An `Action` is a element created in the `A
 
 On a script point of view, you can assign up to 8 actions to a player at the same time from `Slot_A` to `Slot_H`.
 
-First to use an action, you must declare on the `StartServer` section of your script and to declare it in an `ActionList`:
+First to use an action, you must declare it on the `StartServer` section of your script inside an `ActionList` as follows:
 
 ```c++
     declare Ident G_MyCustomWeapon;
@@ -911,14 +911,14 @@ In the example, once you have stocked your manialink in the text variable, you c
 
 > **Tip:** You can add a multilines content text variable by using the delimiter `"""` instead of `""`. By doing this you can write on 10 lines with the formatting and then indicate the end of the content to add in the variable.
 
-At the end of the round (or the map), I recommend to destroy all the layers to not have redondant information on the screen of the player. To destroy the layers, you must use this instruction directly in the script:
+At the end of the round (or the map), I recommend to destroy all the layers to avoid redundant information on the screen of the player. To destroy the layers, you must use this instruction directly in the script:
 
 ```c++
     Layers:DestroyAll();
 ```
     
 ### ManiaScript in the Manialink
-You can use some ManiaScript in your Manialink too and even to have access to few script elements directly in your Manialink or the ManiaScript of the Manialink.
+You can use some ManiaScript in your Manialink too and even to have access to few script elements directly in your Manialink or in the ManiaScript of the Manialink.
 
 Please note that you can't use some of the ManiaScript functions and variable while you're in a Manialink.
 
@@ -961,7 +961,7 @@ In this example you can see how works the ManiaScript in the Manialink. Once you
 
 Note that you can check several events like the different sort of clicks of the mouse on the elements (like Quad, Label, Gauge, etc).
 
-If you want that the script is running during all the time it's attach to the UI of the player, you should put it in a loop and put the code there, else the code will be executed only when the layer will be attached.
+If you want the script to run during the whole time it's attached to the UI of the player, you should put your code in a loop. Otherwise the code will be executed only at the very moment when the layer is attached.
 
 > **Tip:** Note that GUIPlayer in `CSmMIScriptIngame` is very useful because you have access to the attributes of the CSmPlayer attributes with it.
 > 
