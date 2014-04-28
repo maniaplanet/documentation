@@ -490,7 +490,7 @@ If it's the case, we save the new leader and we display a message to all the pla
     declare IsMatchOver = False;
     if (Now > EndTime) IsMatchOver = True;
     foreach (Player in Players) {
-    	if (Player.Score != Null && Player.Score.RoundPoints >= S_PointLimit) IsMatchOver = True;
+    	if (Player.Score != Null && Player.Score.Points >= CurrentPointLimit) IsMatchOver = True;
     }
     
     if (IsMatchOver) MB_StopMap = True;
@@ -596,7 +596,7 @@ But the script is not over yet, we have to create the function which will spawn 
 ```c++
     Void MeleeSpawnPlayer(CSmPlayer _Player) {
     	if (G_SpawnsList.count == 0) {
-    		foreach (BlockSpawn in BlockSpawns) G_SpawnsList.add(BlockSpawn.Id);
+    		foreach (PlayerSpawn in MapLandmarks_PlayerSpawn) G_SpawnsList.add(PlayerSpawn.Id);
     	}
 ```
     	
@@ -615,7 +615,7 @@ We choose a spawn randomly which will be used by the player, but it won't the la
     	
 ```c++
     	G_LatestSpawnId = SpawnId;
-    	SM::SpawnPlayer(_Player, 0, BlockSpawns[SpawnId]);
+    	SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId]);
 ```
 
 And now we spawn the player!
@@ -637,7 +637,7 @@ Of course what we saw before it's just a glimpse of what's possible with the Man
 ### Specifying parameters for a player
 It's possible to customize the parameters of a player when you spawn him (or while he plays but let's take the first situation).
 
-Instead of calling the function `SM::SpawnPlayer(_Player, 0, BlockSpawns[SpawnId]);`, we'll create our own function to call to spawn of player.
+Instead of calling the function `SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId]);`, we'll create our own function to call to spawn of player.
 
 ```c++
     Void VSpawnPlayer(CSmPlayer _Player)
@@ -653,7 +653,7 @@ Instead of calling the function `SM::SpawnPlayer(_Player, 0, BlockSpawns[SpawnId
     	_Player.StaminaGain 	= 1.;
     	_Player.StaminaPower 	= 1.;
     	SetPlayerWeapon(_Player, CSmMode::EWeapon::Rocket, False);
-    	SM::SpawnPlayer(_Player, 0, BlockSpawns[SpawnId], Now + 50);
+    	SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId], Now + 50);
     	SetPlayerAmmoMax(_Player, CSmMode::EWeapon::Rocket, 4);
     	SetPlayerAmmo(_Player, CSmMode::EWeapon::Rocket, 4);
     }
@@ -951,6 +951,7 @@ First to use some ManiaScript in your Manialink, you have to write the ManiaScri
     		--></script>
     	""";
     
+    	Layers::Create("ExampleUI", MLText);
     	declare Layer <=> Layers::Get("ExampleUI");
     	Layer.Type = CUILayer::EUILayerType::Normal;
         Layers::Attach("ExampleUI", Player);
@@ -1136,7 +1137,7 @@ You have to create an "input" variable on the side where you will receive the va
     declare IsMatchOver = False;
     if (Now > EndTime) IsMatchOver = True;
     foreach (Player in Players) {
-        if (Player.Score != Null && Player.Score.RoundPoints >= S_PointLimit) IsMatchOver = True;
+        if (Player.Score != Null && Player.Score.Points >= CurrentPointLimit) IsMatchOver = True;
     }
     
     if (IsMatchOver) MB_StopMap = True;
@@ -1195,7 +1196,7 @@ You have to create an "input" variable on the side where you will receive the va
     
     Void MeleeSpawnPlayer(CSmPlayer _Player) {
         if (G_SpawnsList.count == 0) {
-            foreach (BlockSpawn in BlockSpawns) G_SpawnsList.add(BlockSpawn.Id);
+            foreach (PlayerSpawn in MapLandmarks_PlayerSpawn) G_SpawnsList.add(PlayerSpawn.Id);
         }
     
         declare SpawnId = NullId;
@@ -1206,7 +1207,7 @@ You have to create an "input" variable on the side where you will receive the va
         }
     
         G_LatestSpawnId = SpawnId;
-        SM::SpawnPlayer(_Player, 0, BlockSpawns[SpawnId]);
+        SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId]);
     
         declare Removed = G_SpawnsList.remove(SpawnId);
     }
