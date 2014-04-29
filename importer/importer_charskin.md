@@ -20,4 +20,4 @@ The asset files to provide are
 
 See Sample skin : `Work/Skins/Models/ArenaPlayer/SintelSample` (in `NadeoImporterSamples.zip`)
 
-to learn how to prepare the character mesh for import, see the dedicated page : [mesh import](importer_mesh) 
+to learn how to prepare the character mesh for import, see the dedicated page : [mesh import](importer_mesh.html) 
