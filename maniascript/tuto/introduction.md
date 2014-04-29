@@ -8,6 +8,9 @@ description: An introduction to ManiaScript
 
 ManiaScript is a scripting language integrated to ManiaPlanet that allows the players to customize different aspects of the games. A scripting language is build upon a classic programming language and aims to ease the process of creation.
 
+> **Note:** For those who don't know how to code (at all or pretty much), i suggest you to follow the basic course about Java here (only the "Learn the Basics" part): http://www.learnjavaonline.org/
+> Of course remember that there is some difference between **Java** and **ManiaScript** but they are also close enough to learn enough basic knowledge with it.
+
 
 # <a id="what-can-i-do-with-it"></a>What can I do with it?
 

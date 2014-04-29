@@ -1,100 +1,640 @@
 ---
 layout: static
 title: Your first script
-description: Creation of a first basic "hello world" script
+description: Creation of a first simple gamemode, a deathmatch
 ---
 
-# <a id="create-a-basic-script"></a>Create a basic script
+# Your first ShootMania game mode
+In this part you'll learn to create your first simple game mode, a deathmatch where the first player to earn 30 points will win the map (using a lightweight version of the Melee gamemode).
 
-Before launching the game we will start by creating a basic rules script. Go to your ManiaPlanet custom data directory and open the `Scripts` folder. It is most likely empty, so we will create a few folders. First create a `Modes` folder and then inside another one called `ShootMania` or `TrackMania` depending on the game you want to create a mode for. It should look like this:
+## Creating the gamemode
+Firstly to be able to write your mode ingame, you have to create a text file with the following code:
 
-`ManiaPlanet\Scripts\Modes\ShootMania` or `ManiaPlanet\Scripts\Modes\TrackMnaia`
+```c++
+    #Extends "Modes/ShootMania/ModeBase.Script.txt"
+```
 
-Now go into the `TrackMania` or `ShootMania` folder and create a new text file called `HelloWorld.Script.txt`. Open the file with your favorite editor and type the following code inside:
+And then save the file under a name like this: `MyGamemode.Script.txt` in `C:\Users\MYUSERNAME\Documents\ManiaPlanet\Scripts\Modes\ShootMania` (create the required folders if missing).
 
-For ShootMania:
+Now you can launch a local server with your mode or via the map editor (if you want to create/modify a prototype map at the same time) or as said before you can continue in your IDE/text editor but you'll not be able to test/modify in live your script (through the IDE i mean, you can modify through the script editor ingame).
 
-    #RequireContext CSmMode
-
-For TrackMania:
-
-    #RequireContext CTmMode
-
-After this first line past this code:
-
-    main() {
-        Mode::LoadMap();
-
-        while (!ServerShutdownRequested) {
-            yield;
-        }
-
-        Mode::UnloadMap();
-    }
-
-Save the file and close your editor.
-
-
-# <a id="create-a-map"></a>Create a map
+## Create a map
 
 It's time to create a map to test our mode. Launch ManiaPlanet, start the map editor and select a maptype: `MeleeArena` for ShootMania or `Race` for TrackMania. Make a basic map, validate it and save it. Now you can exit the editor.
 
 
-# <a id="create-a-server"></a>Create a server
+## Create a server
 
 We have a basic game mode script and a map, all that is missing now is a server to do our tests. In the main menu click on the Local Play button (then Local Network if you are on TrackMania). Click on the Create button and you should see this screen:
 
 ![Server creation screen](./img/create-server.png)
 
 1. Click on this box until the `Script` option is selected.
-2. Click here to open a window where you can choose `HelloWorld.Script.txt`.
+2. Click here to open a window where you can choose `MyGamemode.Script.txt`.
 
 Once it's done click on the Launch button, select the map you created earlier and click on Play.
 
+## Structure of a game mode
+A gamemode is divided in several part which match each state of a game. A raw structure of a gamemode is like this:
 
-# <a id="script-review"></a>Script review
+```c++
+    #Extends "Modes/ShootMania/ModeBase.Script.txt"
+    
+    #Const	CompatibleMapTypes	"MeleeArena"
+    #Const	Version				"1.0.0"
+    #Const	ScriptName			"MyScript.Script.txt"
+    
+    #Include "Libs/Nadeo/Settings.Script.txt" as Settings
+    #Include "TextLib" as TextLib
+    #Include "MathLib" as MathLib
+    #Include "Libs/Nadeo/ShootMania/SM.Script.txt" as SM
+    #Include "Libs/Nadeo/ShootMania/Score.Script.txt" as Score
+    #Include "Libs/Nadeo/Message.Script.txt" as Message
+    #Include "Libs/Nadeo/Interface.Script.txt" as Interface
+    #Include "Libs/Nadeo/Layers.Script.txt" as Layers
+    
+    
+    // ---------------------------------- //
+    // Constants
+    // ---------------------------------- //
+    //List of your constant variables
+    
+    // ---------------------------------- //
+    // Globales
+    // ---------------------------------- //
+    //List of your global variables
+    
+    
+    ***StartServer***
+    ***
+    //Code to execute when the server is started
+    ***
+    
+    ***StartMap***
+    ***
+    //Code to execute when a map is loaded
+    ***
+    
+    ***InitRound***
+    ***
+    //Code to execute before the beginning of a round
+    ***
+    
+    ***StartRound***
+    ***
+    //Code to execute when a round is started
+    ***
+    
+    ***Playloop***
+    ***
+    //Main loop where the code is executed through the duration of the round
+    ***
+    
+    ***EndRound***
+    ***
+    //Code to execute at the end of the round
+    ***
+    
+    ***EndMap***
+    ***
+    //Code to execute at the end of a match/map
+    ***
+    
+    
+    // ---------------------------------- //
+    // Functions
+    // ---------------------------------- //
+    List of the functions of the gamemode
+```
 
-If all goes right you should now see your map with a top overview. The script we wrote earlier is the minimal code to have a server running. You can press F12 to open the script editor.
+We'll explain each part of the script in the next sections but please note first that the `***StartServer***` code are called "Labels". An explanation of the labels is given in the excellent blog post of Steffen, a very active scripter of the community, here (among others explanations about others things in ManiaScript): http://blog.steeffeen.com/2013/10/labels/
 
-![Hello world script](./img/hello-world-script.png)
+### **Library**
+```c++
+    #Extends "Modes/ShootMania/ModeBase.Script.txt"
+    
+    #Const	CompatibleMapTypes	"MeleeArena"
+    #Const	Version				"1.0.0"
+    #Const	ScriptName			"MyScript.Script.txt"
+    
+    #Include "Libs/Nadeo/Settings.Script.txt" as Settings
+    #Include "TextLib" as TextLib
+    #Include "MathLib" as MathLib
+    #Include "Libs/Nadeo/ShootMania/SM.Script.txt" as SM
+    #Include "Libs/Nadeo/ShootMania/Score.Script.txt" as Score
+    #Include "Libs/Nadeo/Message.Script.txt" as Message
+```
+    
+This part is used to load all the library required and basic information for the gamemode. `ModeBase` is the most important part because it'll allow you to divide the gamemode for each state of the game and also to have access to all basic functions and variables for a game script.
 
-Let's see in detail how it works.
+The `CompatibleMapTypes` constant indicate which type(s) of maps is usable with your script. It can be useful if your mode require a specific type or number of block (for example at least two spawns, with a pole in Royal)
 
-`#RequireContext CSmMode` or `#RequireContext CTmMode`
+`Version` is... well the version of your script, you can format it as you want.
 
-When you create a script you must define what type of script it is. This is what this line is doing. We saw earlier that different script contexts exist: game mode, map type, map editor plugin and ManiaPlanet plugin. For each of these types, you have to require a specific context.
-For a game mode you can choose between `CSmMode` for a ShootMania mode or `CTmMode` for TrackMania. If it is a map type, you'll have to type `CSmMapType` or `CTmMapType` depending on the game you're writing your script for. For a map editor plugin it's `CEditorPlugin` and a ManiaPlanet plugin `CManiaplanetPlugin`.
-It's important to define a context for your script because you don't need the same functionalities for a game mode or a map editor plugin. By example you should be access to the list of all the existing blocks in a plugin for the map editor but not in a game mode script.
+The `Settings` library allow you to create and use a number of parameters (fixed by you and used by the server owner) on your script like the duration of a round or the number of eliminatations to do to win.
 
-`#Include "Libs/Nadeo/Mode.Script.txt" as Mode`
+All `#Include` lines indicate that we want to load a library to the script. A library is a collection of functions/variables which contain script mode to do a specific task (like handling the message, manipulate the player scores/scoretable and more). You can also declare a custom library if you have made one and need it for your gamemode. It's particularly useful when you have to use the same block of code in several gamemode.
 
-Here we include what we call a library. Often when you write a script you do repetitive things. By example in a game mode you always have to load and unload maps. To do this you have to write 10 lines of code to check if a map is already loaded, start the new map, wait for the end of the loading, etc. Same thing for the unloading. To avoid the trouble of copy-pasting these 10 lines of code in all your game mode we write our recipe to load and unload the maps once and for all in an external file called a library.
-Once it's done we don't have to write 10 lines of code anymore to load a map. We just have to include our library in our game mode like we saw above and we execute our loading recipe by calling its name. That's exactly what these lines do:
+### Constants
 
-`Mode::LoadMap();` and `Mode::UnloadMap();`
+```c++
+    // ---------------------------------- //
+    // Constants
+    // ---------------------------------- //
+     #Const ConstVar ConstValue
+```
 
-It can be translated as: "open the mode library and execute the load map or unload map recipe".
+The constants are a type of variable where you stock a value that will not change during the game and will be accessible anywhere in your script. Usually in these variable you'll keep settings which are non-modifiable by the players/server owner like the number maximum of a player (for example), the list of objects used in the script, the id of the classes, the number minimum of players required for the script, etc...
 
-    main() {
-        [...]
+Declaring a constant variable doesn't need a comma (;) at the end of the line.
+
+### Globales
+
+```c++
+    // ---------------------------------- //
+    // Globales
+    // ---------------------------------- //
+    declare Text GlobalVar;
+```
+
+Globales are like the constants at the difference that you can modify their value during the game and that you must set a type when you declare (create) them.
+
+### "Body" of the Script
+And now we attack the main dish of the script, the labels corresponding to each state of a game.
+
+> **Note:** Not all the parts are mandatory except `Playloop` and `EndRound` or `EndMap` (one of them at least)
+
+#### StartServer
+
+```c++
+    ***StartServer***
+    ***
+    //Code to execute when the server is started
+    ***
+```
+In this block you'll set everything that needs to be set up at the start of the server at risk of not work properly during a game. Usually it's used to build the scoretable, activate the team mode (or not) or listing all the `Actions` (like custom weapons or forced skins) which will be used in the script.
+
+#### StartMap
+
+```c++
+    ***StartMap***
+    ***
+    //Code to execute when a map is loaded
+    ***
+```
+In this part you'll initialize (usually) all the variables which are used to set up a match. It's the place where you reset the global score, setting up variables where will be used during the whole game for example.
+
+
+#### InitRound
+
+```c++
+    ***InitRound***
+    ***
+    //Code to execute before the beginning of a round
+    ***
+```
+This is the code that you need to execute prior the start of a round, it could be reset the score of a player/team (other than the global score), custom stats, setting up a gameplay sequence, etc...
+Note that this section is not mandatory to have your script working.
+
+#### StartRound
+
+```c++
+    ***StartRound***
+    ***
+    //Code to executed when a round is started
+    ***
+```
+This is where you usually setting up few others variables as well as creating the items required to the execution of the script (if needed at the start of the round).
+
+#### Playloop
+
+```c++
+    ***Playloop***
+    ***
+    //Main loop where the code is executed through the duration of the round
+    ***
+```
+The main dish, it's inside this loop that you'll handle everything that happen during a round. From spawning a player to handle the death and more. You have also to set the victory condition(s) somewhere inside to leave the loop (and stop the game).
+
+#### EndRound
+
+```c++
+    ***EndRound***
+    ***
+    //Code to execute at the end of the round
+    ***
+```
+You enter here when you have meet your victory condition(s) and decide what to do at this moment (end the map/match or launch a new round).
+If you decide to start a new round, the script will go back at the `InitRound` section and continue the script from there.
+
+This is also the place where you destroy all the objects and bots (because you'll recreate them on the `StartRound`).
+
+#### EndMap
+
+```c++
+    ***EndMap***
+    ***
+    //Code to execute at the end of a match/map
+    ***
+```
+Usually it's used to indicate who won the match and to load the next map.
+
+### Functions
+
+```c++
+    // ---------------------------------- //
+    // Functions
+    // ---------------------------------- //
+    //Create your functions from here
+```
+If you need to create functions (repetition of the same block of code) for your game mode, you have to create them after the `EndMap` section because when the game will compile the script, it's start from the bottom to the up to check if the functions called by script really exist in the library or in the script itself.
+
+## Common variables
+Now we can almost start the "real" work, just a bit of explanation about the type of variables existing in ManiaScript as it can change slighty between programming language.
+
+Here is a list of the common types of variables in ManiaScript (or how to declare them):
+
+Type        | ManiaScript type  | Example
+---------   | ----------------- | -------
+Integer     | Integer           | 1
+Real / Float| Real              | 1.5 (or 1. for a "round" number, the decimal is mandatory)
+Text        | Text              | 'Im a text'
+Boolean     | Boolean           | True
+Ident       | Ident             | (see below)
+Array       | []                | Player[] (table of Players)
+
+An ident is special kind of variable, it's used to point to an asset (others that images/sound) like a bullet create in the ***ActionMaker***, or a ***skin*** or also an ***aura*** for example.
+
+## Setting up the script
+
+```c++
+    #Extends "Modes/ShootMania/ModeBase.Script.txt"
+    
+    #Const	CompatibleMapTypes	"MeleeArena"
+    #Const	Version				"2013-06-24"
+    #Const	ScriptName			"Melee_Tutorial.Script.txt"
+    
+    #Include "Libs/Nadeo/Settings.Script.txt" as Settings
+    #Include "TextLib" as TextLib
+    #Include "MathLib" as MathLib
+    #Include "Libs/Nadeo/ShootMania/SM.Script.txt" as SM
+    #Include "Libs/Nadeo/ShootMania/Score.Script.txt" as Score
+    #Include "Libs/Nadeo/Message.Script.txt" as Message
+    #Include "Libs/Nadeo/Interface.Script.txt" as Interface
+    #Include "Libs/Nadeo/Layers.Script.txt" as Layers
+    
+    // ---------------------------------- //
+    // Settings
+    // ---------------------------------- //
+    #Setting S_TimeLimit	600 as _("Time limit")		///< Time limit on a map
+    #Setting S_PointLimit	25	as _("Points limit")	///< Points limit on a map
+    
+    // ---------------------------------- //
+    // Globales
+    // ---------------------------------- //
+    declare Ident[]	G_SpawnsList;	 ///< Id of all the BlockSpawns of the map
+	declare Ident	G_LatestSpawnId;	///< Id of the last BlockSpawn used
+```
+At the beginning of your script, you have to tell to the script to look into the `ModeBase` for the basic working of the script.
+
+Then talk about the different libraries:
+
+* Message: You handle all the system message thanks to library (like: "A player killed you!").
+* SM: Handle some general function like the spawn of the players
+* Score: It's used to set the score to the players (as its name said)
+
+Below the library you have the settings that players set when they create a server.
+
+## Initializing the server
+For a deathmatch mode (which is very simple), you have only to deactivate the team mode at the start of the server.
+
+```c++
+    ***StartServer***
+    ***
+    UseClans = False;
+    
+    ST2::SetStyle("LibST_SMBaseSolo");
+    ST2::SetTeamsMode(False);
+    ST2::SetTeamsScoresVisibility(False);
+    ST2::Build("SM");
+    ***
+```
+We tell the script that's a FFA (Free For All) mode and we build the default scoretable.
+ST2, ScoresTable2 library, is loaded by the ModeBase.
+
+## Setting up the parameters for the match/map
+
+```c++
+    ***StartMap***
+    ***
+    G_SpawnsList.clear();
+    G_LatestSpawnId = NullId;
+```
+    
+First we clear the table containing the list of the spawns on the map and we reset the Id of the last spawn used.
+    
+```c++
+    // ---------------------------------- //
+    // Init bases
+    foreach (Base in Bases) {
+    	Base.Clan = 0;
+    	Base.IsActive = True;
     }
-
-The `main()` block is the primary part of your script. When a server loads a script it starts by reading all the lines beginning with a `#` and after executes the code between the opening and closing braces of `main()`.
-
-    while (!ServerShutdownRequested) {
-        yield;
+```
+    
+Then we indicate to initialize each base possibly present in the map to use the neutral (FFA) team number (so 0).
+    
+```c++
+    // ---------------------------------- //
+    // Init scores
+    MB_Sleep(1); ///< Allow the scores array to be sorted
+    foreach (Score in Scores) {
+    	declare Integer LastPoint for Score;
+    	LastPoint = 0;
     }
+```
+    
+The score of the players are reset. In this portion of code, we call the class `Score` which stores all the points won by the players during a round (or match).
+It's also with this class that you can put the scores of the players into the scoretable automatically.
 
-The ManiaPlanet engine uses different components: graphic, physic, script, ... Each of these components have to take turn to execute what they have to do. So when the script engine takes its turn we have to say when we have finished our work to let the other components do their job. This is the role of the `yield;` instruction. Each time you see it, the script stops, hand over to the other components and when it's once again its turn resumes on the same `yield;`.
+```c++
+    declare LeadId = NullId;
+    if (Scores.existskey(0)) LeadId = Scores[0].User.Id;
+```
+    
+The Id of the lead player is also reset as the match hasn't started yet.
+    
+```c++
+    declare CurrentPointLimit = S_PointLimit;
+```
+    
+We put in a variable the Point Limit decided by the owner of the server (or by vote).
+    
+```c++
+    // ---------------------------------- //
+    StartTime = Now;
+    EndTime = StartTime + (S_TimeLimit * 1000);
+    UIManager.UIAll.UISequence = CUIConfig::EUISequence::Playing;
+    ***
+```
+We setting up the countdown and the duration of the round/match. Fix a duration is good is most cases because it prevents the round to last too long.
 
-Around the `yield;` we can see a `while` loop. All the code between the opening and closing brace is executed in loop until we decide to stop. Here we use a `while` loop with a condition on `ServerShutdownRequested`. In brief we're asking the server to execute the `yield;` instruction in loop until someone requests to shutdown the server. When it is the case we stop the loop, call `UnloadMap()` from the mode library and exit the `main()` area. When the script quits the `main()` braces the server stops.
+## Proceedings of the round
+It's now time to write what's going on during a round.
 
-To sum it up the script does this in the following order:
+```c++
+    ***PlayLoop***
+    ***
+    foreach (Event, PendingEvents) {
+```
+    
+We look in each event happening during the round. When an event is triggered, according what we want to do, we do some treatments (only a very few events are listed below, the basic ones).
 
-- Define that the script is a game mode
-- Include the `Mode` library
-- Execute the main block code
-- Load the map
-- Play until someone requests to stop the server
-- Unload the map
-- Close the server
+```c++
+    	// ---------------------------------- //
+    	// On armor empty
+    	if (Event.Type == CSmModeEvent::EType::OnArmorEmpty) {
+    		if (Event.Shooter == Event.Victim || Event.Shooter == Null) {
+    			Event.Victim.Score.Points -= 1;
+    		} else {
+    		    Event.Victim.Score.Points -= 1;
+                Event.Shooter.Score.Points += 1;
+    		}
+    		XmlRpc::OnArmorEmpty(Event);
+    		PassOn(Event);
+    	} 
+```
+    	
+When a player loses all his armors (when he is eliminated), we remove him one point. Then with `PassOn(Event)` we tell to the server that the event has been processed. We give also one point to the shooter if it's not a suicide.
+    	
+```c++
+    	// ---------------------------------- //
+    	// On hit
+    	else if (Event.Type == CSmModeEvent::EType::OnHit) {
+```
+    	
+Now we check when a player is hit by a projectile (from a Storm weapon).
+    	
+```c++
+    		if (Event.Shooter == Event.Victim) {
+    			Discard(Event);
+```
+    			
+Basically if the player hit himself (with the `Arrow` or the `Nucleus` for example), we tell the server to disregard this event (and so to ignore all the damage and effects) with the `Discard(Event)` instruction.
+    			
+```c++
+    		} else {
+    			Event.Victim.Armor -= Event.Damage;
+    			
+    			XmlRpc::OnHit(Event);
+    			PassOn(Event);
+    		}
+    	} 
+```
+    	
+But if the sender and the receiver are different, we remove the number of armor (life) to the victim (the number of damage is known with the variable `Event.Damage` which can be tempered if you want to modify the damage received.
+    	
+```c++
+    	// ---------------------------------- //
+    	// On player request respawn
+    	else if (Event.Type == CSmModeEvent::EType::OnPlayerRequestRespawn) {
+    		Event.Player.Score.Points -= 1;
+    		XmlRpc::OnPlayerRequestRespawn(Event);
+    		PassOn(Event);
+    	} 
+```
+    	
+If a player presses the backspace button (the default one to respawn), we remove him one point.
+    	
+```c++
+    	// ---------------------------------- //
+    	// Others
+    	else {
+    		PassOn(Event);
+    	}
+    }
+```
+    
+And we validate all others events in their default treatment.
+    
+```c++
+    // ---------------------------------- //
+    // Spawn players
+    foreach (Player in Players) {
+    	if (Player.SpawnStatus == CSmPlayer::ESpawnStatus::NotSpawned && !Player.RequestsSpectate) {
+    		MeleeSpawnPlayer(Player);
+    	}
+    }
+```
+    
+Outside of the loop of the events, there is some work to do. First we have to let the players spawn if they are eliminated.
+To do so, we create a loop which checks all the players' status. If a player is eliminated (by checking his status thanks to `CSmPlayer::ESpawnStatus::NotSpawned`), we ask the script to execute the function `MeleeSpawnPlayer` which will be explained a bit later).
+    
+```c++
+    // ---------------------------------- //
+    // Play sound and notice if someone is taking the lead
+    if (Scores.existskey(0) && Scores[0].User.Id != LeadId) {
+    	LeadId = Scores[0].User.Id;
+    	Message::SendBigMessage(TextLib::Compose(_("$<%1$> takes the lead!"), Scores[0].User.Name), 3000, 1, CUIConfig::EUISound::PhaseChange, 1);
+    }
+```
+    
+We can also display a message when a player take the lead. We have to test if the player with the highest score is the same player than registered before (else we don't save the new leader).
+If it's the case, we save the new leader and we display a message to all the player to warn the players that one of them has taken the lead.
+    
+```c++
+    Message::Loop();
+    
+    // ---------------------------------- //
+    // victory conditions
+    declare IsMatchOver = False;
+    if (Now > EndTime) IsMatchOver = True;
+    foreach (Player in Players) {
+    	if (Player.Score != Null && Player.Score.Points >= CurrentPointLimit) IsMatchOver = True;
+    }
+    
+    if (IsMatchOver) MB_StopMap = True;
+    ***
+```
+And we finish by verifying the victory conditions to end the match.
+First we check if the timelimit is reached, if so, the match is ended. Else we check if the pointlimit has been reached and if so, we end the match too.
+
+You can stop the round with the instruction `MB_StopRound = True;` and stop the match (and so going to the next map) by using `MB_StopMap = True;`. If you use one of these instructions, the script will go directly into the `EndRound` section.
+
+We have finish to treat the playloop, but the script isn't quite finished yet.
+
+## Ending the match
+We have some code to execute in the EndMap section before having a "complete" loop of code for a match.
+This section is executed when one of the victory condition is validated.
+
+```c++
+    ***EndMap***
+    ***
+    EndTime = -1;
+    Score::RoundEnd();
+    Score::MatchEnd(True);
+    
+    // ---------------------------------- //
+    // End match sequence
+    declare CUser Winner <=> Null;
+    declare MaxPoints = 0;
+    foreach (Score in Scores) {
+    	if (Score.Points > MaxPoints) {
+    		MaxPoints = Score.Points;
+    		Winner <=> Score.User;
+    	} else if (Score.Points == MaxPoints) {
+    		Winner <=> Null;
+    	}
+    }
+```
+    
+We check who is the best player (by his score).
+    
+```c++
+    foreach (Player in Players) {
+    	if (Player.User != Winner) UnspawnPlayer(Player);
+    	Interface::UpdatePosition(Player);
+    }
+```
+    
+We unspawn all the players except the player who's won and we update the interface (and so the scoretable).
+    
+```c++
+    MB_Sleep(1000);
+```
+    
+We put the script in pause for 1000 milliseconds (1 second).
+    
+```c++
+    Message::CleanBigMessages();
+```
+    
+We erase all the messages displayed on the interface of the players.
+    
+```c++
+    UIManager.UIAll.BigMessageSound = CUIConfig::EUISound::EndRound;
+```
+    
+We play the sound of the end of the round.
+    
+```c++
+    UIManager.UIAll.BigMessageSoundVariant = 0;
+    if (Winner != Null) {
+    	UIManager.UIAll.BigMessage = TextLib::Compose(_("$<%1$> wins the match!"), Winner.Name);
+    } else {
+    	UIManager.UIAll.BigMessage = _("|Match|Draw");
+    }
+    MB_Sleep(2000);
+    
+    UIManager.UIAll.UISequence = CUIConfig::EUISequence::EndRound;
+    UIManager.UIAll.ScoreTableVisibility = CUIConfig::EVisibility::ForcedVisible;
+    MB_Sleep(5000);
+```
+
+We put the players into the EndRound sequence on the level of the interface (so everything will be hidden (or will not work like when you play) except the scoretable and few others things like the chat).
+And we force the visibility of the scoretable to let the players watch their scores and those of the opponents.
+    
+```c++
+    UIManager.UIAll.UISequence = CUIConfig::EUISequence::Podium;
+    while(!UIManager.UIAll.UISequenceIsCompleted) {
+    	MB_Yield();
+    }
+```
+    
+If a podium is present on the map (if not the code will be ignored), we play the podium sequence.
+    
+```c++
+    UIManager.UIAll.ScoreTableVisibility = CUIConfig::EVisibility::Normal;
+    UIManager.UIAll.BigMessage = "";
+    ***
+```
+And finally we revert back the behaviour of the scoretable and the content of the message displayed on the screen.
+
+### The functions
+But the script is not over yet, we have to create the function which will spawn the players during the round.
+
+```c++
+    Void MeleeSpawnPlayer(CSmPlayer _Player) {
+    	if (G_SpawnsList.count == 0) {
+    		foreach (PlayerSpawn in MapLandmarks_PlayerSpawn) G_SpawnsList.add(PlayerSpawn.Id);
+    	}
+```
+    	
+We list all the spawns of the map (I mean the block spawn put by the map creator) if the list is empty.
+    	
+```c++
+    	declare SpawnId = NullId;
+    	while (True) {
+    		SpawnId = G_SpawnsList[MathLib::Rand(0, G_SpawnsList.count - 1)];
+    		if (SpawnId != G_LatestSpawnId) break;
+    		if (G_SpawnsList.count == 1) break;
+    	}
+```
+    	
+We choose a spawn randomly which will be used by the player, but it won't the last spawn used (to prevent to have a player spawning in the same spawn of the last player in few seconds).
+    	
+```c++
+    	G_LatestSpawnId = SpawnId;
+    	SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId]);
+```
+
+And now we spawn the player!
+
+```c++
+    	declare Removed = G_SpawnsList.remove(SpawnId);
+    }
+```
+Then we remove the spawn of the list as it has been used.
+
+Now you've your first working gamemode ready! Feel free to launch a local network server to test it! ^_^
+
+## Download the source of the mode
+You can download the source of the gamemode on this [link](./assets/Melee_Tuto.Script.txt).
+
+## Learn more about the ManiaScript
+If you want to learn more things about the ManiaScript, I invite you to check [this page](./going-further-with-maniascript.html).
+
+
+  [1]: http://maniaplanet.github.io/documentation/maniascript/tuto/img/script-editor.png
+  [2]: http://maniaplanet.github.io/documentation/maniascript/tuto/img/debugger-small.png
+  [3]: http://maniaplanet.github.io/documentation/maniascript/tuto/img/debugger-big.png
