@@ -31,4 +31,4 @@ description: ManiaScript help
     - [Create a server](tuto/your-first-script.html#create-a-server)
     - [Structure of a gamemode](tuto/your-first-script.html#structure-of-a-game-mode)
     - [Download the source of the gamemode](tuto/your-first-script.html#download-the-source-of-the-mode)
-- [Learn more about the ManiaScript](tuto/your-first-script.html#learn-more-about-the-maniascript)
+- [Learn more about the ManiaScript](tuto/going-further-with-maniascript.html)
