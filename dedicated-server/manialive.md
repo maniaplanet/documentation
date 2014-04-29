@@ -18,7 +18,7 @@ You should have PHP installed with the cURL extension.
 
 ### Installation
 
-You can download latest ManiaLive version on the [project website](https://code.google.com/p/manialive/downloads/list).
+You can download latest ManiaLive version on the [project website](https://github.com/maniaplanet/manialive).
 
 Command Line
 ------------
