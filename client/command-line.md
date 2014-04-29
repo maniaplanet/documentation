@@ -1,11 +1,8 @@
 ---
 layout: static
 title: Command Line
-description: Maniaplanet client command line documentation
+description: Maniaplanet.exe client command line 
 ---
-
-Maniaplanet client command line
-===============================
 
 <table>
   <tr>

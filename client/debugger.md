@@ -4,8 +4,6 @@ title: ManiaPlanet debugger
 description: How to use ManiaPlanet debugger
 ---
 
-# ManiaPlanet debugger
-
 1. To start the debugger, press `Ctrl + F7`
 You will have an histogram in the middle of the screen, and a little window in the top left corner:
 ![Debugger](./img/debug1.jpg)

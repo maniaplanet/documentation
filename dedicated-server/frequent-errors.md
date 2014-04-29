@@ -1,11 +1,9 @@
 ---
 layout: static
-title: Frequent errors dedicated
+title: Frequent errors
 description: FAQ
 ---
 
-ManiaPlanetServer frequent errors
-=================================
 
 ## ERROR: New mode unknown.
 
@@ -17,8 +15,6 @@ Your MatchSettings file is specifying an unknown mode, change it for the value `
 <game_mode>0</game_mode>
 ...
 ```
-
-
 
 ## ERROR: Corrupted Login.
 

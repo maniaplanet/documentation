@@ -4,7 +4,6 @@ title: Dedicated server tools
 description: FAQ
 ---
 
-## Tools
 <table>
 <tr>
 <th>ToolName</th><th>Author</th><th>Info/Download</th>

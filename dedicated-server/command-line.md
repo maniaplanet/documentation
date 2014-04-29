@@ -1,11 +1,9 @@
 ---
 layout: static
-title: Command line options
+title: ManiaPlanet dedicated server command line
 description: FAQ
 ---
 
-ManiaPlanet dedicated server command line
-=========================================
 
 <table>
   <tr>

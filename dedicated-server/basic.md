@@ -1,11 +1,9 @@
 ---
 layout: static
 title: Basic dedicated guide
-description: Quick start
+description: Quick start to make a dedicated server on ManiaPlanet
 ---
 
-Quick Start
------------
 [Dedicated server package contains both the Linux and the Windows versions of the dedicated server][class:note].
 
 Using Debian/Ubuntu? You can use our [APT repository](../tools/apt.html).

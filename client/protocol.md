@@ -4,9 +4,6 @@ title: maniaplanet:// protocol
 description: maniaplanet:// protocol
 ---
 
-ManiaPlanet protocol
-====================
-
 command 												| description
 --------------------------------------------------------|----------------------------
 maniaplanet://#join=serverlogin@TITLEID					| Join a specific server

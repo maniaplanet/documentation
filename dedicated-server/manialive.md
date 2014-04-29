@@ -4,9 +4,6 @@ title: ManiaLive quick start
 description: ManiaLive - ManiaPlanet server  controller
 ---
 
-ManiaLive
-=========
-
 ManiaLive is ManiaPlanet server controller written in PHP
 
 QuickStart

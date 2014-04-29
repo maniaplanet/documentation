@@ -1,11 +1,18 @@
 ---
 layout: static
-title: Start a lobby
+title: Start a lobby (deprecated)
 description: Start a lobby using ManiaLive
 ---
 
 How to start a lobby ?
 ======================
+
+***
+
+This method is deprecated. You should check the [MatchMaking](matchmaking.html).
+
+***
+
 
 A lobby is composed of multiple ManiaPlanet servers connected via (multiple instances of) the server controller ManiaLive.
 Players can enjoy the game while waiting for a match to start. When a match is ready, they are sent to the match server. As soon as the match is finished, they are sent back to the lobby to play another match.

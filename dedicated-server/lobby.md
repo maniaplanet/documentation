@@ -7,6 +7,12 @@ description: How to run a ManiaPlanet lobby
 Lobby
 =====
 
+***
+
+This method is deprecated. You should check the [MatchMaking](matchmaking.html).
+
+***
+
 To run a lobby, you can use our [ManiaLive plugin](start-a-combo-lobby.html) which bundle all the functionnalities you need. 
 
 ## Ladder
