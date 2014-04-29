@@ -29,4 +29,6 @@ description: ManiaScript help
     - [Create a basic script](tuto/your-first-script.html#create-a-basic-script)
     - [Create a map](tuto/your-first-script.html#create-a-map)
     - [Create a server](tuto/your-first-script.html#create-a-server)
-    - [Script review](tuto/your-first-script.html#script-review)
+    - [Structure of a gamemode](tuto/your-first-script.html#structure-of-a-game-mode)
+    - [Download the source of the gamemode](tuto/your-first-script.html#download-the-source-of-the-mode)
+- [Learn more about the ManiaScript](tuto/your-first-script.html#learn-more-about-the-maniascript)
