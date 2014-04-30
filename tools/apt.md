@@ -20,7 +20,7 @@ Add the following line to /etc/apt/sources.list.
 
 (Optional) Import our GPG key
 
-`$ sudo apt-key adv --recv-keys --keyserver subkeys.pgp.net 4A46CD4DD71D8F6F`
+`$ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4A46CD4DD71D8F6F`
 
 Install a package
 
