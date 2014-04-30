@@ -17,6 +17,7 @@ This lib doesn't have a `Load()` and  `Unload()` functions and can be used as is
 If the MapType used to validate the Map saved a version number in the map you can use the `GetMapTypeVersion()` function to retrieve it. The function doesn't take any parameter and returns the version as an Integer.
 
 Then you have several function to access the landmarks in the map:
+
 * `CSmMapLandmark GetLandmark(Text _Tag, Integer _Order)`
 * `CSmMapLandmark GetLandmarkBase(Text _Tag, Integer _Order)`
 * `CSmMapLandmark GetLandmarkGate(Text _Tag, Integer _Order)`
@@ -29,6 +30,7 @@ Then you have several function to access the landmarks in the map:
 All this functions will return the first landmark matching corresponding Component (Base, Sector, Gauge, ...), Tag and Order. So if several landmarks share the same properties, only the first in the MapLandmarks array will be returned.
 
 You also have functions to get direct access to the landmarks components:
+
 * `CSmMapBase GetBase(Text _Tag, Integer _Order)`
 * `CSmMapGate GetGate(Text _Tag, Integer _Order)`
 * `CSmMapGauge GetGauge(Text _Tag, Integer _Order)`
@@ -39,6 +41,7 @@ You also have functions to get direct access to the landmarks components:
 This functions work as the ones above, but they return the first landmark component matching the criteria instead of the landmark itself.
 
 Eventually you can use this functions to now how many landmarks of each type are there on the map:
+
 * `Integer GetLandmarksCount()`
 * `Integer GetBasesCount()`
 * `Integer GetGatesCount()`

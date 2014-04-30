@@ -13,6 +13,7 @@ This new class represent a kind of meta object that can contains several compone
 ## Deprecated
 
 All this classes are now considered deprecated and will be removed from the ManiaScript API at some points (in the far future).
+
 * `CSmBase`
 * `CSmBlock`
 * `CSmBlockPole`
@@ -46,6 +47,7 @@ All the components of a landmark are optional. In the above example you'll find 
 So when going through a landmark array, be sure to check if the component you're trying to access is `Null` or not before using it.
 
 The default ShootMania blocks have the following components:
+
 * Pole and checkpoint: `Base`, `Gauge`, `Sector`
 * Gate : `Base`, `Gauge`, `Sector`, `Gate`
 * Spawn : `Base`, `PlayerSpawn`

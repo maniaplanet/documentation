@@ -6,6 +6,7 @@ description: List of tools
 
 * [ManiaPlanet competition manager](competition.html)
 * [ManiaPlanet APT repository](apt.html)
+* [Clublinks](clublinks.html)
 
 ## Developper tools
 
