@@ -10,6 +10,8 @@ A dedicated server application which allows you to run a server for any ManiaPla
 * [Command line](command-line.html)
 * [Frequent errors](frequent-errors.html)
 * [Matchmaking](matchmaking.html)
+* [Scores table customization](customize-scores-table.html)
+* [Game mode settings](settings-list.html)
 
 # Dedicated tools
 
