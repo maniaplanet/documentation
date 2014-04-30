@@ -8,6 +8,17 @@ description: ManiaScript help
 
 * [How to generate the documentation](general/generate-doc.html)
 * [Useful links](general/links.html)
+* [Landmarks in ManiaScript](general/landmarks.html)
+
+# Libraries
+
+* [CustomUI](libraries/library-customui.html)
+* [Manialink](libraries/library-manialink.html)
+* [Markers](libraries/library-markers.html)
+* [MiniMap2](libraries/library-minimap2.html)
+* [ScoresTable2](libraries/library-scorestable2.html)
+* [ShootMania/AFK](libraries/library-afk.html)
+* [ShootMania/Map](libraries/library-shootmania-map.html)
 
 # Tutorial
 

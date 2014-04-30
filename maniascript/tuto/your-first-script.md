@@ -64,6 +64,7 @@ Let's see in detail how it works.
 
 When you create a script you must define what type of script it is. This is what this line is doing. We saw earlier that different script contexts exist: game mode, map type, map editor plugin and ManiaPlanet plugin. For each of these types, you have to require a specific context.
 For a game mode you can choose between `CSmMode` for a ShootMania mode or `CTmMode` for TrackMania. If it is a map type, you'll have to type `CSmMapType` or `CTmMapType` depending on the game you're writing your script for. For a map editor plugin it's `CEditorPlugin` and a ManiaPlanet plugin `CManiaplanetPlugin`.
+
 It's important to define a context for your script because you don't need the same functionalities for a game mode or a map editor plugin. By example you should be access to the list of all the existing blocks in a plugin for the map editor but not in a game mode script.
 
 `#Include "Libs/Nadeo/Mode.Script.txt" as Mode`
