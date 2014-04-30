@@ -1,6 +1,8 @@
 Technical Documentation
 =======================
 
+[![Build Status](https://travis-ci.org/maniaplanet/documentation.svg?branch=gh-pages)](https://travis-ci.org/maniaplanet/documentation)
+
 This project is meant to store technical documentations for ManiaPlanet.
 
 See online: http://maniaplanet.github.io/documentation/
