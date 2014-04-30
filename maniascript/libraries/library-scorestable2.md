@@ -33,28 +33,40 @@ Now let's take a quick look on all the functions available in the library.
 
 # Functions
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void Load()
 
 Load the library, must be called once at the beginning of the script
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void Unload()
 
 Unload the library, must be called once at the end of the script
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void Reset()
 
 Reset the scores table to its default state
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void ClearScore(CScore _Score)
 
 Clear the custom columns values of one player
@@ -63,14 +75,20 @@ Clear the custom columns values of one player
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void ClearScores()
 
 Clear all the custom colmumns values of all players
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void DestroyCol(Text _ColId)
 
 Destroy a column
@@ -79,7 +97,10 @@ Destroy a column
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void CreateCol(Text _Id, Text _Legend, Text _DefaultValue, Real _Width, Real _Weight)
 
 Create a new column
@@ -100,7 +121,10 @@ If a column with the same id already exists, the previous column will be destroy
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetColTextStyle(Text _ColId, Text _TextStyle)
 
 Set the text style of a column
@@ -110,7 +134,10 @@ Set the text style of a column
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetColTextSize(Text _ColId, Real _TextSize)
 
 Set the text size of a column
@@ -120,7 +147,10 @@ Set the text size of a column
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetColTextAlign(Text _ColId, CMlControl::AlignHorizontal _HAlign)
 
 Set the horizontal text align of a column
@@ -130,7 +160,10 @@ Set the horizontal text align of a column
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetColStyle(Text _ColId, Text _TextStyle, Real _TextSize, CMlControl::AlignHorizontal _HAlign)
 
 Set the text style, size and horizontal align of a column
@@ -142,7 +175,10 @@ Set the text style, size and horizontal align of a column
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetColScript(Text _ColId, Text _Script)
 
 Assign a script to a column, this script will be used to fill the column 
@@ -158,7 +194,10 @@ You can check the CreateCol() function for more examples
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 CUILayer GetLayer()
 
 Get the scores table layer
@@ -167,35 +206,50 @@ Get the scores table layer
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void Attach()
 
 Attach the scores table layer
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void Detach()
 
 Detach the scores table layer
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void Show()
 
 Show the scores table layer
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void Hide()
 
 Hide the scores table layer
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetColLegend(Text _ColId, Text _Legend)
 
 Set the legend of a column
@@ -208,7 +262,10 @@ to add a space for the legends at the top of the scores table
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetColWidth(Text _ColId, Real _Width)
 
 Set the width of a column
@@ -218,7 +275,10 @@ Set the width of a column
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetColWeight(Text _ColId, Real _Weight)
 
 Set the weight of a column
@@ -230,7 +290,10 @@ The smallest numbers are on the left and the biggest on the right
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetColDefaultValue(Text _ColId, Text _Value)
 
 Set the default value of a column
@@ -240,7 +303,10 @@ Set the default value of a column
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetColValue(Text _ColId, CScore _Score, Text _Value)
 
 Set the value of a column for a player
@@ -251,7 +317,10 @@ Set the value of a column for a player
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetFooterText(Text _Value)
 
 Set the text displayed in the footer
@@ -260,7 +329,10 @@ Set the text displayed in the footer
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetFooterScript(Text _Script)
 
 Override the default script used to update the footer text
@@ -269,7 +341,10 @@ Override the default script used to update the footer text
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetSize(Vec2 _HeaderSize, Vec2 _TableSize, Vec2 _FooterSize)
 
 Set the sizes of the different scores table sections
@@ -281,7 +356,10 @@ Use a negative value to not modify a size
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetPos(Vec3 _Pos)
 
 Set the position of the scores table
@@ -290,7 +368,10 @@ Set the position of the scores table
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetScale(Real _Scale)
 
 Change the global scale of the scores table
@@ -299,7 +380,10 @@ Change the global scale of the scores table
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetFormat(Integer _ColsNb, Integer _LinesNb)
 
 Set the number of columns and lines in the players table
@@ -309,7 +393,10 @@ Set the number of columns and lines in the players table
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetTabName(Text _TabName)
 
 Set the name of the tab (used by the TabsServer.Script.txt library)
@@ -318,7 +405,10 @@ Set the name of the tab (used by the TabsServer.Script.txt library)
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetTextScale(Real _Scale)
 
 Change the global scale of the text in the scores table
@@ -328,7 +418,10 @@ Change the global scale of the text in the scores table
 
 
 The background image is displayed behind all the content of the scores table.
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetBackgroundFilePath(Text _ImgPath)
 
 Set the path to the background image of the scores table
@@ -337,7 +430,10 @@ Set the path to the background image of the scores table
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetBackgroundProperties(Vec2 _Pos, Vec2 _Size)
 
 Set the background position and size of the scores table
@@ -347,7 +443,10 @@ Set the background position and size of the scores table
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetBackgroundColor(Text _Color)
 
 Colorize the background. This function uses the colorize property,
@@ -357,7 +456,10 @@ so your background picture must use pure green.
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetBackgroundImage(Text _ImgPath, Vec2 _Pos, Vec2 _Size)
 
 Set the file path, position and size of the scores table background
@@ -368,7 +470,10 @@ Set the file path, position and size of the scores table background
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetBackgroundImage(Text _ImgPath, Vec2 _Pos, Vec2 _Size, Text _Color)
 
 Set the file path, position, size and color of the scores table background
@@ -380,7 +485,10 @@ Set the file path, position, size and color of the scores table background
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetBackgroundCollection(Text[Text] _Collection)
 
 Create a group of background to use depending on 
@@ -392,7 +500,10 @@ eg: set different backgrounds for Canyon, Valley, Stadium, ...
 
 
 The foreground image will be display over the content of the scores table.
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetForegroundFilePath(Text _ImgPath)
 
 Set the path to the foreground image of the scores table
@@ -401,7 +512,10 @@ Set the path to the foreground image of the scores table
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetForegroundProperties(Vec2 _Pos, Vec2 _Size)
 
 Set the foreground position and size of the scores table
@@ -411,7 +525,10 @@ Set the foreground position and size of the scores table
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetForegroundColor(Text _Color)
 
 Colorize the foreground. This function uses the colorize property,
@@ -421,7 +538,10 @@ so your background picture must use pure green.
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetForegroundImage(Text _ImgPath, Vec2 _Pos, Vec2 _Size, Text _Color)
 
 Set the file path, position and size of the scores table foreground
@@ -433,7 +553,10 @@ Set the file path, position and size of the scores table foreground
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetForegroundImage(Text _ImgPath, Vec2 _Pos, Vec2 _Size)
 
 Set the file path, position and size of the scores table foreground
@@ -444,7 +567,10 @@ Set the file path, position and size of the scores table foreground
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetForegroundCollection(Text[Text] _Collection)
 
 Create a group of foreground to use depending 
@@ -456,7 +582,10 @@ eg: set different foreground for Canyon, Valley, Stadium, ...
 
 
 If there's green in your image, it will be colorized automatically to the color of the corresponding team.
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetTeamFilePath(Integer _Team, Text _ImgPath)
 
 Set the path to the team image of the scores table
@@ -466,7 +595,10 @@ Set the path to the team image of the scores table
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetTeamProperties(Integer _Team, Vec2 _Pos, Vec2 _Size)
 
 Set the team image position and size in the scores table
@@ -477,7 +609,10 @@ Set the team image position and size in the scores table
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetTeamImage(Integer _Team, Text _ImgPath, Vec2 _Pos, Vec2 _Size)
 
 Set the pictures colorizable by the teams
@@ -489,7 +624,10 @@ Set the pictures colorizable by the teams
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetTeamCollection(Integer _Team, Text[Text] _Collection)
 
 Create a group of team images to use depending on 
@@ -502,7 +640,10 @@ eg: set differents foreground for Canyon, Valley, Stadium, ...
 
 
 The player card images are displayed behind the frame of each player.
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetPlayerCardImages(Text _Square, Text _Left, Text _Right)
 
 Set the images used for the player cards
@@ -517,7 +658,10 @@ A valid path will replace the old one
 
 
 Use this function if you don't want to display the teams in the scores table while being in teams mode.
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetTeamsMode(Boolean _UseTeamsMode)
 
 Turn on/off the teams mode of the scores table
@@ -526,7 +670,10 @@ Turn on/off the teams mode of the scores table
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetTeamsScoresVisibility(Boolean _Visible)
 
 Display or not the teams scores in the header
@@ -536,7 +683,10 @@ Used only if TeamsMode is set to true
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetRevertPlayerCardInTeamsMode(Boolean _UseRevert)
 
 Turn on/off the mirror of the player cards of the second team in teams mode
@@ -545,7 +695,10 @@ Turn on/off the mirror of the player cards of the second team in teams mode
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetModeIcon(Text _ImgPath)
 
 Set the icon of the mode in the header
@@ -556,7 +709,10 @@ Set the icon of the mode in the header
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetPlayerDarkening(Boolean _UsePlayerDarkening)
 
 Turn on/off the player darkening on unspawn
@@ -565,7 +721,10 @@ Turn on/off the player darkening on unspawn
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetPlayerInfoVisibility(Boolean _Visible)
 
 Display or not the player info in the footer
@@ -574,7 +733,10 @@ Display or not the player info in the footer
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetServerNameVisibility(Boolean _Visible)
 
 Display or not the server name in the footer
@@ -584,7 +746,10 @@ Display or not the server name in the footer
 
 
 In TrackMania Cup mode, a player above a given points limit will see its score replaced by the "Finalist" or "Winner" text.
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetUiScoresPointsLimit(Integer _PointsLimit)
 
 Send the cup points limit to the UI (used in TM Cup mode)
@@ -593,7 +758,10 @@ Send the cup points limit to the UI (used in TM Cup mode)
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void FilterLogins(Text[] _Logins)
 
 Filter the players displayed by logins
@@ -602,7 +770,10 @@ Filter the players displayed by logins
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void Build(Text _Game)
 
 Build the scores table manialink
@@ -613,7 +784,10 @@ Build the scores table manialink
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetStyle(Text _Style)
 
 Use a predefined style for the scores table
@@ -634,7 +808,10 @@ Available styles are:
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Boolean RequestStyleFromXml(Text _XmlPath)
 
 Create a request for the XML style file
@@ -645,7 +822,10 @@ Create a request for the XML style file
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Boolean WaitStyleFromXml()
 
 Wait for a response to the request
@@ -654,7 +834,10 @@ Wait for a response to the request
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Boolean SetStyleFromXml(Boolean _SafeMode)
 
 Read the XML file and set the style from it
@@ -665,7 +848,10 @@ Read the XML file and set the style from it
 {% endhighlight %}
 
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void XmlRpcLoop()
 
 Load a scores table style from an XmlRpc call

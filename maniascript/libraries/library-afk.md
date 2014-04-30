@@ -48,19 +48,28 @@ The library can be controlled through XmlRpc with the following methods and call
 
 
 # Functions
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void Load()
 
 Load the library, must be called once at the beginning of the script
 {% endhighlight %}
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void Unload()
 
 Unload the library, must be called once at the end of the script
 {% endhighlight %}
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Boolean IsAFK(CSmPlayer _Player, Integer _MaxIdleDuration, Integer _SpawnTimeMercy)
 
 Check if a player is AFK
@@ -70,7 +79,10 @@ Check if a player is AFK
 @param  _SpawnTimeMercy   Time after spawning during which one can not be considered AFK
 {% endhighlight %}
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void ManageAFKPlayers(Integer _MaxIdleDuration, Integer _SpawnTimeMercy)
 
 Try to force AFK players to spectators
@@ -79,19 +91,28 @@ Try to force AFK players to spectators
 @param  _SpawnTimeMercy   In milliSec., time after spawning during which one can not be considered AFK
 {% endhighlight %}
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void ManageAFKPlayers()
 
 Try to force AFK players to spectators using the default _MaxIdleDuration and _SpawnTimeMercy values
 {% endhighlight %}
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void AutoManageAFKPlayers()
 
 Try to force AFK players to spectators, this function use the properties defined by the script or XmlRpc
 {% endhighlight %}
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetIdleTimeLimit(Integer _Time)
 
 Update the idle time limit
@@ -99,7 +120,10 @@ Update the idle time limit
 @param  _Time   The new time limit
 {% endhighlight %}
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetSpawnTimeLimit(Integer _Time)
 
 Update the spawn mercy time
@@ -107,7 +131,10 @@ Update the spawn mercy time
 @param  _Time   The new spawn mercy time
 {% endhighlight %}
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetCheckInterval(Integer _Interval)
 
 Update the check time interval
@@ -115,7 +142,10 @@ Update the check time interval
 @param  _Interval   The new time interval
 {% endhighlight %}
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void SetForceSpec(Boolean _ForceSpec)
 
 Update the force spec value
@@ -123,7 +153,10 @@ Update the force spec value
 @param  _Interval   The new force spec value
 {% endhighlight %}
 
-{% highlight %} 
+
+
+
+{% highlight js %} 
 Void XmlRpcLoop()
 
 Manage the XmlRpc events
