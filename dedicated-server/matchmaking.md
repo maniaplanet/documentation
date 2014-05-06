@@ -8,13 +8,13 @@ description: How to make a lobby or a match server in ManiaPlanet matchmaking
 
 Since the release of the ManiaPlanet 3.0 update the previous matchmaking based on the ManiaLive server controller has been replaced by a centralized system hosted by Nadeo. 
 
-The new matchmaking system is easy to use, demand only a small amount of configuration and doesn't require any external dependency. Everything is integrated within ManiaPlanet and can be used by anybody ranging from a single player to a server hosting company. With this guide you will have a matchmaking architecture ready in a few minutes.
+The new matchmaking system is easy to use, demand only a small amount of configuration and doesn't require any external dependency. Everything is integrated within ManiaPlanet and can be used by anybody ranging from a single player to a servers hosting company. With this guide you will have a matchmaking architecture ready in a few minutes.
 
 ## For server hoster
 
 ### Installation
 
-First you need to download the latest dedicated server for your system and set it up. You can take a look on the [quick start guide](http://maniaplanet.github.io/documentation/dedicated-server/basic.html) to learn how to do it. Once your server is ready you have to select a game mode that supports the matchmaking system. Currently there are Elite and Siege but more game modes will be added with time.
+First you need to download the latest dedicated server for your system and set it up. You can take a look in the [quick start guide](http://maniaplanet.github.io/documentation/dedicated-server/basic.html) to learn how to do it. Once your server is ready you have to select a game mode that supports the matchmaking system. Currently there are Elite and Siege but more game modes will be added with time.
 
 ### Matchsettings
 
@@ -53,7 +53,7 @@ Now you can edit the relevant settings in the matchsettings file to enable the m
 |**S_LogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to let it turned off because this can quickly write huge log files.|
 |**S_LogAPIDebug**|0|Same as above, turn it on only if necessary.|
 
-The others game modes specific settings can be configured as you wish. A match can be played in BO1, BO3, ... with any number of players, etc. Just be sure that the number of players required by the match server match the number of players sent from the lobby. 
+The others game modes specific settings can be configured as you wish. A match can be played in BO1, BO3, ... with any number of players, etc. Just be sure that the number of players required by the match server matches the number of players sent from the lobby. 
 Now that your matchsettings file is ready you can associate your lobby and match servers on your player page.
 
 ### Adding a match server to your lobby
@@ -78,7 +78,7 @@ You can allow **any** login you want. If there is no lobby allowed your server c
 
 ### Conclusion
 
-You're servers are now ready. You just have to launch and join them to see the new matchmaking system in action.
+Your servers are now ready. You just have to launch and join them to see the new matchmaking system in action.
 
 ### Matchsettings Elite examples
 
