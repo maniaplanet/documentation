@@ -35,4 +35,7 @@ description: ManiaPlanet titlesIds list
   <tr>
     <td>Joust</td><td>SMStormJoust@nadeolabs</td><td>MatchSettings/SMStormJoust1.txt</td>
   </tr>
+  <tr>
+    <td>Siege</td><td>SMStormSiege@nadeolabs</td><td>MatchSettings/SMStormSiege1.txt</td>
+  </tr>
 </table>

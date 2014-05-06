@@ -862,6 +862,13 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 
 ## ShootMania
 
+### Combo
+
+#### Combo_SetTimersLayerPosition
+* Note : Change the position of the timers layer
+* String : "Combo_SetTimersLayerPosition"
+* Array :  ["151.5", "-82.", "0."] ([PosX, PosY, PosZ])
+
 ### Elite
 
 ##### MatchmakingSetOrder
