@@ -8,7 +8,7 @@ description: How to make a lobby or a match server in ManiaPlanet matchmaking
 
 Since the release of the ManiaPlanet 3.0 update the previous matchmaking based on the ManiaLive server controller has been replaced by a centralized system hosted by Nadeo. 
 
-The new matchmaking system is easy to use, demand only a small amount of configuration and doesn't require any external dependency. Everything is integrated within ManiaPlanet and can be used by anybody ranging from a single player to a servers hosting company. With this guide you will have a matchmaking architecture ready in a few minutes.
+The new matchmaking system is easy to use, demands only a small amount of configuration and doesn't require any external dependency. Everything is integrated within ManiaPlanet and can be used by anybody ranging from a single player to a servers hosting company. With this guide you will have a matchmaking architecture ready in a few minutes.
 
 ## For server hoster
 
@@ -45,9 +45,9 @@ Now you can edit the relevant settings in the matchsettings file to enable the m
 |**S_MatchmakingAPIUrl**|matchmaking.maniaplanet.com/v3|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
 |**S_MatchmakingAPIProtocol**|http|The protocol used to communicate with the API. You shouldn't have to change it if you use the default matchmaking API.|
 |**S_MatchmakingMode**|0|This is the most important setting. It can take one of these three values : 0 -> matchmaking turned off; 1 -> matchmaking turned on, use this server as a lobby server; 3 -> matchmaking turned on, use this server as a match server.|
-|**S_LobbyTimePerRound**|60|Duration of a round between the activations of the matchmaking function.|
+|**S_LobbyTimePerRound**|60|Duration (in seconds) of a round between the activations of the matchmaking function.|
 |**S_LobbyRoundPerMap**|30|Number of rounds played before going to the next map.|
-|**S_LobbyMatchmakerTime**|10|Duration of the matchmaking function. It allows the players to see with who they will play their match or cancel it if necessary.|
+|**S_LobbyMatchmakerTime**|10|Duration (in seconds) of the matchmaking function. It allows the players to see with who they will play their match or cancel it if necessary.|
 |**S_LobbyInstagib**|0|Use the Laser instead of the Rocket in the lobby.|
 |**S_LobbyDisplayMasters**|1|Display a list of Masters players in the lobby.|
 |**S_LogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to let it turned off because this can quickly write huge log files.|
