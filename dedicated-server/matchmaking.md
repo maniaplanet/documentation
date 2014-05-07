@@ -26,7 +26,7 @@ Now you can edit the relevant settings in the matchsettings file to enable the m
   [...]
   <mode_script_settings>
     <setting name="S_MatchmakingAPIUrl" type="text" value="matchmaking.maniaplanet.com/v3"/>
-    <setting name="S_MatchmakingAPIProtocol" type="text" value="http"/>
+    <setting name="S_MatchmakingAPIProtocol" type="text" value="https"/>
     <setting name="S_MatchmakingMode" type="integer" value="0"/>
     <setting name="S_LobbyTimePerRound" type="integer" value="60"/>
     <setting name="S_LobbyRoundPerMap" type="integer" value="30"/>
@@ -43,7 +43,7 @@ Now you can edit the relevant settings in the matchsettings file to enable the m
 |Setting|Default value|Description|
 |---|---|---|
 |**S_MatchmakingAPIUrl**|matchmaking.maniaplanet.com/v3|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
-|**S_MatchmakingAPIProtocol**|http|The protocol used to communicate with the API. You shouldn't have to change it if you use the default matchmaking API.|
+|**S_MatchmakingAPIProtocol**|https|The protocol used to communicate with the API. You shouldn't have to change it if you use the default matchmaking API.|
 |**S_MatchmakingMode**|0|This is the most important setting. It can take one of these three values : 0 -> matchmaking turned off; 1 -> matchmaking turned on, use this server as a lobby server; 3 -> matchmaking turned on, use this server as a match server.|
 |**S_LobbyTimePerRound**|60|Duration (in seconds) of a round between the activations of the matchmaking function.|
 |**S_LobbyRoundPerMap**|30|Number of rounds played before going to the next map.|
@@ -52,6 +52,7 @@ Now you can edit the relevant settings in the matchsettings file to enable the m
 |**S_LobbyDisplayMasters**|1|Display a list of Masters players in the lobby.|
 |**S_LogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to let it turned off because this can quickly write huge log files.|
 |**S_LogAPIDebug**|0|Same as above, turn it on only if necessary.|
+
 
 The others game modes specific settings can be configured as you wish. A match can be played in BO1, BO3, ... with any number of players, etc. Just be sure that the number of players required by the match server matches the number of players sent from the lobby. 
 Now that your matchsettings file is ready you can associate your lobby and match servers on your player page.
@@ -119,7 +120,7 @@ For a lobby server :
     <!-- Default : <setting name="S_NeutralEmblemUrl" type="text" value=""/> -->
     <!-- Default : <setting name="S_ScoresTableStylePath" type="text" value=""/> -->
     <!-- Default : <setting name="S_MatchmakingAPIUrl" type="text" value="matchmaking.maniaplanet.com/v3"/> -->
-    <!-- Default : <setting name="S_MatchmakingAPIProtocol" type="text" value="http"/> -->
+    <!-- Default : <setting name="S_MatchmakingAPIProtocol" type="text" value="https"/> -->
     <setting name="S_MatchmakingMode" type="integer" value="1"/>
     <!-- Default : <setting name="S_LobbyTimePerRound" type="integer" value="60"/> -->
     <!-- Default : <setting name="S_LobbyRoundPerMap" type="integer" value="30"/> -->
@@ -207,7 +208,7 @@ For a match server :
     <!-- Default : <setting name="S_NeutralEmblemUrl" type="text" value=""/> -->
     <!-- Default : <setting name="S_ScoresTableStylePath" type="text" value=""/> -->
     <!-- Default : <setting name="S_MatchmakingAPIUrl" type="text" value="matchmaking.maniaplanet.com/v3"/> -->
-    <!-- Default : <setting name="S_MatchmakingAPIProtocol" type="text" value="http"/> -->
+    <!-- Default : <setting name="S_MatchmakingAPIProtocol" type="text" value="https"/> -->
     <setting name="S_MatchmakingMode" type="integer" value="2"/>
     <!-- Default : <setting name="S_LobbyTimePerRound" type="integer" value="60"/> -->
     <!-- Default : <setting name="S_LobbyRoundPerMap" type="integer" value="30"/> -->
