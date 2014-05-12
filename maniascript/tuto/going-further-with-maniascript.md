@@ -288,7 +288,7 @@ In the example, once you have stocked your manialink in the text variable, you c
 At the end of the round (or the map), I recommend to destroy all the layers to avoid redundant information on the screen of the player. To destroy the layers, you must use this instruction directly in the script:
 
 ```c++
-    Layers:DestroyAll();
+    Layers::DestroyAll();
 ```
     
 ## ManiaScript in the Manialink
