@@ -35,32 +35,34 @@ Dedicated config file a XML-file, where the config variables goes between tags, 
 Make sure that the tags are in place, if there is error with xml filesyntax, the dedicated just won't start without any error messages. You can copy paste the content in an [xml validator](http://www.validome.org/xml/) to verify it.
 
 **Sections on Config-file:**
-
-	<authorization_levels>
-		<level>
-			<name>SuperAdmin</name>
-			<password>SuperAdmin</password>
-		</level>
-		<level>
-			<name>Admin</name>
-			<password>Admin</password>
-		</level>
-		<level>
-			<name>User</name>
-			<password>User</password>
-		</level>
-	</authorization_levels>
+{% highlight xml %}
+<authorization_levels>
+	<level>
+		<name>SuperAdmin</name>
+		<password>SuperAdmin</password>
+	</level>
+	<level>
+		<name>Admin</name>
+		<password>Admin</password>
+	</level>
+	<level>
+		<name>User</name>
+		<password>User</password>
+	</level>
+</authorization_levels>
+{% endhighlight %}
 
 	
 Authorization levels section is used for authenticating the dedicated server controllers. 
 Change this only if you open the xml-rpc port later to public.
 
-
-	<masterserver_account>
-		<login>   </login>
-		<password>   </password>
-		<validation_key>   </validation_key>
-	</masterserver_account>
+{% highlight xml %}
+<masterserver_account>
+	<login>   </login>
+	<password>   </password>
+	<validation_key>   </validation_key>
+</masterserver_account>
+{% endhighlight %}
 
 	
 Masterserver_account section: this is where you fill in your dedicated server login and password that you created earlier. 
