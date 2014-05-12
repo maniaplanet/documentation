@@ -8,13 +8,13 @@ description: How to make a lobby or a match server in ManiaPlanet matchmaking
 
 Since the release of the ManiaPlanet 3.0 update the previous matchmaking based on the ManiaLive server controller has been replaced by a centralized system hosted by Nadeo. 
 
-The new matchmaking system is easy to use, demands only a small amount of configuration and doesn't require any external dependency. Everything is integrated within ManiaPlanet and can be used by anybody ranging from a single player to a servers hosting company. With this guide you will have a matchmaking architecture ready in a few minutes.
+The new matchmaking system is **easy to use**, demands only a small amount of configuration and **doesn't require any external dependency**. Everything is integrated within ManiaPlanet and can be used by anybody ranging from a single player to a servers hosting company. With this guide you will have a matchmaking architecture ready in a few minutes.
 
 ## For server hoster
 
 ### Installation
 
-First you need to download the latest dedicated server for your system and set it up. You can take a look in the [quick start guide](http://maniaplanet.github.io/documentation/dedicated-server/basic.html) to learn how to do it. Once your server is ready you have to select a game mode that supports the matchmaking system. Currently there are Elite and Siege but more game modes will be added with time.
+First you need to download the latest dedicated server for your system and set it up. You can take a look in the [quick start guide](basic.html) to learn how to do it. Once your server is ready you have to select a game mode that supports the matchmaking system: Elite or Siege (more game modes will be added).
 
 ### Matchsettings
 
@@ -25,6 +25,7 @@ Now you can edit the relevant settings in the matchsettings file to enable the m
 <playlist>
   [...]
   <mode_script_settings>
+    [...]
     <setting name="S_MatchmakingAPIUrl" type="text" value="matchmaking.maniaplanet.com/v3"/>
     <setting name="S_MatchmakingAPIProtocol" type="text" value="https"/>
     <setting name="S_MatchmakingMode" type="integer" value="0"/>
@@ -35,6 +36,7 @@ Now you can edit the relevant settings in the matchsettings file to enable the m
     <setting name="S_LobbyDisplayMasters" type="boolean" value="1"/>
     <setting name="S_LogAPIError" type="boolean" value="0"/>
     <setting name="S_LogAPIDebug" type="boolean" value="0"/>
+    [...]
   </mode_script_settings>
   [...]
 </playlist>
@@ -57,12 +59,12 @@ Now you can edit the relevant settings in the matchsettings file to enable the m
 The others game modes specific settings can be configured as you wish. A match can be played in BO1, BO3, ... with any number of players, etc. Just be sure that the number of players required by the match server matches the number of players sent from the lobby. 
 Now that your matchsettings file is ready you can associate your lobby and match servers on your player page.
 
-### Adding a match server to your lobby
+### Adding match servers to your lobby
 
 To associate a server as match server of your lobby you have to go on your [player page](https://player.maniaplanet.com/matchmaking-servers).
 
 - Select the dedicated server login of your lobby server. 
-- On the next page click on *This is a lobby (add a match server)*. 
+- Click on *This is a lobby (add a match server)*. 
 - In the text box enter the login of the server you want to associate.
 
 You can add **any server you want** as match server. As soon as this one will be ready, it will be able to host a game.
@@ -72,10 +74,10 @@ You can add **any server you want** as match server. As soon as this one will be
 With the new matchmaking system every server can be used as a match server by a lobby. If you want to allow only some lobbies to use your server you have to do that on your [player page](https://player.maniaplanet.com/matchmaking-servers).
 
 - Select the dedicated server login of your match server. 
-- On the next page click on *This is a match server (whitelist a lobby)*.
+- Click on *This is a match server (whitelist a lobby)*.
 - In the text box enter the login of the lobby you want to allow. 
 
-You can allow **any** login you want. If there is no lobby allowed your server can be used by all.
+You can allow **any** login you want. If there is no lobby allowed your server can be used by any.
 
 ### Conclusion
 
