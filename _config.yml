@@ -1,5 +1,5 @@
 name: ManiaPlanet documentation
-pygments: true
+highlighter: pygments
 timezone: Europe/Paris
 markdown: rdiscount
 url: http://maniaplanet.github.io/documentation/
