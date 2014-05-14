@@ -6,11 +6,11 @@ description: How to make a lobby or a match server in ManiaPlanet matchmaking
 
 ## Introduction
 
-ManiaPlanet 3.0 introduces a *new matchmaking technical architecture* to make things *simplier for server hosters*. Server hosting is very popular in both TrackMania and ShootMania, and our goal is for matchmaking to benefits from the hosting skill and passion of the community.
+ManiaPlanet 3.0 introduces a **new matchmaking technical architecture** to make things **simplier for server hosters**. Server hosting is very popular in both TrackMania and ShootMania, and our goal is for matchmaking to benefits from the hosting skill and passion of the community.
 
-For players, the idea remains the same: *you join lobbies to play casually while waiting for your match*; when opponents are matched in the lobby, they are sent to a match server to play their game.
+For players, the idea remains the same: **you join lobbies to play casually while waiting for your match**; when opponents are matched in the lobby, they are sent to a match server to play their game.
 
-For server hosters, new system is simplier than ever since *it now only requires the dedicated server* and a little configuration; no more ManiaLive or MySQL. Now, lobbies and match servers don't need to be close, or on the same server, or even owned by the same account. The game mode script as well as a *new centralized matchmaking API* hosted by Nadeo are doing all the dirty work.
+For server hosters, new system is simplier than ever since **it now only requires the dedicated server** and a little configuration; no more ManiaLive or MySQL. Now, lobbies and match servers don't need to be close, or on the same server, or even owned by the same account. The game mode script as well as a **new centralized matchmaking API** hosted by Nadeo are doing all the dirty work.
 
 - Link lobby and match server logins on the PlayerPage.
 - Start a lobby: a dedicated server with a litte specific configuration.
