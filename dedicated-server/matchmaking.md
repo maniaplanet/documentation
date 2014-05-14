@@ -16,7 +16,7 @@ For server hosters, new system is simplier than ever since **it now only require
 - Start a lobby: a dedicated server with a litte specific configuration.
 - Start (or gather) match servers: again, dedicated servers with a little specific configuration.
 
-The guide will cover the technical aspects. If you have any questions or feedback, feel free to join the discussion [todo forum link].
+The guide will cover the technical aspects. If you have any questions or feedback, feel free to join the discussion: http://forum.maniaplanet.com/viewtopic.php?f=261&t=27702
 
 ## Requirements
 
