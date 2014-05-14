@@ -6,19 +6,38 @@ description: How to make a lobby or a match server in ManiaPlanet matchmaking
 
 ## Introduction
 
-Since the release of the ManiaPlanet 3.0 update the previous matchmaking based on the ManiaLive server controller has been replaced by a centralized system hosted by Nadeo. 
+ManiaPlanet 3.0 introduces a *new matchmaking technical architecture* to make things *simplier for server hosters*. Server hosting is very popular in both TrackMania and ShootMania, and our goal is for matchmaking to benefits from the hosting skill and passion of the community.
 
-The new matchmaking system is **easy to use**, demands only a small amount of configuration and **doesn't require any external dependency**. Everything is integrated within ManiaPlanet and can be used by anybody ranging from a single player to a servers hosting company. With this guide you will have a matchmaking architecture ready in a few minutes.
+For players, the idea remains the same: *you join lobbies to play casually while waiting for your match*; when opponents are matched in the lobby, they are sent to a match server to play their game.
 
-## For server hoster
+For server hosters, new system is simplier than ever since *it now only requires the dedicated server* and a little configuration; no more ManiaLive or MySQL. Now, lobbies and match servers don't need to be close, or on the same server, or even owned by the same account. The game mode script as well as a *new centralized matchmaking API* hosted by Nadeo are doing all the dirty work.
 
-### Installation
+- Link lobby and match server logins on the PlayerPage.
+- Start a lobby: a dedicated server with a litte specific configuration.
+- Start (or gather) match servers: again, dedicated servers with a little specific configuration.
 
-First you need to download the latest dedicated server for your system and set it up. You can take a look in the [quick start guide](basic.html) to learn how to do it. Once your server is ready you have to select a game mode that supports the matchmaking system: Elite or Siege (more game modes will be added).
+The guide will cover the technical aspects. If you have any questions or feedback, feel free to join the discussion [todo forum link].
 
-### Matchsettings
+## Requirements
 
-Now you can edit the relevant settings in the matchsettings file to enable the matchmaking.
+- You need to be familiar with ManiaPlanet dedicated servers ([quick start guide](basic.html))
+- Make sure your title supports matchmaking (eg. Elite or Siege) (todo link)
+
+## Add match servers to a lobby
+
+You can add **any server you want** as match server. As soon as it's launched and well configured, your lobby will start sending matches on it.
+
+Easy, follow the instructions: https://player.maniaplanet.com/matchmaking-servers
+
+## Whitelist lobbies for your match server
+
+With the new matchmaking system every server can be used as a match server by a lobby - as long as the match server is configured as such. You can whitelist only some lobbies to use your match server.
+
+Easy, follow the instructions: https://player.maniaplanet.com/matchmaking-servers
+
+## Dedicated server configuration
+
+Edit the relevant settings in the matchsettings file to enable the matchmaking.
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8" ?>
@@ -59,27 +78,7 @@ Now you can edit the relevant settings in the matchsettings file to enable the m
 The others game modes specific settings can be configured as you wish. A match can be played in BO1, BO3, ... with any number of players, etc. Just be sure that the number of players required by the match server matches the number of players sent from the lobby. 
 Now that your matchsettings file is ready you can associate your lobby and match servers on your player page.
 
-### Adding match servers to your lobby
-
-To associate a server as match server of your lobby you have to go on your [player page](https://player.maniaplanet.com/matchmaking-servers).
-
-- Select the dedicated server login of your lobby server. 
-- Click on *This is a lobby (add a match server)*. 
-- In the text box enter the login of the server you want to associate.
-
-You can add **any server you want** as match server. As soon as this one will be ready, it will be able to host a game.
-
-### Reserving a match server for a lobby
-
-With the new matchmaking system every server can be used as a match server by a lobby. If you want to allow only some lobbies to use your server you have to do that on your [player page](https://player.maniaplanet.com/matchmaking-servers).
-
-- Select the dedicated server login of your match server. 
-- Click on *This is a match server (whitelist a lobby)*.
-- In the text box enter the login of the lobby you want to allow. 
-
-You can allow **any** login you want. If there is no lobby allowed your server can be used by any.
-
-### Conclusion
+## Conclusion
 
 Your servers are now ready. You just have to launch and join them to see the new matchmaking system in action.
 
