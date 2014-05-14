@@ -65,7 +65,7 @@ Edit the relevant settings in the matchsettings file to enable the matchmaking.
 |---|---|---|
 |**S_MatchmakingAPIUrl**|matchmaking.maniaplanet.com/v3|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
 |**S_MatchmakingAPIProtocol**|https|The protocol used to communicate with the API. You shouldn't have to change it if you use the default matchmaking API.|
-|**S_MatchmakingMode**|0|This is the most important setting. It can take one of these three values : 0 -> matchmaking turned off; 1 -> matchmaking turned on, use this server as a lobby server; 3 -> matchmaking turned on, use this server as a match server.|
+|**S_MatchmakingMode**|0|This is the most important setting. It can take one of these three values : 0 -> matchmaking turned off; 1 -> matchmaking turned on, use this server as a lobby server; 2 -> matchmaking turned on, use this server as a match server.|
 |**S_LobbyTimePerRound**|60|Duration (in seconds) of a round between the activations of the matchmaking function.|
 |**S_LobbyRoundPerMap**|30|Number of rounds played before going to the next map.|
 |**S_LobbyMatchmakerTime**|10|Duration (in seconds) of the matchmaking function. It allows the players to see with who they will play their match or cancel it if necessary.|
