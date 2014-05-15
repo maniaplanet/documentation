@@ -1,6 +1,6 @@
 ---
 layout: static
-title: Weapon
+title: Create a weapon in the ActionMaker
 description: How create a weapon in the ActionMaker
 ---
 
