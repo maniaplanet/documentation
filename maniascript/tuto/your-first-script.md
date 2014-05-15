@@ -4,6 +4,35 @@ title: Your first script
 description: Creation of a first simple gamemode, a deathmatch
 ---
 
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Your first ShootMania game mode](#user-content-your-first-shootmania-game-mode)
+	- [Creating the gamemode](#user-content-creating-the-gamemode)
+	- [Create a map](#user-content-create-a-map)
+	- [Create a server](#user-content-create-a-server)
+	- [Structure of a game mode](#user-content-structure-of-a-game-mode)
+		- [Library](#user-content-library)
+		- [Constants](#user-content-constants)
+		- [Globales](#user-content-globales)
+		- ["Body" of the Script](#user-content-body-of-the-script)
+			- [StartServer](#user-content-startserver)
+			- [StartMap](#user-content-startmap)
+			- [InitRound](#user-content-initround)
+			- [StartRound](#user-content-startround)
+			- [Playloop](#user-content-playloop)
+			- [EndRound](#user-content-endround)
+			- [EndMap](#user-content-endmap)
+		- [Functions](#user-content-functions)
+	- [Common variables](#user-content-common-variables)
+	- [Setting up the script](#user-content-setting-up-the-script)
+	- [Initializing the server](#user-content-initializing-the-server)
+	- [Setting up the parameters for the match/map](#user-content-setting-up-the-parameters-for-the-matchmap)
+	- [Proceedings of the round](#user-content-proceedings-of-the-round)
+	- [Ending the match](#user-content-ending-the-match)
+		- [The functions](#user-content-the-functions)
+	- [Download the source of the mode](#user-content-download-the-source-of-the-mode)
+	- [Learn more about the ManiaScript](#user-content-learn-more-about-the-maniascript)
+
 # Your first ShootMania game mode
 In this part you'll learn to create your first simple game mode, a deathmatch where the first player to earn 30 points will win the map (using a lightweight version of the Melee gamemode).
 
@@ -39,11 +68,11 @@ A gamemode is divided in several part which match each state of a game. A raw st
 
 ```c++
     #Extends "Modes/ShootMania/ModeBase.Script.txt"
-    
+
     #Const	CompatibleMapTypes	"MeleeArena"
     #Const	Version				"1.0.0"
     #Const	ScriptName			"MyScript.Script.txt"
-    
+
     #Include "Libs/Nadeo/Settings.Script.txt" as Settings
     #Include "TextLib" as TextLib
     #Include "MathLib" as MathLib
@@ -52,55 +81,55 @@ A gamemode is divided in several part which match each state of a game. A raw st
     #Include "Libs/Nadeo/Message.Script.txt" as Message
     #Include "Libs/Nadeo/Interface.Script.txt" as Interface
     #Include "Libs/Nadeo/Layers.Script.txt" as Layers
-    
-    
+
+
     // ---------------------------------- //
     // Constants
     // ---------------------------------- //
     //List of your constant variables
-    
+
     // ---------------------------------- //
     // Globales
     // ---------------------------------- //
     //List of your global variables
-    
-    
+
+
     ***StartServer***
     ***
     //Code to execute when the server is started
     ***
-    
+
     ***StartMap***
     ***
     //Code to execute when a map is loaded
     ***
-    
+
     ***InitRound***
     ***
     //Code to execute before the beginning of a round
     ***
-    
+
     ***StartRound***
     ***
     //Code to execute when a round is started
     ***
-    
+
     ***Playloop***
     ***
     //Main loop where the code is executed through the duration of the round
     ***
-    
+
     ***EndRound***
     ***
     //Code to execute at the end of the round
     ***
-    
+
     ***EndMap***
     ***
     //Code to execute at the end of a match/map
     ***
-    
-    
+
+
     // ---------------------------------- //
     // Functions
     // ---------------------------------- //
@@ -112,11 +141,11 @@ We'll explain each part of the script in the next sections but please note first
 ### **Library**
 ```c++
     #Extends "Modes/ShootMania/ModeBase.Script.txt"
-    
+
     #Const	CompatibleMapTypes	"MeleeArena"
     #Const	Version				"1.0.0"
     #Const	ScriptName			"MyScript.Script.txt"
-    
+
     #Include "Libs/Nadeo/Settings.Script.txt" as Settings
     #Include "TextLib" as TextLib
     #Include "MathLib" as MathLib
@@ -124,7 +153,7 @@ We'll explain each part of the script in the next sections but please note first
     #Include "Libs/Nadeo/ShootMania/Score.Script.txt" as Score
     #Include "Libs/Nadeo/Message.Script.txt" as Message
 ```
-    
+
 This part is used to load all the library required and basic information for the gamemode. `ModeBase` is the most important part because it'll allow you to divide the gamemode for each state of the game and also to have access to all basic functions and variables for a game script.
 
 The `CompatibleMapTypes` constant indicate which type(s) of maps is usable with your script. It can be useful if your mode require a specific type or number of block (for example at least two spawns, with a pole in Royal)
@@ -269,11 +298,11 @@ An ident is special kind of variable, it's used to point to an asset (others tha
 
 ```c++
     #Extends "Modes/ShootMania/ModeBase.Script.txt"
-    
+
     #Const	CompatibleMapTypes	"MeleeArena"
     #Const	Version				"2013-06-24"
     #Const	ScriptName			"Melee_Tutorial.Script.txt"
-    
+
     #Include "Libs/Nadeo/Settings.Script.txt" as Settings
     #Include "TextLib" as TextLib
     #Include "MathLib" as MathLib
@@ -282,13 +311,13 @@ An ident is special kind of variable, it's used to point to an asset (others tha
     #Include "Libs/Nadeo/Message.Script.txt" as Message
     #Include "Libs/Nadeo/Interface.Script.txt" as Interface
     #Include "Libs/Nadeo/Layers.Script.txt" as Layers
-    
+
     // ---------------------------------- //
     // Settings
     // ---------------------------------- //
     #Setting S_TimeLimit	600 as _("Time limit")		///< Time limit on a map
     #Setting S_PointLimit	25	as _("Points limit")	///< Points limit on a map
-    
+
     // ---------------------------------- //
     // Globales
     // ---------------------------------- //
@@ -312,7 +341,7 @@ For a deathmatch mode (which is very simple), you have only to deactivate the te
     ***StartServer***
     ***
     UseClans = False;
-    
+
     ST2::SetStyle("LibST_SMBaseSolo");
     ST2::SetTeamsMode(False);
     ST2::SetTeamsScoresVisibility(False);
@@ -330,9 +359,9 @@ ST2, ScoresTable2 library, is loaded by the ModeBase.
     G_SpawnsList.clear();
     G_LatestSpawnId = NullId;
 ```
-    
+
 First we clear the table containing the list of the spawns on the map and we reset the Id of the last spawn used.
-    
+
 ```c++
     // ---------------------------------- //
     // Init bases
@@ -341,9 +370,9 @@ First we clear the table containing the list of the spawns on the map and we res
     	Base.IsActive = True;
     }
 ```
-    
+
 Then we indicate to initialize each base possibly present in the map to use the neutral (FFA) team number (so 0).
-    
+
 ```c++
     // ---------------------------------- //
     // Init scores
@@ -353,7 +382,7 @@ Then we indicate to initialize each base possibly present in the map to use the 
     	LastPoint = 0;
     }
 ```
-    
+
 The score of the players are reset. In this portion of code, we call the class `Score` which stores all the points won by the players during a round (or match).
 It's also with this class that you can put the scores of the players into the scoretable automatically.
 
@@ -361,15 +390,15 @@ It's also with this class that you can put the scores of the players into the sc
     declare LeadId = NullId;
     if (Scores.existskey(0)) LeadId = Scores[0].User.Id;
 ```
-    
+
 The Id of the lead player is also reset as the match hasn't started yet.
-    
+
 ```c++
     declare CurrentPointLimit = S_PointLimit;
 ```
-    
+
 We put in a variable the Point Limit decided by the owner of the server (or by vote).
-    
+
 ```c++
     // ---------------------------------- //
     StartTime = Now;
@@ -387,7 +416,7 @@ It's now time to write what's going on during a round.
     ***
     foreach (Event, PendingEvents) {
 ```
-    
+
 We look in each event happening during the round. When an event is triggered, according what we want to do, we do some treatments (only a very few events are listed below, the basic ones).
 
 ```c++
@@ -402,38 +431,38 @@ We look in each event happening during the round. When an event is triggered, ac
     		}
     		XmlRpc::OnArmorEmpty(Event);
     		PassOn(Event);
-    	} 
+    	}
 ```
-    	
+
 When a player loses all his armors (when he is eliminated), we remove him one point. Then with `PassOn(Event)` we tell to the server that the event has been processed. We give also one point to the shooter if it's not a suicide.
-    	
+
 ```c++
     	// ---------------------------------- //
     	// On hit
     	else if (Event.Type == CSmModeEvent::EType::OnHit) {
 ```
-    	
+
 Now we check when a player is hit by a projectile (from a Storm weapon).
-    	
+
 ```c++
     		if (Event.Shooter == Event.Victim) {
     			Discard(Event);
 ```
-    			
+
 Basically if the player hit himself (with the `Arrow` or the `Nucleus` for example), we tell the server to disregard this event (and so to ignore all the damage and effects) with the `Discard(Event)` instruction.
-    			
+
 ```c++
     		} else {
     			Event.Victim.Armor -= Event.Damage;
-    			
+
     			XmlRpc::OnHit(Event);
     			PassOn(Event);
     		}
-    	} 
+    	}
 ```
-    	
+
 But if the sender and the receiver are different, we remove the number of armor (life) to the victim (the number of damage is known with the variable `Event.Damage` which can be tempered if you want to modify the damage received.
-    	
+
 ```c++
     	// ---------------------------------- //
     	// On player request respawn
@@ -441,11 +470,11 @@ But if the sender and the receiver are different, we remove the number of armor 
     		Event.Player.Score.Points -= 1;
     		XmlRpc::OnPlayerRequestRespawn(Event);
     		PassOn(Event);
-    	} 
+    	}
 ```
-    	
+
 If a player presses the backspace button (the default one to respawn), we remove him one point.
-    	
+
 ```c++
     	// ---------------------------------- //
     	// Others
@@ -454,9 +483,9 @@ If a player presses the backspace button (the default one to respawn), we remove
     	}
     }
 ```
-    
+
 And we validate all others events in their default treatment.
-    
+
 ```c++
     // ---------------------------------- //
     // Spawn players
@@ -466,10 +495,10 @@ And we validate all others events in their default treatment.
     	}
     }
 ```
-    
+
 Outside of the loop of the events, there is some work to do. First we have to let the players spawn if they are eliminated.
 To do so, we create a loop which checks all the players' status. If a player is eliminated (by checking his status thanks to `CSmPlayer::ESpawnStatus::NotSpawned`), we ask the script to execute the function `MeleeSpawnPlayer` which will be explained a bit later).
-    
+
 ```c++
     // ---------------------------------- //
     // Play sound and notice if someone is taking the lead
@@ -478,13 +507,13 @@ To do so, we create a loop which checks all the players' status. If a player is 
     	Message::SendBigMessage(TextLib::Compose(_("$<%1$> takes the lead!"), Scores[0].User.Name), 3000, 1, CUIConfig::EUISound::PhaseChange, 1);
     }
 ```
-    
+
 We can also display a message when a player take the lead. We have to test if the player with the highest score is the same player than registered before (else we don't save the new leader).
 If it's the case, we save the new leader and we display a message to all the player to warn the players that one of them has taken the lead.
-    
+
 ```c++
     Message::Loop();
-    
+
     // ---------------------------------- //
     // victory conditions
     declare IsMatchOver = False;
@@ -492,7 +521,7 @@ If it's the case, we save the new leader and we display a message to all the pla
     foreach (Player in Players) {
     	if (Player.Score != Null && Player.Score.Points >= CurrentPointLimit) IsMatchOver = True;
     }
-    
+
     if (IsMatchOver) MB_StopMap = True;
     ***
 ```
@@ -513,7 +542,7 @@ This section is executed when one of the victory condition is validated.
     EndTime = -1;
     Score::RoundEnd();
     Score::MatchEnd(True);
-    
+
     // ---------------------------------- //
     // End match sequence
     declare CUser Winner <=> Null;
@@ -527,36 +556,36 @@ This section is executed when one of the victory condition is validated.
     	}
     }
 ```
-    
+
 We check who is the best player (by his score).
-    
+
 ```c++
     foreach (Player in Players) {
     	if (Player.User != Winner) UnspawnPlayer(Player);
     	Interface::UpdatePosition(Player);
     }
 ```
-    
+
 We unspawn all the players except the player who's won and we update the interface (and so the scoretable).
-    
+
 ```c++
     MB_Sleep(1000);
 ```
-    
+
 We put the script in pause for 1000 milliseconds (1 second).
-    
+
 ```c++
     Message::CleanBigMessages();
 ```
-    
+
 We erase all the messages displayed on the interface of the players.
-    
+
 ```c++
     UIManager.UIAll.BigMessageSound = CUIConfig::EUISound::EndRound;
 ```
-    
+
 We play the sound of the end of the round.
-    
+
 ```c++
     UIManager.UIAll.BigMessageSoundVariant = 0;
     if (Winner != Null) {
@@ -565,7 +594,7 @@ We play the sound of the end of the round.
     	UIManager.UIAll.BigMessage = _("|Match|Draw");
     }
     MB_Sleep(2000);
-    
+
     UIManager.UIAll.UISequence = CUIConfig::EUISequence::EndRound;
     UIManager.UIAll.ScoreTableVisibility = CUIConfig::EVisibility::ForcedVisible;
     MB_Sleep(5000);
@@ -573,16 +602,16 @@ We play the sound of the end of the round.
 
 We put the players into the EndRound sequence on the level of the interface (so everything will be hidden (or will not work like when you play) except the scoretable and few others things like the chat).
 And we force the visibility of the scoretable to let the players watch their scores and those of the opponents.
-    
+
 ```c++
     UIManager.UIAll.UISequence = CUIConfig::EUISequence::Podium;
     while(!UIManager.UIAll.UISequenceIsCompleted) {
     	MB_Yield();
     }
 ```
-    
+
 If a podium is present on the map (if not the code will be ignored), we play the podium sequence.
-    
+
 ```c++
     UIManager.UIAll.ScoreTableVisibility = CUIConfig::EVisibility::Normal;
     UIManager.UIAll.BigMessage = "";
@@ -599,9 +628,9 @@ But the script is not over yet, we have to create the function which will spawn 
     		foreach (PlayerSpawn in MapLandmarks_PlayerSpawn) G_SpawnsList.add(PlayerSpawn.Id);
     	}
 ```
-    	
+
 We list all the spawns of the map (I mean the block spawn put by the map creator) if the list is empty.
-    	
+
 ```c++
     	declare SpawnId = NullId;
     	while (True) {
@@ -610,9 +639,9 @@ We list all the spawns of the map (I mean the block spawn put by the map creator
     		if (G_SpawnsList.count == 1) break;
     	}
 ```
-    	
+
 We choose a spawn randomly which will be used by the player, but it won't the last spawn used (to prevent to have a player spawning in the same spawn of the last player in few seconds).
-    	
+
 ```c++
     	G_LatestSpawnId = SpawnId;
     	SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId]);
