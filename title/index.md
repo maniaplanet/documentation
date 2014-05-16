@@ -30,8 +30,10 @@ As you can understand now, a Title Pack can be equivalent to a little game when 
 <br/>
 <br/>
 # Create a Title Pack
-
 Description of the [ManiaPlanetTitle.xml](xml_description) file format.
 The documentation not yet imported here can be found on this [forum thread](http://forum.maniaplanet.com/viewtopic.php?f=321&t=12755).
 
 You can find help about title pack creation on the [Title Pack & Custom Data Creation forum](http://forum.maniaplanet.com/viewforum.php?f=321).
+
+## Create a weapon
+As noted above, you can create a weapon for your title pack. To learn more about that, just [follow the tutorial](./actionmaker/create_weapon).
