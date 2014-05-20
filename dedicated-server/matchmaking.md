@@ -129,22 +129,25 @@ For a lobby server :
     <!-- Default : <setting name="S_UseScriptCallbacks" type="boolean" value="0"/> -->
     <!-- Default : <setting name="S_NeutralEmblemUrl" type="text" value=""/> -->
     <!-- Default : <setting name="S_ScoresTableStylePath" type="text" value=""/> -->
-    <!-- Default : <setting name="S_MatchmakingAPIUrl" type="text" value="matchmaking.maniaplanet.com/v3"/> -->
-    <!-- Default : <setting name="S_MatchmakingAPIProtocol" type="text" value="https"/> -->
-    <setting name="S_MatchmakingMode" type="integer" value="1"/>
+    <!-- Default : <setting name="S_MatchmakingAPIUrl" type="text" value="https://matchmaking.maniaplanet.com/v4"/> -->
+    <setting name="S_MatchmakingMode" type="integer" value="1"/> <!-- Default : 0 -->
     <!-- Default : <setting name="S_LobbyTimePerRound" type="integer" value="60"/> -->
     <!-- Default : <setting name="S_LobbyRoundPerMap" type="integer" value="30"/> -->
     <!-- Default : <setting name="S_LobbyMatchmakerTime" type="integer" value="10"/> -->
     <!-- Default : <setting name="S_LobbyInstagib" type="boolean" value="0"/> -->
     <!-- Default : <setting name="S_LobbyDisplayMasters" type="boolean" value="1"/> -->
-    <!-- Default : <setting name="S_LogAPIError" type="boolean" value="0"/> -->
-    <!-- Default : <setting name="S_LogAPIDebug" type="boolean" value="0"/> -->
+    <!-- Default : <setting name="S_LobbyAllowMatchCancel" type="boolean" value="1"/> -->
+    <!-- Default : <setting name="S_LobbyLimitMatchCancel" type="integer" value="1"/> -->
+    <!-- Default : <setting name="S_MatchmakingErrorMessage" type="text" value="An error occured in the matchmaking API. If the problem persist please try to contact this server administrator."/> -->
+    <!-- Default : <setting name="S_MatchmakingLogAPIError" type="boolean" value="0"/> -->
+    <!-- Default : <setting name="S_MatchmakingLogAPIDebug" type="boolean" value="0"/> -->
+    <!-- Default : <setting name="S_MatchmakingLogMiscDebug" type="boolean" value="0"/> -->
     <setting name="S_Mode" type="integer" value="1"/> <!-- Default : 0 -->
     <!-- Default : <setting name="S_TimeLimit" type="integer" value="60"/> -->
     <!-- Default : <setting name="S_TimePole" type="integer" value="15"/> -->
     <!-- Default : <setting name="S_TimeCapture" type="real" value="1.5"/> -->
     <setting name="S_WarmUpDuration" type="integer" value="0"/> <!-- Default : 90 -->
-    <!-- Default : <setting name="S_MapWin" type="integer" value="2"/> -->
+    <setting name="S_MapWin" type="integer" value="1"/> <!-- Default : 2 -->
     <!-- Default : <setting name="S_TurnGap" type="integer" value="2"/> -->
     <!-- Default : <setting name="S_TurnLimit" type="integer" value="15"/> -->
     <!-- Default : <setting name="S_DeciderTurnLimit" type="integer" value="20"/> -->
@@ -217,22 +220,25 @@ For a match server :
     <!-- Default : <setting name="S_UseScriptCallbacks" type="boolean" value="0"/> -->
     <!-- Default : <setting name="S_NeutralEmblemUrl" type="text" value=""/> -->
     <!-- Default : <setting name="S_ScoresTableStylePath" type="text" value=""/> -->
-    <!-- Default : <setting name="S_MatchmakingAPIUrl" type="text" value="matchmaking.maniaplanet.com/v3"/> -->
-    <!-- Default : <setting name="S_MatchmakingAPIProtocol" type="text" value="https"/> -->
-    <setting name="S_MatchmakingMode" type="integer" value="2"/>
+    <!-- Default : <setting name="S_MatchmakingAPIUrl" type="text" value="https://matchmaking.maniaplanet.com/v4"/> -->
+    <setting name="S_MatchmakingMode" type="integer" value="2"/> <!-- Default : 0 -->
     <!-- Default : <setting name="S_LobbyTimePerRound" type="integer" value="60"/> -->
     <!-- Default : <setting name="S_LobbyRoundPerMap" type="integer" value="30"/> -->
     <!-- Default : <setting name="S_LobbyMatchmakerTime" type="integer" value="10"/> -->
     <!-- Default : <setting name="S_LobbyInstagib" type="boolean" value="0"/> -->
     <!-- Default : <setting name="S_LobbyDisplayMasters" type="boolean" value="1"/> -->
-    <!-- Default : <setting name="S_LogAPIError" type="boolean" value="0"/> -->
-    <!-- Default : <setting name="S_LogAPIDebug" type="boolean" value="0"/> -->
+    <!-- Default : <setting name="S_LobbyAllowMatchCancel" type="boolean" value="1"/> -->
+    <!-- Default : <setting name="S_LobbyLimitMatchCancel" type="integer" value="1"/> -->
+    <!-- Default : <setting name="S_MatchmakingErrorMessage" type="text" value="An error occured in the matchmaking API. If the problem persist please try to contact this server administrator."/> -->
+    <!-- Default : <setting name="S_MatchmakingLogAPIError" type="boolean" value="0"/> -->
+    <!-- Default : <setting name="S_MatchmakingLogAPIDebug" type="boolean" value="0"/> -->
+    <!-- Default : <setting name="S_MatchmakingLogMiscDebug" type="boolean" value="0"/> -->
     <setting name="S_Mode" type="integer" value="1"/> <!-- Default : 0 -->
     <!-- Default : <setting name="S_TimeLimit" type="integer" value="60"/> -->
     <!-- Default : <setting name="S_TimePole" type="integer" value="15"/> -->
     <!-- Default : <setting name="S_TimeCapture" type="real" value="1.5"/> -->
     <setting name="S_WarmUpDuration" type="integer" value="0"/> <!-- Default : 90 -->
-    <!-- Default : <setting name="S_MapWin" type="integer" value="2"/> -->
+    <setting name="S_MapWin" type="integer" value="1"/> <!-- Default : 2 -->
     <!-- Default : <setting name="S_TurnGap" type="integer" value="2"/> -->
     <!-- Default : <setting name="S_TurnLimit" type="integer" value="15"/> -->
     <!-- Default : <setting name="S_DeciderTurnLimit" type="integer" value="20"/> -->
@@ -267,10 +273,6 @@ For a match server :
     <ident>6RwQcqP6h6Uo0XTQ8Xqv_EDkOxd</ident>
   </map>
   <map>
-    <file>ShootMania\Elite\Elite - DayDreaming.Map.Gbx</file>
-    <ident>c9hygnTxx42fIArDMtUdV4vBOUl</ident>
-  </map>
-  <map>
     <file>ShootMania\Elite\Elite - Excursion.Map.Gbx</file>
     <ident>5fKJ9CRkCtzCn44_CBuHDrMon63</ident>
   </map>
@@ -301,6 +303,10 @@ For a match server :
   <map>
     <file>ShootMania\Elite\Elite - WindOfChange.Map.Gbx</file>
     <ident>s3bVSikgs9J5qtqespGYJ1FDDyf</ident>
+  </map>
+  <map>
+    <file>ShootMania\Elite\Lobby - InMyBunk.Map.Gbx</file>
+    <ident>F4SF2gjW8xtH0rwIF7bzxeiVhLe</ident>
   </map>
 </playlist>
 {% endhighlight %}
