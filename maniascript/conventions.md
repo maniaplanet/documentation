@@ -25,6 +25,7 @@ description: ManiaScript style contention
 
 
 Control structures are: if, else if, switch, while, foreach.
+
 * There MUST be one space after the control structure keyword
 * There MUST NOT be a space after the opening parenthesis
 * There MUST NOT be a space before the closing parenthesis
