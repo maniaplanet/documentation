@@ -51,4 +51,4 @@ The UI of the Map Editor is quite simple, first, we'll explain you the interface
 
 > NB: To navigate in the map, it's quicker to do ALT+cursor instead of switching mode each time you need to move the camera
 
-> NB:
+> NB: 
