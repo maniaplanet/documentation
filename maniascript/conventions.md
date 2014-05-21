@@ -38,7 +38,12 @@ Control structures are: if, else if, switch, while, foreach.
 {% highlight js %}
 Text Foo_DoSomething(Integer _Id) {
 	declare Text Result;
-	Private_Foo_DoNothing() 
+	if (_Id == 42) {
+		Private_Foo_DoNothing();
+		Result = "42";
+	} else {
+		Result = "";
+	}
 	return Result;
 } 
 Void Private_Foo_DoNothing() {
