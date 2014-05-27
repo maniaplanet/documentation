@@ -48,15 +48,15 @@ Edit the relevant settings in the matchsettings file to enable the matchmaking.
   [...]
   <mode_script_settings>
     [...]
-    <setting name="S_MatchmakingAPIUrl" type="text" value="https://matchmaking.maniaplanet.com/v4"/>
+    <setting name="S_MatchmakingAPIUrl" type="text" value="https://matchmaking.maniaplanet.com/v5"/>
     <setting name="S_MatchmakingMode" type="integer" value="0"/>
-    <setting name="S_LobbyTimePerRound" type="integer" value="60"/>
-    <setting name="S_LobbyRoundPerMap" type="integer" value="30"/>
+    <setting name="S_LobbyTimePerRound" type="integer" value="30"/>
+    <setting name="S_LobbyRoundPerMap" type="integer" value="60"/>
     <setting name="S_LobbyMatchmakerTime" type="integer" value="10"/>
     <setting name="S_LobbyInstagib" type="boolean" value="0"/>
     <setting name="S_LobbyDisplayMasters" type="boolean" value="1"/>
     <setting name="S_LobbyAllowMatchCancel" type="boolean" value="1"/>
-    <setting name="S_LobbyLimitMatchCancel" type="integer" value="1"/>
+    <setting name="S_LobbyLimitMatchCancel" type="integer" value="0"/>
     <setting name="S_MatchmakingErrorMessage" type="text" value="An error occured in the matchmaking API. If the problem persist please try to contact this server administrator."/>
     <setting name="S_MatchmakingLogAPIError" type="boolean" value="0"/>
     <setting name="S_MatchmakingLogAPIDebug" type="boolean" value="0"/>
@@ -69,22 +69,22 @@ Edit the relevant settings in the matchsettings file to enable the matchmaking.
 
 |Setting|Default value|Description|
 |---|---|---|
-|**S_MatchmakingAPIUrl**|https://matchmaking.maniaplanet.com/v4|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
+|**S_MatchmakingAPIUrl**|https://matchmaking.maniaplanet.com/v5|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
 |**S_MatchmakingMode**|0|This is the most important setting. It can take one of these three values : 0 -> matchmaking turned off; 1 -> matchmaking turned on, use this server as a lobby server; 2 -> matchmaking turned on, use this server as a match server.|
-|**S_LobbyTimePerRound**|60|Duration (in seconds) of a round between the activations of the matchmaking function. It can't be smaller than 15 seconds.|
-|**S_LobbyRoundPerMap**|30|Number of rounds played before going to the next map.|
+|**S_LobbyTimePerRound**|30|Duration (in seconds) of a round between the activations of the matchmaking function. It can't be smaller than 15 seconds.|
+|**S_LobbyRoundPerMap**|60|Number of rounds played before going to the next map.|
 |**S_LobbyMatchmakerTime**|10|Duration (in seconds) of the matchmaking function. It allows the players to see with who they will play their match or cancel it if necessary.|
 |**S_LobbyInstagib**|0|Use the Laser instead of the Rocket in the lobby.|
 |**S_LobbyDisplayMasters**|1|Display a list of Masters players in the lobby.|
 |**S_LobbyAllowMatchCancel**|1|Allows or not the players in the lobby to cancel a match.|
-|**S_LobbyLimitMatchCancel**|1|If the players are allowed to cancel, how many matches can they cancel before being penalized.|
+|**S_LobbyLimitMatchCancel**|0|If the players are allowed to cancel, how many matches can they cancel before being penalized.|
 |**S_MatchmakingErrorMessage**|An error occured in the matchmaking API. If the problem persist please try to contact this server administrator.|This message is displayed in the chat to inform the players that an error occured in the matchmaking system.|
 |**S_MatchmakingLogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to let it turned off because this can quickly write huge log files.|
 |**S_MatchmakingLogAPIDebug**|0|Same as above, turn it on only if necessary.|
 |**S_MatchmakingLogMiscDebug**|0|Same as above, turn it on only if necessary.|
 
 
-The others game modes specific settings can be configured as you wish. A match can be played in BO1, BO3, ... with any number of players, etc. Just be sure that the number of players required by the match server matches the number of players sent from the lobby. 
+The others game modes specific settings can be configured as you wish. A match can be played in BO1, BO3, ... with any number of players, points limit, etc. Just be sure that the number of players required by the match server matches the number of players sent from the lobby. 
 Now that your matchsettings file is ready you can associate your lobby and match servers on your player page.
 
 ## Conclusion
@@ -129,15 +129,15 @@ For a lobby server :
     <!-- Default : <setting name="S_UseScriptCallbacks" type="boolean" value="0"/> -->
     <!-- Default : <setting name="S_NeutralEmblemUrl" type="text" value=""/> -->
     <!-- Default : <setting name="S_ScoresTableStylePath" type="text" value=""/> -->
-    <!-- Default : <setting name="S_MatchmakingAPIUrl" type="text" value="https://matchmaking.maniaplanet.com/v4"/> -->
+    <!-- Default : <setting name="S_MatchmakingAPIUrl" type="text" value="https://matchmaking.maniaplanet.com/v5"/> -->
     <setting name="S_MatchmakingMode" type="integer" value="1"/> <!-- Default : 0 -->
-    <!-- Default : <setting name="S_LobbyTimePerRound" type="integer" value="60"/> -->
-    <!-- Default : <setting name="S_LobbyRoundPerMap" type="integer" value="30"/> -->
+    <!-- Default : <setting name="S_LobbyTimePerRound" type="integer" value="30"/> -->
+    <!-- Default : <setting name="S_LobbyRoundPerMap" type="integer" value="60"/> -->
     <!-- Default : <setting name="S_LobbyMatchmakerTime" type="integer" value="10"/> -->
     <!-- Default : <setting name="S_LobbyInstagib" type="boolean" value="0"/> -->
     <!-- Default : <setting name="S_LobbyDisplayMasters" type="boolean" value="1"/> -->
     <!-- Default : <setting name="S_LobbyAllowMatchCancel" type="boolean" value="1"/> -->
-    <!-- Default : <setting name="S_LobbyLimitMatchCancel" type="integer" value="1"/> -->
+    <!-- Default : <setting name="S_LobbyLimitMatchCancel" type="integer" value="0"/> -->
     <!-- Default : <setting name="S_MatchmakingErrorMessage" type="text" value="An error occured in the matchmaking API. If the problem persist please try to contact this server administrator."/> -->
     <!-- Default : <setting name="S_MatchmakingLogAPIError" type="boolean" value="0"/> -->
     <!-- Default : <setting name="S_MatchmakingLogAPIDebug" type="boolean" value="0"/> -->
@@ -220,15 +220,15 @@ For a match server :
     <!-- Default : <setting name="S_UseScriptCallbacks" type="boolean" value="0"/> -->
     <!-- Default : <setting name="S_NeutralEmblemUrl" type="text" value=""/> -->
     <!-- Default : <setting name="S_ScoresTableStylePath" type="text" value=""/> -->
-    <!-- Default : <setting name="S_MatchmakingAPIUrl" type="text" value="https://matchmaking.maniaplanet.com/v4"/> -->
+    <!-- Default : <setting name="S_MatchmakingAPIUrl" type="text" value="https://matchmaking.maniaplanet.com/v5"/> -->
     <setting name="S_MatchmakingMode" type="integer" value="2"/> <!-- Default : 0 -->
-    <!-- Default : <setting name="S_LobbyTimePerRound" type="integer" value="60"/> -->
-    <!-- Default : <setting name="S_LobbyRoundPerMap" type="integer" value="30"/> -->
+    <!-- Default : <setting name="S_LobbyTimePerRound" type="integer" value="30"/> -->
+    <!-- Default : <setting name="S_LobbyRoundPerMap" type="integer" value="60"/> -->
     <!-- Default : <setting name="S_LobbyMatchmakerTime" type="integer" value="10"/> -->
     <!-- Default : <setting name="S_LobbyInstagib" type="boolean" value="0"/> -->
     <!-- Default : <setting name="S_LobbyDisplayMasters" type="boolean" value="1"/> -->
     <!-- Default : <setting name="S_LobbyAllowMatchCancel" type="boolean" value="1"/> -->
-    <!-- Default : <setting name="S_LobbyLimitMatchCancel" type="integer" value="1"/> -->
+    <!-- Default : <setting name="S_LobbyLimitMatchCancel" type="integer" value="0"/> -->
     <!-- Default : <setting name="S_MatchmakingErrorMessage" type="text" value="An error occured in the matchmaking API. If the problem persist please try to contact this server administrator."/> -->
     <!-- Default : <setting name="S_MatchmakingLogAPIError" type="boolean" value="0"/> -->
     <!-- Default : <setting name="S_MatchmakingLogAPIDebug" type="boolean" value="0"/> -->
