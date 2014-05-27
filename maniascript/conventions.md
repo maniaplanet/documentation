@@ -1,30 +1,42 @@
 ---
 layout: static
 title: ManiaScript style contention
-description: ManiaScript style contention
+description: ManiaScript style convention
 ---
 
 ## File
 
 * ManiaScript files MUST use **LF** line ending.
 * ManiaScript files MUST use UTF-8 encoding without BOM.
+* ManiaScript files names MUST use CamelCase.
+* ManiaScript files extension MUST be `.Script.txt`
+
+## Settings
+
+* Settings names MUST be prefixed by `S_`
+* ALL settings MUST use CamelCase.
+
+## Constants
+
+* Constants names MUST be prefixed by `C_`
+* ALL constants MUST use CamelCase.
 
 ## Variables
 
-* Global variable names MUST be prefixed by `G_`
+* Globals variables names MUST be prefixed by `G_`
 * ALL variables MUST use CamelCase.
+* Variables declared `for` something MUST be prefixed to avoid name collision.
+* `netwrite` and `netread` variable MUST be prefixed by `Net_`
 
 ## Functions
 
 * Functions argument MUST start with an underscore (_) and start with upper case. 
-* Functions MUST be prefixed with an identifier followed by an underscore (_). Usually the name of the library. 
 * Opening braces for functions MUST go on the same line, and closing braces MUST go on the next line after the body.
 * Private function MUST be prefixed by `Private_`
 
 ## Control structures
 
-
-Control structures are: if, else if, switch, while, foreach.
+Control structures are: if, else if, else, switch, while, foreach, for.
 
 * There MUST be one space after the control structure keyword
 * There MUST NOT be a space after the opening parenthesis
@@ -33,19 +45,33 @@ Control structures are: if, else if, switch, while, foreach.
 * The structure body MUST be indented once
 * The closing brace MUST be on the next line after the body
 
-## Example, file libFoo.Script.Txt
+## Example, file LibFoo.Script.txt
 
 {% highlight js %}
-Text Foo_DoSomething(Integer _Id) {
+#Const C_ConstantVariable 456
+
+declare Integer G_GlobalVariable;
+
+Void Private_DoNothing() {
+}
+
+Text DoSomething(Integer _Id) {
 	declare Text Result;
 	if (_Id == 42) {
-		Private_Foo_DoNothing();
+		Private_DoNothing();
 		Result = "42";
 	} else {
 		Result = "";
 	}
+
+  foreach (Player in Players) {
+    declare Text LibFoo_VariableForSomehting for Player;
+    VariableForSomehting = "42";
+
+    declare netwrite Integer Net_LibFoo_Variable for Player;
+    Net_LibFoo_Variable = 42;
+  }
+
 	return Result;
 } 
-Void Private_Foo_DoNothing() {
-}
 {% endhighlight %}

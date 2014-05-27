@@ -8,6 +8,7 @@ description: ManiaScript help
 
 * [How to generate the documentation](general/generate-doc.html)
 * [Useful links](general/links.html)
+* [ManiaScript style convention](conventions.html)
 * [Landmarks in ManiaScript](general/landmarks.html)
 
 # Libraries
