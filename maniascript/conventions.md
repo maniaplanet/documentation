@@ -64,13 +64,13 @@ Text DoSomething(Integer _Id) {
 		Result = "";
 	}
 
-  foreach (Player in Players) {
-    declare Text LibFoo_VariableForSomehting for Player;
-    VariableForSomehting = "42";
+	foreach (Player in Players) {
+		declare Text LibFoo_VariableForSomehting for Player;
+		VariableForSomehting = "42";
 
-    declare netwrite Integer Net_LibFoo_Variable for Player;
-    Net_LibFoo_Variable = 42;
-  }
+		declare netwrite Integer Net_LibFoo_Variable for Player;
+		Net_LibFoo_Variable = 42;
+	}
 
 	return Result;
 } 
