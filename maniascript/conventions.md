@@ -1,6 +1,6 @@
 ---
 layout: static
-title: ManiaScript style contention
+title: ManiaScript style convention
 description: ManiaScript style convention
 ---
 
