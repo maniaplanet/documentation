@@ -196,7 +196,7 @@ in order to facilitate the item placement in the editor, you can define paramete
 </Pivots>
 ```
 Note : In the editor, since the Beta2 release, the pivot is chosen automatically according to the surface under the mouse pointer (if you are pointing at ground for instance, it will choose the lowest pivot).  
-Sometimes, several pivots are chosen: you can switch from one to another using the *numpad '.'* key.  
+Sometimes, several pivots are chosen: you can switch from one to another using the numpad '.' key or 'Q' key ('A' for azerty keyboards).  
 
 - `<GridSnap>` : the object can be placed every x meters  
 	- ex. good parameters for the environment Canyon:  
@@ -228,7 +228,7 @@ Sometimes, several pivots are chosen: you can switch from one to another using t
 - `<Options>` : other placement options (default values are "false"). attributes  
 	- `NotOnItem`: prevents the object from being placed on another item (boolean, default = false)  
 	- `OneAxisRotation`  : prevents the item from being rotated with arrow keys (you can rotate it around the vertical axis only, with right click, '+' key and '-' key)  
-	- `ManualPivotSwitch` : the pivot used to place the object won't change automatically; the only way to change it is to press numpad '.' key  
+	- `ManualPivotSwitch` : the pivot used to place the object won't change automatically; the only way to change it is to press numpad '.' key or 'Q' key ('A' for azerty keyboards)  
 	- `"AutoRotation` : the object rotates automatically according to the surface pointed by the mouse cursor  
 	- ex. an object that will always be perpendicular to the surface it is placed on:  
 		`<Options OneAxisRotation="true" AutoRotation="true" />`  
