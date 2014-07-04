@@ -780,6 +780,11 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ### Common
 
+##### LibXmlRpc_OnStartCountdown
+* Data : An array with the login of the starting player
+* Example : ["Login"]
+* Note : This callback is sent when a player is spawned on the track before the 3,2,1,Go! countdown.
+
 ##### LibXmlRpc_OnStartLine
 * Data : An array with the login of the starting player
 * Example : ["Login"]
@@ -796,9 +801,9 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 * Note : This callback is sent when a player restarts.
 
 ##### LibXmlRpc_OnRespawn
-* Data : An array with the login of the respawning player
-* Example : ["Login"]
-* Note : This callback is sent when a player respawns.
+* Data : An array with the login of the player respawning, the id of the waypoint block, the waypoint number in the race, the waypoint number in the lap and the number of respawns since the beginning of the race.
+* Example : ["Login", "#123456", "1", "0", "5"]
+* Note : This callback is sent when a player respawns at a waypoint (checkpoint, multilap, ...).
 
 ##### LibXmlRpc_OnStunt
 * Data : An array with the player login, the stunt points, the combo, the total stunts score, the factor, the stunt name, the angle, if the stunt is straight, if the stunt is reversed, if the stunt is a master jump
@@ -806,14 +811,15 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 * Note : This callback is sent when a player does a stunt. The stunts names are: None, StraightJump, Flip, BackFlip, Spin, Aerial, AlleyOop, Roll, Corkscrew, SpinOff, Rodeo, FlipFlap, Twister, FreeStyle, SpinningMix, FlippingChaos, RollingMadness, WreckNone, WreckStraightJump, WreckFlip, WreckBackFlip, WreckSpin, WreckAerial, WreckAlleyOop, WreckRoll, WreckCorkscrew, WreckSpinOff, WreckRodeo, WreckFlipFlap, WreckTwister, WreckFreeStyle, WreckSpinningMix, WreckFlippingChaos, WreckRollingMadness, TimePenalty, RespawnPenalty, Grind, Reset.
 
 ##### LibXmlRpc_PlayerRanking
-* Data : An array with the current rank in the scores, login, nickname, team id, spectator status, away status, best time, zone, points and best checkpoints times of a player.
-* Example : ["1", "eole", "b`Side.Eole", "0", "False", "False", "101234", "World|Europe|France|Outre-Mer|Reunion", "32", "12300,35641,45213"]
-* Note : [Rank, Login, NickName, TeamId, IsSpectator, IsAway, BestTime, Zone, Points, BestCheckpoints]
+* Data : An array with the current rank in the scores, login, nickname, team id, spectator status, away status, best time, zone, points, best checkpoints times and total points of a player.
+* Example : ["1", "eole", "b`Side.Eole", "0", "False", "False", "101234", "World|Europe|France|Outre-Mer|Reunion", "32", "12300,35641,45213", "50"]
+* Note : [Rank, Login, NickName, TeamId, IsSpectator, IsAway, BestTime, Zone, Points, BestCheckpoints, TotalPoints]
 
 ##### LibXmlRpc_PlayersRanking
-* Data : An array with the current rank, login and best checkpoints times of the players.
-* Example : ["login1:1:123,456,789", "login19:2:-1", "login48:3:321,654,987", "login7:4:-1"]
-* Note : the login, rank and best checkpoints of the players are separated by a colon. Tghe best checkpoint times are separated by a comma. This callback is sent when the script receives the "LibXmlRpc_GetPlayersRanking" trigger.
+* Data : An array with the login, current rank in the scores, best checkpoints times, team id, spectator status, away status, best time, zone, points and total score of a player.
+* Example : ["eole:1:123,456,789:-1:False:False:789:World|Europe|France|Outre-mer|Reunion:0:0", "eole2:1:-1:-1:False:False:-1:World|Europe|France|Outre-mer|Reunion:0:0"]
+* Note : ["Login:Rank:BestCheckpoints:TeamId:IsSpectator:IsAway:BestTime:Zone:Points:TotalScore"]
+the login, rank, best checkpoints, team id, spectator status, away status, best time, zone, points and total points of the players are separated by a colon. The best checkpoint times are separated by a comma. This callback is sent when the script receives the "LibXmlRpc_GetPlayersRanking" trigger.
 
 ##### LibXmlRpc_PlayersScores
 * Data : An array with the current score and login of the players.
@@ -976,7 +982,7 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 ##### LibXmlRpc_GetPlayersRanking
 * Note : Get the current ranking of the players. This method triggers the LibXmlRpc_PlayersRanking callback. The first parameter set the maximum number of players to return. The second set the starting rank.
 * String : "LibXmlRpc_GetPlayersRanking"
-* Array : ["10","5"] (return 10 players startig at rank 5)
+* Array : ["10","5"] (return 10 players starting at rank 5)
 
 ##### LibXmlRpc_SetPlayersScores
 * Note : Set the scores of the players.
