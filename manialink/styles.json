@@ -692,6 +692,18 @@
         ]
     },
     {
+        "elements": ["quad"],
+        "styles": ["BgsButtons"],
+        "substyles": [
+            "BgButtonLarge",
+            "BgButtonMedium",
+            "BgButtonMediumSelector",
+            "BgButtonMediumSpecial",
+            "BgButtonSmall",
+            "BgButtonXSmall"
+        ]
+    },
+    {
         "elements": ["label"],
         "styles": ["AvatarButtonNormal",
             "BgMainMenuTitleHeader",
@@ -790,7 +802,8 @@
             "CardButtonSmallXXXL",
             "CardMain_Quit",
             "CardMain_Tool",
-            "CardMain_Tool_NoBg"
+            "CardMain_Tool_NoBg",
+            "CardMain_Tool_NoBg2"
         ]
     },
     {
