@@ -38,6 +38,7 @@ Easy, follow the instructions: https://player.maniaplanet.com/matchmaking-server
 ## Standard vs Universal servers
 
 On a standard lobby, players for a match are selected by the matchmaking algorithm. You can ally yourself with your friends if you want to play with them and the system will find opponents of your level automatically. But you can't select the players you'll play against.
+
 On an universal lobby, all the players of a match are selected by the players themselves. If a match needs 6 players to be played, you have to create a group and have 5 other players joining it. Inside the group you can select your team and once everybody is ready the lobby will find a server and send the group there.
 
 ## Dedicated server configuration
