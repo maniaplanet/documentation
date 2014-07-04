@@ -4,9 +4,6 @@ title: Matchmaking
 description: How to make a lobby or a match server in ManiaPlanet matchmaking
 ---
 
-- Nouveaux settings
-- Combo matchmaking
-
 ## Introduction
 
 ManiaPlanet 3.0 introduces a **new matchmaking technical architecture** to make things **simplier for server hosters**. Server hosting is very popular in both TrackMania and ShootMania, and our goal is for matchmaking to benefits from the hosting skill and passion of the community.
@@ -24,7 +21,7 @@ The guide will cover the technical aspects. If you have any questions or feedbac
 ## Requirements
 
 - You need to be familiar with ManiaPlanet dedicated servers ([quick start guide](basic.html))
-- Make sure your title supports matchmaking (eg. Elite, Siege or Combo) (todo link)
+- Make sure your title supports matchmaking (eg. Elite, Siege or Combo)
 
 ## Add match servers to a lobby
 
@@ -37,6 +34,11 @@ Easy, follow the instructions: https://player.maniaplanet.com/matchmaking-server
 With the new matchmaking system every server can be used as a match server by a lobby - as long as the match server is configured as such. You can whitelist only some lobbies to use your match server.
 
 Easy, follow the instructions: https://player.maniaplanet.com/matchmaking-servers
+
+## Standard vs Universal servers
+
+On a standard lobby, players for a match are selected by the matchmaking algorithm. You can ally yourself with your friends if you want to play with them and the system will find opponents of your level automatically. But you can't select the players you'll play against.
+On an universal lobby, all the players of a match are selected by the players themselves. If a match needs 6 players to be played, you have to create a group and have 5 other players joining it. Inside the group you can select your team and once everybody is ready the lobby will find a server and send the group there.
 
 ## Dedicated server configuration
 
@@ -70,7 +72,7 @@ Edit the relevant settings in the matchsettings file to enable the matchmaking.
 |Setting|Default value|Description|
 |---|---|---|
 |**S_MatchmakingAPIUrl**|https://matchmaking.maniaplanet.com/v5|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
-|**S_MatchmakingMode**|0|This is the most important setting. It can take one of these three values : 0 -> matchmaking turned off; 1 -> matchmaking turned on, use this server as a lobby server; 2 -> matchmaking turned on, use this server as a match server.|
+|**S_MatchmakingMode**|0|This is the most important setting. It can take one of these five values : 0 -> matchmaking turned off, standard server; 1 -> matchmaking turned on, use this server as a lobby server; 2 -> matchmaking turned on, use this server as a match server; 3 -> matchmaking turned off, use this server as a universal lobby server; 4 -> matchmaking turned off, use this server as a universal match server.|
 |**S_LobbyTimePerRound**|30|Duration (in seconds) of a round between the activations of the matchmaking function. It can't be smaller than 15 seconds.|
 |**S_LobbyRoundPerMap**|60|Number of rounds played before going to the next map.|
 |**S_LobbyMatchmakerTime**|10|Duration (in seconds) of the matchmaking function. It allows the players to see with who they will play their match or cancel it if necessary.|
@@ -310,5 +312,3 @@ For a match server :
   </map>
 </playlist>
 {% endhighlight %}
-
-## For script creators
