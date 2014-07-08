@@ -868,35 +868,6 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 
 ## ShootMania
 
-### Combo
-
-#### Combo_SetTimersLayerPosition
-* Note : Change the position of the timers layer
-* String : "Combo_SetTimersLayerPosition"
-* Array :  ["151.5", "-82.", "0."] ([PosX, PosY, PosZ])
-
-### Elite
-
-##### MatchmakingSetOrder
-* Note : Define a specific order for the players in matchmaking.
-* String1 : "MatchmakingSetOrder"
-* String2 :  "Login1TeamA,Login2TeamA,Login3TeamA|Login1TeamB,Login2TeamB,Login3TeamB"
-
-### Siege
-
-#### Siege_SetProgressionLayerPosition
-* Note : Change the position of the progression layer
-* String : "Siege_SetProgressionLayerPosition"
-* Array :  ["160.", "90.", "-20."] ([PosX, PosY, PosZ])
-
-### Lobby
-
-##### LibXmlRpc_Lobby_SetRoundDuration
-* Note : Define a SetRoundDuration inside LobbyMode
-* String1 : "LibXmlRpc_Lobby_SetRoundDuration"
-* String2 :  "6000" (Time in seconds)
-
-
 ### Common
 
 ##### LibXmlRpc_DisableAltMenu
@@ -948,6 +919,51 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 * Note : Get the properties of the AFK library. This will sent the `LibAFK_Properties` callback in return.
 * String1 : "LibAFK_GetProperties"
 * String2 : ""
+
+### Matchmaking
+
+##### Matchmaking_Start
+* Note : Enable the matchmaking function in the standard lobby.
+* String1 : "Matchmaking_Start"
+* String2 : ""
+
+##### Matchmaking_Stop
+* Note : Disable the matchmaking function in the standard lobby.
+* String1 : "Matchmaking_Start"
+* String2 : ""
+
+##### Matchmaking_Force
+* Note : Active the matchmaking function immediately, the matchmaking must be enabled beforehand.
+* String1 : "Matchmaking_Force"
+* String2 : ""
+
+### Combo
+
+#### Combo_SetTimersLayerPosition
+* Note : Change the position of the timers layer
+* String : "Combo_SetTimersLayerPosition"
+* Array :  ["151.5", "-82.", "0."] ([PosX, PosY, PosZ])
+
+### Elite
+
+##### MatchmakingSetOrder
+* Note : Define a specific order for the players in matchmaking.
+* String1 : "MatchmakingSetOrder"
+* String2 :  "Login1TeamA,Login2TeamA,Login3TeamA|Login1TeamB,Login2TeamB,Login3TeamB"
+
+### Siege
+
+#### Siege_SetProgressionLayerPosition
+* Note : Change the position of the progression layer
+* String : "Siege_SetProgressionLayerPosition"
+* Array :  ["160.", "90.", "-20."] ([PosX, PosY, PosZ])
+
+### Lobby
+
+##### LibXmlRpc_Lobby_SetRoundDuration
+* Note : Define a SetRoundDuration inside LobbyMode
+* String1 : "LibXmlRpc_Lobby_SetRoundDuration"
+* String2 :  "6000" (Time in seconds)
 
 
 ## TrackMania
