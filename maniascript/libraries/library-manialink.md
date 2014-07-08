@@ -19,7 +19,7 @@ To use the animation module you first have to inject it into your manialink with
 Once you have injected the module you can call the `LibManialink_AnimLoop()` function in your script to update your animations.
 
 Example of the basic setting :
-{% highlight js %} 
+{% highlight xml %} 
 <frame id="Frame_Global">
   <quad sizen="15 15" halign="center" valign="center" bgcolor="047" id="Quad_Anim" />
   <label posn="-30 20" halign="center" style="CardButtonMedium" text="Anim 1" scriptevents="1" id="Button_Anim1" />
@@ -39,12 +39,13 @@ main() {
 {% endhighlight %}
 
 You have access to three animation functions:
+
 * `LibManialink_Anim()` : clear the animation queue of the element and start a new animation sequence
 * `LibManialink_AnimChain()` : add an animation at the end of the animation queue
 * `LibManialink_AnimInsert()`: insert an animation inside the animation queue
 
 Let's start with a simple animation. I want the quad to move to another position when I click on the "Anim 1" button :
-{% highlight js %} 
+{% highlight xml %} 
 <frame id="Frame_Global">
   <quad sizen="15 15" halign="center" valign="center" bgcolor="047" id="Quad_Anim" />
   <label posn="-30 20" halign="center" style="CardButtonMedium" text="Anim 1" scriptevents="1" id="Button_Anim1" />
@@ -72,7 +73,7 @@ main() {
 {% endhighlight %}
 
 The first thing to notice is the use of the `Inject()` function. It is used to avoid the insertion of escaped double quote (\"). It's really useful when inserting long Text with a lot of double quotes inside. We could have write the exact same thing like that :
-{% highlight js %} 
+{% highlight xml %} 
 LibManialink_Anim("<quad posn=\"50 -50\" id=\"Quad_Anim\" />", 3000, "EaseOutBounce");
 {% endhighlight %}
 
@@ -80,7 +81,7 @@ So the `LibManialink_Anim()` function take 3 parameters. The first one is the el
 All the animations start from the current properties of the animated element. This is the reason why when we click on the "Anim 1" button a second time the animation doesn't play anymore. The element is already at its desired position.
 
 You can send the quad to it's original position with a second animation bind on the "Anim 2" button :
-{% highlight js %} 
+{% highlight xml %} 
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
@@ -95,7 +96,7 @@ foreach (Event in PendingEvents) {
 If you press the opposing button while an animation is running you'll see that it will stop and the new one start from the current position of the quad.
 
 You can animate multiple properties during one animation :
-{% highlight js %} 
+{% highlight xml %} 
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
@@ -110,7 +111,7 @@ foreach (Event in PendingEvents) {
 If you press the "Anim 2" button after the "Anim 1" button you'll see that the quad position will return to it's original value but not the other properties. Not specifying a property in the animation function will leave it at it's current value. Which is the case in the second animation where we just specify the position property.
 
 Now let's take a look at the `LibManialink_AnimChain()` function. It works exactly like `LibManialink_Anim()` but instead of clearing the animation queue of the element it will add a new animation at the end of the queue. So taking our previous example :
-{% highlight js %} 
+{% highlight xml %} 
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
@@ -126,7 +127,7 @@ foreach (Event in PendingEvents) {
 With this, when you click on the "Anim 1" button the quad will start to go to it's first position during 3 seconds and then move to the second one during 2 seconds.
 
 But let's say you want to have an animation where the quad go from position A to B in 5 seconds and rotate during the translation for 3 seconds starting after one second. You'll have to use the `LibManialink_AnimInsert()` for that :
-{% highlight js %} 
+{% highlight xml %} 
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
@@ -142,7 +143,7 @@ foreach (Event in PendingEvents) {
 The function takes one more parameter than `LibManialink_Anim()`. The first parameter is still the element and the properties we want to animate. Then we have time at which the animation will start. Finally we have the duration of the animation and the easing method.
 
 And now let's see what we could do by combining them all together :
-{% highlight js %} 
+{% highlight xml %} 
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
@@ -161,7 +162,7 @@ foreach (Event in PendingEvents) {
 {% endhighlight %}
 
 You can also repeat a whole animation for a definite number of time or indefinitely. To do so you have to inject the repeat function in your Manialink script.
-{% highlight js %}
+{% highlight xml %}
 <script><!--
 {{{Manialink::Includes(["TextLib" => "TL", "MathLib" => "ML"])}}}
 {{{Manialink::Animations(["EaseInOutElastic", "EaseOutBounce", "EaseInOutExp", "EaseOutBack", "EaseOutElastic"])}}}
@@ -174,7 +175,7 @@ main() {
 {% endhighlight %}
 
 Now you must wrap the animation you want to repeat between two functions, `LibManialink_AnimRepeatStart()` and `LibManialink_AnimRepeatEnd()` :
-{% highlight js %}
+{% highlight xml %}
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
@@ -196,24 +197,24 @@ In this case we want to repeat the animation each second three times.
 `LibManialink_AnimRepeatStart()` can also take only the first argument and in this case the animation will be repeated indefinitely.
 
 If you can't identify the element you want to animate by an unique id, the animations functions can take an optional parameter as first argument. You can pass the CMlControl directly to the function :
-{% highlight js %}
+{% highlight xml %}
 LibManialink_Anim(((Page.MainFrame.Controls[0] as CMlFrame).Controls[0] as CMlFrame).Controls[0], {{{Manialink::Inject("""<quad posn="0 0" />""")}}}, 3000, "EaseInOutElastic");
 {% endhighlight %}
 
 To stop an animation on an element you can use the `LibManialink_AnimStop()` function. Two versions of the function exist. the first one take a CMlControl as argument while the second one take a Text, the ControlId of the control.
-{% highlight js %} 
+{% highlight xml %} 
 Void LibManialink_AnimStop(CMlControl _Control)
 
 @param  _Control   The control to stop
 {% endhighlight %}
-{% highlight js %} 
+{% highlight xml %} 
 Void LibManialink_AnimStop(Text _ControlId)
 
 @param  _ControlId   The ControlId of the control to stop
 {% endhighlight %}
 
 If you want to know if an animation is currently running on a control you can use the `LibManialink_IsAnimated()` function. To use it you have to make another injection at the beginning of your manialink :
-{% highlight js %}
+{% highlight xml %}
 <script><!--
 {{{Manialink::Includes(["TextLib" => "TL", "MathLib" => "ML"])}}}
 {{{Manialink::Animations(["EaseInOutElastic", "EaseOutBounce", "EaseInOutExp", "EaseOutBack", "EaseOutElastic"])}}}
@@ -226,33 +227,38 @@ main() {
 {% endhighlight %}
 
 There's two versions of the function, the first one take a CMlControl as argument while the second one take a Text, the ControlId of the control. Both return a Boolean : True if an animation is running, False otherwise.
-{% highlight js %} 
+{% highlight xml %} 
 Boolean LibManialink_IsAnimated(CMlControl _Control)
 
 @param  _Control   The control to test
 {% endhighlight %}
-{% highlight js %} 
+{% highlight xml %} 
 Boolean LibManialink_IsAnimated(Text _ControlId)
 
 @param  _ControlId   The ControlId of the control to test
 {% endhighlight %}
 
 Not all properties can be animated, this is the list of the available ones.
+
 CMlControl :
+
 - Position
 - Size
 - Scale
 - Rotation
 
 CMlQuad :
+
 - Opacity
 - Colorize
 - BgColor
 
 CMlLabel :
+
 - Opacity
 - TextColor
 
 CMlGauge :
+
 - Ratio
 - Color

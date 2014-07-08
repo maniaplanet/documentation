@@ -21,7 +21,7 @@ The guide will cover the technical aspects. If you have any questions or feedbac
 ## Requirements
 
 - You need to be familiar with ManiaPlanet dedicated servers ([quick start guide](basic.html))
-- Make sure your title supports matchmaking (eg. Elite, Siege or Combo)
+- Make sure your title supports matchmaking (eg. Elite, Siege, Combo or Battle)
 
 ## Add match servers to a lobby
 
