@@ -832,9 +832,9 @@ the login, rank, best checkpoints, team id, spectator status, away status, best 
 * Note : the login and the best time of the players are separated by a colon. This callback is sent when the script receives the "LibXmlRpc_GetPlayersTimes" trigger.
 
 ##### LibXmlRpc_TeamsScores
-* Data : An array with the current scores of the teams.
-* Example : ["1", "5"]
-* Note : [ScoreTeam1, ScoreTeam2]. This callback is sent when the script receives the "LibXmlRpc_GetTeamsScores" trigger.
+* Data : An array with the current and total scores of the teams.
+* Example : ["1", "5", "2", "5"]
+* Note : [ScoreTeam1, ScoreTeam2, TotalScoreTeam1, TotalScoreTeam2]. This callback is sent when the script receives the "LibXmlRpc_GetTeamsScores" trigger.
 
 ##### LibXmlRpc_TeamsMode
 * Data : An array with a boolean to indicate if the mode use teams or not.
