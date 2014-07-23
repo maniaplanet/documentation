@@ -11,7 +11,7 @@ The importer is a tool to generate items (static objects, dynamic objects, chara
 
 
 The source assets must be placed in sub folders of `{maniaplanet_user_dir}/Work`.  
-The corresponding imported files will created in sub folders of `{maniaplanet_user_dir}` (whithout `/Work`)  
+The corresponding imported files will be created in sub folders of `{maniaplanet_user_dir}` (whithout `/Work`)  
 
 for instance:  
 `{maniaplanet_user_dir}\Work\Skins\Models\ArenaPlayer\Susu` => `{maniaplanet_user_dir}\Skins\Models\ArenaPlayer\Susu.zip`  
@@ -21,15 +21,15 @@ and so on.
 
 Current Release
 -
-importer : http://files.maniaplanet.com/tools/NadeoImporter_2014_04_09.zip
+importer : http://files.maniaplanet.com/tools/NadeoImporter_2014_07_23.zip
 
 sample files : http://files.maniaplanet.com/tools/NadeoImporterSamples_2014_04_09.zip
 
 
 the importer must be unzipped in the `{Maniaplanet_exe_dir}` folder (the same folder that contains `ManiaPlanet.exe`, typically `c:/program files/Maniaplanet` or `c:/Program files (x86)/Maniaplanet` )  
-You might neeed administrator rights unzip and to place the importer files here
+You might neeed administrator rights to unzip and place the importer files here
 
-the sample files mus be unzipped in the `{maniaplanet_user_dir}` foler (typically the folder `{My Documents}/Maniaplanet`)
+the sample files must be unzipped in the `{maniaplanet_user_dir}` folder (typically the folder `{My Documents}/Maniaplanet`)
 
 Import an item
 -
@@ -46,12 +46,17 @@ See the dedicated page: [car skin import](importer_carskin.html)
 Import a mesh
 -
 See the dedicated page: [mesh import](importer_mesh.html)  
-Note : A mesh itself isnt usable in Maniaplanet, but is a component of items and char skins
+Note : A mesh itself isn't usable in Maniaplanet, but is a component of items and char skins
+
+Import a font
+-
+See the dedicated page: [font import](importer_font.html)
 
 
 ChangeLog
 -
 ```
+2014-07-23  - font importer
 2014-04-08  - major importer update, new doc
 2014-03-28  - pivot snapping parameter (pivot snapping already existed but it could not be customized nor deactivated)
 			- pivot switching now binded to numpad "." key (because 'tab' is now used to hide item list in the editor)
@@ -80,6 +85,7 @@ ChangeLog
 
 All releases
 --
+- http://files.maniaplanet.com/tools/NadeoImporter_2014_07_23.zip
 - http://files.maniaplanet.com/tools/NadeoImporter_2014_04_09.zip
 - http://files.maniaplanet.com/tools/NadeoImporter_2014_03_27.zip
 - http://files.maniaplanet.com/tools/NadeoImporter_2013_09_17.zip
