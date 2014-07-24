@@ -4,6 +4,22 @@ title: Going further with the ManiaScript
 description: Advanced uses of the ManiaScript
 ---
 
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Specifying parameters for a player](#user-content-specifying-parameters-for-a-player)
+- [Spawning a bot](#user-content-spawning-a-bot)
+- [Displaying messages on the HUD](#user-content-displaying-messages-on-the-hud)
+- [Using the pole in your script](#user-content-using-the-pole-in-your-script)
+- [Create and spawn an object](#user-content-create-and-spawn-an-object)
+- [Drop an object from a player](#user-content-drop-an-object-from-a-player)
+- [The "Actions"](#user-content-the-actions)
+	- [Assigning a weapon/action](#user-content-assigning-a-weaponaction)
+	- [Managing the event of an action](#user-content-managing-the-event-of-an-action)
+- [The Manialink in the ManiaScript](#user-content-the-manialink-in-the-maniascript)
+	- [ManiaScript in the Manialink](#user-content-maniascript-in-the-manialink)
+		- [Sending ManiaScript script variables to the ManiaScript Manialink variables and vice versa](#user-content-sending-maniascript-script-variables-to-the-maniascript-manialink-variables-and-vice-versa)
+			- [Example](#user-content-example)
+
 The things that you may saw before it's just a glimpse of what's possible with the ManiaScript. I'll show you some more advanced functions to do more things in a gamemode.
 
 # Specifying parameters for a player
@@ -54,7 +70,7 @@ The first one is with SendBigMessage which will display... well a big message at
 ```c++
     Message::SendBigMessage(TextLib::Compose("""$<%1$> has scored!""", _Player.Name), 3000, 10);
 ```
-    
+
 `Message` is the call for the library declared before at the beginning of the script. We ask the script to call the function `SendBigMessage` of the `Message` library.
 
 In the example above, the first argument is the text to display. Thanks to `Compose` function of the `TextLib` library, we can put arguments if you want to display messages that are a bit more dynamic. While you're writing the text you can add the text `$<%1$>` to tell the Compose function that you're adding an argurment that you'll fill just after. In the example, we indicate a player name (but it could be anything else). Then we indicate the duration of the message, 3000 milliseconds which equal 3 seconds.
@@ -64,13 +80,13 @@ You can specify a receiver if you indicate a CSmPlayer variable as first argumen
 ```c++
     Message::SendBigMessage(ReceiverPlayer, TextLib::Compose("""$<%1$> has scored!""", _Player.Name), 3000, 10);
 ```
-    
+
 Else there is another function to display message, smaller ones, on the HUD, by using the function `SendStatusMessage`:
 
 ```c++
     Message::SendStatusMessage(TextLib::Compose("""$<%1$> has scored!""", _Player.Name), 3000, 10);
 ```
-    
+
 It works like `SendBigMessage`.
 
 # Using the pole in your script
@@ -88,7 +104,7 @@ First you must reset the progression of the pole (to prevent to have a half-capt
     }
     ***
 ```
-    
+
 Then you have to manage the pole during the `Playloop`:
 
 ```c++
@@ -101,10 +117,10 @@ Then you have to manage the pole during the `Playloop`:
     			Pole.Gauge.Speed = 1;
     			Pole.Gauge.Max = 3000;
     			Pole.Captured = True;
-    				
+
     			if (Pole.Gauge.Value == Pole.Gauge.Max) {
     				Player.Score.Points += 1;
-    					
+
     				MB_StopRound = True;
     				Message::SendBigMessage(TextLib::Compose("$<%1$> has loaded the Pole!", Player.Name), 4000, 10);
     				break;
@@ -118,7 +134,7 @@ Then you have to manage the pole during the `Playloop`:
     	}
     }
 ```
-    
+
 In this example, we check all the pole of the map and on each of them, we check if there is a player around it, if so we are loading the pole and if the pole is loaded, we give to the player one point and we stop the round. If there is no one, the pole is reset.
 
 # Create and spawn an object
@@ -129,7 +145,7 @@ First you have to declare all the dynamic objects (including mandatory skins if 
 ```c++
     declare Ident G_MyDynamicObject;
     declare Ident G_MyMandatorySkin;
-    
+
     ***StartServer***
     ***
     ItemList_Begin();
@@ -138,7 +154,7 @@ First you have to declare all the dynamic objects (including mandatory skins if 
     ItemList_End();
     ***
 ```
-    
+
 As you can see, you must declare a global variable as Ident to stock the desired item as reference in the `StartServer` section.
 
 Secondly you have to create the object, once or as many times you need with those instructions:
@@ -147,7 +163,7 @@ Secondly you have to create the object, once or as many times you need with thos
     declare CSmObject AnObject;
     AnObject = ObjectCreate(G_MyDynamicObject);
 ```
-    
+
 Once created, you have (maybe, it's depending of your game design) to spawn the item on the World or on a player.
 
 To spawn it on the world, you must check all the anchor of the map and spawn the object on them (all of them, you can't choose). The issue is that an anchor of the item must exist on the map or the item will not be spawned.
@@ -164,13 +180,13 @@ To spawn it with this method, you can do the following:
     	}
     }
 ```
-    
+
 If you want to give it to a player, then you should do this:
 
 ```c++
     AnObject.SetPlayer(_Player);
 ```
-    
+
 In this way the object will be carried by the specified player. You'll be able to find the object located on a player by listing his objects with:
 
 ```c++
@@ -183,12 +199,12 @@ For your mode you'll maybe have to drop a dynamic object (like a ball for exampl
 ```c++
     Void DropObject(CSmPlayer _Shooter, CSmPlayer _Victim) {
     	if(_Victim.Objects.count <= 0) return;
-    	
+
     	declare CSmObject VictimItem = _Victim.Objects[0];
     	if(VictimItem != Null) {
     		declare Vec3 Pos;
     		declare Vec3 Vel;
-    		
+
     		if(_Shooter != Null) {
     			Pos = _Victim.Position + <0., 3., 0.>;
     			Vel = _Shooter.Position - _Victim.Position;
@@ -203,7 +219,7 @@ For your mode you'll maybe have to drop a dynamic object (like a ball for exampl
     	}
     }
 ```
-    
+
 With this function, the object will be dropped in the opposite direction of the shot (in that way you can suppose from where the shot is from).
 
 # The "Actions"
@@ -215,7 +231,7 @@ First to use an action, you must declare it on the `StartServer` section of your
 
 ```c++
     declare Ident G_MyCustomWeapon;
-    
+
     ***StartServer***
     ***
     ActionList_Begin();
@@ -223,7 +239,7 @@ First to use an action, you must declare it on the `StartServer` section of your
     ActionList_End();
     ***
 ```
-    
+
 `G_MyCustomWeapon` must be declared as a global variable to be usable everywhere in your script. Note also that the Actions will be search in the folder `Actions` (at the root of the package tree).
 
 ## Assigning a weapon/action
@@ -233,7 +249,7 @@ To assign a weapon created with the ActionMaker to a player, you have to use the
     ActionLoad(Player, CSmMode::EActionSlot::Slot_A, G_MyCustomWeapon);
     ActionBind(Player, CSmMode::EActionSlot::Slot_A, CSmMode::EActionInput::Weapon);
 ```
-    
+
 `CSmMode::EActionInput::Weapon` is referencing the fire button (left click usually), if you want to put an action on the right-click, you have to specify `Movement` as input instead of `Weapon`. But if you do that, the player won't be able to jump/use his stamina.
 
 The actions can be assigned on the buttons 1, 2, 3 or 4 through `Activable1`, `Activable2`, `Activable3` and `Activable4`.
@@ -253,16 +269,16 @@ Here is an example on how to manage the event of an action:
     } else if (Event.Type == CSmModeEvent::EType::OnActionCustomEvent) {
     	if(Event.Param1 == "fire" && Event.Shooter != Null){
     		log("The Player has fired");
-    
+
     		PassOn(Event);
     	} else if(Event.Param1 == "damage" && Event.Shooter != Null && Event.Victim != Null && Event.Victim != Event.Shooter) {
     		Event.Victim.Armor -= TextLib::ToInteger(Event.Param2[0]);
-    
+
     		PassOn(Event);
     	}
     }
 ```
-    
+
 You can still manage the death of the players through the `OnArmorEmpty` event.
 
 # The Manialink in the ManiaScript
@@ -272,15 +288,15 @@ If you want to do so, you have first to create a text variable which will contai
 
 ```c++
     declare Text MLText = "<label posn="0 0 0" text="This is an example" />";
-    
+
     declare Layer <=> Layers::Get("ExampleUI");
     if(Layer == Null) Layer::Create("ExampleUI", MLText);
-    
+
     Layer <=> Layers::Get("ExampleUI");
     Layer.Type = CUILayer::EUILayerType::Normal;
     Layers::Attach("ExampleUI", Player);
 ```
-    
+
 In the example, once you have stocked your manialink in the text variable, you check if a layer (of the UI) already has the desired name for the layer. If not, we create it and then we specify the type of the layer and we attach it to the UI of the player.
 
 > **Tip:** You can add a multilines content text variable by using the delimiter `"""` instead of `""`. By doing this you can write on 10 lines with the formatting and then indicate the end of the content to add in the variable.
@@ -290,7 +306,7 @@ At the end of the round (or the map), I recommend to destroy all the layers to a
 ```c++
     Layers::DestroyAll();
 ```
-    
+
 ## ManiaScript in the Manialink
 You can use some ManiaScript in your Manialink too and even to have access to few script elements directly in your Manialink or in the ManiaScript of the Manialink.
 
@@ -305,16 +321,16 @@ First to use some ManiaScript in your Manialink, you have to write the ManiaScri
     		<script><!--
     		main() {
     			declare Integer aVar = 0;
-    
+
     			declare aQuad	 		<=> (Page.GetFirstChild("aQuad") 		as CMlQuad);
-    			
-    			aQuad.Show();		
-    			
+
+    			aQuad.Show();
+
     			while(True) {
     				yield;
-    				
+
     				// EVENT
-    				foreach(Event in PendingEvents) {		
+    				foreach(Event in PendingEvents) {
     					if(Event.Type == CMlEvent::Type::MouseClick) {
     						if(Event.ControlId == "aQuad") {
     							log("I clicked on a quad");
@@ -324,7 +340,7 @@ First to use some ManiaScript in your Manialink, you have to write the ManiaScri
     		}
     		--></script>
     	""";
-    
+
     	Layers::Create("ExampleUI", MLText);
     	declare Layer <=> Layers::Get("ExampleUI");
     	Layer.Type = CUILayer::EUILayerType::Normal;
@@ -339,7 +355,7 @@ Note that you can check several events like the different sort of clicks of the 
 If you want the script to run during the whole time it's attached to the UI of the player, you should put your code in a loop. Otherwise the code will be executed only at the very moment when the layer is attached.
 
 > **Tip:** Note that GUIPlayer in `CSmMIScriptIngame` is very useful because you have access to the attributes of the CSmPlayer attributes with it.
-> 
+>
 > **Tip:** You call variables from the main script if you put a triple brackets between the name of the variable like this: `{{{S_PointLimit}}}`. But with this method you can't manipulate them (like doing calculation, modification). See below to know how to do it properly.
 
 ### Sending ManiaScript script variables to the ManiaScript Manialink variables and vice versa
@@ -350,7 +366,7 @@ It works like an "input/output" system in simple language. In a logic sense, you
 ```c++
     declare netwrite Integer Srv_MyVariable for UI;
 ```
-    
+
 The "for UI" means that the variable is adressed to a specific player (first you have to retrieve the UI of the player with the instruction `declare UI <=> UIManager.GetUI(Player);`).
 
 > **Tip:** Instead of retrieving all the UIs if the variable is addressed for all players, you can specify `for Teams[0]` or `for Teams[1]`.
@@ -371,11 +387,11 @@ You have to create an "input" variable on the side where you will receive the va
 
 ```c++
     #Extends "Modes/ShootMania/ModeBase.Script.txt"
-    
+
     #Const  CompatibleMapTypes  "MeleeArena"
     #Const  Version             "1.0.0"
     #Const  ScriptName          "Melee_Tutorial.Script.txt"
-    
+
     #Include "Libs/Nadeo/Settings.Script.txt" as Settings
     #Include "TextLib" as TextLib
     #Include "MathLib" as MathLib
@@ -384,29 +400,29 @@ You have to create an "input" variable on the side where you will receive the va
     #Include "Libs/Nadeo/Message.Script.txt" as Message
     #Include "Libs/Nadeo/Interface.Script.txt" as Interface
     #Include "Libs/Nadeo/Layers.Script.txt" as Layers
-    
+
     // ---------------------------------- //
     // Settings
     // ---------------------------------- //
     #Setting S_TimeLimit    600 as _("Time limit")      ///< Time limit on a map
     #Setting S_PointLimit   25  as _("Points limit")    ///< Points limit on a map
-    
+
     declare Ident[]	G_SpawnsList;		///< Id of all the BlockSpawns of the map
     declare Ident	G_LatestSpawnId;	///< Id of the last BlockSpawn used
-    
+
     ***StartServer***
     ***
     UseClans = False;
-    
+
     declare PointsLayerId      = Layers::Create("PointsLayer", PointLayerLayerText());
     declare Attached           = Layers::Attach("PointsLayer", NullId);
-    
+
     ST2::SetStyle("LibST_SMBaseSolo");
     ST2::SetTeamsMode(False);
     ST2::SetTeamsScoresVisibility(False);
     ST2::Build("SM");
     ***
-    
+
     ***StartMap***
     ***
     G_SpawnsList.clear();
@@ -417,7 +433,7 @@ You have to create an "input" variable on the side where you will receive the va
         Base.Clan = 0;
         Base.IsActive = True;
     }
-    
+
     // ---------------------------------- //
     // Init scores
     MB_Sleep(1); ///< Allow the scores array to be sorted
@@ -425,18 +441,18 @@ You have to create an "input" variable on the side where you will receive the va
         declare Integer LastPoint for Score;
         LastPoint = 0;
     }
-    
+
     declare LeadId = NullId;
     if (Scores.existskey(0)) LeadId = Scores[0].User.Id;
-    
+
     declare CurrentPointLimit = S_PointLimit;
-    
+
     // ---------------------------------- //
     StartTime = Now;
     EndTime = StartTime + (S_TimeLimit * 1000);
     UIManager.UIAll.UISequence = CUIConfig::EUISequence::Playing;
     ***
-    
+
     ***StartRound***
     ***
     foreach(Player in Players){
@@ -445,7 +461,7 @@ You have to create an "input" variable on the side where you will receive the va
         Net_Points = 0;
     }
     ***
-    
+
     ***PlayLoop***
     ***
     foreach (Event, PendingEvents) {
@@ -463,7 +479,7 @@ You have to create an "input" variable on the side where you will receive the va
             XmlRpc::OnArmorEmpty(Event);
             PassOn(Event);
         }
-    
+
         // ---------------------------------- //
         // On hit
         else if (Event.Type == CSmModeEvent::EType::OnHit) {
@@ -475,7 +491,7 @@ You have to create an "input" variable on the side where you will receive the va
                 PassOn(Event);
             }
         }
-    
+
         // ---------------------------------- //
         // On player request respawn
         else if (Event.Type == CSmModeEvent::EType::OnPlayerRequestRespawn) {
@@ -483,14 +499,14 @@ You have to create an "input" variable on the side where you will receive the va
             XmlRpc::OnPlayerRequestRespawn(Event);
             PassOn(Event);
         }
-    
+
         // ---------------------------------- //
         // Others
         else {
             PassOn(Event);
         }
     }
-    
+
     // ---------------------------------- //
     // Spawn players
     foreach (Player in Players) {
@@ -498,14 +514,14 @@ You have to create an "input" variable on the side where you will receive the va
             MeleeSpawnPlayer(Player);
         }
     }
-    
+
     // ---------------------------------- //
     // Play sound and notice if someone is taking the lead
     if (Scores.existskey(0) && Scores[0].User.Id != LeadId) {
         LeadId = Scores[0].User.Id;
         Message::SendBigMessage(TextLib::Compose(_("$<%1$> takes the lead!"), Scores[0].User.Name), 3000, 1, CUIConfig::EUISound::PhaseChange, 1);
     }
-    
+
     // ---------------------------------- //
     // victory conditions
     declare IsMatchOver = False;
@@ -513,16 +529,16 @@ You have to create an "input" variable on the side where you will receive the va
     foreach (Player in Players) {
         if (Player.Score != Null && Player.Score.Points >= CurrentPointLimit) IsMatchOver = True;
     }
-    
+
     if (IsMatchOver) MB_StopMap = True;
     ***
-    
+
     ***EndMap***
     ***
     EndTime = -1;
     Score::RoundEnd();
     Score::MatchEnd(True);
-    
+
     // ---------------------------------- //
     // End match sequence
     declare CUser Winner <=> Null;
@@ -535,18 +551,18 @@ You have to create an "input" variable on the side where you will receive the va
             Winner <=> Null;
         }
     }
-    
+
     foreach (Player in Players) {
         if (Player.User != Winner) UnspawnPlayer(Player);
         Interface::UpdatePosition(Player);
     }
-    
+
     MB_Sleep(1000);
-    
+
     Message::CleanBigMessages();
-    
+
     UIManager.UIAll.BigMessageSound = CUIConfig::EUISound::EndRound;
-    
+
     UIManager.UIAll.BigMessageSoundVariant = 0;
     if (Winner != Null) {
         UIManager.UIAll.BigMessage = TextLib::Compose(_("$<%1$> wins the match!"), Winner.Name);
@@ -554,60 +570,60 @@ You have to create an "input" variable on the side where you will receive the va
         UIManager.UIAll.BigMessage = _("|Match|Draw");
     }
     MB_Sleep(2000);
-    
+
     UIManager.UIAll.UISequence = CUIConfig::EUISequence::EndRound;
     UIManager.UIAll.ScoreTableVisibility = CUIConfig::EVisibility::ForcedVisible;
     MB_Sleep(5000);
-    
+
     UIManager.UIAll.UISequence = CUIConfig::EUISequence::Podium;
     while(!UIManager.UIAll.UISequenceIsCompleted) {
         MB_Yield();
     }
-    
+
     UIManager.UIAll.ScoreTableVisibility = CUIConfig::EVisibility::Normal;
     UIManager.UIAll.BigMessage = "";
     ***
-    
+
     Void MeleeSpawnPlayer(CSmPlayer _Player) {
         if (G_SpawnsList.count == 0) {
             foreach (PlayerSpawn in MapLandmarks_PlayerSpawn) G_SpawnsList.add(PlayerSpawn.Id);
         }
-    
+
         declare SpawnId = NullId;
         while (True) {
             SpawnId = G_SpawnsList[MathLib::Rand(0, G_SpawnsList.count - 1)];
             if (SpawnId != G_LatestSpawnId) break;
             if (G_SpawnsList.count == 1) break;
         }
-    
+
         G_LatestSpawnId = SpawnId;
         SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId]);
-    
+
         declare Removed = G_SpawnsList.remove(SpawnId);
     }
-    
+
     Text PointLayerLayerText(){
         declare Text MLText = """
             <label posn="130 50 35" text="YOUR POINTS: 0" style="TextButtonMedium" id="Label_Points" scale="0.90" halign="center" valign="center" textsize="4" />
             <script><!--
             #Include "TextLib" as TL
-    
+
             main() {
                 declare netread Integer Net_Points for UI;
-    
+
                 declare Label_Points           <=> (Page.GetFirstChild("Label_Points")        as CMlLabel);
-    
+
                 Label_Points.Show();
-    
+
                 while(True) {
                     yield;
-    
+
                     Label_Points.SetText("YOUR POINTS: "^TL::ToText(Net_Points));
                 }
             }
             --></script>
         """;
-    
+
         return MLText;
     }
 ```

@@ -84,6 +84,9 @@ description: Maniaplanet.exe client command line
 	<td>/useexedir</td><td>Run in the directory where the executable is, instead of the current directory.</td>
   </tr>
   <tr>
-	<td>/title=xxx</td><td>Sets the title to be used. Only this title and its subtitles will be playable.</td>
+  <td>/title=xxx</td><td>Sets the title to be used. Only this title and its subtitles will be playable.</td>
+  </tr>
+  <tr>
+	<td>/testtitle=mytitle@login</td><td>Launch and test a title directly instead of going into the pack editor, selecting the pack, going to the title section and clicking on test.</td>
   </tr>
 </table>

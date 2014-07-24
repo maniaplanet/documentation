@@ -8,7 +8,7 @@ description: Quick start to make a dedicated server on ManiaPlanet
 
 Using Debian/Ubuntu? You can use our [APT repository](../tools/apt.html).
 
-1. Download the latest dedicated server at http://files.maniaplanet.com/ManiaPlanet2Beta/ManiaPlanetBetaServer_latest.zip 
+1. Download the latest dedicated server at http://files.maniaplanet.com/ManiaPlanet3Beta/ManiaPlanetBetaServer_latest.zip 
 2. Create a server account at [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers)
 3. Change the server settings *DedicatedCfgFile* to match your server account, this file needs to be located at `UserData\Config`
 4. Create a new (or use predefined) *MatchSettingsFile* this file needs to be located in `UserData\Maps\MatchSettings` 

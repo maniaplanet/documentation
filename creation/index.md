@@ -16,6 +16,11 @@ ManiaLink is a markup language that allows the players to create user interfaces
 [More...]({{ site.url }}manialink/)
 
 
+# [Map Editor]({{ site.url }}map-editor/)
+The Map Editor is a tool which allows to create maps for any Maniaplanet games/title packs.
+[More...]({{ site.url }}map-editor/)
+
+
 # [MediaTracker]({{ site.url }}mediatracker/)
 
 MediaTracker is a tool which allows to create screenshots and videos. Players are able to position and create camera movements, include special effects and adjust the colors, among other things. The MediaTracker also let the players create opening sequences for a map, to add text and images to them or else to change the game’s camera angles.

@@ -14,6 +14,7 @@ description: List of all the settings available in the Nadeo modes
 |**S_AllowRespawn**|True|Allow the players to respawn or not|
 |**S_WarmUpDuration**|-1|Duration of the warm up phase (<= 0 to disable)|
 |**S_UseScriptCallbacks**|False|Turn on/off the script callbacks, useful for server manager|
+|**S_UseLegacyCallbacks**|True|Turn on/off the legacy callbacks
 |**S_ScoresTableStylePath**|""|Try to load a scores table style from an XML file|
 
 ## Cup (+RoundsBase)
@@ -47,6 +48,7 @@ description: List of all the settings available in the Nadeo modes
 |**S_FinishTimeout**|-1|Finish timeout (<= 0 to disable)|
 |**S_UseAlternateRules**|False|Use alternate rules|
 |**S_ForceLapsNb**|-1|Force number of laps (<= 0 to disable)|
+|**S_DisplayTimeDiff**|False|Display time difference at checkpoint|
 
 ## Team (+RoundsBase)
 
@@ -56,6 +58,15 @@ description: List of all the settings available in the Nadeo modes
 |**S_MaxPointsPerRound**|6|The maxium number of points attributed to the first player to cross the finish line|
 |**S_PointsGap**|1|The number of points lead a team must have to win the map|
 |**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
+
+## TeamAttack
+
+|Setting|Default value|Description|
+|---|---|---|
+|**S_TimeLimit**|300|Time limit|
+|**S_MinPlayerPerClan**|3|Minimum number of players per clan|
+|**S_MaxPlayerPerClan**|3|Maximum number of players per clan|
+|**S_MaxClanNb**|-1|Maximum number of clans (<= 0 to disable)|
 
 ## TimeAttack
 
@@ -70,9 +81,28 @@ description: List of all the settings available in the Nadeo modes
 |Setting|Default value|Description|
 |---|---|---|
 |**S_AutoManageAFK**|False|Switch inactive players to spectators|
+|**S_AFKIdleTimeLimit**|90000|AFK default idle time limit|
 |**S_UseScriptCallbacks**|False|Turn on/off the script callbacks, useful for server manager|
 |**S_NeutralEmblemUrl**|""|Replace the default neutral emblem by another one|
 |**S_ScoresTableStylePath**|""|Try to load a scores table style from an XML file|
+
+## ModeMatchmaking
+
+|Setting|Default value|Description|
+|---|---|---|
+|**S_MatchmakingAPIUrl**|https://matchmaking.maniaplanet.com/v5|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
+|**S_MatchmakingMode**|0|This is the most important setting. It can take one of these five values : 0 -> matchmaking turned off, standard server; 1 -> matchmaking turned on, use this server as a lobby server; 2 -> matchmaking turned on, use this server as a match server; 3 -> matchmaking turned off, use this server as a universal lobby server; 4 -> matchmaking turned off, use this server as a universal match server.|
+|**S_LobbyTimePerRound**|30|Duration (in seconds) of a round between the activations of the matchmaking function. It can't be smaller than 15 seconds.|
+|**S_LobbyRoundPerMap**|60|Number of rounds played before going to the next map.|
+|**S_LobbyMatchmakerTime**|10|Duration (in seconds) of the matchmaking function. It allows the players to see with who they will play their match or cancel it if necessary.|
+|**S_LobbyInstagib**|0|Use the Laser instead of the Rocket in the lobby.|
+|**S_LobbyDisplayMasters**|1|Display a list of Masters players in the lobby.|
+|**S_LobbyAllowMatchCancel**|1|Allows or not the players in the lobby to cancel a match.|
+|**S_LobbyLimitMatchCancel**|0|If the players are allowed to cancel, how many matches can they cancel before being penalized.|
+|**S_MatchmakingErrorMessage**|An error occured in the matchmaking API. If the problem persist please try to contact this server administrator.|This message is displayed in the chat to inform the players that an error occured in the matchmaking system.|
+|**S_MatchmakingLogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to let it turned off because this can quickly write huge log files.|
+|**S_MatchmakingLogAPIDebug**|0|Same as above, turn it on only if necessary.|
+|**S_MatchmakingLogMiscDebug**|0|Same as above, turn it on only if necessary.|
 
 ## Battle
 
@@ -89,9 +119,10 @@ description: List of all the settings available in the Nadeo modes
 |**S_AllowBeginners**|False|Is a Beginners Welcome server|
 |**S_AutoManageAFK**|True|Switch inactive players to spectators|
 |**S_ArmorPoints**|2|Starting armor points for the players|
+|**S_NbPlayersPerTeam**|5|Numpber of players per team in matchmaking|
 |**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
 
-## Combo
+## Combo (+ModeMatchmaking)
 
 |Setting|Default value|Description|
 |---|---|---|
@@ -101,13 +132,9 @@ description: List of all the settings available in the Nadeo modes
 |**S_WarmUpDuration**|90|Warmup duration (0: disabled)|
 |**S_AllowUnbalancedTeams**|False|Allow a game to begin without the same number of players in each team|
 |**S_UseArmorReduction**|False|Reduce the armor of players above two armor points|
-|**S_UseLobby**|False|Launch server in lobby mode|
-|**S_LobbyTimePerMap**|86400|Time limit in lobby mode (sec., 0: no limit)|
-|**S_Matchmaking**|False|Use Combo with matchmaking|
-|**S_MatchmakingSleep**|0|Matchmaking match end duration (-1: infinite)|
 |**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
 
-## Elite (+ModeSport)
+## Elite (+ModeSport, +ModeMatchmaking)
 
 |Setting|Default value|Description|
 |---|---|---|
@@ -115,11 +142,7 @@ description: List of all the settings available in the Nadeo modes
 |**S_UseDraft**|False|Use draft mode at match beginning|
 |**S_DraftBanNb**|4|Number of map to ban during draft|
 |**S_DraftPickNb**|3|Number of map to pick during draft|
-|**S_UseLobby**|False|Launch server in lobby mode|
-|**S_LobbyTimePerRound**|60|Time limit per round in lobby mode (sec., 0: no limit)|
-|**S_LobbyRoundPerMap**|30|Nb of rounds per map in lobby mode|
-|**S_LobbyMatchmakerTime**|10000|in milliseconds, time allocated to the matchmaking|
-|**S_LobbyInstagib**|False|Laser mode in lobby|
+|**S_RequiredPlayersNb**|3|Number of players per team|
 |**S_DisplayRulesReminder**|True|Display a window with the rules when the match begins
 
 ## Heroes (+ModeSport)
@@ -162,6 +185,7 @@ description: List of all the settings available in the Nadeo modes
 |**S_TurnLimit**|15|Maximum number of points before next map|
 |**S_DeciderTurnLimit**|20|Points limit on decider map|
 |**S_QuickMode**|False|Mutliplier for the sleep times between rounds|
+|**S_UseLegacyCallback**|True|Send the old JSON callbacks|
 |**S_Matchmaking**|False|Use Elite with matchmaking|
 |**S_MatchmakingSleep**|0|Matchmaking match end duration (<= 0 infinite)|
 |**S_UseLegacyCallback**|True|Send the old JSON callbacks|
@@ -222,9 +246,10 @@ description: List of all the settings available in the Nadeo modes
 
 |Setting|Default value|Description|
 |---|---|---|
-|**S_TimeBetweenCapture**|45|Minimum time between two captures (0 = unlimited)|
-|**S_CaptureTimeLimit**|15|Time limit to capture one goal (0 = unlimited)|
-|**S_GoalCaptureTime**|5.|Time to capture a goal in seconds|
+|**S_TimeBetweenCapture**|0|Minimum time between two captures (0 = unlimited)|
+|**S_CaptureTimeLimit**|45|Time limit to capture one goal (0 = unlimited)|
+|**S_CaptureTimeBonus**|10|Bonus time for capturing|
+|**S_GoalCaptureTime**|1.|Time to capture a gate in seconds|
 |**S_NbRoundMax**|5|Set a winner after xx rounds (0 = unlimited)|
 |**S_MapsToWin**|1|Number of maps to win the match (0 = don't do match)|
 |**S_WarmUpDuration**|0|Duration of the warm up round (0 = no warmup)|
@@ -232,10 +257,13 @@ description: List of all the settings available in the Nadeo modes
 |**S_ClanNbMaxPlayers**|0|Do not spawn players beyond this limit, 0=no limit|
 |**S_UseSuddenDeathMode**|True|Do not allow a team to win on first turn|
 |**S_AutoBalance**|True|Use auto balance at the start of the map|
+|**S_WeaponMode**|2|0: Rocket vs Laser, 1: WeaponSelection, 2: WeaponSwitch, 3: Store|
+|**S_UseOldCaptureMode**|False|Capture only one gate per checkpoint instead of all the gates|
+|**S_DefCanRevertCapture**|False|If true the defender can revert the capture by stepping on the gate|
+|**S_CaptureThreshold**|300|Time (in ms) before the activation/annulation of the capture|
+|**S_GatesStopDefenders**|True|Don't let defenders go through closed the gates|
 |**S_AutoManageAFK**|True|Switch inactive players to spectators|
 |**S_DisplayRulesReminder**|True|Display a window with the rules when the match begins|
-|**S_Matchmaking**|False|Use Elite with matchmaking|
-|**S_MatchmakingSleep**|0|Matchmaking match end duration (-1: infinite)|
 |**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
 
 ## SiegeV1
