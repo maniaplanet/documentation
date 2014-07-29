@@ -1,6 +1,16 @@
 <?php
 require('GbxRemote.inc.php');
 
+function tidyHTML($buffer) {
+    // load our document into a DOM object
+    $dom = new DOMDocument();
+    // we want nice output
+    $dom->preserveWhiteSpace = false;
+    $dom->loadHTML($buffer);
+    $dom->formatOutput = true;
+    return preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $dom->saveHTML()));
+}
+
 set_time_limit(0);
 $client = new IXR_Client_Gbx;
 $host = '127.0.0.1';
@@ -8,9 +18,7 @@ $port = 5000;
 if (!$client->InitWithIp($host,$port)) {
 	die('An error occurred - ' . $client->getErrorCode() . ':' . $client->getErrorMessage());
 }
-
-
-if (!$client->query('SetApiVersion', "2012-06-19")) {
+if (!$client->query('SetApiVersion', "2014-04-29")) {
 	// ignore error --> continue with old version.
 }
 
@@ -18,6 +26,8 @@ if (!$client->query('system.listMethods')) {
 	die('An error occurred - ' . $client->getErrorCode() . ':' . $client->getErrorMessage());
 }
 $methods = $client->getResponse();
+
+ob_start("tidyHTML");
 print "<table><tr><th>Method (arguments)</th><th>Return Type</th><th>Help</th></tr>";
 foreach ($methods as $m) {
 	if ($client->query('system.methodSignature', $m)) {
@@ -54,6 +64,8 @@ foreach ($methods as $m) {
 	print $help."</td></tr>";
 }
 print '</table>';
+
+ob_end_flush();
 $client->Terminate();
 
 ?>
