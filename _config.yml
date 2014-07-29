@@ -2,7 +2,7 @@ name: ManiaPlanet documentation
 highlighter: pygments
 timezone: Europe/Paris
 markdown: rdiscount
-url: https://anthodev.github.io/documentation/
+url: https://maniaplanet.github.io/documentation/
 rdiscount:
   extensions:
     - autolink      # greedily urlify links
