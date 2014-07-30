@@ -38,7 +38,10 @@ description: FAQ
 <tr>
 <td>ManiaControl</td><td>steeffeen, Kremsy, TheM, Wabbitface</td><td><img src="../img/yes.png" /></td><td><img src="../img/yes.png" /></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=479">Forum</a></td><td><a href="http://www.maniacontrol.com/">ManiaControl.com</a></td><td><a href="http://maniacontrol.com/plugins">Repository</a></td><td><img src="../img/yes.png" /></td>
 </tr>
+<tr>
 <td>UASECO</td><td>undef.de</td><td><img src="../img/yes.png" /></td><td><img src="../img/no.png" /></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=522">Forum</a></td><td><a href="http://www.uaseco.org/">UASECO.org</a></td><td><a href="http://www.uaseco.org/Plugins/">Repository</a></td><td><img src="../img/yes.png" /></td>
+</tr>
+<tr>
 <td><a href="http://maniaplanet.github.io/documentation/dedicated-server/manialive.html">ManiaLive</a></td><td>NadeoLive</td><td><img src="../img/yes.png" /></td><td><img src="../img/yes.png" /></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=463">Forum</a></td><td><a href="http://www.manialive.com/">ManiaLive.com</a></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=47">Forum</a></td><td><img src="../img/yes.png" /></td>
 </tr>
 <tr>
