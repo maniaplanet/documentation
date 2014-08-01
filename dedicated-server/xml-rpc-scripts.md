@@ -18,8 +18,8 @@ The only exception is Elite that has some very specific callbacks.
 ## Common
 
 ##### LibXmlRpc_BeginMatch
-* Data : An array with the number of the match
-* Example : ["3"]
+* Data : An array with the number of the match and a boolean indicating if the script was restarted or not.
+* Example : ["3", "False"]
 * Note : This callback is sent at the beginning of each match
 
 ##### LibXmlRpc_LoadingMap
@@ -260,7 +260,8 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 {% highlight json %}
 {
     "Timestamp": 8907890,
-    "MatchNumber": 1
+    "MatchNumber": 1,
+    "Restart": false
 }
 {% endhighlight %}
 
@@ -271,7 +272,8 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 {% highlight json %}
 {
     "Timestamp": 8910190,
-    "MapNumber": 1
+    "MapNumber": 1,
+    "Restart": false
 }
 {% endhighlight %}
 
