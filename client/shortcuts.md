@@ -95,7 +95,7 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 * P : opens Plugins mode
 * R : revert a previous usge of undo
 * U : undo a previous block operation
-* Y : toggles underground view to make tunnels more easily editable
+* Z : toggles underground view to make tunnels more easily editable (On AZERTY keyboard use W instead, and on QWERTZ keyboard use Y)
 * ALT + Left mouse button : move the map 
 * ALT + Right mouse button : rotate the map
 * ALT + Mouse wheel : zoom in / zoom out the map
