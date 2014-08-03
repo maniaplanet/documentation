@@ -15,6 +15,7 @@ maniaplanet://#addfavorite=serverlogin 					| Add a specific server as favorite 
 maniaplanet://#score=scoremeta							| Link is generated in game to send scores that one can challenge on another computer
 maniaplanet://#opponent=login:map:group@TITLEID			| play a campaign track against an opponent
 maniaplanet://#campaign=map@TITLEID			       		| Play a specific map of the title's campaign
+maniaplanet://#menutitle=TITLEID      | Will open the menuTitle of a TitleUID
 maniaplanet://#openstore=TITLEID						| Will open the shop to buy the game, depending on the distribution platform. (no usefull for user titles)
 maniaplanet://#menustations=*							| * can be home, play, store, options
 maniaplanet://#addbuddy=login 							| Add a buddy
