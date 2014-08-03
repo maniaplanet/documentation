@@ -28,7 +28,7 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 
 * TAB: hide / show the GUI
 * Direction arrows: move custom camera position
-* PG Up: raise the camera position
+* Pg Up: raise the camera position
 * Pg Dn: lower the camera position
 * numpad+: increase movement speed when positioning the camera
 * numpad-: decrease movement speed when positioning the camera
@@ -79,3 +79,53 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 * Shift + E : Switch between idle / eliminated animation
 * Shift + P : Switch between idle / Ref pose
 * Shift + S : Next energy step
+
+
+# Map Editor
+
+## General
+
+* F1 : Select terraforming mode
+* F2 : Select block placement mode. If enabled in the extended tools (Hammer symbol) at "Experimental Features", toggles between simple block placement, Airmapping and Blockmixing
+* F3 : Skin mode. Allows to change textures on blocks with panels
+* F4 : Items mode: allows to place additional items, as well as third-party items
+* F5 : Macroblock mode
+* H : shows helper dialog
+* M : toggles display of raster
+* P : opens Plugins mode
+* R : revert a previous usge of undo
+* U : undo a previous block operation
+* Z : toggles underground view to make tunnels more easily editable (On AZERTY keyboard use W instead, and on QWERTZ keyboard use Y)
+* ALT + Left mouse button : move the map 
+* ALT + Right mouse button : rotate the map
+* ALT + Mouse wheel : zoom in / zoom out the map
+* Del : delete block at the cursor position
+* Enter : test mode. vehicle / player model will be placed at the cursor
+* Pg Up (or Mouse wheel up): raise the cursor position
+* Pg Dn (or Mouse wheel down): lower the cursor position
+* Space (or Left mouse button): places selected block type at the cursor position
+* Right Ctrl (or Right mouse button) : rotates block selection 
+
+## Terraforming:
+
+* BACKSPACE : Delete all kind of terraforming, all the other blocks and items are not affected. 
+* Ctrl + left mouse click : selects block type at the cursor position
+* X + left mouse click : deletes block at the cursor position
+* C : Switches to Macroblock selection mode
+
+## Block mode:
+
+* BACKSPACE: Delete all blocks placed in this mode. Landscape and items are not affected.
+* X + left mouse click: deletes block at the cursor position
+
+## Item mode:
+
+* BACKSPACE: Delete all blocks placed in this mode. Landscape and items are not affected.
+* Ctrl + left mouse click: selects block type at the cursor position
+* X + left mouse click: deletes block at the cursor position
+
+## Macroblock mode:
+
+* BACKSPACE: Delete all blocks in the selection
+* Ctrl + left mouse click: selects block type at the cursor position
+
