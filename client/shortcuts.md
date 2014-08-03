@@ -99,6 +99,8 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 * ALT + Left mouse button : move the map 
 * ALT + Right mouse button : rotate the map
 * ALT + Mouse wheel : zoom in / zoom out the map
+* Del : delete block at the cursor position
+* Enter : test mode. vehicle / player model will be placed at the cursor
 * Pg Up (or Mouse wheel up): raise the cursor position
 * Pg Dn (or Mouse wheel down): lower the cursor position
 * Space (or Left mouse button): places selected block type at the cursor position
