@@ -1,24 +1,11 @@
 ---
-layout: static
+layout: default
 title: Going further with the ManiaScript
 description: Advanced uses of the ManiaScript
+tags:
+- creation
+- maniascript
 ---
-
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
-
-- [Specifying parameters for a player](#user-content-specifying-parameters-for-a-player)
-- [Spawning a bot](#user-content-spawning-a-bot)
-- [Displaying messages on the HUD](#user-content-displaying-messages-on-the-hud)
-- [Using the pole in your script](#user-content-using-the-pole-in-your-script)
-- [Create and spawn an object](#user-content-create-and-spawn-an-object)
-- [Drop an object from a player](#user-content-drop-an-object-from-a-player)
-- [The "Actions"](#user-content-the-actions)
-	- [Assigning a weapon/action](#user-content-assigning-a-weaponaction)
-	- [Managing the event of an action](#user-content-managing-the-event-of-an-action)
-- [The Manialink in the ManiaScript](#user-content-the-manialink-in-the-maniascript)
-	- [ManiaScript in the Manialink](#user-content-maniascript-in-the-manialink)
-		- [Sending ManiaScript script variables to the ManiaScript Manialink variables and vice versa](#user-content-sending-maniascript-script-variables-to-the-maniascript-manialink-variables-and-vice-versa)
-			- [Example](#user-content-example)
 
 The things that you may saw before it's just a glimpse of what's possible with the ManiaScript. I'll show you some more advanced functions to do more things in a gamemode.
 

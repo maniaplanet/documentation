@@ -1,7 +1,11 @@
 ---
-layout: static
-title: ManiaPlanetTitle.xml
+layout: default
+title: Title XML Description
 description: Advanced title options
+tags: creation
+tags:
+- creation
+- title
 ---
 
 All the description of the title is included in an xml file called `ManiaPlanetTitle.xml`.
@@ -45,12 +49,12 @@ The game uses http header requests to get the modification date of the file and 
 
 
 (*) There are actually two additional macanisms for the download:
-The game will download the header of the pack first, and 
+The game will download the header of the pack first, and
 - try to download the file from the maniaplanet cloud if it has been uploaded there.
 - compare the contents of the previous version of the pack on the client computer and only download changed/new parts, using http range requests.
- 
 
----- 
+
+----
 ```xml
 	<packaging>
 		<image name="PackImage.jpg"/>
@@ -94,7 +98,7 @@ Otherwise, `background_img` will be used. please note that this image will be sh
 If both `background_replay` and `background_img` are left empty, the background will be the clouds and the menu will be using 3d style.
 
 
-The game default menus will be used, unless you set a `manialink` url to be used instead. 
+The game default menus will be used, unless you set a `manialink` url to be used instead.
 
 `menu_style` can be used to customize the look of the no background 3d style menus.
 
@@ -106,7 +110,7 @@ The game default menus will be used, unless you set a `manialink` url to be used
 ```
 
 `base` can be
-- *SMStorm*, *TMCanyon*, *TMStadium*, *TMValley*, 
+- *SMStorm*, *TMCanyon*, *TMStadium*, *TMValley*,
 - It can also be empty. (For instance, if you're making a manialink game and don't need 3d data)
 - It can also be *TMAll* to use all TrackMania environments.
 
@@ -151,20 +155,20 @@ The `mod` will be used on all the maps that haven't any specific mod.
 	<files>
 		<!-- browsable public files  -->
 		<!--- <file name="...." public="true" internal="false" /> -->
-		
+
 		<!-- internal dependencies accessible even if pack not bought  
 				+ this file, "ManiaPlanetTitle.xml", implicitly -->
 		<!--- <file name="...." public="true" internal="true" /> -->
-	
+
 		<!-- browsable private files  -->
 		<!--- <file name="..." public="false" internal="false" /> -->
-		
+
 		<!-- internal dependencies -->
 		<!--- <file name="..." public="false" internal="true" /> -->
 	</files>
 	<folders>
 		<!--- <folder name="...." public="..." internal="..." /> -->
-	</folders>	
+	</folders>
 ```
 *Data to pack inside the title.*
 
@@ -181,4 +185,3 @@ TBD. (allows for the script to declare clouded variables that can then be shared
 	<gameplay_features>0</gameplay_features>
 ```
 (unused at this time)
-

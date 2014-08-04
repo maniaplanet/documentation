@@ -1,7 +1,10 @@
 ---
-layout: static
+layout: default
 title: Landmarks
 description: Landmarks in ManiaScript
+tags:
+- creation
+- maniascript
 ---
 
 ## Introduction
