@@ -6,7 +6,7 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 
 # Script editor
 
-* F12: open the script editor
+* Scroll Lock: open the script editor
 * Ctrl + g: open the log window / open the debug window / close the debug window 
 * Ctrl + a: select all
 * Ctrl + z: undo
@@ -104,7 +104,8 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 * Pg Up (or Mouse wheel up): raise the cursor position
 * Pg Dn (or Mouse wheel down): lower the cursor position
 * Space (or Left mouse button): places selected block type at the cursor position
-* Right Ctrl (or Right mouse button) : rotates block selection 
+* Right Ctrl (or Right mouse button) : rotates block selection
+* Left Ctrl : Record or Playback Editors input replay (on New Map selection)
 
 ## Terraforming:
 
