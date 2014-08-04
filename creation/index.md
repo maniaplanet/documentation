@@ -1,7 +1,8 @@
 ---
-layout: static
+layout: page
 title: Content creation
 description: Help on content creation
+tags: creation
 ---
 
 # [ManiaScript](./maniascript/)
@@ -35,4 +36,4 @@ A Title Pack is a pack that regroups different kinds of data together. By exampl
 # [Importer](./importer/)
 
 The importer is a tool that allows you to import assets from external 3d creation software, an to create custom objects, characters and vehicles
-[More...]({{ site.url }}importer/)
+[More...](./importer/)

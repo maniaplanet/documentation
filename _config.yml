@@ -1,10 +1,30 @@
-name: ManiaPlanet documentation
-highlighter: pygments
-timezone: Europe/Paris
-markdown: rdiscount
-url: https://maniaplanet.github.io/documentation/
-rdiscount:
-  extensions:
-    - autolink      # greedily urlify links
+# Dependencies
+markdown:         redcarpet
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+# Setup
+title:            Maniaplanet documentation
+tagline:          'for the Maniaplanet game operating system'
+description:      '<a href="/documentation/"><img src="/documentation/img/maniaplanet.png"/></a>Use this sidebar to navigate throught the documentation.'
+url:              http://www.maniaplanet.com
+baseurl:          '/documentation/'
+paginate:         5
+
+author:
+  name:           'Nadeo'
+  url:            https://twitter.com/Maniaplanet
+
+# Custom vars
+version:          2.0.0
+
+github:
+  repo:           https://github.com/maniaplanet/documentation
+
 gems:
   - jekyll-sitemap
+
+redcarpet:
+    extensions: [with_toc_data]

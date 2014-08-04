@@ -1,7 +1,8 @@
 ---
-layout: static
+layout: default
 title: Command Line
-description: Maniaplanet.exe client command line 
+description: Maniaplanet.exe client command line
+tags: client
 ---
 
 <table>

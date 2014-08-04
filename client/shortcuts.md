@@ -1,13 +1,14 @@
 ---
-layout: static
+layout: default
 title: Keyboard shortcuts
 description: List of the keyboard shortcuts available in ManiaPlanet
+tags: client
 ---
 
 # Script editor
 
 * Scroll Lock: open the script editor
-* Ctrl + g: open the log window / open the debug window / close the debug window 
+* Ctrl + g: open the log window / open the debug window / close the debug window
 * Ctrl + a: select all
 * Ctrl + z: undo
 * Ctrl + y: redo
@@ -96,7 +97,7 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 * R : revert a previous usge of undo
 * U : undo a previous block operation
 * Z : toggles underground view to make tunnels more easily editable (On AZERTY keyboard use W instead, and on QWERTZ keyboard use Y)
-* ALT + Left mouse button : move the map 
+* ALT + Left mouse button : move the map
 * ALT + Right mouse button : rotate the map
 * ALT + Mouse wheel : zoom in / zoom out the map
 * Del : delete block at the cursor position
@@ -109,7 +110,7 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 
 ## Terraforming:
 
-* BACKSPACE : Delete all kind of terraforming, all the other blocks and items are not affected. 
+* BACKSPACE : Delete all kind of terraforming, all the other blocks and items are not affected.
 * Ctrl + left mouse click : selects block type at the cursor position
 * X + left mouse click : deletes block at the cursor position
 * C : Switches to Macroblock selection mode
@@ -129,4 +130,3 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 
 * BACKSPACE: Delete all blocks in the selection
 * Ctrl + left mouse click: selects block type at the cursor position
-
