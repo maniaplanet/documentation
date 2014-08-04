@@ -39,13 +39,13 @@
       {% if node.title != null and (currentPathArray[2] == pPathArray[2] and node.layout == "menu" %}
         <hr/>
         <p style="text-align: center;">CURRENT SECTION</p>
-        <a class="fontawesome-list sidebar-nav-item{% if (currentPathArray[2] == pPathArray[2] %} active{% endif %}" href="{{ node.url }}" title="{{ node.description }}"> {{ node.title }}</a>
+        <a class="fontawesome-list sidebar-nav-item{% if (currentPathArray[2] == pPathArray[2] %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}" title="{{ node.description }}"> {{ node.title }}</a>
       {% endif %}
     {% endfor %}
 
     {% for node in pages_list %}
       {% if node.title != null and node.tags != null and node.tags == page.tags and node.layout != "menu" and node.layout != "page" %}
-          <a class="sidebar-nav-item{% if page.url == node.url %} fontawesome-caret-right active{% else %} fontawesome-angle-right {% endif %}" href="{{ node.url }}" title="{{ node.description }}"> {{ node.title }}</a>
+          <a class="sidebar-nav-item{% if page.url == node.url %} fontawesome-caret-right active{% else %} fontawesome-angle-right {% endif %}" href="{{ site.baseurl }}{{ node.url }}" title="{{ node.description }}"> {{ node.title }}</a>
       {% endif %}
     {% endfor %}
   </nav>
