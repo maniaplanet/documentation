@@ -10,7 +10,7 @@ title:            Maniaplanet documentation
 tagline:          'for the Maniaplanet game operating system'
 description:      '<a href="/documentation/"><img src="/documentation/img/maniaplanet.png"/></a>Use this sidebar to navigate throught the documentation.'
 url:              http://www.maniaplanet.com
-baseurl:          '/documentation'
+baseurl:          '/documentation/'
 paginate:         5
 
 author:
