@@ -2,7 +2,9 @@
 layout: default
 title: ManiaPlanet titlesIds
 description: ManiaPlanet titlesIds list
-tags: dedicated
+tags:
+- dedicated
+- server
 ---
 
 <table>
