@@ -35,8 +35,6 @@
  */
 
 /* Prevent scroll on narrow devices */
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
 html,
 body {
   overflow-x: hidden;
