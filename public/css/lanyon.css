@@ -250,11 +250,6 @@ a.sidebar-nav-item:focus {
   }
 }
 
-/* fontawesome */
-[class*="fa-"]:before {
-  font-family: 'FontAwesome', sans-serif;
-}
-
 
 /* Slide effect
  *
