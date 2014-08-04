@@ -1,10 +1,7 @@
 ---
-layout: default
-title: Character skin import
+layout: static
+title: Character skin import 
 description: Character skin import
-tags:
-- creation
-- importer
 ---
 
 Character skins can be displayed and selected by players in the profile/models menu, and the scripts can also force skins to players during gameplay.
@@ -23,4 +20,4 @@ The asset files to provide are
 
 See Sample skin : `Work/Skins/Models/ArenaPlayer/SintelSample` (in `NadeoImporterSamples.zip`)
 
-to learn how to prepare the character mesh for import, see the dedicated page : [mesh import](importer_mesh.html)
+to learn how to prepare the character mesh for import, see the dedicated page : [mesh import](importer_mesh.html) 

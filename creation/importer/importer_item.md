@@ -1,10 +1,7 @@
 ---
-layout: default
-title: Item import
-description: Item import
-tags:
-- creation
-- importer 
+layout: static
+title: Item import 
+description: Item import 
 ---
 
 You can import 3 types of items  
@@ -37,7 +34,7 @@ see sample : `Work/Items/Samples/DynamicObjects/Icon`
 
 Item.xml file structure
 --
-1. Item
+1. Item 
 --
 `<Item>` root node attributes :
 
@@ -63,8 +60,8 @@ Item.xml file structure
 recap example for character items:
 
 ```xml
-<Item Type="Character" Archetype="ShootMania\Items\Characters\ArenaPlayer.Item.gbx"
-DefaultSkin="Skins\Models\StormManBig\A.zip" SkinFolder="Models\StormManBig"
+<Item Type="Character" Archetype="ShootMania\Items\Characters\ArenaPlayer.Item.gbx" 
+DefaultSkin="Skins\Models\StormManBig\A.zip" SkinFolder="Models\StormManBig" 
 Collection="SMCommon" AuthorName="NadeoSamples">
 ```
 2. Phy and Vis
@@ -85,7 +82,7 @@ Shape.gbx files are automatically generated along the the mesh.gbx when you impo
 		attributes :  
 		- `Type`: shape type. "mesh" for static meshes.  
 		- `File`: the shape filename. ex : `File="Meshes/Checkpoint.Shape.gbx"`  
-	- `<TriggerShape>` : if your static object needs has a trigger  (for checkpoints or finishs).
+	- `<TriggerShape>` : if your static object needs has a trigger  (for checkpoints or finishs). 
 		attributes :  
 		- `Type`: shape type. "mesh" for static meshes  
 		- `File`: the shape filename. ex : `File="Meshes/CheckpointTrigger.Shape.gbx`  
@@ -114,7 +111,7 @@ recap example for static object :
 	</Vis>
 </Item>
 ```
-
+ 
 2.2 Dynamic objects
 --
 
@@ -142,7 +139,7 @@ recap example for static object :
 		- `Radius` : radius in meters  
 		- `sRgb` : color in sRgb  
 		- `Pos` : relative position of the light, vector in meters  
-	- `<LocAnimSimple>` : simple rotation+translation animation (used for pickups).
+	- `<LocAnimSimple>` : simple rotation+translation animation (used for pickups). 
 		attributes :
 		- `RotPeriod` rotation period in milliseconds
 		- `TransPeriod`  translation period milliseconds
@@ -176,8 +173,8 @@ there is no `<vis>` node for characters. the display is defined by the DefaultSk
 recap example for character :
 
 ```xml
-<Item Type="Character" Archetype="ShootMania/Items/Characters/ArenaPlayer.Item.gbx"
-DefaultSkin="Skins/Models/StormManBig/A.zip" SkinFolder="Models/StormManBig"
+<Item Type="Character" Archetype="ShootMania/Items/Characters/ArenaPlayer.Item.gbx" 
+DefaultSkin="Skins/Models/StormManBig/A.zip" SkinFolder="Models/StormManBig" 
 Collection="SMCommon" AuthorName="NadeoSamples">
 	<Phy>
 		<CharPhyCustom Radius="1.2" EyesHeight="4.8" SpeedCoef="3"/>
@@ -237,3 +234,4 @@ Sometimes, several pivots are chosen: you can switch from one to another using t
 		`<Options OneAxisRotation="true" AutoRotation="true" />`  
 	- ex. if you want to let the user choose the pivot to use but prevent him from placing it on another item:  
 		`<Options NotOnItem="true" ManualPivotSwitch="true" />`  
+	

@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: static
 title: ManiaPlanet debugger
 description: How to use ManiaPlanet debugger
-tags: client
 ---
 
 1. To start the debugger, press `Ctrl + F7`

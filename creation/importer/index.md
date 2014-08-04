@@ -1,13 +1,10 @@
 ---
-layout: menu
-title: Importer help
-description: Importer help
-tags:
-- creation
-- importer
+layout: static
+title: Importer help 
+description: Importer help 
 ---
 
-** WARNING : USE THE NEW IMPORTER ONLY WITH MANIAPLANET BETA 3**
+** WARNING : USE THE NEW IMPORTER ONLY WITH MANIAPLANET BETA 3** 
 ** SOME ISSUES (PROPER LIGHTS DISPLAY) ARE CLIENT ISSUES (NOT IMPORTER ISSUES) AND WILL BE IN NEXT CLIENT UPDATE (NOT FIXED IN BUILD 2014_04_02) **
 
 The importer is a tool to generate items (static objects, dynamic objects, characters), and also to generate character or vehicle skins.
@@ -94,8 +91,9 @@ All releases
 - http://files.maniaplanet.com/tools/NadeoImporter_2013_09_17.zip
 - http://files.maniaplanet.com/tools/NadeoImporter_2013_08_21.zip
 
-sample files :
+sample files : 
 --
 - http://files.maniaplanet.com/tools/NadeoImporterSamples_2014_04_09.zip
 - http://files.maniaplanet.com/tools/NadeoImporterSamples2014.zip
 - http://files.maniaplanet.com/tools/NadeoImporterSamples.zip
+

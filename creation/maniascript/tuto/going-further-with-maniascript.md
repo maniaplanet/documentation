@@ -1,11 +1,24 @@
 ---
-layout: default
+layout: static
 title: Going further with the ManiaScript
 description: Advanced uses of the ManiaScript
-tags:
-- creation
-- maniascript
 ---
+
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [Specifying parameters for a player](#user-content-specifying-parameters-for-a-player)
+- [Spawning a bot](#user-content-spawning-a-bot)
+- [Displaying messages on the HUD](#user-content-displaying-messages-on-the-hud)
+- [Using the pole in your script](#user-content-using-the-pole-in-your-script)
+- [Create and spawn an object](#user-content-create-and-spawn-an-object)
+- [Drop an object from a player](#user-content-drop-an-object-from-a-player)
+- [The "Actions"](#user-content-the-actions)
+	- [Assigning a weapon/action](#user-content-assigning-a-weaponaction)
+	- [Managing the event of an action](#user-content-managing-the-event-of-an-action)
+- [The Manialink in the ManiaScript](#user-content-the-manialink-in-the-maniascript)
+	- [ManiaScript in the Manialink](#user-content-maniascript-in-the-manialink)
+		- [Sending ManiaScript script variables to the ManiaScript Manialink variables and vice versa](#user-content-sending-maniascript-script-variables-to-the-maniascript-manialink-variables-and-vice-versa)
+			- [Example](#user-content-example)
 
 The things that you may saw before it's just a glimpse of what's possible with the ManiaScript. I'll show you some more advanced functions to do more things in a gamemode.
 
@@ -345,7 +358,7 @@ If you want the script to run during the whole time it's attached to the UI of t
 >
 > **Tip:** You call variables from the main script if you put a triple brackets between the name of the variable like this: `{{{S_PointLimit}}}`. But with this method you can't manipulate them (like doing calculation, modification). See below to know how to do it properly.
 
-### Sending ManiaScript script vars to ManiaScript Manialink vars
+### Sending ManiaScript script variables to the ManiaScript Manialink variables and vice versa
 First you need to know that the script of the gamemode and the manialink inside are two separate layers which don't communicate between them initially. The script is run on the server while the manialink is read locally on the computer of the player. To make it so, you need to use a "new" type of variable which will be read by the script and the manialink.
 
 It works like an "input/output" system in simple language. In a logic sense, you must create first an "output" variable, symbolized with the parameter `netwrite` in ManiaScript. This parameter tell that the variable will register/put a value to send to the other layer (the script or the manialink):

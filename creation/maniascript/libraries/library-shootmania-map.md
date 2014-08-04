@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: static
 title: The ShootMania Map library
 description: How to use the ShootMania Map library in your scripts
-tags: maniascript
 ---
 
 # Purpose

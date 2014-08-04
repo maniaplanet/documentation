@@ -1,8 +1,7 @@
 ---
-layout: default
+layout: static
 title: Manialink library
 description: Utilities functions for ManiaLinks
-tags: maniascript
 ---
 
 # Purpose
@@ -20,7 +19,7 @@ To use the animation module you first have to inject it into your manialink with
 Once you have injected the module you can call the `LibManialink_AnimLoop()` function in your script to update your animations.
 
 Example of the basic setting :
-{% highlight xml %}
+{% highlight xml %} 
 <frame id="Frame_Global">
   <quad sizen="15 15" halign="center" valign="center" bgcolor="047" id="Quad_Anim" />
   <label posn="-30 20" halign="center" style="CardButtonMedium" text="Anim 1" scriptevents="1" id="Button_Anim1" />
@@ -32,7 +31,7 @@ Example of the basic setting :
 main() {
   while (True) {
     yield;
-
+    
     LibManialink_AnimLoop();
   }
 }
@@ -46,7 +45,7 @@ You have access to three animation functions:
 * `LibManialink_AnimInsert()`: insert an animation inside the animation queue
 
 Let's start with a simple animation. I want the quad to move to another position when I click on the "Anim 1" button :
-{% highlight xml %}
+{% highlight xml %} 
 <frame id="Frame_Global">
   <quad sizen="15 15" halign="center" valign="center" bgcolor="047" id="Quad_Anim" />
   <label posn="-30 20" halign="center" style="CardButtonMedium" text="Anim 1" scriptevents="1" id="Button_Anim1" />
@@ -58,9 +57,9 @@ Let's start with a simple animation. I want the quad to move to another position
 main() {
   while (True) {
     yield;
-
+    
     LibManialink_AnimLoop();
-
+    
     foreach (Event in PendingEvents) {
       if (Event.Type == CMlEvent::Type::MouseClick) {
         if (Event.ControlId == "Button_Anim1") {
@@ -74,15 +73,15 @@ main() {
 {% endhighlight %}
 
 The first thing to notice is the use of the `Inject()` function. It is used to avoid the insertion of escaped double quote (\"). It's really useful when inserting long Text with a lot of double quotes inside. We could have write the exact same thing like that :
-{% highlight xml %}
+{% highlight xml %} 
 LibManialink_Anim("<quad posn=\"50 -50\" id=\"Quad_Anim\" />", 3000, "EaseOutBounce");
 {% endhighlight %}
 
-So the `LibManialink_Anim()` function take 3 parameters. The first one is the element and the properties we want to animate. In this case it's the position of the quad with an id equal to "Quad_Anim". The second parameter is the duration of the animation and the third the easing method.
+So the `LibManialink_Anim()` function take 3 parameters. The first one is the element and the properties we want to animate. In this case it's the position of the quad with an id equal to "Quad_Anim". The second parameter is the duration of the animation and the third the easing method. 
 All the animations start from the current properties of the animated element. This is the reason why when we click on the "Anim 1" button a second time the animation doesn't play anymore. The element is already at its desired position.
 
 You can send the quad to it's original position with a second animation bind on the "Anim 2" button :
-{% highlight xml %}
+{% highlight xml %} 
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
@@ -97,7 +96,7 @@ foreach (Event in PendingEvents) {
 If you press the opposing button while an animation is running you'll see that it will stop and the new one start from the current position of the quad.
 
 You can animate multiple properties during one animation :
-{% highlight xml %}
+{% highlight xml %} 
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
@@ -112,7 +111,7 @@ foreach (Event in PendingEvents) {
 If you press the "Anim 2" button after the "Anim 1" button you'll see that the quad position will return to it's original value but not the other properties. Not specifying a property in the animation function will leave it at it's current value. Which is the case in the second animation where we just specify the position property.
 
 Now let's take a look at the `LibManialink_AnimChain()` function. It works exactly like `LibManialink_Anim()` but instead of clearing the animation queue of the element it will add a new animation at the end of the queue. So taking our previous example :
-{% highlight xml %}
+{% highlight xml %} 
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
@@ -128,7 +127,7 @@ foreach (Event in PendingEvents) {
 With this, when you click on the "Anim 1" button the quad will start to go to it's first position during 3 seconds and then move to the second one during 2 seconds.
 
 But let's say you want to have an animation where the quad go from position A to B in 5 seconds and rotate during the translation for 3 seconds starting after one second. You'll have to use the `LibManialink_AnimInsert()` for that :
-{% highlight xml %}
+{% highlight xml %} 
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
@@ -144,7 +143,7 @@ foreach (Event in PendingEvents) {
 The function takes one more parameter than `LibManialink_Anim()`. The first parameter is still the element and the properties we want to animate. Then we have time at which the animation will start. Finally we have the duration of the animation and the easing method.
 
 And now let's see what we could do by combining them all together :
-{% highlight xml %}
+{% highlight xml %} 
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
@@ -203,12 +202,12 @@ LibManialink_Anim(((Page.MainFrame.Controls[0] as CMlFrame).Controls[0] as CMlFr
 {% endhighlight %}
 
 To stop an animation on an element you can use the `LibManialink_AnimStop()` function. Two versions of the function exist. the first one take a CMlControl as argument while the second one take a Text, the ControlId of the control.
-{% highlight xml %}
+{% highlight xml %} 
 Void LibManialink_AnimStop(CMlControl _Control)
 
 @param  _Control   The control to stop
 {% endhighlight %}
-{% highlight xml %}
+{% highlight xml %} 
 Void LibManialink_AnimStop(Text _ControlId)
 
 @param  _ControlId   The ControlId of the control to stop
@@ -228,12 +227,12 @@ main() {
 {% endhighlight %}
 
 There's two versions of the function, the first one take a CMlControl as argument while the second one take a Text, the ControlId of the control. Both return a Boolean : True if an animation is running, False otherwise.
-{% highlight xml %}
+{% highlight xml %} 
 Boolean LibManialink_IsAnimated(CMlControl _Control)
 
 @param  _Control   The control to test
 {% endhighlight %}
-{% highlight xml %}
+{% highlight xml %} 
 Boolean LibManialink_IsAnimated(Text _ControlId)
 
 @param  _ControlId   The ControlId of the control to test

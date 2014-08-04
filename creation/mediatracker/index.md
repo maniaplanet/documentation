@@ -1,12 +1,10 @@
 ---
-layout: menu
-title: Mediatracker
-description: Mediatracker tips
-tags:
-- creation
-- mediatracker
+layout: static
+title: MediaTracker
+description: MediaTracker tips
 ---
 
 # Tips
 
 * [Video batch](video-batch.html)
+

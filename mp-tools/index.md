@@ -1,15 +1,14 @@
 ---
-layout: page
+layout: static
 title: ManiaPlanet tools
 description: List of tools
-tags: mp-tools
 ---
 
-* [ManiaPlanet competition manager](competition/)
-* [ManiaPlanet APT repository](apt/)
-* [Clublinks](clublinks/)
+* [ManiaPlanet competition manager](competition.html)
+* [ManiaPlanet APT repository](apt.html)
+* [Clublinks](clublinks.html)
 
 ## Developper tools
 
-* [ManiaPlanet web services](ws/)
-* [ManiaConnect](ws/maniaconnect/)
+* [ManiaPlanet web services](ws/index.html)
+* [ManiaConnect](ws/maniaconnect.html)

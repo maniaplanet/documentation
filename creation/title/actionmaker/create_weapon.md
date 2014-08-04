@@ -1,11 +1,23 @@
 ---
-layout: default
+layout: static
 title: Create a weapon in the ActionMaker
 description: How create a weapon in the ActionMaker
-tags:
-- creation
-- title
 ---
+
+**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+
+- [The weapons](#the-weapons)
+	- [Creating the basic settings of the weapon](#creating-the-basic-settings-of-the-weapon)
+	- [Creating the core](#creating-the-core)
+	- [Creating the tail](#creating-the-tail)
+	- [Time to explode everything](#time-to-explode-everything)
+		- [I've got the power](#ive-got-the-power)
+		- [Attack on Debris](#attack-on-debris)
+	- [Put da sound](#put-da-sound)
+	- [Last part but not the least: the gameplay](#last-part-but-not-the-least-the-gameplay)
+		- [The Bullet](#the-bullet)
+		- [The Explosion](#the-explosion)
+	- [Few tips on weapon creation](#few-tips-on-weapon-creation)
 
 # The weapons
 In the ActionMaker, you can create custom weapons. A weapon is a set of elements combining several visual effects, and an almost complete customization of the gameplay values and effects.

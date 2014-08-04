@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Markers library
+layout: static
+title: Markers library 
 description: Simplify the management of 3d markers
-tags: maniascript
 ---
 
 # Purpose
@@ -39,7 +38,7 @@ By default the library will remove any attribute from your marker that is not in
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Load()
 
 Load the library, must be called once at the beginning of the script
@@ -48,7 +47,7 @@ Load the library, must be called once at the beginning of the script
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Unload()
 
 Unload the library, must be called once at the end of the script
@@ -57,7 +56,7 @@ Unload the library, must be called once at the end of the script
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Add(Text _Marker, CUIConfig _UI)
 
 Add a marker to a specific UI
@@ -69,7 +68,7 @@ Add a marker to a specific UI
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Add(Text _Marker)
 
 Add a marker to the global UI
@@ -80,7 +79,7 @@ Add a marker to the global UI
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Add(Text _Marker, CPlayer _Player)
 
 Add a marker to a player
@@ -92,7 +91,7 @@ Add a marker to a player
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Add(Text _Marker, Text _Manialink)
 
 Create a marker associated with a manialink from the Markers layer. The <marker /> must contain a valid "manialinkframeid" parameter as well as the manialink.
@@ -104,7 +103,7 @@ Create a marker associated with a manialink from the Markers layer. The <marker 
 
 
 
-{% highlight js %}
+{% highlight js %} 
 AddManialink(Text _Id, Text _Manialink)
 
 Add a manialink in the layer Markers with the given manialinkframeid
@@ -116,7 +115,7 @@ Add a manialink in the layer Markers with the given manialinkframeid
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Remove(Text _Marker, CUIConfig _UI)
 
 Remove a marker from an UI
@@ -128,7 +127,7 @@ Remove a marker from an UI
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Remove(Text _Marker)
 
 Remove a marker from the global UI
@@ -139,7 +138,7 @@ Remove a marker from the global UI
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Remove(Text _Marker, CPlayer _Player)
 
 Remove a marker from a player
@@ -151,7 +150,7 @@ Remove a marker from a player
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Remove(Text _Attribute, Text _Value, CUIConfig _UI)
 
 Remove all markers containing an attribute with the specified value from an UI
@@ -164,7 +163,7 @@ Remove all markers containing an attribute with the specified value from an UI
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Remove(Text _Attribute, Text _Value)
 
 Remove all markers containing an attribute with the specified value from the global UI
@@ -176,7 +175,7 @@ Remove all markers containing an attribute with the specified value from the glo
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Remove(Text _Attribute, Text _Value, CPlayer _Player)
 
 Remove all markers containing an attribute with the specified value from a player
@@ -189,7 +188,7 @@ Remove all markers containing an attribute with the specified value from a playe
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void RemoveManialink(Text _Id)
 
 Remove a manialink from the layer Markers with the given manialinkframeid
@@ -200,7 +199,7 @@ Remove a manialink from the layer Markers with the given manialinkframeid
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Clear(CUIConfig _UI)
 
 Remove all markers from an UI
@@ -211,7 +210,7 @@ Remove all markers from an UI
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Clear()
 
 Remove all markers from the global UI
@@ -220,7 +219,7 @@ Remove all markers from the global UI
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Clear(CPlayer _Player)
 
 Remove all markers from a player
@@ -231,7 +230,7 @@ Remove all markers from a player
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void SetManialinkScript(Text _Script)
 
 Set the manialink script of the marker layer
@@ -242,7 +241,7 @@ Set the manialink script of the marker layer
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void AddAttribute(Text _Attribute)
 
 Add an attribute to the valid attributes array. Any attribute not present in this array will be removed from the marker.
@@ -253,7 +252,7 @@ Add an attribute to the valid attributes array. Any attribute not present in thi
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void AddAttributes(Text[] _Attributes)
 
 Add several attributes to the valid attributes array
@@ -264,7 +263,7 @@ Add several attributes to the valid attributes array
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void RemoveAttribute(Text _Attribute)
 
 Remove an attribute from the valid attributes array
@@ -275,7 +274,7 @@ Remove an attribute from the valid attributes array
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void RemoveAttributes(Text[] _Attributes)
 
 Remove several attributes from the valid attributes array
@@ -286,7 +285,7 @@ Remove several attributes from the valid attributes array
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Text[] GetAttributes()
 
 Get the valid attributes
@@ -298,7 +297,7 @@ The following functions are helpers to add markers on a minimap.
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Minimap_Add(Text _Id, Vec3 _Pos, Text _HudVisibility, Text _MinimapVisibility, Text _ImgUrl, CPlayer _Player)
 
 Display an image on the minimap at a given position
@@ -314,7 +313,7 @@ Display an image on the minimap at a given position
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Minimap_Add(Text _Id, Vec3 _Pos, CPlayer _Player)
 
 Display an image at a given position
@@ -327,7 +326,7 @@ Display an image at a given position
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Minimap_Add(Text _Id, Vec3 _Pos)
 
 Display an image at a given position in the global UI
@@ -339,7 +338,7 @@ Display an image at a given position in the global UI
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Minimap_Add(Text _Id, CPlayer _PlayerOnMinimap, Boolean _ShowDir, Text _HudVisibility, Text _MinimapVisibility, Text _ImgUrl, CPlayer _Player)
 
 Display an image following a player
@@ -356,7 +355,7 @@ Display an image following a player
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Minimap_Add(Text _Id, CPlayer _PlayerOnMinimap, CPlayer _Player)
 
 Display an image following a player
@@ -369,7 +368,7 @@ Display an image following a player
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Minimap_Add(Text _Id, CPlayer _PlayerOnMinimap)
 
 Display an image following a player
@@ -381,7 +380,7 @@ Display an image following a player
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Minimap_Remove(Text _Id)
 
 Remove one minimap point
@@ -392,7 +391,7 @@ Remove one minimap point
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Minimap_Remove(Text _Id, CPlayer _Player)
 
 Remove one minimap point from a player
@@ -404,7 +403,7 @@ Remove one minimap point from a player
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Minimap_Clear()
 
 Remove all minimap points
@@ -413,7 +412,7 @@ Remove all minimap points
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Minimap_Clear(CPlayer _Player)
 
 Remove all minimap points from a player

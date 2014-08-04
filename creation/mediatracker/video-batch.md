@@ -1,10 +1,7 @@
 ---
-layout: default
+layout: static
 title: MediaTracker video batch
 description: MediaTracker video batch
-tags:
-- creation
-- mediatracker
 ---
 
 Are you tired of waiting your video rendering to be done in the MediaTracker? I'm sure you wished many times that it could be great to render many video clips while you're sleeping.
@@ -23,7 +20,7 @@ Example:
 Just make sure you target the "ManiaPlanet.exe" file. My batch file is in the ManiaPlanet installation folder, then i just wrote the executable file name.
 
 #Very important
-The replays you need to render must be placed in the Replay root folder. For instance : `C:\your_windows_session\Documents\ManiaPlanet\Replay\``
+The replays you need to render must be placed in the Replay root folder. For instance : `C:\your_windows_session\Documents\ManiaPlanet\Replay\`` 
 
 The character string is limited. Then it's not possible to launch 3698 clips in a row. Especially if your replay file names are too long. I suggest your to limit it to two characters as a numeric suite: `01.Replay.Gbx;02.Replay.Gbx; ...`
 Make sure you finish your command line by a ";"

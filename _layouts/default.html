@@ -1,73 +1,42 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<html lang="en">
+  <head>
+    <!-- meta -->
+    <meta charset="utf-8" />
+    <meta name="keywords" content="maniaplanet, shootmania, trackmania, manialink, maniascript, titlepack" />
+    <meta name="description" content="ManiaPlanet technical documentation (maniascript, titlepack, manialink)" />
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="viewport" content="width=device-width">
 
-  {% include head.html %}
+    <!-- include -->
+    <link rel="stylesheet" href="{{ site.url }}css/styles.css?v=12" />
+	
+	<link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
-  <body class="theme-base-0d sidebar-overlay">
-
-    {% include sidebar.html %}
-
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <a href="https://github.com/maniaplanet/documentation"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 9999; width: 115px;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
-    <div id="toc" class="toc container content floatable hidden"></div>
-    <div id="top" class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
-        </div>
+    <title>ManiaPlanet Documentation -- {{ page.title }}</title>
+  </head>
+  <body>
+    <a href="http://github.com/maniaplanet/documentation"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
+    <header id="top">
+      <div class="wrapper">
+      <div id="gobywan"></div>
+        <ul>
+          <li><a class="extra" href="{{ site.url }}">Home</a></li>
+          <li><a class="extra" href="{{ site.url }}help.html">Get help</a>
+        </ul>
+        <h1><a href="{{ site.url }}">{{ site.name }}</a></h1>
       </div>
+    </header>
+    <div class="wrapper">
+      {{ content }}
 
-      <div class="container content">
-        {{ content }}
-        <hr/>
-        <footer style="text-align:center; font-size: 7pt; color: #ccc;">
-          <a class="top" href="#top">Top</a>
-          Powered by <a href="http://github.com/mojombo/jekyll/">Jekyll</a> | Theme based on <a href="https://github.com/poole/lanyon">Lanyon</a>
-        </footer>
-      </div>
+      <footer>
+        <a class="top" href="#top">Top</a>
+        Powered by <a href="http://github.com/mojombo/jekyll/">Jekyll</a> | Theme based on <a href="https://github.com/fmonniot/jekyll-holo-theme">Holo</a> by <a href="http://francois.monniot.eu">François Monniot</a>
+      </footer>
     </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle" style="display: none;"></label>
-
-    <script type="text/javascript">
-      $(document).ready(function() {
-        var pageHeaders = $('h1, h2, h3, h4, h5, h6').filter(function() {
-          // get all headers with an ID
-          return this.id;
-        }), pageOutput = $(this);
-        if (!pageHeaders.length || pageHeaders.length < 3 || !pageOutput.length) {
-          $('#toc').removeClass("visible");
-          $('#toc').addClass("hidden");
-        } else {
-          $('#toc').removeClass("hidden");
-          $('#toc').addClass("visible");
-        }
-        $('.toc').toc({ listType: 'ul', showEffect: 'slideDown' });
-      });
-    </script>
-
-    <script type="text/javascript">
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-
-        checkbox.checked = true;
-
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-
-          if(!checkbox.checked ||
-             !sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
-          //checkbox.checked = false;
-        }, false);
-      })(document);
+    <script src="//code.jquery.com/jquery-2.0.0.min.js"></script>
+  	<script type="text/javascript">
 
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-22426969-16']);
@@ -78,6 +47,7 @@
       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
+
     </script>
   </body>
 </html>

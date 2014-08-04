@@ -1,10 +1,7 @@
 ---
-layout: menu
-title: Title Pack
+layout: static
+title: Title creation help
 description: Title creation help
-tags:
-- creation
-- title
 ---
 
 A Title Pack is a set of elements "combined" together to create a new experience. By using a Title Pack, you will have access to several dedicated tools to create really custom the environment. With it you can use the following features:

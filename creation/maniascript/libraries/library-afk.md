@@ -1,8 +1,7 @@
 ---
-layout: default
-title: AFK library
+layout: static
+title: AFK library 
 description: AFK players management
-tags: maniascript
 ---
 
 # Purpose
@@ -29,7 +28,7 @@ The library can be controlled through XmlRpc with the following methods and call
 ##### LibAFK_Properties
 * Data : An array with the properties of the AFK library
 * Example : ["90000", "15000", "10000", "True"]
-* Note :
+* Note : 
     * IdleTimeLimit -> Time after which a player is considered to be AFK
     * SpawnTimeLimit -> Time after spawn before which a player can't be considered to be AFK
     * CheckInterval -> Time between each AFK check
@@ -52,7 +51,7 @@ The library can be controlled through XmlRpc with the following methods and call
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Load()
 
 Load the library, must be called once at the beginning of the script
@@ -61,7 +60,7 @@ Load the library, must be called once at the beginning of the script
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void Unload()
 
 Unload the library, must be called once at the end of the script
@@ -70,7 +69,7 @@ Unload the library, must be called once at the end of the script
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Boolean IsAFK(CSmPlayer _Player, Integer _MaxIdleDuration, Integer _SpawnTimeMercy)
 
 Check if a player is AFK
@@ -83,7 +82,7 @@ Check if a player is AFK
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void ManageAFKPlayers(Integer _MaxIdleDuration, Integer _SpawnTimeMercy)
 
 Try to force AFK players to spectators
@@ -95,7 +94,7 @@ Try to force AFK players to spectators
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void ManageAFKPlayers()
 
 Try to force AFK players to spectators using the default _MaxIdleDuration and _SpawnTimeMercy values
@@ -104,7 +103,7 @@ Try to force AFK players to spectators using the default _MaxIdleDuration and _S
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void AutoManageAFKPlayers()
 
 Try to force AFK players to spectators, this function use the properties defined by the script or XmlRpc
@@ -113,7 +112,7 @@ Try to force AFK players to spectators, this function use the properties defined
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void SetIdleTimeLimit(Integer _Time)
 
 Update the idle time limit
@@ -124,7 +123,7 @@ Update the idle time limit
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void SetSpawnTimeLimit(Integer _Time)
 
 Update the spawn mercy time
@@ -135,7 +134,7 @@ Update the spawn mercy time
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void SetCheckInterval(Integer _Interval)
 
 Update the check time interval
@@ -146,7 +145,7 @@ Update the check time interval
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void SetForceSpec(Boolean _ForceSpec)
 
 Update the force spec value
@@ -157,7 +156,7 @@ Update the force spec value
 
 
 
-{% highlight js %}
+{% highlight js %} 
 Void XmlRpcLoop()
 
 Manage the XmlRpc events
