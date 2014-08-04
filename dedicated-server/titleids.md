@@ -1,7 +1,8 @@
 ---
-layout: static
+layout: default
 title: ManiaPlanet titlesIds
 description: ManiaPlanet titlesIds list
+tags: dedicated
 ---
 
 <table>

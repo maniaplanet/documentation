@@ -1,7 +1,8 @@
 ---
-layout: static
+layout: default
 title: The CustomUI library
 description: How to use the CustomUI library in your scripts
+tags: maniascript
 ---
 
 # Purpose
@@ -30,22 +31,22 @@ If you start your mode now and press the F8 key, you will open the customization
   - (Text) The horizontal alignment of the module. Can be "left", "right" or "center". Any other value will be converted to "center".
   - (Boolean) Is the module movable or not.
   - (Boolean) Is the module hidable or not.
-  
+
 This function has two overloaded versions. One without the movable/hidable parameters and one without the alignment and movable/hidable parameters.
 
-Once you created the modules you can call the `Build()` function that add all of them in the customization menu Manialink. This modules are just a visual representation (a colored rectangle) that will allow the player to move or hide the Manialink frames that are enslaved to them. 
+Once you created the modules you can call the `Build()` function that add all of them in the customization menu Manialink. This modules are just a visual representation (a colored rectangle) that will allow the player to move or hide the Manialink frames that are enslaved to them.
 
 Now lets see how to associate a module with a frame in your custom Manialink :
-{% highlight xml %} 
+{% highlight xml %}
 <frame class="LibCustomUI_Module" id="MyModeName_Example">
   <label text="Im customizable!" scale="3" />
 </frame>
 {% endhighlight %}
-All you have to do is wrap your customizable content in a frame with the "LibCustomUI_Module" class and the name of your module as id. In this example it's just a label, but it can be any part of your Manialink. All the content of the frame will be movable/hidable by the players. After that you have two possibilities to add the necessary script to your Manialink : 
+All you have to do is wrap your customizable content in a frame with the "LibCustomUI_Module" class and the name of your module as id. In this example it's just a label, but it can be any part of your Manialink. All the content of the frame will be movable/hidable by the players. After that you have two possibilities to add the necessary script to your Manialink :
   * it doesn't have a script, then you can call the `InjectMLFullScript()` function,
   * it already have a script, so you have to use the `InjectMLInit()` and `InjectMLLoop()` functions.
 Example without a script :
-{% highlight xml %} 
+{% highlight xml %}
 MyLayer.ManialinkPage = """
 <frame class="LibCustomUI_Module" id="MyModeName_Example">
   <label text="Im customizable!" scale="3" />
@@ -54,18 +55,18 @@ MyLayer.ManialinkPage = """
 """;
 {% endhighlight %}.
 Example with a script :
-{% highlight xml %} 
+{% highlight xml %}
 <frame class="LibCustomUI_Module" id="MyModeName_Example">
   <label text="Im customizable!" scale="3" />
 </frame>
 <script><!--
 main() {
   {{{InjectMLInit()}}}
-  
+
   while (True) {
     yield;
     if (!PageIsVisible || InputPlayer == Null) continue;
-    
+
     {{{InjectMLLoop()}}}
   }
 }

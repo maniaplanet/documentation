@@ -1,7 +1,8 @@
 ---
-layout: static
-title: MiniMap2 library 
+layout: default
+title: MiniMap2 library
 description: Create and display a minimap
+tags: maniascript
 ---
 
 # Purpose
@@ -18,7 +19,7 @@ The minimap library only display a map, if you want to add markers on it you'll 
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void Load()
 
 Load the library, must be called once at the beginning of the script
@@ -27,7 +28,7 @@ Load the library, must be called once at the beginning of the script
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void Unload()
 
 Unload the library, must be called once at the end of the script
@@ -36,7 +37,7 @@ Unload the library, must be called once at the end of the script
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void Pos(Vec3 _Pos)
 
 Set the position of the minimap in the HUD
@@ -45,7 +46,7 @@ Set the position of the minimap in the HUD
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void Size(Vec2 _Size)
 
 Set the size of the minimap
@@ -56,7 +57,7 @@ Set the size of the minimap
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void Scale(Real _Scale)
 
 Set the scale of the minimap
@@ -67,7 +68,7 @@ Set the scale of the minimap
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void Visibility(Boolean _Visible)
 
 Set the visibility of the minimap by default
@@ -78,7 +79,7 @@ Set the visibility of the minimap by default
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void Visibility(CPlayer _Player, Boolean _Visible)
 
 Set the visibility of the minimap for one player. This setting will override the default one.
@@ -90,7 +91,7 @@ Set the visibility of the minimap for one player. This setting will override the
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void ResetVisibility(CPlayer _Player)
 
 Reset the visibility of the minimap at the player level to the default
@@ -101,7 +102,7 @@ Reset the visibility of the minimap at the player level to the default
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void Overlay(Text _ImgPath, Vec2 _Pos, Vec2 _Size)
 
 Set the properties of the overlay on the minimap
@@ -114,7 +115,7 @@ Set the properties of the overlay on the minimap
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void Zoom(Real _Zoom)
 
 Set the zoom of the minimap
@@ -125,7 +126,7 @@ Set the zoom of the minimap
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void WorldPosition(Vec3 _Pos)
 
 Set the world position of the minimap
@@ -136,7 +137,7 @@ Set the world position of the minimap
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void WorldPositionFollow(Boolean _Follow)
 
 The world position is equal to the GUIPlayer position + the default world position
@@ -147,7 +148,7 @@ The world position is equal to the GUIPlayer position + the default world positi
 
 
 
-{% highlight js %} 
+{% highlight js %}
 Void MapPosition(Vec2 _Pos)
 
 Set the map position of the minimap
