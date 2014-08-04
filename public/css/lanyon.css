@@ -35,8 +35,6 @@
  */
 
 /* Prevent scroll on narrow devices */
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-
 html,
 body {
   overflow-x: hidden;
@@ -253,7 +251,7 @@ a.sidebar-nav-item:focus {
 }
 
 /* fontawesome */
-[class*="fontawesome-"]:before {
+[class*="fa-"]:before {
   font-family: 'FontAwesome', sans-serif;
 }
 
