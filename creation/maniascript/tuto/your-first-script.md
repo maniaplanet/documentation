@@ -30,7 +30,7 @@ It's time to create a map to test our mode. Launch ManiaPlanet, start the map ed
 
 We have a basic game mode script and a map, all that is missing now is a server to do our tests. In the main menu click on the Local Play button (then Local Network if you are on TrackMania). Click on the Create button and you should see this screen:
 
-![Server creation screen](../img/create-server.png)
+![Server creation screen](./img/create-server.png)
 
 1. Click on this box until the `Script` option is selected.
 2. Click here to open a window where you can choose `MyGamemode.Script.txt`.

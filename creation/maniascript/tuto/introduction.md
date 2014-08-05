@@ -52,7 +52,7 @@ The easiest way to create and edit scripts is to use the in-game editor. It is a
 - Map type: launch the map editor, select the map type you want to edit on the top left of the screen and then press F12.
 - Map editor plugin: launch the map editor and click on the plugin icon on the bottom of the screen. Then just click on the create button on the left of the screen. If you want to edit an existing script, click on the small "+" button above a plugin and after on the edit button on the left of the screen.
 
-![Script editor](../img/script-editor.png)
+![Script editor](./img/script-editor.png)
 
 1. The main working area, this is were you'll type your script.
 2. The include panel displays all the external scripts used by your own script.
@@ -62,11 +62,11 @@ The easiest way to create and edit scripts is to use the in-game editor. It is a
 6. The "Save and test" button saves all the open scripts and lets you test your game mode on the server.
 7. The "Close" button lets you exit the script editor, __but you'll loose all the unsaved modifications__.
 
-![Documentation example](../img/debugger-small.png)
+![Documentation example](./img/debugger-small.png)
 
 While playing you can press ctrl+g to open the log window. This window will be essential when developing a new script, but we will see later how to use it efficiently.
 
-![Documentation example](../img/debugger-big.png)
+![Documentation example](./img/debugger-big.png)
 
 If you press ctrl+g a second time you will open the full debug window (and a third time will close it).
 
