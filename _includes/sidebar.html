@@ -29,6 +29,8 @@
     <span class="sidebar-nav-item">Currently v{{ site.version }}</span> -->
   </nav>
 
+  <hr/>
+
   <nav class="sidebar-nav">
     {% assign pages_list = site.pages %}
     {% assign currentPathArray = page.url | split:"/" %}
@@ -37,7 +39,6 @@
       {% assign pPathArray = node.url | split:"/" %}
       {% assign pFile = pPathArray | last %}
       {% if node.title != null and (currentPathArray[2] == pPathArray[2] and node.layout == "menu" %}
-        <hr/>
         <p style="text-align: center;">CURRENT SECTION</p>
         <a class="fa fa-list sidebar-nav-item{% if (currentPathArray[2] == pPathArray[2] %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}" title="{{ node.description }}"> {{ node.title }}</a>
       {% endif %}
