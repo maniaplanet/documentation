@@ -82,7 +82,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 56em) {
   .container {
-    max-width: 38rem;
+    max-width: 52rem;
   }
 }
 
@@ -568,6 +568,9 @@ a.pagination-item:hover {
   color: #fff !important;
   font-family: "PT Serif", Georgia, "Times New Roman", serif;
   box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7) !important;
+  max-width: 17rem !important;
+  max-height: 30rem !important;
+  overflow-y: auto;
 }
 
 #toc.floatable a {
