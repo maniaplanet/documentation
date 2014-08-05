@@ -9,9 +9,9 @@ tags:
 
 A dedicated server application which allows you to run a server for any ManiaPlanet game.
 
-* [Quick start](basic)
-* [Command line](command-line)
-* [Frequent errors](frequent-errors)
-* [Matchmaking](matchmaking)
-* [Scores table customization](customize-scores-table)
-* [Game mode settings](settings-list)
+* [Quick start](basic.html)
+* [Command line](command-line.html)
+* [Frequent errors](frequent-errors.html)
+* [Matchmaking](matchmaking.html)
+* [Scores table customization](customize-scores-table.html)
+* [Game mode settings](settings-list.html)

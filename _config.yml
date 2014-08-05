@@ -1,9 +1,9 @@
 # Dependencies
-markdown:         redcarpet
+markdown:         rdiscount
 highlighter:      pygments
 
 # Permalinks
-permalink:        pretty
+# permalink:        pretty
 
 # Setup
 title:            Maniaplanet documentation
@@ -26,5 +26,10 @@ github:
 gems:
   - jekyll-sitemap
 
-redcarpet:
-    extensions: [with_toc_data]
+# redcarpet:
+#     extensions: [with_toc_data]
+
+rdiscount:
+    extensions:
+      - autolink
+      - generate_toc

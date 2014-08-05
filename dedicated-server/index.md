@@ -7,17 +7,17 @@ tags: dedicated
 
 A dedicated server application which allows you to run a server for any ManiaPlanet game.
 
-* [Quick start](server/basic)
-* [Command line](server/command-line)
-* [Frequent errors](server/frequent-errors)
-* [Matchmaking](server/matchmaking)
-* [Scores table customization](server/customize-scores-table)
-* [Game mode settings](server/settings-list)
+* [Quick start](server/basic.html)
+* [Command line](server/command-line.html)
+* [Frequent errors](server/frequent-errors.html)
+* [Matchmaking](server/matchmaking.html)
+* [Scores table customization](server/customize-scores-table.html)
+* [Game mode settings](server/settings-list.html)
 
 # Dedicated tools
 
-* [Dedicated tools](tools/)
-* [ManiaLive](tools/manialive)
+* [Dedicated tools](tools/.html)
+* [ManiaLive](tools/manialive.html)
 
 <!--# ManiaLive
 
@@ -25,5 +25,5 @@ A dedicated server application which allows you to run a server for any ManiaPla
 
 # XML-RPC reference
 
-* [Latest methods reference](xmlrpc/methods/latest)
-* [Scripts methods and callbacks reference](xmlrpc/xml-rpc-scripts)
+* [Latest methods reference](xmlrpc/methods/latest.html)
+* [Scripts methods and callbacks reference](xmlrpc/xml-rpc-scripts.html)
