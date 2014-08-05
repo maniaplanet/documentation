@@ -2,7 +2,7 @@
 layout: default
 title: APT repository
 description: ManiaPlanet APT repository
-tags: mp-tools
+tags: tools
 ---
 
 ## Available packages

@@ -2,7 +2,7 @@
 layout: page
 title: ManiaPlanet tools
 description: List of tools
-tags: mp-tools
+tags: tools
 ---
 
 * [ManiaPlanet competition manager](competition.html)

@@ -2,7 +2,7 @@
 layout: default
 title: ManiaPlanet competition manager
 description: Installation and instructions
-tags: mp-tools
+tags: tools
 ---
 
 ManiaPlanet competition manager (MPCM) allows you to run automatically a cup from registrations to auto registration of results.

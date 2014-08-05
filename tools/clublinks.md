@@ -2,7 +2,7 @@
 layout: default
 title: Clublinks
 description: How to create and setup a Clublink for your team
-tags: mp-tools
+tags: tools
 ---
 
 # How to create and setup a Clublink for your team

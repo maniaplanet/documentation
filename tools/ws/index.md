@@ -3,7 +3,7 @@ layout: menu
 title: WebServices
 description: TODO
 tags:
-- mp-tools
+- tools
 - ws
 ---
 

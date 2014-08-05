@@ -3,7 +3,7 @@ layout: default
 title: ManiaConnect
 description: ManiaConnect
 tags:
-- mp-tools
+- tools
 - ws
 ---
 
