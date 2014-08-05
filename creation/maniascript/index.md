@@ -7,6 +7,7 @@ description: ManiaScript help
 # General
 
 * [How to generate the documentation](general/generate-doc.html)
+* [Syntax basics](general/syntax-basics.html)
 * [Useful links](general/links.html)
 * [ManiaScript style convention](conventions.html)
 * [Landmarks in ManiaScript](general/landmarks.html)
