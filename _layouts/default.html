@@ -35,9 +35,9 @@
 
     <script type="text/javascript">
       $(document).ready(function() {
-        var pageHeaders = $(' h1, h2, h3, h4, h5, h6 ').filter(function() {
+        var pageHeaders = $(' .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 ').filter(function() {
           // get all headers with an ID
-          //$(this).attr( "id", $(this).prev().attr( "name" ).replace(/\./g, "-") );
+          $(this).attr( "id", $(this).prev().attr( "name" ).replace(/\./g, "-") );
           return this.id;
         }), pageOutput = $(this);
         if (!pageHeaders.length || pageHeaders.length < 3 || !pageOutput.length) {
