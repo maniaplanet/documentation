@@ -7,7 +7,7 @@ tags:
 - maniascript
 ---
 
-# <a id="what-is-maniscript"></a>What is ManiaScript?
+# What is ManiaScript?
 
 ManiaScript is a scripting language integrated to ManiaPlanet that allows the players to customize different aspects of the games. A scripting language is build upon a classic programming language and aims to ease the process of creation.
 
@@ -15,36 +15,36 @@ ManiaScript is a scripting language integrated to ManiaPlanet that allows the pl
 > Of course remember that there is some difference between **Java** and **ManiaScript** but they are also close enough to learn enough basic knowledge with it.
 
 
-# <a id="what-can-i-do-with-it"></a>What can I do with it?
+# What can I do with it?
 
-## <a id="rules"></a>Rules
+## Rules
 
 The rules script is used by the servers. It defines the structure and the rules of the game modes. With this you can choose how the players are spawned on the map, how the points are awarded, who will win at the end of the match, create a specific user interface and much more.
 
 
-## <a id="map-type"></a>Map Type
+## Map Type
 
 The map type script is used in the map editor. It defines the rules a map must follow to be considered valid. You can by example force the map to have two spawns and three poles, each one using a different tag. Then inside the rules script, you can set a list of map type to define which maps are compatible with your mode.
 
 
-## <a id="manialink"></a>ManiaLink
+## ManiaLink
 
 ManiaLink is a presentation language allowing the players to create user interfaces and small websites inside ManiaPlanet. You can integrate a script inside your ManiaLinks to make them dynamic (much like HTML and JavaScript). It means that you can change text values or move elements of your ManiaLink from a script. With this you can display a top 10 of the best players in your mode by example.
 
 
-## <a id="map-editor-plugins"></a>Map editor plugins
+## Map editor plugins
 
 It's possible to extend the possibilities of the map editor with plugins written in ManiaScript. These plugins range from the simple autosave to the full random map generator.
 
 
-## <a id="maniaplanet-plugins"></a>ManiaPlanet plugins
+## ManiaPlanet plugins
 
 The global plugins are not available to the players at the time being. Once it will be the case, it will be possible to create small tools directly inside ManiaPlanet. You will be able to improve the current buddy system or create a new instant messenger by example.
 
 
-# <a id="tools"></a>Tools
+# Tools
 
-## <a id="ingame-editor"></a>InGame editor
+## InGame editor
 
 The easiest way to create and edit scripts is to use the in-game editor. It is accessible through different ways depending of which kind of script you want to create.
 
@@ -76,7 +76,7 @@ If you press ctrl+g a second time you will open the full debug window (and a thi
 4. A list of all the previous compilation errors. You can click on each error to have more information about it.
 
 
-## <a id="editor-shortcuts"></a>Editor shorcuts
+## Editor shorcuts
 
 While playing:
 
@@ -102,14 +102,14 @@ While editing a script
   * ctrl + shift + F3: quick search previous on the selection
 
 
-## <a id="external-tools"></a>External tools
+## External tools
 
 It's not recommended to do that when you begin to write scripts, but you can also edit them with any text editor. __Be aware that ManiaPlanet cache some resources like the scripts. So if you update a script with an external editor it won't be reloaded in the game at the same time.__ Most of the time you have to restart the server running the script to get the new version.
 
 You can check [the links section](../general/links.html#tools) of the documentation to get some useful tools to enhance the ManiaScript support in different text editors (syntax highlighting and auto-completion).
 
 
-# <a id="how-to-extract-the-nadeo-scripts"></a>How to extract the Nadeo scripts
+# How to extract the Nadeo scripts
 
 You can find the latest [Nadeo's scripts on GitHub](https://github.com/maniaplanet/game-modes), but you can also extract them from your installation. To do that you must go inside this folder: `C:\ProgramData\ManiaPlanet\PacksCache`.
 It's the default path, so maybe you changed it during the installation process. The ProgramData directory is an hidden directory, so you have to edit your Windows settings to display it.
@@ -123,7 +123,7 @@ Inside the folder you will find a lot of .zip. They contain the default ManiaPla
 If you unzip these directories on your desktop you'll find a `Scripts` folder inside with all the Nadeo scripts.
 
 
-# <a id="script-folder-structure"></a>Script folder structure
+# Script folder structure
 
 ManiaPlanet stocks its data in two directories. The original Nadeo data are saved in the `ProgramData\ManiaPlanet` folder. The custom files created by the players are saved in the `Documents\ManiaPlanet` folder. But once you launch the game, ManiaPlanet will automatically merge the two folders together to display them as one.
 
