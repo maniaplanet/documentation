@@ -12,9 +12,6 @@
 
     var headers = $(' h1, h2, h3, h4, h5, h6 ').filter(function() {
       // get all headers with an ID
-      /*var header = $(this).prev().attr( "name" );
-      console.log(header);*/
-      //var headerid = $(this).prev().attr( "name" );
       //$(this).attr( "id", $(this).prev().attr( "name" ).replace(/\./g, "-") );
       return this.id;
     }), output = $(this);

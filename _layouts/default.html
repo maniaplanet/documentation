@@ -37,7 +37,7 @@
       $(document).ready(function() {
         var pageHeaders = $(' h1, h2, h3, h4, h5, h6 ').filter(function() {
           // get all headers with an ID
-          $(this).attr( "id", $(this).prev().attr( "name" ).replace(/\./g, "-") );
+          //$(this).attr( "id", $(this).prev().attr( "name" ).replace(/\./g, "-") );
           return this.id;
         }), pageOutput = $(this);
         if (!pageHeaders.length || pageHeaders.length < 3 || !pageOutput.length) {
