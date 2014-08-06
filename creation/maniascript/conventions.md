@@ -2,6 +2,9 @@
 layout: default
 title: ManiaScript style convention
 description: ManiaScript style convention
+tags:
+- creation
+- maniascript
 ---
 
 ## File
