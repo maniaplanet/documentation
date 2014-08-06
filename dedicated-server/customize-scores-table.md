@@ -10,7 +10,7 @@ tags:
 # Introduction
 
 The scores table of the Elite and Heroes modes ARE NOT customizable with this method.
-If you want to know how to use the ScoresTable2 library in a game mode script you can read [this tutorial]({{ site.url }}/maniascript/libraries/library-scorestable2.html).
+If you want to know how to use the ScoresTable2 library in a game mode script you can read [this tutorial](../creation/maniascript/libraries/library-scorestable2.html).
 
 # Installation
 

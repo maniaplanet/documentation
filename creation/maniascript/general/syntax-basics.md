@@ -1,3 +1,12 @@
+---
+layout: default
+title: ManiaScript syntax basic
+description: ManiaScript syntax basic
+tags:
+- creation
+- maniascript
+---
+
 ManiaScript Syntax basics
 =========
 

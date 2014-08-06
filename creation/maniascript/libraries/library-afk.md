@@ -21,12 +21,12 @@ The library can be controlled through XmlRpc with the following methods and call
 
 ## Callbacks
 
-##### LibAFK_IsAFK
+### LibAFK_IsAFK
 * Data : An array with the login of the AFK player
 * Example : ["Login"]
 * Note : This callback is sent when the library detects an AFK player, it will be sent for each call to `ManageAFKPlayers()` until the player is forced into spectator mode.
 
-##### LibAFK_Properties
+### LibAFK_Properties
 * Data : An array with the properties of the AFK library
 * Example : ["90000", "15000", "10000", "True"]
 * Note :
@@ -37,12 +37,12 @@ The library can be controlled through XmlRpc with the following methods and call
 
 ## Methods
 
-##### LibAFK_SetProperties
+### LibAFK_SetProperties
 * Note : Set the properties of the AFK library. The parameters are in this order: IdleTimeLimit, SpawnTimeLimit, CheckInterval, ForceSpec.
 * String : "LibAFK_SetProperties"
 * Array : ["90000", "15000", "10000", "True"]
 
-##### LibAFK_GetProperties
+### LibAFK_GetProperties
 * Note : Get the properties of the AFK library. This will sent the `LibAFK_Properties` callback in return.
 * String1 : "LibAFK_GetProperties"
 * String2 : ""
