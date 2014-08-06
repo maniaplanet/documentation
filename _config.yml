@@ -6,7 +6,7 @@ highlighter:      pygments
 # permalink:        pretty
 
 # Setup
-title:            Maniaplanet documentation
+title:            Documentation
 tagline:          'for the Maniaplanet game operating system'
 description:      '<a href="/documentation/"><img src="/documentation/img/maniaplanet.png"/></a>'
 url:              http://www.maniaplanet.com

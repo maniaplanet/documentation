@@ -19,7 +19,7 @@
     {% assign pages_list = site.pages %}
     {% for node in pages_list %}
       {% if node.title != null and node.layout == "page" %}
-          <a class="sidebar-nav-item{% if page.url contains node.tags | first %} active{% endif %}" href="{{ node.url }}"><span class="fa fa-list"></span> {{ node.title }}</a>
+          <a class="sidebar-nav-item{% if page.url contains node.tags | first %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}"><span class="fa fa-list"></span> {{ node.title }}</a>
       {% endif %}
     {% endfor %}
 
@@ -38,13 +38,13 @@
       {% assign pFile = pPathArray | last %}
       {% if node.title != null and (currentPathArray[2] == pPathArray[2] and node.layout == "menu" %}
         <p style="text-align: center;">CURRENT SECTION</p>
-        <a class="sidebar-nav-item{% if (currentPathArray[2] == pPathArray[2] %} active{% endif %}" href="{{ node.url }}" title="{{ node.description }}"><span class="fa fa-list"></span> {{ node.title }}</a>
+        <a class="sidebar-nav-item{% if (currentPathArray[2] == pPathArray[2] %} active{% endif %}" href="{{ site.baseurl }}{{ node.url }}" title="{{ node.description }}"><span class="fa fa-list"></span> {{ node.title }}</a>
       {% endif %}
     {% endfor %}
 
     {% for node in pages_list %}
       {% if node.title != null and node.tags != null and node.tags == page.tags and node.layout != "menu" and node.layout != "page" %}
-          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}" title="{{ node.description }}"><span class="fa {% if page.url == node.url %} fa-caret-right {% else %} fa-angle-right {% endif %}"></span> {{ node.title }}</a>
+          <a class="sidebar-nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}" title="{{ site.baseurl }}{{ node.description }}"><span class="fa {% if page.url == node.url %} fa-caret-right {% else %} fa-angle-right {% endif %}"></span> {{ node.title }}</a>
       {% endif %}
     {% endfor %}
   </nav>
