@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css">
   <link rel="stylesheet" href="{{ site.baseurl }}public/css/lanyon.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
 
   <!-- Icons -->
   <!-- <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/apple-touch-icon-precomposed.png">
@@ -31,6 +31,14 @@
 
   <!-- SCRIPTS -->
   <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript">
+    var host = window.location.hostname;
+    if (host == "maniaplanet.github.io") {
+      var path = window.location.pathname.split( '/' );
+      path = path.filter(function (item) { return item != "" && item != "documentation"; });
+      window.location.href = "http://doc.maniaplanet.com/" + path.join("/");
+    }
+  </script>
   <script type="text/javascript">{% include toc.js %}</script>
   <script type="text/javascript">
     $(document).ready(function() {
