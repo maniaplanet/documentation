@@ -8,9 +8,9 @@ highlighter:      pygments
 # Setup
 title:            Documentation
 tagline:          'for the Maniaplanet game operating system'
-description:      '<a href="/documentation/"><img src="/documentation/img/maniaplanet.png"/></a>'
+description:      '<a href="/"><img src="/img/maniaplanet.png"/></a>'
 url:              http://www.maniaplanet.com
-baseurl:          '/documentation/'
+baseurl:          '/'
 paginate:         5
 
 author:
