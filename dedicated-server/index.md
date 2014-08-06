@@ -1,5 +1,5 @@
 ---
-layout: menu
+layout: page
 title: Dedicated server
 description: Dedicated server help
 tags: 
