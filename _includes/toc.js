@@ -10,16 +10,12 @@
     },
     settings = $.extend(defaults, options);
 
-    $('h1, h2, h3, h4, h5, h6').filter(function() {
-      //$(this).attr( "id", $(this).prev().attr( "name" ).replace(/[.]/g, '-') );
-    });
-
-    var headers = $(' .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 ').filter(function() {
+    var headers = $(' h1, h2, h3, h4, h5, h6 ').filter(function() {
       // get all headers with an ID
       /*var header = $(this).prev().attr( "name" );
       console.log(header);*/
       //var headerid = $(this).prev().attr( "name" );
-      $(this).attr( "id", $(this).prev().attr( "name" ).replace(/\./g, "-") );
+      //$(this).attr( "id", $(this).prev().attr( "name" ).replace(/\./g, "-") );
       return this.id;
     }), output = $(this);
     if (!headers.length || headers.length < 3 || !output.length) {
