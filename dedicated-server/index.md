@@ -1,11 +1,11 @@
 ---
 layout: page
 title: ManiaPlanet dedicated server help
-description: How to run your own TrackMania² or ShootMania server
+description: How to run your own TrackManiaÂ² or ShootMania server
 tags: dedicated
 ---
 
-A dedicated server application which allows you to run a server for any ManiaPlanet game (TrackMania², ShootMania & titles).
+A dedicated server application which allows you to run a server for any ManiaPlanet game (TrackMania&, ShootMania & titles).
 
 * [Quick start](basic.html)
 * [Command line](command-line.html)
