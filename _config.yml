@@ -1,5 +1,5 @@
 # Dependencies
-markdown:         rdiscount
+#markdown:         rdiscount
 highlighter:      pygments
 
 # Permalinks
@@ -8,7 +8,7 @@ highlighter:      pygments
 # Setup
 title:            Maniaplanet documentation
 tagline:          'for the Maniaplanet game operating system'
-description:      '<a href="/documentation/"><img src="/documentation/img/maniaplanet.png"/></a>Use this sidebar to navigate throught the documentation.'
+description:      '<a href="/documentation/"><img src="/documentation/img/maniaplanet.png"/></a>'
 url:              http://www.maniaplanet.com
 baseurl:          '/documentation/'
 paginate:         5
@@ -29,7 +29,7 @@ gems:
 # redcarpet:
 #     extensions: [with_toc_data]
 
-rdiscount:
-    extensions:
-      - autolink
-      - generate_toc
+# rdiscount:
+#     extensions:
+#       - autolink
+#       - generate_toc

@@ -3,7 +3,7 @@
   $.fn.toc = function(options) {
     var defaults = {
       noBackToTopLinks: false,
-      title: '<strong><i>Table of Contents</i></strong>',
+      title: '<span style="color: #505050 !important; font-weight: bold;"><i>Table of Contents</i></span>',
       listType: 'ol', // values: [ol|ul]
       showEffect: 'show', // values: [show|slideDown|fadeIn|none]
       showSpeed: 'slow' // set to 0 to deactivate effect
