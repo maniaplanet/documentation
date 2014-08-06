@@ -1,7 +1,8 @@
 ---
-layout: static
+layout: default
 title: Clublinks
 description: How to create and setup a Clublink for your team
+tags: tools
 ---
 
 # How to create and setup a Clublink for your team
@@ -54,39 +55,39 @@ You can also create and host your own Clublink file. It will let you have a bit 
 <club version="1">
   <!-- Name of the team -->
   <name>Example</name>
-  
+
   <!-- Zone of the team (See in game for the zone structure) -->
   <zone>World|France|Ile-de-France</zone>
-  
+
   <!-- City of the team -->
   <city>Paris</city>
-  
+
   <!-- Colors of the team (Used on the spawns, the poles and the UI) -->
   <color primary="0DA" secondary="95D" />
-  
+
   <!-- Emblem of the team (Used on the spawns, the poles and the UI) -->
   <!-- Must be a dds file in BC1/DXT1 with mipmaps of 512x512 pixels-->
   <emblem>http://www.example.com/Emblem_Example.dds</emblem>
-  
+
   <!-- Players list -->
   <players>
     <!-- ManiaPlanet login of the player -->
     <player login="Example1">
       <!-- Nickname of the player (Can be used by game modes to automatically rename the player on the server) -->
       <nickname>My name is Example 1</nickname>
-      
+
       <!-- Avatar of the player (Can be used by game modes to automatically replace the avatar of the player on the server) -->
       <!-- Any format supported by ManiaPlanet can be used (jpg, png, tga, dds, bik) -->
       <avatar>http://www.example.com/Avatar_Example1.png</avatar>
     </player>
-    
+
     <!-- You can add as many players as you want -->
     <player login="Example2">
       <nickname>I'm another Example</nickname>
       <avatar>http://www.example.com/Avatar_Example2.png</avatar>
     </player>
   </players>
-  
+
   <!-- Sponsors list -->
   <!-- They'll be displayed on the sides of the screen during the end of the rounds/maps  -->
   <sponsors>

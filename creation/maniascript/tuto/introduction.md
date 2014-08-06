@@ -1,7 +1,10 @@
 ---
-layout: static
-title: Introduction
+layout: default
+title: Introduction to ManiaScript
 description: An introduction to ManiaScript
+tags:
+- creation
+- maniascript
 ---
 
 # <a id="what-is-maniscript"></a>What is ManiaScript?
@@ -51,7 +54,7 @@ The easiest way to create and edit scripts is to use the in-game editor. It is a
 
 ![Script editor](./img/script-editor.png)
 
-1. The main working area, this is were you'll type your script. 
+1. The main working area, this is were you'll type your script.
 2. The include panel displays all the external scripts used by your own script.
 3. The "Compile" button allows you to check if there's no error in your script.
 4. The "Save as" button allows you to save the current script at a specific location with a new file name.
@@ -79,9 +82,9 @@ While playing:
 
   * F12: open the script editor
   * ctrl + g: open the log window / open the debug window / close the debug window
-  
+
 While editing a script
-  
+
   * ctrl + a: select all
   * ctrl + z: undo
   * ctrl + y: redo

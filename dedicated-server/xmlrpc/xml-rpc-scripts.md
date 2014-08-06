@@ -1,12 +1,15 @@
 ---
-layout: static
+layout: default
 title: Scripts XML-RPC methods and callbacks
 description: List of XML-RPC methods and callbacks integrated in the different game modes of Nadeo.
+tags:
+- dedicated
+- xmlrpc
 ---
 
 # Callbacks
 
-This is a list of the script callbacks implemented into the official Nadeo modes. 
+This is a list of the script callbacks implemented into the official Nadeo modes.
 
 To use this callbacks you must set S_UseScriptCallbacks in the server settings to true  (it's at false by default).
 
@@ -140,7 +143,7 @@ The only exception is Elite that has some very specific callbacks.
 ##### LibAFK_Properties
 * Data : An array with the properties of the AFK library
 * Example : ["90000", "15000", "10000", "True"]
-* Note : 
+* Note :
     * IdleTimeLimit -> Time after which a player is considered to be AFK
     * SpawnTimeLimit -> Time after spawn before which a player can't be considered to be AFK
     * CheckInterval -> Time between each AFK check
@@ -154,19 +157,19 @@ To avoid to spam XmlRpc these events are sent only if it has an interest for the
 ##### LibXmlRpc_OnShoot
 * Data : An array with the login of the shooter and the number of the weapon used
 * Example : ["ShooterLogin", "1"]
-* Note : This callback is sent when a player shoots. 
+* Note : This callback is sent when a player shoots.
 Weapon number -> 1: Laser, 2: Rocket, 3: Nucleus, 5: Arrow
 
 ##### LibXmlRpc_OnHit
 * Data : An array with the login of the shooter, the login of the victim, the amount of damage, the weapon number and the shooter points (the +1, +2, etc displayed in game when you hit someone)
 * Example : ["ShooterLogin", "VictimLogin", "200", "1", "2"]
-* Note : This callback is sent when a player is hit. 
+* Note : This callback is sent when a player is hit.
 One armor point = 100 damage, Weapon number -> 1: Laser, 2: Rocket, 3: Nucleus, 5: Arrow
 
 ##### LibXmlRpc_OnNearMiss
 * Data : An array with the login of the shooter, the login of the victim, the weapon number and the distance of the miss
 * Example : ["ShoterLogin", "VictimLogin", "1", "0.05"]
-* Note : This callback is sent when a player shot a Laser near another player without hitting him. 
+* Note : This callback is sent when a player shot a Laser near another player without hitting him.
 The distance is in meter.
 
 ##### LibXmlRpc_OnArmorEmpty
@@ -191,7 +194,7 @@ One armor point = 100 damage, Weapon number -> 1: Laser, 2: Rocket, 3: Nucleus, 
 ##### Royal_UpdatePoints
 * Data : An array with the login of the player scoring the point, the type of points and the number of points
 * Example : ["Login", "Pole", "10"]
-* Note : This callback is sent when a player scores points. 
+* Note : This callback is sent when a player scores points.
 The points can be of three types: Hit, Pole or Survival
 
 ##### Royal_SpawnPlayer
@@ -255,7 +258,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### BeginMatch
 * Note : This callback is sent at the beginning of each match
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -267,7 +270,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### BeginMap
 * Note : This callback is sent at the beginning of each map
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -279,7 +282,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### BeginSubmatch
 * Note : This callback is sent at the beginning of each submatch
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -290,7 +293,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### BeginTurn
 * Note : This callback is sent at the beginning of each turn
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -341,7 +344,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### OnCapture
 * Note : This callback is sent when the attacker captured the pole
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -380,7 +383,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### OnHit
 * Note : This callback is sent when a player hit another player
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -432,7 +435,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### OnArmorEmpty
 * Note : This callback is sent when a player reaches 0 armor (eliminated by another player, falling in an offzone)
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -483,7 +486,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### OnPlayerRequestRespawn
 * Note : This callback is sent when a player requests a respawn.
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -517,7 +520,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### OnShoot
 * Note : This callback is sent when a player shoots.
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -552,7 +555,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### OnNearMiss
 * Note : This callback is sent when the attacker shot a Laser near a defender without hitting him.
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -601,7 +604,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### EndTurn
 * Note : This callback is sent at the end of each turn.
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -676,7 +679,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### EndSubmatch
 * Note : This callback is sent at the end of each submatch.
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -688,7 +691,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### EndMap
 * Note : This callback is sent at the end of each map.
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -740,7 +743,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### EndMatch
 * Note : This callback is sent at the end of each match.
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -754,7 +757,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### BeginWarmup
 * Note : This callback is sent at the beginning of the warm up.
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {
@@ -765,7 +768,7 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 
 ##### EndWarmup
 * Note : This callback is sent at the end of the warm up.
-* Data Example : 
+* Data Example :
 
 {% highlight json %}
 {

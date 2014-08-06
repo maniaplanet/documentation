@@ -1,7 +1,10 @@
 ---
-layout: static
+layout: default
 title: Customize the scores table
 description: How to customize the scores table by modifying an XML file.
+tags:
+- dedicated
+- server
 ---
 
 # Introduction
@@ -45,12 +48,12 @@ You can also find this file in your ManiaPlanet installation in `ManiaPlanet/Pac
   This file is just an example for documentation.
   The end result isn't exactly nice to see.
 -->
-<!-- 
+<!--
   Each node in this file is optional and can be omitted.
   If it's the case then the previous value will be kept.
 -->
 <scorestable version="1">
-  <!-- 
+  <!--
     List the premade styles to use with the scores table.
     The styles will be applied in the order you write them.
     If they set the same properties, only the ones from the
@@ -76,24 +79,24 @@ You can also find this file in your ManiaPlanet installation in `ManiaPlanet/Pac
   </styles>
   <!-- Properties of the scores table -->
   <properties>
-    <!-- 
-      Set the position of the scores table 
+    <!--
+      Set the position of the scores table
       (Real) x : position in X
       (Real) y : position in Y
       (Real) z : position in Z
     -->
     <position x="-20." y="80." z="20." />
-    <!-- 
-      Set the global scale of the scores table 
+    <!--
+      Set the global scale of the scores table
       (Real) scale : scale of the scores table
     -->
     <globalscale scale="1.25" />
-    <!-- 
+    <!--
       Set the scale of the scores table text
       (Real) scale : scale of the text
     -->
     <textscale scale="2." />
-    <!-- 
+    <!--
       Set the size of the header.
       (Real) x : width
       (Real) y : height
@@ -105,25 +108,25 @@ You can also find this file in your ManiaPlanet installation in `ManiaPlanet/Pac
                     can be either a path (file://Path/To/File.ext) or Style|Substyle format
     -->
     <modeicon icon="Icons128x128_1|Rankings" />
-    <!-- 
+    <!--
       Set the size of the players table part.
       (Real) x : width
       (Real) y : height
     -->
     <tablesize x="200." y="40." />
-    <!-- 
+    <!--
       Set the format of the players table part.
       (Integer) columns : number of columns in the table
       (Integer) lines : number of lines in the table
     -->
     <taleformat columns="3" lines="5"/>
-    <!-- 
+    <!--
       Set the size of the footer.
       (Real) x : width
       (Real) y : height
     -->
     <footersize x="100." y="20." />
-    <!-- 
+    <!--
       Set the text of the footer.
       (Text) text : text displayed in the footer
     -->
@@ -147,17 +150,17 @@ You can also find this file in your ManiaPlanet installation in `ManiaPlanet/Pac
   </settings>
   <!-- Columns of the scores table -->
   <columns>
-    <!-- 
+    <!--
       This line will add a new column.
       If the column already exists it will be destroyed and recreated.
 
       There's several ready to use columns ids:
-      General: 
+      General:
       - LibST_Avatar, displays the avatar
       - LibST_Name, displays the nickname
       - LibST_ManiaStars, displays the ManiaStars
-      - LibST_Tools, displays the "profile" and "spectate" buttons 
-      TrackMania: 
+      - LibST_Tools, displays the "profile" and "spectate" buttons
+      TrackMania:
       - LibST_TMBestTime displays the best time
       - LibST_PrevTime, displays the previous time
       - LibST_TMStunts, displays the stunt score
@@ -165,12 +168,12 @@ You can also find this file in your ManiaPlanet installation in `ManiaPlanet/Pac
       - LibST_TMCheckpoints, display the number of checkpoints activated
       - LibST_TMPoints, displays the total number of points
       - LibST_TMPrevRaceDeltaPoints, displays the number of points earned during the round
-      ShootMania: 
+      ShootMania:
       - LibST_SMPoints, displays the total number of points
       - LibST_SMRoundPoints, displays the number of points earned during the round
     -->
     <column id="LibST_Avatar" action="create"/>
-    <!-- 
+    <!--
       The action can have three value :
       - create : create a new column
       - update : update an existing column
@@ -223,7 +226,7 @@ You can also find this file in your ManiaPlanet installation in `ManiaPlanet/Pac
       <colorize color="05d" />
       <!-- Set a collection of images to use depending on the environment -->
       <collection>
-        <!-- 
+        <!--
           (Text) environment : in which environment the image will be used
                                eg: Canyon, Valley, Stadium, Storm, ...
           (Text) path : the path to the image
@@ -282,7 +285,7 @@ You can also find this file in your ManiaPlanet installation in `ManiaPlanet/Pac
       <right path="file://Media/Manialinks/Trackmania/ScoresTable/playerline-right.dds" />
     </playercard>
   </images>
-  <!-- 
+  <!--
     Assign scripts to columns or footer.
     The script must be in a CDATA section.
 

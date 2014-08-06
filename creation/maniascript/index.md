@@ -1,7 +1,10 @@
 ---
-layout: static
+layout: menu
 title: ManiaScript
 description: ManiaScript help
+tags:
+- creation
+- maniascript
 ---
 
 # General
@@ -24,7 +27,7 @@ description: ManiaScript help
 
 # Tutorial
 
-- [Introduction](tuto/introduction.html)
+- [Introduction](tuto/introduction/)
     - [What is ManiaScript?](tuto/introduction.html#what-is-maniscript)
     - [What can I do with it?](tuto/introduction.html#what-can-i-do-with-it)
         - [Rules](tuto/introduction.html#rules)

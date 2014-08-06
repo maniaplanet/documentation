@@ -1,7 +1,10 @@
 ---
-layout: static
+layout: menu
 title: XML-RPC methods
 description: XML-RPC methods
+tags:
+- dedicated
+- xmlrpc
 ---
 
 <table>

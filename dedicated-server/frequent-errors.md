@@ -1,7 +1,10 @@
 ---
-layout: static
+layout: default
 title: Frequent errors
 description: FAQ
+tags:
+- dedicated
+- server
 ---
 
 
@@ -20,5 +23,5 @@ Your MatchSettings file is specifying an unknown mode, change it for the value `
 
 ```
 Happens on servers which are online for more then 30 days.
-Restart your server to remove this message for players. 
+Restart your server to remove this message for players.
 ```

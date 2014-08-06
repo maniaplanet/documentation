@@ -1,7 +1,10 @@
 ---
-layout: static
+layout: default
 title: Mesh import
 description: Mesh import
+tags:
+- creation
+- importer
 ---
 
 You can import meshes from the fbx file format (**maximum version 2014.1**)  
@@ -16,7 +19,7 @@ The fbx file to import (and its depening assets (textures)) must be placed in th
 - for item meshes : place in folder *{maniaplanet_user_dir}/Work/Items/{sub_folder_you_want}*
 - for character skin meshes : place in folder *{maniaplanet_user_dir}/Work/Skins/Models/{sub_folder_you_want}*
 
-To import a mesh, type the command : 
+To import a mesh, type the command :
 
 ```
 NadeoImporter Mesh {fbxSourceFileNameRelativeToWorkFolder}
@@ -78,7 +81,7 @@ Use this when you import checkpoint or finish items. (see the page [item import]
 
 2. Meshparam.xml file structure
 --
-2.1. MeshParams 
+2.1. MeshParams
 --
 `<MeshParams>` root node attributes :
 
@@ -92,10 +95,10 @@ Use this when you import checkpoint or finish items. (see the page [item import]
 
 - `Scale` : optional. import scale.  
 	ex : `<MeshParams MeshType="Static" Scale="1">`
- 
+
 2.2. Materials
--- 
-It's now possible to define materials with more flexibility. 
+--
+It's now possible to define materials with more flexibility.
 
 For each material name present in the fbx file, you can define the corresponding imported material.
 You can define the material model used, the path of the base texture, and the physics id.
@@ -124,7 +127,7 @@ the `<Materials>` node contains an array of `<Material>` nodes.
 - `Link` : mandatory if you want to use a library material. (== a predefined material of a collection : storm, canyon, etc)  
 	in that case, the value is the name of the library material.  
 	Please note that this material is to use in conjunction with the "Collection" attribute of the `<MeshParams>` node which define the collection.  
-  
+
 	**Note** : the list of library materials can be found in the `NadeoImporterMaterialLib.txt` (that comes along `NadeoImporter.exe`)
 
 ####recap example :
@@ -161,7 +164,7 @@ the `<Lights>` node contains an array of `<Light>` nodes.
 
 - `Intensity` : optional. intensity of the light, (no real unit). typical value are 1
 - `Distance` : optional. light influence distance in meters.
-	- keep the distance as low as possible in order to keep the lightmap calculus time low. 
+	- keep the distance as low as possible in order to keep the lightmap calculus time low.
 	- Many lights with long distance would cause long lightmap calculus time.
 	- Prefer `"spot"` lights rather than `"point"` lights for long distances.
 - `PointEmissionRadius` : optional. for point lights only, makes the light come from  ball of radius PointEmissionRadius meters instead of a single point.
@@ -174,16 +177,16 @@ the `<Lights>` node contains an array of `<Light>` nodes.
 - `NightOnly` : optional. tell if the light is active in night moods.
 	values : `"true", "false"`
 
-2.4.Textures 
+2.4.Textures
 --
 In the meshparam.xml file, you can now set the import texture parameters (as in command line)
- 
+
 `<Textures>` attributes :
 
 - `MaxSize` : optional. in pixels, the max size of the max (width or height) of the imported texture
 - `HqDds` : opional. `"true"` if you want to use a better - but slower - dds compressor
 
-3. Appendix 
+3. Appendix
 --
 3.1 material model list
 --
@@ -204,7 +207,7 @@ here is a list of material models, with their texture layers.
 ###3.1.1. static mesh material models
 
 
-- `TDSN` 
+- `TDSN`
 
         Diffuse
         Specular
@@ -221,7 +224,7 @@ here is a list of material models, with their texture layers.
 		Normal
 		Energy
 - `TDSNI` Layers :
-	
+
 		Diffuse
 		Specular
 		Normal
@@ -237,17 +240,17 @@ here is a list of material models, with their texture layers.
 ###3.1.2. dynamic mesh material models
 
 - `TDSNI`
-		
+
 		Diffuse
 		Specular
 		Normal
 		SelfIllum
 - `TI`
-	
+
 		SelfIllum
 - `TDSNE`
-		
-		Diffuse	
+
+		Diffuse
 		Specular
 		Normal
 		Energy
@@ -258,14 +261,14 @@ here is a list of material models, with their texture layers.
 ###3.1.3. character mesh material models
 
 - `TDSNEM`
-		
+
 		Diffuse
 		Specular
 		Normal
 		Energy
 		TeamMask
 - `TE`
-		
+
 		Energy
 - `TDOSN`
 
@@ -273,7 +276,7 @@ here is a list of material models, with their texture layers.
 		Specular
 		Normal
 - `TDOS`
-	
+
 		DiffuseOpacity
 		Specular
 

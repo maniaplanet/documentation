@@ -1,16 +1,39 @@
 ---
-layout: static
+layout: default
 title: APT repository
 description: ManiaPlanet APT repository
+tags: tools
 ---
 
 ## Available packages
 
-package 				        | description								| install dir
---------------------------------|-------------------------------------------|-------------------------------------------
-maniaplanet-server 				| ManiaPlanet dedicated package				| /opt/maniaplanet-server/
-manialive              		| ManiaLive latest package (+ some plugins) | /opt/manialive/
-maniaplanet-competition-manager | ManiaPlanet competition manager			| /var/lib/maniaplanet-competition-manager/
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+</style>
+<table class="tg">
+  <tr>
+    <th class="tg-031e">package</th>
+    <th class="tg-031e">description</th>
+    <th class="tg-031e">install dir</th>
+  </tr>
+  <tr>
+    <td class="tg-031e">Maniaplanet-server</td>
+    <td class="tg-031e">ManiaPlanet dedicated package</td>
+    <td class="tg-031e">/opt/maniaplanet-server/</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">manialive</td>
+    <td class="tg-031e">ManiaLive latest package (+ some plugins)</td>
+    <td class="tg-031e">/opt/manialive/</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Maniaplanet-competition-manager</td>
+    <td class="tg-031e">ManiaPlanet competition manager</td>
+    <td class="tg-031e">/var/lib/maniaplanet-competition-manager/</td>
+  </tr>
+</table>
 
 ## Usage
 

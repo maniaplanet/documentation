@@ -1,7 +1,8 @@
 ---
-layout: static
+layout: page
 title: ManiaPlanet tools
 description: List of tools
+tags: tools
 ---
 
 * [ManiaPlanet competition manager](competition.html)
@@ -10,5 +11,5 @@ description: List of tools
 
 ## Developper tools
 
-* [ManiaPlanet web services](ws/index.html)
+* [ManiaPlanet web services](ws/)
 * [ManiaConnect](ws/maniaconnect.html)

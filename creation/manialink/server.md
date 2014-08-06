@@ -1,7 +1,10 @@
 ---
-layout: static
+layout: default
 title: DedicatedServer ManiaLink
 description: DedicatedServer ManiaLink help
+tags:
+- creation
+- manialink
 ---
 
 ## How to get the player avatar?

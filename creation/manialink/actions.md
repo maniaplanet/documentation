@@ -1,7 +1,10 @@
 ---
-layout: static
+layout: default
 title: ManiaLink actions
 description: Manialink actions list
+tags:
+- creation
+- manialink
 ---
 
 ## Actions
@@ -28,7 +31,7 @@ In Script : `TriggerPageAction("enter")`
 ### In Title
 
 * "quit", "0", "back"
-* "home" 
+* "home"
 * "menu_solo"
 * "menu_competitions"
 * "menu_local"
@@ -49,6 +52,3 @@ In Script : `TriggerPageAction("enter")`
 * "maniaplanet:savereplay"
 * "maniaplanet:togglespec"
 * other are sent to XML-RPC
-
-
-

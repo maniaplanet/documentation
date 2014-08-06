@@ -1,7 +1,10 @@
 ---
-layout: static
-title: ManiaLive quick start
+layout: default
+title: ManiaLive Quick Start
 description: ManiaLive - ManiaPlanet server  controller
+tags:
+- dedicated
+- tools
 ---
 
 ManiaLive is ManiaPlanet server controller written in PHP

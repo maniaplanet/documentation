@@ -1,7 +1,10 @@
 ---
-layout: static
+layout: default
 title: Useful links
 description: A list of links to ManiaScript related topic
+tags:
+- creation
+- maniascript
 ---
 
 Tutorial

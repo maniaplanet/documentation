@@ -1,7 +1,10 @@
 ---
-layout: static
+layout: default
 title: Modes settings list
 description: List of all the settings available in the Nadeo modes
+tags:
+- dedicated
+- server
 ---
 
 # TrackMania
@@ -9,7 +12,7 @@ description: List of all the settings available in the Nadeo modes
 ## All (ModeBase)
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_ChatTime**|15|Chat time at the end of the map|
 |**S_AllowRespawn**|True|Allow the players to respawn or not|
 |**S_WarmUpDuration**|-1|Duration of the warm up phase (<= 0 to disable)|
@@ -20,7 +23,7 @@ description: List of all the settings available in the Nadeo modes
 ## Cup (+RoundsBase)
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_RoundsPerMap**|5|Rounds per map|
 |**S_NbOfWinners**|3|Number of winners|
 |**S_WarmUpDuration**|2|Duration of the warm up phase (<= 0 to disable)|
@@ -28,7 +31,7 @@ description: List of all the settings available in the Nadeo modes
 ## Laps
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_TimeLimit**|0|Time limit (<= 0 to disable)|
 |**S_ForceLapsNb**|5|Number of Laps (<= 0 to disable)|
 |**S_FinishTimeout**|-1|Finish timeout (<= 0 to disable)|
@@ -36,14 +39,14 @@ description: List of all the settings available in the Nadeo modes
 ## Rounds (+RoundsBase)
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_PointsLimit**|50|Points limit (<= 0 to disable)|
 |**S_UseTieBreak**|True|Continue to play the map until the tie is broken|
 
 ## RoundsBase
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_PointsLimit**|100|Points limit (<= 0 to disable)|
 |**S_FinishTimeout**|-1|Finish timeout (<= 0 to disable)|
 |**S_UseAlternateRules**|False|Use alternate rules|
@@ -53,7 +56,7 @@ description: List of all the settings available in the Nadeo modes
 ## Team (+RoundsBase)
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_PointsLimit**|5|Points limit (<= 0 to disable)|
 |**S_MaxPointsPerRound**|6|The maxium number of points attributed to the first player to cross the finish line|
 |**S_PointsGap**|1|The number of points lead a team must have to win the map|
@@ -62,7 +65,7 @@ description: List of all the settings available in the Nadeo modes
 ## TeamAttack
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_TimeLimit**|300|Time limit|
 |**S_MinPlayerPerClan**|3|Minimum number of players per clan|
 |**S_MaxPlayerPerClan**|3|Maximum number of players per clan|
@@ -71,7 +74,7 @@ description: List of all the settings available in the Nadeo modes
 ## TimeAttack
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_TimeLimit**|300|Time limit|
 
 # ShootMania
@@ -79,7 +82,7 @@ description: List of all the settings available in the Nadeo modes
 ## All (ModeBase)
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_AutoManageAFK**|False|Switch inactive players to spectators|
 |**S_AFKIdleTimeLimit**|90000|AFK default idle time limit|
 |**S_UseScriptCallbacks**|False|Turn on/off the script callbacks, useful for server manager|
@@ -89,7 +92,7 @@ description: List of all the settings available in the Nadeo modes
 ## ModeMatchmaking
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_MatchmakingAPIUrl**|https://matchmaking.maniaplanet.com/v5|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
 |**S_MatchmakingMode**|0|This is the most important setting. It can take one of these five values : 0 -> matchmaking turned off, standard server; 1 -> matchmaking turned on, use this server as a lobby server; 2 -> matchmaking turned on, use this server as a match server; 3 -> matchmaking turned off, use this server as a universal lobby server; 4 -> matchmaking turned off, use this server as a universal match server.|
 |**S_LobbyTimePerRound**|30|Duration (in seconds) of a round between the activations of the matchmaking function. It can't be smaller than 15 seconds.|
@@ -107,7 +110,7 @@ description: List of all the settings available in the Nadeo modes
 ## Battle
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_RespawnTime**|6001|Time before respawn|
 |**S_AutoBalance**|True|Use auto balance at the start of the map|
 |**S_RoundsToWin**|2|Points to win a map|
@@ -125,7 +128,7 @@ description: List of all the settings available in the Nadeo modes
 ## Combo (+ModeMatchmaking)
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_NbPlayersPerTeam**|2|Number of players per team (Max. 5)|
 |**S_PointsLimit**|3|Points limit (0: No points limit)|
 |**S_RoundTimeLimit**|300|Round time limit (0: No time limit)|
@@ -137,7 +140,7 @@ description: List of all the settings available in the Nadeo modes
 ## Elite (+ModeSport, +ModeMatchmaking)
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_TurnWin**|9|Number of points to win a map|
 |**S_UseDraft**|False|Use draft mode at match beginning|
 |**S_DraftBanNb**|4|Number of map to ban during draft|
@@ -148,14 +151,14 @@ description: List of all the settings available in the Nadeo modes
 ## Heroes (+ModeSport)
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_TurnWin**|10|Number of points to win a map|
 |**S_TimePoleElimination**|10.|Capture time limit after defense elimination|
 
 ## Joust
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_RoundPointsToWin**|7|Round points to win|
 |**S_RoundPointsGap**|2|Round points gap|
 |**S_RoundPointsLimit**|11|Round points limit|
@@ -174,7 +177,7 @@ description: List of all the settings available in the Nadeo modes
 ## ModeSport
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_Mode**|0|Mode 0: classic, 1: free|
 |**S_TimeLimit**|60|Time for an attack on a map|
 |**S_TimePole**|15|Time allowed to reach the pole by the end of the attack|
@@ -198,14 +201,14 @@ description: List of all the settings available in the Nadeo modes
 ## Melee
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_TimeLimit**|6001|Time limit on a map. Setting a negative value disable the limit|
 |**S_PointLimit**|25|Points limit on a map. Setting a negative value disable the limit|
 
 ## Realm
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_PoleCaptureDuration**|15|Duration of the pole capture|
 |**S_PoleUncaptureSpeed**|3.|Speed multiplier for the uncapture|
 |**S_UsePoleRegeneration**|False|Use pole regeneration|
@@ -220,7 +223,7 @@ description: List of all the settings available in the Nadeo modes
 ## Royal
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_MapPointsLimit**|200|Points to win a map|
 |**S_OffZoneActivationTime**|4|Tornado activation duration|
 |**S_OffZoneAutoStartTime**|90|Time before auto activation of the tornado|
@@ -238,14 +241,14 @@ description: List of all the settings available in the Nadeo modes
 ## Royal Exp (+Royal)
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_AllowDoubleCapture**|True|Allow a second pole capture after the first activation|
 |**S_OffZoneMaxSpeedTime**|8|Duration of capture to reach maximum speed|
 
 ## Siege
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_TimeBetweenCapture**|0|Minimum time between two captures (0 = unlimited)|
 |**S_CaptureTimeLimit**|45|Time limit to capture one goal (0 = unlimited)|
 |**S_CaptureTimeBonus**|10|Bonus time for capturing|
@@ -269,7 +272,7 @@ description: List of all the settings available in the Nadeo modes
 ## SiegeV1
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_TimeBetweenCapture**|45|Minimum time between two captures (0 = unlimited)|
 |**S_CaptureTimeLimit**|15|Time limit to capture one goal (0 = unlimited)|
 |**S_GoalCaptureTime**|5.|Time to capture a goal in seconds|
@@ -288,5 +291,5 @@ description: List of all the settings available in the Nadeo modes
 ## TimeAttack
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_TimeLimit**|360|Time limit (in seconds)|

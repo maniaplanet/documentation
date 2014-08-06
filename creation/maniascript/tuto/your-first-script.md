@@ -1,37 +1,11 @@
 ---
-layout: static
+layout: default
 title: Your first script
 description: Creation of a first simple gamemode, a deathmatch
+tags:
+- creation
+- maniascript
 ---
-
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
-
-- [Your first ShootMania game mode](#user-content-your-first-shootmania-game-mode)
-	- [Creating the gamemode](#user-content-creating-the-gamemode)
-	- [Create a map](#user-content-create-a-map)
-	- [Create a server](#user-content-create-a-server)
-	- [Structure of a game mode](#user-content-structure-of-a-game-mode)
-		- [Library](#user-content-library)
-		- [Constants](#user-content-constants)
-		- [Globales](#user-content-globales)
-		- ["Body" of the Script](#user-content-body-of-the-script)
-			- [StartServer](#user-content-startserver)
-			- [StartMap](#user-content-startmap)
-			- [InitRound](#user-content-initround)
-			- [StartRound](#user-content-startround)
-			- [Playloop](#user-content-playloop)
-			- [EndRound](#user-content-endround)
-			- [EndMap](#user-content-endmap)
-		- [Functions](#user-content-functions)
-	- [Common variables](#user-content-common-variables)
-	- [Setting up the script](#user-content-setting-up-the-script)
-	- [Initializing the server](#user-content-initializing-the-server)
-	- [Setting up the parameters for the match/map](#user-content-setting-up-the-parameters-for-the-matchmap)
-	- [Proceedings of the round](#user-content-proceedings-of-the-round)
-	- [Ending the match](#user-content-ending-the-match)
-		- [The functions](#user-content-the-functions)
-	- [Download the source of the mode](#user-content-download-the-source-of-the-mode)
-	- [Learn more about the ManiaScript](#user-content-learn-more-about-the-maniascript)
 
 # Your first ShootMania game mode
 In this part you'll learn to create your first simple game mode, a deathmatch where the first player to earn 30 points will win the map (using a lightweight version of the Melee gamemode).

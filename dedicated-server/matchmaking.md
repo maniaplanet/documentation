@@ -1,7 +1,10 @@
 ---
-layout: static
+layout: default
 title: Matchmaking
 description: How to make a lobby or a match server in ManiaPlanet matchmaking
+tags:
+- dedicated
+- server
 ---
 
 ## Introduction
@@ -43,7 +46,7 @@ On an universal lobby, all the players of a match are selected by the players th
 
 ## Progressive matchmaking
 
-Progressive matchmaking ease the launch of matches on game modes that require a lot of people. If there's not enough players on the lobby, the matchmaking can start a match with less players than the maximum required. Later the lobby will send substitutes to complete the match line up. 
+Progressive matchmaking ease the launch of matches on game modes that require a lot of people. If there's not enough players on the lobby, the matchmaking can start a match with less players than the maximum required. Later the lobby will send substitutes to complete the match line up.
 
 Eg: 5vs5 Siege needs 10 players on the lobby to start a match. With progressive matchmaking turned on, the lobby can start a match with only 4 players (2vs2). Then this match will receive substitutes from the lobby until there's 10 players.
 
@@ -87,7 +90,7 @@ Edit the relevant settings in the matchsettings file to enable the matchmaking.
 {% endhighlight %}
 
 |Setting|Default value|Description|
-|---|---|---|
+|:-:|:-:|:-:|
 |**S_MatchmakingAPIUrl**|https://matchmaking.maniaplanet.com/v5|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
 |**S_MatchmakingMode**|0|This is the most important setting. It can take one of these five values : 0 -> matchmaking turned off, standard server; 1 -> matchmaking turned on, use this server as a lobby server; 2 -> matchmaking turned on, use this server as a match server; 3 -> matchmaking turned off, use this server as a universal lobby server; 4 -> matchmaking turned off, use this server as a universal match server.|
 |**S_MatchmakingRematchRatio**|-1.0|Set the minimum ratio of players that have to agree to play a rematch before launching one. The value range from 0.0 to 1.0. Any negative value turns off the rematch vote.|
@@ -109,7 +112,7 @@ Edit the relevant settings in the matchsettings file to enable the matchmaking.
 |**S_MatchmakingLogMiscDebug**|0|Same as above, turn it on only if necessary.|
 
 
-The others game modes specific settings can be configured as you wish. A match can be played in BO1, BO3, ... with any number of players, points limit, etc. Just be sure that the number of players required by the match server matches the number of players sent from the lobby. 
+The others game modes specific settings can be configured as you wish. A match can be played in BO1, BO3, ... with any number of players, points limit, etc. Just be sure that the number of players required by the match server matches the number of players sent from the lobby.
 Now that your matchsettings file is ready you can associate your lobby and match servers on your player page.
 
 ## Conclusion

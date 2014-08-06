@@ -1,10 +1,11 @@
 ---
-layout: static
+layout: page
 title: Dedicated server
 description: Dedicated server help
+tags: dedicated
 ---
 
-A dedicated server application which allows you to run a server for any ManiaPlanet game. 
+A dedicated server application which allows you to run a server for any ManiaPlanet game.
 
 * [Quick start](basic.html)
 * [Command line](command-line.html)
@@ -15,14 +16,14 @@ A dedicated server application which allows you to run a server for any ManiaPla
 
 # Dedicated tools
 
-* [Dedicated tools](tools.html)
-* [ManiaLive](manialive.html)
+* [Dedicated tools](tools/.html)
+* [ManiaLive](tools/manialive.html)
 
-# ManiaLive
+<!--# ManiaLive
 
-* [Start a lobby (deprecated)](start-a-combo-lobby.html)
+* [Start a lobby (deprecated)](start-a-combo-lobby)-->
 
 # XML-RPC reference
 
-* [Latest methods reference](methods/latest.html)
-* [Scripts methods and callbacks reference](xml-rpc-scripts.html)
+* [Latest methods reference](xmlrpc/methods/latest.html)
+* [Scripts methods and callbacks reference](xmlrpc/xml-rpc-scripts.html)

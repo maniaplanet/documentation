@@ -1,17 +1,20 @@
 ---
-layout: static
+layout: default
 title: Basic dedicated guide
 description: Quick start to make a dedicated server on ManiaPlanet
+tags:
+- dedicated
+- server
 ---
 
 [Dedicated server package contains both the Linux and the Windows versions of the dedicated server][class:note].
 
 Using Debian/Ubuntu? You can use our [APT repository](../tools/apt.html).
 
-1. Download the latest dedicated server at http://files.maniaplanet.com/ManiaPlanet3Beta/ManiaPlanetBetaServer_latest.zip 
+1. Download the latest dedicated server at http://files.maniaplanet.com/ManiaPlanet3Beta/ManiaPlanetBetaServer_latest.zip
 2. Create a server account at [PlayerPage](https://player.maniaplanet.com/advanced/dedicated-servers)
 3. Change the server settings *DedicatedCfgFile* to match your server account, this file needs to be located at `UserData\Config`
-4. Create a new (or use predefined) *MatchSettingsFile* this file needs to be located in `UserData\Maps\MatchSettings` 
+4. Create a new (or use predefined) *MatchSettingsFile* this file needs to be located in `UserData\Maps\MatchSettings`
 5. Create a new launcher to launch the server with commandline options: `ManiaPlanetServer /Title=TitleId /dedicated_cfg=DedicatedCfgFile /game_settings=MatchSettingsFile`
 6. (optional) Start a dedicated server controller
 
@@ -52,8 +55,8 @@ Make sure that the tags are in place, if there is error with xml filesyntax, the
 </authorization_levels>
 {% endhighlight %}
 
-	
-Authorization levels section is used for authenticating the dedicated server controllers. 
+
+Authorization levels section is used for authenticating the dedicated server controllers.
 Change this only if you open the xml-rpc port later to public.
 
 {% highlight xml %}
@@ -64,9 +67,9 @@ Change this only if you open the xml-rpc port later to public.
 </masterserver_account>
 {% endhighlight %}
 
-	
-Masterserver_account section: this is where you fill in your dedicated server login and password that you created earlier. 
-If you want to enable Planets transactions for your server fill in the `<validation_key>`, use your own ManiaPlanet account validation key here. The validation key has been sent in email message when you created your ManiaPlanet account. If you have forgotten your validation key you can get a new one [on the player page](https://player.maniaplanet.com/account/validation-code). You also need to send in-game mail with initial 100 Planets to the server login. After this the donate plugins works and server planets transactions are enabled. 
+
+Masterserver_account section: this is where you fill in your dedicated server login and password that you created earlier.
+If you want to enable Planets transactions for your server fill in the `<validation_key>`, use your own ManiaPlanet account validation key here. The validation key has been sent in email message when you created your ManiaPlanet account. If you have forgotten your validation key you can get a new one [on the player page](https://player.maniaplanet.com/account/validation-code). You also need to send in-game mail with initial 100 Planets to the server login. After this the donate plugins works and server planets transactions are enabled.
 
 ####Network configuration
 
@@ -76,7 +79,7 @@ ManiaPlanet server uses the default following ports by default:
   <tr>
     <th>Port #</th><th>Protocol</th><th>Usage</th>
   </tr>
-  <tr> 
+  <tr>
     <td>2350</td><td>TCP & UDP</td><td>General</td>
   </tr>
   <tr>
@@ -100,7 +103,7 @@ Note: if you run same dedicated server instance on the same host: the dedicated 
 
 ####MatchSettings File
 
-There are *MatchSettings* file bundled in each title, use the table below to get the default one. 
+There are *MatchSettings* file bundled in each title, use the table below to get the default one.
 
 [This table summerize the information you need](titleids.html).
 
@@ -122,7 +125,7 @@ The minimal command line to start the server is `ManiaPlanetServer /Title=TitleI
 
 Relay server can be created to allow huge numbers of players spectate the main server without interrupting the players on the main server. You see everything on the main server but relay server chat is not sent toward the main server, but main server chat can be seen on relay.
 
-To start the relay server, you have to set `<allow_spectator_relays>True</allow_spectator_relays>` in main server config file. 
+To start the relay server, you have to set `<allow_spectator_relays>True</allow_spectator_relays>` in main server config file.
 
 `ManiaPlanetServer /dedicated_cfg=RelayCfgFile /join=MainServerLogin /joinpass=SpectatorPass`
 
@@ -143,5 +146,3 @@ In order to use it, you will need a [Server Controller](tools.html#server-contro
 ## Help
 
 You can get help on the [dedicated server forum](http://forum.maniaplanet.com/viewforum.php?f=261).
-
-
