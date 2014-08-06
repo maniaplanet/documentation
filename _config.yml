@@ -8,7 +8,7 @@ highlighter:      pygments
 # Setup
 title:            Documentation
 tagline:          'for the Maniaplanet game operating system'
-description:      '<a href="/"><img src="/img/maniaplanet.png"/></a>'
+description:      '<div style="text-align:center;"><a href="/"><img src="/img/maniaplanet.png"/></a></div>'
 url:              http://www.maniaplanet.com
 baseurl:          '/'
 paginate:         5
@@ -25,9 +25,6 @@ github:
 
 gems:
   - jekyll-sitemap
-
-# redcarpet:
-#     extensions: [with_toc_data]
 
 rdiscount:
     extensions:
