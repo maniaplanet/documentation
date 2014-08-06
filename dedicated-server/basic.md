@@ -141,7 +141,7 @@ Advanced
 
 There is no console (like *rcon* in *Source* games) bundled in the ManiaPlanetServer. Instead a powerful XML-RPC interface is provided by the server.
 
-In order to use it, you will need a [Server Controller](tools.html#server-controllers).
+In order to use it, you will need a [Server Controller](tools/index.html#server-controllers).
 
 ## Help
 
