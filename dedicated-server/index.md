@@ -2,8 +2,7 @@
 layout: page
 title: Dedicated server
 description: Dedicated server help
-tags: 
-- dedicated
+tags: dedicated
 ---
 
 A dedicated server application which allows you to run a server for any ManiaPlanet game.
