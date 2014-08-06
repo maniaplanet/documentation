@@ -5,6 +5,8 @@ description: Maniaplanet.exe client command line
 tags: client
 ---
 
+# ManiaPlanet.exe command line options
+
 | Option Name              | Role                                                                                                                                                                          |
 |:------------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 | /login=xxx               | Account login to be used to play online.                                                                                                                                      |

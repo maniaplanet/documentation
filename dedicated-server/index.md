@@ -16,7 +16,7 @@ A dedicated server application which allows you to run a server for any ManiaPla
 
 # Dedicated tools
 
-* [Dedicated tools](tools/.html)
+* [Dedicated tools](tools/index.html)
 * [ManiaLive](tools/manialive.html)
 
 <!--# ManiaLive

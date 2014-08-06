@@ -1,33 +1,22 @@
 ---
 layout: menu
 title: Dedicated server tools
-description: FAQ
+description: Dedicated server tools
 tags:
 - dedicated
 - tools
 ---
 
-<table>
-<tr>
-<th>ToolName</th><th>Author</th><th>Info/Download</th>
-</tr>
-<tr>
-<td>Trackmania2Serverbox</td><td>Merlin</td><td><a href="http://forum.maniaplanet.com/viewtopic.php?f=261&t=5639">Info</a></td>
-</tr>
-<tr>
-<td>Dedicated Manager Web site </td><td> NadeoLive</td><td> <a href="http://forum.maniaplanet.com/viewtopic.php?f=261&t=12098">Info</a></td>
-</tr>
-<tr>
-<td>AdmServ </td><td> Kev717</td><td> <a href="http://forum.maniaplanet.com/viewtopic.php?f=261&t=14419">Info</a></td>
-</tr>
 
-<tr>
-<td>MatchSettings Manager</td><td>Reaby</td><td><a href="http://forum.maniaplanet.com/viewtopic.php?f=465&t=17341">Forum</a></td>
-</tr>
-<tr>
-<td>Trust Circles</td><td>NadeoLive</td><td><a href="http://forum.maniaplanet.com/viewtopic.php?f=261&t=12081">Info</a></td>
-</tr>
-</table>
+Theses tools allows you to help you administrating your maniaplanet dedicated server.
+
+| ToolName                   | Author    | Info/Download                                                             |
+|----------------------------|-----------|---------------------------------------------------------------------------|
+| Trackmania2Serverbox       | Merlin    | [Info](http://forum.maniaplanet.com/viewtopic.php?f=261&t=5639)           |
+| Dedicated Manager Web site | Nadeo     | [Info](http://forum.maniaplanet.com/viewtopic.php?f=261&t=12098)          |
+| AdmServ                    | Kev717    | [Info](http://forum.maniaplanet.com/viewtopic.php?f=261&t=14419)          |
+| MatchSettings Manager      | Reaby     | [Forum](http://forum.maniaplanet.com/viewtopic.php?f=465&t=17341)         |
+| Trust Circles              | Nadeo     | [Info](http://forum.maniaplanet.com/viewtopic.php?f=261&t=12081)          |
 
 ## Server Controllers
 
@@ -63,6 +52,3 @@ tags:
 </tr>
 </table>
 
-## Scripts
-
-- UNIX start/stop scripts
