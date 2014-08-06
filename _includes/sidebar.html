@@ -16,10 +16,15 @@
       `layout: page` in the front-matter. See readme for usage.
     {% endcomment %}
 
-    {% assign pages_list = site.pages %}
+    {% assign pages_list = site.pages |sort: "title" %}
     {% for node in pages_list %}
       {% if node.title != null and node.layout == "page" %}
           <a class="sidebar-nav-item{% if page.url contains node.tags | first %} active{% endif %}" href="{{ node.url }}"><span class="fa fa-list"></span> {{ node.title }}</a>
+      {% endif %}
+    {% endfor %}
+    {% for node in pages_list %}
+      {% if node.title != null and node.layout == "page" and node.tags == "help" %}
+          <a class="sidebar-nav-item{% if page.url contains node.tags | first %} active{% endif %}" href="{{ node.url }}"><span class="fa fa-heart"></span> {{ node.title }}</a>
       {% endif %}
     {% endfor %}
 
