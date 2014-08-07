@@ -7,10 +7,10 @@ tags:
 - maniascript
 ---
 
-* [CustomUI](libraries/library-customui/)
-* [Manialink](libraries/library-manialink/)
-* [Markers](libraries/library-markers/)
-* [MiniMap2](libraries/library-minimap2/)
-* [ScoresTable2](libraries/library-scorestable2/)
-* [ShootMania/AFK](libraries/library-afk/)
-* [ShootMania/Map](libraries/library-shootmania-map/)
+* [CustomUI](library-customui.html)
+* [Manialink](library-manialink.html)
+* [Markers](library-markers.html)
+* [MiniMap2](library-minimap2.html)
+* [ScoresTable2](library-scorestable2.html)
+* [ShootMania/AFK](library-afk.html)
+* [ShootMania/Map](library-shootmania-map.html)
