@@ -557,6 +557,35 @@ a.pagination-item:hover {
   box-shadow: -.25rem 0 .5rem rgba(0,0,0,.1);
 }
 
+
+/* Highlight titles when clicked on the TOC */
+
+:target {
+  -webkit-animation: highlight 1s ease;
+  -moz-animation: highlight 1s ease;
+    animation: highlight 1s ease;
+    border-radius: 5px;
+    padding: 2.5px;
+}
+
+@keyframes highlight {
+  from { background-color: #6a9fb5; }
+  to { background-color: white; }
+}
+
+@-webkit-keyframes highlight {
+  from { background-color: #6a9fb5; }
+  to { background-color: white; }
+}
+
+@-moz-keyframes highlight {
+  from { background-color: #6a9fb5; }
+  to { background-color: white; }
+}
+
+
+/* Table of Content */
+
 #toc.floatable {
 	position:fixed !important;
   /*top:50px;*/
