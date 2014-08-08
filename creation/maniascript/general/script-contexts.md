@@ -9,7 +9,7 @@ tags:
 
 
 Where to write your script ? The short version.
-========
+=========================
 
 The way to create or change a script depends on the type of script you want.
  - To edit a GameMode, launch a solo or LAN game, and press Ctrl + ScrollLock. If you want to create a new one, lanch an existing one, then press Ctrl + ScrollLock, then SaveAs with a new name.
@@ -17,14 +17,17 @@ The way to create or change a script depends on the type of script you want.
  - To have a script in a manialink XML file, add a <script> ... </script> part in the manialink XML file
  
  
+More details
+=========================
+
 GameModes
-========
+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐ 
 
 GameModes for Trackmania and Shootmania are located in the "" folder of your Maniaplanet User directory (Usually "My Documents/Maniaplanet")
 
 
 Manialink
-========
+‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐ 
 
 There are two ways for specifying your ManiaScript in a ManiaLink XML file:
 * XML comment
