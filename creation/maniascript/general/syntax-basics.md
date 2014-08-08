@@ -205,7 +205,7 @@ At the top of a script, some special code may be required : those special lines 
 Exemple of include :
 
 ```
- #Include "Library.Script.txt" as MyLib1
+#Include "Library.Script.txt" as MyLib1
 MyLib1::Function1();
 ```
 
@@ -376,20 +376,17 @@ log(Players[BestPlayerId].Login);           // Will log Alice
 
 ```
 declare BestPlayer <=> Players[Players[0].Id];  // will be an alias to Players[AliceId] and not Players[0]. Huge difference !
-Players[1].Score += 1000;               // Give 1000 points to the 2nd best player, which is Bob
-log(BestPlayer.Login);                  // Will log Alice. Will also costs more CPU, for the alias has to be resolved.  
+Players[1].Score += 1000;                       // Give 1000 points to the 2nd best player, which is Bob
+log(BestPlayer.Login);                          // Will log Alice. Will also costs more CPU, for the alias has to be resolved.  
 ```
 
 But there's a simpler way to do something similar 
 
 ```
-declare BestPlayer = Players[0];  
-   // Note the difference : I used = instead of <=>
-   // It will do the same as : declare BestPlayer <=> Players[Players[0].Id];  
-Players[1].Score += 1000; 
-   // Give 1000 points to the 2nd best player, which is Bob
-log(BestPlayer.Login); 
-   // Will log Alice. Will also costs more CPU, for the alias has to be resolved.  
+declare BestPlayer = Players[0];    // Note the difference : I used = instead of <=>
+                                    // It will do the same as : declare BestPlayer <=> Players[Players[0].Id];  
+Players[1].Score += 1000;           // Give 1000 points to the 2nd best player, which is Bob
+log(BestPlayer.Login);              // Will log Alice. Will also costs more CPU, for the alias has to be resolved.  
 ```
 
 Since we have unique idents for every class, this will result in having "real pointers". But they cost a bit more when set and accessed. Performance should not be an issue though. When in doubt, you should probably use =
@@ -420,16 +417,19 @@ This is because the value stored in MyArray is already an alias, so we copy the 
 As with arrays, we have to make a difference between API functions and functions declared in script.
  
 When you call an API function, the result will be a "simplified" alias. Those are unambiguous aliases referring to the object's Id, inside of an API-defined array.
+
 ```
 declare MyLabel <=> GetFirstChild("Label"); 
    // MyLabel is an alias to Page.MainFrame.Controls[IdOfTheFirstChildFound]
 ```
 Is behaving exactly like 
+
 ```
 declare MyLabel <=> Page.MainFrame.Controls[GetFirstChild("Label").Id];
 ```
 
 So if there was an API function GetBestPlayer, the code
+
 ```
 declare BestPlayer <=> GetBestPlayer();  
    // Alice is the best player, so BestPlayer is an alias for Players[AliceId]
