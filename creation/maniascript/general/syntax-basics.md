@@ -79,17 +79,21 @@ Simple operators
 =====
 
 Boolean operations are : !  &&  || 
-```{C}Var1 && (!Var2 || Var3)```
+```{C}
+Var1 && (!Var2 || Var3)```
 
 Mathematical operations are the usual ones : + - * /
-```{C}Var1 + (Var2 / Var3)*1000```
+```{C}
+Var1 + (Var2 / Var3)*1000```
 You can add/substract/multiply/divide a Real and an Integer, the result will be a Real.
 
 To append strings, you can use the ^ operator. You can also append a Real or a Bool or an Integer. It will be converted to Text.
-```{C}MyVar = "Hello " ^ "world!";```
+```{C}
+MyVar = "Hello " ^ "world!";```
 
 Protip : when using triple-double-quoted Texts you can include variables or expressions in your text with triple-culry-brackets, resulting in something like :
-```{C}MyVar = """Hello {{{NameOfThePlayer}}}, how are you today??? Five = {{{2+3}}}. \o/ """;```
+```{C}
+MyVar = """Hello {{{NameOfThePlayer}}}, how are you today??? Five = {{{2+3}}}. \o/ """;```
 
 ###Comparisons
 
@@ -101,17 +105,20 @@ When trying to found bugs in a script, you'll use the Debugger. For now, you can
 
 ###Log and assertions
 It's often useful to print some text in the log. You can do that with :
-```{C}log("Something went wrong!");```
+```{C}
+log("Something went wrong!");```
 The text will be printed in the bottom part of the debug window.
 
 Sometimes it is more easy to check if some requirements are met. 
-```{C}assert(MyVariable == 3);```
+```{C}
+assert(MyVariable == 3);```
 This will check if MyVariable is equal to 3. If not, the script will be halted as if an error had occurred.
 
 ##Control structures
 
 In maniascript, you'll find the usual control structures :
 ```{C}
+
 if( /*Boolean*/ ) /*Instructions;*/
 
 while ( /*Boolean*/ ) /*Instructions;*/
@@ -134,6 +141,7 @@ where [i]Instructions;[/i] can be either a one-line instruction or a curly-brack
 ###Functions and main()
 Most Maniascripts are to complicated to fit in one set of instructions. That's why you can define functions. A function definition looks like that :
 ```{C}
+
 [TypeOfTheReturnedValue] [NameOfTheFunction] ([TypeArg1] [NameArg1], [TypeArg2] [NameArg2] .... )
 { 
  [Instructions]; 
@@ -142,6 +150,7 @@ Most Maniascripts are to complicated to fit in one set of instructions. That's w
 
 Here's an exemple :
 ```{C}
+
 Integer Minimum (Integer A, Integer B)
 { 
 if (A<B) return A;
@@ -166,11 +175,13 @@ At the top of a script, some special code may be required : those special lines 
 [/list]
 Exemple of include :
 ```{C}
+
 #Include "Library.Script.txt" as MyLib1
 MyLib1::Function1();
 ```
 where
 ```{C}
+
 // contents of "Library.Script.txt"
 Void Function1() {
    log("Foo"^"bar");
@@ -180,12 +191,14 @@ Void Function1() {
 ##Advanced types : list and arrays
 You can declare Lists by using any type, followed by square brackets : 
 ```{C}
+
 declare Text[] MyList;
 MyList= ["Alpha", "Beta", "Gamma", "Omega" ];
 ```
 
 You can then access the elements by index :
 ```{C}
+
 log(MyList[0]); // Will log : Alpha
 log(MyList[3]); // Will log : Omega
 ```
@@ -193,6 +206,7 @@ The only valid indices are the ones between 0 (inclusive) and the list's count (
 
 Valid operations are 
 ```{C}
+
 declare Size = List.count;
 declare SortedList = List.sort(); 
 List.add(ValueToBeAdded);
@@ -206,18 +220,21 @@ List.clear();
 
 You can also declare an associative Array with keys of any type : 
 ```{C}
+
 declare Text[Integer] MyArray1 = [15 => "Quinze", 42 => "Quarante-deux", 100 =>"Cent" ];
 declare Real[Text] MyArray2 = ["Pi" => 3.14, "Tau" => 6.28, "Leet" => 13.37 ];
 ```
 
 You can then access the elements by index :
 ```{C}
+
 log(MyArray1[42]); // Will log : Quarante-deux
 log(MyArray2 ["Tau"]); // Will log : 6.28
 MyArray2["SquareRootOfTwo"] = 1.41; // Add a new Value in the array 
 ```
 
 ```{C}
+
 declare Size = MyArray1.count;
 declare SortedByValues = MyArray1.sort(); // Sort by Values
 declare SortedByKeys = MyArray1.sortkey(); // Sort by Keys
@@ -240,6 +257,7 @@ Equivalents :
 yield; is equivalent to : sleep(0);
 sleep could be written :
 ```{C}
+
 void Sleep(Integer XXXX){
    Start = Now;
    while(Now < Start + XXXX) {
@@ -250,6 +268,7 @@ void Sleep(Integer XXXX){
 
 wait could be written :
 ```{C}
+
 while(!YYYYY) {
     yield;
 }
@@ -257,6 +276,7 @@ while(!YYYYY) {
 
 Protip : If you use sleep(XXXX) in a script where you catch events (Manialink scripts for example), you will miss the events which occurred during the sleep(). This is so because one event is only valid during 1 script "frame", i.e the time between two consecutive "yield;" . To avoid that, you can use wait instead :
 ```{C}
+
 Start = Now;
 wait(Now > Start + 1000 || PendingEvents.count >= 1);
 ```
@@ -276,12 +296,14 @@ There's a array of players, sorted by descending score, called Players.
 
 One can write :
 ```{C}
+
 declare BestPlayer <=> Players[0];  
    // Alice is the best player, so BestPlayer "points" to Alice
 ```
 
 You would expect that :
 ```{C}
+
 declare BestPlayer <=> Players[0];  
    // Alice is the best player, so BestPlayer "points" to Alice
 {
@@ -294,6 +316,7 @@ log(BestPlayer.Login);
 [b][i]In ManiaScript, BestPlayer is an alias. So BestPlayer means "The player in first position in the array Players". That's why, if scores have been changed, maybe it does not mean Alice anymore.[/i][/b]
 
 ```{C}
+
 declare BestPlayer <=> Players[0];  
    // Alice is the best player, so BestPlayer "points" to Alice
 Players[1].Score += 1000; 
@@ -312,6 +335,7 @@ In such cases, it become more clear that Class objects does not behave as Intege
 
 The following code will work "as expected". 
 ```{C}
+
 declare BestPlayerId = Players[0].Id;  
     // BestPlayerId is an Ident : will never change
 Players[1].Score += 1000; 
@@ -324,6 +348,7 @@ ProTip : Note that the "log" will be a bit more time-consuming than the previous
 
 ProTip #2 : Yes, this can also be written 
 ```{C}
+
 declare BestPlayer <=> Players[Players[0].Id];  
    // will be an alias to Players[AliceId] and not Players[0]. Huge difference !
 Players[1].Score += 1000; 
@@ -334,6 +359,7 @@ log(BestPlayer.Login);
 
 But there's a simpler way to do something similar 
 ```{C}
+
 declare BestPlayer = Players[0];  
    // Note the difference : I used = instead of <=>
    // It will do the same as : declare BestPlayer <=> Players[Players[0].Id];  
@@ -352,6 +378,7 @@ Unfortunately, there are some edge cases where the aliases become a bit tricky..
 What happens if you declare yourself an array of Classes.
 
 ```{C}
+
 // Players[0] => Alice
 // Players[1] => Bob
 declare MyArray = [Players[0], Players[1]]; 
@@ -372,16 +399,19 @@ As with arrays, we have to make a difference between API functions and functions
  
 When you call an API function, the result will be a "simplified" alias. Those are unambiguous aliases referring to the object's Id, inside of an API-defined array.
 ```{C}
+
 declare MyLabel <=> GetFirstChild("Label"); 
    // MyLabel is an alias to Page.MainFrame.Controls[IdOfTheFirstChildFound]
 ```
 Is behaving exactly like 
 ```{C}
+
 declare MyLabel <=> Page.MainFrame.Controls[GetFirstChild("Label").Id];
 ```
 
 So if there was an API function GetBestPlayer, the code
 ```{C}
+
 declare BestPlayer <=> GetBestPlayer();  
    // Alice is the best player, so BestPlayer is an alias for Players[AliceId]
 Players[1].Score += 1000; 
