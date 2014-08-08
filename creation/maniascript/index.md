@@ -11,6 +11,7 @@ ManiaScript is the language that allows you to customize ManiaPlanet.
 
 # General
 
+* [Reference card](general/refcard.html)
 * [Syntax basics](general/syntax-basics.html)
 * [Useful links](general/links.html)
 * [How to generate the documentation](general/generate-doc.html)
