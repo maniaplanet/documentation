@@ -70,8 +70,6 @@ define Text intro = "world"; // this is considered as a global variable
 main {
     define Integer number = 1; // as this is only for this scope
 }
-?>
-
 ```
 
 #### Variable affectation
