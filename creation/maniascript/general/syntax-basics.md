@@ -19,7 +19,7 @@ DoSomething(MyVar);
 ```
 Beware : Case is important, always !
 
-### Simple data Types
+## Simple data Types
 
 * Boolean : can be either True or False
 * Integer : numbers such as 2 or -5 or 31337
@@ -30,9 +30,9 @@ Beware : Case is important, always !
 - inside a Text, The usual escape sequences such as "\n" or "\\" are supported.
 - you can also declare a Text value between 3 double quotes. When doing so, you won't need to escape chars, and it can expand on many lines. """plop="452.12.22" toto"""
 
-### Variables 
+## Variables 
 
-#### Variable declaration
+### Variable declaration
 In Maniascript, variables must be declared, either by specifying a Type, or an initial value :
 
 `declare Integer MyVariable;`
@@ -56,11 +56,11 @@ log(serverName ^ " has currently " ^ planets ^ "p.");
 
 ```
 
-#### Variable scope
+### Variable scope
 
 Scope in maniascript is same as many other languages, a scope is defined with curly brackets starting with `{` and ending with `}`. Variable visibility is limited to a scope.
 
-#### Global Variables
+### Global Variables
 
 Global variables are defined outside the main function and other function scopes.
 example:
@@ -72,12 +72,12 @@ main {
 }
 ```
 
-#### Variable affectation
+### Variable affectation
 Once declared, you can change the value of a variable with a single equal sign : 
 `MyVariable = 13+37;`
 As said earlier, the types must match. No implicit conversions are made.
 
-### Comments
+## Comments
 Comment are part of a script that are not taken into account at all. The program just doesn't "see" them.
 Anything right of a double slash `//` is a comment
 Anything between `/* and */` is also a comment
@@ -119,12 +119,12 @@ MyVar = "Hello " ^ "world!";
 MyVar = """Hello {{{NameOfThePlayer}}}, how are you today??? Five = {{{2+3}}}. \o/ """;
 ```
 
-###Comparisons
+## Comparisons
 
 To compare values, you can use the usual : `==`   `!=`   `<`   `>`   `<=`   `>=` 
 Greater/lower comparisons do not work with Booleans.
 
-###Log and assertions
+## Log and assertions
 It's often useful to print some text in the log. You can do that with :
 ```{C}
 log("Something went wrong!");
