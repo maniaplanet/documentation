@@ -10,111 +10,389 @@ tags:
 ManiaScript Syntax basics
 =========
 
-Maniascript is a powerful scripting language for ManiaPlanet games, you can write new games modes, write a plugins for map editor + game and do interactions to manialinks.
+Maniascript is a powerful scripting language for ManiaPlanet games, you can write new games modes, plugins for the map editor, or make you manialinks more interactive.
 
 If you have programmed before, the basic keywords and language syntax should be quite easy to master.
 
-Filename extension for plugins and game modes is ".script.txt"
+Filename extension for scripts is ".script.txt"
 
-Debugging
-========
-Debug consoles: `Ctrl - G` (and `Ctrl - ~`)
-you can write debug with function 
-
-	log();
-
-Escaping from Manialink
-=======
-
-There are two ways for specifying your ManiaScript in a ManiaLink XML file:
-* XML comment
-	* Surround the script with the XML comment tags. Make sure the script itself does not contain "-->" or it will break the XML file.
-```
-<script><!--
-	*your script here*
---></script>
-```
-
-* CDATA block
-	* Define the script as a CDATA block. If the string "]]>" occur within your script, replace it with "]]]]><![CDATA[>" to keep the XML file valid.
-```
-<script><![CDATA[
-	*your script here*
-]]></script>
-```
-
-Maniascript language structure
+Where to write your script ?
 ======
 
-Maniascript script file is composed from instructions. Whitespace for instructions is ignored.
-One line of script usually contains one instruction, and one instruction is terminated with a semicolon.Worth mentioning is, that ManiaScript is fully 
+The way to create or change a script depends on the type of script you want.
+ - To edit a GameMode, launch a solo or LAN game, and press Ctrl + ScrollLock. If you want to create a new one, lanch an existing one, then press Ctrl + ScrollLock, then SaveAs with a new name.
+ - To edit or create an mapeditor plugin, use the plugin menu (the "fork" icon) in the editor
+ - To have a script in a manialink XML file, add a <script> ... </script> part in the manialink XML file
+ 
+ To learn more about those different contexts, see {{./script-contexts.md}}
 
-case sensitive language, so keyword "Declare" will cause parse error, when "declare" will do a variable for you.
-Instructions can be a function call, mathematical expression, logical expression or assigning a value typically. Mathematical expressions are parsed normally using math rules.
-
-example of maniascript:
-```
-declare myVal = 5 + 5; // will assing initial value of 10
-log((myVal + 5) * 10)  // will output value of 150
-```
-
-you can also use assinging operators for values, these are +=, -=, /= and *=
-maniascript doesn't support ++ or -- incrementing, which you might be familiar from other languages.
-
-example:
-
-```
-myVal += 5; // will increment by 5
-myVal++;    // will cause parse error
-```
-
-Operators
+Basics
 ======
 
-Mathematical operators:
+A script is a text, composed by lines (aka, instructions). Instructions are separated by semicolons, as in C/C++.
+It looks like
+[code]
+declare MyVar = 12;
+MyVar += 1;
+DoSomething(MyVar);
+[/code]
+Beware : Case is important, always !
 
-<table>
-<tr>
-<td>+</td><td>add value</td>
-</tr>
-<tr>
-<td>-</td><td>substract value</td>
-</tr>
-<tr>
-<td>* </td><td> multiply value</td>
-</tr>
-<tr>
-<td>/  </td><td> divide value</td>
-</tr>
-</table>
+Simple data Types
+=====
+Boolean : can be either True or False
+Integer : numbers such as 2 or -5 or 31337
+Real : decimal numbers such as -4.2 or 99. (do not forget the final dot, because 99 is an Integer. Beware, those are different)
+Text : any character sequence between double quotes : "plop" "gouzi" or "456.32". 
 
-Boolean operators:
-<table>
-<tr><td>!</td><td>boolean "not", this will negate the boolean expression</td></tr>
-<tr><td>&&</td><td> boolean "and"</td></tr>
-<tr><td>||</td><td>boolean "or"</td></tr>
-</tr>
-</table>
+Protips :
+- inside a Text, The usual escape sequences such as "\n" or "\\" are supported.
+- you can also declare a Text value between 3 double quotes. When doing so, you won't need to escape chars, and it can expand on many lines. """plop="452.12.22" toto"""
 
-Comparison operators:
-<table>
-<tr><td>==</td><td>equals</td></tr>
-<tr><td>!=  </td><td>not equals</td></tr>
-<tr><td>&lt;   </td><td> less than</td></tr>
-<tr><td>&gt;   </td><td>greater than</td></tr>
-<tr><td>&lt;=  </td><td>less or equal than</td></tr>
-<tr><td>&gt;=   </td><td>greater or equal than</td></tr>
-<table>
+[b][u]Variable declaration[/u][/b]
+In Maniascript, variables must be declared, either by specifying a Type, or an initial value :
+[code]declare Integer MyVariable;[/code]
+or
+[code]declare MyVariable = 42.;[/code]
+After having declared a variable, you'll be able to use it to store data. 
+If the variable is defined as a Integer, you will never be able to store anything else inside. The same goes for other types. 
 
-Incremention operators:
-<table>
-<tr><td>+= </td><td>add value to current</td></tr>
-<tr><td>-=  </td><td>substract value from current </td></tr>
-<tr><td>*=  </td><td>multiply current value</td></tr>
-<tr><td>/=  </td><td>divide current value</td></tr>
-<table>
+Protip : Variables are always defined and initialized when declared, meaning they always have a valid value. If not specified, this value will be a default value for the current type.
 
-Greater and less comparisons doesn't work with Boolean variables.
+[b][u]Variable affectation[/u][/b]
+Once declared, you can change the value of a variable with a single equal sign : 
+[code]MyVariable = 13+37;[/code]
+As said earlier, the types must match. No implicit conversions are made.
+
+[b][u]Comments[/u][/b]
+Anything right of a double slash // is a comment
+Anything between /* and */ is also a comment
+[code]
+Var = 2 + 5; // This is a comment
+Var = 2 /* This is a comment */ + 5;
+[/code]
+
+[size=150][b][u]Simple operators[/u][/b][/size]
+
+Boolean operations are : !  &&  || 
+[code]Var1 && (!Var2 || Var3)[/code]
+
+Mathematical operations are the usual ones : + - * /
+[code]Var1 + (Var2 / Var3)*1000[/code]
+You can add/substract/multiply/divide a Real and an Integer, the result will be a Real.
+
+To append strings, you can use the ^ operator. You can also append a Real or a Bool or an Integer. It will be converted to Text.
+[code]MyVar = "Hello " ^ "world!";[/code]
+
+Protip : when using triple-double-quoted Texts you can include variables or expressions in your text with triple-culry-brackets, resulting in something like :
+[code]MyVar = """Hello {{{NameOfThePlayer}}}, how are you today??? Five = {{{2+3}}}. \o/ """;[/code]
+
+[b][u]Comparisons[/u][/b]
+
+To compare values, you can use the usual : ==   !=   <   >   <=   >= 
+Greater/lower comparisons do not work with Booleans.
+
+[size=150][b][u]Debug[/u][/b][/size]
+When trying to found bugs in a script, you'll use the Debugger. For now, you can only access it by pressing Ctrl+~. It works pretty much anywhere in game. It has 2 modes : a reduced mode where you can only see the logs without interacting, and the Full mode. In Full mode you can select the script that you want to debug (because many scripts can be running at once, for example a camera effect, and the rules of your game). It will show you only the log of the selected script, along with the code of the script, which you can not edit there.
+
+[b][u]Log and assertions[/u][/b]
+It's often useful to print some text in the log. You can do that with :
+[code]log("Something went wrong!");[/code]
+The text will be printed in the bottom part of the debug window.
+
+Sometimes it is more easy to check if some requirements are met. 
+[code]assert(MyVariable == 3);[/code]
+This will check if MyVariable is equal to 3. If not, the script will be halted as if an error had occurred.
+
+[size=150][b][u]Control structures[/u][/b][/size]
+
+In maniascript, you'll find the usual control structures :
+[code]
+if( /*Boolean*/ ) /*Instructions;*/
+
+while ( /*Boolean*/ ) /*Instructions;*/
+
+for( /*VariableName*/ , /*FirstValue*/ , /*LastValue*/ ) /*Instructions;*/
+
+foreach( /*Element*/  in /*Array*/ ) /*Instructions;*/
+
+foreach( /*Key*/ =>/*Element*/ in /*Array*/ ) /*Instructions;*/ 
+
+switch(/*Expression*/) {
+case Expression1: /*Instructions;*/
+case Expression2: /*Instructions;*/ .....
+default : /*Instructions;*/
+}
+[/code]
+
+where [i]Instructions;[/i] can be either a one-line instruction or a curly-bracketed set of instructions.
+
+[b][u]Functions and main()[/u][/b]
+Most Maniascripts are to complicated to fit in one set of instructions. That's why you can define functions. A function definition looks like that :
+[code]
+[TypeOfTheReturnedValue] [NameOfTheFunction] ([TypeArg1] [NameArg1], [TypeArg2] [NameArg2] .... )
+{ 
+ [Instructions]; 
+}
+[/code]
+
+Here's an exemple :
+[code]
+Integer Minimum (Integer A, Integer B)
+{ 
+if (A<B) return A;
+return B;
+}
+[/code]
+
+One of the functions is called [i]main ()[/i]. It has no arguments, and no return type. It's the function called at the beginning of the program.
+
+If your code is simple enough to fit entirely in the main() function, you can omit the function header, and write the instructions without any enclosing brackets.
+
+[b][u]Variable scope[/u][/b]
+After a declare instruction, the variables are only accessible in the directly enclosing curly-brackets {...}. 
+
+[b][u]Directives[/u][/b]
+At the top of a script, some special code may be required : those special lines start with the '#' character. Note that directives are [b]not[/b] finished with a semicolon ';'
+[list]
+#RequiredContext XXX : the context of a script. This is meant to avoid trying to use an EditorPlugin as a GameMode, because it will always fail
+#Const XXX YYYY : declare a constant named XXX, with value YYYY. This value can not be modified.
+#Setting XXX YYYY : from the script's scope, #Setting behave exactly as #Const. But this value can be modified from "outside" the script
+#Include "XXX" as YYYY : load a library or include a file, and bind the functions to the namespace YYYY.
+[/list]
+Exemple of include :
+[code]
+#Include "Library.Script.txt" as MyLib1
+MyLib1::Function1();
+[/code]
+where
+[code]
+// contents of "Library.Script.txt"
+Void Function1() {
+   log("Foo"^"bar");
+}
+[/code]
+
+[size=150][b][u]Advanced types : list and arrays[/u][/b][/size]
+You can declare Lists by using any type, followed by square brackets : 
+[code]
+declare Text[] MyList;
+MyList= ["Alpha", "Beta", "Gamma", "Omega" ];
+[/code]
+
+You can then access the elements by index :
+[code]
+log(MyList[0]); // Will log : Alpha
+log(MyList[3]); // Will log : Omega
+[/code]
+The only valid indices are the ones between 0 (inclusive) and the list's count (exclusive).
+
+Valid operations are 
+[code]
+declare Size = List.count;
+declare SortedList = List.sort(); 
+List.add(ValueToBeAdded);
+List.removekey(IndexToBeRemoved);
+List.remove(ValueToBeRemoved);
+declare DoesExist1 = List.existskey(Index); // equivalent to 0 <= Index <  List.count
+declare DoesExist2 = List.exists(ValueToBeFound);
+declare Index = List.keyof(ValueToBeFound); // such as List[Index] == ValueToBeFound
+List.clear();
+[/code]
+
+You can also declare an associative Array with keys of any type : 
+[code]
+declare Text[Integer] MyArray1 = [15 => "Quinze", 42 => "Quarante-deux", 100 =>"Cent" ];
+declare Real[Text] MyArray2 = ["Pi" => 3.14, "Tau" => 6.28, "Leet" => 13.37 ];
+[/code]
+
+You can then access the elements by index :
+[code]
+log(MyArray1[42]); // Will log : Quarante-deux
+log(MyArray2 ["Tau"]); // Will log : 6.28
+MyArray2["SquareRootOfTwo"] = 1.41; // Add a new Value in the array 
+[/code]
+
+[code]
+declare Size = MyArray1.count;
+declare SortedByValues = MyArray1.sort(); // Sort by Values
+declare SortedByKeys = MyArray1.sortkey(); // Sort by Keys
+List.removekey(KeyToBeRemoved);
+List.remove(ElemToBeRemoved);
+declare DoesExist1 = List.existskey(Key);
+declare DoesExist2 = List.exists(ElemToBeFound);
+declare Key= List.keyof(ElemToBeFound); // such as List[Key] == ElemToBeFound
+List.clear();
+[/code]
+
+[size=150][b][u]Timing instructions : yield/sleep/wait[/u][/b][/size]
+Those instructions allow to pause the exectution of the script. It is very useful, since during the execution script, nothing else happen : the display is not updated, the simulations of the game are stuck, the logs are not being updated, and so on.
+
+yield; The script pauses for the shortest amout of time.
+sleep(XXXX); The script pauses for XXXX miliseconds.
+wait(YYYYY); The  script pause until Boolean YYYYY is True. YYYYY will be evaluated repeteadly, so be careful when YYYYY is a function call : the fonction will be called many times.
+
+Equivalents : 
+yield; is equivalent to : sleep(0);
+sleep could be written :
+[code]
+void Sleep(Integer XXXX){
+   Start = Now;
+   while(Now < Start + XXXX) {
+      yield;
+   }
+}
+[/code]
+
+wait could be written :
+[code]
+while(!YYYYY) {
+    yield;
+}
+[/code]
+
+Protip : If you use sleep(XXXX) in a script where you catch events (Manialink scripts for example), you will miss the events which occurred during the sleep(). This is so because one event is only valid during 1 script "frame", i.e the time between two consecutive "yield;" . To avoid that, you can use wait instead :
+[code]
+Start = Now;
+wait(Now > Start + 1000 || PendingEvents.count >= 1);
+[/code]
+
+[size=150][b][u]Advanced types : classes[/u][/b][/size]
+
+In ManiaScript, you can not declare new classes or any kind of type. Also you can not directly instantiate objects of an existing class. You can only declare pointers to existing objects.
+
+Yet, there are "2 kinds" of pointers. The first one is what we call an alias. It's fast, and quite powerful, yet its behaviour can be surprising, especially if you're used to common pointer programming. The second is a more regular affectation, roughly emulating pointers.
+
+[b][u]Aliases[/u][/b]
+
+Here's an example :
+There's a array of players, sorted by descending score, called Players.
+
+[i][u]Important note :[/u][/i] we're talking here about an API array, one that's pre declared as a system variable.
+
+One can write :
+[code]
+declare BestPlayer <=> Players[0];  
+   // Alice is the best player, so BestPlayer "points" to Alice
+[/code]
+
+You would expect that :
+[code]
+declare BestPlayer <=> Players[0];  
+   // Alice is the best player, so BestPlayer "points" to Alice
+{
+    ... // Some code doing stuff
+}
+log(BestPlayer.Login); 
+   // Will log Alice, right ???
+[/code]
+
+[b][i]In ManiaScript, BestPlayer is an alias. So BestPlayer means "The player in first position in the array Players". That's why, if scores have been changed, maybe it does not mean Alice anymore.[/i][/b]
+
+[code]
+declare BestPlayer <=> Players[0];  
+   // Alice is the best player, so BestPlayer "points" to Alice
+Players[1].Score += 1000; 
+   // Give 1000 points to the 2nd best player, which is Bob
+
+   // those 2 line are completely equivalent : 
+   //    they Will log Bob, because he has an higher score right now.
+log(BestPlayer.Login);
+log(Players[0].Login);
+[/code]
+
+In such cases, it become more clear that Class objects does not behave as Integer or Text values.
+[b][u]That's why we thought it would be better to use another symbol when setting variables : to remind that's not a plain affectation.[/u][/b]
+
+[b][u]Now what if you want to keep Alice in a variable, and not the Best Player ?[/u][/b]
+
+The following code will work "as expected". 
+[code]
+declare BestPlayerId = Players[0].Id;  
+    // BestPlayerId is an Ident : will never change
+Players[1].Score += 1000; 
+   // Give 1000 points to the 2nd best player, which is Bob
+log(Players[BestPlayerId].Login); 
+   // Will log Alice 
+[/code]
+
+ProTip : Note that the "log" will be a bit more time-consuming than the previous way : we have to find Alice in the array of players, from the Ident.
+
+ProTip #2 : Yes, this can also be written 
+[code]
+declare BestPlayer <=> Players[Players[0].Id];  
+   // will be an alias to Players[AliceId] and not Players[0]. Huge difference !
+Players[1].Score += 1000; 
+   // Give 1000 points to the 2nd best player, which is Bob
+log(BestPlayer.Login); 
+   // Will log Alice. Will also costs more CPU, for the alias has to be resolved.  
+[/code]
+
+But there's a simpler way to do something similar 
+[code]
+declare BestPlayer = Players[0];  
+   // Note the difference : I used = instead of <=>
+   // It will do the same as : declare BestPlayer <=> Players[Players[0].Id];  
+Players[1].Score += 1000; 
+   // Give 1000 points to the 2nd best player, which is Bob
+log(BestPlayer.Login); 
+   // Will log Alice. Will also costs more CPU, for the alias has to be resolved.  
+[/code]
+
+Since we have unique idents for every class, this will result in having "real pointers". But they cost a bit more when set and accessed. Performance should not be an issue though. When in doubt, you should probably use =
+
+[b][u]Tricky alias cases[/u][/b]
+
+[u]Aliases in arrays[/u]
+Unfortunately, there are some edge cases where the aliases become a bit tricky....
+What happens if you declare yourself an array of Classes.
+
+[code]
+// Players[0] => Alice
+// Players[1] => Bob
+declare MyArray = [Players[0], Players[1]]; 
+declare MyVal <=> MyArray[0];
+MyArray = [Players[1], Players[0]];
+
+log(MyVal.Login); // It will log "Alice", not what you may expect
+[/code]
+
+If fact, when you write "MyVal <=> MyArray[0]", it means "take the alias that is stored in MyArray[0] and copy it in MyVal". So MyVal is an alias to Player[0], and not MyArray[0];
+This is because the value stored in MyArray is already an alias, so we copy the alias directly, instead of making an alias to the alias. There are technical reasons : we can not easily do alias to aliases T_T'
+
+(By now, every sane person should be confused... so don't worry if you are...)
+
+[u]Functions returning classes[/u]
+
+As with arrays, we have to make a difference between API functions and functions declared in script.
+ 
+When you call an API function, the result will be a "simplified" alias. Those are unambiguous aliases referring to the object's Id, inside of an API-defined array.
+[code]
+declare MyLabel <=> GetFirstChild("Label"); 
+   // MyLabel is an alias to Page.MainFrame.Controls[IdOfTheFirstChildFound]
+[/code]
+Is behaving exactly like 
+[code]
+declare MyLabel <=> Page.MainFrame.Controls[GetFirstChild("Label").Id];
+[/code]
+
+So if there was an API function GetBestPlayer, the code
+[code]
+declare BestPlayer <=> GetBestPlayer();  
+   // Alice is the best player, so BestPlayer is an alias for Players[AliceId]
+Players[1].Score += 1000; 
+   // Give 1000 points to the 2nd best player, which is Bob
+
+log(BestPlayer.Login); // Will log Alice
+[/code]
+
+When dealing with script-defined functions, the aliases are directly copied (the same way it does when using script-defined arrays). So in previous example, if GetBestPlayer was a function defined in your script, or in a script library, it would log "Bob".
+
+In both cases, the using a class value you obtained from a function call will [b]never[/b] call the function again.
+
+
+
+
 
 Comments in ManiaScript
 ========
@@ -131,11 +409,6 @@ if (hello == "world") {
     }
 */
 ```
-
-Maniascript Types
-=====
-
-Language primitive types are `Boolean` ,`Text`, `Integer`, `Real`, `Int3`, `Vec2`, `Vec3`, `Void`, `Ident`, `Null` and `NullID`
 
 Boolean
 ======
