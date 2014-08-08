@@ -16,7 +16,7 @@ If you have programmed before, the basic keywords and language syntax should be 
 
 Filename extension for scripts is ".script.txt"
 
-##Where to write your script ?
+###Where to write your script ?
 
 The way to create or change a script depends on the type of script you want.
  - To edit a GameMode, launch a solo or LAN game, and press Ctrl + ScrollLock. If you want to create a new one, lanch an existing one, then press Ctrl + ScrollLock, then SaveAs with a new name.
@@ -26,7 +26,7 @@ The way to create or change a script depends on the type of script you want.
  To learn more about those different contexts, see {{./script-contexts.md}}
 
 
-##Debug
+###Debug
 When trying to found bugs in a script, you'll use the Debugger. For now, you can only access it by pressing Ctrl+~. It works pretty much anywhere in game. It has 2 modes : a reduced mode where you can only see the logs without interacting, and the Full mode. In Full mode you can select the script that you want to debug (because many scripts can be running at once, for example a camera effect, and the rules of your game). It will show you only the log of the selected script, along with the code of the script, which you can not edit there.
 
 Basics
@@ -41,7 +41,7 @@ DoSomething(MyVar);
 ```
 Beware : Case is important, always !
 
-## Simple data Types
+### Simple data Types
 
 * Boolean : can be either True or False
 * Integer : numbers such as 2 or -5 or 31337
@@ -52,7 +52,7 @@ Protips :
 - inside a Text, The usual escape sequences such as "\n" or "\\" are supported.
 - you can also declare a Text value between 3 double quotes. When doing so, you won't need to escape chars, and it can expand on many lines. """plop="452.12.22" toto"""
 
-## Variable declaration
+### Variable declaration
 In Maniascript, variables must be declared, either by specifying a Type, or an initial value :
 
 `declare Integer MyVariable;`
@@ -65,12 +65,12 @@ If the variable is defined as a Integer, you will never be able to store anythin
 
 Protip : Variables are always defined and initialized when declared, meaning they always have a valid value. If not specified, this value will be a default value for the current type.
 
-## Variable affectation
+### Variable affectation
 Once declared, you can change the value of a variable with a single equal sign : 
 `MyVariable = 13+37;`
 As said earlier, the types must match. No implicit conversions are made.
 
-## Comments
+### Comments
 Anything right of a double slash // is a comment
 Anything between /* and */ is also a comment
 ```{C}
