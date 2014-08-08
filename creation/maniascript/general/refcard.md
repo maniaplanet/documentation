@@ -49,7 +49,7 @@ Language constant values are :
 
 You can not create your own Ident or Class values, however many API functions return such values, and you can store them or use them like other Maniascript variables
 
-See more [./values.html](here...)
+See more [here...](./values.html)
 
 Operators
 =====
