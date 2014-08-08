@@ -21,3 +21,24 @@ GameModes
 ========
 
 GameModes for Trackmania and Shootmania are located in the "" folder of your Maniaplanet User directory (Usually "My Documents/Maniaplanet")
+
+
+Manialink
+========
+
+There are two ways for specifying your ManiaScript in a ManiaLink XML file:
+* XML comment
+	* Surround the script with the XML comment tags. Make sure the script itself does not contain "-->" or it will break the XML file.
+```
+<script><!--
+	*your script here*
+--></script>
+```
+
+* CDATA block
+	* Define the script as a CDATA block. If the string "]]>" occur within your script, replace it with "]]]]><![CDATA[>" to keep the XML file valid.
+```
+<script><![CDATA[
+	*your script here*
+]]></script>
+```
