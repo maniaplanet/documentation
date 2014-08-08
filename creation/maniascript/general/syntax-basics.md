@@ -49,11 +49,21 @@ Once declared, you can change the value of a variable with a single equal sign :
 As said earlier, the types must match. No implicit conversions are made.
 
 ### Comments
+Comment are part of a script that are not taken into account at all. The program just doesn't "see" them.
 Anything right of a double slash `//` is a comment
 Anything between `/* and */` is also a comment
 ```{C}
 Var = 2 + 5; // This is a comment
 Var = 2 /* This is a comment */ + 5;
+
+declare Text hello = "world" // this text here will be ignored and is a comment
+/* 
+all this text here is a comment, and is beeing ignored from the maniascript engine
+if (hello == "world") {
+    do something
+    }
+*/
+
 ```
 
 Simple operators
@@ -290,7 +300,7 @@ Yet, there are "2 kinds" of pointers. The first one is what we call an alias. It
 Here's an example :
 There's a array of players, sorted by descending score, called Players.
 
-[i][u]Important note :[/u][/i] we're talking here about an API array, one that's pre declared as a system variable.
+*Important note :* we're talking here about an API array, one that's pre declared as a system variable.
 
 One can write :
 ```{C}
@@ -313,7 +323,7 @@ log(BestPlayer.Login);
 
 ```
 
-[b][i]In ManiaScript, BestPlayer is an alias. So BestPlayer means "The player in first position in the array Players". That's why, if scores have been changed, maybe it does not mean Alice anymore.[/i][/b]
+*In ManiaScript, BestPlayer is an alias. So BestPlayer means "The player in first position in the array Players". That's why, if scores have been changed, maybe it does not mean Alice anymore.*
 
 ```{C}
 
@@ -330,7 +340,7 @@ log(Players[0].Login);
 ```
 
 In such cases, it become more clear that Class objects does not behave as Integer or Text values.
-###That's why we thought it would be better to use another symbol when setting variables : to remind that's not a plain affectation.
+*That's why we thought it would be better to use another symbol when setting variables : to remind that's not a plain affectation.*
 
 ###Now what if you want to keep Alice in a variable, and not the Best Player ?
 
@@ -377,7 +387,7 @@ Since we have unique idents for every class, this will result in having "real po
 
 ###Tricky alias cases
 
-[u]Aliases in arrays[/u]
+####Aliases in arrays
 Unfortunately, there are some edge cases where the aliases become a bit tricky....
 What happens if you declare yourself an array of Classes.
 
@@ -393,12 +403,12 @@ log(MyVal.Login); // It will log "Alice", not what you may expect
 
 ```
 
-If fact, when you write "MyVal <=> MyArray[0]", it means "take the alias that is stored in MyArray[0] and copy it in MyVal". So MyVal is an alias to Player[0], and not MyArray[0];
+If fact, when you write `MyVal <=> MyArray[0]`, it means "take the alias that is stored in `MyArray[0]` and copy it in `MyVal`". So `MyVal` is an alias to `Player[0]`, and not `MyArray[0]`;
 This is because the value stored in MyArray is already an alias, so we copy the alias directly, instead of making an alias to the alias. There are technical reasons : we can not easily do alias to aliases T_T'
 
 (By now, every sane person should be confused... so don't worry if you are...)
 
-[u]Functions returning classes[/u]
+####Functions returning classes
 
 As with arrays, we have to make a difference between API functions and functions declared in script.
  
@@ -430,7 +440,12 @@ log(BestPlayer.Login); // Will log Alice
 
 When dealing with script-defined functions, the aliases are directly copied (the same way it does when using script-defined arrays). So in previous example, if GetBestPlayer was a function defined in your script, or in a script library, it would log "Bob".
 
-In both cases, the using a class value you obtained from a function call will [b]never[/b] call the function again.
+In both cases, the using a class value you obtained from a function call will *never* call the function again.
+
+
+
+
+
 
 
 
@@ -441,18 +456,17 @@ Comments in ManiaScript
 
 Commenting in ManiaScript is done by adding double slashes before the instructions //, multiline comments can be done starting with /* and ending with */
 
-example:
 
-```
-declare Text hello = "world" // this text here will be ignored and is a comment
-/* 
-all this text here is a comment, and is beeing ignored from the maniascript engine
-if (hello == "world") {
-    do something
-    }
-*/
 
-```
+
+
+
+
+
+
+
+
+
 
 Boolean
 ======
@@ -690,31 +704,3 @@ switch( /* Expression */ )
 ``` 
 
 
-Preserved language keywords are:
-=======
-
-
-```
-declare
-return 
-if 
-else 
-as 
-in
-while 
-foreach 
-break 
-continue
-sleep  
-wait 
-yield 
-switch 
-case 
-default 
-for 
-log 
-assert
-netread 
-netwrite  
-
-```
