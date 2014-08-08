@@ -260,12 +260,12 @@ List.clear();
 ##Timing instructions : yield/sleep/wait
 Those instructions allow to pause the exectution of the script. It is very useful, since during the execution script, nothing else happen : the display is not updated, the simulations of the game are stuck, the logs are not being updated, and so on.
 
-yield; The script pauses for the shortest amout of time.
-sleep(XXXX); The script pauses for XXXX miliseconds.
-wait(YYYYY); The  script pause until Boolean YYYYY is True. YYYYY will be evaluated repeteadly, so be careful when YYYYY is a function call : the fonction will be called many times.
+- `yield;` The script pauses for the shortest amout of time.
+- `sleep(XXXX);` The script pauses for XXXX miliseconds.
+- `wait(YYYYY);` The  script pause until Boolean YYYYY is True. YYYYY will be evaluated repeteadly, so be careful when YYYYY is a function call : the fonction will be called many times.
 
-###Equivalents : 
-* yield; is equivalent to : sleep(0);
+###Equivalents  
+* `yield;` is equivalent to : `sleep(0);`
 * sleep could be written :
 ```
 void Sleep(Integer XXXX){
@@ -289,13 +289,13 @@ Start = Now;
 wait(Now > Start + 1000 || PendingEvents.count >= 1);
 ```
 
-##Advanced types : classes
+## Advanced types : classes
 
 In ManiaScript, you can not declare new classes or any kind of type. Also you can not directly instantiate objects of an existing class. You can only declare pointers to existing objects.
 
 Yet, there are "2 kinds" of pointers. The first one is what we call an alias. It's fast, and quite powerful, yet its behaviour can be surprising, especially if you're used to common pointer programming. The second is a more regular affectation, roughly emulating pointers.
 
-###Aliases
+### Aliases
 
 Here's an example :
 There's a array of players, sorted by descending score, called Players.
@@ -336,7 +336,7 @@ log(Players[0].Login);
 In such cases, it become more clear that Class objects does not behave as Integer or Text values.
 *That's why we thought it would be better to use another symbol when setting variables : to remind that's not a plain affectation.*
 
-###Now what if you want to keep Alice in a variable, and not the Best Player ?
+### Now what if you want to keep Alice in a variable, and not the Best Player ?
 
 The following code will work "as expected". 
 ```
@@ -373,9 +373,9 @@ log(BestPlayer.Login);
 
 Since we have unique idents for every class, this will result in having "real pointers". But they cost a bit more when set and accessed. Performance should not be an issue though. When in doubt, you should probably use =
 
-###Tricky alias cases
+### Tricky alias cases
 
-####Aliases in arrays
+#### Aliases in arrays
 Unfortunately, there are some edge cases where the aliases become a bit tricky....
 What happens if you declare yourself an array of Classes.
 
@@ -394,7 +394,7 @@ This is because the value stored in MyArray is already an alias, so we copy the 
 
 (By now, every sane person should be confused... so don't worry if you are...)
 
-####Functions returning classes
+#### Functions returning classes
 
 As with arrays, we have to make a difference between API functions and functions declared in script.
  
