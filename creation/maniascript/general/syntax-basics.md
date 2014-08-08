@@ -47,13 +47,12 @@ If the variable is defined as a Integer, you will never be able to store anythin
 
 
 Examples: 
-```[C]
+```{C}
 declare planets = 9000; // planets will be cast to Integer
 planets = "9000 planets"; // this would cast an error.
 declare Text serverName; // serverName initial value is now Null
 serverName = "My testing server";
 log(serverName ^ " has currently " ^ planets ^ "p.");
-
 ```
 
 ### Variable scope
