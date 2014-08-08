@@ -140,7 +140,6 @@ This will check if MyVariable is equal to 3. If not, the script will be halted a
 
 In maniascript, you'll find the usual control structures :
 ```{C}
-
 if( /*Boolean*/ ) /*Instructions;*/
 
 while ( /*Boolean*/ ) /*Instructions;*/
@@ -156,7 +155,6 @@ case Expression1: /*Instructions;*/
 case Expression2: /*Instructions;*/ .....
 default : /*Instructions;*/
 }
-
 ```
 
 where `Instructions;` can be either a one-line instruction or a curly-bracketed set of instructions.
@@ -164,23 +162,19 @@ where `Instructions;` can be either a one-line instruction or a curly-bracketed 
 ###Functions and main()
 Most Maniascripts are to complicated to fit in one set of instructions. That's why you can define functions. A function definition looks like that :
 ```{C}
-
 [TypeOfTheReturnedValue] [NameOfTheFunction] ([TypeArg1] [NameArg1], [TypeArg2] [NameArg2] .... )
 { 
  [Instructions]; 
 }
-
 ```
 
 Here's an exemple :
 ```{C}
-
 Integer Minimum (Integer A, Integer B)
 { 
 if (A<B) return A;
 return B;
 }
-
 ```
 
 One of the functions is called `main ()`. It has no arguments, and no return type. It's the function called at the beginning of the program.
@@ -214,24 +208,19 @@ Void Function1() {
 ##Advanced types : list and arrays
 You can declare Lists by using any type, followed by square brackets : 
 ```{C}
-
 declare Text[] MyList;
 MyList= ["Alpha", "Beta", "Gamma", "Omega" ];
-
 ```
 
 You can then access the elements by index :
 ```{C}
-
 log(MyList[0]); // Will log : Alpha
 log(MyList[3]); // Will log : Omega
-
 ```
 The only valid indices are the ones between 0 (inclusive) and the list's count (exclusive).
 
 Valid operations are 
 ```{C}
-
 declare Size = List.count;
 declare SortedList = List.sort(); 
 List.add(ValueToBeAdded);
@@ -241,28 +230,22 @@ declare DoesExist1 = List.existskey(Index); // equivalent to 0 <= Index <  List.
 declare DoesExist2 = List.exists(ValueToBeFound);
 declare Index = List.keyof(ValueToBeFound); // such as List[Index] == ValueToBeFound
 List.clear();
-
 ```
 
 You can also declare an associative Array with keys of any type : 
 ```{C}
-
 declare Text[Integer] MyArray1 = [15 => "Quinze", 42 => "Quarante-deux", 100 =>"Cent" ];
 declare Real[Text] MyArray2 = ["Pi" => 3.14, "Tau" => 6.28, "Leet" => 13.37 ];
-
 ```
 
 You can then access the elements by index :
 ```{C}
-
 log(MyArray1[42]); // Will log : Quarante-deux
 log(MyArray2 ["Tau"]); // Will log : 6.28
 MyArray2["SquareRootOfTwo"] = 1.41; // Add a new Value in the array 
-
 ```
 
 ```{C}
-
 declare Size = MyArray1.count;
 declare SortedByValues = MyArray1.sort(); // Sort by Values
 declare SortedByKeys = MyArray1.sortkey(); // Sort by Keys
@@ -272,7 +255,6 @@ declare DoesExist1 = List.existskey(Key);
 declare DoesExist2 = List.exists(ElemToBeFound);
 declare Key= List.keyof(ElemToBeFound); // such as List[Key] == ElemToBeFound
 List.clear();
-
 ```
 
 ##Timing instructions : yield/sleep/wait
@@ -286,31 +268,25 @@ wait(YYYYY); The  script pause until Boolean YYYYY is True. YYYYY will be evalua
 * yield; is equivalent to : sleep(0);
 * sleep could be written :
 ```{C}
-
 void Sleep(Integer XXXX){
    Start = Now;
    while(Now < Start + XXXX) {
       yield;
    }
 }
-
 ```
 
 * wait could be written :
 ```{C}
-
 while(!YYYYY) {
     yield;
 }
-
 ```
 
 **Protip** : If you use sleep(XXXX) in a script where you catch events (Manialink scripts for example), you will miss the events which occurred during the sleep(). This is so because one event is only valid during 1 script "frame", i.e the time between two consecutive "yield;" . To avoid that, you can use wait instead :
 ```{C}
-
 Start = Now;
 wait(Now > Start + 1000 || PendingEvents.count >= 1);
-
 ```
 
 ##Advanced types : classes
@@ -328,15 +304,12 @@ There's a array of players, sorted by descending score, called Players.
 
 One can write :
 ```{C}
-
 declare BestPlayer <=> Players[0];  
    // Alice is the best player, so BestPlayer "points" to Alice
-
 ```
 
 You would expect that :
 ```{C}
-
 declare BestPlayer <=> Players[0];  
    // Alice is the best player, so BestPlayer "points" to Alice
 {
@@ -344,13 +317,11 @@ declare BestPlayer <=> Players[0];
 }
 log(BestPlayer.Login); 
    // Will log Alice, right ???
-
 ```
 
 *In ManiaScript, BestPlayer is an alias. So BestPlayer means "The player in first position in the array Players". That's why, if scores have been changed, maybe it does not mean Alice anymore.*
 
 ```{C}
-
 declare BestPlayer <=> Players[0];  
    // Alice is the best player, so BestPlayer "points" to Alice
 Players[1].Score += 1000; 
@@ -360,7 +331,6 @@ Players[1].Score += 1000;
    //    they Will log Bob, because he has an higher score right now.
 log(BestPlayer.Login);
 log(Players[0].Login);
-
 ```
 
 In such cases, it become more clear that Class objects does not behave as Integer or Text values.
@@ -370,33 +340,28 @@ In such cases, it become more clear that Class objects does not behave as Intege
 
 The following code will work "as expected". 
 ```{C}
-
 declare BestPlayerId = Players[0].Id;  
     // BestPlayerId is an Ident : will never change
 Players[1].Score += 1000; 
    // Give 1000 points to the 2nd best player, which is Bob
 log(Players[BestPlayerId].Login); 
    // Will log Alice 
-
 ```
 
 **Protip** : Note that the "log" will be a bit more time-consuming than the previous way : we have to find Alice in the array of players, from the Ident.
 
 **Protip** #2 : Yes, this can also be written 
 ```{C}
-
 declare BestPlayer <=> Players[Players[0].Id];  
    // will be an alias to Players[AliceId] and not Players[0]. Huge difference !
 Players[1].Score += 1000; 
    // Give 1000 points to the 2nd best player, which is Bob
 log(BestPlayer.Login); 
    // Will log Alice. Will also costs more CPU, for the alias has to be resolved.  
-
 ```
 
 But there's a simpler way to do something similar 
 ```{C}
-
 declare BestPlayer = Players[0];  
    // Note the difference : I used = instead of <=>
    // It will do the same as : declare BestPlayer <=> Players[Players[0].Id];  
@@ -404,7 +369,6 @@ Players[1].Score += 1000;
    // Give 1000 points to the 2nd best player, which is Bob
 log(BestPlayer.Login); 
    // Will log Alice. Will also costs more CPU, for the alias has to be resolved.  
-
 ```
 
 Since we have unique idents for every class, this will result in having "real pointers". But they cost a bit more when set and accessed. Performance should not be an issue though. When in doubt, you should probably use =
@@ -416,7 +380,6 @@ Unfortunately, there are some edge cases where the aliases become a bit tricky..
 What happens if you declare yourself an array of Classes.
 
 ```{C}
-
 // Players[0] => Alice
 // Players[1] => Bob
 declare MyArray = [Players[0], Players[1]]; 
@@ -424,7 +387,6 @@ declare MyVal <=> MyArray[0];
 MyArray = [Players[1], Players[0]];
 
 log(MyVal.Login); // It will log "Alice", not what you may expect
-
 ```
 
 If fact, when you write `MyVal <=> MyArray[0]`, it means "take the alias that is stored in `MyArray[0]` and copy it in `MyVal`". So `MyVal` is an alias to `Player[0]`, and not `MyArray[0]`;
@@ -438,28 +400,22 @@ As with arrays, we have to make a difference between API functions and functions
  
 When you call an API function, the result will be a "simplified" alias. Those are unambiguous aliases referring to the object's Id, inside of an API-defined array.
 ```{C}
-
 declare MyLabel <=> GetFirstChild("Label"); 
    // MyLabel is an alias to Page.MainFrame.Controls[IdOfTheFirstChildFound]
-
 ```
 Is behaving exactly like 
 ```{C}
-
 declare MyLabel <=> Page.MainFrame.Controls[GetFirstChild("Label").Id];
-
 ```
 
 So if there was an API function GetBestPlayer, the code
 ```{C}
-
 declare BestPlayer <=> GetBestPlayer();  
    // Alice is the best player, so BestPlayer is an alias for Players[AliceId]
 Players[1].Score += 1000; 
    // Give 1000 points to the 2nd best player, which is Bob
 
 log(BestPlayer.Login); // Will log Alice
-
 ```
 
 When dealing with script-defined functions, the aliases are directly copied (the same way it does when using script-defined arrays). So in previous example, if GetBestPlayer was a function defined in your script, or in a script library, it would log "Bob".
