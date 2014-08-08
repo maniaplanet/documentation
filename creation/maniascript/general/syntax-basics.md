@@ -51,8 +51,10 @@ Protips :
 
 ## Variable declaration
 In Maniascript, variables must be declared, either by specifying a Type, or an initial value :
+
 `declare Integer MyVariable;`
 or
+
 `declare MyVariable = 42.;`
 
 After having declared a variable, you'll be able to use it to store data. 
