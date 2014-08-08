@@ -12,7 +12,7 @@ ManiaScript Syntax basics
 
 A script is a text, composed by lines (aka, instructions). Instructions are separated by semicolons, as in C/C++.
 It looks like
-```{C}
+```
 declare MyVar = 12;
 MyVar += 1;
 DoSomething(MyVar);
@@ -47,7 +47,7 @@ If the variable is defined as a Integer, you will never be able to store anythin
 
 
 Examples: 
-```{C}
+```
 declare planets = 9000; // planets will be cast to Integer
 planets = "9000 planets"; // this would cast an error.
 declare Text serverName; // serverName initial value is now Null
@@ -63,7 +63,7 @@ Scope in maniascript is same as many other languages, a scope is defined with cu
 
 Global variables are defined outside the main function and other function scopes.
 example:
-```{C}
+```
 define Text intro = "world"; // this is considered as a global variable
 
 main {
@@ -80,7 +80,7 @@ As said earlier, the types must match. No implicit conversions are made.
 Comment are part of a script that are not taken into account at all. The program just doesn't "see" them.
 Anything right of a double slash `//` is a comment
 Anything between `/* and */` is also a comment
-```{C}
+```
 Var = 2 + 5; // This is a comment
 Var = 2 /* This is a comment */ + 5;
 
@@ -98,23 +98,23 @@ Simple operators
 =====
 
 Boolean operations are : `!` ` &&`  `||` 
-```{C}
+```
 Var1 && (!Var2 || Var3)
 ```
 
 Mathematical operations are the usual ones : `+` `-` `*` `/`
-```{C}
+```
 Var1 + (Var2 / Var3)*1000
 ```
 You can add/substract/multiply/divide a Real and an Integer, the result will be a Real.
 
 To append strings, you can use the `^` operator. You can also append a Real or a Bool or an Integer. It will be converted to Text.
-```{C}
+```
 MyVar = "Hello " ^ "world!";
 ```
 
 **Protip** : when using triple-double-quoted Texts you can include variables or expressions in your text with triple-culry-brackets, resulting in something like :
-```{C}
+```
 MyVar = """Hello {{{NameOfThePlayer}}}, how are you today??? Five = {{{2+3}}}. \o/ """;
 ```
 
@@ -125,21 +125,21 @@ Greater/lower comparisons do not work with Booleans.
 
 ## Log and assertions
 It's often useful to print some text in the log. You can do that with :
-```{C}
+```
 log("Something went wrong!");
 ```
 The text will be printed in the bottom part of the debug window. Press Ctrl + ~ to see it.
 
 Sometimes it is more easy to check if some requirements are met. 
-```{C}
+```
 assert(MyVariable == 3);
 ```
 This will check if MyVariable is equal to 3. If not, the script will be halted as if an error had occurred.
 
-##Control structures
+## Control structures
 
 In maniascript, you'll find the usual control structures :
-```{C}
+```
 if( /*Boolean*/ ) /*Instructions;*/
 
 while ( /*Boolean*/ ) /*Instructions;*/
@@ -159,9 +159,9 @@ default : /*Instructions;*/
 
 where `Instructions;` can be either a one-line instruction or a curly-bracketed set of instructions.
 
-###Functions and main()
+## Functions and main()
 Most Maniascripts are to complicated to fit in one set of instructions. That's why you can define functions. A function definition looks like that :
-```{C}
+```
 [TypeOfTheReturnedValue] [NameOfTheFunction] ([TypeArg1] [NameArg1], [TypeArg2] [NameArg2] .... )
 { 
  [Instructions]; 
@@ -169,7 +169,7 @@ Most Maniascripts are to complicated to fit in one set of instructions. That's w
 ```
 
 Here's an exemple :
-```{C}
+```
 Integer Minimum (Integer A, Integer B)
 { 
 if (A<B) return A;
@@ -181,7 +181,7 @@ One of the functions is called `main ()`. It has no arguments, and no return typ
 
 If your code is simple enough to fit entirely in the main() function, you can omit the function header, and write the instructions without any enclosing brackets.
 
-###Directives
+## Directives
 At the top of a script, some special code may be required : those special lines start with the `#` character. Note that directives are *not* finished with a semicolon `;`
 
 * `#RequiredContext XXX` : the context of a script. This is meant to avoid trying to use an EditorPlugin as a GameMode, because it will always fail
@@ -191,14 +191,14 @@ At the top of a script, some special code may be required : those special lines 
 
 Exemple of include :
 
-```{C}
+```
  #Include "Library.Script.txt" as MyLib1
 MyLib1::Function1();
 ```
 
 where
 
-```{C}
+```
 // contents of "Library.Script.txt"
 Void Function1() {
    log("Foo"^"bar");
@@ -207,20 +207,20 @@ Void Function1() {
 
 ##Advanced types : list and arrays
 You can declare Lists by using any type, followed by square brackets : 
-```{C}
+```
 declare Text[] MyList;
 MyList= ["Alpha", "Beta", "Gamma", "Omega" ];
 ```
 
 You can then access the elements by index :
-```{C}
+```
 log(MyList[0]); // Will log : Alpha
 log(MyList[3]); // Will log : Omega
 ```
 The only valid indices are the ones between 0 (inclusive) and the list's count (exclusive).
 
 Valid operations are 
-```{C}
+```
 declare Size = List.count;
 declare SortedList = List.sort(); 
 List.add(ValueToBeAdded);
@@ -233,19 +233,19 @@ List.clear();
 ```
 
 You can also declare an associative Array with keys of any type : 
-```{C}
+```
 declare Text[Integer] MyArray1 = [15 => "Quinze", 42 => "Quarante-deux", 100 =>"Cent" ];
 declare Real[Text] MyArray2 = ["Pi" => 3.14, "Tau" => 6.28, "Leet" => 13.37 ];
 ```
 
 You can then access the elements by index :
-```{C}
+```
 log(MyArray1[42]); // Will log : Quarante-deux
 log(MyArray2 ["Tau"]); // Will log : 6.28
 MyArray2["SquareRootOfTwo"] = 1.41; // Add a new Value in the array 
 ```
 
-```{C}
+```
 declare Size = MyArray1.count;
 declare SortedByValues = MyArray1.sort(); // Sort by Values
 declare SortedByKeys = MyArray1.sortkey(); // Sort by Keys
@@ -267,7 +267,7 @@ wait(YYYYY); The  script pause until Boolean YYYYY is True. YYYYY will be evalua
 ###Equivalents : 
 * yield; is equivalent to : sleep(0);
 * sleep could be written :
-```{C}
+```
 void Sleep(Integer XXXX){
    Start = Now;
    while(Now < Start + XXXX) {
@@ -277,14 +277,14 @@ void Sleep(Integer XXXX){
 ```
 
 * wait could be written :
-```{C}
+```
 while(!YYYYY) {
     yield;
 }
 ```
 
 **Protip** : If you use sleep(XXXX) in a script where you catch events (Manialink scripts for example), you will miss the events which occurred during the sleep(). This is so because one event is only valid during 1 script "frame", i.e the time between two consecutive "yield;" . To avoid that, you can use wait instead :
-```{C}
+```
 Start = Now;
 wait(Now > Start + 1000 || PendingEvents.count >= 1);
 ```
@@ -303,13 +303,13 @@ There's a array of players, sorted by descending score, called Players.
 *Important note :* we're talking here about an API array, one that's pre declared as a system variable.
 
 One can write :
-```{C}
+```
 declare BestPlayer <=> Players[0];  
    // Alice is the best player, so BestPlayer "points" to Alice
 ```
 
 You would expect that :
-```{C}
+```
 declare BestPlayer <=> Players[0];  
    // Alice is the best player, so BestPlayer "points" to Alice
 {
@@ -321,7 +321,7 @@ log(BestPlayer.Login);
 
 *In ManiaScript, BestPlayer is an alias. So BestPlayer means "The player in first position in the array Players". That's why, if scores have been changed, maybe it does not mean Alice anymore.*
 
-```{C}
+```
 declare BestPlayer <=> Players[0];  
    // Alice is the best player, so BestPlayer "points" to Alice
 Players[1].Score += 1000; 
@@ -339,7 +339,7 @@ In such cases, it become more clear that Class objects does not behave as Intege
 ###Now what if you want to keep Alice in a variable, and not the Best Player ?
 
 The following code will work "as expected". 
-```{C}
+```
 declare BestPlayerId = Players[0].Id;  
     // BestPlayerId is an Ident : will never change
 Players[1].Score += 1000; 
@@ -351,7 +351,7 @@ log(Players[BestPlayerId].Login);
 **Protip** : Note that the "log" will be a bit more time-consuming than the previous way : we have to find Alice in the array of players, from the Ident.
 
 **Protip** #2 : Yes, this can also be written 
-```{C}
+```
 declare BestPlayer <=> Players[Players[0].Id];  
    // will be an alias to Players[AliceId] and not Players[0]. Huge difference !
 Players[1].Score += 1000; 
@@ -361,7 +361,7 @@ log(BestPlayer.Login);
 ```
 
 But there's a simpler way to do something similar 
-```{C}
+```
 declare BestPlayer = Players[0];  
    // Note the difference : I used = instead of <=>
    // It will do the same as : declare BestPlayer <=> Players[Players[0].Id];  
@@ -379,7 +379,7 @@ Since we have unique idents for every class, this will result in having "real po
 Unfortunately, there are some edge cases where the aliases become a bit tricky....
 What happens if you declare yourself an array of Classes.
 
-```{C}
+```
 // Players[0] => Alice
 // Players[1] => Bob
 declare MyArray = [Players[0], Players[1]]; 
@@ -399,17 +399,17 @@ This is because the value stored in MyArray is already an alias, so we copy the 
 As with arrays, we have to make a difference between API functions and functions declared in script.
  
 When you call an API function, the result will be a "simplified" alias. Those are unambiguous aliases referring to the object's Id, inside of an API-defined array.
-```{C}
+```
 declare MyLabel <=> GetFirstChild("Label"); 
    // MyLabel is an alias to Page.MainFrame.Controls[IdOfTheFirstChildFound]
 ```
 Is behaving exactly like 
-```{C}
+```
 declare MyLabel <=> Page.MainFrame.Controls[GetFirstChild("Label").Id];
 ```
 
 So if there was an API function GetBestPlayer, the code
-```{C}
+```
 declare BestPlayer <=> GetBestPlayer();  
    // Alice is the best player, so BestPlayer is an alias for Players[AliceId]
 Players[1].Score += 1000; 
