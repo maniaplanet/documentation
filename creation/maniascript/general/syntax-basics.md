@@ -30,7 +30,9 @@ Beware : Case is important, always !
 - inside a Text, The usual escape sequences such as "\n" or "\\" are supported.
 - you can also declare a Text value between 3 double quotes. When doing so, you won't need to escape chars, and it can expand on many lines. """plop="452.12.22" toto"""
 
-### Variable declaration
+### Variables 
+
+#### Variable declaration
 In Maniascript, variables must be declared, either by specifying a Type, or an initial value :
 
 `declare Integer MyVariable;`
@@ -38,12 +40,41 @@ or
 
 `declare MyVariable = 42.;`
 
-After having declared a variable, you'll be able to use it to store data. 
+After having declared a variable, you'll be able to use it to store data, but the type can't be changed afterwards.
 If the variable is defined as a Integer, you will never be able to store anything else inside. The same goes for other types. 
 
 **Protip** : Variables are always defined and initialized when declared, meaning they always have a valid value. If not specified, this value will be a default value for the current type.
 
-### Variable affectation
+
+Examples: 
+```[C]
+declare planets = 9000; // planets will be cast to Integer
+planets = "9000 planets"; // this would cast an error.
+declare Text serverName; // serverName initial value is now Null
+serverName = "My testing server";
+log(serverName ^ " has currently " ^ planets ^ "p.");
+
+```
+
+#### Variable scope
+
+Scope in maniascript is same as many other languages, a scope is defined with curly brackets starting with `{` and ending with `}`. Variable visibility is limited to a scope.
+
+#### Global Variables
+
+Global variables are defined outside the main function and other function scopes.
+example:
+```{C}
+define Text intro = "world"; // this is considered as a global variable
+
+main {
+    define Integer number = 1; // as this is only for this scope
+}
+?>
+
+```
+
+#### Variable affectation
 Once declared, you can change the value of a variable with a single equal sign : 
 `MyVariable = 13+37;`
 As said earlier, the types must match. No implicit conversions are made.
@@ -442,155 +473,5 @@ When dealing with script-defined functions, the aliases are directly copied (the
 
 In both cases, the using a class value you obtained from a function call will *never* call the function again.
 
-
-
-
-Variables
-========
-Variables in ManiaScript are introduced by using keyword `declare`.
-You can introduce the initial type of the variable and if initial type is not defined, the type will be cast from the initial value.Once the variable has been initialized (or cast from value) with a type, the type can't be changed afterwards. Note that, variables are always defined and initialized when declared, meaning they always have a valid value. If not specified, this value will be a default value for the current type.
-
-examples: 
-
-```
-declare planets = 9000; // planets will be cast to Integer
-planets = "9000 planets"; // this would cast an error.
-declare Text serverName; // serverName initial value is now Null
-serverName = "My testing server";
-log(serverName ^ " has currently " ^ planets ^ "p.");
-
-```
-
-Scopes (or variable scopes)
-=======
-
-Scope in maniascript is same as many other languages, a scope is defined with curly brackets starting with `{` and ending with `}`. Variable visibility is limited to a scope.
-
-Global Variables
-======
-
-Global variables are defined outside the main function and other function scopes.
-example:
-
-
-```
-<?xml 
-<script><!--
-define Text intro = "world"; // this is considered as a global variable
-
-main {
-    define Integer number = 1; // as this is only for this scope
-    }
---></script>
-?>
-
-```
-
-Control structures:
-======
-
-Functions
-=======
-
-```
-[type of return value] [function name] ( TypeArg NameArg, TypeArg2 NameArg2 )  {
-    [instructions]
-    }
-
-```
-
-with exception of main function which doesn't have return value type or input values, the main function will be always run, if present.
-example:
-
-```
-main {
-    log("Hello ManiaPlanet!");       // will show brief greeting in debug console.
-    }
-
-```
-
-example:
-
-
-```
-Integer Minimum (Integer A, Integer B)
-{ 
-    if ( A < B ) return A;
-    return B;
-}
-
-```
-
-
-
-Loops
-======
-while loop is running as long as the Boolean is True
-
-
-```
-while ( /*Boolean*/ ) {
-    
-    /*Instructions;*/
-    
-    }
-
-```
-
-For loop runs for first value to last value, with incrementation of 1.0
-
-
-```
-for ( /*VariableName*/ , /*FirstValue*/ , /*LastValue*/ ) {
-    /*Instructions;*/
-}
-
-```
-
-Foreach will go trough all values in Array
-
-
-``` 
-foreach( /*Element*/  in /*Array*/ ) {
-     /*Instructions;*/
-}
-
-```
-
-
-``` 
-foreach( /*Key*/ =>/*Element*/ in /*Array*/ )  {
-    /*Instructions;*/ 
-}
-
-```
-
-
-Switches
-=======
-
-```
-if ( /* Boolean */) {
-    	*/ instructions */
-}
-else {
-   	/* instructions */  
-}
-
-```
-
-
-```
-switch( /* Expression */ )  
-{
-	case Expression1: /* Instructions; */;
-                         break;
-	case Expression2: /* Instructions; */ .
-                        break;
-	default : /* Instructions; */
-			break;
-}
-
-``` 
 
 
