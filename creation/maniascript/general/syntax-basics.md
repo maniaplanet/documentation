@@ -49,8 +49,8 @@ Once declared, you can change the value of a variable with a single equal sign :
 As said earlier, the types must match. No implicit conversions are made.
 
 ### Comments
-Anything right of a double slash // is a comment
-Anything between /* and */ is also a comment
+Anything right of a double slash `//` is a comment
+Anything between `/* and */` is also a comment
 ```{C}
 Var = 2 + 5; // This is a comment
 Var = 2 /* This is a comment */ + 5;
@@ -121,7 +121,7 @@ default : /*Instructions;*/
 
 ```
 
-where [i]Instructions;[/i] can be either a one-line instruction or a curly-bracketed set of instructions.
+where `Instructions;` can be either a one-line instruction or a curly-bracketed set of instructions.
 
 ###Functions and main()
 Most Maniascripts are to complicated to fit in one set of instructions. That's why you can define functions. A function definition looks like that :
@@ -145,7 +145,7 @@ return B;
 
 ```
 
-One of the functions is called [i]main ()[/i]. It has no arguments, and no return type. It's the function called at the beginning of the program.
+One of the functions is called `main ()`. It has no arguments, and no return type. It's the function called at the beginning of the program.
 
 If your code is simple enough to fit entirely in the main() function, you can omit the function header, and write the instructions without any enclosing brackets.
 
@@ -153,13 +153,13 @@ If your code is simple enough to fit entirely in the main() function, you can om
 After a declare instruction, the variables are only accessible in the directly enclosing curly-brackets {...}. 
 
 ###Directives
-At the top of a script, some special code may be required : those special lines start with the '#' character. Note that directives are [b]not[/b] finished with a semicolon ';'
-[list]
-#RequiredContext XXX : the context of a script. This is meant to avoid trying to use an EditorPlugin as a GameMode, because it will always fail
-#Const XXX YYYY : declare a constant named XXX, with value YYYY. This value can not be modified.
-#Setting XXX YYYY : from the script's scope, #Setting behave exactly as #Const. But this value can be modified from "outside" the script
-#Include "XXX" as YYYY : load a library or include a file, and bind the functions to the namespace YYYY.
-[/list]
+At the top of a script, some special code may be required : those special lines start with the `#` character. Note that directives are *not* finished with a semicolon `;`
+
+* `#RequiredContext XXX` : the context of a script. This is meant to avoid trying to use an EditorPlugin as a GameMode, because it will always fail
+* `#Const XXX YYYY` : declare a constant named XXX, with value YYYY. This value can not be modified.
+* `#Setting XXX YYYY` : from the script's scope, `#Setting` behave exactly as `#Const`. But this value can be modified from "outside" the script
+* `#Include "XXX" as YYYY` : load a library or include a file, and bind the functions to the namespace YYYY.
+
 Exemple of include :
 ```{C}
 
