@@ -20,14 +20,12 @@ The way to create or change a script depends on the type of script you want.
 More details
 =========================
 
-### GameModes
-=========================
+## GameModes
 
 GameModes for Trackmania and Shootmania are located in the "" folder of your Maniaplanet User directory (Usually "My Documents/Maniaplanet")
 
 
-### Manialink
-=========================
+## Manialink
 
 There are two ways for specifying your ManiaScript in a ManiaLink XML file:
 * XML comment
