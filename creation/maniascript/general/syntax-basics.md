@@ -40,10 +40,10 @@ Beware : Case is important, always !
 
 ## Simple data Types
 
-Boolean : can be either True or False
-Integer : numbers such as 2 or -5 or 31337
-Real : decimal numbers such as -4.2 or 99. (do not forget the final dot, because 99 is an Integer. Beware, those are different)
-Text : any character sequence between double quotes : "plop" "gouzi" or "456.32". 
+* Boolean : can be either True or False
+* Integer : numbers such as 2 or -5 or 31337
+* Real : decimal numbers such as -4.2 or 99. (do not forget the final dot, because 99 is an Integer. Beware, those are different)
+* Text : any character sequence between double quotes : "plop" "gouzi" or "456.32". 
 
 Protips :
 - inside a Text, The usual escape sequences such as "\n" or "\\" are supported.
