@@ -36,12 +36,12 @@ Language constant values are :
 <table>
 <tr><td>Type</td><td>Values</td></tr>
 <tr><td>Boolean</td><td>True, False</td></tr>
-<tr><td>Text</td><td>Everything of the form "XXX" or """XXX"""</td></tr>
-<tr><td>Integer</td><td>Everything of the form 123789</td></tr>
-<tr><td>Real</td><td>Everything of the form 123789. or .12312</td></tr>
-<tr><td>Vec2</td><td> < Real1, Real2> </td></tr>
-<tr><td>Vec3</td><td> < Real1, Real2, Real3> </td></tr>
-<tr><td>Int3</td><td> < Integer1, Integer2, Integer3> </td></tr>
+<tr><td>Text</td><td>Everything like "XXX" or """XXX"""</td></tr>
+<tr><td>Integer</td><td>Everything like 123789</td></tr>
+<tr><td>Real</td><td>Everything like 123789. or .12312</td></tr>
+<tr><td>Vec2</td><td> &lt; Real1, Real2 &gt; </td></tr>
+<tr><td>Vec3</td><td> &lt; Real1, Real2, Real3 &gt; </td></tr>
+<tr><td>Int3</td><td> &lt; Integer1, Integer2, Integer3 &gt; </td></tr>
 <tr><td>Ident</td><td> NullId </td></tr>
 <tr><td>Class</td><td> Null </td></tr>
 </tr>
