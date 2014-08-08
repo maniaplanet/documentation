@@ -47,6 +47,8 @@ Language constant values are :
 </tr>
 </table>
 
+You can not create your own Ident or Class values, however many API functions return such values, and you can store them or use them like other Maniascript variables
+
 Operators
 =====
 
