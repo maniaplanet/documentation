@@ -146,6 +146,41 @@ assert(MyVariable == 3);
 
 This will check if MyVariable is equal to 3. If not, the script will be halted as if an error had occurred.
 
+##Timing instructions : yield/sleep/wait
+Those instructions allow to pause the exectution of the script. It is very useful, since during the execution script, nothing else happen : the display is not updated, the simulations of the game are stuck, the logs are not being updated, and so on.
+
+- `yield;` The script pauses for the shortest amout of time.
+- `sleep(XXXX);` The script pauses for XXXX miliseconds.
+- `wait(YYYYY);` The  script pause until Boolean YYYYY is True. YYYYY will be evaluated repeteadly, so be careful when YYYYY is a function call : the fonction will be called many times.
+
+###Equivalents  
+* `yield;` is equivalent to : `sleep(0);`
+* sleep could be written :
+
+```
+void Sleep(Integer XXXX){
+   Start = Now;
+   while(Now < Start + XXXX) {
+      yield;
+   }
+}
+```
+
+* wait could be written :
+
+```
+while(!YYYYY) {
+    yield;
+}
+```
+
+**Protip** : If you use sleep(XXXX) in a script where you catch events (Manialink scripts for example), you will miss the events which occurred during the sleep(). This is so because one event is only valid during 1 script "frame", i.e the time between two consecutive "yield;" . To avoid that, you can use wait instead :
+
+```
+Start = Now;
+wait(Now > Start + 1000 || PendingEvents.count >= 1);
+```
+
 Structure
 =====
 
@@ -219,41 +254,6 @@ where
 Void Function1() {
    log("Foo"^"bar");
 }
-```
-
-##Timing instructions : yield/sleep/wait
-Those instructions allow to pause the exectution of the script. It is very useful, since during the execution script, nothing else happen : the display is not updated, the simulations of the game are stuck, the logs are not being updated, and so on.
-
-- `yield;` The script pauses for the shortest amout of time.
-- `sleep(XXXX);` The script pauses for XXXX miliseconds.
-- `wait(YYYYY);` The  script pause until Boolean YYYYY is True. YYYYY will be evaluated repeteadly, so be careful when YYYYY is a function call : the fonction will be called many times.
-
-###Equivalents  
-* `yield;` is equivalent to : `sleep(0);`
-* sleep could be written :
-
-```
-void Sleep(Integer XXXX){
-   Start = Now;
-   while(Now < Start + XXXX) {
-      yield;
-   }
-}
-```
-
-* wait could be written :
-
-```
-while(!YYYYY) {
-    yield;
-}
-```
-
-**Protip** : If you use sleep(XXXX) in a script where you catch events (Manialink scripts for example), you will miss the events which occurred during the sleep(). This is so because one event is only valid during 1 script "frame", i.e the time between two consecutive "yield;" . To avoid that, you can use wait instead :
-
-```
-Start = Now;
-wait(Now > Start + 1000 || PendingEvents.count >= 1);
 ```
 
 Advanced types
