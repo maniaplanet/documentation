@@ -23,7 +23,7 @@ The way to create or change a script depends on the type of script you want.
  - To edit or create an mapeditor plugin, use the plugin menu (the "fork" icon) in the editor
  - To have a script in a manialink XML file, add a <script> ... </script> part in the manialink XML file
  
- To learn more about those different contexts, see {{./script-contexts.md}}
+ To learn more about those different contexts, see [here...](./script-contexts.md)
 
 
 ###Debug
