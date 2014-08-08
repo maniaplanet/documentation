@@ -26,12 +26,12 @@ Language primitive types are :
 </tr>
 </table>
 
-The other types, known as Classes are composite types whose name starts with a 'C'. CSmPlayer, CManialinkLabel, etc...
+The other types, known as Classes, are composite types whose name starts with a 'C'. CSmPlayer, CManialinkLabel, etc...
 
 Maniascript Constants
 =====
 
-Language constant Values are :
+Language constant values are :
 
 <table>
 <tr><td>Values</td><td>Type</td></tr>
