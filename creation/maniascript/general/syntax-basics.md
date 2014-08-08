@@ -47,6 +47,7 @@ If the variable is defined as a Integer, you will never be able to store anythin
 
 
 Examples: 
+
 ```
 declare planets = 9000; // planets will be cast to Integer
 planets = "9000 planets"; // this would cast an error.
@@ -63,6 +64,7 @@ Scope in maniascript is same as many other languages, a scope is defined with cu
 
 Global variables are defined outside the main function and other function scopes.
 example:
+
 ```
 define Text intro = "world"; // this is considered as a global variable
 
@@ -80,6 +82,7 @@ As said earlier, the types must match. No implicit conversions are made.
 Comment are part of a script that are not taken into account at all. The program just doesn't "see" them.
 Anything right of a double slash `//` is a comment
 Anything between `/* and */` is also a comment
+
 ```
 Var = 2 + 5; // This is a comment
 Var = 2 /* This is a comment */ + 5;
@@ -91,29 +94,32 @@ if (hello == "world") {
     do something
     }
 */
-
 ```
 
 Simple operators
 =====
 
 Boolean operations are : `!` ` &&`  `||` 
+
 ```
 Var1 && (!Var2 || Var3)
 ```
 
 Mathematical operations are the usual ones : `+` `-` `*` `/`
+
 ```
 Var1 + (Var2 / Var3)*1000
 ```
 You can add/substract/multiply/divide a Real and an Integer, the result will be a Real.
 
 To append strings, you can use the `^` operator. You can also append a Real or a Bool or an Integer. It will be converted to Text.
+
 ```
 MyVar = "Hello " ^ "world!";
 ```
 
 **Protip** : when using triple-double-quoted Texts you can include variables or expressions in your text with triple-culry-brackets, resulting in something like :
+
 ```
 MyVar = """Hello {{{NameOfThePlayer}}}, how are you today??? Five = {{{2+3}}}. \o/ """;
 ```
@@ -125,20 +131,25 @@ Greater/lower comparisons do not work with Booleans.
 
 ## Log and assertions
 It's often useful to print some text in the log. You can do that with :
+
 ```
 log("Something went wrong!");
 ```
+
 The text will be printed in the bottom part of the debug window. Press Ctrl + ~ to see it.
 
 Sometimes it is more easy to check if some requirements are met. 
+
 ```
 assert(MyVariable == 3);
 ```
+
 This will check if MyVariable is equal to 3. If not, the script will be halted as if an error had occurred.
 
 ## Control structures
 
 In maniascript, you'll find the usual control structures :
+
 ```
 if( /*Boolean*/ ) /*Instructions;*/
 
@@ -161,6 +172,7 @@ where `Instructions;` can be either a one-line instruction or a curly-bracketed 
 
 ## Functions and main()
 Most Maniascripts are to complicated to fit in one set of instructions. That's why you can define functions. A function definition looks like that :
+
 ```
 [TypeOfTheReturnedValue] [NameOfTheFunction] ([TypeArg1] [NameArg1], [TypeArg2] [NameArg2] .... )
 { 
@@ -169,6 +181,7 @@ Most Maniascripts are to complicated to fit in one set of instructions. That's w
 ```
 
 Here's an exemple :
+
 ```
 Integer Minimum (Integer A, Integer B)
 { 
@@ -207,19 +220,23 @@ Void Function1() {
 
 ##Advanced types : list and arrays
 You can declare Lists by using any type, followed by square brackets : 
+
 ```
 declare Text[] MyList;
 MyList= ["Alpha", "Beta", "Gamma", "Omega" ];
 ```
 
 You can then access the elements by index :
+
 ```
 log(MyList[0]); // Will log : Alpha
 log(MyList[3]); // Will log : Omega
 ```
+
 The only valid indices are the ones between 0 (inclusive) and the list's count (exclusive).
 
 Valid operations are 
+
 ```
 declare Size = List.count;
 declare SortedList = List.sort(); 
@@ -233,12 +250,14 @@ List.clear();
 ```
 
 You can also declare an associative Array with keys of any type : 
+
 ```
 declare Text[Integer] MyArray1 = [15 => "Quinze", 42 => "Quarante-deux", 100 =>"Cent" ];
 declare Real[Text] MyArray2 = ["Pi" => 3.14, "Tau" => 6.28, "Leet" => 13.37 ];
 ```
 
 You can then access the elements by index :
+
 ```
 log(MyArray1[42]); // Will log : Quarante-deux
 log(MyArray2 ["Tau"]); // Will log : 6.28
@@ -267,6 +286,7 @@ Those instructions allow to pause the exectution of the script. It is very usefu
 ###Equivalents  
 * `yield;` is equivalent to : `sleep(0);`
 * sleep could be written :
+* 
 ```
 void Sleep(Integer XXXX){
    Start = Now;
@@ -277,6 +297,7 @@ void Sleep(Integer XXXX){
 ```
 
 * wait could be written :
+* 
 ```
 while(!YYYYY) {
     yield;
@@ -284,6 +305,7 @@ while(!YYYYY) {
 ```
 
 **Protip** : If you use sleep(XXXX) in a script where you catch events (Manialink scripts for example), you will miss the events which occurred during the sleep(). This is so because one event is only valid during 1 script "frame", i.e the time between two consecutive "yield;" . To avoid that, you can use wait instead :
+
 ```
 Start = Now;
 wait(Now > Start + 1000 || PendingEvents.count >= 1);
@@ -303,12 +325,14 @@ There's a array of players, sorted by descending score, called Players.
 *Important note :* we're talking here about an API array, one that's pre declared as a system variable.
 
 One can write :
+
 ```
 declare BestPlayer <=> Players[0];  
    // Alice is the best player, so BestPlayer "points" to Alice
 ```
 
 You would expect that :
+
 ```
 declare BestPlayer <=> Players[0];  
    // Alice is the best player, so BestPlayer "points" to Alice
@@ -339,28 +363,25 @@ In such cases, it become more clear that Class objects does not behave as Intege
 ### Now what if you want to keep Alice in a variable, and not the Best Player ?
 
 The following code will work "as expected". 
+
 ```
-declare BestPlayerId = Players[0].Id;  
-    // BestPlayerId is an Ident : will never change
-Players[1].Score += 1000; 
-   // Give 1000 points to the 2nd best player, which is Bob
-log(Players[BestPlayerId].Login); 
-   // Will log Alice 
+declare BestPlayerId = Players[0].Id;       // BestPlayerId is an Ident : will never change
+Players[1].Score += 1000;                   // Give 1000 points to the 2nd best player, which is Bob
+log(Players[BestPlayerId].Login);           // Will log Alice 
 ```
 
 **Protip** : Note that the "log" will be a bit more time-consuming than the previous way : we have to find Alice in the array of players, from the Ident.
 
 **Protip** #2 : Yes, this can also be written 
+
 ```
-declare BestPlayer <=> Players[Players[0].Id];  
-   // will be an alias to Players[AliceId] and not Players[0]. Huge difference !
-Players[1].Score += 1000; 
-   // Give 1000 points to the 2nd best player, which is Bob
-log(BestPlayer.Login); 
-   // Will log Alice. Will also costs more CPU, for the alias has to be resolved.  
+declare BestPlayer <=> Players[Players[0].Id];  // will be an alias to Players[AliceId] and not Players[0]. Huge difference !
+Players[1].Score += 1000;               // Give 1000 points to the 2nd best player, which is Bob
+log(BestPlayer.Login);                  // Will log Alice. Will also costs more CPU, for the alias has to be resolved.  
 ```
 
 But there's a simpler way to do something similar 
+
 ```
 declare BestPlayer = Players[0];  
    // Note the difference : I used = instead of <=>
