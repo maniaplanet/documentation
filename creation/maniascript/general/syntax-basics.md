@@ -190,12 +190,12 @@ At the top of a script, some special code may be required : those special lines 
 * `#Include "XXX" as YYYY` : load a library or include a file, and bind the functions to the namespace YYYY.
 
 Exemple of include :
-```{C}
+```
 #Include "Library.Script.txt" as MyLib1
 MyLib1::Function1();
 ```
 where
-```{C}
+```
 // contents of "Library.Script.txt"
 Void Function1() {
    log("Foo"^"bar");
