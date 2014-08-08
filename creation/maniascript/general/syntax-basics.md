@@ -26,7 +26,7 @@ Beware : Case is important, always !
 * Real : decimal numbers such as -4.2 or 99. (do not forget the final dot, because 99 is an Integer. Beware, those are different)
 * Text : any character sequence between double quotes : "plop" "gouzi" or "456.32". 
 
-****Protip**s** :
+**Protips** :
 - inside a Text, The usual escape sequences such as "\n" or "\\" are supported.
 - you can also declare a Text value between 3 double quotes. When doing so, you won't need to escape chars, and it can expand on many lines. """plop="452.12.22" toto"""
 
