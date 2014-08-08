@@ -90,7 +90,7 @@ It's often useful to print some text in the log. You can do that with :
 ```{C}
 log("Something went wrong!");
 ```
-The text will be printed in the bottom part of the debug window.
+The text will be printed in the bottom part of the debug window. Press Ctrl + ~ to see it.
 
 Sometimes it is more easy to check if some requirements are met. 
 ```{C}
