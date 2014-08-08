@@ -181,9 +181,6 @@ One of the functions is called `main ()`. It has no arguments, and no return typ
 
 If your code is simple enough to fit entirely in the main() function, you can omit the function header, and write the instructions without any enclosing brackets.
 
-###Variable scope
-After a declare instruction, the variables are only accessible in the directly enclosing curly-brackets {...}. 
-
 ###Directives
 At the top of a script, some special code may be required : those special lines start with the `#` character. Note that directives are *not* finished with a semicolon `;`
 
