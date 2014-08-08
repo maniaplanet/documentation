@@ -8,7 +8,7 @@ tags:
 ---
 
 ManiaScript Syntax basics
-=========
+==
 
 Maniascript is a powerful scripting language for ManiaPlanet games, you can write new games modes, plugins for the map editor, or make you manialinks more interactive.
 
@@ -17,7 +17,7 @@ If you have programmed before, the basic keywords and language syntax should be 
 Filename extension for scripts is ".script.txt"
 
 Where to write your script ?
-======
+==
 
 The way to create or change a script depends on the type of script you want.
  - To edit a GameMode, launch a solo or LAN game, and press Ctrl + ScrollLock. If you want to create a new one, lanch an existing one, then press Ctrl + ScrollLock, then SaveAs with a new name.
@@ -27,7 +27,7 @@ The way to create or change a script depends on the type of script you want.
  To learn more about those different contexts, see {{./script-contexts.md}}
 
 Basics
-======
+==
 
 A script is a text, composed by lines (aka, instructions). Instructions are separated by semicolons, as in C/C++.
 It looks like
@@ -39,7 +39,7 @@ DoSomething(MyVar);
 Beware : Case is important, always !
 
 Simple data Types
-=====
+===
 Boolean : can be either True or False
 Integer : numbers such as 2 or -5 or 31337
 Real : decimal numbers such as -4.2 or 99. (do not forget the final dot, because 99 is an Integer. Beware, those are different)
