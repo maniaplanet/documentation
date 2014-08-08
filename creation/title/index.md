@@ -22,15 +22,17 @@ Create a title pack offers also several features very helpful to control the exp
 
 Here is few examples of Title Packs:
 
-* **Domino Title** ![Domino Title](http://dominolink.aq.pl/common/Zrzut%20ekranu%202014-03-17%2017.45.51.png)
+* **Platform Beta**:
+<iframe width="640" height="360" src="//www.youtube.com/embed/-O_xzuyfCr0" frameborder="0" allowfullscreen></iframe>
 
-* **TrackMania RPG** [![TrackMania RPG](http://img.youtube.com/vi/XmC4OktmtEI/2.jpg)](https://www.youtube.com/watch?v=XmC4OktmtEI)
+* **TrackMania RPG**:
+<iframe width="640" height="360" src="//www.youtube.com/embed/MJCvqsYPOP8" frameborder="0" allowfullscreen></iframe>
 
-* **CardMelee** ![CardMelee](http://nsm08.casimages.com/img/2013/08/31/1308311124494836711511908.jpg)
+* **CardMelee**:
+<iframe width="640" height="360" src="//www.youtube.com/embed/RS7je0ehHck" frameborder="0" allowfullscreen></iframe>
 
-As you can understand now, a Title Pack can be equivalent to a little game when you use all the features (use of the item, new art design, use of the bots, creation of weapons), it can be totally different to ShootMania (a bit less for TrackMania for the moment as it has less possibility than ShootMania).
+As you can understand now, a Title Pack can be equivalent to a little game when you use all the features (use of the item, new art design, use of the bots, creation of weapons), it can be totally different to ShootMania (a bit less for TrackMania for the moment as it has less possibilities than ShootMania).
 
-<br/>
 <br/>
 # Create a Title Pack
 Description of the [ManiaPlanetTitle.xml](xml_description.html) file format.

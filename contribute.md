@@ -68,10 +68,10 @@ If you want to facilitate the maintenance of the documentation, you can write th
 [my link][1]
 ```
 
-At the end of the documentation, put this code to tell to which link you are refer to:
+At the end of the documentation, put this code to tell to which link you are refer to (without ""):
 
 ```md
-[1]: http//doc.maniaplanet.net
+"[1]: http//doc.maniaplanet.net"
 ```
 
 In that way, all the links (for both images and website) will be listed at the end of the documentation, which will make it easier to change or to find in source files. This little trick apply only for embedded links (a text with a link), not for plain link like http://doc.maniaplanet.com.
