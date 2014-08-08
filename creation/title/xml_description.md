@@ -2,7 +2,6 @@
 layout: default
 title: Title XML Description
 description: Advanced title options
-tags: creation
 tags:
 - creation
 - title
