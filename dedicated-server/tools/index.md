@@ -25,6 +25,9 @@ Theses tools allows you to help you administrating your maniaplanet dedicated se
 <th>Controller name</th><th>Author</th><th>TM</th><th>SM</th><th>Forum</th><th>Website</th><th>Plugins repository</th><th>Active</th>
 </tr>
 <tr>
+<td>eXpansion</td><td>oliverde8, reaby</td><td><img src="../../img/yes.png" /></td><td><img src="../../img/yes.png" /></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=518">Forum</a></td><td><a href="http://www.ml-expansion.com/">ml-eXpansion.com</a></td><td><a href="http://maniacontrol.com/plugins">Repository</a></td><td><img src="../../img/yes.png" /></td>
+</tr>
+<tr>
 <td>ManiaControl</td><td>steeffeen, Kremsy, TheM, Wabbitface</td><td><img src="../../img/yes.png" /></td><td><img src="../../img/yes.png" /></td><td><a href="http://forum.maniaplanet.com/viewforum.php?f=479">Forum</a></td><td><a href="http://www.maniacontrol.com/">ManiaControl.com</a></td><td><a href="http://maniacontrol.com/plugins">Repository</a></td><td><img src="../../img/yes.png" /></td>
 </tr>
 <tr>
