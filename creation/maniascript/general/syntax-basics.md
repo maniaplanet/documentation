@@ -96,7 +96,7 @@ if (hello == "world") {
 */
 ```
 
-Simple operators
+Operators and Instructions
 =====
 
 Boolean operations are : `!` ` &&`  `||` 
@@ -145,6 +145,9 @@ assert(MyVariable == 3);
 ```
 
 This will check if MyVariable is equal to 3. If not, the script will be halted as if an error had occurred.
+
+Structure
+=====
 
 ## Control structures
 
@@ -218,7 +221,45 @@ Void Function1() {
 }
 ```
 
-##Advanced types : list and arrays
+##Timing instructions : yield/sleep/wait
+Those instructions allow to pause the exectution of the script. It is very useful, since during the execution script, nothing else happen : the display is not updated, the simulations of the game are stuck, the logs are not being updated, and so on.
+
+- `yield;` The script pauses for the shortest amout of time.
+- `sleep(XXXX);` The script pauses for XXXX miliseconds.
+- `wait(YYYYY);` The  script pause until Boolean YYYYY is True. YYYYY will be evaluated repeteadly, so be careful when YYYYY is a function call : the fonction will be called many times.
+
+###Equivalents  
+* `yield;` is equivalent to : `sleep(0);`
+* sleep could be written :
+
+```
+void Sleep(Integer XXXX){
+   Start = Now;
+   while(Now < Start + XXXX) {
+      yield;
+   }
+}
+```
+
+* wait could be written :
+
+```
+while(!YYYYY) {
+    yield;
+}
+```
+
+**Protip** : If you use sleep(XXXX) in a script where you catch events (Manialink scripts for example), you will miss the events which occurred during the sleep(). This is so because one event is only valid during 1 script "frame", i.e the time between two consecutive "yield;" . To avoid that, you can use wait instead :
+
+```
+Start = Now;
+wait(Now > Start + 1000 || PendingEvents.count >= 1);
+```
+
+Advanced types
+===========
+
+## List and arrays
 You can declare Lists by using any type, followed by square brackets : 
 
 ```
@@ -276,42 +317,7 @@ declare Key= List.keyof(ElemToBeFound); // such as List[Key] == ElemToBeFound
 List.clear();
 ```
 
-##Timing instructions : yield/sleep/wait
-Those instructions allow to pause the exectution of the script. It is very useful, since during the execution script, nothing else happen : the display is not updated, the simulations of the game are stuck, the logs are not being updated, and so on.
-
-- `yield;` The script pauses for the shortest amout of time.
-- `sleep(XXXX);` The script pauses for XXXX miliseconds.
-- `wait(YYYYY);` The  script pause until Boolean YYYYY is True. YYYYY will be evaluated repeteadly, so be careful when YYYYY is a function call : the fonction will be called many times.
-
-###Equivalents  
-* `yield;` is equivalent to : `sleep(0);`
-* sleep could be written :
-* 
-```
-void Sleep(Integer XXXX){
-   Start = Now;
-   while(Now < Start + XXXX) {
-      yield;
-   }
-}
-```
-
-* wait could be written :
-* 
-```
-while(!YYYYY) {
-    yield;
-}
-```
-
-**Protip** : If you use sleep(XXXX) in a script where you catch events (Manialink scripts for example), you will miss the events which occurred during the sleep(). This is so because one event is only valid during 1 script "frame", i.e the time between two consecutive "yield;" . To avoid that, you can use wait instead :
-
-```
-Start = Now;
-wait(Now > Start + 1000 || PendingEvents.count >= 1);
-```
-
-## Advanced types : classes
+## Classes
 
 In ManiaScript, you can not declare new classes or any kind of type. Also you can not directly instantiate objects of an existing class. You can only declare pointers to existing objects.
 
@@ -360,8 +366,9 @@ log(Players[0].Login);
 In such cases, it become more clear that Class objects does not behave as Integer or Text values.
 *That's why we thought it would be better to use another symbol when setting variables : to remind that's not a plain affectation.*
 
-### Now what if you want to keep Alice in a variable, and not the Best Player ?
+### More on aliases
 
+Now what if you want to keep Alice in a variable, and not the Best Player ?
 The following code will work "as expected". 
 
 ```
