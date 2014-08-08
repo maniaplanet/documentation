@@ -22,7 +22,7 @@ More details
 
 ## GameModes
 
-GameModes for Trackmania and Shootmania are located in the "" folder of your Maniaplanet User directory (Usually "My Documents/Maniaplanet")
+GameModes for Trackmania and Shootmania are located in the `Scripts\Modes` folder of your Maniaplanet User directory (Usually `My Documents/Maniaplanet`)
 
 
 ## Manialink
