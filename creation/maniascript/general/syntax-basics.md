@@ -26,7 +26,7 @@ Beware : Case is important, always !
 * Real : decimal numbers such as -4.2 or 99. (do not forget the final dot, because 99 is an Integer. Beware, those are different)
 * Text : any character sequence between double quotes : "plop" "gouzi" or "456.32". 
 
-Protips :
+****Protip**s** :
 - inside a Text, The usual escape sequences such as "\n" or "\\" are supported.
 - you can also declare a Text value between 3 double quotes. When doing so, you won't need to escape chars, and it can expand on many lines. """plop="452.12.22" toto"""
 
@@ -41,7 +41,7 @@ or
 After having declared a variable, you'll be able to use it to store data. 
 If the variable is defined as a Integer, you will never be able to store anything else inside. The same goes for other types. 
 
-Protip : Variables are always defined and initialized when declared, meaning they always have a valid value. If not specified, this value will be a default value for the current type.
+**Protip** : Variables are always defined and initialized when declared, meaning they always have a valid value. If not specified, this value will be a default value for the current type.
 
 ### Variable affectation
 Once declared, you can change the value of a variable with a single equal sign : 
@@ -85,7 +85,7 @@ To append strings, you can use the `^` operator. You can also append a Real or a
 MyVar = "Hello " ^ "world!";
 ```
 
-Protip : when using triple-double-quoted Texts you can include variables or expressions in your text with triple-culry-brackets, resulting in something like :
+**Protip** : when using triple-double-quoted Texts you can include variables or expressions in your text with triple-culry-brackets, resulting in something like :
 ```{C}
 MyVar = """Hello {{{NameOfThePlayer}}}, how are you today??? Five = {{{2+3}}}. \o/ """;
 ```
@@ -258,9 +258,9 @@ yield; The script pauses for the shortest amout of time.
 sleep(XXXX); The script pauses for XXXX miliseconds.
 wait(YYYYY); The  script pause until Boolean YYYYY is True. YYYYY will be evaluated repeteadly, so be careful when YYYYY is a function call : the fonction will be called many times.
 
-Equivalents : 
-yield; is equivalent to : sleep(0);
-sleep could be written :
+###Equivalents : 
+* yield; is equivalent to : sleep(0);
+* sleep could be written :
 ```{C}
 
 void Sleep(Integer XXXX){
@@ -272,7 +272,7 @@ void Sleep(Integer XXXX){
 
 ```
 
-wait could be written :
+* wait could be written :
 ```{C}
 
 while(!YYYYY) {
@@ -281,7 +281,7 @@ while(!YYYYY) {
 
 ```
 
-Protip : If you use sleep(XXXX) in a script where you catch events (Manialink scripts for example), you will miss the events which occurred during the sleep(). This is so because one event is only valid during 1 script "frame", i.e the time between two consecutive "yield;" . To avoid that, you can use wait instead :
+**Protip** : If you use sleep(XXXX) in a script where you catch events (Manialink scripts for example), you will miss the events which occurred during the sleep(). This is so because one event is only valid during 1 script "frame", i.e the time between two consecutive "yield;" . To avoid that, you can use wait instead :
 ```{C}
 
 Start = Now;
@@ -356,9 +356,9 @@ log(Players[BestPlayerId].Login);
 
 ```
 
-ProTip : Note that the "log" will be a bit more time-consuming than the previous way : we have to find Alice in the array of players, from the Ident.
+**Protip** : Note that the "log" will be a bit more time-consuming than the previous way : we have to find Alice in the array of players, from the Ident.
 
-ProTip #2 : Yes, this can also be written 
+**Protip** #2 : Yes, this can also be written 
 ```{C}
 
 declare BestPlayer <=> Players[Players[0].Id];  
