@@ -8,7 +8,7 @@ tags:
 ---
 
 ManiaScript Syntax basics
-==
+=====
 
 Maniascript is a powerful scripting language for ManiaPlanet games, you can write new games modes, plugins for the map editor, or make you manialinks more interactive.
 
@@ -17,7 +17,7 @@ If you have programmed before, the basic keywords and language syntax should be 
 Filename extension for scripts is ".script.txt"
 
 Where to write your script ?
-==
+=====
 
 The way to create or change a script depends on the type of script you want.
  - To edit a GameMode, launch a solo or LAN game, and press Ctrl + ScrollLock. If you want to create a new one, lanch an existing one, then press Ctrl + ScrollLock, then SaveAs with a new name.
@@ -27,19 +27,19 @@ The way to create or change a script depends on the type of script you want.
  To learn more about those different contexts, see {{./script-contexts.md}}
 
 Basics
-==
+=====
 
 A script is a text, composed by lines (aka, instructions). Instructions are separated by semicolons, as in C/C++.
 It looks like
-[code]
+```{C}
 declare MyVar = 12;
 MyVar += 1;
 DoSomething(MyVar);
-[/code]
+```
 Beware : Case is important, always !
 
-Simple data Types
-===
+## Simple data Types
+
 Boolean : can be either True or False
 Integer : numbers such as 2 or -5 or 31337
 Real : decimal numbers such as -4.2 or 99. (do not forget the final dot, because 99 is an Integer. Beware, those are different)
@@ -49,7 +49,7 @@ Protips :
 - inside a Text, The usual escape sequences such as "\n" or "\\" are supported.
 - you can also declare a Text value between 3 double quotes. When doing so, you won't need to escape chars, and it can expand on many lines. """plop="452.12.22" toto"""
 
-[b][u]Variable declaration[/u][/b]
+## Variable declaration
 In Maniascript, variables must be declared, either by specifying a Type, or an initial value :
 [code]declare Integer MyVariable;[/code]
 or
@@ -59,20 +59,21 @@ If the variable is defined as a Integer, you will never be able to store anythin
 
 Protip : Variables are always defined and initialized when declared, meaning they always have a valid value. If not specified, this value will be a default value for the current type.
 
-[b][u]Variable affectation[/u][/b]
+## Variable affectation
 Once declared, you can change the value of a variable with a single equal sign : 
 [code]MyVariable = 13+37;[/code]
 As said earlier, the types must match. No implicit conversions are made.
 
-[b][u]Comments[/u][/b]
+## Comments
 Anything right of a double slash // is a comment
 Anything between /* and */ is also a comment
-[code]
+```{C}
 Var = 2 + 5; // This is a comment
 Var = 2 /* This is a comment */ + 5;
-[/code]
+```
 
-[size=150][b][u]Simple operators[/u][/b][/size]
+Simple operators
+=====
 
 Boolean operations are : !  &&  || 
 [code]Var1 && (!Var2 || Var3)[/code]
