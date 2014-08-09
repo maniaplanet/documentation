@@ -15,7 +15,7 @@ tags:
 </manialink>`
 ![PlayerAvatar](./img/player_avatar.jpg)
 
-## How to ge the Player Country flag?
+## How to get the Player Country flag?
 
 `<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <manialink version="1"/>
