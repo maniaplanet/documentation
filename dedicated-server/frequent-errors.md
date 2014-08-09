@@ -25,3 +25,5 @@ Your MatchSettings file is specifying an unknown mode, change it for the value `
 Happens on servers which are online for more then 30 days.
 Restart your server to remove this message for players.
 ```
+
+![Corrupted login](./img/corrupted_login.jpg)
