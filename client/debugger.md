@@ -26,7 +26,7 @@ These tips are for professionals and for bugs, issues, micro-freezes that can he
 6. Press `F12` and you will see information about CPU Usage aswell as GPU Usage:
 ![Debugger](./img/debug4.jpg)
 
-7. Press `Ctrl+F12` 3 times to get the following window:
+7. Press `Ctrl+F11` 3 times to get the following window:
 ![Debugger](./img/debug4.jpg)
 
 It will show the TCpu or TGpu. It will help Nadeo to see if it is a CPU issue or GPU one.
