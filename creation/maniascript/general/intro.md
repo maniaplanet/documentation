@@ -19,6 +19,7 @@ Filename extension for scripts is ".script.txt"
 ###Where to write your script ?
 
 The way to create or change a script depends on the type of script you want.
+
  - To edit a GameMode, launch a solo or LAN game, and press Ctrl + ScrollLock. If you want to create a new one, lanch an existing one, then press Ctrl + ScrollLock, then SaveAs with a new name.
  - To edit or create an mapeditor plugin, use the plugin menu (the "fork" icon) in the editor
  - To have a script in a manialink XML file, add a <script> ... </script> part in the manialink XML file
