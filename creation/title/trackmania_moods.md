@@ -10,7 +10,7 @@ tags:
 # Trackmania Stadium
 
 ## Day
-```xml
+{% highlight xml %}
 <Mood>
 	<Light EnableStars="1" Latitude="45" DayTime01="0.6" LocalLightX="0.25" HelperHdrX="1">
 		<LAmbient Color="fffbff" Scale="0.0369" />
@@ -69,10 +69,10 @@ tags:
 		</T3ToneMap>
 	</Fx>
 </Mood>
-```
+{% endhighlight %}
 
 ## Night
-```xml
+{% highlight xml %}
 <Mood>
 	<Light EnableStars="1" Latitude="48" DayTime01="0.15" LocalLightX="1" HelperHdrX="1">
 		<LAmbient Color="ffffff" Scale="0.0908" />
@@ -124,10 +124,10 @@ tags:
 		</T3ToneMap>
 	</Fx>
 </Mood>
-```
+{% endhighlight %}
 
 ## Sunrise
-```xml
+{% highlight xml %}
 <Mood>
 	<Light EnableStars="1" Latitude="45" DayTime01="0.52" LocalLightX="1" HelperHdrX="1">
 		<LAmbient Color="d0e7ff" Scale="0.361" />
@@ -188,10 +188,10 @@ tags:
 		</T3ToneMap>
 	</Fx>
 </Mood>
-```
+{% endhighlight %}
 
 ## Sunset
-```xml
+{% highlight xml %}
 <Mood>
 	<Light EnableStars="1" Latitude="65" DayTime01="0.73" LocalLightX="0.8" HelperHdrX="1">
 		<LAmbient Color="f7dcff" Scale="0.319" />
@@ -249,12 +249,12 @@ tags:
 		</T3ToneMap>
 	</Fx>
 </Mood>
-```
+{% endhighlight %}
 
 # Trackmania Canyon
 
 ## Day
-```xml
+{% highlight xml %}
 <Mood>
 	<Light EnableStars="0" Latitude="35" DayTime01="0.644" LocalLightX="0.3" HelperHdrX="1">
 		<LAmbient Color="cce2ff" Scale="0.815" />
@@ -314,9 +314,9 @@ tags:
 		</T3ToneMap>
 	</Fx>
 </Mood>
-```
+{% endhighlight %}
 ## Night
-```xml
+{% highlight xml %}
 <Mood>
 	<Light EnableStars="1" Latitude="48" DayTime01="0.15" LocalLightX="1" HelperHdrX="0.25">
 		<LAmbient Color="e6e6ff" Scale="0.0123" />
@@ -369,9 +369,9 @@ tags:
 		</T3ToneMap>
 	</Fx>
 </Mood>
-```
+{% endhighlight %}
 ## Sunrise
-```xml
+{% highlight xml %}
 <Mood>
 	<Light EnableStars="1" Latitude="63" DayTime01="0.56" LocalLightX="0.5" HelperHdrX="1">
 		<LAmbient Color="e0ecff" Scale="0.54601" />
@@ -433,9 +433,9 @@ tags:
 		<ColorGrading FileName="" Intensity="1" />
 	</Fx>
 </Mood>
-```
+{% endhighlight %}
 ## Sunset
-```xml
+{% highlight xml %}
 <Mood>
 	<Light EnableStars="1" Latitude="30" DayTime01="0.743" LocalLightX="1" HelperHdrX="0.75">
 		<LAmbient Color="e3daff" Scale="0.515" />
@@ -493,12 +493,12 @@ tags:
 		</T3ToneMap>
 	</Fx>
 </Mood>
-```
+{% endhighlight %}
 
 # Trackmania Valley
 
 ## Day
-```xml
+{% highlight xml %}
 <Mood>
 	<Light EnableStars="0" Latitude="35" DayTime01="0.644" LocalLightX="0.5" HelperHdrX="1">
 		<LAmbient Color="b1cdff" Scale="0.982" />
@@ -557,9 +557,9 @@ tags:
 		</T3ToneMap>
 	</Fx>
 </Mood>
-```
+{% endhighlight %}
 ## Night
-```xml
+{% highlight xml %}
 <Mood>
 	<Light EnableStars="1" Latitude="48" DayTime01="0.15" LocalLightX="1" HelperHdrX="0.25">
 		<LAmbient Color="ececff" Scale="0.0232" />
@@ -614,9 +614,9 @@ tags:
 		</T3ToneMap>
 	</Fx>
 </Mood>
-```
+{% endhighlight %}
 ## Sunrise
-```xml
+{% highlight xml %}
 <Mood>
 	<Light EnableStars="1" Latitude="63" DayTime01="0.56" LocalLightX="0.5" HelperHdrX="1">
 		<LAmbient Color="d7e3ff" Scale="0.571" />
@@ -679,9 +679,9 @@ tags:
 		</T3ToneMap>
 	</Fx>
 </Mood>
-```
+{% endhighlight %}
 ## Sunset
-```xml
+{% highlight xml %}
 <Mood>
 	<Light EnableStars="1" Latitude="30" DayTime01="0.743" LocalLightX="1" HelperHdrX="1">
 		<LAmbient Color="ffe3ed" Scale="0.738" />
@@ -736,4 +736,4 @@ tags:
 		</T3ToneMap>
 	</Fx>
 </Mood>
-```
+{% endhighlight %}

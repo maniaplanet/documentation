@@ -10,7 +10,7 @@ tags:
 # ShootMania Storm
 
 ## Land/Day
-```xml
+{% highlight xml %}
 <Mood>
   <Light EnableStars="0" Latitude="5" DayTime01="0.56" LocalLightX="1" HelperHdrX="0.7">
     <LAmbient Color="dce5ff" Scale="0.22323"/>
@@ -63,10 +63,10 @@ tags:
     <ColorGrading FileName="" Intensity="1"/>
   </Fx>
 </Mood>
-```
+{% endhighlight %}
 
 ## Land/Night
-```xml
+{% highlight xml %}
 <Mood>
   <Light EnableStars="1" Latitude="48" DayTime01="0.15" LocalLightX="0.9" HelperHdrX="0.25">
     <LAmbient Color="bbccff" Scale="0.0271536"/>
@@ -119,10 +119,10 @@ tags:
     <ColorGrading FileName="" Intensity="1"/>
   </Fx>
 </Mood>
-```
+{% endhighlight %}
 
 ## Land/Sunrise
-```xml
+{% highlight xml %}
 <Mood>
   <Light EnableStars="0" Latitude="15" DayTime01="0.519" LocalLightX="0.85" HelperHdrX="0.4">
     <LAmbient Color="ffe5d4" Scale="0.090583"/>
@@ -175,10 +175,10 @@ tags:
     <ColorGrading FileName="" Intensity="1"/>
   </Fx>
 </Mood>
-```
+{% endhighlight %}
 
 ## Land/Sunset
-```xml
+{% highlight xml %}
 <Mood>
   <Light EnableStars="1" Latitude="60" DayTime01="0.67" LocalLightX="1" HelperHdrX="0.5">
     <LAmbient Color="ffc8bd" Scale="0.337167"/>
@@ -234,10 +234,10 @@ tags:
     <ColorGrading FileName="" Intensity="1"/>
   </Fx>
 </Mood>
-```
+{% endhighlight %}
 
 ## Water/Day
-```xml
+{% highlight xml %}
 <Mood>
   <Light EnableStars="1" Latitude="45" DayTime01="0.56" LocalLightX="1" HelperHdrX="0.8">
     <LAmbient Color="cee3ff" Scale="1.18933"/>
@@ -297,10 +297,10 @@ tags:
     <ColorGrading FileName="" Intensity="1"/>
   </Fx>
 </Mood>
-```
+{% endhighlight %}
 
 ## Water/Night
-```xml
+{% highlight xml %}
 <Mood>
   <Light EnableStars="1" Latitude="48" DayTime01="0.15" LocalLightX="1" HelperHdrX="0.2">
     <LAmbient Color="dddfff" Scale="0.0706324"/>
@@ -353,10 +353,10 @@ tags:
     <ColorGrading FileName="" Intensity="1"/>
   </Fx>
 </Mood>
-```
+{% endhighlight %}
 
 ## Water/Sunrise
-```xml
+{% highlight xml %}
 <Mood>
   <Light EnableStars="1" Latitude="45" DayTime01="0.525" LocalLightX="1" HelperHdrX="0.65">
     <LAmbient Color="cfd8ff" Scale="0.430004"/>
@@ -418,10 +418,10 @@ tags:
     <ColorGrading FileName="" Intensity="1"/>
   </Fx>
 </Mood>
-```
+{% endhighlight %}
 
 ## Water/Sunset
-```xml
+{% highlight xml %}
 <Mood>
   <Light EnableStars="1" Latitude="60" DayTime01="0.67" LocalLightX="1" HelperHdrX="0.5">
     <LAmbient Color="ffd8ec" Scale="0.18115"/>
@@ -477,4 +477,4 @@ tags:
     <ColorGrading FileName="" Intensity="1"/>
   </Fx>
 </Mood>
-```
+{% endhighlight %}
