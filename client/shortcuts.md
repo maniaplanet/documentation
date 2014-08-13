@@ -130,3 +130,7 @@ tags: client
 
 * BACKSPACE: Delete all blocks in the selection
 * Ctrl + left mouse click: selects block type at the cursor position
+
+## Test Mode:
+
+* F: FlyMode 
