@@ -12,7 +12,9 @@
 
     var headers = $(' .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 ').filter(function() {
       // get all headers with an ID
-      $(this).attr( "id", $(this).prev().attr( "name" ).replace(/\./g, "-") );
+      if (!this.id) {
+        this.id = $(this).attr( "id", $(this).prev().attr( "name" ).replace(/\./g, "-") );
+      }
       return this.id;
     }), output = $(this);
     if (!headers.length || headers.length < 3 || !output.length) {
