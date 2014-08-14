@@ -43,7 +43,7 @@ A tutorial learning you how to create a skin for your character.
 [More...][7]
 
 # [Create an emblem][8]
-The assets to create an emblema for your character
+The assets to create an emblema for your character.
 [More...][8]
 
 [1]: ./maniascript/
