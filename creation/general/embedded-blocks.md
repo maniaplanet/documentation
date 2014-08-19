@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Create a custom horn
+title: Add Embedded blocks
 description: How to include an embedded block in maps
 tags:
 - creation
