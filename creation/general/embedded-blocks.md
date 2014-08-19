@@ -28,10 +28,12 @@ The last few days i spent lots of time with this topic and I'd like to share wha
 In addition to Haagse's links: [ConvertAssistant][4]
 
 And some good blender-sites:
+
 * [Blender Tutorial documents][5] (german)
 * [Blender Tutorial videos][6] (english)
 
 And here what i worked out so far:
+
 * [An overview of blender-shortcuts][7] (alphabetically)
 * [The Canyon Materials alphabetically + PhysicsIds + Textures][8]
 * [The PhysicsIds alphabetically][9]
