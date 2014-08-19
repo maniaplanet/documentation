@@ -35,7 +35,10 @@ And here what i worked out so far:
 * [An overview of blender-shortcuts][7] (alphabetically)
 * [The Canyon Materials alphabetically + PhysicsIds + Textures][8]
 * [The PhysicsIds alphabetically][9]
-* An overview-picture of Canyon-Textures ![][10]
+* An overview-picture of Canyon-Textures
+
+![][10]
+
 * [A HowTo for NadeoImporter][11]
 * [Some example files for the howTo][12] (blender-file, work-files & ready item)
 
