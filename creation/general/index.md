@@ -16,9 +16,9 @@ tags:
 * [Create a locator][5]: Tutorial for creating a locator for Trackmania² & Shootmania
 * [Embed a block in maps][6]: How to include an embedded block in maps
 
-[1]: ./general/create-a-player-skin.html
-[2]: ./general/create-an-emblem.html
-[3]: ./general/create-a-custom-sticker.html
-[4]: ./general/create-a-custom-horn.html
-[5]: ./general/create-a-locator.html
-[6]: ./general/embedded-blocks.html
+[1]: ./create-a-player-skin.html
+[2]: ./create-an-emblem.html
+[3]: ./create-a-custom-sticker.html
+[4]: ./create-a-custom-horn.html
+[5]: ./create-a-locator.html
+[6]: ./embedded-blocks.html

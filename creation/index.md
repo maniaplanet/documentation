@@ -46,6 +46,22 @@ A tutorial learning you how to create a skin for your character.
 The assets to create an emblema for your character
 [More...][8]
 
+# [Create a custom sticker][9]
+Tutorial for creating a custom sticker for Trackmania²
+[More...][9]
+
+# [Create a custom horn][10]
+Tutorial for creating a custom horn for Trackmania² & Shootmania
+[More...][10]
+
+# [Create a locator][11]
+Tutorial for creating a locator for Trackmania² & Shootmania
+[More...][11]
+
+# [Embed a block in maps][12]
+How to include an embedded block in maps
+[More...][12]
+
 [1]: ./maniascript/
 [2]: ./manialink/
 [3]: ./map-editor/
@@ -54,3 +70,7 @@ The assets to create an emblema for your character
 [6]: ./importer/
 [7]: ./general/create-a-player-skin.html
 [8]: ./general/create-an-emblem.html
+[9]: ./general/create-a-custom-sticker.html
+[10]: ./general/create-a-custom-horn.html
+[11]: ./general/create-a-locator.html
+[12]: ./general/embedded-blocks.html
