@@ -38,6 +38,7 @@ Beware : Case is important, always !
 In Maniascript, variables must be declared, either by specifying a Type, or an initial value :
 
 `declare Integer MyVariable;`
+
 or
 
 `declare MyVariable = 42.;`
@@ -52,15 +53,15 @@ Examples:
 
 ```
 declare planets = 9000; // planets will be cast to Integer
-planets = "9000 planets"; // this would cast an error.
-declare Text serverName; // serverName initial value is now Null
+planets = "9000 planets"; // this would raise an error.
+declare Text serverName; // serverName initial value is an empty string
 serverName = "My testing server";
 log(serverName ^ " has currently " ^ planets ^ "p.");
 ```
 
 ### Variable scope
 
-Scope in maniascript is same as many other languages, a scope is defined with curly brackets starting with `{` and ending with `}`. Variable visibility is limited to a scope.
+Scope in maniascript is same as many other languages. A scope is defined with a matching pair of curly brackets :  starting with `{` and ending with `}`. Variable visibility is limited to the largest scope containing the declaration of the variable. Variable visibility is also limited to the instructions following the declaration.
 
 ### Global Variables
 
