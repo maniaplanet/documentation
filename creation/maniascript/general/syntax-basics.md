@@ -12,11 +12,13 @@ ManiaScript Syntax basics
 
 A script is a text, composed by lines (aka, instructions). Instructions are separated by semicolons, as in C/C++.
 It looks like
+
 ```
 declare MyVar = 12;
 MyVar += 1;
 DoSomething(MyVar);
 ```
+
 Beware : Case is important, always !
 
 ## Simple data Types
