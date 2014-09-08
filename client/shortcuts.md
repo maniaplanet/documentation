@@ -92,7 +92,7 @@ tags: client
 * F4 : Items mode: allows to place additional items, as well as third-party items
 * F5 : Macroblock mode
 * H : shows helper dialog
-* M : toggles display of raster
+* M : toggles display of raster (On AZERTY keyboard use , instead)
 * P : opens Plugins mode
 * R : revert a previous usge of undo
 * U : undo a previous block operation
