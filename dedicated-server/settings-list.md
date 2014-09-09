@@ -32,23 +32,23 @@ tags:
 
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
-|**S_TimeLimit**|0|Time limit (<= 0 to disable)|
+|**S_TimeLimit**|0|Time limit (0 to disable, < 0 automatic based on author time)|
 |**S_ForceLapsNb**|5|Number of Laps (<= 0 to disable)|
-|**S_FinishTimeout**|-1|Finish timeout (<= 0 to disable)|
+|**S_FinishTimeout**|-1|Finish timeout (< 0 automatic based on author time)|
 
 ## Rounds (+RoundsBase)
 
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
-|**S_PointsLimit**|50|Points limit (<= 0 to disable)|
+|**S_PointsLimit**|50|Points limit|
 |**S_UseTieBreak**|True|Continue to play the map until the tie is broken|
 
 ## RoundsBase
 
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
-|**S_PointsLimit**|100|Points limit (<= 0 to disable)|
-|**S_FinishTimeout**|-1|Finish timeout (<= 0 to disable)|
+|**S_PointsLimit**|100|Points limit|
+|**S_FinishTimeout**|-1|Finish timeout (< 0 automatic based on author time)|
 |**S_UseAlternateRules**|False|Use alternate rules|
 |**S_ForceLapsNb**|-1|Force number of laps (<= 0 to disable)|
 |**S_DisplayTimeDiff**|False|Display time difference at checkpoint|
@@ -57,7 +57,7 @@ tags:
 
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
-|**S_PointsLimit**|5|Points limit (<= 0 to disable)|
+|**S_PointsLimit**|5|Points limit|
 |**S_MaxPointsPerRound**|6|The maxium number of points attributed to the first player to cross the finish line|
 |**S_PointsGap**|1|The number of points lead a team must have to win the map|
 |**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
