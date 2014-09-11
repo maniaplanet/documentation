@@ -42,7 +42,7 @@ To make an engine, you just throw engine loops in a folder called "Engine/", wit
 
     loop_{rpm}_{gas}_{perspective}.wav/ogg
 
-with:
+with:  
 -    {rpm} = xxxRpm  
     internally the engine goes from 2500 -> 10000. The game will pick the lower and higher value from the file list, and expand to this range
     
@@ -58,6 +58,7 @@ with:
 
 You can put any number of files matching those criteria, and the game will pick up and use what fits best.
 (well any: at most 16 for each perpective.  And the duration of each loop not be lower than 8 samples - avoid empty files)
+The sounds must be 1-channel ogg or wav files.
 
 For an example, see `Vehicles\Media\Audio\Sound\WavData\ValleyEngine_2013_03_06\` in `C:\ProgramData\ManiaPlanet\PacksCache\TMValley_HD.zip`
 
