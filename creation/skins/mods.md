@@ -1,7 +1,9 @@
 ---
-layout: static
+layout: default
 title: mods doc
 description: Specifiaction for modding environement textures
+tags:
+- creation
 ---
 
 ----
