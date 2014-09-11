@@ -43,6 +43,9 @@ A tutorial learning you how to create a skin for your character.
 [More...][7]  
 And the specification for creating [vehicle skins][13].
 
+# [Create an Environment mods][14]
+Specification for creating [environment mods][14].
+
 # [Create an emblem][8]
 The assets to create an emblema for your character
 [More...][8]
@@ -82,4 +85,5 @@ It is also available in-game, by pressing the '''ctrl+shift+²''' / '''ctrl+shif
 [11]: ./general/create-a-locator.html
 [12]: ./general/embedded-blocks.html
 [13]: ./skins/vehicleskins.html
+[14]: ./skins/mods.html
 
