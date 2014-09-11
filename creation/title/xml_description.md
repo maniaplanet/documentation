@@ -123,6 +123,10 @@ The game default menus will be used, unless you set a `manialink` url to be used
 	<editor>
 		<maptype name=""/>
 		<simple_editor_map name=""/>
+		<internalitems>
+			<item name="Storm\MeleeUltimate\Armor.Item.gbx"/>
+			....
+		</internalitems>
 	</editor>
 	<solo>
 		<medals>0</medals>
@@ -130,6 +134,7 @@ The game default menus will be used, unless you set a `manialink` url to be used
 		<mode name=""/>
 		<campaign folder=""/>
 		<playlist name=""/>
+		<datapack name=""/>
 	</solo>
 	<network>
 		<mode name=""/>
@@ -147,6 +152,10 @@ TBD.
 Most of those are used to force values. for instance, if you leave the `mode name=""` empty, the user will be able to choose any mode among the files provided by the title or that he has on his hardrive.
 
 The `mod` will be used on all the maps that haven't any specific mod.
+
+`datapack` can be used to provide a .zip file containing additional content only available to the solo campaign, but not the editor or online modes.
+
+`internalitems` allows to provide a list of items to forbid using in new map creation. The items will still be available to allow loading of older maps, but will no longer be listed in the editor.
 
 
 ----

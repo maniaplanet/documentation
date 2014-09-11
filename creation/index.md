@@ -62,6 +62,12 @@ Tutorial for creating a locator for Trackmania² & Shootmania
 How to include an embedded block in maps
 [More...][12]
 
+
+# UGCErrorsLog.txt
+In the Documents/ManiaPlanet folder, a log file containing various warnings and errors about user content can be found.
+It is also available in-game, by pressing the '''ctrl+shift+²''' / '''ctrl+shift+~''' key.
+
+
 [1]: ./maniascript/
 [2]: ./manialink/
 [3]: ./map-editor/
