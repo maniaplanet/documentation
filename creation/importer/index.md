@@ -7,9 +7,6 @@ tags:
 - importer
 ---
 
-** WARNING : USE THE NEW IMPORTER ONLY WITH MANIAPLANET BETA 3**
-** SOME ISSUES (PROPER LIGHTS DISPLAY) ARE CLIENT ISSUES (NOT IMPORTER ISSUES) AND WILL BE IN NEXT CLIENT UPDATE (NOT FIXED IN BUILD 2014_04_02) **
-
 The importer is a tool to generate items (static objects, dynamic objects, characters), and also to generate character or vehicle skins.
 
 
@@ -24,7 +21,7 @@ and so on.
 
 Current Release
 -
-importer : http://files.maniaplanet.com/tools/NadeoImporter_2014_07_23.zip
+importer : http://files.maniaplanet.com/tools/NadeoImporter_2014_09_10.zip
 
 sample files : http://files.maniaplanet.com/tools/NadeoImporterSamples_2014_04_09.zip
 
@@ -59,6 +56,12 @@ See the dedicated page: [font import](importer_font.html)
 ChangeLog
 -
 ```
+2014-09-10  - mesh import fixes :
+				- wrong mesh optimisation when smoothing groups (for .3ds)
+				- fix crash with "not collidable"
+				- fix a bug causing too much faces in shapes for items with lod. (re-import recommended)
+				- fix a bug causing duplicated vertices on some materials.
+	
 2014-07-23  - font importer
 2014-04-08  - major importer update, new doc
 2014-03-28  - pivot snapping parameter (pivot snapping already existed but it could not be customized nor deactivated)
@@ -88,6 +91,7 @@ ChangeLog
 
 All releases
 --
+- http://files.maniaplanet.com/tools/NadeoImporter_2014_09_10.zip
 - http://files.maniaplanet.com/tools/NadeoImporter_2014_07_23.zip
 - http://files.maniaplanet.com/tools/NadeoImporter_2014_04_09.zip
 - http://files.maniaplanet.com/tools/NadeoImporter_2014_03_27.zip
