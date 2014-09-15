@@ -135,6 +135,7 @@ tags:
 |**S_WarmUpDuration**|90|Warmup duration (0: disabled)|
 |**S_AllowUnbalancedTeams**|False|Allow a game to begin without the same number of players in each team|
 |**S_UseArmorReduction**|False|Reduce the armor of players above two armor points|
+|**S_ArmorMax**|4|Maximum number of armors a player can have|
 |**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
 
 ## Elite (+ModeSport, +ModeMatchmaking)
@@ -197,6 +198,7 @@ tags:
 |**S_RestartMatchOnTeamChange**|False|Restart the match after the warm up if the teams have changed|
 |**S_Practice**|False|Play in practice mode|
 |**S_PracticeRoundLimit**|3|Number of attack turns by player in practice mode|
+|**S_WarnWhenSpectating**|True|Send a message in the chat when a player switch to spectator mode|
 
 ## Melee
 
