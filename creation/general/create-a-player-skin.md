@@ -57,6 +57,12 @@ Contains Player Animations.
 **Player_1.Solid2.gbx**  
 Contains Player Model.
 
+**Horn.wav**
+The default horn sound for this skin.  (which can be overriden in the profile menu in-game)
+
+**Sound\**
+Replicate (part of) the contents of `ShootMania\Media\Audio\Sound\Character\Man\` (included in `C:\ProgramData\ManiaPlanet\PacksCache\ShootMania.zip`) and override the sounds as you like for your skin.
+
 
 # Packing the things up
 Once you're done with your edits you probably want to see this ingame. To have this ingame you will need to pack the files I listed before into a zip archive. When you zip it the most important thing is that the archive should not contain any folders. Besides that the only thing worth to mention is that the zip archive name (excluding .zip) will be the name of your skin that is shown ingame.

@@ -80,8 +80,9 @@ If you press ctrl+g a second time you will open the full debug window (and a thi
 
 While playing:
 
-  * F12: open the script editor
-  * ctrl + g: open the log window / open the debug window / close the debug window
+  * scroll-lock: open the script editor
+  * Shift + scroll-lock: reload the script from disk.
+  * ctrl + g or ctrl + ² / ctrl + ~: open the log window / open the debug window / close the debug window
 
 While editing a script
 

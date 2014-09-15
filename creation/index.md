@@ -40,7 +40,11 @@ The importer is a tool that allows you to import assets from external 3d creatio
 
 # [Create a Player Skin][7]
 A tutorial learning you how to create a skin for your character.
-[More...][7]
+[More...][7]  
+And the specification for creating [vehicle skins][13].
+
+# [Create an Environment mods][14]
+Specification for creating [environment mods][14].
 
 # [Create an emblem][8]
 The assets to create an emblema for your character
@@ -62,6 +66,12 @@ Tutorial for creating a locator for Trackmania² & Shootmania
 How to include an embedded block in maps
 [More...][12]
 
+
+# UGCErrorsLog.txt
+In the Documents/ManiaPlanet folder, a log file containing various warnings and errors about user content can be found.
+It is also available in-game, by pressing the '''ctrl+shift+²''' / '''ctrl+shift+~''' key.
+
+
 [1]: ./maniascript/
 [2]: ./manialink/
 [3]: ./map-editor/
@@ -74,3 +84,6 @@ How to include an embedded block in maps
 [10]: ./general/create-a-custom-horn.html
 [11]: ./general/create-a-locator.html
 [12]: ./general/embedded-blocks.html
+[13]: ./skins/vehicleskins.html
+[14]: ./skins/mods.html
+
