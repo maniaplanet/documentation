@@ -253,7 +253,7 @@ The time is in milliseconds.
 #### Combo_Pause
 * Data : An array with one value saying if the mode is in pause or not
 * Example : ["True"]
-* Note : This callback is sent after using the `Combo_GetPause` method.
+* Note : This callback is sent after using the `Combo_GetPause` method or when the pause status changes.
 * Available since : Combo.Script.txt v2014-09-15
 
 
