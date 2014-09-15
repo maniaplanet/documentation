@@ -248,6 +248,15 @@ The time is in milliseconds.
 * Note : This callback is sent at the end of the round.
 
 
+### Combo
+
+#### Combo_Pause
+* Data : An array with one value saying if the mode is in pause or not
+* Example : ["True"]
+* Note : This callback is sent after using the `Combo_GetPause` method.
+* Available since : Combo.Script.txt v2014-09-15
+
+
 ### Elite
 
 Elite is a bit special as it uses an older callback function and JSON encoding.
@@ -948,6 +957,18 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 * Note : Change the position of the timers layer
 * String : "Combo_SetTimersLayerPosition"
 * Array :  ["151.5", "-82.", "0."] ([PosX, PosY, PosZ])
+
+#### Combo_SetPause
+* Note : Enable or disable the pause mode.
+* String1 : "Combo_SetPause"
+* String2 : "True" or "False"
+* Available since : Combo.Script.txt v2014-09-15
+
+#### Combo_GetPause
+* Note : Get the current pause status. This will sent the `Combo_Pause` callback in return.
+* String1 : "Combo_GetPause"
+* String2 : ""
+* Available since : Combo.Script.txt v2014-09-15
 
 ### Elite
 
