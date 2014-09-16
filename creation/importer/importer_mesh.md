@@ -147,7 +147,7 @@ the fbx material named "B" will be displayed as the "BaseGround" material of the
 2.3. Lights
 --
 It's now possible to create lights  **only for static meshes.**  
-For eah light name present in the fbx file, you can define the corresponding imported light.  
+For each light name present in the fbx file, you can define the corresponding imported light.  
 
 You can define the light type and the light parameters  
 
@@ -155,8 +155,8 @@ the `<Lights>` node contains an array of `<Light>` nodes.
 
 `<Light>` attributes
 
-- `Name` : mandatory. name the fbx light
-- `Type` : mandatory. the type the light
+- `Name` : mandatory. name of the fbx light
+- `Type` : mandatory. the type of the light
 	values : `"Point", "Spot"`
 - `sRGB` :	optional. color of the light (sRGB space)
 	value : 6 chars color in r, g, b order.
@@ -167,14 +167,14 @@ the `<Lights>` node contains an array of `<Light>` nodes.
 	- keep the distance as low as possible in order to keep the lightmap calculus time low.
 	- Many lights with long distance would cause long lightmap calculus time.
 	- Prefer `"spot"` lights rather than `"point"` lights for long distances.
-- `PointEmissionRadius` : optional. for point lights only, makes the light come from  ball of radius PointEmissionRadius meters instead of a single point.
-- `PointEmissionLength`	: otpional. for point lights only, makes the light come form a segment of PointEmissionLength meters (along Z axis) instead of a single point
+- `PointEmissionRadius` : optional. for point lights only, makes the light come from a ball of radius PointEmissionRadius meters instead of a single point.
+- `PointEmissionLength`	: optional. for point lights only, makes the light come form a segment of PointEmissionLength meters (along Z axis) instead of a single point.
 - `SpotInnerAngle` : optional. for spot lights only. inner angle of the spot in degrees. (angle without attenuation)
 - `SpotOuterAngle` : optional. for spot lights only. outer angle of the spot in degrees. (angle at full attenuation)
-	the light intensity varies for maximum to null from  SpotInnerAngle to SpotOuterAngle
-- `SpotEmissionSizeX` : optional. for spot lights only. size in meters of the emission rectangle along X axis
-- `SpotEmissionSizeY` : optional. for spot lights only. size in meters of the emission rectangle along Y axis
-- `NightOnly` : optional. tell if the light is active in night moods.
+	the light intensity varies for maximum to null from  SpotInnerAngle to SpotOuterAngle.
+- `SpotEmissionSizeX` : optional. for spot lights only. size in meters of the emission rectangle along X axis.
+- `SpotEmissionSizeY` : optional. for spot lights only. size in meters of the emission rectangle along Y axis.
+- `NightOnly` : optional. tells if the light is active in night moods only.
 	values : `"true", "false"`
 
 2.4.Textures
@@ -184,7 +184,7 @@ In the meshparam.xml file, you can now set the import texture parameters (as in 
 `<Textures>` attributes :
 
 - `MaxSize` : optional. in pixels, the max size of the max (width or height) of the imported texture
-- `HqDds` : opional. `"true"` if you want to use a better - but slower - dds compressor
+- `HqDds` : optional. `"true"` if you want to use a better - but slower - dds compressor
 
 3. Appendix
 --
