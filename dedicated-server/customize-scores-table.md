@@ -35,7 +35,7 @@ It is recommended to use a local file when possible. The XML is loaded at script
 If you modify the setting once the server is started you'll have to restart the map to take the new value into account.
 The library will write informations about the loading of the XML file in the log. So, if you have a problem check you latest log file.
 
-Another way to apply a custom style to the scores table is to send the xml string directly to the server with the `LibScoresTable2_SetStyleFromXml` XmlRpc method. Check the [script XmlRpc methods documentation]({{ site.url }}/dedicated-server/xml-rpc-scripts.html) to learn more about it.
+Another way to apply a custom style to the scores table is to send the xml string directly to the server with the `LibScoresTable2_SetStyleFromXml` XmlRpc method. Check the [script XmlRpc methods documentation]({{ site.docurl }}/dedicated-server/xmlrpc/xml-rpc-scripts.html) to learn more about it.
 
 # Complete XML file
 

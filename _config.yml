@@ -12,6 +12,7 @@ description:      '<div style="text-align:center;"><a href="/"><img src="/img/ma
 url:              http://www.maniaplanet.com
 baseurl:          '/'
 paginate:         5
+docurl:           http://doc.maniaplanet.com
 
 author:
   name:           'Nadeo'

@@ -28,7 +28,7 @@ ST2::Build("SM");
 The `Build()` function must always be called once after an update in the structure of the scores table.
 
 The `ModeBase` script include the `XmlRpcLoop()` function to manage the XmlRpc methods and callbacks of the scores table so don't have to include it yourself.
-There's also the `MB_SetScoresTableStyleFromXml()` function that can take in charge all the process of applying a style from an XML file by calling `RequestStyleFromXml()`, `WaitStyleFromXml()` and `SetStyleFromXml()`. For a detailed explanation on scores table customization from an XML file see [this page]({{ site.url }}/dedicated-server/customize-scores-table.html).
+There's also the `MB_SetScoresTableStyleFromXml()` function that can take in charge all the process of applying a style from an XML file by calling `RequestStyleFromXml()`, `WaitStyleFromXml()` and `SetStyleFromXml()`. For a detailed explanation on scores table customization from an XML file see [this page]({{ site.docurl }}/dedicated-server/customize-scores-table.html).
 
 Now let's take a quick look on all the functions available in the library.
 

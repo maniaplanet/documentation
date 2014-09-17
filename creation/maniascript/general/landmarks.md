@@ -72,7 +72,7 @@ When working in the `CSmMode` or `CSmMlScriptIngame` context you now have access
 Their names should be quite explicit. `MapLandmarks` contains all the landmarks while the others contain landmarks with at least one specific component: `PlayerSpawn`, `Gauge`, `BotPath`, `ObjectAnchor` or `Gate`. So if you go through the `MapLandmarks_Gauge` array you could find poles, gates or custom objects with a `Gauge`.
 All these arrays contain objects of class `CSmMapLandmarks` and not the specified component. So in `MapLandmarks_PlayerSpawn` you'll find objects with the class `CSmMapLandmark` and not `CSmMapPlayerSpawn`.
 
-Beside these arrays you can also use the ShootMania/Map library to find and access the landmarks of the current map. You can find its documentation [here]({{ site.url }}/maniascript/libraries/library-shootmania-map.html).
+Beside these arrays you can also use the ShootMania/Map library to find and access the landmarks of the current map. You can find its documentation [here]({{ site.docurl }}/maniascript/libraries/library-shootmania-map.html).
 
 
 ## Converting old modes
