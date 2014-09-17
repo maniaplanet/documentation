@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ManiaPlanet tools
+title: Tools
 description: List of tools
 tags: tools
 ---

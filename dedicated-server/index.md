@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ManiaPlanet dedicated server help
+title: Server
 description: How to run your own TrackMania² or ShootMania server
 tags: dedicated
 ---
