@@ -51,7 +51,7 @@ To customize the UI, you have to trigger the UI_SetProperties XmlRpc method with
   <go visible="true" />
   <!-- Current race chrono displayed at the bottom center of the screen -->
   <chrono visible="true" pos="0. 0. 0." />
-  <!-- Speed and distance raced displayed in the bottom right of the script -->
+  <!-- Speed and distance raced displayed in the bottom right of the screen -->
   <speed_and_dist visible="true" />
   <!-- Previous and best times displayed at the bottom right of the screen -->
   <personnal_best_and_rank visible="true" pos="0. 0. 0." />
@@ -61,6 +61,8 @@ To customize the UI, you have to trigger the UI_SetProperties XmlRpc method with
   <checkpoint_time visible="true" pos="0. 0. 0." />
   <!-- The avatar of the last player speaking in the chat displayed above the chat -->
   <chat_avatar visible="true" />
+  <!-- Warm-up progression displayed on the right of the screen during warm-up -->
+  <warmup visible="true" pos="0. 0. 0." />
 </ui_properties>
 {% endhighlight %}
 
