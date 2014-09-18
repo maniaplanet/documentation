@@ -110,6 +110,12 @@ The only exception is Elite that has some very specific callbacks.
 * Example : []
 * Note : This callback is sent at the end of the warm up
 
+### UI_Properties
+* Data : An xml string with the Trackmania ui properties. Check the [documentation]({{ site.docurl }}/creation/maniascript/libraries/library-ui.html) for more information.
+* Example : ["<ui_properties></ui_properties>"]
+* Note : This callback is sent when the script receives the `UI_GetProperties` trigger.
+* Version : available since UI.Script.txt_v2014-09-16
+
 
 ## ShootMania
 
@@ -860,12 +866,6 @@ the login, rank, best checkpoints, team id, spectator status, away status, best 
 * Example : ["True"]
 * Note : This callback is sent when the script receives the `LibXmlRpc_GetWarmUp` trigger.
 
-#### UI_Properties
-* Data : An xml string with the Trackmania ui properties. Check the [documentation]({{ site.docurl }}/creation/maniascript/libraries/library-ui.html) for more information.
-* Example : ["<ui_properties></ui_properties>"]
-* Note : This callback is sent when the script receives the `UI_GetProperties` trigger.
-* Version : available since UI.Script.txt_v2014-09-16
-
 
 ### Rounds / Cup
 
@@ -886,13 +886,13 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 * String1 : "LibXmlRpc_GetPlayerRanking"
 * String2 :  "LoginOfThePlayer"
 
-#### UI_SetProperties
+### UI_SetProperties
 * Note : Set the properties of the UI. Check the [documentation]({{ site.docurl }}/creation/maniascript/libraries/library-ui.html) for more information.
 * String1 : "UI_SetProperties"
 * String2 : "<ui_properties></ui_properties>"
 * Version : available since UI.Script.txt_v2014-09-16
 
-#### UI_GetProperties
+### UI_GetProperties
 * Note : Get the properties of the Trackmania UI. Check the [documentation]({{ site.docurl }}/creation/maniascript/libraries/library-ui.html) for more information. This method triggers the `UI_Properties` callback.
 * String1 : "UI_GetProperties"
 * String2 : ""
