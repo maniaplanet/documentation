@@ -254,7 +254,7 @@ The time is in milliseconds.
 * Data : An array with one value saying if the mode is in pause or not
 * Example : ["True"]
 * Note : This callback is sent after using the `Combo_GetPause` method or when the pause status changes.
-* Available since : Combo.Script.txt v2014-09-15
+* Version : available since Combo.Script.txt_v2014-09-15
 
 
 ### Elite
@@ -833,32 +833,38 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 * Data : An array with the login, current rank in the scores, best checkpoints times, team id, spectator status, away status, best time, zone, points and total score of a player.
 * Example : ["eole:1:123,456,789:-1:False:False:789:World|Europe|France|Outre-mer|Reunion:0:0", "eole2:1:-1:-1:False:False:-1:World|Europe|France|Outre-mer|Reunion:0:0"]
 * Note : ["Login:Rank:BestCheckpoints:TeamId:IsSpectator:IsAway:BestTime:Zone:Points:TotalScore"]
-the login, rank, best checkpoints, team id, spectator status, away status, best time, zone, points and total points of the players are separated by a colon. The best checkpoint times are separated by a comma. This callback is sent when the script receives the "LibXmlRpc_GetPlayersRanking" trigger.
+the login, rank, best checkpoints, team id, spectator status, away status, best time, zone, points and total points of the players are separated by a colon. The best checkpoint times are separated by a comma. This callback is sent when the script receives the `LibXmlRpc_GetPlayersRanking` trigger.
 
 #### LibXmlRpc_PlayersScores
 * Data : An array with the current score and login of the players.
 * Example : ["login1:45", "login19:29", "login48:18", "login7:9"]
-* Note : the login and the score of the players are separated by a colon. This callback is sent when the script receives the "LibXmlRpc_GetPlayersScores" trigger.
+* Note : the login and the score of the players are separated by a colon. This callback is sent when the script receives the `LibXmlRpc_GetPlayersScores` trigger.
 
 #### LibXmlRpc_PlayersTimes
 * Data : An array with the best time and login of the players.
 * Example : ["login1:12654", "login19:15684", "login48:25964", "login7:-1"]
-* Note : the login and the best time of the players are separated by a colon. This callback is sent when the script receives the "LibXmlRpc_GetPlayersTimes" trigger.
+* Note : the login and the best time of the players are separated by a colon. This callback is sent when the script receives the `LibXmlRpc_GetPlayersTimes` trigger.
 
 #### LibXmlRpc_TeamsScores
 * Data : An array with the current and total scores of the teams.
 * Example : ["1", "5", "2", "5"]
-* Note : [ScoreTeam1, ScoreTeam2, TotalScoreTeam1, TotalScoreTeam2]. This callback is sent when the script receives the "LibXmlRpc_GetTeamsScores" trigger.
+* Note : [ScoreTeam1, ScoreTeam2, TotalScoreTeam1, TotalScoreTeam2]. This callback is sent when the script receives the `LibXmlRpc_GetTeamsScores` trigger.
 
 #### LibXmlRpc_TeamsMode
 * Data : An array with a boolean to indicate if the mode use teams or not.
 * Example : ["True"]
-* Note : This callback is sent when the script receives the "LibXmlRpc_GetTeamsMode" trigger.
+* Note : This callback is sent when the script receives the `LibXmlRpc_GetTeamsMode` trigger.
 
 #### LibXmlRpc_WarmUp
 * Data : An array with a boolean to indicate if the mode is in warm up or not.
 * Example : ["True"]
-* Note : This callback is sent when the script receives the "LibXmlRpc_GetWarmUp" trigger.
+* Note : This callback is sent when the script receives the `LibXmlRpc_GetWarmUp` trigger.
+
+#### UI_Properties
+* Data : An xml string with the Trackmania ui properties. Check the [documentation]({{ site.docurl }}/creation/maniascript/libraries/library-ui.html) for more information.
+* Example : ["<ui_properties></ui_properties>"]
+* Note : This callback is sent when the script receives the `UI_GetProperties` trigger.
+* Version : available since UI.Script.txt_v2014-09-16
 
 
 ### Rounds / Cup
@@ -879,6 +885,19 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 * Note : Invoke the LibXmlRpc_PlayerRanking script callback for a player
 * String1 : "LibXmlRpc_GetPlayerRanking"
 * String2 :  "LoginOfThePlayer"
+
+#### UI_SetProperties
+* Note : Set the properties of the UI. Check the [documentation]({{ site.docurl }}/creation/maniascript/libraries/library-ui.html) for more information.
+* String1 : "UI_SetProperties"
+* String2 : "<ui_properties></ui_properties>"
+* Version : available since UI.Script.txt_v2014-09-16
+
+#### UI_GetProperties
+* Note : Get the properties of the Trackmania UI. Check the [documentation]({{ site.docurl }}/creation/maniascript/libraries/library-ui.html) for more information. This method triggers the `UI_Properties` callback.
+* String1 : "UI_GetProperties"
+* String2 : ""
+* Version : available since UI.Script.txt_v2014-09-16
+
 
 ## ShootMania
 
@@ -920,12 +939,12 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 * String2 : ""
 
 #### LibScoresTable2_SetStyleFromXml
-* Note : Set the scores table style from an xml string. The first entry of the array is the game used (TM or SM) and the second the XML string of the style. Read the ["Customize the scores table"]({{ site.url }}/dedicated-server/customize-scores-table.html) page to learn more about it.
+* Note : Set the scores table style from an xml string. The first entry of the array is the game used (TM or SM) and the second the XML string of the style. Read the ["Customize the scores table"]({{ site.docurl }}/dedicated-server/customize-scores-table.html) page to learn more about it.
 * String: "LibScoresTable2_SetStyleFromXml"
 * Array: ["TM", "<XmlString />"]
 
 #### LibAFK_SetProperties
-* Note : Set the properties of the AFK library. The parameters are in this order: IdleTimeLimit, SpawnTimeLimit, CheckInterval, ForceSpec. Check the [library documentation]({{ site.url }}/maniascript/libraries/library-afk.html).
+* Note : Set the properties of the AFK library. The parameters are in this order: IdleTimeLimit, SpawnTimeLimit, CheckInterval, ForceSpec. Check the [library documentation]({{ site.docurl }}/creation/maniascript/libraries/library-afk.html).
 * String : "LibAFK_SetProperties"
 * Array : ["90000", "15000", "10000", "True"]
 
@@ -962,13 +981,13 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 * Note : Enable or disable the pause mode.
 * String1 : "Combo_SetPause"
 * String2 : "True" or "False"
-* Available since : Combo.Script.txt v2014-09-15
+* Version : available since Combo.Script.txt_v2014-09-15
 
 #### Combo_GetPause
 * Note : Get the current pause status. This will sent the `Combo_Pause` callback in return.
 * String1 : "Combo_GetPause"
 * String2 : ""
-* Available since : Combo.Script.txt v2014-09-15
+* Version : available since  Combo.Script.txt_v2014-09-15
 
 ### Elite
 
@@ -997,32 +1016,32 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 ### Common
 
 #### LibXmlRpc_GetPlayersScores
-* Note : Get the current score of the players. This method triggers the LibXmlRpc_PlayersScores callback.
+* Note : Get the current score of the players. This method triggers the `LibXmlRpc_PlayersScores` callback.
 * String1 : "LibXmlRpc_GetPlayersScores"
 * String2 :  ""
 
 #### LibXmlRpc_GetPlayersTimes
-* Note : Get the best times of the players. This method triggers the LibXmlRpc_PlayersTimes callback.
+* Note : Get the best times of the players. This method triggers the `LibXmlRpc_PlayersTimes` callback.
 * String1 : "LibXmlRpc_GetPlayersTimes"
 * String2 :  ""
 
 #### LibXmlRpc_GetTeamsScores
-* Note : Get the current score of the teams. This method triggers the LibXmlRpc_TeamsScores callback.
+* Note : Get the current score of the teams. This method triggers the `LibXmlRpc_TeamsScores` callback.
 * String1 : "LibXmlRpc_GetTeamsScores"
 * String2 :  ""
 
 #### LibXmlRpc_GetTeamsMode
-* Note : Check if the mode use teams. This method triggers the LibXmlRpc_TeamsMode callback.
+* Note : Check if the mode use teams. This method triggers the `LibXmlRpc_TeamsMode` callback.
 * String1 : "LibXmlRpc_GetTeamsMode"
 * String2 :  ""
 
 #### LibXmlRpc_GetWarmUp
-* Note : Check if the mode is in warm up. This method triggers the LibXmlRpc_WarmUp callback.
+* Note : Check if the mode is in warm up. This method triggers the `LibXmlRpc_WarmUp` callback.
 * String1 : "LibXmlRpc_GetWarmUp"
 * String2 :  ""
 
 #### LibXmlRpc_GetPlayersRanking
-* Note : Get the current ranking of the players. This method triggers the LibXmlRpc_PlayersRanking callback. The first parameter set the maximum number of players to return. The second set the starting rank.
+* Note : Get the current ranking of the players. This method triggers the `LibXmlRpc_PlayersRanking` callback. The first parameter set the maximum number of players to return. The second set the starting rank.
 * String : "LibXmlRpc_GetPlayersRanking"
 * Array : ["10","5"] (return 10 players starting at rank 5)
 
@@ -1045,7 +1064,7 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 * Array : ["50", "40", "30"]
 
 #### Rounds_GetPointsRepartition
-* Note : Get the current points repartition. This method triggers the Rounds_PointsRepartition callback.
+* Note : Get the current points repartition. This method triggers the `Rounds_PointsRepartition` callback.
 * String1 : "Rounds_GetPointsRepartition"
 * String2 :  ""
 
@@ -1058,3 +1077,4 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 * Note : Show/Hide the small scores table displayed on the right of the screen when finishing the map.
 * String1 : "UI_DisplaySmallScoresTable"
 * String2 : "False" or "True"
+* Version : deprecated since UI.Script.txt_v2014-09-16, use UI_SetProperties instead
