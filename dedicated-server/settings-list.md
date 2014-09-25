@@ -95,13 +95,16 @@ tags:
 |:-:|:-:|:-:|
 |**S_MatchmakingAPIUrl**|https://matchmaking.maniaplanet.com/v5|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
 |**S_MatchmakingMode**|0|This is the most important setting. It can take one of these five values : 0 -> matchmaking turned off, standard server; 1 -> matchmaking turned on, use this server as a lobby server; 2 -> matchmaking turned on, use this server as a match server; 3 -> matchmaking turned off, use this server as a universal lobby server; 4 -> matchmaking turned off, use this server as a universal match server.|
-|**S_LobbyTimePerRound**|30|Duration (in seconds) of a round between the activations of the matchmaking function. It can't be smaller than 15 seconds.|
+|**S_MatchmakingRematchRatio**|-1.0|Set the minimum ratio of players that have to agree to play a rematch before launching one. The value range from 0.0 to 1.0. Any negative value turns off the rematch vote.|
+|**S_MatchmakingRematchNbMax**|2|Set the maximum number of consecutive rematch.|
+|**S_MatchmakingVoteForMap**|0|Allow or not the players to vote for the next map.|
+|**S_MatchmakingProgressive**|0|Enable or disable the progressive matchmaking.|
 |**S_LobbyRoundPerMap**|60|Number of rounds played before going to the next map.|
-|**S_LobbyMatchmakerTime**|10|Duration (in seconds) of the matchmaking function. It allows the players to see with who they will play their match or cancel it if necessary.|
+|**S_LobbyMatchmakerPerRound**|6|Set how many times the matchmaking function is called before ending the current round of King of the Lobby.|
+|**S_LobbyMatchmakerWait**|2|Set the waiting time before calling the matchmaking function again.|
+|**S_LobbyMatchmakerTime**|8|Duration (in seconds) of the matchmaking function. It allows the players to see with who they will play their match or cancel it if necessary.|
 |**S_LobbyInstagib**|0|Use the Laser instead of the Rocket in the lobby.|
 |**S_LobbyDisplayMasters**|1|Display a list of Masters players in the lobby.|
-|**S_LobbyAllowMatchCancel**|1|Allows or not the players in the lobby to cancel a match.|
-|**S_LobbyLimitMatchCancel**|0|If the players are allowed to cancel, how many matches can they cancel before being penalized.|
 |**S_MatchmakingErrorMessage**|An error occured in the matchmaking API. If the problem persist please try to contact this server administrator.|This message is displayed in the chat to inform the players that an error occured in the matchmaking system.|
 |**S_MatchmakingLogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to let it turned off because this can quickly write huge log files.|
 |**S_MatchmakingLogAPIDebug**|0|Same as above, turn it on only if necessary.|
