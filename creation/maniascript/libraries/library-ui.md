@@ -40,31 +40,30 @@ To customize the UI, you have to trigger the UI_SetProperties XmlRpc method with
     The offset values range from 0. to -3.2 for x and from 0. to 1.8 for y
     The linecount property must be between 0 and 40
   -->
-  <chat visible="true" offset="0. 0." linecount="20" />
+  <chat visible="true" offset="0. 0." linecount="7" />
   <!-- Time of the players at the current checkpoint displayed at the bottom of the screen -->
-  <checkpoint_list visible="true" pos="0. 0. 0." />
+  <checkpoint_list visible="true" pos="40. -90. 5." />
   <!-- Small scores table displayed at the end of race of the round based modes (Rounds, Cup, ...) on the right of the screen -->
-  <round_scores visible="true" pos="0. 0. 0." />
+  <round_scores visible="true" pos="104. 14. 5." />
   <!-- Race time left displayed at the bottom right of the screen -->
-  <countdown visible="true" />
+  <countdown visible="true" pos="154. -57. 5." />
   <!-- 3, 2, 1, Go! message displayed on the middle of the screen when spawning -->
   <go visible="true" />
   <!-- Current race chrono displayed at the bottom center of the screen -->
-  <chrono visible="true" pos="0. 0. 0." />
+  <chrono visible="true" pos="0. -80. 5." />
   <!-- Speed and distance raced displayed in the bottom right of the screen -->
-  <speed_and_dist visible="true" />
+  <speed_and_distance visible="true" pos="158. -79.5 5." />
   <!-- Previous and best times displayed at the bottom right of the screen -->
-  <personnal_best_and_rank visible="true" pos="0. 0. 0." />
+  <personal_best_and_rank visible="true" pos="158. -61. 5." />
   <!-- Current position in the map ranking displayed at the bottom right of the screen -->
   <position visible="true" />
   <!-- Checkpoint time information displayed in the middle of the screen when crossing a checkpoint -->
-  <checkpoint_time visible="true" pos="0. 0. 0." />
+  <checkpoint_time visible="true" pos="-8. 31.8 -10." />
   <!-- The avatar of the last player speaking in the chat displayed above the chat -->
   <chat_avatar visible="true" />
   <!-- Warm-up progression displayed on the right of the screen during warm-up -->
-  <warmup visible="true" pos="0. 0. 0." />
+  <warmup visible="true" pos="170. 27. 0." />
 </ui_properties>
 {% endhighlight %}
 
 ## Shootmania
-
