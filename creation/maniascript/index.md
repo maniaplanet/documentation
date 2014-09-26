@@ -21,6 +21,7 @@ ManiaScript is the language that allows you to customize ManiaPlanet.
 
 # Libraries
 
+* [UI](libraries/library-ui.html)
 * [CustomUI](libraries/library-customui.html)
 * [Manialink](libraries/library-manialink.html)
 * [Markers](libraries/library-markers.html)
