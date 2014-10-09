@@ -31,3 +31,4 @@ tags: client
 | /useexedir               | Run in the directory where the executable is, instead of the current directory.                                                                                               |
 | /title=xxx               | Sets the title to be used. Only this title and its subtitles will be playable.                                                                                                |
 | /testtitle=mytitle@login | Launch and test a title directly instead of going into the pack editor, selecting the pack, going to the title section and clicking on test.                                  |
+| /checkdataintegrity | Launch and check for data integrity on titlepacks.                                  |
