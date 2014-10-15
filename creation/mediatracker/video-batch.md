@@ -7,7 +7,7 @@ tags:
 - mediatracker
 ---
 
-Are you tired of waiting your video rendering to be done in the MediaTracker? I'm sure you wished many times that it could be great to render many video clips while you're sleeping.
+Are you tired of waiting for your video rendering to be done in the MediaTracker? I'm sure you wished many times that it could be great to render many video clips while you're sleeping.
 
 Thanks to the video batch command, you can render several replays in a row.
 

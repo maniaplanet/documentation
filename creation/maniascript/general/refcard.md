@@ -26,7 +26,7 @@ Language primitive types are :
 </tr>
 </table>
 
-The other types, known as Classes, are composite types whose name starts with a 'C'. CSmPlayer, CManialinkLabel, etc...
+The other types, known as Classes, are composite types whose name start with a 'C'. CSmPlayer, CManialinkLabel, etc...
 
 Maniascript Values
 =====

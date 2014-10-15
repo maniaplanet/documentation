@@ -6,7 +6,7 @@ tags: maniascript
 ---
 
 # Purpose
-The Markers library ease the creation and management of markers for the HUD and the minimap.
+The Markers library eases the creation and management of markers for the HUD and the minimap.
 
 # Usage
 Add this line at the beginning of your game mode script to use it :

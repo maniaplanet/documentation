@@ -31,15 +31,15 @@ Examples in the MatchSettings file:
 </mode_script_settings>
 {% endhighlight %}
 
-It is recommended to use a local file when possible. The XML is loaded at script startup and when using a distant file the loading can take some time or fail.
-If you modify the setting once the server is started you'll have to restart the map to take the new value into account.
-The library will write informations about the loading of the XML file in the log. So, if you have a problem check you latest log file.
+It is recommended to use a local file when possible. The XML is loaded at script startup and when using a remote file the loading can take some time or fail.
+If you modify the settings once the server is started you'll have to restart the map to take the new values into account.
+The library will write information about the loading of the XML file in the log. So, if you have a problem check you latest log file.
 
 Another way to apply a custom style to the scores table is to send the xml string directly to the server with the `LibScoresTable2_SetStyleFromXml` XmlRpc method. Check the [script XmlRpc methods documentation]({{ site.docurl }}/dedicated-server/xmlrpc/xml-rpc-scripts.html) to learn more about it.
 
 # Complete XML file
 
-You'll find below the complete XML file with the explanations on what each parameter do. All of them are optional, you can write a style file containing only some of them if you want.
+Below you'll find the complete XML file with explanations on what each parameter does. All of them are optional, you can write a style file containing only some of them if you want.
 You can also find this file in your ManiaPlanet installation in `ManiaPlanet/PacksCache/ShootMania_extras.zip/Media/Manialinks/Shootmania/ScoresTable/Styles` or `ManiaPlanet/PacksCache/TrackMania_extras.zip/Media/Manialinks/Trackmania/ScoresTable/Styles`.
 
 {% highlight xml %}
@@ -154,7 +154,7 @@ You can also find this file in your ManiaPlanet installation in `ManiaPlanet/Pac
       This line will add a new column.
       If the column already exists it will be destroyed and recreated.
 
-      There's several ready to use columns ids:
+      There's several ready to use column ids:
       General:
       - LibST_Avatar, displays the avatar
       - LibST_Name, displays the nickname
@@ -174,7 +174,7 @@ You can also find this file in your ManiaPlanet installation in `ManiaPlanet/Pac
     -->
     <column id="LibST_Avatar" action="create"/>
     <!--
-      The action can have three value :
+      The action can be one of three values:
       - create : create a new column
       - update : update an existing column
       - destroy : destroy an existing column

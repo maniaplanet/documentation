@@ -9,7 +9,7 @@ tags: client
 You will have an histogram in the middle of the screen, and a little window in the top left corner:
 ![Debugger](./img/debug1.jpg)
 
-2. When you have a micro freeze, you will have a sightly higher bar, clic on `Paused: False` to freeze the histogram.
+2. When you have a micro freeze, you will have a slightly higher bar, click on `Paused: False` to freeze the histogram.
 (Press `Alt` to unlock the mouse in game)
 
 3. When the histogram is stopped, click on the highest bar to show the detail:

@@ -7,7 +7,7 @@ tags:
 - ws
 ---
 
-The Maniaplanet Web Services is the public API that everyone can use to retrieve various information about the game, the players, the rankings, etc. You can use that API to build all sorts of applications.
+The Maniaplanet Web Services is the public API that everyone can use to retrieve various information about the game, its players, rankings, etc. You can use that API to build all sorts of applications.
 
 NADEO distributes a [PHP SDK (distributed on github and packagist)](https://github.com/maniaplanet/maniaplanet-ws-sdk), but any HTTP capable language can be used.
 

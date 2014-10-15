@@ -7,7 +7,7 @@ tags: tools
 
 # How to create and setup a Clublink for your team
 
-Clubinks are a powerful way to personalize teams in Maniaplanet.
+Clublinks are a powerful way to personalize teams in Maniaplanet.
 There's two ways to create a Clublink: automatically from your player page, or manually by editing an XML file.
 
 ## From the player page

@@ -28,7 +28,7 @@ The only exception is Elite that has some very specific callbacks.
 ### LibXmlRpc_LoadingMap
 * Data : An array with the number of the map
 * Example : ["1"]
-* Note : This callback is sent when the script start to load a map
+* Note : This callback is sent when the script starts to load a map
 
 ### LibXmlRpc_BeginMap
 * Data : An array with the number of the map, its UID and if the map is new or restarted.
@@ -93,7 +93,7 @@ The only exception is Elite that has some very specific callbacks.
 ### LibXmlRpc_BeginPodium
 * Data : Nothing
 * Example : []
-* Note : This callback is sent at the beginning of podium sequence
+* Note : This callback is sent at the beginning of the podium sequence
 
 ### LibXmlRpc_EndPodium
 * Data : Nothing
@@ -839,17 +839,17 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 * Data : An array with the login, current rank in the scores, best checkpoints times, team id, spectator status, away status, best time, zone, points and total score of a player.
 * Example : ["eole:1:123,456,789:-1:False:False:789:World|Europe|France|Outre-mer|Reunion:0:0", "eole2:1:-1:-1:False:False:-1:World|Europe|France|Outre-mer|Reunion:0:0"]
 * Note : ["Login:Rank:BestCheckpoints:TeamId:IsSpectator:IsAway:BestTime:Zone:Points:TotalScore"]
-the login, rank, best checkpoints, team id, spectator status, away status, best time, zone, points and total points of the players are separated by a colon. The best checkpoint times are separated by a comma. This callback is sent when the script receives the `LibXmlRpc_GetPlayersRanking` trigger.
+The login, rank, best checkpoints, team id, spectator status, away status, best time, zone, points and total points of the players are separated by a colon. The best checkpoint times are separated by a comma. This callback is sent when the script receives the `LibXmlRpc_GetPlayersRanking` trigger.
 
 #### LibXmlRpc_PlayersScores
 * Data : An array with the current score and login of the players.
 * Example : ["login1:45", "login19:29", "login48:18", "login7:9"]
-* Note : the login and the score of the players are separated by a colon. This callback is sent when the script receives the `LibXmlRpc_GetPlayersScores` trigger.
+* Note : The login and the score of the players are separated by a colon. This callback is sent when the script receives the `LibXmlRpc_GetPlayersScores` trigger.
 
 #### LibXmlRpc_PlayersTimes
 * Data : An array with the best time and login of the players.
 * Example : ["login1:12654", "login19:15684", "login48:25964", "login7:-1"]
-* Note : the login and the best time of the players are separated by a colon. This callback is sent when the script receives the `LibXmlRpc_GetPlayersTimes` trigger.
+* Note : The login and the best time of the players are separated by a colon. This callback is sent when the script receives the `LibXmlRpc_GetPlayersTimes` trigger.
 
 #### LibXmlRpc_TeamsScores
 * Data : An array with the current and total scores of the teams.

@@ -19,7 +19,7 @@ Two XmlRpc methods and one callback are available to control the UI : `UI_SetPro
 * UI_GetProperties : Get the properties of the Trackmania UI. This method triggers the `UI_Properties` callback.
 * UI_Properties : An xml string with the Trackmania ui properties.
 
-To customize the UI, you have to trigger the UI_SetProperties XmlRpc method with an XML string containing the UI properties. You'll find below the complete XML file with the explanations on what each parameter do.
+To customize the UI, you have to trigger the UI_SetProperties XmlRpc method with an XML string containing the UI properties. Below you'll find the complete XML file with the explanations on what each parameter does.
 
 # Complete XML file
 

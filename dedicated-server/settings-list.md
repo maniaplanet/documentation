@@ -32,9 +32,9 @@ tags:
 
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
-|**S_TimeLimit**|0|Time limit (0 to disable, < 0 automatic based on author time)|
+|**S_TimeLimit**|0|Time limit (0 to disable, < 0 automatic, based on author time)|
 |**S_ForceLapsNb**|5|Number of Laps (<= 0 to disable)|
-|**S_FinishTimeout**|-1|Finish timeout (< 0 automatic based on author time)|
+|**S_FinishTimeout**|-1|Finish timeout (< 0 automatic, based on author time)|
 
 ## Rounds (+RoundsBase)
 
@@ -48,7 +48,7 @@ tags:
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
 |**S_PointsLimit**|100|Points limit|
-|**S_FinishTimeout**|-1|Finish timeout (< 0 automatic based on author time)|
+|**S_FinishTimeout**|-1|Finish timeout (< 0 automatic, based on author time)|
 |**S_UseAlternateRules**|False|Use alternate rules|
 |**S_ForceLapsNb**|-1|Force number of laps (<= 0 to disable)|
 |**S_DisplayTimeDiff**|False|Display time difference at checkpoint|
@@ -58,9 +58,9 @@ tags:
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
 |**S_PointsLimit**|5|Points limit|
-|**S_MaxPointsPerRound**|6|The maxium number of points attributed to the first player to cross the finish line|
+|**S_MaxPointsPerRound**|6|The maximum number of points attributed to the first player to cross the finish line|
 |**S_PointsGap**|1|The number of points lead a team must have to win the map|
-|**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
+|**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 
 ## TeamAttack
 
@@ -83,7 +83,7 @@ tags:
 
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
-|**S_AutoManageAFK**|False|Switch inactive players to spectators|
+|**S_AutoManageAFK**|False|Switch inactive players to spectator mode|
 |**S_AFKIdleTimeLimit**|90000|AFK default idle time limit|
 |**S_UseScriptCallbacks**|False|Turn on/off the script callbacks, useful for server manager|
 |**S_NeutralEmblemUrl**|""|Replace the default neutral emblem by another one|
@@ -96,19 +96,19 @@ tags:
 |**S_MatchmakingAPIUrl**|https://matchmaking.maniaplanet.com/v5|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
 |**S_MatchmakingMode**|0|This is the most important setting. It can take one of these five values : 0 -> matchmaking turned off, standard server; 1 -> matchmaking turned on, use this server as a lobby server; 2 -> matchmaking turned on, use this server as a match server; 3 -> matchmaking turned off, use this server as a universal lobby server; 4 -> matchmaking turned off, use this server as a universal match server.|
 |**S_MatchmakingRematchRatio**|-1.0|Set the minimum ratio of players that have to agree to play a rematch before launching one. The value range from 0.0 to 1.0. Any negative value turns off the rematch vote.|
-|**S_MatchmakingRematchNbMax**|2|Set the maximum number of consecutive rematch.|
-|**S_MatchmakingVoteForMap**|0|Allow or not the players to vote for the next map.|
+|**S_MatchmakingRematchNbMax**|2|Set the maximum number of consecutive rematches possible.|
+|**S_MatchmakingVoteForMap**|0|(Dis-)Allow the players to vote for the next map.|
 |**S_MatchmakingProgressive**|0|Enable or disable the progressive matchmaking.|
-|**S_LobbyRoundPerMap**|60|Number of rounds played before going to the next map.|
+|**S_LobbyRoundPerMap**|60|Number of rounds played before switching to the next map.|
 |**S_LobbyMatchmakerPerRound**|6|Set how many times the matchmaking function is called before ending the current round of King of the Lobby.|
 |**S_LobbyMatchmakerWait**|2|Set the waiting time before calling the matchmaking function again.|
-|**S_LobbyMatchmakerTime**|8|Duration (in seconds) of the matchmaking function. It allows the players to see with who they will play their match or cancel it if necessary.|
+|**S_LobbyMatchmakerTime**|8|Duration (in seconds) of the matchmaking function. It allows the players to see who they will play their match with or cancel it if necessary.|
 |**S_LobbyInstagib**|0|Use the Laser instead of the Rocket in the lobby.|
 |**S_LobbyDisplayMasters**|1|Display a list of Masters players in the lobby.|
 |**S_MatchmakingErrorMessage**|An error occured in the matchmaking API. If the problem persist please try to contact this server administrator.|This message is displayed in the chat to inform the players that an error occured in the matchmaking system.|
-|**S_MatchmakingLogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to let it turned off because this can quickly write huge log files.|
-|**S_MatchmakingLogAPIDebug**|0|Same as above, turn it on only if necessary.|
-|**S_MatchmakingLogMiscDebug**|0|Same as above, turn it on only if necessary.|
+|**S_MatchmakingLogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to leave it turned off because this can quickly write huge log files.|
+|**S_MatchmakingLogAPIDebug**|0|Same as above, only turn it on if necessary.|
+|**S_MatchmakingLogMiscDebug**|0|Same as above, only turn it on if necessary.|
 
 ## Battle
 
@@ -123,10 +123,10 @@ tags:
 |**S_CaptureMaxValue**|30000|Pole capture time (milliseconds)|
 |**S_AlternativePoints**|False|Use atk and def points as score|
 |**S_AllowBeginners**|False|Is a Beginners Welcome server|
-|**S_AutoManageAFK**|True|Switch inactive players to spectators|
+|**S_AutoManageAFK**|True|Switch inactive players to spectator mode|
 |**S_ArmorPoints**|2|Starting armor points for the players|
-|**S_NbPlayersPerTeam**|5|Numpber of players per team in matchmaking|
-|**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
+|**S_NbPlayersPerTeam**|5|Number of players per team in matchmaking|
+|**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 
 ## Combo (+ModeMatchmaking)
 
@@ -139,7 +139,7 @@ tags:
 |**S_AllowUnbalancedTeams**|False|Allow a game to begin without the same number of players in each team|
 |**S_UseArmorReduction**|False|Reduce the armor of players above two armor points|
 |**S_ArmorMax**|4|Maximum number of armors a player can have|
-|**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
+|**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 
 ## Elite (+ModeSport, +ModeMatchmaking)
 
@@ -173,7 +173,7 @@ tags:
 |**S_MatchPointsLimit**|3|Match points limit|
 |**S_Matchmaking**|3|Use Joust with matchmaking|
 |**S_MatchmakingSleep**|0|Matchmaking match end duration (-1: infinite)|
-|**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
+|**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 |**S_UseLobby**|False|Launch server in lobby mode|
 |**S_LobbyTimePerMap**|86400|Time limit in lobby mode (sec., 0: no limit)|
 |**S_UseWarmup**|False|Start with a warmup|
@@ -191,12 +191,12 @@ tags:
 |**S_TurnGap**|2|Points lead necessary to win a map|
 |**S_TurnLimit**|15|Maximum number of points before next map|
 |**S_DeciderTurnLimit**|20|Points limit on decider map|
-|**S_QuickMode**|False|Mutliplier for the sleep times between rounds|
+|**S_QuickMode**|False|Multiplier for the sleep times between rounds|
 |**S_UseLegacyCallback**|True|Send the old JSON callbacks|
 |**S_Matchmaking**|False|Use Elite with matchmaking|
 |**S_MatchmakingSleep**|0|Matchmaking match end duration (<= 0 infinite)|
 |**S_UseLegacyCallback**|True|Send the old JSON callbacks|
-|**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
+|**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 |**S_DisplaySponsors**|True|Display the sponsors of the attacker when spectating him|
 |**S_RestartMatchOnTeamChange**|False|Restart the match after the warm up if the teams have changed|
 |**S_Practice**|False|Play in practice mode|
@@ -207,8 +207,8 @@ tags:
 
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
-|**S_TimeLimit**|6001|Time limit on a map. Setting a negative value disable the limit|
-|**S_PointLimit**|25|Points limit on a map. Setting a negative value disable the limit|
+|**S_TimeLimit**|6001|Time limit on a map. Setting a negative value disables the limit|
+|**S_PointLimit**|25|Points limit on a map. Setting a negative value disables the limit|
 
 ## Realm
 
@@ -223,7 +223,7 @@ tags:
 |**S_MapPointsLimit**|2|Number of rounds to win a map|
 |**S_MapPointsGap**|2|Minimum round gap between the two teams to win|
 |**S_MapRoundsLimit**|3|Maximum number of rounds on a map|
-|**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
+|**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 
 ## Royal
 
@@ -241,7 +241,7 @@ tags:
 |**S_MultiClans**|True|Allow multi clans mode|
 |**S_MinPlayersNbPerClan**|3|Minimum number of players per clan|
 |**S_AllowBeginners**|False|Is a Beginners Welcome server|
-|**S_AutoManageAFK**|True|Switch inactive players to spectators|
+|**S_AutoManageAFK**|True|Switch inactive players to spectator mode|
 
 ## Royal Exp (+Royal)
 
@@ -269,8 +269,8 @@ tags:
 |**S_UseOldCaptureMode**|False|Capture only one gate per checkpoint instead of all the gates|
 |**S_DefCanRevertCapture**|False|If true the defender can revert the capture by stepping on the gate|
 |**S_CaptureThreshold**|300|Time (in ms) before the activation/annulation of the capture|
-|**S_GatesStopDefenders**|True|Don't let defenders go through closed the gates|
-|**S_AutoManageAFK**|True|Switch inactive players to spectators|
+|**S_GatesStopDefenders**|True|Don't let defenders go through closed gates|
+|**S_AutoManageAFK**|True|Switch inactive players to spectator mode|
 |**S_DisplayRulesReminder**|True|Display a window with the rules when the match begins|
 |**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
 
@@ -284,14 +284,14 @@ tags:
 |**S_NbRoundMax**|5|Set a winner after xx rounds (0 = unlimited)|
 |**S_MapsToWin**|0|Number of maps to win the match (0 = don't do match)|
 |**S_WarmUpDuration**|0|Duration of the warm up round (0 = no warmup)|
-|**S_ClanNbMinPlayers**|1|Wait until this minimum is reach before starting the map|
+|**S_ClanNbMinPlayers**|1|Wait until this minimum amount of players is reached before starting the map|
 |**S_ClanNbMaxPlayers**|0|Do not spawn players beyond this limit, 0=no limit|
 |**S_AutoBalance**|True|Use auto balance at the start of the map|
-|**S_AutoManageAFK**|True|Switch inactive players to spectators|
+|**S_AutoManageAFK**|True|Switch inactive players to spectator mode|
 |**S_DisplayRulesReminder**|True|Display a window with the rules when the match begins|
 |**S_Matchmaking**|False|Use Elite with matchmaking|
 |**S_MatchmakingSleep**|0|Matchmaking match end duration (-1: infinite)|
-|**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
+|**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 
 ## TimeAttack
 

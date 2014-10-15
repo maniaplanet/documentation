@@ -76,7 +76,7 @@ You can use the following programs to zip your files:
 Get your zip and move it to `username/my documents/maniaplanet/skins/vehicles/arenaplayer/`  
 Once you got the zip there go ingame and start shootmania.
 
-Go to Profile and then Vehicles. Select your skin and when exiting the profile answer yes to "apply changes". Once you are going online you will be asked if you take responsibility for the skin you are using.  
+Go to Profile and then Models. Select your skin and when exiting the profile answer yes to "apply changes". Once you are going online you will be asked if you take responsibility for the skin you are using.  
 At this point remember that you don't steal images or characters made by other people. Breaking a copyright is a crime. If you wish to use stuff other people created in your skin then you will have to ask them.
 
 

@@ -9,7 +9,7 @@ tags: tools
 * [ManiaPlanet APT repository](apt.html)
 * [Clublinks](clublinks.html)
 
-## Developper tools
+## Developer tools
 
 * [ManiaPlanet web services](ws/)
 * [ManiaConnect](ws/maniaconnect.html)

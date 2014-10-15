@@ -57,9 +57,9 @@ with:
     and body from inside view / or when close to the car.  
 
 You can put any number of files matching those criteria, and the game will pick up and use what fits best.
-(well any: at most 16 for each perpective.  And the duration of each loop not be lower than 8 samples - avoid empty files)
+(well any: at most 16 for each perspective. And the duration of each loop should not be lower than 8 samples - avoid empty files)
 The sounds must be 1-channel ogg or wav files.
 
 For an example, see `Vehicles\Media\Audio\Sound\WavData\ValleyEngine_2013_03_06\` in `C:\ProgramData\ManiaPlanet\PacksCache\TMValley_HD.zip`
 
-The horn must be a mono sound shorted than 10 seconds.
+The horn must be a mono sound shorter than 10 seconds.

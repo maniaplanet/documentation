@@ -25,7 +25,7 @@ A dedicated server application which allows you to run a server for any ManiaPla
 
 # XML-RPC reference
 
-[XML-RPC](https://en.wikipedia.org/wiki/XML-RPC) is the protocol that allows [external tools](tools/index.html) to communicate with Maniaplanet dedicated server (and the script running in the server). The only major difference with *standard* XML-RPC is the transport used, which is not HTTP. 
+[XML-RPC](https://en.wikipedia.org/wiki/XML-RPC) is the protocol that allows [external tools](tools/index.html) to communicate with the Maniaplanet dedicated server (and the script running on the server). The only major difference with *standard* XML-RPC is the transport used, which is not HTTP. 
 
 * [Latest methods reference](xmlrpc/methods/latest.html)
 * [Scripts methods and callbacks reference](xmlrpc/xml-rpc-scripts.html)

@@ -8,11 +8,11 @@ tags:
 ---
 
 # Introduction to the Map Editor
-The map editor is one of the famous features of the Trackmania (and now Maniaplanet) game serie. It gives you the possibility to create very easily maps for the game with a easy to handle thanks to the block system.
+The map editor is one of the famous features of the Trackmania (and now Maniaplanet) game series. It gives you the possibility to create maps for the game very easily thanks to the block system.
 
-This article will explain you quickly the interface and few building tricks.
+This article will quickly explain you the interface and few building tricks.
 
-If you want to check all the shortcuts of the editor, please go [on this article][1].
+If you want to check out all the shortcuts of the editor, please go [on this article][1].
 
 # Interface
 
@@ -60,19 +60,19 @@ If you want to check all the shortcuts of the editor, please go [on this article
 9. Allow you activate several experimental features like the *Air Mapping*, the *Mix Mapping* and the *Item Embedding*. **Those features are experimental because the maps created with one of these features can to not work after an update.**
 
 # The MapType
-A maptype is a file which list all the blocks required in order to be played with a specific gamemode. However, a gamemode can accept several maptypes if the gamemode creator has decided to do so.
+A maptype is a file which lists all the blocks required in order to be played with a specific gamemode. However, a gamemode can accept several maptypes if the gamemode creator has decided to do so.
 
 To change the maptype of a map, you just need to click on the name of the maptype in the editor and a window will open listing all the maptypes available on your folder `Documents\Maniaplanet\Scripts\MapTypes` (and then `\Shootmania` or `\Trackmania` depending of the environment, create it if it doesn't exists). The maptype can be forced if you create a map from a Title Pack.
 
 # Validation of a map
-A map can be played online (and in LAN) only if the map has been validated for a maptype. To know which block(s) are required to make the map compatible with a maptype, the player must associate the desired maptype to his map.
+A map can only be played online (and in LAN) if the map has been validated for a maptype. To know which block(s) are required to make the map compatible with a maptype, the player must associate the desired maptype to his map.
 
-The blocks required are specified when you click of the validation flag while it's red. Another thing to do to validate the map is to compute its shadows (to have relevant shadows on the map). This step is required each time you change (add/delete or modify) a block in a map.
+The blocks required are specified when you click on the validation flag while it's red. Another thing to do to validate the map is to compute its shadows (to have relevant shadows on the map). This step is required each time you change (add/delete or modify) a block in a map.
 
 The validation flag can have three states:
 
-* Red: The map is not validated for the current maptype and so can't be played online.
-* Orange: The required blocks are on the map but the map need to be tested at least once to make sure it's working (this state usually exists for Trackmania tracks, the builder must finish his race in order to validate it)
+* Red: The map is not validated for the current maptype and therefore can't be played online.
+* Orange: The required blocks are on the map but the map needs to be tested at least once to make sure it's working (this state usually exists for Trackmania tracks, the builder must finish his race in order to validate it)
 * Green: The map is validated and can be played online (and in LAN)
 
 # Tips
