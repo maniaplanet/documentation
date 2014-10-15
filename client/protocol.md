@@ -17,7 +17,7 @@ tags: client
 | maniaplanet://#opponent=login:map:group@TITLEID | play a campaign track against an opponent                                                                |
 | maniaplanet://#campaign=map@TITLEID             | Play a specific map of the title's campaign                                                              |
 | maniaplanet://#menutitle=TITLEID                | Will open the menuTitle of a TitleUID                                                                    |
-| maniaplanet://#openstore=TITLEID                | Will open the shop to buy the game, depending on the distribution platform. (no usefull for user titles) |
+| maniaplanet://#openstore=TITLEID                | Will open the shop to buy the game, depending on the distribution platform. (not useful for user titles) |
 | maniaplanet://#menustations=*                   | * can be home, play, store, options                                                                      |
 | maniaplanet://#addbuddy=login                   | Add a buddy                                                                                              |
 | maniaplanet://#invitebuddy=login                | Invite a buddy                                                                                           |
@@ -47,7 +47,7 @@ You can find the official title ids on [this table](../dedicated-server/titleids
 |:-------------------------:|:---------------------------------------------------:|
 | #campaign=mapname@TITLEID | play the map from the campaign matching the name    |
 | #campaign=#5@TITLEID      | play the fifth map of the campaign                  |
-| #campaign=#3,1@TITLEID    | play the thirs map of the first group (usually A03) |
+| #campaign=#3,1@TITLEID    | play the third map of the first group (usually A03) |
 
 
 ### for #menustations:
@@ -63,4 +63,4 @@ You can find the official title ids on [this table](../dedicated-server/titleids
 
 ## Example
 
-`Hello ! Please <a title="Join us!" href="maniaplanet://#join=smcafe@SMStormElite@nadeolabs">our server</a> !`
+`Hello ! Please join <a title="Join us!" href="maniaplanet://#join=smcafe@SMStormElite@nadeolabs">our server</a> !`

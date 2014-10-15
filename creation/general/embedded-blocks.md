@@ -17,13 +17,13 @@ tags:
 A lot of info can be gathered from [this topic][1]  
 and from the [importer documentation][2].  
 Embedded blocks are shared and posted on [ManiaPark][3].  
-Dont forget that only the newly added objects can be used because they are compatible with the MP3 RC4 (and above) client and dedicated (since 15 july 2014).
+Don't forget that only the newly added objects can be used because they are compatible with the MP3 RC4 (and above) client and dedicated (since 15 july 2014).
 ***
 <br/>
 ***
 *From aca*
 
-The last few days i spent lots of time with this topic and I'd like to share what I collected:
+The last few days I spent lots of time with this topic and I'd like to share what I collected:
 
 In addition to Haagse's links: [ConvertAssistant][4]
 
@@ -32,7 +32,7 @@ And some good blender-sites:
 * [Blender Tutorial documents][5] (german)
 * [Blender Tutorial videos][6] (english)
 
-And here what i worked out so far:
+And here what I worked out so far:
 
 * [An overview of blender-shortcuts][7] (alphabetically)
 * [The Canyon Materials alphabetically + PhysicsIds + Textures][8]

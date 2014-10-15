@@ -6,7 +6,7 @@ tags: maniascript
 ---
 
 # Purpose
-The Manialink library offer different modules and functions to use in manialink: animations, tooltips, draggable ...
+The Manialink library offers different modules and functions to use in manialink: animations, tooltips, draggable ...
 
 # Usage
 Add this line at the beginning of your game mode script to use it :
@@ -73,12 +73,12 @@ main() {
 --></script>
 {% endhighlight %}
 
-The first thing to notice is the use of the `Inject()` function. It is used to avoid the insertion of escaped double quote (\"). It's really useful when inserting long Text with a lot of double quotes inside. We could have write the exact same thing like that :
+The first thing to notice is the use of the `Inject()` function. It is used to avoid the insertion of escaped double quote (\"). It's really useful when inserting long Text with a lot of double quotes inside. We could have written the exact same thing like that :
 {% highlight xml %}
 LibManialink_Anim("<quad posn=\"50 -50\" id=\"Quad_Anim\" />", 3000, "EaseOutBounce");
 {% endhighlight %}
 
-So the `LibManialink_Anim()` function take 3 parameters. The first one is the element and the properties we want to animate. In this case it's the position of the quad with an id equal to "Quad_Anim". The second parameter is the duration of the animation and the third the easing method.
+So the `LibManialink_Anim()` function takes 3 parameters. The first one is the element and the properties we want to animate. In this case it's the position of the quad with an id equal to "Quad_Anim". The second parameter is the duration of the animation and the third the easing method.
 All the animations start from the current properties of the animated element. This is the reason why when we click on the "Anim 1" button a second time the animation doesn't play anymore. The element is already at its desired position.
 
 You can send the quad to it's original position with a second animation bind on the "Anim 2" button :
@@ -94,7 +94,7 @@ foreach (Event in PendingEvents) {
 }
 {% endhighlight %}
 
-If you press the opposing button while an animation is running you'll see that it will stop and the new one start from the current position of the quad.
+If you press the opposing button while an animation is running you'll see that it will stop and the new one starts from the current position of the quad.
 
 You can animate multiple properties during one animation :
 {% highlight xml %}
@@ -141,7 +141,7 @@ foreach (Event in PendingEvents) {
 }
 {% endhighlight %}
 
-The function takes one more parameter than `LibManialink_Anim()`. The first parameter is still the element and the properties we want to animate. Then we have time at which the animation will start. Finally we have the duration of the animation and the easing method.
+The function takes one more parameter than `LibManialink_Anim()`. The first parameter is still the element and the properties we want to animate. Then we have the time at which the animation will start. Finally we have the duration of the animation and the easing method.
 
 And now let's see what we could do by combining them all together :
 {% highlight xml %}
@@ -191,9 +191,9 @@ foreach (Event in PendingEvents) {
 }
 {% endhighlight %}
 
-`LibManialink_AnimRepeatStart()` take two arguments :
+`LibManialink_AnimRepeatStart()` takes two arguments :
 * The time interval between each loop
-* The number of repeat
+* The number of repeats
 In this case we want to repeat the animation each second three times.
 `LibManialink_AnimRepeatStart()` can also take only the first argument and in this case the animation will be repeated indefinitely.
 
@@ -202,7 +202,7 @@ If you can't identify the element you want to animate by an unique id, the anima
 LibManialink_Anim(((Page.MainFrame.Controls[0] as CMlFrame).Controls[0] as CMlFrame).Controls[0], {{{Manialink::Inject("""<quad posn="0 0" />""")}}}, 3000, "EaseInOutElastic");
 {% endhighlight %}
 
-To stop an animation on an element you can use the `LibManialink_AnimStop()` function. Two versions of the function exist. the first one take a CMlControl as argument while the second one take a Text, the ControlId of the control.
+To stop an animation on an element you can use the `LibManialink_AnimStop()` function. Two versions of the function exist. the first one takes a CMlControl as argument while the second one takes a Text, the ControlId of the control.
 {% highlight xml %}
 Void LibManialink_AnimStop(CMlControl _Control)
 
@@ -227,7 +227,7 @@ main() {
 --></script>
 {% endhighlight %}
 
-There's two versions of the function, the first one take a CMlControl as argument while the second one take a Text, the ControlId of the control. Both return a Boolean : True if an animation is running, False otherwise.
+There's two versions of the function, the first one takes a CMlControl as argument while the second one takes a Text, the ControlId of the control. Both return a Boolean : True if an animation is running, False otherwise.
 {% highlight xml %}
 Boolean LibManialink_IsAnimated(CMlControl _Control)
 

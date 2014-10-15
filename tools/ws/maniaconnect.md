@@ -22,7 +22,7 @@ OAuth (Open Authorization) is an open standard for authorization. It allows user
 Let's imagine a few use cases for ManiaConnect:
 
 * Securely authenticate a player with its Maniaplanet account on your Website or your Manialink
-* Get access to protected information, provided the player gave your application the permission to do so ; for example you will be able to access the list of buddies, the online status, the email, etc.
+* Get access to protected information, provided the player gave your application the permission to do so - for example you will be able to access the list of buddies, the online status, the email, etc.
 
 
 ## How do players manage authorized applications?

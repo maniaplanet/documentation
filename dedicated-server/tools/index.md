@@ -8,13 +8,13 @@ tags:
 ---
 
 
-Theses tools allows you to help you administrating your maniaplanet dedicated server.
+These tools help you administrating your Maniaplanet dedicated server.
 
 | ToolName                   | Author    | Info/Download                                                             |
 |----------------------------|-----------|---------------------------------------------------------------------------|
 | Trackmania2Serverbox       | Merlin    | [Info](http://forum.maniaplanet.com/viewtopic.php?f=261&t=5639)           |
 | Dedicated Manager Web site | Nadeo     | [Info](http://forum.maniaplanet.com/viewtopic.php?f=261&t=12098)          |
-| AdmServ                    | Kev717    | [Info](http://forum.maniaplanet.com/viewtopic.php?f=261&t=14419)          |
+| AdminServ                  | Kev717    | [Info](http://forum.maniaplanet.com/viewtopic.php?f=261&t=14419)          |
 | MatchSettings Manager      | Reaby     | [Forum](http://forum.maniaplanet.com/viewtopic.php?f=465&t=17341)         |
 | Trust Circles              | Nadeo     | [Info](http://forum.maniaplanet.com/viewtopic.php?f=261&t=12081)          |
 

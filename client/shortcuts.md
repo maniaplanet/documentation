@@ -110,7 +110,7 @@ tags: client
 
 ## Terraforming:
 
-* BACKSPACE : Delete all kind of terraforming, all the other blocks and items are not affected.
+* BACKSPACE : Delete all kinds of terraforming, all the other blocks and items are not affected.
 * Ctrl + left mouse click : selects block type at the cursor position
 * X + left mouse click : deletes block at the cursor position
 * C : Switches to Macroblock selection mode

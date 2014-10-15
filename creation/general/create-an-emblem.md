@@ -11,7 +11,7 @@ tags:
 The template to create an emblem for the Shootmania shield is available [**here**][1].
 ![][2]
 
-How to save correctly the file to have the image visible ingame (save it with the `.dds` filetype):
+How to correctly save the file to have the image visible ingame (save it with the `.dds` filetype):
 
 * 512x512
 * BC1/DXT1

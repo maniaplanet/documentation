@@ -12,7 +12,7 @@ tags: client
 | /login=xxx               | Account login to be used to play online.                                                                                                                                      |
 | /password=xxx            | Account password                                                                                                                                                              |
 | /profile=xxx             | Forces using a specific profile on disk. (to avoid the profile choice dialog)                                                                                                 |
-| /validation=xxx          | Specifies the account validation key (the last three chracters of the player key) to be able to perform copper transactions.                                                  |
+| /validation=xxx          | Specifies the account validation key (the last three chracters of the player key) to be able to perform transactions with planets.                                            |
 | /join=xxx                | Joins a server. (xxx = the server ip adress with optional port, or the server login.)                                                                                         |
 | /spectate=xxx            | Same as /join, but join as spectator.                                                                                                                                         |
 | /joinasreferee=xxx       | Same as /join, but join as referee.                                                                                                                                           |

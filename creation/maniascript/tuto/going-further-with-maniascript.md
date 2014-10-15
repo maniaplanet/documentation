@@ -7,10 +7,10 @@ tags:
 - maniascript
 ---
 
-The things that you may saw before it's just a glimpse of what's possible with the ManiaScript. I'll show you some more advanced functions to do more things in a gamemode.
+The things that you may have seen before are just a glimpse of what's possible with ManiaScript. I'll show you some more advanced functions to do more things in a gamemode.
 
 # Specifying parameters for a player
-It's possible to customize the parameters of a player when you spawn him (or while he plays but let's take the first situation).
+It's possible to customize the parameters of a player when you spawn him (or while he plays but let's assume the first situation).
 
 Instead of calling the function `SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId]);`, we'll create our own function to call to spawn of player.
 
@@ -36,8 +36,8 @@ Void VSpawnPlayer(CSmPlayer _Player)
 All the usable parameters are listed in the `CSmPlayer` class (check the technical documentation about it).
 
 # Spawning a bot
-Spawnig a bot is almost the same as spawning a player. The difference is that you have to put a BotPath on the map where the bot must be spawned.
-You can differentiate a bot by another by modifying his `kind` in the map editor (with a value between 0 and 10). In the script, you'll find them like this:
+Spawning a bot is almost the same as spawning a player. The difference is that you have to put a BotPath on the map where the bot must be spawned.
+You can differentiate bot from another by modifying their `kind` in the map editor (with a value between 0 and 10). In the script, you'll find them like this:
 
 {% highlight cpp %}
 foreach(Spawn in MapLandmarks_BotPath)
@@ -45,12 +45,12 @@ foreach(Spawn in MapLandmarks_BotPath)
 	if (Spawn.BotPath.Clan == _BotClass) VSpawnBot(Spawn);
 }
 {% endhighlight %}
-`_BotClass` is the `kind` of the bot (so the one you search, you can put directly an integer if there is one class of bot or if you search specifically one class only).
+`_BotClass` is the `kind` of the bot (so the one you search, you can put directly an integer if there is one class of bots or if you specifically search one class only).
 
 To change the behaviour of a bot, you have to use the attributes and functions existing in the `CSmPlayerDriver` class.
 
 # Displaying messages on the HUD
-You have mainly two functions for displaying a message to the players (all of them or only one of them). Both functions can be use generally or targeted to a player.
+You mainly have two functions for displaying a message to the players (all of them or only one of them). Both functions can be use generally or targeted to a player.
 
 The first one is with SendBigMessage which will display... well a big message at the top center of the player screen. The instruction is:
 
@@ -60,7 +60,7 @@ Message::SendBigMessage(TextLib::Compose("""$<%1$> has scored!""", _Player.Name)
 
 `Message` is the call for the library declared before at the beginning of the script. We ask the script to call the function `SendBigMessage` of the `Message` library.
 
-In the example above, the first argument is the text to display. Thanks to `Compose` function of the `TextLib` library, we can put arguments if you want to display messages that are a bit more dynamic. While you're writing the text you can add the text `$<%1$>` to tell the Compose function that you're adding an argurment that you'll fill just after. In the example, we indicate a player name (but it could be anything else). Then we indicate the duration of the message, 3000 milliseconds which equal 3 seconds.
+In the example above, the first argument is the text to display. Thanks to the `Compose` function of the `TextLib` library, we can put arguments if you want to display messages that are a bit more dynamic. While you're writing the text you can add the text `$<%1$>` to tell the Compose function that you're adding an argument that you'll fill in just after. In the example, we indicate a player name (but it could be anything else). Then we indicate the duration of the message, 3000 milliseconds which equal 3 seconds.
 
 You can specify a receiver if you indicate a CSmPlayer variable as first argument of the `SendBigMessage` function like this:
 
@@ -68,7 +68,7 @@ You can specify a receiver if you indicate a CSmPlayer variable as first argumen
 Message::SendBigMessage(ReceiverPlayer, TextLib::Compose("""$<%1$> has scored!""", _Player.Name), 3000, 10);
 {% endhighlight %}
 
-Else there is another function to display message, smaller ones, on the HUD, by using the function `SendStatusMessage`:
+Else there is another function to display messages, smaller ones, on the HUD, by using the function `SendStatusMessage`:
 
 {% highlight cpp %}
 Message::SendStatusMessage(TextLib::Compose("""$<%1$> has scored!""", _Player.Name), 3000, 10);
@@ -77,7 +77,7 @@ Message::SendStatusMessage(TextLib::Compose("""$<%1$> has scored!""", _Player.Na
 It works like `SendBigMessage`.
 
 # Using the pole in your script
-If you want to use a pole in your script because it is a pole based gamemode like Battle or Siege.
+In case you want to use a pole in your script because it is a pole based gamemode like Battle or Siege.
 
 First you must reset the progression of the pole (to prevent to have a half-captured pole at the beginning of the round):
 
@@ -122,7 +122,7 @@ foreach(Pole in BlockPoles) {
 }
 {% endhighlight %}
 
-In this example, we check all the pole of the map and on each of them, we check if there is a player around it, if so we are loading the pole and if the pole is loaded, we give to the player one point and we stop the round. If there is no one, the pole is reset.
+In this example, we check all the pole of the map and on each of them, we check if there is a player around it, if so we are loading the pole and if the pole is loaded, we give one point to the player and we stop the round. If there is no one, the pole is reset.
 
 # Create and spawn an object
 If you need to use a dynamic object (a 3D object that can be catched, dropped and can interact with the players and/or the bots).
@@ -144,7 +144,7 @@ ItemList_End();
 
 As you can see, you must declare a global variable as Ident to stock the desired item as reference in the `StartServer` section.
 
-Secondly you have to create the object, once or as many times you need with those instructions:
+Second you have to create the object, once or as many times you need with those instructions:
 
 {% highlight cpp %}
 declare CSmObject AnObject;
@@ -153,7 +153,7 @@ AnObject = ObjectCreate(G_MyDynamicObject);
 
 Once created, you have (maybe, it's depending of your game design) to spawn the item on the World or on a player.
 
-To spawn it on the world, you must check all the anchor of the map and spawn the object on them (all of them, you can't choose). The issue is that an anchor of the item must exist on the map or the item will not be spawned.
+To spawn it on the world, you must check all the anchors of the map and spawn the object on them (all of them, you can't choose). The issue is that an anchor of the item must exist on the map or the item will not be spawned.
 
 To spawn it with this method, you can do the following:
 
@@ -210,9 +210,9 @@ Void DropObject(CSmPlayer _Shooter, CSmPlayer _Victim) {
 With this function, the object will be dropped in the opposite direction of the shot (in that way you can suppose from where the shot is from).
 
 # The "Actions"
-We'll talk a bit about the `Actions`. An `Action` is a element created in the `ActionMaker` which give you the possibility to build a new weapon or a custom animation for the player.
+We'll talk a bit about the `Actions`. An `Action` is a element created in the `ActionMaker` which gives you the possibility to build a new weapon or a custom animation for the player.
 
-On a script point of view, you can assign up to 8 actions to a player at the same time from `Slot_A` to `Slot_H`.
+From a script point of view, you can assign up to 8 actions to a player at the same time from `Slot_A` to `Slot_H`.
 
 First to use an action, you must declare it on the `StartServer` section of your script inside an `ActionList` as follows:
 
@@ -227,7 +227,7 @@ ActionList_End();
 ***
 {% endhighlight %}
 
-`G_MyCustomWeapon` must be declared as a global variable to be usable everywhere in your script. Note also that the Actions will be search in the folder `Actions` (at the root of the package tree).
+`G_MyCustomWeapon` must be declared as a global variable to be usable everywhere in your script. Note also that the Actions will be searched in the folder `Actions` (at the root of the package tree).
 
 ## Assigning a weapon/action
 To assign a weapon created with the ActionMaker to a player, you have to use the following code:
@@ -242,7 +242,7 @@ ActionBind(Player, CSmMode::EActionSlot::Slot_A, CSmMode::EActionInput::Weapon);
 The actions can be assigned on the buttons 1, 2, 3 or 4 through `Activable1`, `Activable2`, `Activable3` and `Activable4`.
 
 ## Managing the event of an action
-If you use an action as a weapon, you can't manage exactly the event the same way as a Storm bullet (rocket/nucleus/arrow/laser). You have to manage the fire and hit events on the `OnActionCustomEvent` event instead of `OnHit`.
+If you use an action as a weapon, you can't exactly manage the event the same way as a Storm bullet (rocket/nucleus/arrow/laser). You have to manage the fire and hit events on the `OnActionCustomEvent` event instead of `OnHit`.
 
 For a bullet, the state of an action is symbolized with its first parameter: `Event.Param1[0]`. For example if you want to know if a bullet has been fired, you have to compare this parameter with the text `"fire"`.
 
@@ -271,7 +271,7 @@ You can still manage the death of the players through the `OnArmorEmpty` event.
 # The Manialink in the ManiaScript
 It's possible to write some Manialink code in your script. This is useful when you want to display some custom information or even to create a complete custom ingame UI.
 
-If you want to do so, you have first to create a text variable which will contain the manialink and then to treat the manialink:
+If you want to do so, you first have to create a text variable which will contain the manialink and then treat the manialink:
 
 {% highlight cpp %}
 declare Text MLText = "<label posn="0 0 0" text="This is an example" />";
@@ -295,9 +295,9 @@ Layers::DestroyAll();
 {% endhighlight %}
 
 ## ManiaScript in the Manialink
-You can use some ManiaScript in your Manialink too and even to have access to few script elements directly in your Manialink or in the ManiaScript of the Manialink.
+You can use some ManiaScript in your Manialink too and even have access to few script elements directly in your Manialink or in the ManiaScript of the Manialink.
 
-Please note that you can't use some of the ManiaScript functions and variable while you're in a Manialink.
+Please note that you can't use some of the ManiaScript functions and variables while you're in a Manialink.
 
 First to use some ManiaScript in your Manialink, you have to write the ManiaScript code after the Manialink code like this:
 
@@ -335,7 +335,7 @@ Text MyManialink() {
 }
 {% endhighlight %}
 
-In this example you can see how works the ManiaScript in the Manialink. Once you've written your ManiaLink you can start writting your script between the tag `<script><!-- //code --></script>`. In this portion of code you can use the ManiaScript present in the `CSmMIScriptIngame`, `CMlControl` and `CMlPage` classes.
+In this example you can see how the ManiaScript works in the Manialink. Once you've written your ManiaLink you can start writing your script between the tag `<script><!-- //code --></script>`. In this portion of code you can use the ManiaScript present in the `CSmMIScriptIngame`, `CMlControl` and `CMlPage` classes.
 
 Note that you can check several events like the different sort of clicks of the mouse on the elements (like Quad, Label, Gauge, etc).
 
@@ -343,10 +343,10 @@ If you want the script to run during the whole time it's attached to the UI of t
 
 > **Tip:** Note that GUIPlayer in `CSmMIScriptIngame` is very useful because you have access to the attributes of the CSmPlayer attributes with it.
 >
-> **Tip:** You call variables from the main script if you put a triple brackets between the name of the variable like this: `{{{S_PointLimit}}}`. But with this method you can't manipulate them (like doing calculation, modification). See below to know how to do it properly.
+> **Tip:** You call variables from the main script if you surround the name of the variable with triple curly brackets like this: `{{{S_PointLimit}}}`. But with this method you can't manipulate them (like doing calculation, modification). See below to know how to do it properly.
 
 ### Sending ManiaScript script vars to ManiaScript Manialink vars
-First you need to know that the script of the gamemode and the manialink inside are two separate layers which don't communicate between them initially. The script is run on the server while the manialink is read locally on the computer of the player. To make it so, you need to use a "new" type of variable which will be read by the script and the manialink.
+First you need to know that the script of the gamemode and the manialink inside are two separate layers which don't communicate with each other initially. The script is run on the server while the manialink is read locally on the computer of the player. To make it so, you need to use a "new" type of variable which will be read by the script and the manialink.
 
 It works like an "input/output" system in simple language. In a logic sense, you must create first an "output" variable, symbolized with the parameter `netwrite` in ManiaScript. This parameter tell that the variable will register/put a value to send to the other layer (the script or the manialink):
 

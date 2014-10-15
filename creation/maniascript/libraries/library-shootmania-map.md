@@ -6,7 +6,7 @@ tags: maniascript
 ---
 
 # Purpose
-The map library mainly allow the users to easily manipulate the landmarks in a ShootMania map. It regroup a lot of functions to access the landmarks and their component depending on their type, tag or order.
+The map library mainly allow the users to easily manipulate the landmarks in a ShootMania map. It regroups a lot of functions to access the landmarks and their component depending on their type, tag or order.
 
 
 # Usage
@@ -28,7 +28,7 @@ Then you have several function to access the landmarks in the map:
 * `CSmMapLandmark GetLandmarkBotPath(Text _Tag, Integer _Order)`
 * `CSmMapLandmark GetLandmarkObjectAnchor(Text _Tag, Integer _Order)`
 * `CSmMapLandmark GetLandmarkCapturable(Text _Tag, Integer _Order)`
-All this functions will return the first landmark matching corresponding Component (Base, Sector, Gauge, ...), Tag and Order. So if several landmarks share the same properties, only the first in the MapLandmarks array will be returned.
+All these functions will return the first landmark matching corresponding Component (Base, Sector, Gauge, ...), Tag and Order. So if several landmarks share the same properties, only the first in the MapLandmarks array will be returned.
 
 You also have functions to get direct access to the landmarks components:
 
@@ -39,9 +39,9 @@ You also have functions to get direct access to the landmarks components:
 * `CSmMapPlayerSpawn GetPlayerSpawn(Text _Tag, Integer _Order)`
 * `CSmMapBotPath GetBotPath(Text _Tag, Integer _Order)`
 * `CSmMapObjectAnchor GetObjectAnchor(Text _Tag, Integer _Order)`
-This functions work as the ones above, but they return the first landmark component matching the criteria instead of the landmark itself.
+These functions work as the ones above, but they return the first landmark component matching the criteria instead of the landmark itself.
 
-Eventually you can use this functions to now how many landmarks of each type are there on the map:
+Eventually you can use this functions to know how many landmarks of each type are there on the map:
 
 * `Integer GetLandmarksCount()`
 * `Integer GetBasesCount()`
