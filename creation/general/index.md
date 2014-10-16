@@ -9,7 +9,7 @@ tags:
 
 # Tutorials
 
-* [Create a Player Skin][1]: A tutorial learning you how to create a skin for your character.
+* [Create a Player Skin][1]: A tutorial teaching you how to create a skin for your character.
 * [Create an emblem][2]: The assets to create an emblema for your character.
 * [Create a custom sticker][3]: Tutorial for creating a custom sticker for Trackmania²
 * [Create a custom horn][4]: Tutorial for creating a custom horn for Trackmania² & Shootmania

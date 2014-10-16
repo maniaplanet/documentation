@@ -9,11 +9,11 @@ tags:
 
 ## Introduction
 
-ManiaPlanet 3.0 introduces a **new matchmaking technical architecture** to make things **simplier for server hosters**. Server hosting is very popular in both TrackMania and ShootMania, and our goal is for matchmaking to benefits from the hosting skill and passion of the community.
+ManiaPlanet 3.0 introduces a **new matchmaking technical architecture** to make things **simplier for server hosters**. Server hosting is very popular in both TrackMania and ShootMania, and our goal is for matchmaking to benefit from the hosting skill and passion of the community.
 
 For players, the idea remains the same: **you join lobbies to play casually while waiting for your match**; when opponents are matched in the lobby, they are sent to a match server to play their game.
 
-For server hosters, new system is simplier than ever since **it now only requires the dedicated server** and a little configuration; no more ManiaLive or MySQL. Now, lobbies and match servers don't need to be close, or on the same server, or even owned by the same account. The game mode script as well as a **new centralized matchmaking API** hosted by Nadeo are doing all the dirty work.
+For server hosters, this new system is simpler than ever since **it now only requires the dedicated server** and a little configuration; no more ManiaLive or MySQL. Now, lobbies and match servers don't need to be close, or on the same server, or even owned by the same account. The game mode script as well as a **new centralized matchmaking API** hosted by Nadeo are doing all the dirty work.
 
 - Link lobby and match server logins on the PlayerPage.
 - Start a lobby: a dedicated server with a litte specific configuration.
@@ -29,7 +29,7 @@ The guide will cover the technical aspects. If you have any questions or feedbac
 
 ## Add match servers to a lobby
 
-You can add **any server you want** as match server. As soon as it's launched and well configured, your lobby will start sending matches on it.
+You can add **any server you want** as match server. As soon as it's launched and well configured, your lobby will start sending matches to it.
 
 Easy, follow the instructions: https://player.maniaplanet.com/matchmaking-servers
 
@@ -47,7 +47,7 @@ On an universal lobby, all the players of a match are selected by the players th
 
 ## Progressive matchmaking
 
-Progressive matchmaking ease the launch of matches on game modes that require a lot of people. If there's not enough players on the lobby, the matchmaking can start a match with less players than the maximum required. Later the lobby will send substitutes to complete the match line up.
+Progressive matchmaking eases the launch of matches on game modes that require a lot of people. If there's not enough players on the lobby, the matchmaking can start a match with less players than the maximum required. Later the lobby will send substitutes to complete the match line up.
 
 Eg: 5vs5 Siege needs 10 players on the lobby to start a match. With progressive matchmaking turned on, the lobby can start a match with only 4 players (2vs2). Then this match will receive substitutes from the lobby until there's 10 players.
 
@@ -92,17 +92,17 @@ Edit the relevant settings in the matchsettings file to enable the matchmaking.
 |**S_MatchmakingAPIUrl**|https://matchmaking.maniaplanet.com/v7|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
 |**S_MatchmakingMode**|0|This is the most important setting. It can take one of these five values : 0 -> matchmaking turned off, standard server; 1 -> matchmaking turned on, use this server as a lobby server; 2 -> matchmaking turned on, use this server as a match server; 3 -> matchmaking turned off, use this server as a universal lobby server; 4 -> matchmaking turned off, use this server as a universal match server.|
 |**S_MatchmakingRematchRatio**|-1.0|Set the minimum ratio of players that have to agree to play a rematch before launching one. The value range from 0.0 to 1.0. Any negative value turns off the rematch vote.|
-|**S_MatchmakingRematchNbMax**|2|Set the maximum number of consecutive rematch.|
-|**S_MatchmakingVoteForMap**|0|Allow or not the players to vote for the next map.|
+|**S_MatchmakingRematchNbMax**|2|Set the maximum number of consecutive rematches.|
+|**S_MatchmakingVoteForMap**|0|(Dis-)Allow the players to vote for the next map.|
 |**S_MatchmakingProgressive**|0|Enable or disable the progressive matchmaking.|
 |**S_LobbyRoundPerMap**|60|Number of rounds played before going to the next map.|
 |**S_LobbyMatchmakerPerRound**|6|Set how many times the matchmaking function is called before ending the current round of King of the Lobby.|
 |**S_LobbyMatchmakerWait**|2|Set the waiting time before calling the matchmaking function again.|
-|**S_LobbyMatchmakerTime**|8|Duration (in seconds) of the matchmaking function. It allows the players to see with who they will play their match or cancel it if necessary.|
+|**S_LobbyMatchmakerTime**|8|Duration (in seconds) of the matchmaking function. It allows the players to see with whom they will play their match or cancel it if necessary.|
 |**S_LobbyInstagib**|0|Use the Laser instead of the Rocket in the lobby.|
 |**S_LobbyDisplayMasters**|1|Display a list of Masters players in the lobby.|
-|**S_MatchmakingErrorMessage**|An error occured in the matchmaking API. If the problem persist please try to contact this server administrator.|This message is displayed in the chat to inform the players that an error occured in the matchmaking system.|
-|**S_MatchmakingLogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to let it turned off because this can quickly write huge log files.|
+|**S_MatchmakingErrorMessage**|An error occurred in the matchmaking API. If the problem persists, please try to contact this server administrator.|This message is displayed in the chat to inform the players that an error occurred in the matchmaking system.|
+|**S_MatchmakingLogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to leave it turned off because this can quickly write huge log files.|
 |**S_MatchmakingLogAPIDebug**|0|Same as above, turn it on only if necessary.|
 |**S_MatchmakingLogMiscDebug**|0|Same as above, turn it on only if necessary.|
 

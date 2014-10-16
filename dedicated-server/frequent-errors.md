@@ -10,7 +10,7 @@ tags:
 
 ## ERROR: New mode unknown.
 
-Your MatchSettings file is specifying an unknown mode, change it for the value `0`:
+Your MatchSettings file is specifying an unknown mode, change it to the value `0`:
 
 ```
 <playlist>

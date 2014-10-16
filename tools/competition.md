@@ -5,13 +5,13 @@ description: Installation and instructions
 tags: tools
 ---
 
-ManiaPlanet competition manager (MPCM) allows you to run automatically a cup from registrations to auto registration of results.
+ManiaPlanet competition manager (MPCM) allows you to automatically run a cup from registrations to auto registration of results.
 
 It bundles multiple tools:
 
-* A web application that allow administrator (you!) to create your competition easily.
-* A manialink application that allow players to register, see bracket and results.
-* ManiaLive plugin to register results and manage matchs.
+* A web application that allows administrators (you!) to create ya competition easily.
+* A manialink application that allows players to register, see brackets and results.
+* ManiaLive plugin to register results and manage matches.
 
 ## Presentation
 
@@ -32,7 +32,7 @@ Results are casted directly from server.
 
 ### Requirements
 
-ManiaPlanet Competition Manager requires a powerful dedicated server because it will run multiple ManiaPlanet dedicated software at the same time.
+ManiaPlanet Competition Manager requires a powerful dedicated server because it will run multiple ManiaPlanet dedicated servers at the same time.
 
 ### Preparation
 
@@ -59,7 +59,7 @@ An [Apache alias](https://httpd.apache.org/docs/2.4/mod/mod_alias.html) has been
 
 1. Download latest [Maniaplanet competition manager package](http://code.google.com/p/maniaplanet-competition-manager/downloads/list).
 2. Extract it where you want.
-3. Run the setup script with command line. It will create `app.ini` file in the `config/` directory. You can modify the file but running the setup script again will erase your modifications.
+3. Run the setup script via command line. It will create an `app.ini` file in the `config/` directory. You can modify the file but running the setup script again will erase your modifications.
 It will also create the `CompetitionManager` MySQL base and table. It it does not work, you can execute `competition.sql`.
 
 ## Help

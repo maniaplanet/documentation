@@ -12,7 +12,7 @@ tags: client
 | /login=xxx               | Account login to be used to play online.                                                                                                                                      |
 | /password=xxx            | Account password                                                                                                                                                              |
 | /profile=xxx             | Forces using a specific profile on disk. (to avoid the profile choice dialog)                                                                                                 |
-| /validation=xxx          | Specifies the account validation key (the last three chracters of the player key) to be able to perform copper transactions.                                                  |
+| /validation=xxx          | Specifies the account validation key (the last three chracters of the player key) to be able to perform transactions with planets.                                            |
 | /join=xxx                | Joins a server. (xxx = the server ip adress with optional port, or the server login.)                                                                                         |
 | /spectate=xxx            | Same as /join, but join as spectator.                                                                                                                                         |
 | /joinasreferee=xxx       | Same as /join, but join as referee.                                                                                                                                           |
@@ -31,3 +31,4 @@ tags: client
 | /useexedir               | Run in the directory where the executable is, instead of the current directory.                                                                                               |
 | /title=xxx               | Sets the title to be used. Only this title and its subtitles will be playable.                                                                                                |
 | /testtitle=mytitle@login | Launch and test a title directly instead of going into the pack editor, selecting the pack, going to the title section and clicking on test.                                  |
+| /checkdataintegrity | Launch and check for data integrity on titlepacks.                                  |

@@ -21,7 +21,7 @@ Using Debian/Ubuntu? You can use our [APT repository](../tools/apt.html).
 
 ####Dedicated Server Login
 
-To start an Internet server, you will need a **dedicated login** (which is different from your ManiaPlanet login). Dedicated server can be run in Lan-mode without a dedicated login defined. The **dedicated login** can be created at your [PlayerPage](https://player.maniaplanet.com/dedicated-servers) and you can have multiple dedicated server accounts for each ManiaPlanet title. Just fill in the desired login-name and choose password and server location where you want it to bind. After you create the server, it binds to your maniaplanet account and you can edit the details and reset the password if needed.
+To start an Internet server, you will need a **dedicated login** (which is different from your ManiaPlanet login). Dedicated servers can be run in Lan-mode without a dedicated login defined. The **dedicated login** can be created at your [PlayerPage](https://player.maniaplanet.com/dedicated-servers) and you can have multiple dedicated server accounts for each ManiaPlanet title. Just fill in the desired login-name and choose password and server location where you want it to bind. After you create the server, it binds to your maniaplanet account and you can edit the details and reset the password if needed.
 
 The newly created dedicated servers will be at the lowest ladder rank which is 0-50k, this means the players visiting your server will gain ladder point as long as they have no more than 50 000 ladder points. To raise the ladder rank of your server, visit the [advanced ladder server page](https://player.maniaplanet.com//dedicated-servers/ladder) section in your ManiaPlanet player page.
 
@@ -30,12 +30,12 @@ The newly created dedicated servers will be at the lowest ladder rank which is 0
 *DedicatedCfgFile* is located at `UserData\Config`.
 To run multiple servers, just use the same server with different commandline arguments to start the servers.
 
-Dedicated config file a XML-file, where the config variables goes between tags, which are:
+The Dedicated config file is an XML-file, where the config variables go between tags, which are:
 
 * starting tag: `<tag>`
 * ending tag: `</tag>`
 
-Make sure that the tags are in place, if there is error with xml filesyntax, the dedicated just won't start without any error messages. You can copy paste the content in an [xml validator](http://www.validome.org/xml/) to verify it.
+Make sure that the tags are in place, if there is an error with xml filesyntax, the dedicated just won't start without any error messages. You can copy paste the content in an [xml validator](http://www.validome.org/xml/) to verify it.
 
 **Sections on Config-file:**
 {% highlight xml %}
@@ -69,7 +69,7 @@ Change this only if you open the xml-rpc port later to public.
 
 
 Masterserver_account section: this is where you fill in your dedicated server login and password that you created earlier.
-If you want to enable Planets transactions for your server fill in the `<validation_key>`, use your own ManiaPlanet account validation key here. The validation key has been sent in email message when you created your ManiaPlanet account. If you have forgotten your validation key you can get a new one [on the player page](https://player.maniaplanet.com/account/validation-code). You also need to send in-game mail with initial 100 Planets to the server login. After this the donate plugins works and server planets transactions are enabled.
+If you want to enable Planets transactions for your server fill in the `<validation_key>`, use your own ManiaPlanet account validation key here. The validation key has been sent to you in an email message when you created your ManiaPlanet account. If you have forgotten your validation key you can get a new one [on the player page](https://player.maniaplanet.com/account/validation-code). You'll also need to send an in-game mail with initial 100 Planets to the server login. After this the donate plugins works and server planet transactions are enabled.
 
 ####Network configuration
 
@@ -90,22 +90,22 @@ ManiaPlanet server uses the default following ports by default:
   </tr>
 </table>
 
-Note: If you run the game and the dedicated server on same host the launch order of the game and server will affect the default ports, this may lead to problems when you use dedicated server controller. In this case, increase all of the dedicated server ports by one.
+Note: If you run the game and the dedicated server on same host the launch order of the game and server will affect the default ports, this may lead to problems when you use a dedicated server controller. In this case, increase all of the dedicated server ports by one.
 
 The **XML-RPC port (5000) SHOULD NOT BE OPENED TO PUBLIC** unless you change the `<authorization_levels>` logins and passwords in the dedicated configuration.
 
-If you run multiple servers on the same host, ports numbers are automatically increased by one for each instance: second server will have 2351 for general usage, 3451 for P2P et 5001 for xml-rpc.
+If you run multiple servers on the same host, port numbers are automatically increased by one for each instance: second server will have 2351 for general usage, 3451 for P2P, 5001 for xml-rpc.
 
-Note: if you run same dedicated server instance on the same host: the dedicated servers ports must start from 5000 and every new dedicated server port has to be increased by 1, and there can not be any gaps between the ports. Othervice you can't connect to any server...
+Note: if you run the same dedicated server instance on the same host: the dedicated servers ports must start from 5000 and every new dedicated server port has to be increased by 1, and there can not be any gaps between the ports. Otherwise you can't connect to any server...
 
 *You can test if your network configuration is correct using: <http://www.yougetsignal.com/tools/open-ports/>*
 
 
 ####MatchSettings File
 
-There are *MatchSettings* file bundled in each title, use the table below to get the default one.
+There are *MatchSettings* files bundled with each title, use the table below to get the default one.
 
-[This table summerize the information you need](titleids.html).
+[This table summarizes the information you need](titleids.html).
 
 Examples to start the server with Shootmania:Storm Elite: `ManiaPlanetServer /Title=SMStormElite@nadeolabs /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/SMStormElite1.txt`.
 
@@ -123,9 +123,9 @@ The minimal command line to start the server is `ManiaPlanetServer /Title=TitleI
 ####Relay Servers
 
 
-Relay server can be created to allow huge numbers of players spectate the main server without interrupting the players on the main server. You see everything on the main server but relay server chat is not sent toward the main server, but main server chat can be seen on relay.
+Relay server can be created to allow huge numbers of players to spectate the main server without interrupting the players on the main server. You see everything on the main server but the relay server's chat is not sent towards the main server, but main server chat can be seen on relay.
 
-To start the relay server, you have to set `<allow_spectator_relays>True</allow_spectator_relays>` in main server config file.
+To start a relay server, you have to set `<allow_spectator_relays>True</allow_spectator_relays>` in main server config file.
 
 `ManiaPlanetServer /dedicated_cfg=RelayCfgFile /join=MainServerLogin /joinpass=SpectatorPass`
 

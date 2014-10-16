@@ -47,7 +47,7 @@ The game uses http header requests to get the modification date of the file and 
 (a lexicographical comparison is used.)
 
 
-(*) There are actually two additional macanisms for the download:
+(*) There are actually two additional mechanisms for the download:
 The game will download the header of the pack first, and
 - try to download the file from the maniaplanet cloud if it has been uploaded there.
 - compare the contents of the previous version of the pack on the client computer and only download changed/new parts, using http range requests.
@@ -69,10 +69,10 @@ The game will download the header of the pack first, and
 
 `collection` and `sortindex` are used to sort the list of titles. (they are sorted according to collection, and the for equal collection by sortindex)
 
-`station_manialink` is the url of the page to display on the station in the main menu. If unspectified the default one will be used.
+`station_manialink` is the url of the page to display on the station in the main menu. If unspecified the default one will be used.
 
 By default the game allows to click anywhere on the station, or on the play button, or double click on the station thumbnail to enter into the title main menu.
-If you specify `station_noquickenter`, the user will have to use the manialink on the station. This can allow the title skip the menus altogether and only allow to join servers for instance or go directly to the solo campaign, etc...
+If you specify `station_noquickenter`, the user will have to use the manialink on the station. This can allow the title to skip the menus altogether and only allow to join servers for instance or go directly to the solo campaign, etc...
 
 `boxcase_manialink` is unused at this point.
 
@@ -90,7 +90,7 @@ If you specify `station_noquickenter`, the user will have to use the manialink o
 ```
 *Title menus customisation.*
 
-If you specify a `background_replay`, it will be loaded and play in the background of the title menus. The replays used are limited, they cannot contain characters or cars for instance.
+If you specify a `background_replay`, it will be loaded and played in the background of the title menus. The replays used are limited, they cannot contain characters or cars for instance.
 
 Otherwise, `background_img` will be used. please note that this image will be shown cropped to the actual screen ratio of the player instead of streched out. You can also use a video file.
 

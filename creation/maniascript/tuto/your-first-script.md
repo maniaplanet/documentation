@@ -19,7 +19,7 @@ Firstly to be able to write your mode ingame, you have to create a text file wit
 
 And then save the file under a name like this: `MyGamemode.Script.txt` in `C:\Users\MYUSERNAME\Documents\ManiaPlanet\Scripts\Modes\ShootMania` (create the required folders if missing).
 
-Now you can launch a local server with your mode or via the map editor (if you want to create/modify a prototype map at the same time) or as said before you can continue in your IDE/text editor but you'll not be able to test/modify in live your script (through the IDE i mean, you can modify through the script editor ingame).
+Now you can launch a local server with your mode or via the map editor (if you want to create/modify a prototype map at the same time) or as said before you can continue in your IDE/text editor but you'll not be able to test/modify your script live (through the IDE I mean, you can modify it through the script editor ingame).
 
 ## Create a map
 
@@ -38,7 +38,7 @@ We have a basic game mode script and a map, all that is missing now is a server 
 Once it's done click on the Launch button, select the map you created earlier and click on Play.
 
 ## Structure of a game mode
-A gamemode is divided in several part which match each state of a game. A raw structure of a gamemode is like this:
+A gamemode is divided in several part which match each state of a game. A raw structure of a gamemode looks like this:
 
 {% highlight cpp %}
 #Extends "Modes/ShootMania/ModeBase.Script.txt"
@@ -110,7 +110,7 @@ A gamemode is divided in several part which match each state of a game. A raw st
 List of the functions of the gamemode
 {% endhighlight %}
 
-We'll explain each part of the script in the next sections but please note first that the `***StartServer***` code are called "Labels". An explanation of the labels is given in the excellent blog post of Steffen, a very active scripter of the community, here (among others explanations about others things in ManiaScript): http://blog.steeffeen.com/2013/10/labels/
+We'll explain each part of the script in the next sections but please note first that the `***StartServer***` code are called "Labels". An explanation of the labels is given in the excellent blog post by Steffen, a very active scripter of the community, here (among others explanations about other things in ManiaScript): http://blog.steeffeen.com/2013/10/labels/
 
 ### **Library**
 {% highlight cpp %}
@@ -128,15 +128,15 @@ We'll explain each part of the script in the next sections but please note first
 #Include "Libs/Nadeo/Message.Script.txt" as Message
 {% endhighlight %}
 
-This part is used to load all the library required and basic information for the gamemode. `ModeBase` is the most important part because it'll allow you to divide the gamemode for each state of the game and also to have access to all basic functions and variables for a game script.
+This part is used to load all the libraries required and basic information for the gamemode. `ModeBase` is the most important part because it'll allow you to divide the gamemode for each state of the game and also to have access to all basic functions and variables for a game script.
 
-The `CompatibleMapTypes` constant indicate which type(s) of maps is usable with your script. It can be useful if your mode require a specific type or number of block (for example at least two spawns, with a pole in Royal)
+The `CompatibleMapTypes` constant indicates which type(s) of maps are usable with your script. It can be useful if your mode requires a specific type or number of blocks (for example at least two spawns, with a pole in Royal)
 
 `Version` is... well the version of your script, you can format it as you want.
 
-The `Settings` library allow you to create and use a number of parameters (fixed by you and used by the server owner) on your script like the duration of a round or the number of eliminatations to do to win.
+The `Settings` library allows you to create and use a number of parameters (fixed by you and used by the server owner) on your script like the duration of a round or the number of eliminations needed to win.
 
-All `#Include` lines indicate that we want to load a library to the script. A library is a collection of functions/variables which contain script mode to do a specific task (like handling the message, manipulate the player scores/scoretable and more). You can also declare a custom library if you have made one and need it for your gamemode. It's particularly useful when you have to use the same block of code in several gamemode.
+All `#Include` lines indicate that we want to load a library into the script. A library is a collection of functions/variables which contain script modes to do a specific task (like handling the messages, manipulating the player scores/scoretable and more). You can also declare a custom library if you have made one and need it for your gamemode. It's particularly useful when you have to use the same block of code in several gamemodes.
 
 ### Constants
 
@@ -147,9 +147,9 @@ All `#Include` lines indicate that we want to load a library to the script. A li
 #Const ConstVar ConstValue
 {% endhighlight %}
 
-The constants are a type of variable where you stock a value that will not change during the game and will be accessible anywhere in your script. Usually in these variable you'll keep settings which are non-modifiable by the players/server owner like the number maximum of a player (for example), the list of objects used in the script, the id of the classes, the number minimum of players required for the script, etc...
+The constants are a type of variables where you stock a value that will not change during the game and will be accessible anywhere in your script. Usually in these variable you'll keep settings which are non-modifiable by the players/server owner like the maximum number of players (for example), the list of objects used in the script, the ids of the classes, the minimum number of players required for the script, etc...
 
-Declaring a constant variable doesn't need a comma (;) at the end of the line.
+Declaring a constant variable doesn't need a semicolon (;) at the end of the line.
 
 ### Globales
 
@@ -160,7 +160,7 @@ Declaring a constant variable doesn't need a comma (;) at the end of the line.
 declare Text G_GlobalVar;
 {% endhighlight %}
 
-Globales are like the constants at the difference that you can modify their value during the game and that you must set a type when you declare (create) them.
+Globals are like the constants with the difference that you can modify their value during the game and that you must set a type when you declare (create) them.
 
 ### "Body" of the Script
 And now we attack the main dish of the script, the labels corresponding to each state of a game.
@@ -185,7 +185,7 @@ In this block you'll set everything that needs to be set up at the start of the 
 //Code to execute when a map is loaded
 ***
 {% endhighlight %}
-In this part you'll initialize (usually) all the variables which are used to set up a match. It's the place where you reset the global score, setting up variables where will be used during the whole game for example.
+In this part you'll (usually) initialize all the variables which are used to set up a match. It's the place where you reset the global score or for setting up variables which will be used during the whole game for example.
 
 
 #### InitRound
@@ -196,7 +196,7 @@ In this part you'll initialize (usually) all the variables which are used to set
 //Code to execute before the beginning of a round
 ***
 {% endhighlight %}
-This is the code that you need to execute prior the start of a round, it could be reset the score of a player/team (other than the global score), custom stats, setting up a gameplay sequence, etc...
+This is the code that you need to execute prior to the start of a round, it could be to reset the score of a player/team (other than the global score), custom stats, setting up a gameplay sequence, etc...
 Note that this section is not mandatory to have your script working.
 
 #### StartRound
@@ -207,7 +207,7 @@ Note that this section is not mandatory to have your script working.
 //Code to executed when a round is started
 ***
 {% endhighlight %}
-This is where you usually setting up few others variables as well as creating the items required to the execution of the script (if needed at the start of the round).
+This is where you usually set up a few other variables as well as create the items required for the execution of the script (if needed at the start of the round).
 
 #### Playloop
 
@@ -217,7 +217,7 @@ This is where you usually setting up few others variables as well as creating th
 //Main loop where the code is executed through the duration of the round
 ***
 {% endhighlight %}
-The main dish, it's inside this loop that you'll handle everything that happen during a round. From spawning a player to handle the death and more. You have also to set the victory condition(s) somewhere inside to leave the loop (and stop the game).
+The main dish, inside this loop you'll handle everything that happens during a round. From spawning a player to handling player death and more. You have also to set the victory condition(s) somewhere inside to leave the loop (and stop the game).
 
 #### EndRound
 
@@ -227,7 +227,7 @@ The main dish, it's inside this loop that you'll handle everything that happen d
 //Code to execute at the end of the round
 ***
 {% endhighlight %}
-You enter here when you have meet your victory condition(s) and decide what to do at this moment (end the map/match or launch a new round).
+You enter here when you have met your victory condition(s) and decide what to do at this moment (end the map/match or launch a new round).
 If you decide to start a new round, the script will go back at the `InitRound` section and continue the script from there.
 
 This is also the place where you destroy all the objects and bots (because you'll recreate them on the `StartRound`).
@@ -250,10 +250,10 @@ Usually it's used to indicate who won the match and to load the next map.
 // ---------------------------------- //
 //Create your functions from here
 {% endhighlight %}
-If you need to create functions (repetition of the same block of code) for your game mode, you have to create them after the `EndMap` section because when the game will compile the script, it's start from the bottom to the up to check if the functions called by script really exist in the library or in the script itself.
+If you need to create functions (repetition of the same block of code) for your game mode, you have to create them after the `EndMap` section because when the game will compile the script, it goes from the bottom to the top of the document to check if the functions called by the script really exist in the library or in the script itself.
 
 ## Common variables
-Now we can almost start the "real" work, just a bit of explanation about the type of variables existing in ManiaScript as it can change slighty between programming language.
+Now we can almost start the "real" work, just a bit of explanation about the type of variables existing in ManiaScript as it can change slighty between programming languages.
 
 Here is a list of the common types of variables in ManiaScript (or how to declare them):
 
@@ -266,7 +266,7 @@ Boolean | Boolean   | True
 Ident   | Ident | (see below)
 Array   | []| Player[] (table of Players)
 
-An ident is special kind of variable, it's used to point to an asset (others that images/sound) like a bullet create in the ***ActionMaker***, or a ***skin*** or also an ***aura*** for example.
+An ident is special kind of variable, it's used to point to an asset (others that images/sound) like a bullet created in the ***ActionMaker***, or a ***skin*** or also an ***aura*** for example.
 
 ## Setting up the script
 
@@ -298,18 +298,18 @@ An ident is special kind of variable, it's used to point to an asset (others tha
 declare Ident[]	G_SpawnsList;	 ///< Id of all the BlockSpawns of the map
 	declare Ident	G_LatestSpawnId;	///< Id of the last BlockSpawn used
 {% endhighlight %}
-At the beginning of your script, you have to tell to the script to look into the `ModeBase` for the basic working of the script.
+At the beginning of your script, you have to tell the script to look in the `ModeBase` for the basic working of the script.
 
 Then talk about the different libraries:
 
-* Message: You handle all the system message thanks to library (like: "A player killed you!").
-* SM: Handle some general function like the spawn of the players
-* Score: It's used to set the score to the players (as its name said)
+* Message: You handle all the system message thanks to the library (like: "A player killed you!").
+* SM: Handle some general functions like spawning the players
+* Score: It's used to set the score to the players (as its name says)
 
 Below the library you have the settings that players set when they create a server.
 
 ## Initializing the server
-For a deathmatch mode (which is very simple), you have only to deactivate the team mode at the start of the server.
+For a deathmatch mode (which is very simple), you only have to deactivate the team mode at the start of the server.
 
 {% highlight cpp %}
 ***StartServer***
@@ -322,8 +322,8 @@ ST2::SetTeamsScoresVisibility(False);
 ST2::Build("SM");
 ***
 {% endhighlight %}
-We tell the script that's a FFA (Free For All) mode and we build the default scoretable.
-ST2, ScoresTable2 library, is loaded by the ModeBase.
+We tell the script that it's a FFA (Free For All) mode and we build the default scoretable.
+ST2, the ScoresTable2 library, is loaded by the ModeBase.
 
 ## Setting up the parameters for the match/map
 
@@ -357,8 +357,8 @@ foreach (Score in Scores) {
 }
 {% endhighlight %}
 
-The score of the players are reset. In this portion of code, we call the class `Score` which stores all the points won by the players during a round (or match).
-It's also with this class that you can put the scores of the players into the scoretable automatically.
+The scores of the players are reset. In this portion of the code, we call the class `Score` which stores all the points won by the players during a round (or match).
+It's also within this class that you can put the scores of the players into the scoretable automatically.
 
 {% highlight cpp %}
 declare LeadId = NullId;
@@ -371,7 +371,7 @@ The Id of the lead player is also reset as the match hasn't started yet.
 declare CurrentPointLimit = S_PointLimit;
 {% endhighlight %}
 
-We put in a variable the Point Limit decided by the owner of the server (or by vote).
+We put in a variable which declares the Point Limit decided by the owner of the server (or by vote).
 
 {% highlight cpp %}
 // ---------------------------------- //
@@ -380,7 +380,7 @@ EndTime = StartTime + (S_TimeLimit * 1000);
 UIManager.UIAll.UISequence = CUIConfig::EUISequence::Playing;
 ***
 {% endhighlight %}
-We setting up the countdown and the duration of the round/match. Fix a duration is good is most cases because it prevents the round to last too long.
+We're setting up the countdown and the duration of the round/match. A fixed duration is good in most cases because it prevents the round from lasting too long.
 
 ## Proceedings of the round
 It's now time to write what's going on during a round.
@@ -391,7 +391,7 @@ It's now time to write what's going on during a round.
 foreach (Event, PendingEvents) {
 {% endhighlight %}
 
-We look in each event happening during the round. When an event is triggered, according what we want to do, we do some treatments (only a very few events are listed below, the basic ones).
+We look at each event happening during the round. When an event is triggered, according to what we want to do, we do some treatments (only a very few events are listed below, the basic ones).
 
 {% highlight cpp %}
 // ---------------------------------- //
@@ -408,7 +408,7 @@ if (Event.Type == CSmModeEvent::EType::OnArmorEmpty) {
 }
 {% endhighlight %}
 
-When a player loses all his armors (when he is eliminated), we remove him one point. Then with `PassOn(Event)` we tell to the server that the event has been processed. We give also one point to the shooter if it's not a suicide.
+When a player loses all his armors (when he is eliminated), we remove one point from his score. Then with `PassOn(Event)` we tell the server that the event has been processed. We give also one point to the shooter if it's not a suicide.
 
 {% highlight cpp %}
 // ---------------------------------- //
@@ -416,7 +416,7 @@ When a player loses all his armors (when he is eliminated), we remove him one po
 else if (Event.Type == CSmModeEvent::EType::OnHit) {
 {% endhighlight %}
 
-Now we check when a player is hit by a projectile (from a Storm weapon).
+Now we check if a player is hit by a projectile (from a Storm weapon).
 
 {% highlight cpp %}
 if (Event.Shooter == Event.Victim) {
@@ -435,7 +435,7 @@ Basically if the player hit himself (with the `Arrow` or the `Nucleus` for examp
 }
 {% endhighlight %}
 
-But if the sender and the receiver are different, we remove the number of armor (life) to the victim (the number of damage is known with the variable `Event.Damage` which can be tempered if you want to modify the damage received.
+But if the sender and the receiver are different, we remove the number of armor (life) from the victim (the number of damage is known with the variable `Event.Damage` which can be tempered if you want to modify the damage received.
 
 {% highlight cpp %}
 // ---------------------------------- //
@@ -447,7 +447,7 @@ else if (Event.Type == CSmModeEvent::EType::OnPlayerRequestRespawn) {
 }
 {% endhighlight %}
 
-If a player presses the backspace button (the default one to respawn), we remove him one point.
+If a player presses the backspace button (the default one to respawn), we remove one point from his score.
 
 {% highlight cpp %}
 	// ---------------------------------- //
@@ -458,7 +458,7 @@ If a player presses the backspace button (the default one to respawn), we remove
 }
 {% endhighlight %}
 
-And we validate all others events in their default treatment.
+And we validate all others events with their default treatment.
 
 {% highlight cpp %}
 // ---------------------------------- //
@@ -471,7 +471,7 @@ foreach (Player in Players) {
 {% endhighlight %}
 
 Outside of the loop of the events, there is some work to do. First we have to let the players spawn if they are eliminated.
-To do so, we create a loop which checks all the players' status. If a player is eliminated (by checking his status thanks to `CSmPlayer::ESpawnStatus::NotSpawned`), we ask the script to execute the function `MeleeSpawnPlayer` which will be explained a bit later).
+To do so, we create a loop which checks all the players' statuses. If a player is eliminated (by checking his status with `CSmPlayer::ESpawnStatus::NotSpawned`), we ask the script to execute the function `MeleeSpawnPlayer` which will be explained a bit later).
 
 {% highlight cpp %}
 // ---------------------------------- //
@@ -482,7 +482,7 @@ if (Scores.existskey(0) && Scores[0].User.Id != LeadId) {
 }
 {% endhighlight %}
 
-We can also display a message when a player take the lead. We have to test if the player with the highest score is the same player than registered before (else we don't save the new leader).
+We can also display a message when a player takes the lead. We have to test if the player with the highest score is the same player than registered before (else we don't save the new leader).
 If it's the case, we save the new leader and we display a message to all the player to warn the players that one of them has taken the lead.
 
 {% highlight cpp %}
@@ -504,11 +504,11 @@ First we check if the timelimit is reached, if so, the match is ended. Else we c
 
 You can stop the round with the instruction `MB_StopRound = True;` and stop the match (and so going to the next map) by using `MB_StopMap = True;`. If you use one of these instructions, the script will go directly into the `EndRound` section.
 
-We have finish to treat the playloop, but the script isn't quite finished yet.
+We have finished treating the playloop, but the script isn't quite finished yet.
 
 ## Ending the match
 We have some code to execute in the EndMap section before having a "complete" loop of code for a match.
-This section is executed when one of the victory condition is validated.
+This section is executed when one of the victory conditions is validated.
 
 {% highlight cpp %}
 ***EndMap***
@@ -540,7 +540,7 @@ foreach (Player in Players) {
 }
 {% endhighlight %}
 
-We unspawn all the players except the player who's won and we update the interface (and so the scoretable).
+We unspawn all the players except the player who has won and we update the interface (and so the scoretable).
 
 {% highlight cpp %}
 MB_Sleep(1000);
@@ -591,7 +591,7 @@ UIManager.UIAll.ScoreTableVisibility = CUIConfig::EVisibility::Normal;
 UIManager.UIAll.BigMessage = "";
 ***
 {% endhighlight %}
-And finally we revert back the behaviour of the scoretable and the content of the message displayed on the screen.
+And finally we revert the behaviour of the scoretable and the content of the message displayed on the screen back.
 
 ### The functions
 But the script is not over yet, we have to create the function which will spawn the players during the round.
@@ -603,7 +603,7 @@ Void MeleeSpawnPlayer(CSmPlayer _Player) {
 	}
 {% endhighlight %}
 
-We list all the spawns of the map (I mean the block spawn put by the map creator) if the list is empty.
+We list all the spawns of the map (I mean the spawn blocks placed by the map creator) if the list is empty.
 
 {% highlight cpp %}
 declare SpawnId = NullId;
@@ -614,7 +614,7 @@ while (True) {
 }
 {% endhighlight %}
 
-We choose a spawn randomly which will be used by the player, but it won't the last spawn used (to prevent to have a player spawning in the same spawn of the last player in few seconds).
+We choose a spawn randomly which will be used by the player, but it won't be the last used spawn (to prevent to have a player spawning in the same spawn as the last player within a few seconds).
 
 {% highlight cpp %}
 G_LatestSpawnId = SpawnId;
@@ -632,10 +632,10 @@ Then we remove the spawn of the list as it has been used.
 Now you've your first working gamemode ready! Feel free to launch a local network server to test it! ^_^
 
 ## Download the source of the mode
-You can download the source of the gamemode on this [link](./assets/Melee_Tuto.Script.txt).
+You can download the source of this gamemode by clicking this [link](./assets/Melee_Tuto.Script.txt).
 
 ## Learn more about the ManiaScript
-If you want to learn more things about the ManiaScript, I invite you to check [this page](./going-further-with-maniascript.html).
+If you want to learn more things about ManiaScript, I invite you to check out [this page](./going-further-with-maniascript.html).
 
 
   [1]: http://maniaplanet.github.io/documentation/maniascript/tuto/img/script-editor.png

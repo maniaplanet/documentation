@@ -10,7 +10,7 @@ tags:
 
 | Option Name         | Role                                                                                                                                                                                                                            |
 |:-------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| /dedicated_cfg=xxx  | Specify a configuration file "dedicated_cfg.txt" to use. (xxx = name of the file in UserData/Config/)                                                                                                                           |
+| /dedicated_cfg=xxx  | Specify a configuration file "dedicated_cfg.txt" to use. (xxx = name of the file in UserData/config/)                                                                                                                           |
 | /game_settings=xxx  | Specify a match settings file to use. (xxx = absolute file name or relative to UserData/Maps/MatchSettings)                                                                                                                     |
 | /servername=xxx     | Override the server name                                                                                                                                                                                                        |
 | /login=xxx          | Dedicated login (required for internet server). Create one on your PlayerPage                                                                                                                                                   |

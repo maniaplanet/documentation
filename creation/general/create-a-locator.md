@@ -21,7 +21,7 @@ A locator is basically a text file that contains a URL to custom content hosted 
 
 You'll need a file host that allows direct linking (i.e. no waiting times for downloads, the file downloads as soon as you visit the URL). For now, I am using [Dropbox][2] although I'm not sure if I'm even allowed to use it for hosting these files but fuck the police. An alternative is [FileDen][3] which would probably be better in the long run.
 
-**Note from Nadeo: we strongly suggest to host locators on personal webserver. Dropbox may disable content linked from them if the bandwith used is too high. We also suggest to avoid all file hosters requesting a captcha in order to download the file, it won't work.**
+**Note from Nadeo: we strongly suggest to host locators on personal webservers. Dropbox may disable content linked from them if the bandwidth used is too high. We also suggest to avoid all file hosters requesting a captcha in order to download the file, it won't work.**
 
 You can create locators for all custom content including horns and I'll show you how to do both.
 

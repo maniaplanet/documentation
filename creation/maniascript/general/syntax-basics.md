@@ -29,13 +29,13 @@ Beware: Case is important, always!
 * Text: any character sequence between double quotes: "plop" "gouzi" or "456.32". 
 
 **Protips**:
-- inside a Text, The usual escape sequences such as "\n" or "\\" are supported.
-- you can also declare a Text value between 3 double quotes. When doing so, you won't need to escape chars, and it can expand on many lines. """plop="452.12.22" toto"""
+- Inside a Text, the usual escape sequences such as "\n" or "\\" are supported.
+- You can also declare a Text value between 3 double quotes. When doing so, you won't need to escape chars, and it can expand on many lines. """plop="452.12.22" toto"""
 
 ## Variables 
 
 ### Variable declaration
-In Maniascript, variables must be declared, either by specifying a Type, or an initial value :
+In Maniascript, variables must be declared, either by specifying a Type, or an initial value:
 
 `declare Integer MyVariable;`
 
@@ -61,7 +61,7 @@ log(serverName ^ " has currently " ^ planets ^ "p.");
 
 ### Variable scope
 
-Scope in maniascript is same as many other languages. A scope is defined with a matching pair of curly brackets:  starting with `{` and ending with `}`. Variable visibility is limited to the largest scope containing the declaration of the variable. Variable visibility is also limited to the instructions following the declaration.
+Scope in Maniascript is the same as in many other languages. A scope is defined with a matching pair of curly brackets:  starting with `{` and ending with `}`. Variable visibility is limited to the largest scope containing the declaration of the variable. Variable visibility is also limited to the instructions following the declaration.
 
 ### Global Variables
 
@@ -82,7 +82,7 @@ Once declared, you can change the value of a variable with a single equal sign:
 As said earlier, the types must match. No implicit conversions are made.
 
 ## Comments
-Commentare part of a script that are not taken into account at all. The program just doesn't "see" them.
+Commentary part of a script that is not taken into account at all. The program just doesn't "see" them.
 Anything right of a double slash `//` is a comment.
 Anything between `/* and */` is also a comment.
 
@@ -92,7 +92,7 @@ Var = 2 /* This is a comment */ + 5;
 
 declare Text hello = "world" // this text here will be ignored and is a comment
 /* 
-all this text here is a comment, and is beeing ignored from the maniascript engine
+all this text here is a comment, and is being ignored by the maniascript engine
 if (hello == "world") {
     do something
     }
@@ -133,7 +133,7 @@ To compare values, you can use the usual:        `==`   `!=`   `<`   `>`   `<=` 
 Greater/lower comparisons do not work with Booleans.
 
 ## Log and assertions
-It's often useful to print some text in the log. You can do that with :
+It's often useful to print some text in the log. You can do that with:
 
 ```
 log("Something went wrong!");
@@ -150,7 +150,7 @@ assert(MyVariable == 3);
 This will check if MyVariable is equal to 3. If not, the script will be halted as if an error had occurred.
 
 ##Timing instructions: yield/sleep/wait
-Those instructions allow to pause the execution of the script. It is very useful, since during the execution script, nothing else happen: the display is not updated, the simulations of the game are stuck, the logs are not being updated, and so on.
+Those instructions allow you to pause the execution of the script. It is very useful, since during the script execution, nothing else happen: the display is not updated, the simulations of the game are stuck, the logs are not being updated, and so on.
 
 - `yield;` The script pauses for the shortest amount of time.
 - `sleep(XXXX);` The script pauses for XXXX milliseconds.
@@ -322,7 +322,7 @@ List.clear();
 
 ## Classes
 
-In ManiaScript, you can not declare new classes or any kind of type. Also you can not directly instantiate objects of an existing class. You can only declare pointers to existing objects.
+In ManiaScript, you cannot declare new classes or any kind of type. Also you cannot directly instantiate objects of an existing class. You can only declare pointers to existing objects.
 
 Yet, there are "2 kinds" of pointers. The first one is what we call an alias. It's fast, and quite powerful, yet its behaviour can be surprising, especially if you're used to common pointer programming. The second is a more regular affectation, roughly emulating pointers.
 

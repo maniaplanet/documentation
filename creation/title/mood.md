@@ -14,8 +14,8 @@ You will have access to parameters only nadeo was able to tweak before, some can
 # Lighting
 Some of these parameters will impact the light map calculation. You will need to recompute the lightmap to see what they did.
 
-**Light EnableStars="1" ** :  show stars in the sky even if Day (no effect on lightmap)  
-**Latitude="45"**  : will modify the height of the sun above the horizon depending the time of the day.  
+**Light EnableStars="1" ** : Show stars in the sky even if it's Day (no effect on lightmap)  
+**Latitude="45"**  : Will modify the height of the sun above the horizon depending the time of the day.  
 **DayTime01="0.56" ** defines the clock, and so the height of the sun : 0 = after_midnight 0.5 : midday 1 = before_midnight  
 **LocalLightX="1"** multiplier to make local lights (all lights in blocks that are not the sun) stronger or lower than default settings (has effect on lightmap)
 
@@ -27,7 +27,7 @@ Some of these parameters will impact the light map calculation. You will need to
 
 ## T3SpecularLocal
 
-These are only visible if Light Index are enabled in the launcher.
+These are only visible if Light Index is enabled in the launcher.
 
 **--ScaleIntens="1"  **: intensity of (the bright dot) specular of local lights  
 **--ScaleExponent="1.2" **: glossiness (size of the dot) of local lights.  

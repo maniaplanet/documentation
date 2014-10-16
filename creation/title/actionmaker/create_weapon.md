@@ -15,18 +15,18 @@ We'll learn how to create a weapon by making a sort of... kamehameha!
 ## Creating the basic settings of the weapon
 ![ActionMaker home](./img/Edit_AM_Home.jpg)
 
-First you have to create a new weapon by clicking in the second icon at the bottom of the screen and then you choose to create a `weapon`.
+First you have to create a new weapon by clicking on the second icon at the bottom of the screen and then you choose to create a `weapon`.
 
 ![Weapon creation home](./img/Edit_AM_NewWeapon.jpg)
 
  1. Cooldown between each shot (in milliseconds, 1000ms = 1sec)
- 2. The cost of one ammo (in unit)
- 3. The maximum energy of the weapon (in unit)
- 4. Create a custom animation while firing (it's facultative, not that if you create an animation for the weapon, you'll not be able to move until the animation is over. Moreover the animation can stop your character in the air if you activate the weapon while you're in the air) **DOESN'T WORK YET!**
+ 2. The cost of one ammo (in units)
+ 3. The maximum energy of the weapon (in units)
+ 4. Create a custom animation while firing (it's facultative, note that if you create an animation for the weapon, you'll not be able to move until the animation is over. Moreover the animation can stop your character in the air if you activate the weapon while you're in the air) **DOESN'T WORK YET!**
  5. Customize the visual and gameplay parameters of the weapon
  6. Attribute an icon for the weapon (which will be displayed in the HUD, the file must be in DDS format)
  7. Attribute a custom crosshair for this weapon (in DDS format)
- 8. Activate the Script mode where you can code directly the behaviour of the weapon. Can be needed if you want to give a specific behaviour for your weapon
+ 8. Activate the Script mode where you can directly code the behaviour of the weapon. Can be needed if you want to define a specific behaviour for your weapon
  9. Allowing you to test the weapon with the map or the mode of your choice
  10. Test your map immediately in the default test map
 
@@ -52,14 +52,14 @@ Let's first list all the options:
  11. Empty sphere shape
  12. Disc shape
  13. Circle shape
- 14. Lenght of the visual effect (depending of the shape)
+ 14. Length of the visual effect (depending of the shape)
  15. Rotation of the effect
- 16. Force of the friction of the bullet (if it's slow down more or less when touching the ground, if the bullet isn't exploding on the impact)
+ 16. Force of the friction of the bullet (if it's slowing down more or less when touching the ground, if the bullet isn't exploding on the impact)
  17. Variance of the length of the visual effect
  18. Variance of the length of the rotation
  19. Lifetime of the visual effect (before restarting the visual effect (like a pulse))
  20. Speed of the fade in of the effect
- 21. Number of particules for the effect. More particules there is, more the effect will be detailed but the weapon will be heavier for the computer to display (can be incapaciting if several players use the weapon during a game)
+ 21. Number of particules for the effect. The more particules there are, the more detailed the effect will be, but the weapon will be resource heavier for the computer to display (can be incapaciting if several players use the weapon during a game)
  22. Variance of the lifetime of the effect
  23. Speed of the fade out of the effect
  24. Size of the effect at the beginning of the shot
@@ -102,10 +102,10 @@ With those settings now we really have the impression to have an DBZ-like energy
 
 ![Projectile Core](./img/AM_CustomProjectileCore.jpg)
 
-Those settings allow us to have a core quite stable in term of looking for the purpose we have.
+Those settings allow us to have a quite stable core in terms of looks for the purpose we have.
 
 ## Creating the tail
-The creation of tail of the weapon is almost the same than the core except few different options:
+The creation of the tail of the weapon is almost the same as the core except a few different options:
 
 - Weight (to have a pending trail (up or down))
 - Persistance: It's how long the particule will be dragged from its starting point
@@ -124,12 +124,12 @@ And now the parameters for a Kamehameha tail style with a `Dots` effect!
 - Intensity: 1
 - Intensity variance: 0.25
 
-Now you can see the result of the projectile by loading the test map by cliking on the bottom-right of the screen or simply the travel icon between the global colorization tool and the global scale parameter at the bottom on screen.
+Now you can see the result of the projectile by loading the test map by clicking on the bottom-right of the screen or simply the travel icon between the global colorization tool and the global scale parameter at the bottom on screen.
 
 ![Porjectile trail](./img/AM_CustomProjectileTrail.jpg)
 
 ## Time to explode everything
-Now that our projectile is ready, it's time to customize the style of the explosion. We'll create first its power.
+Now that our projectile is ready, it's time to customize the style of the explosion. We'll create its power first.
 
 The power is the visual effect of the impact of the projectile on a player or any solid object in the world.
 
@@ -165,7 +165,7 @@ The result is a okay-ish explosion power style.
 ![Projectile Explosion Power](./img/AM_CustomProjectileExplosionPower.jpg)
 
 ### Attack on Debris
-We can create also an effect, the debris, which is like the ground blast of a nuclear weapon. Personnaly i choose a medium disc blast effect like... nuclear weapons!
+We can create also an effect, the debris, which is like the ground blast of a nuclear weapon. Personally I choose a medium disc blast effect like... nuclear weapons!
 
 - Effect: Smoke/Circle
 - Shape: Circle
@@ -195,10 +195,10 @@ This part is quite simple, you have to choose a sound for each sequence:
 - The sound of the projectile itself
 - The sound when the projectile explodes
 
-For the moment you're limited to the sound listed in the library.
+For the moment you're limited to the sounds listed in the library.
 
 ## Last part but not the least: the gameplay
-Of course this is one of the most important part of your projectile, maybe the most, the gameplay mechanics of your weapon.
+Of course this is one of the most important parts of your projectile, maybe the most, the gameplay mechanics of your weapon.
 
 This tab is separated by two tabs: Bullet and Explosion.
 
@@ -216,7 +216,7 @@ Let's see the options for the bullet:
 - Show Player Explosion: Display the hit particules on the shield of the players when hit (useful to deactivate them for minigun-like weapons).
 - Is Homing: Activate the bullet in "guided-missile" mode. It'll follow the closest player (visible (like behind a wall) or not).
 
-And there is several movement patterns if you don't want to have a straight forward bullet only with each its parameters.
+And there are several movement patterns if you don't want to only have a straight forward bullet with each of its parameters.
 
 The few parameters where you need explanations are:
 
@@ -238,7 +238,7 @@ For our weapon, we'll enter the following values:
 ### The Explosion
 Now that you've setup the bullet, you have to configure the explosion.
 
-- Explosion Detection Radius: The default parameter indicate that the explosion will occur when the bullet will hit something. If you can change this parameter, a bullet can explode in a radius or 5 meters for example around the bullet (a little like how the Nucleus works)
+- Explosion Detection Radius: The default parameter indicates that the explosion will occur when the bullet will hit something. If you can change this parameter, a bullet can explode in a radius of 5 meters for example around the bullet (a little like how the Nucleus works)
 - Explode On End Life: The projectile will explode (or not) when its lifetime is reached (which was set in the previous tab)
 - Rebounds Count: The numbers of maximum rebounds for the projectile
 - Bounce On Tech Walls Only: if checked, the projectile will bounce only on Tech blocks (the red ones), else it'll bounce on any plateform.
@@ -266,10 +266,10 @@ And now the settings for our weapon:
 
 ![Projectile Gameplay Explosion](./img/AM_CustomProjectileGameplayExplosion.jpg)
 
-Now you have a fully usable kamehameha (but a lot overpowered ^^)!
+Now you have a fully usable kamehameha (but quite overpowered ^^)!
 
 ![Weapon animation](./img/actionmaker_kamehameha.gif)
 
 ## Few tips on weapon creation
 
-- Avoid to have a too high number of particules, if you do it, when several players will play, there is a high risk that they will suffer of performance issue cause of the high amount of particules. For example the Storm rocket use around 10 000 particules by bullet. So keep it as low as to maintain good performance for all the players.
+- Avoid to have a too high number of particles, if you do that, when several players will play, there is a high risk that they will suffer of performance issues caused by the high amount of particles. For example the Storm rocket uses around 10 000 particules by bullet. So keep it as low as to maintain good performance for all the players.
