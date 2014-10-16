@@ -125,7 +125,14 @@ tags:
 |**S_AllowBeginners**|False|Is a Beginners Welcome server|
 |**S_AutoManageAFK**|True|Switch inactive players to spectators|
 |**S_ArmorPoints**|2|Starting armor points for the players|
-|**S_NbPlayersPerTeam**|5|Numpber of players per team in matchmaking|
+|**S_BattleWaves**|True|Use Waves Mode|
+|**S_TimeLimitForFirstCapture**|300|Time limit for first capture|
+|**S_TimeLimitAfterFirstCapture**|600|Time limit after first capture|
+|**S_WaveDuration**|15|Wave duration|
+|**S_StayInAttackOnCapture**|True|Reset timer when a pole is beeing captured|
+|**S_UseOvertime**|True|Use the overtime system|
+|**S_NbPlayersPerTeamMax**|5|Number of players per team in matchmaking|
+|**S_NbPlayersPerTeamMin**|2|Minimum number of players per team in matchmaking|
 |**S_UsePlayerClublinks**|False|Use the players clublinks, or otherwise use the default teams|
 
 ## Combo (+ModeMatchmaking)
