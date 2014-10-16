@@ -20,10 +20,25 @@ The only exception is Elite that has some very specific callbacks.
 
 ## Common
 
+### LibXmlRpc_BeginServer
+* Data : Nothing
+* Example : []
+* Note : This callback is sent before the beginning of the script execution
+
+### LibXmlRpc_BeginServerStop
+* Data : Nothing
+* Example : []
+* Note : This callback is sent after the beginning of the script execution
+
 ### LibXmlRpc_BeginMatch
 * Data : An array with the number of the match and a boolean indicating if the script was restarted or not.
 * Example : ["3", "False"]
-* Note : This callback is sent at the beginning of each match
+* Note : This callback is sent before the beginning of each match
+
+### LibXmlRpc_BeginMatchStop
+* Data : An array with the number of the match and a boolean indicating if the script was restarted or not.
+* Example : ["3", "False"]
+* Note : This callback is sent after the beginning of each match
 
 ### LibXmlRpc_LoadingMap
 * Data : An array with the number of the map
@@ -33,22 +48,42 @@ The only exception is Elite that has some very specific callbacks.
 ### LibXmlRpc_BeginMap
 * Data : An array with the number of the map, its UID and if the map is new or restarted.
 * Example : ["1", "2icir0pvzfqwf4h9j3B5lkjYu4n", "False"]
-* Note : This callback is sent at the beginning of each map
+* Note : This callback is sent before the beginning of each map
+
+### LibXmlRpc_BeginMapStop
+* Data : An array with the number of the map, its UID and if the map is new or restarted.
+* Example : ["1", "2icir0pvzfqwf4h9j3B5lkjYu4n", "False"]
+* Note : This callback is sent after the beginning of each map
 
 ### LibXmlRpc_BeginSubmatch
 * Data : An array with the number of the submatch
 * Example : ["2"]
-* Note : This callback is sent at the beginning of each submatch if the mode uses submatches
+* Note : This callback is sent before the beginning of each submatch if the mode uses submatches
+
+### LibXmlRpc_BeginSubmatchStop
+* Data : An array with the number of the submatch
+* Example : ["2"]
+* Note : This callback is sent after the beginning of each submatch if the mode uses submatches
 
 ### LibXmlRpc_BeginRound
 * Data : An array with the number of the round
 * Example : ["4"]
-* Note : This callback is sent at the beginning of each round if the mode uses rounds
+* Note : This callback is sent before the beginning of each round if the mode uses rounds
+
+### LibXmlRpc_BeginRoundStop
+* Data : An array with the number of the round
+* Example : ["4"]
+* Note : This callback is sent after the beginning of each round if the mode uses rounds
 
 ### LibXmlRpc_BeginTurn
 * Data : An array with the number of the turn
 * Example : ["5"]
-* Note : This callback is sent at the beginning of each turn if the mode uses turns
+* Note : This callback is sent before the beginning of each turn if the mode uses turns
+
+### LibXmlRpc_BeginTurnStop
+* Data : An array with the number of the turn
+* Example : ["5"]
+* Note : This callback is sent after the beginning of each turn if the mode uses turns
 
 ### LibXmlRpc_BeginPlaying
 * Data : Nothing
@@ -63,22 +98,42 @@ The only exception is Elite that has some very specific callbacks.
 ### LibXmlRpc_EndTurn
 * Data : An array with the number of the turn
 * Example : ["5"]
-* Note : This callback is sent at the end of each turn if the mode uses turns
+* Note : This callback is sent before the end of each turn if the mode uses turns
+
+### LibXmlRpc_EndTurnStop
+* Data : An array with the number of the turn
+* Example : ["5"]
+* Note : This callback is sent after the end of each turn if the mode uses turns
 
 ### LibXmlRpc_EndRound
 * Data : An array with the number of the round
 * Example : ["4"]
-* Note : This callback is sent at the end of each round if the mode uses rounds
+* Note : This callback is sent before the end of each round if the mode uses rounds
+
+### LibXmlRpc_EndRoundStop
+* Data : An array with the number of the round
+* Example : ["4"]
+* Note : This callback is sent after the end of each round if the mode uses rounds
 
 ### LibXmlRpc_EndSubmatch
 * Data : An array with the number of the submatch
 * Example : ["2"]
-* Note : This callback is sent at the end of each submatch if the mode uses submatches
+* Note : This callback is sent before the end of each submatch if the mode uses submatches
+
+### LibXmlRpc_EndSubmatchStop
+* Data : An array with the number of the submatch
+* Example : ["2"]
+* Note : This callback is sent after the end of each submatch if the mode uses submatches
 
 ### LibXmlRpc_EndMap
 * Data : An array with the number of the map and its UID
 * Example : ["1", "2icir0pvzfqwf4h9j3B5lkjYu4n"]
-* Note : This callback is sent at the end of each map
+* Note : This callback is sent before the end of each map
+
+### LibXmlRpc_EndMapStop
+* Data : An array with the number of the map and its UID
+* Example : ["1", "2icir0pvzfqwf4h9j3B5lkjYu4n"]
+* Note : This callback is sent after the end of each map
 
 ### LibXmlRpc_UnloadingMap
 * Data : An array with the number of the map
@@ -88,7 +143,22 @@ The only exception is Elite that has some very specific callbacks.
 ### LibXmlRpc_EndMatch
 * Data : An array with the number of the match
 * Example : ["3"]
-* Note : This callback is sent at the end of each match
+* Note : This callback is sent before the end of each match
+
+### LibXmlRpc_EndMatchStop
+* Data : An array with the number of the match
+* Example : ["3"]
+* Note : This callback is sent after the end of each match
+
+### LibXmlRpc_EndServer
+* Data : Nothing
+* Example : []
+* Note : This callback is sent before the end of the script execution
+
+### LibXmlRpc_EndServerStop
+* Data : Nothing
+* Example : []
+* Note : This callback is sent after the end of the script execution
 
 ### LibXmlRpc_BeginPodium
 * Data : Nothing
@@ -109,6 +179,24 @@ The only exception is Elite that has some very specific callbacks.
 * Data : Nothing
 * Example : []
 * Note : This callback is sent at the end of the warm up
+
+### LibXmlRpc_Callbacks
+* Data : An array with the name of all the available callbacks
+* Example : ["LibXmlRpc_EndWarmUp", "LibXmlRpc_EndMatch", ...]
+* Note : This callback is sent when the script receives the `LibXmlRpc_ListCallbacks` trigger.
+* Version : available since XmlRpc.Script.txt_v2014-10-14
+
+### LibXmlRpc_CallbackHelp
+* Data : An array with name of the callback and its documentation 
+* Example : ["LibXmlRpc_EndWarmUp", "Documentation about LibXmlRpc_EndWarmUp"]
+* Note : This callback is sent when the script receives the `LibXmlRpc_GetCallbackHelp` trigger.
+* Version : available since XmlRpc.Script.txt_v2014-10-14
+
+### LibXmlRpc_BlockedCallbacks
+* Data : An array with name of the blocked callbacks. 
+* Example : ["LibXmlRpc_EndWarmUp", "LibXmlRpc_OnShoot", "LibXmlRpc_BeginTurn"]
+* Note : This callback is sent when the script receives the `LibXmlRpc_ListBlockedCallbacks` trigger.
+* Version : available since XmlRpc.Script.txt_v2014-10-14
 
 ### UI_Properties
 * Data : An xml string with the Trackmania ui properties. Check the [documentation]({{ site.docurl }}/creation/maniascript/libraries/library-ui.html) for more information.
@@ -167,10 +255,10 @@ To avoid to spam XmlRpc these events are sent only if it has an interest for the
 Weapon number -> 1: Laser, 2: Rocket, 3: Nucleus, 5: Arrow
 
 #### LibXmlRpc_OnHit
-* Data : An array with the login of the shooter, the login of the victim, the amount of damage, the weapon number and the shooter points (the +1, +2, etc displayed in game when you hit someone)
-* Example : ["ShooterLogin", "VictimLogin", "200", "1", "2"]
+* Data : An array with the login of the shooter, the login of the victim, the amount of damage, the weapon number, the shooter points (the +1, +2, etc displayed in game when you hit someone) and the hit distance.
+* Example : ["ShooterLogin", "VictimLogin", "200", "1", "2", "45."]
 * Note : This callback is sent when a player is hit.
-One armor point = 100 damage, Weapon number -> 1: Laser, 2: Rocket, 3: Nucleus, 5: Arrow
+One armor point = 100 damage. Weapon number -> 1: Laser, 2: Rocket, 3: Nucleus, 5: Arrow. The hit distance is calculated with the position of the payers when the projectile hit, so it's not really accurate for weapons with a travel time.
 
 #### LibXmlRpc_OnNearMiss
 * Data : An array with the login of the shooter, the login of the victim, the weapon number and the distance of the miss
@@ -208,6 +296,11 @@ The points can be of three types: Hit, Pole or Survival
 * Example : ["Login", "1"]
 * Note : This callback is sent when a player spawns or respawns.
 Two type of spawn -> 0: normal, 1: early . The normal spawn is the first spawn of the player, while an early respawn is when a player respawn during a round before the pole is captured.
+
+#### Royal_RoundWinner
+* Data : An array with the login of the player who won the round
+* Example : ["Login"]
+* Note : This callback is sent at the end of the round.
 
 
 ### Time attack
@@ -264,6 +357,21 @@ The time is in milliseconds.
 
 
 ### Elite
+
+#### Elite_BeginTurn
+* Data : An array with the logins of the attacker and defenders
+* Example : ["attackerlogin", "defenderlogin1;defenderlogin2;defenderlogin3"]
+* Note : This callback is sent after LibXmlRpc_BeginTurn.
+* Version : available since ModeSport.Script.txt_v2014-10-13
+
+#### Elite_EndTurn
+* Data : An array with the type of victory for the round
+* Example : [1]
+* Note : 1 -> Time limit, 2 -> Capture, 3 -> Attacker eliminated, 4-> Defenders eliminated
+* Version : available since ModeSport.Script.txt_v2014-10-13
+
+
+### Elite Legacy callbacks
 
 Elite is a bit special as it uses an older callback function and JSON encoding.
 ManiaPlanet.ModeScriptCallback(string Param1, string Param2);
@@ -882,9 +990,51 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 ## Common
 
 ### LibXmlRpc_GetPlayerRanking
-* Note : Invoke the LibXmlRpc_PlayerRanking script callback for a player
+* Note : Invoke the LibXmlRpc_PlayerRanking script callback for a player.
 * String1 : "LibXmlRpc_GetPlayerRanking"
 * String2 :  "LoginOfThePlayer"
+
+### LibXmlRpc_ListCallbacks
+* Note : List all the xmlrpc script callbacks available. This method triggers the `LibXmlRpc_Callbacks` callback.
+* String1 : "LibXmlRpc_ListCallbacks"
+* String2 : ""
+* Version : available since XmlRpc.Script.txt_v2014-10-14
+
+### LibXmlRpc_GetCallbackHelp
+* Note : Get help about a callback. This method triggers the `LibXmlRpc_CallbackHelp` callback.
+* String1 : "LibXmlRpc_GetCallbackHelp"
+* String2 : "NameOfTheCallback"
+* Version : available since XmlRpc.Script.txt_v2014-10-14
+
+### LibXmlRpc_BlockCallback
+* Note : Block a callback.
+* String1 : "LibXmlRpc_BlockCallback"
+* String2 : "NameOfTheCallback"
+* Version : available since XmlRpc.Script.txt_v2014-10-14
+
+### LibXmlRpc_BlockAllCallbacks
+* Note : Block all callbacks.
+* String1 : "LibXmlRpc_BlockAllCallbacks"
+* String2 : ""
+* Version : available since XmlRpc.Script.txt_v2014-10-14
+
+### LibXmlRpc_UnblockCallback
+* Note : Unblock a callback.
+* String1 : "LibXmlRpc_UnblockCallback"
+* String2 : "NameOfTheCallback"
+* Version : available since XmlRpc.Script.txt_v2014-10-14
+
+### LibXmlRpc_UnblockAllCallbacks
+* Note : Unblock all callbacks.
+* String1 : "LibXmlRpc_UnblockAllCallbacks"
+* String2 : ""
+* Version : available since XmlRpc.Script.txt_v2014-10-14
+
+### LibXmlRpc_ListBlockedCallbacks
+* Note : Get the list of all blocked callbacks. This method triggers the `LibXmlRpc_BlockedCallbacks` callback.
+* String1 : "LibXmlRpc_ListBlockedCallbacks"
+* String2 : ""
+* Version : available since XmlRpc.Script.txt_v2014-10-14
 
 ### UI_SetProperties
 * Note : Set the properties of the UI. Check the [documentation]({{ site.docurl }}/creation/maniascript/libraries/library-ui.html) for more information.
