@@ -21,7 +21,7 @@ and so on.
 
 Current Release
 -
-importer : http://files.maniaplanet.com/tools/NadeoImporter_2014_09_10.zip
+importer : http://files.maniaplanet.com/tools/NadeoImporter_2014_10_22.zip
 
 sample files : http://files.maniaplanet.com/tools/NadeoImporterSamples_2014_04_09.zip
 
@@ -56,6 +56,8 @@ See the dedicated page: [font import](importer_font.html)
 ChangeLog
 -
 ```
+2014-10-22  - mesh import fixes : fixed Collada (DAE) import. 
+                                  fixed import crashes
 2014-09-10  - mesh import fixes :
 				- wrong mesh optimisation when smoothing groups (for .3ds)
 				- fix crash with "not collidable"
@@ -91,6 +93,7 @@ ChangeLog
 
 All releases
 --
+- http://files.maniaplanet.com/tools/NadeoImporter_2014_10_22.zip
 - http://files.maniaplanet.com/tools/NadeoImporter_2014_09_10.zip
 - http://files.maniaplanet.com/tools/NadeoImporter_2014_07_23.zip
 - http://files.maniaplanet.com/tools/NadeoImporter_2014_04_09.zip
