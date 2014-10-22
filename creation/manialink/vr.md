@@ -1,5 +1,5 @@
 ---
-layout: menu
+layout: default
 title: ManiaLink in VR
 description: ManiaLink friendly for Virtual Reality
 tags:
