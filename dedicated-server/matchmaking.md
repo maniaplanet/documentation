@@ -19,6 +19,9 @@ For server hosters, this new system is simpler than ever since **it now only req
 - Start a lobby: a dedicated server with a litte specific configuration.
 - Start (or gather) match servers: again, dedicated servers with a little specific configuration.
 
+Moreover once you linked a match server to a lobby server, the match server will have its Echelon limits defined automatically to the lobby Echelon limits for no cost.
+For example if you set up a Echelon 9 lobby, you only need to pay the limits for the lobby server, the linked match servers will automatically get the lobby limits.
+
 The guide will cover the technical aspects. If you have any questions or feedback, feel free to join the discussion: http://forum.maniaplanet.com/viewtopic.php?f=261&t=27702
 
 ## Requirements
@@ -44,6 +47,10 @@ Easy, follow the instructions: https://player.maniaplanet.com/matchmaking-server
 On a standard lobby, players for a match are selected by the matchmaking algorithm. You can ally yourself with your friends if you want to play with them and the system will find opponents of your level automatically. But you can't select the players you'll play against.
 
 On an universal lobby, all the players of a match are selected by the players themselves. If a match needs 6 players to be played, you have to create a group and have 5 other players joining it. Inside the group you can select your team and once everybody is ready the lobby will find a server and send the group there.
+
+## Lobby Maps
+
+If you want to create a map for your lobby, you just need to save a map including at least one spawn. Just register as a normal EliteArena map (**by using the track editor inside the Storm pack, not Elite**) but it'll be usable only on lobbies.
 
 ## Progressive matchmaking
 
