@@ -33,9 +33,9 @@ This allow to tell which version of the xml that we use and the encoding format.
 {% endhighlight %}
 
 
-This means that we begin a ManiaLink page with the version 1. The version 1 fit with ManiaPlanet convention. It's possible to not indicate the version or version="0" but in that case, it will be the norm of TrackMania Forever. In the next part of this tutorial, we will use only the version 1.
+This means that we begin a ManiaLink page with the version 2. The version 1 fit with ManiaPlanet convention. It's possible to not indicate the version or version="0" but in that case, it will be the norm of TrackMania Forever. The version 1 is the one used from Maniaplanet 1 to Maniaplanet 3 updates, the version 2 add several improvements like stylesheets. In the next part of this tutorial, we will use only the version 2.
 {% highlight xml %}
-<manialink version="1">
+<manialink version="2">
 {% endhighlight %}
 
 
@@ -112,7 +112,7 @@ looping="0" signifie que la musique ne recommencera pas à la fin, sinon il faut
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<manialink version="1">
+<manialink version="2">
 <include url="./background.xml"/>
 <quad posn="-80 45 1" sizen="160 90" style="Bgs1" substyle="BgWindow" />
 <quad posn="-70 44 2" sizen="140 12" style="Bgs1" substyle="BgWindow2" />
