@@ -17,10 +17,10 @@ You will need:
 
 First, download and install [Audacity][2] if you don't already have it.
 
-I usually get sounds/music from Youtube using [this website][3]. For this tutorial, I'll be using the .mp3 of this.
-
-Dr Dre - The Next Episode\*  
-\***Note from Nadeo: the link has been removed for copyright reasons, we advise you to use *Creative Commons* (free) musics or sounds. You can find some on [Jamendo][4] for example**
+I usually get sounds/music from Youtube using [this website][3]. For this tutorial, I'll be using the .mp3 of Dr Dre
+<!---
+Note from Nadeo: the link has been removed for copyright reasons, we advise you to use *Creative Commons* (free) musics or sounds. You can find some on [Jamendo][4] for example
+--->
 
 **Please note that the maximum length your horn can be is 10 seconds. So obviously, I won't be using the entire song.**
 
