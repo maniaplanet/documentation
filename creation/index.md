@@ -5,6 +5,8 @@ description: Help on content creation
 tags: creation
 ---
 
+ManiaPlanet is a vast ecosystem for content creators, you will find here the help for most of the available tools.
+
 # [ManiaScript][1]
 
 ManiaScript is a scripting language integrated to ManiaPlanet that allows the players to customize different aspects of the games. A scripting language is build upon a classic programming language and aims to ease the process of creation.
@@ -38,31 +40,33 @@ A Title Pack is a pack that regroups different kinds of data together. By exampl
 The importer is a tool that allows you to import assets from external 3d creation software, an to create custom objects, characters and vehicles
 [More...][6]
 
-# [Create a Player Skin][7]
+# Misc
+
+## [Create a Player Skin][7]
 A tutorial learning you how to create a skin for your character.
 [More...][7]  
 And the specification for creating [vehicle skins][13].
 
-# [Create an Environment mods][14]
+## [Create an Environment mods][14]
 Specification for creating [environment mods][14].
 
-# [Create an emblem][8]
+## [Create an emblem][8]
 The assets to create an emblema for your character
 [More...][8]
 
-# [Create a custom sticker][9]
+## [Create a custom sticker][9]
 Tutorial for creating a custom sticker for Trackmania²
 [More...][9]
 
-# [Create a custom horn][10]
+## [Create a custom horn][10]
 Tutorial for creating a custom horn for Trackmania² & Shootmania
 [More...][10]
 
-# [Create a locator][11]
+## [Create a locator][11]
 Tutorial for creating a locator for Trackmania² & Shootmania
 [More...][11]
 
-# [Embed a block in maps][12]
+## [Embed a block in maps][12]
 How to include an embedded block in maps
 [More...][12]
 
