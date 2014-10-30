@@ -5,7 +5,9 @@ description: List of the keyboard shortcuts available in ManiaPlanet
 tags: client
 ---
 
-# Script editor
+# ManiaPlanet shortcuts
+
+## Script editor
 
 * Scroll Lock: open the script editor
 * Ctrl + g: open the log window / open the debug window / close the debug window
@@ -25,7 +27,7 @@ tags: client
 * Ctrl + F3: quick search next on the selection
 * Ctrl + shift + F3: quick search previous on the selection
 
-# Media Tracker
+## Media Tracker
 
 * TAB: hide / show the GUI
 * Direction arrows: move custom camera position
@@ -40,9 +42,9 @@ tags: client
 * Enter: inserts a key at the actual time to the currently selected track
 * Ctrl + H: Show helpers (press again to hide helpers)
 
-# Painter / Model selection
+## Painter / Model selection
 
-## Common
+### Common
 
 * H : Show / hide help
 * Ctrl + A : Switch between auto / manual camera
@@ -55,7 +57,7 @@ tags: client
 * Ctrl + Left : Previous skin
 
 
-## TrackMania:
+### TrackMania:
 
 * Ctrl + B : Switch between brake / no brake
 * Ctrl + C : Show / hide collision
@@ -71,7 +73,7 @@ tags: client
 * Ctrl + W : Show / hide Wireframe
 
 
-## ShootMania:
+### ShootMania:
 
 * Ctrl + E : Next evolution models
 * Ctrl + K : Show / hide skeleton
@@ -82,9 +84,9 @@ tags: client
 * Shift + S : Next energy step
 
 
-# Map Editor
+## Map Editor
 
-## General
+### General
 
 * F1 : Select terraforming mode
 * F2 : Select block placement mode. If enabled in the extended tools (Hammer symbol) at "Experimental Features", toggles between simple block placement, Airmapping and Blockmixing
@@ -108,29 +110,29 @@ tags: client
 * Right Ctrl (or Right mouse button) : rotates block selection
 * Left Ctrl : Record or Playback Editors input replay (on New Map selection)
 
-## Terraforming:
+### Terraforming:
 
 * BACKSPACE : Delete all kinds of terraforming, all the other blocks and items are not affected.
 * Ctrl + left mouse click : selects block type at the cursor position
 * X + left mouse click : deletes block at the cursor position
 * C : Switches to Macroblock selection mode
 
-## Block mode:
+### Block mode:
 
 * BACKSPACE: Delete all blocks placed in this mode. Landscape and items are not affected.
 * X + left mouse click: deletes block at the cursor position
 
-## Item mode:
+### Item mode:
 
 * BACKSPACE: Delete all blocks placed in this mode. Landscape and items are not affected.
 * Ctrl + left mouse click: selects block type at the cursor position
 * X + left mouse click: deletes block at the cursor position
 
-## Macroblock mode:
+### Macroblock mode:
 
 * BACKSPACE: Delete all blocks in the selection
 * Ctrl + left mouse click: selects block type at the cursor position
 
-## Test Mode:
+### Test Mode:
 
 * F: FlyMode 

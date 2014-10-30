@@ -7,7 +7,9 @@ tags:
 - server
 ---
 
-[Dedicated server package contains both the Linux and the Windows versions of the dedicated server][class:note].
+# DedicatedServer quick start
+
+*Dedicated server package contains both the Linux and the Windows versions of the dedicated server.*
 
 Using Debian/Ubuntu? You can use our [APT repository](../tools/apt.html).
 

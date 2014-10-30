@@ -5,6 +5,10 @@ description: maniaplanet:// protocol
 tags: client
 ---
 
+#maniaplanet://
+
+Once you have ManiaPlanet on your system, you can do several actions by clicking on maniaplanet:// links.
+
 | command                                         | description                                                                                              |
 |:-----------------------------------------------:|:--------------------------------------------------------------------------------------------------------:|
 | maniaplanet://#join=serverlogin@TITLEID         | Join a specific server                                                                                   |
