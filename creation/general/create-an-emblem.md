@@ -9,7 +9,7 @@ tags:
 *Note: Tutorial from **Bonfi96** from the Maniaplanet forums*
 
 # Create your emblem #
-On this tutorial,* ***Gimp*** *is used to edit an emblem. You can download it* [on gimp.org][4]*, it's free.
+On this tutorial, ***Gimp*** is used to edit an emblem. You can download it [on gimp.org][4], it's free.
 
 The template to create an emblem for the Shootmania shield is available [**here**][1].
 ![][2] 
