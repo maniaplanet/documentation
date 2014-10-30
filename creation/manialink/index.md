@@ -9,7 +9,7 @@ tags:
 
 ManiaLinks are the "web pages" of ManiaPlanet.
 
-You have also register for a (short) ManiaLink [on the PlayerPage][1]. It's a way to have a shorter link for your ManiaLink.
+ManiaLinks also refer to a short alias for a web page (like a domain name) in ManiaPlanet. You can register for one on the [on the PlayerPage][1]. 
 
 * [Dedicated server manialinks][2]
 * [Manialink actions][3]
@@ -17,7 +17,7 @@ You have also register for a (short) ManiaLink [on the PlayerPage][1]. It's a wa
 * [Manialink styles and substyles reference (JSON)][5]
 
 ## The structure of Manialinks
-This is the structure of a Manialink
+ManiaLinks are basically XML files, that describe what you see on the screen. 
 
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
@@ -33,7 +33,7 @@ This allow to tell which version of the xml that we use and the encoding format.
 {% endhighlight %}
 
 
-This means that we begin a ManiaLink page with the version 2. The version 1 fit with ManiaPlanet convention. It's possible to not indicate the version or version="0" but in that case, it will be the norm of TrackMania Forever. The version 1 is the one used from Maniaplanet 1 to Maniaplanet 3 updates, the version 2 add several improvements like stylesheets. In the next part of this tutorial, we will use only the version 2.
+This means that we begin a ManiaLink page with the version 2. The version 1 fit with ManiaPlanet convention.  The version 1 is the one used from Maniaplanet 1 to Maniaplanet 3 updates, the version 2 add several improvements like stylesheets. In the next part of this tutorial, we will use only the version 2.
 {% highlight xml %}
 <manialink version="2">
 {% endhighlight %}
@@ -50,7 +50,7 @@ This means that we'll finish our ManiaLink page.{% highlight xml %}</manialink>{
 Let see now the cooordinates to place the elements on our page.
 
 
-The version 1 of Manialink are here to fit on 16:9 screens. The coordinates in X go to -160 to 160, in Y to -90 to 90 and on Z to -75 to 75.
+The version 1 and 2 of Manialink are here to fit on 16:9 screens. The coordinates in X go to -160 to 160, in Y to -90 to 90 and on Z to -75 to 75.
 
 To place an element, you have only to add posn="X Y Z" in a marker. X, Y and Z are the coordinates on X, Y and Z.
 
@@ -60,8 +60,15 @@ It's possible to align an element to related to the coordinates given with <hali
 
 It is advisable to use the new standard in ManiaPlanet.
 
-## The common functions
-We will now learn the new common functions. There is more but it will for a more elaborate tutorial.
+## The common tags
+
+**<quad>** : allow to insert an element as a picture, a block with a background or a ManiaPlanet element which are available on the ManiaLink "exemple".
+
+In our example, we display a rectangle of 10x10 with a blue background. For the color code, this is in hexadecimal, this is working like the username in the game and the fourth character match with 0 without transparency and F entirely transparent.
+{% highlight xml %}
+<quad posn="-10 0 0" sizen="10 10" bgcolor="00FA" />
+{% endhighlight %}
+
 
 **<frame>** : a frame is a set of elements that we stick together with the tag <frame>. A frame is a non-visible element but we can move the ensemble of the frame at the same time, which will allow to earn some time to place the elements to one from each other.
 
@@ -71,16 +78,6 @@ In our example, the first quad is placed at the location X=10, Y=10 et Z=0. The 
 <quad sizen="10 10" bgcolor="F00A" />
 <quad posn="-10 0 0" sizen="10 10" bgcolor="00FA" />
 </frame>
-{% endhighlight %}
-
-
-**<quad>** : allow to insert an element as a picture, a block with a background or a ManiaPlanet element which are available on the ManiaLink "exemple".
-
-
-
-In our example, we display a rectangle of 10x10 with a blue background. For the color code, this is in hexadecimal, this is working like the username in the game and the fourth character match with 0 without transparency and F entirely transparent.
-{% highlight xml %}
-<quad posn="-10 0 0" sizen="10 10" bgcolor="00FA" />
 {% endhighlight %}
 
 
@@ -106,7 +103,7 @@ looping="0" signifie que la musique ne recommencera pas à la fin, sinon il faut
 {% endhighlight %}
 
 
-## Concret example
+## Full example
 
 ### Content of the file example.xml
 
@@ -131,7 +128,7 @@ looping="0" signifie que la musique ne recommencera pas à la fin, sinon il faut
 {% endhighlight %}
 
 
-### This is the result
+### Result
 
 ![Tutorial Manialink][6]
 
