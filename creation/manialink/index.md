@@ -130,15 +130,14 @@ looping="0" signifie que la musique ne recommencera pas à la fin, sinon il faut
 
 ### Result
 
-![Tutorial Manialink][6]
+![result](img/tutoriel_manialink.jpg)
 
 
-You can download all the file [here][7]
+You can download all the file [here][6]
 
 [1]: https://player.maniaplanet.com/advanced/manialinks
 [2]: server.html
 [3]: actions.html
 [4]: vr.html
 [5]: styles.json
-[6]: img/tutoriel_manialink.jpg
-[7]: http://bczteam.com/~jonthekiller/Manialinks/Tutoriel_manialink.zip
+[6]: http://bczteam.com/~jonthekiller/Manialinks/Tutoriel_manialink.zip
