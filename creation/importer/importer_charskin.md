@@ -2,9 +2,10 @@
 layout: default
 title: Character skin import
 description: Character skin import
-tags:
-- creation
-- importer
+tags: 
+  - creation
+  - importer
+published: true
 ---
 
 Character skins can be displayed and selected by players in the profile/models menu, and the scripts can also force skins to players during gameplay.
