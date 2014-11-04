@@ -132,21 +132,25 @@ tags:
 |**S_WaveDuration**|15|Wave duration|
 |**S_StayInAttackOnCapture**|True|Reset timer when a pole is beeing captured|
 |**S_UseOvertime**|True|Use the overtime system|
-|**S_NbPlayersPerTeamMax**|5|Number of players per team in matchmaking|
-|**S_NbPlayersPerTeamMin**|2|Minimum number of players per team in matchmaking|
+|**S_WarmUpDuration**|0|Warm up duration (sec.)|
+|**S_NbPlayersPerTeamMax**|0|Maximum number of players per team (0: no max)|
+|**S_NbPlayersPerTeamMin**|1|Minumum number of players per team|
 |**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 
 ## Combo (+ModeMatchmaking)
 
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
-|**S_NbPlayersPerTeam**|2|Number of players per team (Max. 5)|
+|**S_NbPlayersPerTeamMax**|2|Number of players per team (Max. 5)|
+|**S_NbPlayersPerTeamMin**|2|Minimum number of players per team in matchmaking|
 |**S_PointsLimit**|3|Points limit (0: No points limit)|
 |**S_RoundTimeLimit**|300|Round time limit (0: No time limit)|
 |**S_WarmUpDuration**|90|Warmup duration (0: disabled)|
 |**S_AllowUnbalancedTeams**|False|Allow a game to begin without the same number of players in each team|
 |**S_UseArmorReduction**|False|Reduce the armor of players above two armor points|
 |**S_ArmorMax**|4|Maximum number of armors a player can have|
+|**S_SpawnProtectionTime**|0|Invincibility time after spawn|
+|**S_RespawnAmmo**|0.5|Ratio of ammo reloaded at respawn|
 |**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 
 ## Elite (+ModeSport, +ModeMatchmaking)
