@@ -204,6 +204,11 @@ The only exception is Elite that has some very specific callbacks.
 * Note : This callback is sent when the script receives the `UI_GetProperties` trigger.
 * Version : available since UI.Script.txt_v2014-09-16
 
+#### LibXmlRpc_WarmUp
+* Data : An array with a boolean to indicate if the mode is in warm up or not.
+* Example : ["True"]
+* Note : This callback is sent when the script receives the `LibXmlRpc_GetWarmUp` trigger.
+
 
 ## ShootMania
 
@@ -281,6 +286,15 @@ One armor point = 100 damage, Weapon number -> 1: Laser, 2: Rocket, 3: Nucleus, 
 * Data : An array with the login of the player requesting the respawn
 * Example : ["Login"]
 * Note : This callback is sent when a player requests a respawn.
+
+
+### Matchmaking
+
+#### Matchmaking_ReadyState
+* Data : An array with the login of the player and its ready state
+* Example : ["Login", "True"]
+* Note : This callback is sent when the ready state of the player change. It can also be triggered with the `Matchmaking_GetReadyState` method.
+* Version : available since  ModeMatchmaking.Script.txt_v2014-10-26
 
 
 ### Royal
@@ -969,11 +983,6 @@ The login, rank, best checkpoints, team id, spectator status, away status, best 
 * Example : ["True"]
 * Note : This callback is sent when the script receives the `LibXmlRpc_GetTeamsMode` trigger.
 
-#### LibXmlRpc_WarmUp
-* Data : An array with a boolean to indicate if the mode is in warm up or not.
-* Example : ["True"]
-* Note : This callback is sent when the script receives the `LibXmlRpc_GetWarmUp` trigger.
-
 
 ### Rounds / Cup
 
@@ -1048,6 +1057,11 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 * String2 : ""
 * Version : available since UI.Script.txt_v2014-09-16
 
+#### LibXmlRpc_GetWarmUp
+* Note : Check if the mode is in warm up. This method triggers the `LibXmlRpc_WarmUp` callback.
+* String1 : "LibXmlRpc_GetWarmUp"
+* String2 :  ""
+
 
 ## ShootMania
 
@@ -1120,6 +1134,18 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 * String1 : "Matchmaking_Force"
 * String2 : ""
 
+#### Matchmaking_GetReadyState
+* Note : Get the ready state of a player. This will sent the `Matchmaking_ReadyState` callback in return.
+* String1 : "Matchmaking_GetReadyState"
+* String2 : "PlayerLogin"
+* Version : available since  ModeMatchmaking.Script.txt_v2014-10-26
+
+#### Matchmaking_SetReadyState
+* Note : Set the ready state of a player. The first entry of the array is the player login, the second its ready state.
+* String : "Matchmaking_SetReadyState"
+* Array : ["PlayerLogin", "True"]
+* Version : available since  ModeMatchmaking.Script.txt_v2014-10-26
+
 ### Combo
 
 #### Combo_SetTimersLayerPosition
@@ -1183,11 +1209,6 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 #### LibXmlRpc_GetTeamsMode
 * Note : Check if the mode use teams. This method triggers the `LibXmlRpc_TeamsMode` callback.
 * String1 : "LibXmlRpc_GetTeamsMode"
-* String2 :  ""
-
-#### LibXmlRpc_GetWarmUp
-* Note : Check if the mode is in warm up. This method triggers the `LibXmlRpc_WarmUp` callback.
-* String1 : "LibXmlRpc_GetWarmUp"
 * String2 :  ""
 
 #### LibXmlRpc_GetPlayersRanking
