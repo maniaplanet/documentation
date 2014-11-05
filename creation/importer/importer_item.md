@@ -4,7 +4,7 @@ title: Item import
 description: Item import
 tags:
 - creation
-- importer 
+- importer
 ---
 
 You can import 3 types of items  
@@ -67,6 +67,10 @@ recap example for character items:
 DefaultSkin="Skins\Models\StormManBig\A.zip" SkinFolder="Models\StormManBig"
 Collection="SMCommon" AuthorName="NadeoSamples">
 ```
+
+A item can be placed freely (without the grid system) in the map editor if the option has been activated in the advanced option (experimental part) of the map editor.
+Then, like the mixmapping, you have to click twice on the little tree of the map editor interface to activate the free placement.
+
 2. Phy and Vis
 --
 The physical and visual parts, `<Phy>` and `<Vis>` tags depends on the type of the item (see below).  
