@@ -109,11 +109,13 @@ Documentation and examples available on this [documentation][1].
 Some modders are using the diffuse map as specular map, this can work a little bit, but the best results are really obtained by doing each specular channel separately.  
 We are not using a real PBR technique (PBR = Physically Based Rendering) which is used nowadays a lot in current and nextgen engines, but we are using similar concepts in the maniaplanet engine.
 
-You can learn a lot from PBR tutorials, especially how light works and interacts with materials.  
+You can learn a lot from PBR tutorials, especially how light works and interacts with materials.
+
 * [Google search for PBR tutorials][2]
 * [PBR Theory][3]
 
-In our engine, you could translate the **PBR** like this :  
+In our engine, you could translate the **PBR** like this :
+
 1. **We don't have metals like PBR"s**
 2. **Albedo** = Diffuse
 3. **Microsurface** = Specular exponent = Specular's Alpha channel = glossiness / roughness (black = rough, white = glossy)
@@ -121,7 +123,8 @@ In our engine, you could translate the **PBR** like this :
 5. **Fresnel** = Specular's Red channel (black = low, white = high) (the color shown by our fresnel is given by the lightmap, it's a very low quality averaged color of the world around the pixel)
 6. **Ambient occlusion** : is computed in the lightmap
 
-Work your specular map in RGB because most filters/modifiers don't touch the alpha channel:  
+Work your specular map in RGB because most filters/modifiers don't touch the alpha channel:
+
 * <span style="color: red;">R</span><span style="color: green;">G</span><span style="color: blue;">B</span> = **FIE**
 * <span style="color: red;">Red</span> = Fresnel
 * <span style="color: green;">Green</span> = Intensity
