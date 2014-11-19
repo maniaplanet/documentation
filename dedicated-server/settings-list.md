@@ -109,6 +109,8 @@ tags:
 |**S_MatchmakingLogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to leave it turned off because this can quickly write huge log files.|
 |**S_MatchmakingLogAPIDebug**|0|Same as above, only turn it on if necessary.|
 |**S_MatchmakingLogMiscDebug**|0|Same as above, only turn it on if necessary.|
+|**S_ProgressiveActivation_WaitingTime**|S_ProgressiveActivation_WaitingTime|Average waiting time before progressive matchmaking activate.|
+|**S_ProgressiveActivation_PlayersNbRatio**|1|Multiply the required players nb by this, if there's less player in the lobby activate progressive.|
 
 ## Battle
 
@@ -136,6 +138,10 @@ tags:
 |**S_NbPlayersPerTeamMax**|0|Maximum number of players per team (0: no max)|
 |**S_NbPlayersPerTeamMin**|1|Minumum number of players per team|
 |**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
+|**S_DisplayTopsRound**|True|Display the tops at the end of the round|
+|**S_DisplayTopsMap**|True|Display the tops at the end of the map|
+|**S_DisplayTopsOnlyShooter**|False|Only display the shooter top|
+|**S_DisplayPoleRecords**|True|Display pole running time record|
 
 ## Combo (+ModeMatchmaking)
 
