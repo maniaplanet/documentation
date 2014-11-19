@@ -15,27 +15,27 @@ While the most common options are editable with the in-game creation menu, more 
 General section
 ========================
 
-```xml
+{% highlight xml %}
 	<id>title@login</id>
-```
+{% endhighlight %}
 This is the internal identifier of the title.
 
 
 ----
-```xml
+{% highlight xml %}
 	<name>Pretty Name</name>
 	<desc>Short description</desc>
 	<url></url>
-```
+{% endhighlight %}
 Some *Meta-information* to describe what the title is about.
 
 
 ----
-```xml
+{% highlight xml %}
 	<download_url></download_url>
  	<title_version></title_version>
 	<allowed_client_title_version></allowed_client_title_version>
-```
+{% endhighlight %}
 Those are used to manage updates to the tile.
 
 If you specify a `download_url`, the game will make automatically download the file from this url (*) everytime you update the file.
@@ -54,7 +54,7 @@ The game will download the header of the pack first, and
 
 
 ----
-```xml
+{% highlight xml %}
 	<packaging>
 		<image name="PackImage.jpg"/>
 		<logos name="Logos.png"/>
@@ -64,7 +64,7 @@ The game will download the header of the pack first, and
 		<station_noquickenter>false</station_noquickenter>
 		<boxcase_manialink url=""/>
 	</packaging>
-```
+{% endhighlight %}
 *Packaging information.*
 
 `collection` and `sortindex` are used to sort the list of titles. (they are sorted according to collection, and the for equal collection by sortindex)
@@ -78,7 +78,7 @@ If you specify `station_noquickenter`, the user will have to use the manialink o
 
 
 ----
-```xml
+{% highlight xml %}
 	<menu>
 		<background_img name="MenuBg.jpg"/>
 		<background_replay name="Folder\Menu.Replay.Gbx"/>
@@ -87,7 +87,7 @@ If you specify `station_noquickenter`, the user will have to use the manialink o
 		<manialink url=""/>
 	</menu>
 	<menu_style name=""/>
-```
+{% endhighlight %}
 *Title menus customisation.*
 
 If you specify a `background_replay`, it will be loaded and played in the background of the title menus. The replays used are limited, they cannot contain characters or cars for instance.
@@ -103,10 +103,10 @@ The game default menus will be used, unless you set a `manialink` url to be used
 
 
 ----
-```xml
+{% highlight xml %}
 	<base></base>
 	<player_model></player_model>
-```
+{% endhighlight %}
 
 `base` can be
 - *SMStorm*, *TMCanyon*, *TMStadium*, *TMValley*,
@@ -117,7 +117,7 @@ The game default menus will be used, unless you set a `manialink` url to be used
 
 
 ----
-```xml
+{% highlight xml %}
 	<music folder=""/>
 	<mod name=""/>
 	<editor>
@@ -144,7 +144,7 @@ The game default menus will be used, unless you set a `manialink` url to be used
 		<mode name=""/>
 		<playlist name=""/>
 	</splitscreen>
-```
+{% endhighlight %}
 *Title gameplay description*
 
 TBD.
@@ -159,7 +159,7 @@ The `mod` will be used on all the maps that haven't any specific mod.
 
 
 ----
-```xml
+{% highlight xml %}
 	<files>
 		<!-- browsable public files  -->
 		<!--- <file name="...." public="true" internal="false" /> -->
@@ -177,19 +177,19 @@ The `mod` will be used on all the maps that haven't any specific mod.
 	<folders>
 		<!--- <folder name="...." public="..." internal="..." /> -->
 	</folders>
-```
+{% endhighlight %}
 *Data to pack inside the title.*
 
 
 ----
-```xml
+{% highlight xml %}
 	<scriptcloud_enabled>false</scriptcloud_enabled>
-```
+{% endhighlight %}
 TBD. (allows for the script to declare clouded variables that can then be shared accross all servers using the tile)
 
 
 ----
-```xml
+{% highlight xml %}
 	<gameplay_features>0</gameplay_features>
-```
+{% endhighlight %}
 (unused at this time)
