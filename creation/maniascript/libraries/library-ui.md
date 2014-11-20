@@ -63,6 +63,10 @@ To customize the UI, you have to trigger the UI_SetProperties XmlRpc method with
   <chat_avatar visible="true" />
   <!-- Warm-up progression displayed on the right of the screen during warm-up -->
   <warmup visible="true" pos="170. 27. 0." />
+  <!-- Ladder progression box displayed on the top of the screen at the end of the map -->
+  <endmap_ladder_recap visible="true" />
+  <!-- Laps count displayed on the right of the screen on multilaps map -->
+  <multilap_info visible="true" />
 </ui_properties>
 {% endhighlight %}
 
