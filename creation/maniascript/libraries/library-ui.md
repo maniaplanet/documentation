@@ -33,7 +33,7 @@ To customize the UI, you have to trigger the UI_SetProperties XmlRpc method with
 <ui_properties>
   <!-- The map name and author displayed in the top right of the screen when viewing the scores table -->
   <map_info visible="true" />
-  <!-- ... -->
+  <!-- Only visible in solo modes, it hides the medal/ghost selection UI -->
   <opponents_info visible="true" />
   <!-- 
     The server chat displayed on the bottom right of the screen 
