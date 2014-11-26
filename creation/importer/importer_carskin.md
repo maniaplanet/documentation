@@ -114,7 +114,7 @@ While you're at it, go open up this .tga in Photoshop, and make sure all edge pi
 
 Go ahead and delete the Plane and Skylight if you're done baking your shadow.
 
-### Projectors
+## Projectors
 Import the `Lights.3ds` that you downloaded earlier.
 
 The cone on the bottom tells the game where to project the fake shadow. It's fine in it's default position, so leave that alone.
