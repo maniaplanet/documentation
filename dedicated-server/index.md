@@ -16,7 +16,6 @@ A dedicated server application which allows you to run a server for any ManiaPla
 * [Game mode settings](settings-list.html)
 * [Matchmaking](matchmaking.html)
 * [Scores table customization](customize-scores-table.html)
-* [Battle overtime](battle-overtime.html)
 
 # Dedicated tools
 
