@@ -36,9 +36,8 @@ As you can understand now, a Title Pack can be equivalent to a little game when 
 Description of the [ManiaPlanetTitle.xml](xml_description.html) file format.
 
 ## Where?
-On the main menu with the stations, move up to the titles list by pressing page up, or dragging the stations down.  
-Then click on the little "+" on the bottom  
-And click on titles.
+In the main menu with the stations, in the "options" tab, 
+Click on "Edit packs".
 
 In the title menu, you can either "**create a new pack**", or update an existing one by clicking on it's name.
 (when you edit an existing one, the people that already unlocked a previous version by paying you planets will not have to do it again for the update)
