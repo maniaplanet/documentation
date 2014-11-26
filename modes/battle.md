@@ -77,5 +77,6 @@ Difference of round points between biggest and smallest clan :
 * Transfer PlayerE to clan 1
 
 Resulting clans :
+
 * Clan 1 : PlayerA => 6 points, PlayerB => 14 points, PlayerE => 10 points
 * Clan 2 : PlayerC => 12 points, PlayerD => 14 points, PlayerF => 2 points
