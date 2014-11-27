@@ -7,6 +7,6 @@ tags: modes
 
 # Shootmania
 
-* [Battle](battle.html)
+* [Battle](shootmania/battle.html)
 
 # Trackmania
