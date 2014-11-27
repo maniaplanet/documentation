@@ -117,7 +117,6 @@ tags:
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
 |**S_RespawnTime**|6001|Time before respawn|
-|**S_AutoBalance**|True|Use auto balance at the start of the map|
 |**S_RoundsToWin**|2|Points to win a map|
 |**S_RoundGapToWin**|1|Minimum gap between the two teams to win a map|
 |**S_RoundsLimit**|3|Point limit on map|
@@ -142,6 +141,10 @@ tags:
 |**S_DisplayTopsMap**|True|Display the tops at the end of the map|
 |**S_DisplayTopsOnlyShooter**|False|Only display the shooter top|
 |**S_DisplayPoleRecords**|True|Display pole running time record|
+|**S_AutoBalance**|True|Use auto balance at the start of the map|
+|**S_AutoBalanceRound**|True|Use auto balance at the end of the round|
+|**S_AutoBalanceDelta**|2|Maximum difference of players number before autobalance|
+
 
 ## Combo (+ModeMatchmaking)
 
