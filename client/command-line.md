@@ -27,7 +27,7 @@ tags: client
 | /bench=xxx               | Benchmarks a replay (xxx = full path to the replay file name) (Internal: if no filename is specified, performs a quick technical benchmark for the default launcher settings) |
 | /computeallshadows       | Computes the lightmaps for all the challenges on disk.                                                                                                                        |
 | /config=xxx              | Use a specific ".SystemConfig.Gbx" config file.                                                                                                                               |
-| /userdir=xxx             | Changes the default "My Documents/TmUnited/" location. (either a full path, or just "exe" to use the exe directory.)                                                          |
+| /userdir=xxx             | Changes the default "My Documents/ManiaPlanet/" location. (either a full path, or just "exe" to use the exe directory.)                                                          |
 | /useexedir               | Run in the directory where the executable is, instead of the current directory.                                                                                               |
 | /title=xxx               | Sets the title to be used. Only this title and its subtitles will be playable.                                                                                                |
 | /testtitle=mytitle@login | Launch and test a title directly instead of going into the pack editor, selecting the pack, going to the title section and clicking on test.                                  |
