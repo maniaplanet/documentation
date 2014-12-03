@@ -48,8 +48,8 @@ The global plugins are not available to the players at the time being. Once it w
 
 The easiest way to create and edit scripts is to use the in-game editor. It is accessible through different ways depending of which kind of script you want to create.
 
-- Rules: create an ingame server (online or LAN) and select the mode you want to edit. Once you're playing on the server, press F12 to open the editor.
-- Map type: launch the map editor, select the map type you want to edit on the top left of the screen and then press F12.
+- Rules: create an ingame server (online or LAN) and select the mode you want to edit. Once you're playing on the server, press the `Scroll lock` key to open the editor.
+- Map type: launch the map editor, select the map type you want to edit on the top left of the screen and then press the `Scroll lock` key.
 - Map editor plugin: launch the map editor and click on the plugin icon on the bottom of the screen. Then just click on the create button on the left of the screen. If you want to edit an existing script, click on the small "+" button above a plugin and after on the edit button on the left of the screen.
 
 ![Script editor](./img/script-editor.png)
