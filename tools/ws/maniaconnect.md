@@ -31,7 +31,7 @@ On the player page: <http://player.maniaplanet.com/account/authorizations>
 
 ## Get a ManiaConnect access
 
-First you obviously need to have access to the [Maniaplanet Web Services API](ws.html).
+First you obviously need to have access to the [Maniaplanet Web Services API](../php-sdk/api/namespace-Maniaplanet.WebServices.html).
 
 Then you need to create a ManiaConnect application. Just go, on the [Maniaplanet Developers Website](https://player.maniaplanet.com/webservices), then to the page to manage your API user and create a ManiaConnect application. It should be pretty straightforward.
 
