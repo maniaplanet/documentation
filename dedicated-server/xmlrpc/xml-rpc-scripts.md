@@ -778,37 +778,43 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
             "Login": "eole",
             "CurrentClan": 1,
             "AtkPoints": 0,
-            "DefPoints": 0
+            "DefPoints": 0,
+            "TurnHits": [1,1,1]
         },
         {
             "Login": "test1",
             "CurrentClan": 1,
             "AtkPoints": 0,
-            "DefPoints": 0
+            "DefPoints": 0,
+            "TurnHits": []
         },
         {
             "Login": "test2",
             "CurrentClan": 1,
             "AtkPoints": 0,
-            "DefPoints": 0
+            "DefPoints": 0,
+            "TurnHits": []
         },
         {
             "Login": "eole2",
             "CurrentClan": 2,
             "AtkPoints": 1,
-            "DefPoints": 0
+            "DefPoints": 0,
+            "TurnHits": []
         },
         {
             "Login": "test3",
             "CurrentClan": 2,
             "AtkPoints": 0,
-            "DefPoints": 0
+            "DefPoints": 0,
+            "TurnHits": []
         },
         {
             "Login": "test4",
             "CurrentClan": 2,
             "AtkPoints": 0,
-            "DefPoints": 0
+            "DefPoints": 0,
+            "TurnHits": []
         }
     ]
 }
