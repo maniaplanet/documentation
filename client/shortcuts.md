@@ -127,8 +127,8 @@ tags: client
 * BACKSPACE: Delete all blocks placed in this mode. Landscape and items are not affected.
 * Ctrl + left mouse click: selects block type at the cursor position
 * X + left mouse click: deletes block at the cursor position
-* Cursors (not Numpad cursors) left/right, up/down, as well as Numpad -/+: rotate item along x,z and z axes. Some items only allow rotation along vertical axis.
-* /: reset item orientation to default
+* Arrow keys (not those on the Numeric pad!), as well as Numpad- and Numpad+: rotate item along x, y and z axes. Some items only allow rotation along vertical axis.
+* Numpad/: reset item orientation to default
 
 ### Macroblock mode
 
