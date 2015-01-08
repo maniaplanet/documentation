@@ -26,6 +26,6 @@ tags:
 | /verbose_rpc_full   | (Debug option) Display the whole contents of the xml-rpc requests the dedicated server receives                                                                                                                                 |
 | /verbose_rpc        | (Debug option) Displays the xml-rpc requests the dedicated server receives, but only the name of the XmlRpc? command and some parameters                                                                                        |
 | /join=xxx       | Makes the server a [relay server][1] of xxx. (xxx = the server login, or the server ip adress with optional port.)                                                                                       |
-| /joinpass=xxx | Spectator password on the server of which we are a relay of (if it is private)                                                                                                                                                                     |
+| /joinpassword=xxx | Spectator password on the server of which we are a relay of (if it is private)                                                                                                                                                                     |
 
 [1]: http://doc.maniaplanet.com/dedicated-server/basic.html#Relay-Servers
