@@ -134,7 +134,7 @@ Relay server can be created to allow huge numbers of players to spectate the mai
 
 To start a relay server, you have to set `<allow_spectator_relays>True</allow_spectator_relays>` in main server config file.
 
-`ManiaPlanetServer /dedicated_cfg=RelayCfgFile /join=MainServerLogin /joinpass=SpectatorPass`
+`ManiaPlanetServer /dedicated_cfg=RelayCfgFile /join=MainServerLogin /joinpassword=SpectatorPass`
 
 * *RelayCfgFile*: the relay configuration file
 * *MainServerLogin*: the login-name of the server you want to connect
