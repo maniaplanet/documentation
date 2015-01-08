@@ -1,8 +1,5 @@
 language: ruby
-before_install:
-  - travis_retry gem install jekyll
-  - travis_retry gem install rdiscount
-script: jekyll build
+script: bundle exec jekyll build
 branches:
   only:
     - gh-pages
