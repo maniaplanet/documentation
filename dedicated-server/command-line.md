@@ -25,5 +25,7 @@ tags:
 | /noautoquit         | Keeps the server running "waiting for rpc commands", even if it is not live (with a map loaded and ready to receive players). The default behaviour is to quit, because this situation is mostly caused by configuration errors |
 | /verbose_rpc_full   | (Debug option) Display the whole contents of the xml-rpc requests the dedicated server receives                                                                                                                                 |
 | /verbose_rpc        | (Debug option) Displays the xml-rpc requests the dedicated server receives, but only the name of the XmlRpc? command and some parameters                                                                                        |
-| /spectate=xxx       | Joins a server as spectator. (xxx = the server ip adress with optional port, or the server login.) (this is used to start a relay server)                                                                                       |
-| /serverpassword=xxx | Password to use to join the server if the server is private                                                                                                                                                                     |
+| /join=xxx       | Makes the server a [relay server][1] of xxx. (xxx = the server login, or the server ip adress with optional port.)                                                                                       |
+| /joinpass=xxx | Spectator password on the server of which we are a relay of (if it is private)                                                                                                                                                                     |
+
+[1]: http://doc.maniaplanet.com/dedicated-server/basic.html#Relay-Servers
