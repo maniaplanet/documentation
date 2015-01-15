@@ -18,7 +18,7 @@ Open the template, select the "Team image" layer and place the picture your want
 
 # Save correctly your emblem #
 
-In gimp, DDS is not avaiable directly, yyu have to install the [GIMP-DDS][6] plugin in GIMP. It's only a matter of copying one file.
+In gimp, DDS is not avaiable directly, you have to install the [GIMP-DDS][6] plugin in GIMP. It's only a matter of copying one file.
 
 How to correctly save the file to have the image visible ingame (save it with the `.dds` filetype):
 
