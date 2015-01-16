@@ -241,3 +241,27 @@ Sometimes, several pivots are chosen: you can switch from one to another using t
 		`<Options OneAxisRotation="true" AutoRotation="true" />`  
 	- ex. if you want to let the user choose the pivot to use but prevent him from placing it on another item:  
 		`<Options NotOnItem="true" ManualPivotSwitch="true" />`  
+
+4. Sidenote about Start/CheckPoint/Finish items
+--
+You can also create Start/CheckPoint/Finish items for both Trackmania² and Shootmania.
+
+First the xml of the file should looks something like this:  
+{% highlight xml %}
+<Item Type="StaticObject" Collection="Common" AuthorName="NadeoSamples">
+<Waypoint Type="Finish"/>
+<Phy>
+<TriggerShape Type="mesh" File="Meshes/FinishTrigger.Shape.gbx"/>
+<MoveShape Type="mesh" File="Meshes/Finish.Shape.gbx"/>
+</Phy>
+<Vis>
+<Mesh File="Meshes/Finish.Mesh.gbx"/>
+</Vis>
+</Item>
+{% endhighlight %}
+
+And then you mustn't forget to give a trigger shape to your item that can be reach by a car or a character.
+
+In the map editor, you just need to put the item on the map to use it.
+
+Few examples are available in the importer files.
