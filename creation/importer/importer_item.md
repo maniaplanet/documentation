@@ -189,7 +189,7 @@ Collection="SMCommon" AuthorName="NadeoSamples">
 --
 in order to facilitate the item placement in the editor, you can define parameters
 
-- `<Pivots>` : pivot points (instead of the origin of the object), first parameter is X, secound is Z and third is Y axis
+- `<Pivots>` : pivot points (instead of the origin of the object), first and third parameter are horizontal axes and second parameter is vertical axis
 
 	```xml
 <Pivots>
