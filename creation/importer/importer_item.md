@@ -32,7 +32,7 @@ NadeoImporter Item {Item.xml_Filename_Relative_To_WorkFolder}
 
 **Note 3** : **Icon** : if you want to see an icon for your item in the editor, you need to provide a icon file.  
 Unlike the other files which are explicitly referenced in the item.xml file, the icon file is automatically retrieved and imported.  
-The icon mus be a tga 64x64, it must have the same base name than the item.xml file and be placed in a sub folder `icon`.  
+The icon must be a tga 64x64, it must have the same base name than the item.xml file and be placed in a sub folder `icon`.  
 see sample : `Work/Items/Samples/DynamicObjects/Icon`
 
 Item.xml file structure
