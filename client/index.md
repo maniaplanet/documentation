@@ -11,3 +11,4 @@ tags: client
 * [ManiaPlanet protocol](protocol.html)
 * [Command line](command-line.html)
 * [ManiaPlanet debugger](debugger.html)
+* [Styles in Maniaplanet](styles.html)

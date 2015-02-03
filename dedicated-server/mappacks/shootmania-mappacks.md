@@ -10,15 +10,15 @@ tags:
 # Shootmania Elite
 ## ESL Go4
 
-* Elite - Battlefield
-* Elite - Breach
-* Elite - IronFist
-* Elite - Numb
-* Elite - Papercut
-* Elite - Rust
-* Elite - Spitfire
-* Elite - Valiant
-* Elite - Versace
+* Elite - GreenValley 2k15
+* Elite - Interupt'o
+* Elite - IronFirst [MP3]
+* Elite - Malevolence 2k15
+* Elite - Old sun 2k15
+* Elite - Rust [MP3]
+* Elite - Spitfire (by Tatar)
+* Elite - Valley of the Damned - Kommu
+* Elite - Versace 2k15
 
 ## Paragon League
 
@@ -152,49 +152,40 @@ tags:
   </mode_script_settings>
   <startindex>0</startindex>
   <map>
-    <file>Go4/Elite - Breach.Map.Gbx</file>
-  </map>
-  <map>
-    <file>CPlay/Elite - GreenValley 2k15.Map.Gbx</file>
-  </map>
-  <map>
-    <file>Go4/Elite - Numb.Map.Gbx</file>
-  </map>
-  <map>
-    <file>Go4/Elite - Papercut.Map.Gbx</file>
-  </map>
-  <map>
-    <file>Go4/Elite - Battlefield.Map.Gbx</file>
-  </map>
-  <map>
-    <file>Go4/Elite - IronFist.Map.Gbx</file>
-  </map>
-  <map>
-    <file>CPlay/Elite - Old sun 2k15.Map.Gbx</file>
-  </map>
-  <map>
-    <file>Elite_Paragon_November_2014/Elite - Paladin 2k13 by Kryw.Map.Gbx</file>
-  </map>
-  <map>
-    <file>Go4/Elite - Rust.Map.Gbx</file>
-  </map>
-  <map>
-    <file>Go4/Elite - Spitfire.Map.Gbx</file>
-  </map>
-  <map>
-    <file>Elite_Paragon_November_2014/Elite - Valley of the Damned - Kommu.Map.Gbx</file>
-  </map>
-  <map>
-    <file>Go4/Elite - Versace.Map.Gbx</file>
-  </map>
-  <map>
-    <file>Go4/Elite - Valiant.Map.Gbx</file>
-  </map>
-  <map>
-    <file>CPlay/Elite - Malevolence 2k15.Map.Gbx</file>
-  </map>
-  <map>
-    <file>CPlay/Elite - Interupt'o.Map.Gbx</file>
-  </map>
+        <file>Go4/Elite - GreenValley 2k15.Map.Gbx</file>
+    </map>
+    <map>
+        <file>Paragon/Elite - Battlefield_.Map.Gbx</file>
+    </map>
+    <map>
+        <file>Go4/Elite - IronFist [MP3].Map.Gbx</file>
+    </map>
+    <map>
+        <file>Go4/Elite - Old sun 2K15.Map.Gbx</file>
+    </map>
+    <map>
+        <file>Elite_Paragon_November_2014/Elite - Paladin 2k13 by Kryw.Map.Gbx</file>
+    </map>
+    <map>
+        <file>Go4/Elite - Rust [MP3].Map.Gbx</file>
+    </map>
+    <map>
+        <file>Go4/Elite - Spitfire (by Tatar).Map.Gbx</file>
+    </map>
+    <map>
+        <file>Go4/Elite - Valley of the Damned - Kommu.Map.Gbx</file>
+    </map>
+    <map>
+        <file>Go4/Elite - Versace 2k15.Map.Gbx</file>
+    </map>
+    <map>
+        <file>Go4/Elite - Malevolence 2k15.Map.Gbx</file>
+    </map>
+    <map>
+        <file>Go4/Elite - Interupt'o.Map.Gbx</file>
+    </map>
+    <map>
+        <file>Paragon/Elite - Numb ESWC.Map.Gbx</file>
+    </map>
 </playlist>
 {% endhighlight %}
