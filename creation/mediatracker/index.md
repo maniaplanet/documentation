@@ -63,3 +63,5 @@ Then move into the space by using the keyboard arrows. Try to find the car corre
 * [Video batch](video-batch.html)
 
 There is nothing magical or hard-to-understand about it, so don't let the dark GUI and the small buttons intimidate you :-)
+
+* Use shift to select more replays in a map to edit them
