@@ -10,3 +10,5 @@ tags: modes
 * [Battle](shootmania/battle.html)
 
 # Trackmania
+
+* [Chase](trackmania/chase.html)
