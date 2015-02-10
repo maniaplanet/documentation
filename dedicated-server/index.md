@@ -17,6 +17,10 @@ A dedicated server application which allows you to run a server for any ManiaPla
 * [Matchmaking][5]
 * [Scores table customization][6]
 
+# Mappacks
+
+* [Competitive Shootmania Elite mappacks][14]
+
 # Dedicated tools
 
 * [Dedicated tools][7]
@@ -47,3 +51,4 @@ A dedicated server application which allows you to run a server for any ManiaPla
 [11]: ./tools/index.html
 [12]: ./xmlrpc/methods/latest.html
 [13]: ./xmlrpc/xml-rpc-scripts.html
+[14]: ./mappacks/shootmania-mappacks.html

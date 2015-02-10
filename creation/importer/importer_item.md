@@ -32,7 +32,7 @@ NadeoImporter Item {Item.xml_Filename_Relative_To_WorkFolder}
 
 **Note 3** : **Icon** : if you want to see an icon for your item in the editor, you need to provide a icon file.  
 Unlike the other files which are explicitly referenced in the item.xml file, the icon file is automatically retrieved and imported.  
-The icon mus be a tga 64x64, it must have the same base name than the item.xml file and be placed in a sub folder `icon`.  
+The icon must be a tga 64x64, it must have the same base name than the item.xml file and be placed in a sub folder `icon`.  
 see sample : `Work/Items/Samples/DynamicObjects/Icon`
 
 Item.xml file structure
@@ -193,7 +193,7 @@ Collection="SMCommon" AuthorName="NadeoSamples">
 --
 in order to facilitate the item placement in the editor, you can define parameters
 
-- `<Pivots>` : pivot points (instead of the origin of the object)
+- `<Pivots>` : pivot points (instead of the origin of the object), first and third parameters are horizontal axes and second parameter is vertical axis
 
 	```xml
 <Pivots>
@@ -241,3 +241,27 @@ Sometimes, several pivots are chosen: you can switch from one to another using t
 		`<Options OneAxisRotation="true" AutoRotation="true" />`  
 	- ex. if you want to let the user choose the pivot to use but prevent him from placing it on another item:  
 		`<Options NotOnItem="true" ManualPivotSwitch="true" />`  
+
+4. Sidenote about Start/CheckPoint/Finish items
+--
+You can also create Start/CheckPoint/Finish items for both Trackmania² and Shootmania.
+
+First the xml of the file should looks something like this:  
+{% highlight xml %}
+<Item Type="StaticObject" Collection="Common" AuthorName="NadeoSamples">
+<Waypoint Type="Finish"/>
+<Phy>
+<TriggerShape Type="mesh" File="Meshes/FinishTrigger.Shape.gbx"/>
+<MoveShape Type="mesh" File="Meshes/Finish.Shape.gbx"/>
+</Phy>
+<Vis>
+<Mesh File="Meshes/Finish.Mesh.gbx"/>
+</Vis>
+</Item>
+{% endhighlight %}
+
+And then you mustn't forget to give a trigger shape to your item that can be reach by a car or a character.
+
+In the map editor, you just need to put the item on the map to use it.
+
+Few examples are available in the importer files.

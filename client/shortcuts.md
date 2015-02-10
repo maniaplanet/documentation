@@ -57,7 +57,7 @@ tags: client
 * Ctrl + Left : Previous skin
 
 
-### TrackMania:
+### TrackMania
 
 * Ctrl + B : Switch between brake / no brake
 * Ctrl + C : Show / hide collision
@@ -73,7 +73,7 @@ tags: client
 * Ctrl + W : Show / hide Wireframe
 
 
-### ShootMania:
+### ShootMania
 
 * Ctrl + E : Next evolution models
 * Ctrl + K : Show / hide skeleton
@@ -110,25 +110,27 @@ tags: client
 * Right Ctrl (or Right mouse button) : rotates block selection
 * Left Ctrl : Record or Playback Editors input replay (on New Map selection)
 
-### Terraforming:
+### Terraforming
 
 * BACKSPACE : Delete all kinds of terraforming, all the other blocks and items are not affected.
 * Ctrl + left mouse click : selects block type at the cursor position
 * X + left mouse click : deletes block at the cursor position
 * C : Switches to Macroblock selection mode
 
-### Block mode:
+### Block mode
 
 * BACKSPACE: Delete all blocks placed in this mode. Landscape and items are not affected.
 * X + left mouse click: deletes block at the cursor position
 
-### Item mode:
+### Item mode
 
 * BACKSPACE: Delete all blocks placed in this mode. Landscape and items are not affected.
 * Ctrl + left mouse click: selects block type at the cursor position
 * X + left mouse click: deletes block at the cursor position
+* Arrow keys (not those on the Numeric pad!), as well as Numpad- and Numpad+: rotate item along x, y and z axes. Some items only allow rotation along vertical axis.
+* Numpad/: reset item orientation to default
 
-### Macroblock mode:
+### Macroblock mode
 
 * BACKSPACE: Delete all blocks in the selection
 * Ctrl + left mouse click: selects block type at the cursor position
