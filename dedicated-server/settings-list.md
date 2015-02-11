@@ -7,6 +7,31 @@ tags:
 - server
 ---
 
+# Common
+
+## ModeMatchmaking
+
+|Setting|Default value|Description|
+|:-:|:-:|:-:|
+|**S_MatchmakingAPIUrl**|https://matchmaking.maniaplanet.com/v5|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
+|**S_MatchmakingMode**|0|This is the most important setting. It can take one of these five values : 0 -> matchmaking turned off, standard server; 1 -> matchmaking turned on, use this server as a lobby server; 2 -> matchmaking turned on, use this server as a match server; 3 -> matchmaking turned off, use this server as a universal lobby server; 4 -> matchmaking turned off, use this server as a universal match server.|
+|**S_MatchmakingRematchRatio**|-1.0|Set the minimum ratio of players that have to agree to play a rematch before launching one. The value range from 0.0 to 1.0. Any negative value turns off the rematch vote.|
+|**S_MatchmakingRematchNbMax**|2|Set the maximum number of consecutive rematches possible.|
+|**S_MatchmakingVoteForMap**|0|(Dis-)Allow the players to vote for the next map.|
+|**S_MatchmakingProgressive**|0|Enable or disable the progressive matchmaking.|
+|**S_LobbyRoundPerMap**|60|Number of rounds played before switching to the next map.|
+|**S_LobbyMatchmakerPerRound**|6|Set how many times the matchmaking function is called before ending the current round of King of the Lobby.|
+|**S_LobbyMatchmakerWait**|2|Set the waiting time before calling the matchmaking function again.|
+|**S_LobbyMatchmakerTime**|8|Duration (in seconds) of the matchmaking function. It allows the players to see who they will play their match with or cancel it if necessary.|
+|**S_LobbyInstagib**|0|Use the Laser instead of the Rocket in the lobby.|
+|**S_LobbyDisplayMasters**|1|Display a list of Masters players in the lobby.|
+|**S_MatchmakingErrorMessage**|An error occured in the matchmaking API. If the problem persist please try to contact this server administrator.|This message is displayed in the chat to inform the players that an error occured in the matchmaking system.|
+|**S_MatchmakingLogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to leave it turned off because this can quickly write huge log files.|
+|**S_MatchmakingLogAPIDebug**|0|Same as above, only turn it on if necessary.|
+|**S_MatchmakingLogMiscDebug**|0|Same as above, only turn it on if necessary.|
+|**S_ProgressiveActivation_WaitingTime**|S_ProgressiveActivation_WaitingTime|Average waiting time before progressive matchmaking activate.|
+|**S_ProgressiveActivation_PlayersNbRatio**|1|Multiply the required players nb by this, if there's less player in the lobby activate progressive.|
+
 # TrackMania
 
 ## All (ModeBase)
@@ -20,6 +45,21 @@ tags:
 |**S_UseLegacyCallbacks**|True|Turn on/off the legacy callbacks
 |**S_ScoresTableStylePath**|""|Try to load a scores table style from an XML file|
 
+## Chase
+
+|Setting|Default value|Description|
+|:-:|:-:|:-:|
+|**S_TimeLimit**|600|Time limit (0 to disable, < 0 automatic, based on author time)|
+|**S_PointsLimit**|3|Points limit|
+|**S_PointsGap**|3|The number of points lead a team must have to win the map|
+|**S_GiveUpMax**|1|Maximum number of give up|
+|**S_MinPlayersNb**|3|Minimum number of players in a team|
+|**S_ForceLapsNb**|5|Number of Laps (<= 0 to disable)|
+|**S_FinishTimeout**|-1|Finish timeout (< 0 automatic, based on author time)|
+|**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
+|**S_NbPlayersPerTeamMax**|3|Maximum number of players per team in matchmaking|
+|**S_NbPlayersPerTeamMax**|3|Minimum number of players per team in matchmaking|
+
 ## Cup (+RoundsBase)
 
 |Setting|Default value|Description|
@@ -27,6 +67,8 @@ tags:
 |**S_RoundsPerMap**|5|Rounds per map|
 |**S_NbOfWinners**|3|Number of winners|
 |**S_WarmUpDuration**|2|Duration of the warm up phase (<= 0 to disable)|
+|**S_NbOfPlayersMax**|4|Maximum number of players in matchmaking|
+|**S_NbOfPlayersMin**|4|Minimum number of players in matchmaking|
 
 ## Laps
 
@@ -61,6 +103,8 @@ tags:
 |**S_MaxPointsPerRound**|6|The maximum number of points attributed to the first player to cross the finish line|
 |**S_PointsGap**|1|The number of points lead a team must have to win the map|
 |**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
+|**S_NbPlayersPerTeamMax**|5|Maximum number of players per team in matchmaking|
+|**S_NbPlayersPerTeamMin**|2|Minimum number of players per team in matchmaking|
 
 ## TeamAttack
 
@@ -88,29 +132,6 @@ tags:
 |**S_UseScriptCallbacks**|False|Turn on/off the script callbacks, useful for server manager|
 |**S_NeutralEmblemUrl**|""|Replace the default neutral emblem by another one|
 |**S_ScoresTableStylePath**|""|Try to load a scores table style from an XML file|
-
-## ModeMatchmaking
-
-|Setting|Default value|Description|
-|:-:|:-:|:-:|
-|**S_MatchmakingAPIUrl**|https://matchmaking.maniaplanet.com/v5|URL of the matchmaking API. If you don't plan to use a custom matchmaking function leave this setting at its default value.|
-|**S_MatchmakingMode**|0|This is the most important setting. It can take one of these five values : 0 -> matchmaking turned off, standard server; 1 -> matchmaking turned on, use this server as a lobby server; 2 -> matchmaking turned on, use this server as a match server; 3 -> matchmaking turned off, use this server as a universal lobby server; 4 -> matchmaking turned off, use this server as a universal match server.|
-|**S_MatchmakingRematchRatio**|-1.0|Set the minimum ratio of players that have to agree to play a rematch before launching one. The value range from 0.0 to 1.0. Any negative value turns off the rematch vote.|
-|**S_MatchmakingRematchNbMax**|2|Set the maximum number of consecutive rematches possible.|
-|**S_MatchmakingVoteForMap**|0|(Dis-)Allow the players to vote for the next map.|
-|**S_MatchmakingProgressive**|0|Enable or disable the progressive matchmaking.|
-|**S_LobbyRoundPerMap**|60|Number of rounds played before switching to the next map.|
-|**S_LobbyMatchmakerPerRound**|6|Set how many times the matchmaking function is called before ending the current round of King of the Lobby.|
-|**S_LobbyMatchmakerWait**|2|Set the waiting time before calling the matchmaking function again.|
-|**S_LobbyMatchmakerTime**|8|Duration (in seconds) of the matchmaking function. It allows the players to see who they will play their match with or cancel it if necessary.|
-|**S_LobbyInstagib**|0|Use the Laser instead of the Rocket in the lobby.|
-|**S_LobbyDisplayMasters**|1|Display a list of Masters players in the lobby.|
-|**S_MatchmakingErrorMessage**|An error occured in the matchmaking API. If the problem persist please try to contact this server administrator.|This message is displayed in the chat to inform the players that an error occured in the matchmaking system.|
-|**S_MatchmakingLogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to leave it turned off because this can quickly write huge log files.|
-|**S_MatchmakingLogAPIDebug**|0|Same as above, only turn it on if necessary.|
-|**S_MatchmakingLogMiscDebug**|0|Same as above, only turn it on if necessary.|
-|**S_ProgressiveActivation_WaitingTime**|S_ProgressiveActivation_WaitingTime|Average waiting time before progressive matchmaking activate.|
-|**S_ProgressiveActivation_PlayersNbRatio**|1|Multiply the required players nb by this, if there's less player in the lobby activate progressive.|
 
 ## Battle
 
