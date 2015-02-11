@@ -51,8 +51,8 @@ tags:
 |:-:|:-:|:-:|
 |**S_TimeLimit**|600|Time limit (0 to disable, < 0 automatic, based on author time)|
 |**S_PointsLimit**|3|Points limit|
-|**S_PointsGap**|3|The number of points lead a team must have to win the map|
-|**S_GiveUpMax**|1|Maximum number of give up|
+|**S_PointsGap**|3|The number of points lead a team must have to win the round|
+|**S_GiveUpMax**|1|Maximum number of give up per team|
 |**S_MinPlayersNb**|3|Minimum number of players in a team|
 |**S_ForceLapsNb**|5|Number of Laps (<= 0 to disable)|
 |**S_FinishTimeout**|-1|Finish timeout (< 0 automatic, based on author time)|
