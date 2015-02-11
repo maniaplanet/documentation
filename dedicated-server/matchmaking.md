@@ -27,8 +27,18 @@ The guide will cover the technical aspects. If you have any questions or feedbac
 ## Requirements
 
 - You need to be familiar with ManiaPlanet dedicated servers ([quick start guide](basic.html))
-- Make sure your title supports matchmaking (eg. Elite, Siege, Combo or Battle)
-- Always set the `max_players` setting of the matches servers to a **higher value** than the number of players required for the match. Example : for a 6 players match in Elite, set the players limit at 8 at least.
+- Make sure the game mode supports matchmaking
+- Always set the `max_players` setting of the matches servers to a **higher value** than the number of players required for the match. Example : for a 6 players match in Elite, set the players limit at 8 at least. `<max_players>8</max_players>`
+
+## Supported game modes
+
+- Shootmania Battle
+- Shootmania Combo
+- Shootmania Elite
+- Shootmania Siege
+- Trackmania Chase
+- Trackmania Cup
+- Trackmania Team
 
 ## Add match servers to a lobby
 
