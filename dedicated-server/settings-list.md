@@ -58,7 +58,7 @@ tags:
 |**S_FinishTimeout**|-1|Finish timeout (< 0 automatic, based on author time)|
 |**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 |**S_NbPlayersPerTeamMax**|3|Maximum number of players per team in matchmaking|
-|**S_NbPlayersPerTeamMax**|3|Minimum number of players per team in matchmaking|
+|**S_NbPlayersPerTeamMin**|3|Minimum number of players per team in matchmaking|
 
 ## Cup (+RoundsBase)
 
