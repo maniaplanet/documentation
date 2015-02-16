@@ -19,6 +19,7 @@ tags:
 |**S_MatchmakingRematchNbMax**|2|Set the maximum number of consecutive rematches possible.|
 |**S_MatchmakingVoteForMap**|0|(Dis-)Allow the players to vote for the next map.|
 |**S_MatchmakingProgressive**|0|Enable or disable the progressive matchmaking.|
+|**S_MatchmakingWaitingTime**|20|Waiting time at the beginning of the matches.|
 |**S_LobbyRoundPerMap**|60|Number of rounds played before switching to the next map.|
 |**S_LobbyMatchmakerPerRound**|6|Set how many times the matchmaking function is called before ending the current round of King of the Lobby.|
 |**S_LobbyMatchmakerWait**|2|Set the waiting time before calling the matchmaking function again.|
