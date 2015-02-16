@@ -18,7 +18,8 @@ $port = 5000;
 if (!$client->InitWithIp($host,$port)) {
 	die('An error occurred - ' . $client->getErrorCode() . ':' . $client->getErrorMessage());
 }
-if (!$client->query('SetApiVersion', "2014-04-29")) {
+
+if (!$client->query('SetApiVersion', "2015-02-10")) {
 	// ignore error --> continue with old version.
 }
 
