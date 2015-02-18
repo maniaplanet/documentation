@@ -41,7 +41,7 @@ tags:
 |:-:|:-:|:-:|
 |**S_ChatTime**|15|Chat time at the end of the map|
 |**S_AllowRespawn**|True|Allow the players to respawn or not|
-|**S_WarmUpDuration**|-1|Duration of the warm up phase (<= 0 to disable)|
+|**S_WarmUpDuration**|-1|Duration of the warm up phase (-1 to disable)|
 |**S_UseScriptCallbacks**|False|Turn on/off the script callbacks, useful for server manager|
 |**S_UseLegacyCallbacks**|True|Turn on/off the legacy callbacks
 |**S_ScoresTableStylePath**|""|Try to load a scores table style from an XML file|
@@ -50,13 +50,14 @@ tags:
 
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
-|**S_TimeLimit**|600|Time limit (0 to disable, < 0 automatic, based on author time)|
-|**S_PointsLimit**|3|Points limit|
-|**S_PointsGap**|3|The number of points lead a team must have to win the round|
+|**S_TimeLimit**|900|Time limit (0 to disable, -1 automatic based on author time)|
+|**S_MapPointsLimit**|3|Map points limit|
+|**S_RoundPointsLimit**|-5|Round points limit (0 to disable, negative values automatic based on number of checkpoints)|
+|**S_RoundPointsGap**|3|The number of round points lead a team must have to win the round|
 |**S_GiveUpMax**|1|Maximum number of give up per team|
 |**S_MinPlayersNb**|3|Minimum number of players in a team|
-|**S_ForceLapsNb**|5|Number of Laps (<= 0 to disable)|
-|**S_FinishTimeout**|-1|Finish timeout (< 0 automatic, based on author time)|
+|**S_ForceLapsNb**|10|Number of Laps (-1 to use the map default, 0 to disable laps limit)|
+|**S_FinishTimeout**|-1|Finish timeout (-1 automatic based on author time)|
 |**S_DisplayWarning**|True|Display a big red message in the middle of the screen of the player that crosses a checkpoint when it wasn't it's turn.|
 |**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 |**S_NbPlayersPerTeamMax**|3|Maximum number of players per team in matchmaking|
@@ -68,7 +69,7 @@ tags:
 |:-:|:-:|:-:|
 |**S_RoundsPerMap**|5|Rounds per map|
 |**S_NbOfWinners**|3|Number of winners|
-|**S_WarmUpDuration**|2|Duration of the warm up phase (<= 0 to disable)|
+|**S_WarmUpDuration**|2|Duration of the warm up phase (-1 to disable)|
 |**S_NbOfPlayersMax**|4|Maximum number of players in matchmaking|
 |**S_NbOfPlayersMin**|4|Minimum number of players in matchmaking|
 
@@ -76,9 +77,9 @@ tags:
 
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
-|**S_TimeLimit**|0|Time limit (0 to disable, < 0 automatic, based on author time)|
-|**S_ForceLapsNb**|5|Number of Laps (<= 0 to disable)|
-|**S_FinishTimeout**|-1|Finish timeout (< 0 automatic, based on author time)|
+|**S_TimeLimit**|0|Time limit (0 to disable, -1 automatic based on author time)|
+|**S_ForceLapsNb**|5|Number of Laps (-1 to use the map default)|
+|**S_FinishTimeout**|-1|Finish timeout (-1 automatic based on author time)|
 
 ## Rounds (+RoundsBase)
 
@@ -92,9 +93,9 @@ tags:
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
 |**S_PointsLimit**|100|Points limit|
-|**S_FinishTimeout**|-1|Finish timeout (< 0 automatic, based on author time)|
+|**S_FinishTimeout**|-1|Finish timeout (-1 automatic based on author time)|
 |**S_UseAlternateRules**|False|Use alternate rules|
-|**S_ForceLapsNb**|-1|Force number of laps (<= 0 to disable)|
+|**S_ForceLapsNb**|-1|Force number of laps (-1 to use the map default)|
 |**S_DisplayTimeDiff**|False|Display time difference at checkpoint|
 
 ## Team (+RoundsBase)
@@ -115,7 +116,7 @@ tags:
 |**S_TimeLimit**|300|Time limit|
 |**S_MinPlayerPerClan**|3|Minimum number of players per clan|
 |**S_MaxPlayerPerClan**|3|Maximum number of players per clan|
-|**S_MaxClanNb**|-1|Maximum number of clans (<= 0 to disable)|
+|**S_MaxClanNb**|-1|Maximum number of clans (-1 to disable)|
 
 ## TimeAttack
 
@@ -210,13 +211,13 @@ tags:
 |**S_RoundPointsToWin**|7|Round points to win|
 |**S_RoundPointsGap**|2|Round points gap|
 |**S_RoundPointsLimit**|11|Round points limit|
-|**S_RoundTimeLimit**|0|Round time limit (<= 0 to disable)|
+|**S_RoundTimeLimit**|-1|Round time limit (-1 to disable)|
 |**S_PoleTimeLimit**|45|Pole capture time limit|
 |**S_MatchPointsToWin**|3|Match points to win|
 |**S_MatchPointsGap**|0|Match points gap|
 |**S_MatchPointsLimit**|3|Match points limit|
 |**S_Matchmaking**|3|Use Joust with matchmaking|
-|**S_MatchmakingSleep**|0|Matchmaking match end duration (-1: infinite)|
+|**S_MatchmakingSleep**|0|Matchmaking match end duration (-1 infinite)|
 |**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 |**S_UseLobby**|False|Launch server in lobby mode|
 |**S_LobbyTimePerMap**|86400|Time limit in lobby mode (sec., 0: no limit)|
@@ -230,7 +231,7 @@ tags:
 |**S_TimeLimit**|60|Time for an attack on a map|
 |**S_TimePole**|15|Time allowed to reach the pole by the end of the attack|
 |**S_TimeCapture**|1.5|Time to capture a pole for the attack clan (* NbPoles)|
-|**S_WarmUpDuration**|90|Duration of the warmup (<= 0 to disabled)|
+|**S_WarmUpDuration**|90|Duration of the warmup (-1 to disable)|
 |**S_MapWin**|2|How many maps a clan has to win to win the match|
 |**S_TurnGap**|2|Points lead necessary to win a map|
 |**S_TurnLimit**|15|Maximum number of points before next map|
@@ -238,7 +239,7 @@ tags:
 |**S_QuickMode**|False|Multiplier for the sleep times between rounds|
 |**S_UseLegacyCallback**|True|Send the old JSON callbacks|
 |**S_Matchmaking**|False|Use Elite with matchmaking|
-|**S_MatchmakingSleep**|0|Matchmaking match end duration (<= 0 infinite)|
+|**S_MatchmakingSleep**|0|Matchmaking match end duration (-1 infinite)|
 |**S_UseLegacyCallback**|True|Send the old JSON callbacks|
 |**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 |**S_DisplaySponsors**|True|Display the sponsors of the attacker when spectating him|
@@ -334,7 +335,7 @@ tags:
 |**S_AutoManageAFK**|True|Switch inactive players to spectator mode|
 |**S_DisplayRulesReminder**|True|Display a window with the rules when the match begins|
 |**S_Matchmaking**|False|Use Elite with matchmaking|
-|**S_MatchmakingSleep**|0|Matchmaking match end duration (-1: infinite)|
+|**S_MatchmakingSleep**|0|Matchmaking match end duration (-1 infinite)|
 |**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 
 ## TimeAttack
