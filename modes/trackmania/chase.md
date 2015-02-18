@@ -41,7 +41,8 @@ In case of time limit, the following criteria are used to determine the round wi
 ## Tips
 
 * Don't wait the last moment to let the next checkpoint player go ahead, it would force you to brake and stop just before the checkpoint.
-* If your team have a big enough points advantage your players can sprint to the finish a few checkpoints before the end without respecting the players order at the checkpoints.
+* You can use your horn to warn your teammates that you're arriving.
+* Don't forget to bind the "free look" button in the settings to be able to look behind you.
 
 ## Map validation
 
