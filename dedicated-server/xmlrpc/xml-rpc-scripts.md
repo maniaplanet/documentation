@@ -36,14 +36,15 @@ The only exception is Elite that has some very specific callbacks.
 * Note : This callback is sent before the beginning of each match
 
 ### LibXmlRpc_BeginMatchStop
-* Data : An array with the number of the match and a boolean indicating if the script was restarted or not.
+* Data : An array with the number of the match and a boolean indicating if the script was restarted or not
 * Example : ["3", "False"]
 * Note : This callback is sent after the beginning of each match
 
 ### LibXmlRpc_LoadingMap
-* Data : An array with the number of the map
-* Example : ["1"]
-* Note : This callback is sent when the script starts to load a map
+* Data : An array with the number of the map, its UID and if the map is new or restarted.
+* Example : ["1", "2icir0pvzfqwf4h9j3B5lkjYu4n", "False"]
+* Note : This callback is sent when the script start to load a map.
+* Version : UID and restart status are available since XmlRpc.Script.txt_v2015-02-19
 
 ### LibXmlRpc_BeginMap
 * Data : An array with the number of the map, its UID and if the map is new or restarted.
@@ -136,9 +137,10 @@ The only exception is Elite that has some very specific callbacks.
 * Note : This callback is sent after the end of each map
 
 ### LibXmlRpc_UnloadingMap
-* Data : An array with the number of the map
-* Example : ["1"]
+* Data : An array with the number of the map and its UID
+* Example : ["1", "2icir0pvzfqwf4h9j3B5lkjYu4n"]
 * Note : This callback is sent when the script start to unload a map
+* Version : UID is available since XmlRpc.Script.txt_v2015-02-19
 
 ### LibXmlRpc_EndMatch
 * Data : An array with the number of the match
@@ -179,6 +181,12 @@ The only exception is Elite that has some very specific callbacks.
 * Data : Nothing
 * Example : []
 * Note : This callback is sent at the end of the warm up
+
+### LibXmlRpc_ScoresReady
+* Data : Nothing
+* Example : []
+* Note : This callback is sent at the end of the gaming sequence, when the scores are accurate and ready to be used for statistical purpose for example.
+* Version : available since XmlRpc.Script.txt_v2015-02-19
 
 ### LibXmlRpc_Callbacks
 * Data : An array with the name of all the available callbacks
