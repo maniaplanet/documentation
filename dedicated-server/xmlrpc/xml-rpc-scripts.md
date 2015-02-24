@@ -182,6 +182,12 @@ The only exception is Elite that has some very specific callbacks.
 * Example : []
 * Note : This callback is sent at the end of the warm up
 
+#### LibXmlRpc_Pause
+* Data : An array with one value saying if the mode is in pause or not
+* Example : ["True"]
+* Note : This callback is sent after using the `LibXmlRpc_GetPause` method or when the pause status changes.
+* Version : available since XmlRpcCommon.Script.txt_v2015-02-23
+
 ### LibXmlRpc_ScoresReady
 * Data : Nothing
 * Example : []
@@ -1012,60 +1018,60 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 
 ## Common
 
-### LibXmlRpc_GetPlayerRanking
+#### LibXmlRpc_GetPlayerRanking
 * Note : Invoke the LibXmlRpc_PlayerRanking script callback for a player.
 * String1 : "LibXmlRpc_GetPlayerRanking"
 * String2 :  "LoginOfThePlayer"
 
-### LibXmlRpc_ListCallbacks
+#### LibXmlRpc_ListCallbacks
 * Note : List all the xmlrpc script callbacks available. This method triggers the `LibXmlRpc_Callbacks` callback.
 * String1 : "LibXmlRpc_ListCallbacks"
 * String2 : ""
 * Version : available since XmlRpc.Script.txt_v2014-10-14
 
-### LibXmlRpc_GetCallbackHelp
+#### LibXmlRpc_GetCallbackHelp
 * Note : Get help about a callback. This method triggers the `LibXmlRpc_CallbackHelp` callback.
 * String1 : "LibXmlRpc_GetCallbackHelp"
 * String2 : "NameOfTheCallback"
 * Version : available since XmlRpc.Script.txt_v2014-10-14
 
-### LibXmlRpc_BlockCallback
+#### LibXmlRpc_BlockCallback
 * Note : Block a callback.
 * String1 : "LibXmlRpc_BlockCallback"
 * String2 : "NameOfTheCallback"
 * Version : available since XmlRpc.Script.txt_v2014-10-14
 
-### LibXmlRpc_BlockAllCallbacks
+#### LibXmlRpc_BlockAllCallbacks
 * Note : Block all callbacks.
 * String1 : "LibXmlRpc_BlockAllCallbacks"
 * String2 : ""
 * Version : available since XmlRpc.Script.txt_v2014-10-14
 
-### LibXmlRpc_UnblockCallback
+#### LibXmlRpc_UnblockCallback
 * Note : Unblock a callback.
 * String1 : "LibXmlRpc_UnblockCallback"
 * String2 : "NameOfTheCallback"
 * Version : available since XmlRpc.Script.txt_v2014-10-14
 
-### LibXmlRpc_UnblockAllCallbacks
+#### LibXmlRpc_UnblockAllCallbacks
 * Note : Unblock all callbacks.
 * String1 : "LibXmlRpc_UnblockAllCallbacks"
 * String2 : ""
 * Version : available since XmlRpc.Script.txt_v2014-10-14
 
-### LibXmlRpc_ListBlockedCallbacks
+#### LibXmlRpc_ListBlockedCallbacks
 * Note : Get the list of all blocked callbacks. This method triggers the `LibXmlRpc_BlockedCallbacks` callback.
 * String1 : "LibXmlRpc_ListBlockedCallbacks"
 * String2 : ""
 * Version : available since XmlRpc.Script.txt_v2014-10-14
 
-### UI_SetProperties
+#### UI_SetProperties
 * Note : Set the properties of the UI. Check the [documentation]({{ site.docurl }}/creation/maniascript/libraries/library-ui.html) for more information.
 * String1 : "UI_SetProperties"
 * String2 : "<ui_properties></ui_properties>"
 * Version : available since UI.Script.txt_v2014-09-16
 
-### UI_GetProperties
+#### UI_GetProperties
 * Note : Get the properties of the Trackmania UI. Check the [documentation]({{ site.docurl }}/creation/maniascript/libraries/library-ui.html) for more information. This method triggers the `UI_Properties` callback.
 * String1 : "UI_GetProperties"
 * String2 : ""
@@ -1075,6 +1081,18 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 * Note : Check if the mode is in warm up. This method triggers the `LibXmlRpc_WarmUp` callback.
 * String1 : "LibXmlRpc_GetWarmUp"
 * String2 :  ""
+
+#### LibXmlRpc_SetPause
+* Note : Enable or disable the pause mode.
+* String1 : "LibXmlRpc_SetPause"
+* String2 : "True" or "False"
+* Version : available since XmlRpcCommon.Script.txt_v2015-02-23
+
+#### LibXmlRpc_GetPause
+* Note : Get the current pause status. This will sent the `LibXmlRpc_Pause` callback in return.
+* String1 : "LibXmlRpc_GetPause"
+* String2 : ""
+* Version : available since  XmlRpcCommon.Script.txt_v2015-02-23
 
 
 ## ShootMania
