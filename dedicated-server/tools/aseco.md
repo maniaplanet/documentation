@@ -22,3 +22,5 @@ The following significant versions have been created over the years:
 <li><b>XASECO2</b>: continuation of XASECO for TrackMania 2</li>
 <li><b>MPAseco</b>: fork of XASECO2, included support for ShootMania</li>
 <li><b>UASECO</b>: continuation of XASECO2 (after discontinuation by Xymph) by Undef, rewrite of the codebase: more object-oriented</li></ul>
+
+![Aseco Timeline](./img/aseco-timeline.jpg)
