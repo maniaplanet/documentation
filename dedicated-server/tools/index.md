@@ -7,7 +7,6 @@ tags:
 - tools
 ---
 
-
 These tools help you administrating your Maniaplanet dedicated server.
 
 | ToolName                   | Author    | Info/Download                                                             |
@@ -55,3 +54,13 @@ These tools help you administrating your Maniaplanet dedicated server.
 </tr>
 </table>
 
+##History
+![Server controller Timeline](http://dump.klaversma.eu/maniaservercontrollers.jpg)
+The above pictured timeline shows server controllers throughout the years of the existance of the TrackMania (and later ManiaPlanet) dedicated server. The first server controllers (FAST and Aseco) date back to 2005/2006 and are still in use to this date, though in a slightly changed form.
+
+###Credits
+Throughout the existance of server controllers, there has been build upon the knowledge of those guys who started it out. Current controllers wouldn't have been the same (or even existed at all), if it weren't for the ground-work done by these community members:
+* Flo ([Florian Schnell](http://www.floschnell.de)), the original author of FAST and ASECO and contributer to ManiaLive
+* Eyez (Ian Surgey) and Assembler Maniac (Brad Mettee), the original authors of RASP
+* Slig (Gilles Masson), the author of FAST and Dedimania
+* Xymph (Frans de Vries), the author of Aseco/RASP and XAseco(2)
