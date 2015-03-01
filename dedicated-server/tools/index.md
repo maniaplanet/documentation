@@ -55,7 +55,7 @@ These tools help you administrating your Maniaplanet dedicated server.
 </table>
 
 ##History
-![Server controller Timeline](http://dump.klaversma.eu/maniaservercontrollers.jpg)
+![Server controller Timeline](./img/maniaservercontrollers.jpg)
 The above pictured timeline shows server controllers throughout the years of the existance of the TrackMania (and later ManiaPlanet) dedicated server. The first server controllers (FAST and Aseco) date back to 2005/2006 and are still in use to this date, though in a slightly changed form.
 
 ###Credits
