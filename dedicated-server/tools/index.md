@@ -60,4 +60,4 @@ The above pictured timeline shows server controllers throughout the years of the
 
 ###Credits
 Throughout the existance of server controllers, there has been build upon the knowledge of those guys who started it out. Current controllers wouldn't have been the same (or even existed at all), if it weren't for the ground-work done by these community members:
-<ul><li>Flo ([Florian Schnell](http://www.floschnell.de)), the original author of FAST and ASECO and contributer to ManiaLive</li><li>Eyez (Ian Surgey) and Assembler Maniac (Brad Mettee), the original authors of RASP</li><li>Slig (Gilles Masson), the author of FAST and Dedimania</li><li>Xymph (Frans de Vries), the author of Aseco/RASP and XAseco(2)</li></ul>
+<ul><li>Flo (<a href="http://www.floschnell.de" target="_blank">Florian Schnell</a>), the original author of FAST and ASECO and contributer to ManiaLive</li><li>Eyez (Ian Surgey) and Assembler Maniac (Brad Mettee), the original authors of RASP</li><li>Slig (Gilles Masson), the author of FAST and Dedimania</li><li>Xymph (Frans de Vries), the author of Aseco/RASP and XAseco(2)</li></ul>
