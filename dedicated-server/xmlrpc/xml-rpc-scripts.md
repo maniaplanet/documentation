@@ -274,10 +274,11 @@ To avoid to spam XmlRpc these events are sent only if it has an interest for the
 Weapon number -> 1: Laser, 2: Rocket, 3: Nucleus, 5: Arrow
 
 #### LibXmlRpc_OnHit
-* Data : An array with the login of the shooter, the login of the victim, the amount of damage, the weapon number, the shooter points (the +1, +2, etc displayed in game when you hit someone) and the hit distance.
-* Example : ["ShooterLogin", "VictimLogin", "200", "1", "2", "45."]
+* Data : An array with the login of the shooter, the login of the victim, the amount of damage, the weapon number, the shooter points (the +1, +2, etc displayed in game when you hit someone), the hit distance, the shooter position, the victim position, the shooter aim direction and the victim aim direction.
+* Example : ["ShooterLogin", "VictimLogin", "200", "1", "2", "77.479", "196.904,4.399,179.419", "119.669,0.991,184.553","-0.996,-0.041,0.065", "0.952,0.264,0.151"]
 * Note : This callback is sent when a player is hit.
-One armor point = 100 damage. Weapon number -> 1: Laser, 2: Rocket, 3: Nucleus, 5: Arrow. The hit distance is calculated with the position of the payers when the projectile hit, so it's not really accurate for weapons with a travel time.
+One armor point = 100 damage. Weapon number -> 1: Laser, 2: Rocket, 3: Nucleus, 5: Arrow. The hit distance, the positions and the aim directions of the players are calculated when the projectile hit, so it's not really accurate for weapons with a travel time.
+* version : victim and shooter positions and aim directions are available since XmlRpc.Script.txt_v2015-03-05
 
 #### LibXmlRpc_OnNearMiss
 * Data : An array with the login of the shooter, the login of the victim, the weapon number and the distance of the miss
