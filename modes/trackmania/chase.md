@@ -47,3 +47,9 @@ In case of time limit, the following criteria are used to determine the round wi
 ## Map validation
 
 Chase can be played on any type of map, but it's better to use maps with laps or really long maps.
+
+## Specificities
+
+### Competitive mode
+
+The competitive mode can be activated with the S_CompetitiveMode setting. It's turned off by default. In this mode only players that take a slot in a team during the warm up can play, the others will have to spec until they can get a free slot in a team. The match can be paused using a command. Players are then sent back into warm up and the match can restart only when both teams are ready. This mode also applies stricter rules than in normal mode. If a team has less players than the other team, it loses the round and the match is paused until both teams have enough players. The scores can be set using a command and a round can be stopped before the end the same way.
