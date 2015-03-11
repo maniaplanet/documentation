@@ -59,6 +59,10 @@ tags:
 |**S_ForceLapsNb**|10|Number of Laps (-1 to use the map default, 0 to disable laps limit)|
 |**S_FinishTimeout**|-1|Finish timeout (-1 automatic based on author time)|
 |**S_DisplayWarning**|True|Display a big red message in the middle of the screen of the player that crosses a checkpoint when it wasn't it's turn.|
+|**S_CompetitiveMode**|False|Use [competitive mode](http://doc.maniaplanet.com/modes/trackmania/chase.html#Competitive-mode).|
+|**S_PauseBetweenRound**|15|Pause duration between rounds.|
+|**S_WaitingTimeMax**|600|Maximum waiting time before next map.|
+|**S_WaypointEventDelay**|500|Waypoint event buffer delay.|
 |**S_UsePlayerClublinks**|False|Use the players' clublinks, or otherwise use the default teams|
 |**S_NbPlayersPerTeamMax**|3|Maximum number of players per team in matchmaking|
 |**S_NbPlayersPerTeamMin**|3|Minimum number of players per team in matchmaking|
