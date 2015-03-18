@@ -958,6 +958,11 @@ The generic callbacks listed above are also sent in Elite. So if you want to tur
 * Example : ["Login", "#123456", "21723", "7", "False", "6164", "1", "False"]
 * Note : This callback is sent when a player crosses a waypoint (checkpoint, finish, multilap, ...).
 
+#### LibXmlRpc_OnPlayerFinish
+* Data : An array with the login of the player crossing the finish, the id of the finish block and the race time.
+* Example : ["Login", "#123456", "21723"]
+* Note : This callback is sent when a player crosses the finish.
+
 #### LibXmlRpc_OnGiveUp
 * Data : An array with the login of the restarting player
 * Example : ["Login"]
