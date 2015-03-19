@@ -27,8 +27,8 @@ Example of the basic setting :
   <label posn="30 20" halign="center" style="CardButtonMedium" text="Anim 2" scriptevents="1" id="Button_Anim2" />
 </frame>
 <script><!--
-{{{Manialink::Includes(["TextLib" => "TL", "MathLib" => "ML"])}}}
-{{{Manialink::Animations(["EaseInOutElastic", "EaseOutBounce", "EaseInOutExp", "EaseOutBack", "EaseOutElastic"])}}}
+{% raw %}{{{Manialink::Includes(["TextLib" => "TL", "MathLib" => "ML"])}}}{% endraw %}
+{% raw %}{{{Manialink::Animations(["EaseInOutElastic", "EaseOutBounce", "EaseInOutExp", "EaseOutBack", "EaseOutElastic"])}}}{% endraw %}
 main() {
   while (True) {
     yield;
@@ -53,8 +53,8 @@ Let's start with a simple animation. I want the quad to move to another position
   <label posn="30 20" halign="center" style="CardButtonMedium" text="Anim 2" scriptevents="1" id="Button_Anim2" />
 </frame>
 <script><!--
-{{{Manialink::Includes(["TextLib" => "TL", "MathLib" => "ML"])}}}
-{{{Manialink::Animations(["EaseInOutElastic", "EaseOutBounce", "EaseInOutExp", "EaseOutBack", "EaseOutElastic"])}}}
+{% raw %}{{{Manialink::Includes(["TextLib" => "TL", "MathLib" => "ML"])}}}{% endraw %}
+{% raw %}{{{Manialink::Animations(["EaseInOutElastic", "EaseOutBounce", "EaseInOutExp", "EaseOutBack", "EaseOutElastic"])}}}{% endraw %}
 main() {
   while (True) {
     yield;
@@ -64,7 +64,7 @@ main() {
     foreach (Event in PendingEvents) {
       if (Event.Type == CMlEvent::Type::MouseClick) {
         if (Event.ControlId == "Button_Anim1") {
-          LibManialink_Anim({{{Manialink::Inject("""<quad posn="50 -50" id="Quad_Anim" />""")}}}, 3000, "EaseOutBounce");
+          LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad posn="50 -50" id="Quad_Anim" />""")}}}{% endraw %}, 3000, "EaseOutBounce");
         }
       }
     }
@@ -86,9 +86,9 @@ You can send the quad to it's original position with a second animation bind on 
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
-      LibManialink_Anim({{{Manialink::Inject("""<quad posn="50 -50" id="Quad_Anim" />""")}}}, 3000, "EaseOutBounce");
+      LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad posn="50 -50" id="Quad_Anim" />""")}}}{% endraw %}, 3000, "EaseOutBounce");
     } else if (Event.ControlId == "Button_Anim2") {
-      LibManialink_Anim({{{Manialink::Inject("""<quad posn="0 0" id="Quad_Anim" />""")}}}, 3000, "EaseInOutElastic");
+      LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad posn="0 0" id="Quad_Anim" />""")}}}{% endraw %}, 3000, "EaseInOutElastic");
     }
   }
 }
@@ -101,9 +101,9 @@ You can animate multiple properties during one animation :
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
-      LibManialink_Anim({{{Manialink::Inject("""<quad posn="50 -50" sizen="10 30" scale="2" rot="45" bgcolor="f70" opacity="0.5" id="Quad_Anim" />""")}}}, 3000, "EaseOutBounce");
+      LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad posn="50 -50" sizen="10 30" scale="2" rot="45" bgcolor="f70" opacity="0.5" id="Quad_Anim" />""")}}}{% endraw %}, 3000, "EaseOutBounce");
     } else if (Event.ControlId == "Button_Anim2") {
-      LibManialink_Anim({{{Manialink::Inject("""<quad posn="0 0" id="Quad_Anim" />""")}}}, 3000, "EaseInOutElastic");
+      LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad posn="0 0" id="Quad_Anim" />""")}}}{% endraw %}, 3000, "EaseInOutElastic");
     }
   }
 }
@@ -116,10 +116,10 @@ Now let's take a look at the `LibManialink_AnimChain()` function. It works exact
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
-      LibManialink_Anim({{{Manialink::Inject("""<quad posn="50 -50" sizen="10 30" scale="2" rot="45" bgcolor="f70" opacity="0.5" id="Quad_Anim" />""")}}}, 3000, "EaseOutBounce");
-      LibManialink_AnimChain({{{Manialink::Inject("""<quad posn="-50 -50" rot="-45" bgcolor="7f7" opacity="1" id="Quad_Anim" />""")}}}, 2000, "");
+      LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad posn="50 -50" sizen="10 30" scale="2" rot="45" bgcolor="f70" opacity="0.5" id="Quad_Anim" />""")}}}{% endraw %}, 3000, "EaseOutBounce");
+      LibManialink_AnimChain({% raw %}{{{Manialink::Inject("""<quad posn="-50 -50" rot="-45" bgcolor="7f7" opacity="1" id="Quad_Anim" />""")}}}{% endraw %}, 2000, "");
     } else if (Event.ControlId == "Button_Anim2") {
-      LibManialink_Anim({{{Manialink::Inject("""<quad posn="0 0" id="Quad_Anim" />""")}}}, 3000, "EaseInOutElastic");
+      LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad posn="0 0" id="Quad_Anim" />""")}}}{% endraw %}, 3000, "EaseInOutElastic");
     }
   }
 }
@@ -132,10 +132,10 @@ But let's say you want to have an animation where the quad go from position A to
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
-      LibManialink_Anim({{{Manialink::Inject("""<quad posn="100 0" id="Quad_Anim" />""")}}}, 5000, "");
-      LibManialink_AnimInsert({{{Manialink::Inject("""<quad rot="180" id="Quad_Anim" />""")}}}, 1000, 3000, "");
+      LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad posn="100 0" id="Quad_Anim" />""")}}}{% endraw %}, 5000, "");
+      LibManialink_AnimInsert({% raw %}{{{Manialink::Inject("""<quad rot="180" id="Quad_Anim" />""")}}}{% endraw %}, 1000, 3000, "");
     } else if (Event.ControlId == "Button_Anim2") {
-      LibManialink_Anim({{{Manialink::Inject("""<quad posn="0 0" rot="0" id="Quad_Anim" />""")}}}, 3000, "EaseInOutElastic");
+      LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad posn="0 0" rot="0" id="Quad_Anim" />""")}}}{% endraw %}, 3000, "EaseInOutElastic");
     }
   }
 }
@@ -148,15 +148,15 @@ And now let's see what we could do by combining them all together :
 foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
-      LibManialink_Anim({{{Manialink::Inject("""<quad posn="0 -40" id="Quad_Anim" />""")}}}, 3000, "EaseOutBounce");
-      LibManialink_AnimInsert({{{Manialink::Inject("""<quad rot="-2" id="Quad_Anim" />""")}}}, 0, 1000, "");
-      LibManialink_AnimInsert({{{Manialink::Inject("""<quad rot="90" id="Quad_Anim" />""")}}}, 1000, 1500, "");
-      LibManialink_AnimChain({{{Manialink::Inject("""<quad rot="45" id="Quad_Anim" />""")}}}, 2500, "EaseInOutExp");
-      LibManialink_AnimChain({{{Manialink::Inject("""<quad posn="0 -10" id="Quad_Anim" />""")}}}, 2500, "EaseInOutExp");
-      LibManialink_AnimChain({{{Manialink::Inject("""<quad scale="2" id="Quad_Anim" />""")}}}, 2500, "EaseOutBack");
-      LibManialink_AnimChain({{{Manialink::Inject("""<quad posn="-20 -20" sizen="30 10" bgcolor="f7f" id="Quad_Anim" />""")}}}, 2500, "EaseOutElastic");
+      LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad posn="0 -40" id="Quad_Anim" />""")}}}{% endraw %}, 3000, "EaseOutBounce");
+      LibManialink_AnimInsert({% raw %}{{{Manialink::Inject("""<quad rot="-2" id="Quad_Anim" />""")}}}{% endraw %}, 0, 1000, "");
+      LibManialink_AnimInsert({% raw %}{{{Manialink::Inject("""<quad rot="90" id="Quad_Anim" />""")}}}{% endraw %}, 1000, 1500, "");
+      LibManialink_AnimChain({% raw %}{{{Manialink::Inject("""<quad rot="45" id="Quad_Anim" />""")}}}{% endraw %}, 2500, "EaseInOutExp");
+      LibManialink_AnimChain({% raw %}{{{Manialink::Inject("""<quad posn="0 -10" id="Quad_Anim" />""")}}}{% endraw %}, 2500, "EaseInOutExp");
+      LibManialink_AnimChain({% raw %}{{{Manialink::Inject("""<quad scale="2" id="Quad_Anim" />""")}}}{% endraw %}, 2500, "EaseOutBack");
+      LibManialink_AnimChain({% raw %}{{{Manialink::Inject("""<quad posn="-20 -20" sizen="30 10" bgcolor="f7f" id="Quad_Anim" />""")}}}{% endraw %}, 2500, "EaseOutElastic");
     } else if (Event.ControlId == "Button_Anim2") {
-      LibManialink_Anim({{{Manialink::Inject("""<quad posn="0 0" sizen="15 15" scale="1" rot="0" bgcolor="047" id="Quad_Anim" />""")}}}, 1000, "EaseInOutElastic");
+      LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad posn="0 0" sizen="15 15" scale="1" rot="0" bgcolor="047" id="Quad_Anim" />""")}}}{% endraw %}, 1000, "EaseInOutElastic");
     }
   }
 }
@@ -165,9 +165,9 @@ foreach (Event in PendingEvents) {
 You can also repeat a whole animation for a definite number of time or indefinitely. To do so you have to inject the repeat function in your Manialink script.
 {% highlight xml %}
 <script><!--
-{{{Manialink::Includes(["TextLib" => "TL", "MathLib" => "ML"])}}}
-{{{Manialink::Animations(["EaseInOutElastic", "EaseOutBounce", "EaseInOutExp", "EaseOutBack", "EaseOutElastic"])}}}
-{{{Manialink::Functions(["AnimRepeat"])}}}
+{% raw %}{{{Manialink::Includes(["TextLib" => "TL", "MathLib" => "ML"])}}}{% endraw %}
+{% raw %}{{{Manialink::Animations(["EaseInOutElastic", "EaseOutBounce", "EaseInOutExp", "EaseOutBack", "EaseOutElastic"])}}}{% endraw %}
+{% raw %}{{{Manialink::Functions(["AnimRepeat"])}}}{% endraw %}
 
 main() {
   ...
@@ -181,11 +181,11 @@ foreach (Event in PendingEvents) {
   if (Event.Type == CMlEvent::Type::MouseClick) {
     if (Event.ControlId == "Button_Anim1") {
       LibManialink_AnimRepeatStart(1000, 3);
-      LibManialink_Anim({{{Manialink::Inject("""<quad scale="2" id="Quad_Anim" />""")}}}, 500, "EaseOutBack");
-      LibManialink_AnimChain({{{Manialink::Inject("""<quad scale="1" id="Quad_Anim" />""")}}}, 500, "EaseOutBack");
+      LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad scale="2" id="Quad_Anim" />""")}}}{% endraw %}, 500, "EaseOutBack");
+      LibManialink_AnimChain({% raw %}{{{Manialink::Inject("""<quad scale="1" id="Quad_Anim" />""")}}}{% endraw %}, 500, "EaseOutBack");
       LibManialink_AnimRepeatEnd();
     } else if (Event.ControlId == "Button_Anim2") {
-      LibManialink_Anim({{{Manialink::Inject("""<quad scale="1" rot="0" id="Quad_Anim" />""")}}}, 250, "EaseOutBack");
+      LibManialink_Anim({% raw %}{{{Manialink::Inject("""<quad scale="1" rot="0" id="Quad_Anim" />""")}}}{% endraw %}, 250, "EaseOutBack");
     }
   }
 }
@@ -199,7 +199,7 @@ In this case we want to repeat the animation each second three times.
 
 If you can't identify the element you want to animate by an unique id, the animations functions can take an optional parameter as first argument. You can pass the CMlControl directly to the function :
 {% highlight xml %}
-LibManialink_Anim(((Page.MainFrame.Controls[0] as CMlFrame).Controls[0] as CMlFrame).Controls[0], {{{Manialink::Inject("""<quad posn="0 0" />""")}}}, 3000, "EaseInOutElastic");
+LibManialink_Anim(((Page.MainFrame.Controls[0] as CMlFrame).Controls[0] as CMlFrame).Controls[0], {% raw %}{{{Manialink::Inject("""<quad posn="0 0" />""")}}}{% endraw %}, 3000, "EaseInOutElastic");
 {% endhighlight %}
 
 To stop an animation on an element you can use the `LibManialink_AnimStop()` function. Two versions of the function exist. the first one takes a CMlControl as argument while the second one takes a Text, the ControlId of the control.
@@ -217,9 +217,9 @@ Void LibManialink_AnimStop(Text _ControlId)
 If you want to know if an animation is currently running on a control you can use the `LibManialink_IsAnimated()` function. To use it you have to make another injection at the beginning of your manialink :
 {% highlight xml %}
 <script><!--
-{{{Manialink::Includes(["TextLib" => "TL", "MathLib" => "ML"])}}}
-{{{Manialink::Animations(["EaseInOutElastic", "EaseOutBounce", "EaseInOutExp", "EaseOutBack", "EaseOutElastic"])}}}
-{{{Manialink::Functions(["AnimRepeat", "IsAnimated"])}}}
+{% raw %}{{{Manialink::Includes(["TextLib" => "TL", "MathLib" => "ML"])}}}{% endraw %}
+{% raw %}{{{Manialink::Animations(["EaseInOutElastic", "EaseOutBounce", "EaseInOutExp", "EaseOutBack", "EaseOutElastic"])}}}{% endraw %}
+{% raw %}{{{Manialink::Functions(["AnimRepeat", "IsAnimated"])}}}{% endraw %}
 
 main() {
   ...
