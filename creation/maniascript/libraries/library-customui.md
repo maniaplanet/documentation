@@ -45,17 +45,20 @@ Now lets see how to associate a module with a frame in your custom Manialink :
 </frame>
 {% endhighlight %}
 All you have to do is wrap your customizable content in a frame with the "LibCustomUI_Module" class and the name of your module as id. In this example it's just a label, but it can be any part of your Manialink. All the content of the frame will be movable/hidable by the players. After that you have two possibilities to add the necessary script to your Manialink :
-  * it doesn't have a script, then you can call the `InjectMLFullScript()` function,
-  * it already have a script, so you have to use the `InjectMLInit()` and `InjectMLLoop()` functions.
+
+* it doesn't have a script, then you can call the `InjectMLFullScript()` function,
+* it already have a script, so you have to use the `InjectMLInit()` and `InjectMLLoop()` functions.
+
 Example without a script :
 {% highlight xml %}
 MyLayer.ManialinkPage = """
 <frame class="LibCustomUI_Module" id="MyModeName_Example">
   <label text="Im customizable!" scale="3" />
 </frame>
-{% raw %}{{{InjectMLFullScript()}}}{% endraw %}
+{% raw %}{{{CustomUI::InjectMLFullScript()}}}{% endraw %}
 """;
-{% endhighlight %}.
+{% endhighlight %}
+
 Example with a script :
 {% highlight xml %}
 <frame class="LibCustomUI_Module" id="MyModeName_Example">
@@ -63,13 +66,13 @@ Example with a script :
 </frame>
 <script><!--
 main() {
-  {% raw %}{{{InjectMLInit()}}}{% endraw %}
+  {% raw %}{{{CustomUI::InjectMLInit()}}}{% endraw %}
 
   while (True) {
     yield;
     if (!PageIsVisible || InputPlayer == Null) continue;
 
-    {% raw %}{{{InjectMLLoop()}}}{% endraw %}
+    {% raw %}{{{CustomUI::InjectMLLoop()}}}{% endraw %}
   }
 }
 --></script>
