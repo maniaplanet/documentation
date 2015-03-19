@@ -7,8 +7,10 @@ tags: maniascript
 
 # Purpose
 This library is designed to allow players to customize their UI. There's two levels of customization :
-  * The UI created by the mode
-  * The default UI of the game
+
+* The UI created by the mode
+* The default UI of the game
+
 On one hand the mode creators can use the library to add customizable modules in the Manialinks. These modules can then be moved or hidden by the players.
 On the other hand the default UI of the game can only be hidden but not moved. By example this include the gauges at the bottom of the screen or the crosshair in ShootMania.
 Every change made on the UI is saved in the player's profile. So each time he will play the mode he'll have his custom settings.
@@ -24,13 +26,13 @@ As most of the other libraries there are a Load() and Unload() functions. They a
 
 If you start your mode now and press the F8 key, you will open the customization menu. But you'll only be able to customize the default UI of the game. You have to manually add all your custom modules with the `Add()` function to see them. It takes several parameters :
 
-  - (Text) The name of the module. This name must be unique to avoid that another script erase/overwrite your module configuration. A good practice would be to prefix your module name with the name of your mode. eg : MyModeName_MyModuleName.
-  - (Vec2) The default position of the module.
-  - (Vec2) The size of the module.
-  - (Text) The vertical alignment of the module. Can be "top", "center" or "bottom". Any other value will be converted to "center".
-  - (Text) The horizontal alignment of the module. Can be "left", "right" or "center". Any other value will be converted to "center".
-  - (Boolean) Is the module movable or not.
-  - (Boolean) Is the module hidable or not.
+* (Text) The name of the module. This name must be unique to avoid that another script erase/overwrite your module configuration. A good practice would be to prefix your module name with the name of your mode. eg : MyModeName_MyModuleName.
+* (Vec2) The default position of the module.
+* (Vec2) The size of the module.
+* (Text) The vertical alignment of the module. Can be "top", "center" or "bottom". Any other value will be converted to "center".
+* (Text) The horizontal alignment of the module. Can be "left", "right" or "center". Any other value will be converted to "center".
+* (Boolean) Is the module movable or not.
+* (Boolean) Is the module hidable or not.
 
 This function has two overloaded versions. One without the movable/hidable parameters and one without the alignment and movable/hidable parameters.
 
@@ -46,7 +48,7 @@ All you have to do is wrap your customizable content in a frame with the "LibCus
   * it doesn't have a script, then you can call the `InjectMLFullScript()` function,
   * it already have a script, so you have to use the `InjectMLInit()` and `InjectMLLoop()` functions.
 Example without a script :
-{% highlight xml %}
+{% highlight %}
 MyLayer.ManialinkPage = """
 <frame class="LibCustomUI_Module" id="MyModeName_Example">
   <label text="Im customizable!" scale="3" />
@@ -55,7 +57,7 @@ MyLayer.ManialinkPage = """
 """;
 {% endhighlight %}.
 Example with a script :
-{% highlight xml %}
+{% highlight %}
 <frame class="LibCustomUI_Module" id="MyModeName_Example">
   <label text="Im customizable!" scale="3" />
 </frame>
