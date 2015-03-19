@@ -48,7 +48,7 @@ All you have to do is wrap your customizable content in a frame with the "LibCus
   * it doesn't have a script, then you can call the `InjectMLFullScript()` function,
   * it already have a script, so you have to use the `InjectMLInit()` and `InjectMLLoop()` functions.
 Example without a script :
-{% highlight %}
+{% highlight javascript %}
 MyLayer.ManialinkPage = """
 <frame class="LibCustomUI_Module" id="MyModeName_Example">
   <label text="Im customizable!" scale="3" />
@@ -57,7 +57,7 @@ MyLayer.ManialinkPage = """
 """;
 {% endhighlight %}.
 Example with a script :
-{% highlight %}
+{% highlight javascript %}
 <frame class="LibCustomUI_Module" id="MyModeName_Example">
   <label text="Im customizable!" scale="3" />
 </frame>
