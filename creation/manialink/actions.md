@@ -26,6 +26,8 @@ In Script : `TriggerPageAction("enter")`
 * "menu_internet"
 * "menu_editors"
 * "menu_profile"
+* "menu_main"
+* "menu_group"
 
 
 ### In Title
@@ -38,6 +40,8 @@ In Script : `TriggerPageAction("enter")`
 * "menu_internet"
 * "menu_editors"
 * "menu_profile"
+* "menu_main"
+* "menu_group"
 
 
 ### In Browser
