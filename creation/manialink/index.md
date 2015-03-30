@@ -130,7 +130,7 @@ looping="0" signifie que la musique ne recommencera pas à la fin, sinon il faut
 
 ### Result
 
-![result](img/tutoriel_manialink.jpg)
+![result](img/Tutoriel_manialink.jpg)
 
 
 You can download all the file [here][6]
