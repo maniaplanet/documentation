@@ -283,14 +283,19 @@ tags:
 |**S_OffZoneAutoStartTime**|90|Time before auto activation of the tornado|
 |**S_OffZoneTimeLimit**|50|Tornado shrink duration|
 |**S_OffZoneMaxSpeed**|1.25|Maximum speed multiplier for the tornado|
+|**S_OffZoneSize**|1.|Initial size of the tornado|
 |**S_EndRoundTimeLimit**|60|Time limit after the tornado is completly shrunk|
 |**S_SpawnInterval**|5|Time between each wave of spawns|
 |**S_UseEarlyRespawn**|True|Allow early respawn|
 |**S_EndMapChatTime**|20|End map chat time|
 |**S_MultiClans**|True|Allow multi clans mode|
 |**S_MinPlayersNbPerClan**|3|Minimum number of players per clan|
+|**S_ReloadSpeed**|1.|Reload speed|
+|**S_StartingArmor**|3|Starting armor amount|
+|**S_ResetScoreLeavers**|False|Reset the score of the players that left the game|
+|**S_DisableWidgets**|False|Disable the UI widgets (tops and players remaining)|
 |**S_AllowBeginners**|False|Is a Beginners Welcome server|
-|**S_AutoManageAFK**|True|Switch inactive players to spectator mode|
+
 
 ## Royal Exp (+Royal)
 
