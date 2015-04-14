@@ -283,7 +283,7 @@ tags:
 |**S_OffZoneAutoStartTime**|90|Time before auto activation of the tornado|
 |**S_OffZoneTimeLimit**|50|Tornado shrink duration|
 |**S_OffZoneMaxSpeed**|1.25|Maximum speed multiplier for the tornado|
-|**S_OffZoneSize**|1.|Initial size of the tornado|
+|**S_OffZoneMinRadius**|16.|Final size of the tornado|
 |**S_EndRoundTimeLimit**|60|Time limit after the tornado is completly shrunk|
 |**S_SpawnInterval**|5|Time between each wave of spawns|
 |**S_UseEarlyRespawn**|True|Allow early respawn|
