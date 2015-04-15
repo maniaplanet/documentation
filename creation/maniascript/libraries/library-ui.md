@@ -71,3 +71,36 @@ To customize the UI, you have to trigger the UI_SetProperties XmlRpc method with
 {% endhighlight %}
 
 ## Shootmania
+
+{% highlight xml %}
+<!--
+  Each node in this file is optional and can be omitted.
+  If it's the case then the previous value will be kept.
+-->
+<ui_properties>
+  <!-- Notifications displayed on the left of the screen -->
+  <notices visible="true" />
+  <!-- The map name and author displayed on the top right of the screen when viewing the scores table -->
+  <map_info visible="true" />
+  <!-- 
+    The server chat displayed on the bottom right of the screen 
+    The offset values range from 0. to -3.2 for x and from 0. to 1.8 for y
+    The linecount property must be between 0 and 40
+  -->
+  <chat visible="true" offset="0. 0." linecount="5" />
+  <!-- Countdown displayed on the top of the screen -->
+  <countdown visible="true" pos="0. 85." />
+  <!-- Crosshair displayed on the center of the screen -->
+  <crosshair visible="true" />
+  <!-- Gauges displayed on the bottom of the screen -->
+  <gauges visible="true" />
+  <!-- Consumables displayed on the bottom of the screen -->
+  <consumables visible="true" />
+  <!-- 3, 2, 1, Go! message displayed on the middle of the screen when spawning -->
+  <go visible="true" />
+  <!-- The avatar of the last player speaking in the chat displayed above the chat -->
+  <chat_avatar visible="true" />
+  <!-- Ladder progression box displayed on the top of the screen at the end of the map -->
+  <endmap_ladder_recap visible="true" />
+</ui_properties>
+{% endhighlight %}
