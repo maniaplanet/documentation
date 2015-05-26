@@ -26,6 +26,8 @@ tags:
 |**S_LobbyMatchmakerTime**|8|Duration (in seconds) of the matchmaking function. It allows the players to see who they will play their match with or cancel it if necessary.|
 |**S_LobbyInstagib**|0|Use the Laser instead of the Rocket in the lobby.|
 |**S_LobbyDisplayMasters**|1|Display a list of Masters players in the lobby.|
+|**S_LobbyDisableUI**|0|Disable the lobby UI.|
+|**S_KickTimedOutPlayers**|1|Kick timed out players.|
 |**S_MatchmakingErrorMessage**|An error occured in the matchmaking API. If the problem persist please try to contact this server administrator.|This message is displayed in the chat to inform the players that an error occured in the matchmaking system.|
 |**S_MatchmakingLogAPIError**|0|Log the API errors. You can activate it if something doesn't work and you have to investigate. Otherwise it's better to leave it turned off because this can quickly write huge log files.|
 |**S_MatchmakingLogAPIDebug**|0|Same as above, only turn it on if necessary.|
