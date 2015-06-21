@@ -9,7 +9,7 @@ tags:
 
 ManiaLinks are the "web pages" of ManiaPlanet.
 
-ManiaLinks also refer to a short alias for a web page (like a domain name) in ManiaPlanet. You can register for one on the [on the PlayerPage][1]. 
+ManiaLinks also refer to a short alias for a web page (like a domain name) in ManiaPlanet. You can register for one on [your PlayerPage][1]. 
 
 * [Dedicated server manialinks][2]
 * [Manialink actions][3]
@@ -27,52 +27,52 @@ ManiaLinks are basically XML files, that describe what you see on the screen.
 {% endhighlight %}
 
 
-This allow to tell which version of the xml that we use and the encoding format. In ManiaPlanet, we use UTF-8 because it allows to take into consideration specials characters.
+The following line defines the properties of the xml that we use and its encoding format. In ManiaPlanet, we use UTF-8 because it allows the use of special characters.
 {% highlight xml %}
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 {% endhighlight %}
 
 
-This means that we begin a ManiaLink page with the version 2. The version 1 fit with ManiaPlanet convention.  The version 1 is the one used from Maniaplanet 1 to Maniaplanet 3 updates, the version 2 add several improvements like stylesheets. In the next part of this tutorial, we will use only the version 2.
+This line defines the beginning of our ManiaLink, with the version 2. The version 1 fit with ManiaPlanet convention. Version 1 is the one used from Maniaplanet 1 to Maniaplanet 3 updates, while version 2 adds several improvements like stylesheets. In the next part of this tutorial, we will only use version 2.
 {% highlight xml %}
 <manialink version="2">
 {% endhighlight %}
 
 
-This line allow to write a text. In that case, it'll be written Hello World. As there is no parameters added in this line, the text wil lbe centered in height and the letter "H" will be centered on the width.
+This line creates a simple label. In this case, the label will say "Hello World!". As there are no parameters added in this line, the text will be centered in height, and the letter "H" will be centered on the width.
 {% highlight xml %}<label text="Hello World!" />{% endhighlight %}
 
 
-This means that we'll finish our ManiaLink page.{% highlight xml %}</manialink>{% endhighlight %}
+This last line ends the definition of our ManiaLink page.
+{% highlight xml %}</manialink>{% endhighlight %}
 
 
 ## The coordinates
-Let see now the cooordinates to place the elements on our page.
+Let's look at the cooordinates to place the elements on our page.
 
+Version 1 and 2 of ManiaLink are made to fit on 16:9 screens. The coordinates in X go from -160 to 160, in Y from -90 to 90 and on Z from -75 to 75.
 
-The version 1 and 2 of Manialink are here to fit on 16:9 screens. The coordinates in X go to -160 to 160, in Y to -90 to 90 and on Z to -75 to 75.
+To place an element, you have to only add `posn="X Y Z"` as an attribute. X, Y and Z are the coordinates on X, Y and Z.
 
-To place an element, you have only to add posn="X Y Z" in a marker. X, Y and Z are the coordinates on X, Y and Z.
+For the size of an element, you have to only add `sizen="X Y"` as an attribute. X and Y are the size on X and on Y.
 
-For the size of a element, you have only to add sizen="X Y" in a marker. X and Y are the size on X and on Y.
-
-It's possible to align an element to related to the coordinates given with <halign> in horizontal or <vhalign> in vertical and in adding either center, left, right for halign and top, center,bottom for vhalign. this can be useful for texts and then to center them in a block.
+It's possible to align an element relative to the coordinates given with `halign` in horizontal, or `vhalign` in vertical and in adding either `center`, `left`, `right` for halign, or `top`, `center`, `bottom` for vhalign. This is useful for align texts in blocks.
 
 It is advisable to use the new standard in ManiaPlanet.
 
 ## The common tags
 
-**<quad>** : allow to insert an element as a picture, a block with a background or a ManiaPlanet element which are available on the ManiaLink "exemple".
+**\<quad\>** : allows to insert an element as a picture, a block with a background, or a ManiaPlanet element which is available on the ManiaLink `exemple`.
 
-In our example, we display a rectangle of 10x10 with a blue background. For the color code, this is in hexadecimal, this is working like the username in the game and the fourth character match with 0 without transparency and F entirely transparent.
+In the following example, we display a rectangle of 10x10 with a blue background. The color code is hexadecimal, which - unlike the color codes in player names - also has a 4th transparency value, where `F` is fully visible, and `0` is fully transparent.
 {% highlight xml %}
 <quad posn="-10 0 0" sizen="10 10" bgcolor="00FA" />
 {% endhighlight %}
 
 
-**<frame>** : a frame is a set of elements that we stick together with the tag <frame>. A frame is a non-visible element but we can move the ensemble of the frame at the same time, which will allow to earn some time to place the elements to one from each other.
+**\<frame\>** : a frame is a set of elements that we group together with the tag `\<frame\>`. A frame is a non-visible element, but we can move the ensemble of the frame, which allows you to move a whole set of elements at once.
 
-In our example, the first quad is placed at the location X=10, Y=10 et Z=0. The second one is placed at X=-10, Y=0 and Z=0 in comparaison to the frame, so en X=0, Y=10 abd Z=0 in absolute position.
+In the following example, the first quad is placed at the location X=10, Y=10, Z=0. The second one is placed at X=-10, Y=0, Z=0, relative to the frame, so on X=0, Y=10 and Z=0 in absolute position.
 {% highlight xml %}
 <frame posn="10 10 0">
 <quad sizen="10 10" bgcolor="F00A" />
@@ -81,23 +81,22 @@ In our example, the first quad is placed at the location X=10, Y=10 et Z=0. The 
 {% endhighlight %}
 
 
-**<label>** : allow to display text with differents styles which are available on the ManiaLink « exemple ».
+**\<label\>** : allow to display text with differents styles which are available on the ManiaLink `exemple`.
 
 
-**<audio>** : allow to put an audio file on a ManiaLink with a button or to stop the music. play="1" means that the song will be loaded, else to have to put 0.
-looping="0" signifie que la musique ne recommencera pas à la fin, sinon il faut mettre 1.
+**\<audio\>** : allow to put an audio file on a ManiaLink with a button to stop the audio. `play="1"` means that the audio will autoplay. `looping="0"` makes the audio stop when it's finished, instead of looping.
 {% highlight xml %}
 <audio data="./audio.ogg" play="1" looping="0" />
 {% endhighlight %}
 
 
-**<music>** : allow to put an audio file but without that the visitor can lstart or stop the music, it will be launched automatically in background after the loading. Only ogg files or mux are accepted. The line must be outside of <frame>.
+**\<music\>** : allow to put an audio file but without buttons for starting or stopping the audio, which will play automatically in the background after loading. Only ogg files or mux are supported. The line must be outside of `\<frame\>`.
 {% highlight xml %}
 <music data="./music.ogg" />
 {% endhighlight %}
 
 
-**<include>** : allow to insert a xml file.
+**\<include\>** : insert another xml file.
 {% highlight xml %}
 <include url="./page.xml" />
 {% endhighlight %}
@@ -133,7 +132,7 @@ looping="0" signifie que la musique ne recommencera pas à la fin, sinon il faut
 ![result](img/Tutoriel_manialink.jpg)
 
 
-You can download all the file [here][6]
+You can download all the files [here][6].
 
 [1]: https://player.maniaplanet.com/advanced/manialinks
 [2]: server.html
