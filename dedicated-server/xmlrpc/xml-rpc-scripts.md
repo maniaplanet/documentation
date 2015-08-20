@@ -999,6 +999,11 @@ The login, rank, best checkpoints, team id, spectator status, away status, best 
 * Example : ["login1:12654", "login19:15684", "login48:25964", "login7:-1"]
 * Note : The login and the best time of the players are separated by a colon. This callback is sent when the script receives the `LibXmlRpc_GetPlayersTimes` trigger.
 
+#### LibXmlRpc_Scores
+* Data : An array with the match and map scores in team modes
+* Example : ["1", "0", "5", "6"]
+* Note : ["MatchScoreClan1", "MatchScoreClan2", "MapScoreClan1", "MapScoreClan2"]
+
 #### LibXmlRpc_TeamsScores
 * Data : An array with the current and total scores of the teams.
 * Example : ["1", "5", "2", "5"]
