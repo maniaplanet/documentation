@@ -13,6 +13,7 @@ url:              http://www.maniaplanet.com
 baseurl:          '/'
 paginate:         5
 docurl:           http://doc.maniaplanet.com
+exclude:          [vendor]
 
 author:
   name:           'Nadeo'
