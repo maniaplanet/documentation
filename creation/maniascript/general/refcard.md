@@ -9,10 +9,10 @@ tags:
 
 If you are already used to programming, this should be useful.
 
-Maniascript Types
+ManiaScript Types
 =====
 
-Language primitive types are :
+Language primary types are:
 
 <table>
 <tr><td>Boolean</td></tr>
@@ -26,9 +26,9 @@ Language primitive types are :
 </tr>
 </table>
 
-The other types, known as Classes, are composite types whose name start with a 'C'. CSmPlayer, CManialinkLabel, etc...
+The other types, known as Classes, are composite types whose name start with a 'C'. CSmPlayer, CMlLabel, etc...
 
-Maniascript Values
+ManiaScript Values
 =====
 
 Language constant values are :
@@ -47,7 +47,7 @@ Language constant values are :
 </tr>
 </table>
 
-You can not create your own Ident or Class values, however many API functions return such values, and you can store them or use them like other Maniascript variables
+You can not create your own Ident or Class values, however many API functions return such values, and you can store them or use them like other ManiaScript variables
 
 See more [here...](./values.html)
 
@@ -63,10 +63,13 @@ Mathematical operators:
 <td>-</td><td>substract value</td>
 </tr>
 <tr>
-<td>* </td><td> multiply value</td>
+<td>*</td><td>multiply value</td>
 </tr>
 <tr>
-<td>/  </td><td> divide value</td>
+<td>/</td><td>divide value</td>
+</tr>
+<tr>
+<td>%</td><td>remainder of value divison</td>
 </tr>
 </table>
 
@@ -90,8 +93,8 @@ Comparison operators:
 
 Incremention operators:
 <table>
-<tr><td>+= </td><td>add value to current</td></tr>
-<tr><td>-=  </td><td>substract value from current </td></tr>
-<tr><td>*=  </td><td>multiply current value</td></tr>
-<tr><td>/=  </td><td>divide current value</td></tr>
+<tr><td>+=</td><td>add value to current</td></tr>
+<tr><td>-=</td><td>substract value from current </td></tr>
+<tr><td>*=</td><td>multiply current value</td></tr>
+<tr><td>/=</td><td>divide current value</td></tr>
 <table>
