@@ -11,42 +11,43 @@ tags:
 
 * ManiaScript files MUST use **LF** line ending.
 * ManiaScript files MUST use UTF-8 encoding without BOM.
-* ManiaScript files names MUST use CamelCase.
-* ManiaScript files extension MUST be `.Script.txt`
+* ManiaScript files names MUST use PascalCase.
+* ManiaScript files format MUST be `.Script.txt`
 
 ## Settings
 
-* Settings names MUST be prefixed by `S_`
-* ALL settings MUST use CamelCase.
+* Settings names **should** be prefixed by `S_`
+* ALL settings **should** use PascalCase.
 
 ## Constants
 
-* Constants names MUST be prefixed by `C_`
-* ALL constants MUST use CamelCase.
+* Constants names **should** be prefixed by `C_`
+* ALL constants **should** use PascalCase.
 
 ## Variables
 
-* Globals variables names MUST be prefixed by `G_`
-* ALL variables MUST use CamelCase.
-* Variables declared `for` something MUST be prefixed to avoid name collision.
-* `netwrite` and `netread` variable MUST be prefixed by `Net_`
+* Globals variables names **should** be prefixed by `G_`
+* ALL variables **should** use PascalCase.
+* Variables declared `for` something **should** be prefixed to avoid name collision.
+* `netwrite` and `netread` variables **should** be prefixed by `Net_`
+* `persistent` variables **should** be prefixed by `Persistent_`
 
 ## Functions
 
-* Functions argument MUST start with an underscore (_) and start with upper case. 
-* Opening braces for functions MUST go on the same line, and closing braces MUST go on the next line after the body.
-* Private function MUST be prefixed by `Private_`
+* Functions argument **should start with an underscore (_) and start with upper case to avoid name collision. 
+* Opening braces for functions **should** go on the same line, and closing braces **should** go on the next line after the body.
+* Private function **should** be prefixed by `Private_`
 
 ## Control structures
 
 Control structures are: if, else if, else, switch, while, foreach, for.
 
-* There MUST be one space after the control structure keyword
-* There MUST NOT be a space after the opening parenthesis
-* There MUST NOT be a space before the closing parenthesis
-* There MUST be one space between the closing parenthesis and the opening brace
-* The structure body MUST be indented once
-* The closing brace MUST be on the next line after the body
+* There **should** be one space after the control structure keyword.
+* There **shouldn't** be a space after the opening parenthesis.
+* There **shouldn't** be a space before the closing parenthesis.
+* There **should** be one space between the closing parenthesis and the opening brace.
+* The structure body **should** be indented once.
+* The closing brace **should** be on the next line after the body.
 
 ## Example, file LibFoo.Script.txt
 
