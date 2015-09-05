@@ -9,10 +9,10 @@ tags:
 
 ## File
 
-* ManiaScript files MUST use **LF** line ending.
-* ManiaScript files MUST use UTF-8 encoding without BOM.
-* ManiaScript files names MUST use PascalCase.
-* ManiaScript files format MUST be `.Script.txt`
+* ManiaScript files **MUST** use **LF** line ending.
+* ManiaScript files **MUST** use UTF-8 encoding without BOM.
+* ManiaScript files names **MUST** use PascalCase.
+* ManiaScript files format **MUST** be `.Script.txt`
 
 ## Settings
 
@@ -34,7 +34,7 @@ tags:
 
 ## Functions
 
-* Functions argument **should start with an underscore (_) and start with upper case to avoid name collision. 
+* Functions argument **should** start with an underscore (_) and start with upper case to avoid name collision. 
 * Opening braces for functions **should** go on the same line, and closing braces **should** go on the next line after the body.
 * Private function **should** be prefixed by `Private_`
 
