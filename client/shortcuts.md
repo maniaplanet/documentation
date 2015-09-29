@@ -109,6 +109,7 @@ tags: client
 * Space (or Left mouse button): places selected block type at the cursor position
 * Right Ctrl (or Right mouse button) : rotates block selection
 * Left Ctrl : Record or Playback Editors input replay (on New Map selection)
+* TAB : hide / show block selection menus
 
 ### Terraforming
 
