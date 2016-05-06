@@ -107,15 +107,15 @@ In the following example, the first quad is placed at the location X=10, Y=10, Z
 ### Content of the file example.xml
 
 {% highlight xml %}
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <manialink version="2">
 <include url="./background.xml"/>
-<quad posn="-80 45 1" sizen="160 90" style="Bgs1" substyle="BgWindow" />
-<quad posn="-70 44 2" sizen="140 12" style="Bgs1" substyle="BgWindow2" />
-<label posn="0 40 3" halign="center" text="$w$f00Bienvenue sur notre page de test" />
-<label posn="0 30 2" halign="center" text="$h[Exemple]Voici un lien manialink$h" />
-<label posn="0 20 2" halign="center" text="$l[www.maniaplanet.com]Voici un lien url vers le site www.maniaplanet.com$l" />
-<label posn="0 0 2" halign="center" style="CardButtonMedium" text="Maniacode" manialink="Lien vers un maniacode" />
+<quad posn="-80 45 1" sizen="160 90" style="Bgs1" substyle="BgWindow"/>
+<quad posn="-70 44 2" sizen="140 12" style="Bgs1" substyle="BgWindow2"/>
+<label posn="0 40 3" halign="center" textcolor="F00" text="$wWelcome to our test page"/>
+<label posn="0 30 2" halign="center" text="$h[Exemple]Link to a ManiaLink"/>
+<label posn="0 20 2" halign="center" text="$l[www.maniaplanet.com]Link tou our homepage www.maniaplanet.com"/>
+<label posn="0 0 2" halign="center" style="CardButtonMedium" text="Maniacode" manialink="Link inside ManiaCode"/>
 </manialink>
 {% endhighlight %}
 

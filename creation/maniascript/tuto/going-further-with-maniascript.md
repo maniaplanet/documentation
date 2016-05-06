@@ -15,10 +15,9 @@ It's possible to customize the parameters of a player when you spawn him (or whi
 Instead of calling the function `SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId]);`, we'll create our own function to call to spawn of player.
 
 {% highlight cpp %}
-Void VSpawnPlayer(CSmPlayer _Player)
-{
+Void VSpawnPlayer(CSmPlayer _Player) {
 	_Player.ArmorMax 		= 400;
-	_Player.Armor 			= 400;
+	_Player.Armor 			= _Player.ArmorMax;
 	_Player.ArmorGain 		= 0;
 	_Player.AmmoGain 		= 1.;
 	_Player.AmmoPower 		= 1.;
@@ -28,7 +27,7 @@ Void VSpawnPlayer(CSmPlayer _Player)
 	_Player.StaminaGain 	= 1.;
 	_Player.StaminaPower 	= 1.;
 	SetPlayerWeapon(_Player, CSmMode::EWeapon::Rocket, False);
-	SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId], Now + 50);
+	SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[0].PlayerSpawn, Now + 50);
 	SetPlayerAmmoMax(_Player, CSmMode::EWeapon::Rocket, 4);
 	SetPlayerAmmo(_Player, CSmMode::EWeapon::Rocket, 4);
 }
@@ -36,12 +35,11 @@ Void VSpawnPlayer(CSmPlayer _Player)
 All the usable parameters are listed in the `CSmPlayer` class (check the technical documentation about it).
 
 # Spawning a bot
-Spawning a bot is almost the same as spawning a player. The difference is that you have to put a BotPath on the map where the bot must be spawned.
+Spawning a bot is almost the same as spawning a player. The difference is that you also use a BotPath on the map where the bot can be spawned.
 You can differentiate bot from another by modifying their `kind` in the map editor (with a value between 0 and 10). In the script, you'll find them like this:
 
 {% highlight cpp %}
-foreach(Spawn in MapLandmarks_BotPath)
-{
+foreach (Spawn in MapLandmarks_BotPath) {
 	if (Spawn.BotPath.Clan == _BotClass) VSpawnBot(Spawn);
 }
 {% endhighlight %}
@@ -55,7 +53,7 @@ You mainly have two functions for displaying a message to the players (all of th
 The first one is with SendBigMessage which will display... well a big message at the top center of the player screen. The instruction is:
 
 {% highlight cpp %}
-Message::SendBigMessage(TextLib::Compose("""$<%1$> has scored!""", _Player.Name), 3000, 10);
+Message::SendBigMessage(TextLib::Compose("$<%1$> has scored!", _Player.Name), 3000, 10);
 {% endhighlight %}
 
 `Message` is the call for the library declared before at the beginning of the script. We ask the script to call the function `SendBigMessage` of the `Message` library.
@@ -65,13 +63,13 @@ In the example above, the first argument is the text to display. Thanks to the `
 You can specify a receiver if you indicate a CSmPlayer variable as first argument of the `SendBigMessage` function like this:
 
 {% highlight cpp %}
-Message::SendBigMessage(ReceiverPlayer, TextLib::Compose("""$<%1$> has scored!""", _Player.Name), 3000, 10);
+Message::SendBigMessage(ReceiverPlayer, TextLib::Compose("$<%1$> has scored!", _Player.Name), 3000, 10);
 {% endhighlight %}
 
 Else there is another function to display messages, smaller ones, on the HUD, by using the function `SendStatusMessage`:
 
 {% highlight cpp %}
-Message::SendStatusMessage(TextLib::Compose("""$<%1$> has scored!""", _Player.Name), 3000, 10);
+Message::SendStatusMessage(TextLib::Compose("$<%1$> has scored!", _Player.Name), 3000, 10);
 {% endhighlight %}
 
 It works like `SendBigMessage`.
@@ -84,10 +82,13 @@ First you must reset the progression of the pole (to prevent to have a half-capt
 {% highlight cpp %}
 ***StartRound***
 ***
-foreach(Pole in BlockPoles) {
-	Pole.Gauge.Value = 0;
-	Pole.Gauge.Max = S_CaptureMaxValue;
-	Pole.Captured = False;
+foreach (MapLandmark in MapLandmarks_Gauge) {
+	if (MapLandmark.Gate != Null) continue;
+	
+	MapLandmark.Gauge.Value = 0;
+	MapLandmark.Gauge.Max = S_CaptureMaxValue;
+	MapLandmark.Gauge.Speed = 1;
+	MapLandmark.Gauge.Captured = False;
 }
 ***
 {% endhighlight %}
@@ -95,29 +96,24 @@ foreach(Pole in BlockPoles) {
 Then you have to manage the pole during the `Playloop`:
 
 {% highlight cpp %}
-foreach(Pole in BlockPoles) {
-	foreach(PlayerId in Pole.Sector.PlayersIds) {
-		declare Player <=> Players[PlayerId];
-		if(Player == Null) {
-			continue;
-		} else {
-			Pole.Gauge.Speed = 1;
-			Pole.Gauge.Max = 3000;
-			Pole.Captured = True;
-
-			if (Pole.Gauge.Value == Pole.Gauge.Max) {
-				Player.Score.Points += 1;
-
-				MB_StopRound = True;
-				Message::SendBigMessage(TextLib::Compose("$<%1$> has loaded the Pole!", Player.Name), 4000, 10);
-				break;
-			}
+foreach (MapLandmark in MapLandmarks_Gauge) {
+	if (MapLandmark.Gate != Null) continue;
+	
+	foreach (PlayerId in MapLandmark.Sector.PlayersIds) {
+		declare Player <=> AlPlayers[PlayerId];
+		if (Player == Null) continue;
+		
+		if (Pole.Gauge.Value == Pole.Gauge.Max) {
+			MapLandmark.Gauge.Captured = True;
+			Score::AddPoints(Player, 1);
+			MB_StopRound = True;
+			Message::SendBigMessage(TextLib::Compose("$<%1$> has loaded the Pole!", Player.Name), 4000, 10);
 		}
 	}
-	if (Pole.Sector.PlayersIds.count == 0) {
-		Pole.Gauge.Speed = 0;
-		Pole.Gauge.Value = 0;
-		Pole.Captured = False;
+	
+	if (MapLandmark.Sector.PlayersIds.count == 0) {
+		MapLandmark.Gauge.Speed = 0;
+		MapLandmark.Gauge.Captured = False;
 	}
 }
 {% endhighlight %}
@@ -158,12 +154,11 @@ To spawn it on the world, you must check all the anchors of the map and spawn th
 To spawn it with this method, you can do the following:
 
 {% highlight cpp %}
-declare CSmObjectAnchor AnObjectAnchor;
-foreach(Anchor in ObjectAnchors) {
-	if(Anchor.Tag == "NameOfTheAnchor") {
-		AnObject.SetAnchor(Anchor);
-		AnObjectAnchor = Anchor;
-		break;
+declare CSmMapObjectAnchor AnObjectAnchor;
+foreach (MapLandmark in MapLandmarks_ObjectAnchor) {
+	if (MapLandmark.Tag == "NameOfTheAnchor") {
+		AnObject.SetAnchor(MapLandmark.ObjectAnchor);
+		AnObjectAnchor = MapLandmark.ObjectAnchor;
 	}
 }
 {% endhighlight %}
@@ -177,7 +172,7 @@ AnObject.SetPlayer(_Player);
 In this way the object will be carried by the specified player. You'll be able to find the object located on a player by listing his objects with:
 
 {% highlight cpp %}
-aPlayer.Objects[];
+Player.Objects[];
 {% endhighlight %}
 
 # Drop an object from a player
@@ -185,14 +180,14 @@ For your mode you'll maybe have to drop a dynamic object (like a ball for exampl
 
 {% highlight cpp %}
 Void DropObject(CSmPlayer _Shooter, CSmPlayer _Victim) {
-	if(_Victim.Objects.count <= 0) return;
+	if (_Victim.Objects.count <= 0) return;
 
 	declare CSmObject VictimItem = _Victim.Objects[0];
-	if(VictimItem != Null) {
+	if (VictimItem != Null) {
 		declare Vec3 Pos;
 		declare Vec3 Vel;
 
-		if(_Shooter != Null) {
+		if (_Shooter != Null) {
 			Pos = _Victim.Position + <0., 3., 0.>;
 			Vel = _Shooter.Position - _Victim.Position;
 			declare Real DropForce = 5.;
@@ -253,14 +248,19 @@ Please note also the parameters can be altered by the creator of the action (if 
 Here is an example on how to manage the event of an action:
 
 {% highlight cpp %}
-} else if (Event.Type == CSmModeEvent::EType::OnActionCustomEvent) {
-	if(Event.Param1 == "fire" && Event.Shooter != Null){
+if (Event.Type == CSmModeEvent::EType::OnActionCustomEvent) {
+	// On shoot
+	if (Event.Param1 == "fire" && Event.Shooter != Null) {
 		log("The Player has fired");
-
 		PassOn(Event);
-	} else if(Event.Param1 == "damage" && Event.Shooter != Null && Event.Victim != Null && Event.Victim != Event.Shooter) {
-		Event.Victim.Armor -= TextLib::ToInteger(Event.Param2[0]);
-
+	}
+	// On player hit
+	else if (Event.Param1 == "damage" && Event.Victim != Null && Event.Victim != Event.Shooter) {
+		declare EventDamage = TextLib::ToInteger(Event.Param2[0]);
+		declare Points = EventDamage / 100;
+		RemovePlayerArmor(Event.Victim, EventDamage, Event.Shooter, Points);
+		Score::AddPoints(Event.Shooter, Points);
+		
 		PassOn(Event);
 	}
 }
@@ -274,19 +274,16 @@ It's possible to write some Manialink code in your script. This is useful when y
 If you want to do so, you first have to create a text variable which will contain the manialink and then treat the manialink:
 
 {% highlight cpp %}
-declare Text MLText = "<label posn="0 0 0" text="This is an example" />";
+declare Text MLText = "<label posn="0 0 0" text="This is an example"/>";
 
-declare Layer <=> Layers::Get("ExampleUI");
-if(Layer == Null) Layer::Create("ExampleUI", MLText);
-
-Layer <=> Layers::Get("ExampleUI");
-Layer.Type = CUILayer::EUILayerType::Normal;
+Layers::Create("ExampleUI", MLText);
+Layers::SetType("ExampleUI", CUILayer::EUILayerType::Normal);
 Layers::Attach("ExampleUI", Player);
 {% endhighlight %}
 
 In the example, once you have stocked your manialink in the text variable, you check if a layer (of the UI) already has the desired name for the layer. If not, we create it and then we specify the type of the layer and we attach it to the UI of the player.
 
-> **Tip:** You can add a multilines content text variable by using the delimiter `"""` instead of `""`. By doing this you can write on 10 lines with the formatting and then indicate the end of the content to add in the variable.
+> **Tip:** You can add a multilines content text variable by using the delimiter `"""` instead of `""`. By doing this you can write on multiple lines with the formatting and then indicate the end of the content to add in the variable.
 
 At the end of the round (or the map), I recommend to destroy all the layers to avoid redundant information on the screen of the player. To destroy the layers, you must use this instruction directly in the script:
 
@@ -304,22 +301,22 @@ First to use some ManiaScript in your Manialink, you have to write the ManiaScri
 {% highlight cpp %}
 Text MyManialink() {
 	declare Text MLText = """
-		<quad id="aQuad" posn="0 0 0" sizen="360 180" halign="center" image="./Media/Manialinks/MyImage.dds" />
+		<quad id="aQuad" posn="0 0 0" sizen="360 180" halign="center" image="file://Media/Manialinks/MyImage.dds"/>
 		<script><!--
 		main() {
 			declare Integer aVar = 0;
 
-			declare aQuad	 		<=> (Page.GetFirstChild("aQuad") 		as CMlQuad);
+			declare aQuad <=> (Page.GetFirstChild("aQuad") as CMlQuad);
 
 			aQuad.Show();
 
-			while(True) {
+			while (True) {
 				yield;
 
 				// EVENT
-				foreach(Event in PendingEvents) {
-					if(Event.Type == CMlEvent::Type::MouseClick) {
-						if(Event.ControlId == "aQuad") {
+				foreach (Event in PendingEvents) {
+					if (Event.Type == CMlEvent::Type::MouseClick) {
+						if (Event.ControlId == "aQuad") {
 							log("I clicked on a quad");
 					}
 				}
@@ -329,19 +326,18 @@ Text MyManialink() {
 	""";
 
 	Layers::Create("ExampleUI", MLText);
-	declare Layer <=> Layers::Get("ExampleUI");
-	Layer.Type = CUILayer::EUILayerType::Normal;
-    Layers::Attach("ExampleUI", Player);
+	Layers::SetType("ExampleUI", CUILayer::EUILayerType::Normal;
+	Layers::Attach("ExampleUI", Player);
 }
 {% endhighlight %}
 
-In this example you can see how the ManiaScript works in the Manialink. Once you've written your ManiaLink you can start writing your script between the tag `<script><!-- //code --></script>`. In this portion of code you can use the ManiaScript present in the `CSmMIScriptIngame`, `CMlControl` and `CMlPage` classes.
+In this example you can see how the ManiaScript works in the Manialink. Once you've written your ManiaLink you can start writing your script between the tag `<script><!-- //code --></script>`. In this portion of code you can use the ManiaScript present in the `CSmMlScriptIngame`, `CMlControl` and `CMlPage` classes.
 
 Note that you can check several events like the different sort of clicks of the mouse on the elements (like Quad, Label, Gauge, etc).
 
 If you want the script to run during the whole time it's attached to the UI of the player, you should put your code in a loop. Otherwise the code will be executed only at the very moment when the layer is attached.
 
-> **Tip:** Note that GUIPlayer in `CSmMIScriptIngame` is very useful because you have access to the attributes of the CSmPlayer attributes with it.
+> **Tip:** Note that GUIPlayer in `CSmMlScriptIngame` is very useful because you have access to the attributes of the CSmPlayer attributes with it.
 >
 > **Tip:** You call variables from the main script if you surround the name of the variable with triple curly brackets like this: `{{{S_PointLimit}}}`. But with this method you can't manipulate them (like doing calculation, modification). See below to know how to do it properly.
 
@@ -351,7 +347,7 @@ First you need to know that the script of the gamemode and the manialink inside 
 It works like an "input/output" system in simple language. In a logic sense, you must create first an "output" variable, symbolized with the parameter `netwrite` in ManiaScript. This parameter tell that the variable will register/put a value to send to the other layer (the script or the manialink):
 
 {% highlight cpp %}
-declare netwrite Integer Srv_MyVariable for UI;
+declare netwrite Integer Net_MyVariable for UI;
 {% endhighlight %}
 
 The "for UI" means that the variable is adressed to a specific player (first you have to retrieve the UI of the player with the instruction `declare UI <=> UIManager.GetUI(Player);`).
@@ -363,7 +359,7 @@ The "for UI" means that the variable is adressed to a specific player (first you
 You have to create an "input" variable on the side where you will receive the value of the other part (for example from the script to the variable) with the `netread` parameter between the declaration and the type of the variable:
 
 {% highlight cpp %}
-declare netread Integer Srv_MyReadVariable for UI;
+declare netread Integer Net_MyReadVariable for UI;
 {% endhighlight %}
 
 > **Note:** You can't name a netread/netwrite variable with the same name of an existing "standard" variable (name conflict)
@@ -412,21 +408,25 @@ ST2::Build("SM");
 
 ***StartMap***
 ***
+Score::MatchBegin();
+Score::RoundBegin();
+
 G_SpawnsList.clear();
 G_LatestSpawnId = NullId;
+
 // ---------------------------------- //
 // Init bases
-foreach (Base in Bases) {
-    Base.Clan = 0;
-    Base.IsActive = True;
+foreach (Base in MapBases) {
+	Base.Clan = 0;
+	Base.IsActive = True;
 }
 
 // ---------------------------------- //
 // Init scores
 MB_Sleep(1); ///< Allow the scores array to be sorted
 foreach (Score in Scores) {
-    declare Integer LastPoint for Score;
-    LastPoint = 0;
+	declare Integer LastPoint for Score;
+	LastPoint = 0;
 }
 
 declare LeadId = NullId;
@@ -435,6 +435,7 @@ if (Scores.existskey(0)) LeadId = Scores[0].User.Id;
 declare CurrentPointLimit = S_PointLimit;
 
 // ---------------------------------- //
+// Start game
 StartTime = Now;
 EndTime = StartTime + (S_TimeLimit * 1000);
 UIManager.UIAll.UISequence = CUIConfig::EUISequence::Playing;
@@ -442,56 +443,49 @@ UIManager.UIAll.UISequence = CUIConfig::EUISequence::Playing;
 
 ***StartRound***
 ***
-foreach(Player in Players){
-    declare UI <=> UIManager.GetUI(Player);
-    declare netwrite Integer Net_Points for UI;
-    Net_Points = 0;
+foreach (Player in Players){
+	declare UI <=> UIManager.GetUI(Player);
+	declare netwrite Integer Net_Points for UI;
+	Net_Points = 0;
 }
 ***
 
 ***PlayLoop***
 ***
-foreach (Event, PendingEvents) {
-    // ---------------------------------- //
-    // On armor empty
-    if (Event.Type == CSmModeEvent::EType::OnArmorEmpty) {
-        if (Event.Shooter == Null) {
-            Event.Victim.Score.Points -= 1;
-        } else {
-            Event.Shooter.Score.Points += 1;
+foreach (Event in PendingEvents) {
+	// ---------------------------------- //
+	// On armor empty
+	if (Event.Type == CSmModeEvent::EType::OnArmorEmpty) {
+		if (Event.Shooter == Null) Score::RemovePoints(Event.Victim, 1);
+		
+			Event.Shooter.Score.Points += 1;
             declare UI <=> UIManager.GetUI(Event.Shooter);
             declare netwrite Integer Net_Points for UI;
             Net_Points = Event.Shooter.Score.Points;
         }
-        XmlRpc::OnArmorEmpty(Event);
-        PassOn(Event);
-    }
-
-    // ---------------------------------- //
-    // On hit
-    else if (Event.Type == CSmModeEvent::EType::OnHit) {
-        if (Event.Shooter == Event.Victim) {
-            Discard(Event);
-        } else {
-            Event.Victim.Armor -= Event.Damage;
-            XmlRpc::OnHit(Event);
-            PassOn(Event);
-        }
-    }
-
-    // ---------------------------------- //
-    // On player request respawn
-    else if (Event.Type == CSmModeEvent::EType::OnPlayerRequestRespawn) {
-        Event.Player.Score.Points -= 1;
-        XmlRpc::OnPlayerRequestRespawn(Event);
-        PassOn(Event);
-    }
-
-    // ---------------------------------- //
-    // Others
-    else {
-        PassOn(Event);
-    }
+		XmlRpc::OnArmorEmpty(Event);
+		PassOn(Event);
+	}
+	// ---------------------------------- //
+	// On hit
+	else if (Event.Type == CSmModeEvent::EType::OnHit) {
+		if (Event.Victim == Null || Event.Shooter == Event.Victim) {
+			Discard(Event);
+		} else {
+			XmlRpc::OnHit(Event);
+			PassOn(Event);
+		}
+	}
+	// ---------------------------------- //
+	// On player request respawn
+	else if (Event.Type == CSmModeEvent::EType::OnPlayerRequestRespawn) {
+		Score::RemovePoints(Event.Player, 1);
+		XmlRpc::OnPlayerRequestRespawn(Event);
+		PassOn(Event);
+	}
+	// ---------------------------------- //
+	// Others
+	else PassOn(Event);
 }
 
 // ---------------------------------- //
@@ -505,8 +499,8 @@ foreach (Player in Players) {
 // ---------------------------------- //
 // Play sound and notice if someone is taking the lead
 if (Scores.existskey(0) && Scores[0].User.Id != LeadId) {
-    LeadId = Scores[0].User.Id;
-    Message::SendBigMessage(TextLib::Compose(_("$<%1$> takes the lead!"), Scores[0].User.Name), 3000, 1, CUIConfig::EUISound::PhaseChange, 1);
+	LeadId = Scores[0].User.Id;
+	Message::SendBigMessage(TextLib::Compose(_("$<%1$> takes the lead!"), Scores[0].User.Name), 3000, 1, CUIConfig::EUISound::PhaseChange, 1);
 }
 
 // ---------------------------------- //
@@ -514,9 +508,8 @@ if (Scores.existskey(0) && Scores[0].User.Id != LeadId) {
 declare IsMatchOver = False;
 if (Now > EndTime) IsMatchOver = True;
 foreach (Player in Players) {
-    if (Player.Score != Null && Player.Score.Points >= CurrentPointLimit) IsMatchOver = True;
+	if (Player.Score != Null && Player.Score.Points >= CurrentPointLimit) IsMatchOver = True;
 }
-
 if (IsMatchOver) MB_StopMap = True;
 ***
 
@@ -531,17 +524,17 @@ Score::MatchEnd(True);
 declare CUser Winner <=> Null;
 declare MaxPoints = 0;
 foreach (Score in Scores) {
-    if (Score.Points > MaxPoints) {
-        MaxPoints = Score.Points;
-        Winner <=> Score.User;
-    } else if (Score.Points == MaxPoints) {
-        Winner <=> Null;
-    }
+	if (Score.Points > MaxPoints) {
+		MaxPoints = Score.Points;
+		Winner <=> Score.User;
+	} else if (Score.Points == MaxPoints) {
+		Winner <=> Null;
+	}
 }
 
 foreach (Player in Players) {
-    if (Player.User != Winner) UnspawnPlayer(Player);
-    Interface::UpdatePosition(Player);
+	if (Player.User != Winner) UnspawnPlayer(Player);
+	Interface::UpdatePosition(Player);
 }
 
 MB_Sleep(1000);
@@ -552,9 +545,9 @@ UIManager.UIAll.BigMessageSound = CUIConfig::EUISound::EndRound;
 
 UIManager.UIAll.BigMessageSoundVariant = 0;
 if (Winner != Null) {
-    UIManager.UIAll.BigMessage = TextLib::Compose(_("$<%1$> wins the match!"), Winner.Name);
+	UIManager.UIAll.BigMessage = TextLib::Compose(_("$<%1$> wins the match!"), Winner.Name);
 } else {
-    UIManager.UIAll.BigMessage = _("|Match|Draw");
+	UIManager.UIAll.BigMessage = _("|Match|Draw");
 }
 MB_Sleep(2000);
 
@@ -563,54 +556,45 @@ UIManager.UIAll.ScoreTableVisibility = CUIConfig::EVisibility::ForcedVisible;
 MB_Sleep(5000);
 
 UIManager.UIAll.UISequence = CUIConfig::EUISequence::Podium;
-while(!UIManager.UIAll.UISequenceIsCompleted) {
-    MB_Yield();
-}
+while(!UIManager.UIAll.UISequenceIsCompleted) MB_Yield();
 
 UIManager.UIAll.ScoreTableVisibility = CUIConfig::EVisibility::Normal;
 UIManager.UIAll.BigMessage = "";
 ***
 
 Void MeleeSpawnPlayer(CSmPlayer _Player) {
-    if (G_SpawnsList.count == 0) {
-        foreach (PlayerSpawn in MapLandmarks_PlayerSpawn) G_SpawnsList.add(PlayerSpawn.Id);
-    }
-
-    declare SpawnId = NullId;
-    while (True) {
-        SpawnId = G_SpawnsList[MathLib::Rand(0, G_SpawnsList.count - 1)];
-        if (SpawnId != G_LatestSpawnId) break;
-        if (G_SpawnsList.count == 1) break;
-    }
-
-    G_LatestSpawnId = SpawnId;
-    SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId]);
-
-    declare Removed = G_SpawnsList.remove(SpawnId);
+	if (G_SpawnsList.count == 0) foreach (PlayerSpawn in MapLandmarks_PlayerSpawn) G_SpawnsList.add(PlayerSpawn.Id);
+	
+	declare SpawnId = NullId;
+	while (True) {
+		SpawnId = G_SpawnsList[MathLib::Rand(0, G_SpawnsList.count - 1)];
+		if (SpawnId != G_LatestSpawnId) break;
+		if (G_SpawnsList.count == 1) break;
+	}
+	G_LatestSpawnId = SpawnId;
+	
+	SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId]);
+	declare Removed = G_SpawnsList.remove(SpawnId);
 }
 
 Text PointLayerLayerText(){
-    declare Text MLText = """
-        <label posn="130 50 35" text="YOUR POINTS: 0" style="TextButtonMedium" id="Label_Points" scale="0.90" halign="center" valign="center" textsize="4" />
-        <script><!--
-        #Include "TextLib" as TL
+	return """
+<label posn="130 50 35" text="YOUR POINTS: 0" style="TextButtonMedium" id="Label_Points" scale="0.90" halign="center" valign="center" textsize="4" />
+<script><!--
+#Include "TextLib" as TL
 
-        main() {
-            declare netread Integer Net_Points for UI;
-
-            declare Label_Points           <=> (Page.GetFirstChild("Label_Points")        as CMlLabel);
-
-            Label_Points.Show();
-
-            while(True) {
-                yield;
-
-                Label_Points.SetText("YOUR POINTS: "^TL::ToText(Net_Points));
-            }
-        }
-        --></script>
-    """;
-
-    return MLText;
+main() {
+	declare netread Integer Net_Points for UI;
+	
+	declare Label_Points <=> (Page.GetFirstChild("Label_Points") as CMlLabel);
+	
+	Label_Points.Show();
+	
+	while (True) {
+		yield;
+		Label_Points.SetText("YOUR POINTS: "^TL::ToText(Net_Points));
+	}
+}
+--></script>""";
 }
 {% endhighlight %}
