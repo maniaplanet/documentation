@@ -1189,6 +1189,12 @@ You can also trigger some events in the game mode script by using TriggerModeScr
 * Array : ["PlayerLogin", "True"]
 * Version : available since  ModeMatchmaking.Script.txt_v2014-10-26
 
+#### Matchmaking_SetMastersListDisabledFor
+* Note : Disable the masters list for the given logins.
+* String : "Matchmaking_SetMastersListDisabledFor"
+* Array : ["PlayerLogin1", "PlayerLogin2", "PlayerLogin3"]
+* Version : available since  MatchmakingLobby.Script.txt_v2016-05-06
+
 ### Combo
 
 #### Combo_SetTimersLayerPosition
