@@ -45,6 +45,10 @@ Add the following line to /etc/apt/sources.list.
 
 `$ sudo apt-key adv --recv-keys --keyserver keyserver.ubuntu.com 4A46CD4DD71D8F6F`
 
+Update package list
+
+`$ sudo apt-get update`
+
 Install a package
 
 `$ sudo apt-get install maniaplanet-server`
