@@ -1,0 +1,273 @@
+/**
+ *	Mode melee
+ */
+
+#Extends "Modes/ShootMania/Base/ModeShootmania.Script.txt"
+
+#Const	CompatibleMapTypes	"MeleeArena"
+#Const	Version							"2017-05-09"
+#Const	ScriptName					"Modes/ShootMania/Melee.Script.txt"
+
+// ---------------------------------- //
+// Libraries
+// ---------------------------------- //
+#Include "TextLib" as TL
+#Include "MathLib" as ML
+#Include "Libs/Nadeo/Interface.Script.txt" as Interface
+
+// ---------------------------------- //
+// Settings
+// ---------------------------------- //
+#Setting S_TimeLimit 600 as _("Time limit") ///< Time limit on a map
+#Setting S_PointsLimit 25 as _("Points limit") ///< Points limit on a map
+
+// ---------------------------------- //
+// Constants
+// ---------------------------------- //
+#Const C_HudModulePath "Nadeo/ShootMania/Melee/Hud.Module.Gbx" ///< Path to the hud module
+#Const C_NbBots 0	///< Number of bots
+
+//L16N [Melee] Description of the Melee game mode rules
+#Const Description _("Hit your opponents to score points. The first player to reach the points limit or the player with the highest score at the end of the time limit wins the map.")
+
+// ---------------------------------- //
+// Extends
+// ---------------------------------- //
+***Match_LogVersions***
+***
+Log::RegisterScript(ScriptName, Version);
+Log::RegisterScript(Interface::GetScriptName(), Interface::GetScriptVersion());
+***
+
+***Match_Settings***
+***
+MB_Settings_UseDefaultHud = False;
+MB_Settings_UseDefaultTimer = False;
+***
+
+***Match_Rules***
+***
+ModeInfo::SetName("Melee");
+ModeInfo::SetType(ModeInfo::Type_FreeForAll());
+ModeInfo::SetRules(Description);
+//L16N [Melee] Short description of the Melee game mode rules
+ModeInfo::SetStatusMessage(_("Hit a maximum of players to win the game."));
+***
+
+***Match_LoadHud***
+***
+Hud_Load(C_HudModulePath);
+if (Hud != Null && Hud.ScoresTable != Null) {
+	Hud.ScoresTable.Scores_Sort(CModulePlaygroundScoresTable::EScoreSortOrder::SMPoints);
+}
+***
+
+***Match_SpawnScreen***
+***
+SpawnScreen::CreateScores("Score.RoundPoints");
+***
+
+***Match_StartServer***
+***
+UseClans = False;
+Interface::CreateRank();
+***
+
+***Match_InitMap***
+***
+declare Integer PrevPointsLimit;
+declare Integer PrevTimeLimit;
+declare Ident[] SpawnsList;
+declare Ident LastSpawnId;
+declare Integer MaxPoints;
+declare Ident LeaderId;
+***
+
+***Match_StartMap***
+***
+PrevPointsLimit = S_PointsLimit;
+PrevTimeLimit = S_TimeLimit;
+SpawnsList = Ident[];
+LastSpawnId = NullId;
+MaxPoints = 0;
+LeaderId = NullId;
+
+if (Hud != Null && Hud.ScoresTable != Null) {
+	//L16N [Melee] Message displayed in the scores table footer informing the players about the current points limit to reach in order to win.
+	Hud.ScoresTable.SetFooterText(TL::Compose("%1 "^S_PointsLimit, _("Points limit : ")));
+}
+
+Users_SetNbFakeUsers(C_NbBots, 0);
+
+StartTime = Now;
+if (S_TimeLimit > 0) {
+	EndTime = (StartTime + S_TimeLimit * 1000);
+} else {
+	EndTime = -1;
+}
+***
+
+***Match_PlayLoop***
+***
+// Manage events
+foreach (Event in PendingEvents) {
+	// On armor empty
+	if (Event.Type == CSmModeEvent::EType::OnArmorEmpty) {
+		if (Event.Victim != Null && (Event.Shooter == Event.Victim || Event.Shooter == Null)) {
+			Scores::RemovePlayerRoundPoints(Event.Victim.Score, 1);
+		}
+		Events::Valid(Event);
+	}
+	// On hit
+	else if (Event.Type == CSmModeEvent::EType::OnHit) {
+		if (Event.Victim == Null) { //< Hit on shield
+			Events::Valid(Event);
+		} else if (Event.Shooter == Event.Victim) { //< Hit on themself
+			Events::Invalid(Event);
+		} else {
+			declare Points = Event.Damage / 100;
+			if (Event.Shooter != Null) {
+				Scores::AddPlayerRoundPoints(Event.Shooter.Score, Points);
+			}
+			Event.ShooterPoints = Points;
+			
+			PlayAnnouncer(Event.Shooter, S_PointsLimit);
+			
+			Events::Valid(Event);
+		}
+	}
+	// On player request respawn
+	else if (Event.Type == CSmModeEvent::EType::OnPlayerRequestRespawn) {
+		if (Event.Player != Null) {
+			Scores::RemovePlayerRoundPoints(Event.Player.Score, 1);
+		}
+		Events::Valid(Event);
+	}
+	// Others
+	else {
+		Events::Valid(Event);
+	}
+}
+
+// Spawn players
+foreach (Player in Players) {
+	if (Player.SpawnStatus == CSmPlayer::ESpawnStatus::NotSpawned && !Player.RequestsSpectate) {
+		// Fill spawn list
+		if (SpawnsList.count == 0) {
+			foreach (MapLandmark in MapLandmarks_PlayerSpawn) {
+				SpawnsList.add(MapLandmark.Id);
+			}
+		}
+		
+		declare SpawnId = NullId;
+		if (SpawnsList.count == 1) {
+			SpawnId = SpawnsList[0];
+		} else if (SpawnsList.count > 1) {
+			while (True) {
+				SpawnId = SpawnsList[ML::Rand(0, SpawnsList.count - 1)];
+				if (SpawnId != LastSpawnId) break;
+			}
+		}
+		
+		SM::Spawn(Player, 0, MapLandmarks_PlayerSpawn[SpawnId].PlayerSpawn);
+		LastSpawnId = SpawnId;
+		declare Removed = SpawnsList.remove(LastSpawnId);
+	}
+}
+
+// Play sound and notice if someone is taking the lead
+declare BestPlayerScore <=> Scores::GetBestPlayerRoundPoints(Scores::C_Order_Descending);
+if (
+	BestPlayerScore != Null &&
+	BestPlayerScore.Id != LeaderId &&
+	Scores::GetPlayerRoundPoints(BestPlayerScore) > 0
+) {
+	LeaderId = BestPlayerScore.Id;
+	//L16N [Melee] Message displayed when a different player takes the lead by scoring more points.
+	Message::SendBigMessage(TL::Compose(_("$<%1$> takes the lead!"), BestPlayerScore.User.Name), 3000, 1, CUIConfig::EUISound::PhaseChange, 1);
+}
+
+// Points limit updated
+if (PrevPointsLimit != S_PointsLimit) {
+	PrevPointsLimit = S_PointsLimit;
+	if (Hud != Null && Hud.ScoresTable != Null) {
+		//L16N [Melee] Message displayed in the scores table footer informing the players about the current points limit to reach in order to win.
+		Hud.ScoresTable.SetFooterText(TL::Compose("%1 "^S_PointsLimit, _("Points limit : ")));
+	}
+}
+
+// Update time limit
+if (PrevTimeLimit != S_TimeLimit) {
+	PrevTimeLimit = S_TimeLimit;
+	if (S_TimeLimit > 0) {
+		EndTime = StartTime + (S_TimeLimit * 1000);
+	} else {
+		EndTime = -1;
+	}
+}
+
+// victory conditions
+if (S_TimeLimit > 0 && Now > EndTime) {
+	Message::SendBigMessage(
+		//L16N [Melee] Message displayed when the time limit is reached.
+		_("Time limit reached"),
+		2000, 3, CUIConfig::EUISound::Silence, 0
+	);
+	MB_StopMatch();
+} else if (S_PointsLimit > 0 && BestPlayerScore != Null) {
+	if (Scores::GetPlayerRoundPoints(BestPlayerScore) >= S_PointsLimit) {
+		MB_StopMatch();
+	}
+}
+***
+
+***Match_EndMap***
+***
+EndTime = -1;
+MB_Sleep(2000);
+SM::UnspawnAllPlayers();
+
+declare BestPlayerScore <=> Scores::GetBestPlayerMapPoints(Scores::C_Order_Descending);
+if (BestPlayerScore != Null) {
+	Scores::SetPlayerWinner(BestPlayerScore);
+} else {
+	Scores::ResetPlayerWinner();
+}
+***
+
+***Match_EndServer***
+***
+Interface::DestroyRank();
+***
+
+// ---------------------------------- //
+// Functions
+// ---------------------------------- //
+// ---------------------------------- //
+/** Play a sound and notice if someone is close to win
+ *
+ *	@param	_Player										The player who scored a point
+ *	@param	_PointsLimit							The points limit to reach to win
+ */
+Void PlayAnnouncer(CSmPlayer _Player, Integer _PointsLimit) {
+	if (_Player == Null) return;
+	
+	declare RemainingPoints = _PointsLimit - Scores::GetPlayerRoundPoints(_Player.Score);
+	if (RemainingPoints > 0 && RemainingPoints <= 3) {
+		declare Message = "";
+		if (RemainingPoints > 1) {
+			//L16N [Melee] Message displayed when a player is a few points away from victory. %1 is the name of the player. %2 is the number of missing points which is at least 2.
+			Message = TL::Compose(_("$<%1$> is %2 points from victory!"), _Player.User.Name, TL::ToText(RemainingPoints));
+		} else {
+			//L16N [Melee] Message displayed when a player is a few points away from victory. %1 is the name of the player.
+			Message = TL::Compose(_("$<%1$> is 1 point from victory!"), _Player.User.Name);
+		}
+		Message::SendBigMessage(Message, 3000, 2, CUIConfig::EUISound::TieBreakPoint, 3 - RemainingPoints);
+	} else if (RemainingPoints <= 0) {
+		Message::SendBigMessage(
+			//L16N [Melee] Message displayed when a player does the final hit and wins.
+			TL::Compose(_("$<%1$> gets the final hit!"), _Player.User.Name),
+			3000, 3, CUIConfig::EUISound::VictoryPoint, 0
+		);
+	}
+}
