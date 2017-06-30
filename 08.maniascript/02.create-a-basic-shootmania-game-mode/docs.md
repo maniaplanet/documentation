@@ -27,12 +27,11 @@ It's time to create a map to test our mode. Launch ManiaPlanet, start the map ed
 
 We have a basic game mode script and a map, all that is missing now is a server to do our tests. In the main menu click on the Local Play button (then Local Network if you are on TrackMania). Click on the Create button and you should see this screen:
 
-![](create-server.png)
+![](mp4_create_server_gamemode_edited.jpg)
 
-1. Click on this box until the `Script` option is selected.
-2. Click here to open a window where you can choose `MyGamemode.Script.txt`.
+* Click on the field to open a window where you can choose `MyGamemode.Script.txt`.
 
-Once it's done click on the Launch button, select the map you created earlier and click on Play.
+Then choose a map and click on next to choose the parameters of the server. Once done click on `Create`.
 
 ## Structure of a game mode
 A gamemode is divided in several part which match each state of a game. A raw structure of a gamemode looks like this:

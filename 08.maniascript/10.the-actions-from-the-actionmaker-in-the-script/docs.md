@@ -9,12 +9,12 @@ We'll talk a bit about the `Actions`. An `Action` is a element created in the `A
 
 From a script point of view, you can assign up to 8 actions to a player at the same time from `Slot_A` to `Slot_H`.
 
-First to use an action, you must declare it on the `StartServer` section of your script inside an `ActionList` as follows:
+First to use an action, you must declare it on the `Match_StartServer` section of your script inside an `ActionList` as follows:
 
 ```
 declare Ident G_MyCustomWeapon;
 
-***StartServer***
+***Match_StartServer***
 ***
 ActionList_Begin();
 	G_MyCustomWeapon = ActionList_Add("mycustombullet.Action.Gbx");
@@ -60,7 +60,7 @@ if (Event.Type == CSmModeEvent::EType::OnActionCustomEvent) {
 		declare Points = EventDamage / 100;
 		RemovePlayerArmor(Event.Victim, EventDamage, Event.Shooter, Points);
 		Score::AddPoints(Event.Shooter, Points);
-		
+
 		Events::Valid(Event);
 	}
 }

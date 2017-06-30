@@ -11,7 +11,7 @@ Instead of calling the function `SM::SpawnPlayer(_Player, 0, MapLandmarks_Player
 
 ```
 Void VSpawnPlayer(CSmPlayer _Player) {
-    _Player.ArmorMax 		= 400;
+    _Player.ArmorMax 		= 400;                       // 100 per hit point on the interface
     _Player.Armor 			= _Player.ArmorMax;
     _Player.ArmorGain 		= 0;
     _Player.AmmoGain 		= 1.;
