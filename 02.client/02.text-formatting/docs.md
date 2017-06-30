@@ -21,7 +21,7 @@ Whenever you type text in Maniaplanet, you can customize the text formatting wit
 |  ``$t``  |  Uppercase  |
 |  ``$s``  |  Drop shadow  |
 |  ``$g``  |  Reset to default color  |
-|  ``$z``  |  Reset to default text size  |
+|  ``$z``  |  Reset to default text style  |
 |  ``$$``  |  Display a $ character  |
 
 ## Colors

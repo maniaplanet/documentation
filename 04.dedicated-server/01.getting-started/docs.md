@@ -9,8 +9,8 @@ Using Debian/Ubuntu? You can use our [APT repository](../tools/apt.html).
 
 ##  Quick start
 
-1. Download and extract the latest dedicated server at http://files.v04.maniaplanet.com/server/ManiaplanetServer_2017-03-09.zip
-2. Create dedicated server login on your [PlayerPage](https://v4.live.maniaplanet.com/account/dedicated-servers)
+1. Download and extract the latest dedicated server at http://files.v04.maniaplanet.com/server/ManiaplanetServer_Latest.zip
+2. Create a dedicated server login on your [PlayerPage](https://v4.live.maniaplanet.com/account/dedicated-servers)
 3. Create a Dedicated Config File named `dedicated_cfg.txt` in the folder `UserData\Config` by using the file `UserData\Config\dedicated_cfg.default.txt` as a template.
 4. Create a new MatchSettings (also called GameSettings) file called `matchsettings.txt` in the folder `UserData\Maps\MatchSettings`. You should use a template corresponding to your title in this folder.
 5. Start your server with the mininal options: `ManiaPlanetServer /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/matchsettings.txt`
@@ -19,7 +19,7 @@ Using Debian/Ubuntu? You can use our [APT repository](../tools/apt.html).
 
 ### Download
 
-The archive containing both Linux and Windows server is located at http://files.v04.maniaplanet.com/server/ManiaplanetServer_2017-03-09.zip
+The archive containing both Linux and Windows server is located at http://files.v04.maniaplanet.com/server/ManiaplanetServer_Latest.zip
 
 ### Dedicated Server Login
 A dedicated server login is required for internet servers. You can start LAN servers without login.
