@@ -1,5 +1,5 @@
 ---
-title: 'Maniaplanet Protocols'
+title: 'Maniaplanet Protocol (maniaplanet://)'
 taxonomy:
     category:
         - docs
@@ -7,7 +7,7 @@ taxonomy:
 
 ## maniaplanet://
 
-Once you have ManiaPlanet on your system, you can do several actions by clicking on maniaplanet:// links.
+Use the maniaplanet:// protocol to access various functionalities from a simple URI.
 
 | command                                         | description                                                                                              |
 |:-----------------------------------------------:|:--------------------------------------------------------------------------------------------------------:|
