@@ -17,7 +17,7 @@ Once you have created or download a custom content it's normal to use it, to do 
 !!!* Trackmania² Valley: `[User Data]/Skins/Vehicles/ValleyCar/`
 !!!* Trackmania² Lagoon: `[User Data]/Skins/Vehicles/LagoonCar/`
 !!!* Trackmania² Stadium: `[User Data]/Skins/Vehicles/StadiumCar/`
-!!!* Shootmania Storm: `[User Data]/Skins/Vehicles/StormMan/`
+!!!* Shootmania Storm: `[User Data]/Skins/Vehicles/ArenaPlayer/`
 
 !!! **For mods:**
 !!!* Trackmania² Canyon: `[User Data]/Skins/Canyon/Mod/`
