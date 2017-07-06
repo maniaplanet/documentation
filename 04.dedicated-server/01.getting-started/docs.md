@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-Using Debian/Ubuntu? You can use our [APT repository](../tools/apt.html).
+Using Debian/Ubuntu? You can use our [APT repository](../references/apt-repository).
 
 ##  Quick start
 
