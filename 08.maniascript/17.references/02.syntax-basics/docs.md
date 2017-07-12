@@ -21,13 +21,13 @@ Beware: Case is important, always!
 * Boolean: can be either True or False
 * Integer: numbers such as 2 or -5 or 31337
 * Real: decimal numbers such as -4.2 or 99. (do not forget the final dot, because 99 is an Integer. Beware, those are different)
-* Text: any character sequence between double quotes: "plop" "gouzi" or "456.32". 
+* Text: any character sequence between double quotes: "plop" "gouzi" or "456.32".
 
 **Protips**:
 - Inside a Text, the usual escape sequences such as "\n" or "\\" are supported.
 - You can also declare a Text value between 3 double quotes. When doing so, you won't need to escape chars, and it can expand on many lines. """plop="452.12.22" toto"""
 
-## Variables 
+## Variables
 
 ### Variable declaration
 In Maniascript, variables must be declared, either by specifying a Type, or an initial value:
@@ -39,12 +39,12 @@ or
 `declare MyVariable = 42.;`
 
 After having declared a variable, you'll be able to use it to store data, but the type can't be changed afterwards.
-If the variable is defined as an Integer, you will never be able to store anything else inside. The same goes for other types. 
+If the variable is defined as an Integer, you will never be able to store anything else inside. The same goes for other types.
 
 >>>>>> Variables are always defined and initialized when declared, meaning they always have a valid value. If not specified, this value will be a default value for the current type.
 
 
-Examples: 
+Examples:
 
 ```
 declare planets = 9000; // planets will be cast to Integer
@@ -72,7 +72,7 @@ main {
 ```
 
 ### Variable affectation
-Once declared, you can change the value of a variable with a single equal sign: 
+Once declared, you can change the value of a variable with a single equal sign:
 `MyVariable = 13+37;`
 As said earlier, the types must match. No implicit conversions are made.
 
@@ -86,7 +86,7 @@ Var = 2 + 5; // This is a comment
 Var = 2 /* This is a comment */ + 5;
 
 declare Text hello = "world" // this text here will be ignored and is a comment
-/* 
+/*
 all this text here is a comment, and is being ignored by the maniascript engine
 if (hello == "world") {
     do something
@@ -97,7 +97,7 @@ if (hello == "world") {
 Operators and Instructions
 =====
 
-Boolean operations are: `!` ` &&`  `||` 
+Boolean operations are: `!` ` &&`  `||`
 
 ```
 Var1 && (!Var2 || Var3)
@@ -124,7 +124,7 @@ MyVar = """Hello {{{NameOfThePlayer}}}, how are you today??? Five = {{{2+3}}}. \
 
 ## Comparisons
 
-To compare values, you can use the usual:        `==`   `!=`   `<`   `>`   `<=`   `>=` 
+To compare values, you can use the usual:        `==`   `!=`   `<`   `>`   `<=`   `>=`
 Greater/lower comparisons do not work with Booleans.
 
 ## Log and assertions
@@ -136,7 +136,7 @@ log("Something went wrong!");
 
 The text will be printed in the bottom part of the debug window. Press Ctrl + ~ to see it.
 
-Sometimes it is more easy to check if some requirements are met. 
+Sometimes it is more easy to check if some requirements are met.
 
 ```
 assert(MyVariable == 3);
@@ -195,7 +195,7 @@ for( /*VariableName*/ , /*FirstValue*/ , /*LastValue*/ ) /*Instructions;*/
 
 foreach( /*Element*/  in /*Array*/ ) /*Instructions;*/
 
-foreach( /*Key*/ =>/*Element*/ in /*Array*/ ) /*Instructions;*/ 
+foreach( /*Key*/ =>/*Element*/ in /*Array*/ ) /*Instructions;*/
 
 switch(/*Expression*/) {
 case Expression1: /*Instructions;*/
@@ -211,8 +211,8 @@ Most Maniascripts are too complicated to fit in one set of instructions. That's 
 
 ```
 [TypeOfTheReturnedValue] [NameOfTheFunction] ([TypeArg1] [NameArg1], [TypeArg2] [NameArg2] .... )
-{ 
- [Instructions]; 
+{
+ [Instructions];
 }
 ```
 
@@ -220,7 +220,7 @@ Here's an example:
 
 ```
 Integer Minimum (Integer A, Integer B)
-{ 
+{
 if (A<B) return A;
 return B;
 }
@@ -258,7 +258,7 @@ Advanced types
 ===========
 
 ## Lists and arrays
-You can declare Lists by using any type, followed by square brackets: 
+You can declare Lists by using any type, followed by square brackets:
 
 ```
 declare Text[] MyList;
@@ -274,11 +274,11 @@ log(MyList[3]); // Will log: Omega
 
 The only valid indices are the ones between 0 (inclusive) and the list's count (exclusive).
 
-Valid operations are 
+Valid operations are
 
 ```
 declare Size = List.count;
-declare SortedList = List.sort(); 
+declare SortedList = List.sort();
 List.add(ValueToBeAdded);
 List.removekey(IndexToBeRemoved);
 List.remove(ValueToBeRemoved);
@@ -288,7 +288,7 @@ declare Index = List.keyof(ValueToBeFound); // such as List[Index] == ValueToBeF
 List.clear();
 ```
 
-You can also declare an associative Array with keys of any type: 
+You can also declare an associative Array with keys of any type:
 
 ```
 declare Text[Integer] MyArray1 = [15 => "Quinze", 42 => "Quarante-deux", 100 =>"Cent" ];
@@ -300,19 +300,7 @@ You can then access the elements by index:
 ```
 log(MyArray1[42]); // Will log: Quarante-deux
 log(MyArray2 ["Tau"]); // Will log: 6.28
-MyArray2["SquareRootOfTwo"] = 1.41; // Adds a new Value in the array 
-```
-
-```
-declare Size = MyArray1.count;
-declare SortedByValues = MyArray1.sort(); // Sorts by Values
-declare SortedByKeys = MyArray1.sortkey(); // Sorts by Keys
-List.removekey(KeyToBeRemoved);
-List.remove(ElemToBeRemoved);
-declare DoesExist1 = List.existskey(Key);
-declare DoesExist2 = List.exists(ElemToBeFound);
-declare Key= List.keyof(ElemToBeFound); // such as List[Key] == ElemToBeFound
-List.clear();
+MyArray2["SquareRootOfTwo"] = 1.41; // Adds a new Value in the array
 ```
 
 ## Classes
@@ -343,7 +331,7 @@ declare BestPlayer <=> Players[0];
 {
     ... // Some code doing stuff
 }
-log(BestPlayer.Login); 
+log(BestPlayer.Login);
    // Will log Alice, right ???
 ```
 
@@ -352,10 +340,10 @@ log(BestPlayer.Login);
 ```
 declare BestPlayer <=> Players[0];  
    // Alice is the best player, so BestPlayer "points" to Alice
-Players[1].Score += 1000; 
+Players[1].Score += 1000;
    // Gives 1000 points to the 2nd best player, which is Bob
 
-   // those 2 line are completely equivalent : 
+   // those 2 line are completely equivalent :
    //    they will log Bob, because he has an higher score right now.
 log(BestPlayer.Login);
 log(Players[0].Login);
@@ -367,17 +355,17 @@ In such cases, it becomes more clear that Class objects do not behave as Integer
 ### More on aliases
 
 Now what if you want to keep Alice in a variable, and not the Best Player?
-The following code will work "as expected". 
+The following code will work "as expected".
 
 ```
 declare BestPlayerId = Players[0].Id;       // BestPlayerId is an Ident: will never change
 Players[1].Score += 1000;                   // Gives 1000 points to the 2nd best player, which is Bob
-log(Players[BestPlayerId].Login);           // Will log Alice 
+log(Players[BestPlayerId].Login);           // Will log Alice
 ```
 
->>>>> The "log" will be a bit more time-consuming than the previous way : we have to find Alice in the array of players, from the Ident.
+!!! The "log" will be a bit more time-consuming than the previous way : we have to find Alice in the array of players, from the Ident
 
->>>>> #2: Yes, this can also be written 
+!!! Yes, this can also be written
 
 ```
 declare BestPlayer <=> Players[Players[0].Id];  // will be an alias to Players[AliceId] and not Players[0]. Huge difference!
@@ -385,7 +373,7 @@ Players[1].Score += 1000;                       // Gives 1000 points to the 2nd 
 log(BestPlayer.Login);                          // Will log Alice. Will also cost more CPU, for the alias has to be resolved.  
 ```
 
-But there's a simpler way to do something similar 
+But there's a simpler way to do something similar
 
 ```
 declare BestPlayer = Players[0];    // Note the difference: I used = instead of <=>
@@ -405,7 +393,7 @@ What happens if you declare yourself an array of Classes.
 ```
 // Players[0] => Alice
 // Players[1] => Bob
-declare MyArray = [Players[0], Players[1]]; 
+declare MyArray = [Players[0], Players[1]];
 declare MyVal <=> MyArray[0];
 MyArray = [Players[1], Players[0]];
 
@@ -420,14 +408,14 @@ This is because the value stored in MyArray is already an alias, so we copy the 
 #### Functions returning classes
 
 As with arrays, we have to make a difference between API functions and functions declared in script.
- 
+
 When you call an API function, the result will be a "simplified" alias. Those are unambiguous aliases referring to the object's Id, inside of an API-defined array.
 
 ```
-declare MyLabel <=> GetFirstChild("Label"); 
+declare MyLabel <=> GetFirstChild("Label");
    // MyLabel is an alias to Page.MainFrame.Controls[IdOfTheFirstChildFound]
 ```
-Is behaving exactly like 
+Is behaving exactly like
 
 ```
 declare MyLabel <=> Page.MainFrame.Controls[GetFirstChild("Label").Id];
@@ -438,7 +426,7 @@ So if there was an API function GetBestPlayer, the code
 ```
 declare BestPlayer <=> GetBestPlayer();  
    // Alice is the best player, so BestPlayer is an alias for Players[AliceId]
-Players[1].Score += 1000; 
+Players[1].Score += 1000;
    // Gives 1000 points to the 2nd best player, which is Bob
 
 log(BestPlayer.Login); // Will log Alice
