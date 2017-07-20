@@ -89,3 +89,4 @@ The available scopes are:
 * `titles`: access to the list of titles created by the player
 * `events`: access to the list of events of the player
 * `maps`: access to the maps of the player
+* `email`: access to the player email
