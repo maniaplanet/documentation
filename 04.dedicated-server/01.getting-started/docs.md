@@ -13,7 +13,9 @@ Using Debian/Ubuntu? You can use our [APT repository](../references/apt-reposito
 2. Create a dedicated server login on your [PlayerPage](https://v4.live.maniaplanet.com/account/dedicated-servers)
 3. Create a Dedicated Config File named `dedicated_cfg.txt` in the folder `UserData\Config` by using the file `UserData\Config\dedicated_cfg.default.txt` as a template.
 4. Create a new MatchSettings (also called GameSettings) file called `matchsettings.txt` in the folder `UserData\Maps\MatchSettings`. You should use a template corresponding to your title in this folder.
-5. Start your server with the mininal options: `ManiaPlanetServer /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/matchsettings.txt`
+5. Start your server with the mininal options: `ManiaPlanetServer /nodaemon /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/matchsettings.txt`
+
+>>>>> Always use the `/nodaemon` option to be able to see the potential errors.
 
 ## Less quick start
 
@@ -25,8 +27,6 @@ The archive containing both Linux and Windows server is located at http://files.
 A dedicated server login is required for internet servers. You can start LAN servers without login.
 
 The **dedicated login** can be created at your [PlayerPage](https://v4.live.maniaplanet.com/account/dedicated-servers) and you can have multiple dedicated server logins. Just fill in the desired login-name and choose password and server location where you want it to bind. 
-
-To raise the ladder rank of your server, visit the [advanced ladder server page](https://v4.live.maniaplanet.com/account/dedicated-servers/ladder-servers) section in your playerpage.
 
 ### DedicatedConfig file
 
@@ -56,11 +56,11 @@ Please note down the `server_port` that you may have to open in your router/fire
 
 ## MatchSettings File
 
-There are *MatchSettings* files bundled with each title, use the table below to get the default one.
+The MatchSettings define the rules and maps used by your server. You can get the default files from the [Config helper](https://www.maniaplanet.com/account/dedicated-servers/helper): select a title and you will get the MatchSettings for all modes.
 
-Examples to start the server with Shootmania Storm Elite: `ManiaPlanetServer /Title=SMStormElite@nadeo /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/SMStormElite1.txt`.
+Save the file in the Folder `UserData/Maps/MatchSettings`, for example as `UserData/Maps/MatchSettings/BestLolMaps.txt
 
->>>>> From Maniaplanet 4.0, the title packs of the environment must finish with *@nadeo*. Example: `ManiaPlanetServer /Title=TMStadium@nadeo /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/TMStadiumA.txt`
+>>>>> From Maniaplanet 4.0, the title packs of the environment must finish with *@nadeo*. Example: `ManiaPlanetServer /Title=TMStadium@nadeo /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/BestLolMaps.txt`
 
 ## Network configuration
 
@@ -82,7 +82,9 @@ Note: If you run multiple servers on the same host, port numbers are automatical
 
 ## Starting the server
 
-The minimal command line to start the server is `ManiaPlanetServer /Title=TitleId@CreatorLogin /dedicated_cfg=DedicatedCfgFile /game_settings=MatchSettingsFile`.
+The minimal command line to start the server is `ManiaPlanetServer /nodaemon /Title=TitleId@CreatorLogin /dedicated_cfg=DedicatedCfgFile /game_settings=MatchSettingsFile`.
+
+>>>>> Always use the `/nodaemon` option to be able to see the potential errors.
 
 *[Complete list of ManiaPlanetServer arguments](../references/command-line)*
 
