@@ -53,6 +53,7 @@ taxonomy:
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
 |**S_AllowRespawn**|True|Allow the players to respawn or not|
+|**S_RespawnBehaviour**|0|This setting control the behavior of the respawn button. It overrides the respawn behavior set by the game mode script and the S_AllowRespawn setting. It can takes one of the following values: 0 -> use the game mode value , 1 -> normal (respawn when pressing the button), 2 -> do nothing, 3 -> give up before first checkpoint, respawn after, 4 -> always give up|
 |**S_UseLegacyXmlRpcCallbacks**|True|Turn on/off the legacy xmlrpc callbacks|
 
 ## RoundsBase
