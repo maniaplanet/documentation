@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-You can access the API anonymously, but we recommand that you use your Web Services credentials.
+You can access the API anonymously, but we recommend that you use your Web Services credentials.
 
 ## Basic authentication
 
