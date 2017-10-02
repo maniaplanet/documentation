@@ -17,7 +17,7 @@ The Web Services provides user authentication thanks to OAuth2.
   * `scope`: space separated list of scopes
   * `redirect_uri`: one the of the redirect URI mentioned in your Web Services application
   * `state`: a non predictable random string. You should store this value and check if the same is returned at other stages.
-2. The use authorize your application, he is redirected to the `redirect_uri` wit the query parameters:
+2. The use authorize your application, he is redirected to the `redirect_uri` with the query parameters:
   * `code`
   * `state`: the state you provided at stage 1
 3. Your application should send the POST request to [https://v4.live.maniaplanet.com/login/oauth2/access_token](https://v4.live.maniaplanet.com/login/oauth2/access_token) with the parameters:
