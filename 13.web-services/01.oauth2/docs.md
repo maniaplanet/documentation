@@ -60,7 +60,7 @@ To be used with user-agent-based clients that cannot keeps a secret.
    * `redirect_uri`: one the of the redirect URI mentionned in your Web Services application
    * `scope`: a space separated list of scopes
    * `state`
-2. The user approves, he is redirected to the `redirect_uri` wity the following parameters in the query string:
+2. The user approves, he is redirected to the `redirect_uri` with the following parameters in the query string:
     * `token_type`: the value `Bearer`
     * `expires_in`: an integer representing the TTL of the access token
     * `access_token`: the access token
