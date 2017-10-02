@@ -15,7 +15,7 @@ The Web Services provides user authentication thanks to OAuth2.
   * `response_type`: the value `code`
   * `client_id`
   * `scope`: space separated list of scopes
-  * `redirect_uri`: one the of the redirect URI mentionned in your Web Services application
+  * `redirect_uri`: one the of the redirect URI mentioned in your Web Services application
   * `state`: a non predictable random string. You should store this value and check if the same is returned at other stages.
 2. The use authorize your application, he is redirected to the `redirect_uri` wit the query parameters:
   * `code`
