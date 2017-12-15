@@ -63,11 +63,11 @@ Note :
 During static mesh import, **shapes** (= collision models)  are created.  
 From the file `{meshname.fbx}`, a `{meshname}.shape.gbx` file is created.  
 The objects within the fbx file whose name start with `_socket_`(ex : `_socket_start`) are imported as "sockets", that can be used by the items.  
-Use this when you import start or checkpoint items. (see the page [item import](importer_item))  
+Use this when you import start or checkpoint items. (see the page [item import](../../customization/importer/import-an-item)  
 
 If there are objects within in the fbx whose name starts with `_trigger_` (ex : `_trigger_A`), they will be imported as another shape file named `{meshname}Trigger.shape.gbx`.  
 This allows you to define a mesh and an associated trigger with a single fbx file.  
-Use this when you import checkpoint or finish items. (see the page [item import](importer_item))  
+Use this when you import checkpoint or finish items. (see the page [item import](../../customization/importer/import-an-item)  
 
 
 ## non-static meshes (dynamic & character meshes)
