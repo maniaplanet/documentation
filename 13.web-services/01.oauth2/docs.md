@@ -9,6 +9,8 @@ taxonomy:
 
 The Web Services provides user authentication thanks to OAuth2.
 
+We provide an official implementation for PHP: https://github.com/maniaplanet/oauth2-maniaplanet
+
 ### Auth code flow (or explicit flow, or server side flow)
 
 1. Redirect the user to [https://v4.live.maniaplanet.com/login/oauth2/authorize](https://v4.live.maniaplanet.com/login/oauth2/authorize) with the query parameters:
