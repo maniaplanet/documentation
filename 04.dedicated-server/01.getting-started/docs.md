@@ -13,7 +13,7 @@ Using Debian/Ubuntu? You can use our [APT repository](../references/apt-reposito
 2. Download the titlepacks you want to host your server for, and put them in the `Packs` folder. See below for links.
 3. Create a dedicated server login on your [PlayerPage](https://maniaplanet.com/account/dedicated-servers)
 4. Create a Dedicated Config File named `dedicated_cfg.txt` in the folder `UserData\Config` by using the file `UserData\Config\dedicated_cfg.default.txt` as a template. For more info, see below.
-5. Create a new MatchSettings (also called GameSettings) file called `matchsettings.txt` in the folder `UserData\Maps\MatchSettings`. You should use [a template](https://www.maniaplanet.com/account/dedicated-servers/helper) corresponding to your title in this folder. For more info, see below.
+5. Create a new MatchSettings (also called GameSettings) file called `matchsettings.txt` in the folder `UserData\Maps\MatchSettings`. You should use [a template](https://www.maniaplanet.com/account/dedicated-servers/helper) corresponding to your title in this folder. For more info, as well as how to add maps to this file, see below.
 6. Start your server with the mininal options: `ManiaPlanetServer /nodaemon /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/matchsettings.txt`
 
 >>>>> Always use the `/nodaemon` option to be able to see any potential errors.
@@ -134,6 +134,8 @@ These should be added just before the `</playlist>` ending tag. It might look so
   <map><file>My Maps\Going_in_circles.Map.Gbx</file></map>
 </playlist>
 ```
+
+If you choose to install a server controller, it is most likely capable of automatically adding maps to your matchsettings file. You do however need an initial matchsettings file, so it's good to know how to do it manually.
 
 ## Starting the server
 
