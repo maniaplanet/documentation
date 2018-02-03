@@ -10,10 +10,11 @@ Using Debian/Ubuntu? You can use our [APT repository](../references/apt-reposito
 ## Quick start
 
 1. Download and extract the latest dedicated server at http://files.v04.maniaplanet.com/server/ManiaplanetServer_Latest.zip
-2. Create a dedicated server login on your [PlayerPage](https://maniaplanet.com/account/dedicated-servers)
-3. Create a Dedicated Config File named `dedicated_cfg.txt` in the folder `UserData\Config` by using the file `UserData\Config\dedicated_cfg.default.txt` as a template. For more info, see below.
-4. Create a new MatchSettings (also called GameSettings) file called `matchsettings.txt` in the folder `UserData\Maps\MatchSettings`. You should use [a template](https://www.maniaplanet.com/account/dedicated-servers/helper) corresponding to your title in this folder. For more info, see below.
-5. Start your server with the mininal options: `ManiaPlanetServer /nodaemon /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/matchsettings.txt`
+2. Download the titlepacks you want to host your server for, and put them in the `Packs` folder. See below for links.
+3. Create a dedicated server login on your [PlayerPage](https://maniaplanet.com/account/dedicated-servers)
+4. Create a Dedicated Config File named `dedicated_cfg.txt` in the folder `UserData\Config` by using the file `UserData\Config\dedicated_cfg.default.txt` as a template. For more info, see below.
+5. Create a new MatchSettings (also called GameSettings) file called `matchsettings.txt` in the folder `UserData\Maps\MatchSettings`. You should use [a template](https://www.maniaplanet.com/account/dedicated-servers/helper) corresponding to your title in this folder. For more info, see below.
+6. Start your server with the mininal options: `ManiaPlanetServer /nodaemon /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/matchsettings.txt`
 
 >>>>> Always use the `/nodaemon` option to be able to see any potential errors.
 
@@ -22,6 +23,23 @@ Using Debian/Ubuntu? You can use our [APT repository](../references/apt-reposito
 ### Download
 
 The archive containing both Linux and Windows server is located at http://files.v04.maniaplanet.com/server/ManiaplanetServer_Latest.zip
+
+### Title packs
+
+Download the titlepack file you want to host a server for, and put it in the `Packs` folder:
+
+* [TMStadium@nadeo](https://maniaplanet.com/ingame/public/titles/download/TMStadium@nadeo.Title.Pack.gbx)
+* [TMCanyon@nadeo](https://maniaplanet.com/ingame/public/titles/download/TMCanyon@nadeo.Title.Pack.gbx)
+* [TMValley@nadeo](https://maniaplanet.com/ingame/public/titles/download/TMValley@nadeo.Title.Pack.gbx)
+* [TMLagoon@nadeo](https://maniaplanet.com/ingame/public/titles/download/TMLagoon@nadeo.Title.Pack.gbx)
+* [SMStorm@nadeo](https://maniaplanet.com/ingame/public/titles/download/SMStorm@nadeo.Title.Pack.gbx)
+* [SMStormSiege@nadeolabs](https://maniaplanet.com/ingame/public/titles/download/SMStormSiege@nadeolabs.Title.Pack.gbx)
+* [SMStormElite@nadeolabs](https://maniaplanet.com/ingame/public/titles/download/SMStormElite@nadeolabs.Title.Pack.gbx)
+* [SMStormRoyal@nadeolabs](https://maniaplanet.com/ingame/public/titles/download/SMStormRoyal@nadeolabs.Title.Pack.gbx)
+* [SMStormBattle@nadeolabs](https://maniaplanet.com/ingame/public/titles/download/SMStormBattle@nadeolabs.Title.Pack.gbx)
+* [SMStormWarlords@nadeolabs](https://maniaplanet.com/ingame/public/titles/download/SMStormWarlords@nadeolabs.Title.Pack.gbx)
+* [SMStormCombo@nadeolabs](https://maniaplanet.com/ingame/public/titles/download/SMStormCombo@nadeolabs.Title.Pack.gbx)
+* [SMStormJoust@nadeolabs](https://maniaplanet.com/ingame/public/titles/download/SMStormJoust@nadeolabs.Title.Pack.gbx)
 
 ### Dedicated Server Login
 A dedicated server login is required for internet servers. You can start LAN servers without login.
