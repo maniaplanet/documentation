@@ -143,26 +143,9 @@ The minimal command line to start the server is `ManiaPlanetServer /nodaemon /de
 
 >>>>> Always use the `/nodaemon` option to be able to see any potential errors.
 
-Here's a full list of options you can run the server with:
+You can find a complete list of command line arguments [here](../references/command-line).
 
-|  Option  |  Description  |
-|  :-----  |  :-----       |
-| `/nodaemon` | On Linux, don't fork into the background. |
-| `/dedicated_cfg=` | Path to the dedicated config XML file, relative to the `UserData/Config/` folder. |
-| `/game_settings=` | Path to the matchsettings XML file, relative to the `UserData/Maps/` folder. |
-| `/nologs` | Don't write any log files to the `Logs` folder. |
-| `/noautoquit` | Don't automatically quit when server hasn't started. This allows you to still control the server via XmlRpc. |
-| `/serverplugin=` | Specify a Maniascript file to load in the `CServerPlugin` context, relative to the `UserData/Scripts/` folder. |
-| `/parsegbx=` | Dumps minor JSON output information for a Gbx file relative to the current directory. |
-| `/verbose_rpc` | Logs a summary of all XmlRpc commands sent and received for debugging purposes. |
-| `/verbose_rpc_full` | Dumps all XmlRpc commands sent and received as-is to the log for debugging purposes. |
-| `/title=` | Override which titlepack to load. Normally it takes this from the dedicated_cfg file. |
-| `/login=` | Override which server login to use. Normally it takes this from the dedicated_cfg file. |
-| `/password` | Override which password to use for the server login. Normally it takes this from the dedicated_cfg file. |
-| `/servername` | Override which server name to use. Normally it takes this from the dedicated_cfg file. |
-| `/serverpassword` | Override which join password to use. Normally it takes this from the dedicated_cfg file. |
-
-Note that without options on Linux, the server will be executed in the background which makes it difficult to see errors. Add the `/nodaemon` option to make it execute in the foreground.
+Note that without any additional options on Linux, the server will be executed in the background which makes it difficult to see errors. Add the `/nodaemon` option to make it execute in the foreground.
 
 ## Advanced
 ### Server administration
