@@ -1,5 +1,5 @@
 ---
-title: 'Create a basic Shootmania game mode'
+title: 'Create a basic ShootMania game mode'
 taxonomy:
     category:
         - docs
@@ -128,7 +128,7 @@ All `#Include` lines indicate that we want to load a library into the script. A 
     // ---------------------------------- //
     #Const ConstVar ConstValue
 
-The constants are a type of variables where you stock a value that will not change during the game and will be accessible anywhere in your script (except in the librairies). Usually in these variable you'll keep settings which are non-modifiable by the players/server owner like the maximum number of players (for example), the list of objects used in the script, the ids of the classes, the minimum number of players required for the script, etc...
+The constants are a type of variables where you stock a value that will not change during the game and will be accessible anywhere in your script (except in the librairies). Usually in these variables you'll keep settings which are non-modifiable by the players/server owner like the maximum number of players (for example), the list of objects used in the script, the ids of the classes, the minimum number of players required for the script, etc...
 
 Declaring a constant variable doesn't require a semicolon (;) at the end of the line.
 
@@ -314,7 +314,7 @@ For a deathmatch mode (which is very simple), you only have to deactivate the te
 
 ## Setting up the parameters for the match/map
 
-At the initialization of the map we declare the variable we'll need to handle the proceeding during the map like the spawn, the points and the id of the best player.
+At the initialization of the map we declare the variables we'll need to handle the proceeding during the map like the spawn, the points and the id of the best player.
 
     ***Match_InitMap***
     ***
@@ -382,7 +382,7 @@ Now we check if a player is hit by a projectile (from a Storm weapon).
     if (Event.Shooter == Event.Victim) {
       Events::Invalid(Event);
 
-Basically if the player hit himself (with the `Arrow` or the `Nucleus` for example), we tell the server to disregard this event (and so to ignore all the damage and effects) with the `Discard(Event)` instruction.
+Basically if the player hit himself (with the `Arrow` or the `Nucleus` for example), we tell the server to disregard this event (and so to ignore all the damage and effects) with the `Events::Invalid(Event)` instruction.
 
         } else {
             Event.Victim.Armor -= Event.Damage;
@@ -552,7 +552,7 @@ Also we use a function called PlayerAnnouncer() in the script to make the announ
     	}
     }
 
-Now you've your first working gamemode ready! Feel free to launch a local network server to test it! ^_^
+Now you have your first working gamemode ready! Feel free to launch a local network server to test it! ^_^
 
 ## Extra
 >>>>> You can download the source of this gamemode by clicking this [link](Melee.Script.txt)
