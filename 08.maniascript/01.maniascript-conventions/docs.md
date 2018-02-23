@@ -67,8 +67,8 @@ Text DoSomething(Integer _Id) {
 	}
 
 	foreach (Player in Players) {
-		declare Text LibFoo_VariableForSomehting for Player;
-		VariableForSomehting = "42";
+		declare Text LibFoo_VariableForSomething for Player;
+		LibFoo_VariableForSomething = "42";
 
 		declare netwrite Integer Net_LibFoo_Variable for Player;
 		Net_LibFoo_Variable = 42;
