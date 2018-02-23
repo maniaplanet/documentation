@@ -107,7 +107,7 @@ foreach (Event in PendingEvents) {
 	// On hit
 	else if (Event.Type == CSmModeEvent::EType::OnHit) {
 		if (Event.Victim == Null || Event.Shooter == Event.Victim) {
-			Discard(Event);
+			Events::Invalid(Event);
 		} else {
 			XmlRpc::OnHit(Event);
 			Events::Valid(Event);
