@@ -32,4 +32,4 @@ This will install `maniaplanet-server`, `maniaplanet-server-trackmania` and `man
 If you plan to use only Trackmania or Shootmania server, you can use:
 
 * For Trackmania: `sudo apt-get install --no-install-recommends maniaplanet-server-trackmania`
-* For Trackmania: `sudo apt-get install --no-install-recommends maniaplanet-server-shootmania`
+* For Shootmania: `sudo apt-get install --no-install-recommends maniaplanet-server-shootmania`
