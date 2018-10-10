@@ -78,7 +78,7 @@ taxonomy:
 | &emsp;&emsp;&lt;disable_coherence_checks&gt;False&lt;/disable_coherence_checks&gt;           |  |
 | &emsp;&emsp;&lt;disable_replay_recording&gt;False&lt;/disable_replay_recording&gt;           |  |
 | &emsp;&emsp;&lt;use_proxy&gt;False&lt;/use_proxy&gt;                                         |  |
-| &emsp;&emsp;&lt;proxy_url&gt;&lt;/proxy_url&gt;                                         | Not used is `use_proxy` is False |
+| &emsp;&emsp;&lt;proxy_url&gt;&lt;/proxy_url&gt;                                         | Not used if `use_proxy` is False |
 | &emsp;&emsp;&lt;proxy_login&gt;&lt;/proxy_login&gt;                                          |  |
 | &emsp;&emsp;&lt;proxy_password&gt;&lt;/proxy_password&gt;                                    |  |
 | &emsp;&lt;/system_config&gt;                                                                 |  |
