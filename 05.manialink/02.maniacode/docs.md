@@ -16,14 +16,14 @@ A ManiaCode is a XML file. You must write the content in the following markers:
 </maniacode>
 ```
 
-If we usethe line below, there will be not message at the end of the ManiaCode (useful for redirections)
+If we use the line below, there will be no message at the end of the ManiaCode (useful for redirections)
 
 ```xml
 <maniacode noconfirmation="1">
 ```
 
 ## The differents functions
-### Write a message message
+### Write a message
 
 ```xml
 <show_message>
@@ -40,7 +40,7 @@ If we usethe line below, there will be not message at the end of the ManiaCode (
 </install_map>
 ```
 
-### Play a map without install it
+### Play a map without installing it
 
 ```xml
 <play_map>
