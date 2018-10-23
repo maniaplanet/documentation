@@ -9,6 +9,8 @@ taxonomy:
 
 [TOC]
 
+>>>>>> Tutorial from **hideou.se** from [hideou.se][1]*
+
 Hey there. This is a tutorial for how to import your very own 3D car model into Trackmania 2. This tutorial assumes that you already know how to use 3DS Max and have a car model that you've created or imported from another game already. You will need the following programs and files if you don't already have them.
 
 * 3DS Max (Any version will do, but all screenshots are from 3DS Max 2011)
@@ -257,9 +259,7 @@ This file will tell other players where your skin is hosted - so they can automa
 
 And that's it for this tutorial! I hope it was helpful to you, and hey, if you'd like to donate some planets, my name is Hideous in the game. See you on the racetrack!
 
->>>>>> Tutorial from **hideou.se** from [hideou.se][1]*
-
 [1]: http://hideou.se/trackmania/
 [2]: https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop
 [3]: http://files.maniaplanet.com/tools/NadeoImporter.zip
-[4]: ./assets/helpers.zip
+[4]: helpers.zip
