@@ -369,7 +369,7 @@ We look at each event happening during the round. When an event is triggered, ac
   		Events::Valid(Event);
   	}
 
-When a player loses all his armors (when he is eliminated), we remove one point from his score. Then with `Events::Valid(Event)` we tell the server that the event has been processed.
+When a player loses all their armors (when they are eliminated), we remove one point from their score. Then with `Events::Valid(Event)` we tell the server that the event has been processed.
 
     // ---------------------------------- //
     // On hit
@@ -401,7 +401,7 @@ But if the sender and the receiver are different, we remove the number of armor 
     }
 
 
-If a player presses the backspace button (the default one to respawn), we remove one point from his score.
+If a player presses the backspace button (the default one to respawn), we remove one point from their score.
 
         // ---------------------------------- //
         // Others
@@ -440,7 +440,7 @@ And we validate all others events with their default treatment.
     }
 
 Outside of the loop of the events, there is some work to do. First we have to let the players spawn if they are eliminated.
-To do so, we create a loop which checks all the players' statuses. If a player is eliminated (by checking his status with `CSmPlayer::ESpawnStatus::NotSpawned`), and then we spawn the player on one of the free spawn point).
+To do so, we create a loop which checks all the players' statuses. If a player is eliminated (by checking their status with `CSmPlayer::ESpawnStatus::NotSpawned`), and then we spawn the player on one of the free spawn point).
 
     // ---------------------------------- //
     // Play sound and notice if someone is taking the lead

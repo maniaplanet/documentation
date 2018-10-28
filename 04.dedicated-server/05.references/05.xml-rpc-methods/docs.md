@@ -564,7 +564,7 @@ taxonomy:
 <tr>
 <td>KeepPlayerSlots(boolean)</td>
 <td>boolean</td>
-<td>Set whether, when a player is switching to spectator, the server should still consider him a player and keep his player slot, or not. Only available to Admin.</td>
+<td>Set whether, when a player is switching to spectator, the server should still consider them a player and keep their player slot, or not. Only available to Admin.</td>
 </tr>
 <tr>
 <td>IsKeepingPlayerSlots()</td>
@@ -1354,12 +1354,12 @@ taxonomy:
 <tr>
 <td>SpectatorReleasePlayerSlot(string)</td>
 <td>boolean</td>
-<td>Pass the login of the spectator. A spectator that once was a player keeps his player slot, so that he can go back to race mode. Calling this function frees this slot for another player to connect. Only available to Admin.</td>
+<td>Pass the login of the spectator. A spectator that once was a player keeps their player slot, so that they can go back to race mode. Calling this function frees this slot for another player to connect. Only available to Admin.</td>
 </tr>
 <tr>
 <td>SpectatorReleasePlayerSlotId(int)</td>
 <td>boolean</td>
-<td>Pass the playerid of the spectator. A spectator that once was a player keeps his player slot, so that he can go back to race mode. Calling this function frees this slot for another player to connect. Only available to Admin.</td>
+<td>Pass the playerid of the spectator. A spectator that once was a player keeps their player slot, so that they can go back to race mode. Calling this function frees this slot for another player to connect. Only available to Admin.</td>
 </tr>
 <tr>
 <td>ManualFlowControlEnable(boolean)</td>

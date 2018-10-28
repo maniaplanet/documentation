@@ -241,7 +241,7 @@ Sometimes, several pivots are chosen: you can switch from one to another using t
 	- `"AutoRotation` : the object rotates automatically according to the surface pointed by the mouse cursor  
 	- ex. an object that will always be perpendicular to the surface it is placed on:  
 		`<Options OneAxisRotation="true" AutoRotation="true" />`  
-	- ex. if you want to let the user choose the pivot to use but prevent him from placing it on another item:  
+	- ex. if you want to let the user choose the pivot to use but prevent them from placing it on another item:  
 		`<Options NotOnItem="true" ManualPivotSwitch="true" />`  
 
 4. Sidenote about Start/CheckPoint/Finish items

@@ -206,7 +206,7 @@ taxonomy:
 |**S_DeciderTurnLimit**|20|Points limit on decider map|
 |**S_QuickMode**|False|Multiplier for the sleep times between rounds|
 |**S_WarnWhenSpectating**|False|Send a message in the chat when a player switch to spectator mode|
-|**S_DisplaySponsors**|True|Display the sponsors of the attacker when spectating him|
+|**S_DisplaySponsors**|True|Display the sponsors of the attacker when spectating them|
 |**S_RestartMatchOnTeamChange**|False|Restart the match after the warm up if the teams have changed|
 |**S_UseDraft**|False|Use draft mode at match beginning|
 |**S_DraftBanNb**|4|Number of map to ban during draft|

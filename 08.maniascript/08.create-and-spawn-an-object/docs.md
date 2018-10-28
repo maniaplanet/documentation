@@ -54,7 +54,7 @@ If you want to give it to a player, then you should do this:
 AnObject.SetPlayer(_Player);
 ```
 
-In this way the object will be carried by the specified player. You'll be able to find the object located on a player by listing his objects with:
+In this way the object will be carried by the specified player. You'll be able to find the object located on a player by listing their objects with:
 
 ```
 Player.Objects[];

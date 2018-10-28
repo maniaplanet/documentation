@@ -55,7 +55,7 @@ Hit in this menu `Extended settings` and the settings panel will pop out on the 
 
 In the screenshot render menu you can make your selections, test a bit around with all these tools. Generally it´s better to set the `Antialiasing` to the highest level which is possible, the same for the `ts-samples`. You can try the settings which are shown on the screen here, they are good for nice screens.
 
-If you have made your choices, hit `Ok` to confirm and the render engine will start his work...
+If you have made your choices, hit `Ok` to confirm and the render engine will start its work...
 
 Now we are almost done with our work!
 

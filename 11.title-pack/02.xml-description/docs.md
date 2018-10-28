@@ -147,7 +147,7 @@ The game default menus will be used, unless you set a `manialink` url to be used
 
 TBD.
 
-Most of those are used to force values. for instance, if you leave the `mode name=""` empty, the user will be able to choose any mode among the files provided by the title or that he has on his hardrive.
+Most of those are used to force values. for instance, if you leave the `mode name=""` empty, the user will be able to choose any mode among the files provided by the title or that they have on their hardrive.
 
 The `mod` will be used on all the maps that haven't any specific mod.
 

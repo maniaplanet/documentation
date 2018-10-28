@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-It's possible to customize the parameters of a player when you spawn him (or while he plays but let's assume the first situation).
+It's possible to customize the parameters of a player when you spawn them (or while they play but let's assume the first situation).
 
 Instead of calling the function `SM::SpawnPlayer(_Player, 0, MapLandmarks_PlayerSpawn[SpawnId]);`, we'll create our own function to call to spawn of player.
 
