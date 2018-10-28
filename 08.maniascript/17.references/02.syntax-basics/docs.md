@@ -344,7 +344,7 @@ Players[1].Score += 1000;
    // Gives 1000 points to the 2nd best player, which is Bob
 
    // those 2 line are completely equivalent :
-   //    they will log Bob, because he has an higher score right now.
+   //    they will log Bob, because he has a higher score right now.
 log(BestPlayer.Login);
 log(Players[0].Login);
 ```

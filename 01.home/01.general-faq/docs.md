@@ -43,9 +43,9 @@ You can generate a new validation code through the Player Page at this address: 
 You can redownload the Maniaplanet client at this address: [https://www.maniaplanet.com/download/](https://www.maniaplanet.com/download/)
 
 ## I want to report bad language or bad behavior in the game from a player, how can I do that?
-While in game, if you suspect a player from any unauthorized behavior (cheating, bad language, etc), you can report him easily through in game:
+While in game, if you suspect a player from any unauthorized behavior (cheating, bad language, etc), you can report them easily through in game:
 
-Just check out the player nickname. Click "Tab" to open the player listing and click on the little buddy icon next to his name.
+Just check out the player nickname. Click "Tab" to open the player listing and click on the little buddy icon next to their name.
 
 Then, click on report abuse and follow the procedure. The report will go to the server admin who will be able to handle the situation or to us if this is an official server.
 
@@ -60,8 +60,8 @@ Actually there are 8 officials modes developed by Nadeo for ShootMania Storm:
 * Melee: Free for All, the player has a certain amount of hit to do to win the map
 * Royal: A survival Free for All, where the aim is to be the last man standing at the end of the round. It’s possible to activate a sphere which will shrink the playing field via a pole which is generally located at the center of the map.
 * Battle : It’s a team-based pole capture mode. The goal is to capture the poles of the opponent team or to have the highest capture rate at the end of the timer to win a round.
-* Elite: a 3 vs 3 mode. On the field there is an offender equipped with a laser gun (can eliminate an opponent in one hit) with 3 armor points, must survive 45 seconds against 3 defenders equipped with rocket launchers (one armor damage per rocket). Once the time expires, he has 15 seconds to capture the pole or eliminate the 3 defenders (he can also do it the 45 first seconds) to win the round.
-* Joust: 1 v 1 mode. Players have limited ammunitions. They have to touch one of the poles present in the map to reload their weapons. To win a round, a player must hit his opponent a certain amount of time.
+* Elite: a 3 vs 3 mode. On the field there is an offender equipped with a laser gun (can eliminate an opponent in one hit) with 3 armor points, must survive 45 seconds against 3 defenders equipped with rocket launchers (one armor damage per rocket). Once the time expires, they have 15 seconds to capture the pole or eliminate the 3 defenders (they can also do it the 45 first seconds) to win the round.
+* Joust: 1 v 1 mode. Players have limited ammunitions. They have to touch one of the poles present in the map to reload their weapons. To win a round, a player must hit their opponent a certain amount of time.
 * Combo: A competitive 2 v 2 mode. Eliminate all your opponents before they have the time to respawn. When a player is eliminated, their team will take more time to respawn. Bonus boxes are available on the map to unlock new weapons for the round and reload your armor.
 * Warlords: Warlords is a turn-based, top-down view game. Players (2 to 6) control the galaxy. The goal in Warlords is to expand your empire by taking control on free planets and making opponents your vassals. Futhermore, each planet provides you with gold which will allow you to conquer planets or protect your own ones.
 

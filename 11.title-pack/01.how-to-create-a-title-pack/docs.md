@@ -64,7 +64,7 @@ X:\Path\To\ManiaPlanet\ManiaPlanet.exe /testtitle=TitlePack_Name@YourLogin
 While in *Test mode*, if you want to refresh the manialinks/scripts of the title, press `Shift + Scroll lock`.
 
 ## Extra contents
-You can also add **extra contents** in the pack, to make it available to the player when he is in the title.
+You can also add **extra contents** in the pack, to make it available to the player when they are in the title.
 Click on contents, an you'll see all data automatically included for the title description.
 
 You can click on "add" to add extra contents.

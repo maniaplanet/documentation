@@ -32,7 +32,7 @@ ActionLoad(Player, CSmMode::EActionSlot::Slot_A, G_MyCustomWeapon);
 ActionBind(Player, CSmMode::EActionSlot::Slot_A, CSmMode::EActionInput::Weapon);
 ```
 
-`CSmMode::EActionInput::Weapon` is referencing the fire button (left click usually), if you want to put an action on the right-click, you have to specify `Movement` as input instead of `Weapon`. But if you do that, the player won't be able to jump/use his stamina.
+`CSmMode::EActionInput::Weapon` is referencing the fire button (left click usually), if you want to put an action on the right-click, you have to specify `Movement` as input instead of `Weapon`. But if you do that, the player won't be able to jump/use their stamina.
 
 The actions can be assigned on the buttons 1, 2, 3 or 4 through `Activable1`, `Activable2`, `Activable3` and `Activable4`.
 
@@ -43,7 +43,7 @@ For a bullet, the state of an action is symbolized with its first parameter: `Ev
 
 If you want to retrieve the damage done by the bullet, you should check the second parameter of the action: `Event.Param2[0]` and be sure that the event sent by action is `"damage"` for the first parameter. Note that the parameter is a Text type, so you have to convert it with the TextLib if you want to use it directly during the calculation of the damage.
 
->>>>> Note also the parameters can be altered by the creator of the action (if he has customized the script of the weapon to do so).
+>>>>> Note also the parameters can be altered by the creator of the action (if they have customized the script of the weapon to do so).
 
 Here is an example on how to manage the event of an action:
 

@@ -19,7 +19,7 @@ We provide an official implementation for PHP: https://github.com/maniaplanet/oa
   * `scope`: space separated list of scopes
   * `redirect_uri`: one the of the redirect URI mentioned in your Web Services application
   * `state`: a non predictable random string. You should store this value and check if the same is returned at other stages.
-2. The use authorize your application, he is redirected to the `redirect_uri` with the query parameters:
+2. The use authorize your application, they are redirected to the `redirect_uri` with the query parameters:
   * `code`
   * `state`: the state you provided at stage 1
 3. Your application should send the POST request to [https://v4.live.maniaplanet.com/login/oauth2/access_token](https://v4.live.maniaplanet.com/login/oauth2/access_token) with the parameters:
@@ -62,7 +62,7 @@ To be used with user-agent-based clients that cannot keeps a secret.
    * `redirect_uri`: one the of the redirect URI mentionned in your Web Services application
    * `scope`: a space separated list of scopes
    * `state`
-2. The user approves, he is redirected to the `redirect_uri` with the following parameters in the query string:
+2. The user approves, they are redirected to the `redirect_uri` with the following parameters in the query string:
     * `token_type`: the value `Bearer`
     * `expires_in`: an integer representing the TTL of the access token
     * `access_token`: the access token

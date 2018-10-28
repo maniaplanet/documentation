@@ -85,7 +85,7 @@ The maps and groups are sorted in alphabetical order of the file names, so prefi
 >>>>> You can also modify most of these parameters in the [ManiaPlanetTitle.xml](xml_description.html) file in the folder of the Title Pack.
 
 ## Extra contents
-You can also add **extra contents** in the pack, to make it available to the player when he is in the title.
+You can also add **extra contents** in the pack, to make it available to the player when they are in the title.
 Click on contents, an you'll see all data automatically included for the title description.
 
 You can click on "add" to add extra contents.
