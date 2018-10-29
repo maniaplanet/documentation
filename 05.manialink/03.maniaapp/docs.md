@@ -126,24 +126,19 @@ Exemple :
 And the ManiaLink :
 
 ```
-<?xml version="1.0" encoding="utf-8"?>
-<maniaapp>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<manialink version="3">
     <script><!--
-        #RequireContext CManiaApp
-
-        main() {    
-            declare CUILayer MyLayer;
-
-            MyLayer = UILayerCreate();
-            MyLayer.IsVisible = True; 
-            MyLayer.ManialinkPage = ManiaAppBaseUrl ^ "Layer_MyLayer.xml";
+        main() {
+            declare Text WelcomeMessage for Page;
+            log(WelcomeMessage);
 
             while (True) {
                 yield;
             }
         }
-        --></script>
-</maniaapp>
+    --></script>
+</manialink>
 ```
 
 It will log `Hello from ManiaApp!` in the console.
