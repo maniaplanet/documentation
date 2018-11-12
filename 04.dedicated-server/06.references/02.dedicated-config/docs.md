@@ -5,81 +5,94 @@ taxonomy:
         - docs
 ---
 
-| Dedicated cfg file line                                                                                  | Explaination |
-| --                                                                                           | -- |
-| &lt;?xml version="1.0" encoding="utf-8"?&gt;                                                 |  |
-| &lt;dedicated&gt;                                                                            |  |
-| &emsp;&lt;authorization_levels&gt;                                                           |  |
-| &emsp;&emsp;&lt;level&gt;                                                                    |  |
-| &emsp;&emsp;&emsp;&lt;name&gt;SuperAdmin&lt;/name&gt;                                        |  |
-| &emsp;&emsp;&emsp;&lt;password&gt;SuperAdmin&lt;/password&gt;                                |  |
-| &emsp;&emsp;&lt;/level&gt;                                                                   |  |
-| &emsp;&emsp;&lt;level&gt;                                                                    |  |
-| &emsp;&emsp;&emsp;&lt;name&gt;Admin&lt;/name&gt;                                             |  |
-| &emsp;&emsp;&emsp;&lt;password&gt;Admin&lt;/password&gt;                                     |  |
-| &emsp;&emsp;&lt;/level&gt;                                                                   |  |
-| &emsp;&emsp;&lt;level&gt;                                                                    |  |
-| &emsp;&emsp;&emsp;&lt;name&gt;User&lt;/name&gt;                                              |  |
-| &emsp;&emsp;&emsp;&lt;password&gt;User&lt;/password&gt;                                      |  |
-| &emsp;&emsp;&lt;/level&gt;                                                                   |  |
-| &emsp;&lt;/authorization_levels&gt;                                                          |  |
-| &emsp;&lt;masterserver_account&gt;                                                           |  |
-| &emsp;&emsp;&lt;login&gt;&lt;/login&gt;                                                      |  |
-| &emsp;&emsp;&lt;password&gt;&lt;/password&gt;                                                |  |
-| &emsp;&emsp;&lt;validation_key&gt;&lt;/validation_key&gt;                                    |  |
-| &emsp;&lt;/masterserver_account&gt;                                                          |  |
-| &emsp;&lt;server_options&gt;                                                                 |  |
-| &emsp;&emsp;&lt;name&gt;Test server&lt;/name&gt;                                             |  |
-| &emsp;&emsp;&lt;comment&gt;&lt;/comment&gt;                                                  |  |
-| &emsp;&emsp;&lt;hide_server&gt;0&lt;/hide_server&gt;                                         |  |
-| &emsp;&emsp;&lt;max_players&gt;32&lt;/max_players&gt;                                        |  |
-| &emsp;&emsp;&lt;password&gt;&lt;/password&gt;                                                |  |
-| &emsp;&emsp;&lt;max_spectators&gt;32&lt;/max_spectators&gt;                                  |  |
-| &emsp;&emsp;&lt;password_spectator&gt;&lt;/password_spectator&gt;                            |  |
-| &emsp;&emsp;&lt;keep_player_slots&gt;False&lt;/keep_player_slots&gt;                         |  |
-| &emsp;&emsp;&lt;ladder_mode&gt;forced&lt;/ladder_mode&gt;                                    |  |
-| &emsp;&emsp;&lt;enable_p2p_upload&gt;True&lt;/enable_p2p_upload&gt;                          |  |
-| &emsp;&emsp;&lt;enable_p2p_download&gt;False&lt;/enable_p2p_download&gt;                     |  |
-| &emsp;&emsp;&lt;callvote_timeout&gt;60000&lt;/callvote_timeout&gt;                           |  |
-| &emsp;&emsp;&lt;callvote_ratio&gt;0.05&lt;/callvote_ratio&gt;                                |  |
-| &emsp;&emsp;&lt;callvote_ratios&gt;                                                          |  |
-| &emsp;&emsp;&emsp;&lt;voteratio command="Ban" ratio="-1" /&gt;                               |  |
-| &emsp;&emsp;&lt;/callvote_ratios&gt;                                                         |  |
-| &emsp;&emsp;&lt;allow_map_download&gt;True&lt;/allow_map_download&gt;                        |  |
-| &emsp;&emsp;&lt;autosave_replays&gt;False&lt;/autosave_replays&gt;                           |  |
-| &emsp;&emsp;&lt;autosave_validation_replays&gt;False&lt;/autosave_validation_replays&gt;     |  |
-| &emsp;&emsp;&lt;referee_password&gt;&lt;/referee_password&gt;                                |  |
-| &emsp;&emsp;&lt;referee_validation_mode&gt;0&lt;/referee_validation_mode&gt;                 |  |
-| &emsp;&emsp;&lt;use_changing_validation_seed&gt;False&lt;/use_changing_validation_seed&gt;   |  |
-| &emsp;&emsp;&lt;disable_horns&gt;False&lt;/disable_horns&gt;                                 |  |
-| &emsp;&emsp;&lt;clientinputs_maxlatency&gt;0&lt;/clientinputs_maxlatency&gt;                 |  |
-| &emsp;&lt;/server_options&gt;                                                                |  |
-| &emsp;&lt;system_config&gt;                                                                  |  |
-| &emsp;&emsp;&lt;connection_uploadrate&gt;8000&lt;/connection_uploadrate&gt;                  |  |
-| &emsp;&emsp;&lt;connection_downloadrate&gt;8000&lt;/connection_downloadrate&gt;              |  |
-| &emsp;&emsp;&lt;allow_spectator_relays&gt;False&lt;/allow_spectator_relays&gt;               |  |
-| &emsp;&emsp;&lt;p2p_cache_size&gt;600&lt;/p2p_cache_size&gt;                                 |  |
-| &emsp;&emsp;&lt;force_ip_address&gt;&lt;/force_ip_address&gt;                                |  |
-| &emsp;&emsp;&lt;server_port&gt;2350&lt;/server_port&gt;                                      |  |
-| &emsp;&emsp;&lt;server_p2p_port&gt;3450&lt;/server_p2p_port&gt;                              |  |
-| &emsp;&emsp;&lt;client_port&gt;0&lt;/client_port&gt;                                         |  |
-| &emsp;&emsp;&lt;bind_ip_address&gt;&lt;/bind_ip_address&gt;                                  |  |
-| &emsp;&emsp;&lt;use_nat_upnp&gt;&lt;/use_nat_upnp&gt;                                        |  |
-| &emsp;&emsp;&lt;gsp_name&gt;&lt;/gsp_name&gt;                                                |  |
-| &emsp;&emsp;&lt;gsp_url&gt;&lt;/gsp_url&gt;                                                  |  |
-| &emsp;&emsp;&lt;xmlrpc_port&gt;5000&lt;/xmlrpc_port&gt;                                      |  |
-| &emsp;&emsp;&lt;xmlrpc_allowremote&gt;False&lt;/xmlrpc_allowremote&gt;                       |  |
-| &emsp;&emsp;&lt;scriptcloud_source&gt;nadeocloud&lt;/scriptcloud_source&gt;                  |  |
-| &emsp;&emsp;&lt;blacklist_url&gt;&lt;/blacklist_url&gt;                                      |  |
-| &emsp;&emsp;&lt;guestlist_filename&gt;&lt;/guestlist_filename&gt;                            |  |
-| &emsp;&emsp;&lt;blacklist_filename&gt;&lt;/blacklist_filename&gt;                            |  |
-| &emsp;&emsp;&lt;title&gt;SMStorm&lt;/title&gt;                                               |  |
-| &emsp;&emsp;&lt;minimum_client_build&gt;&lt;/minimum_client_build&gt;                        |  |
-| &emsp;&emsp;&lt;disable_coherence_checks&gt;False&lt;/disable_coherence_checks&gt;           |  |
-| &emsp;&emsp;&lt;disable_replay_recording&gt;False&lt;/disable_replay_recording&gt;           |  |
-| &emsp;&emsp;&lt;use_proxy&gt;False&lt;/use_proxy&gt;                                         |  |
-| &emsp;&emsp;&lt;proxy_url&gt;&lt;/proxy_url&gt;                                         | Not used if `use_proxy` is False |
-| &emsp;&emsp;&lt;proxy_login&gt;&lt;/proxy_login&gt;                                          |  |
-| &emsp;&emsp;&lt;proxy_password&gt;&lt;/proxy_password&gt;                                    |  |
-| &emsp;&lt;/system_config&gt;                                                                 |  |
-| &lt;/dedicated&gt;                                                                           |  |
+---
+title: 'Dedicated config'
+taxonomy:
+    category:
+        - docs
+---
+
+Dedicated cfg                                                                               
+--           
+```                                                                               
+<?xml version="1.0" encoding="utf-8"?>
+<dedicated>
+    <authorization_levels>
+        <level>
+            <name>SuperAdmin</name>
+            <password>SuperAdmin</password>
+        </level>
+        <level>
+            <name>Admin</name>
+            <password>Admin</password>
+        </level>
+        <level>
+            <name>User</name>
+            <password>User</password>
+        </level>
+    </authorization_levels>
+    <masterserver_account>
+        <login></login>
+        <password></password>
+        <validation_key></validation_key>
+    </masterserver_account>
+    <server_options>
+        <name>Test server</name>
+        <comment></comment>
+        <hide_server>0</hide_server>
+        <max_players>32</max_players>
+        <password></password>
+        <max_spectators>32</max_spectators>
+        <password_spectator></password_spectator>
+        <keep_player_slots>False</keep_player_slots>
+        <ladder_mode>forced</ladder_mode>
+        <enable_p2p_upload>True</enable_p2p_upload>
+        <enable_p2p_download>False</enable_p2p_download>
+        <callvote_timeout>60000</callvote_timeout>
+        <callvote_ratio>0.05</callvote_ratio>
+        <callvote_ratios>
+            <voteratio command="Ban" ratio="-1" />
+        </callvote_ratios>
+        <allow_map_download>True</allow_map_download>
+        <autosave_replays>False</autosave_replays>
+        <autosave_validation_replays>False</autosave_validation_replays>
+        <referee_password></referee_password>
+        <referee_validation_mode>0</referee_validation_mode>
+        <use_changing_validation_seed>False</use_changing_validation_seed>
+        <disable_horns>False</disable_horns>
+        <clientinputs_maxlatency>0</clientinputs_maxlatency>                <!-- 0 is automatic adjustment -->
+		<server_plugin></server_plugin>                                     <!-- Server plugin file to load, from UserData/Scripts. -->
+		<server_plugin_settings>
+            <setting name="S_Hello" type="text" value="Hello World"/>
+		</server_plugin_settings>
+    </server_options>
+    <system_config>
+        <connection_uploadrate>8000</connection_uploadrate>
+        <connection_downloadrate>8000</connection_downloadrate>
+        <allow_spectator_relays>False</allow_spectator_relays>
+        <p2p_cache_size>600</p2p_cache_size>
+        <force_ip_address></force_ip_address>
+        <server_port>2350</server_port>
+        <server_p2p_port>3450</server_p2p_port>
+        <client_port>0</client_port>
+        <bind_ip_address></bind_ip_address>
+        <use_nat_upnp></use_nat_upnp>
+        <gsp_name></gsp_name>
+        <gsp_url></gsp_url>
+        <xmlrpc_port>5000</xmlrpc_port>
+        <xmlrpc_allowremote>False</xmlrpc_allowremote>
+        <scriptcloud_source>nadeocloud</scriptcloud_source>
+        <blacklist_url></blacklist_url>
+        <guestlist_filename></guestlist_filename>
+        <blacklist_filename></blacklist_filename>
+        <title>SMStorm</title>
+        <minimum_client_build></minimum_client_build>
+        <disable_coherence_checks>False</disable_coherence_checks>
+        <disable_replay_recording>False</disable_replay_recording>
+        <use_proxy>False</use_proxy>
+        <proxy_url></proxy_url>                                     <!-- Not used if use_proxy is False -->
+        <proxy_login></proxy_login>
+        <proxy_password></proxy_password>
+    </system_config>
+</dedicated>
+```
