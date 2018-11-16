@@ -15,7 +15,7 @@ Add this to your APT source configuration, in `/etc/apt/sources.list.d/maniaplan
 
 Load our GPG key:
 
-	 sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 312C7E7F7CB56282
+	 sudo apt-key adv --keyserver keys.gnupg.net --recv-keys 00AD7462840A6C13
      
 Update:
 
