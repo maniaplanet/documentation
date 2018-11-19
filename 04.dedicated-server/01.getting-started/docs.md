@@ -9,9 +9,9 @@ Using Debian/Ubuntu? You can use our [APT repository](../references/apt-reposito
 
 ## Quick start
 
-1. Download and extract the latest dedicated server at http://files.v04.maniaplanet.com/server/ManiaplanetServer_Latest.zip
+1. Download and extract the latest dedicated server at [http://files.v04.maniaplanet.com/server/ManiaplanetServer_Latest.zip](http://files.v04.maniaplanet.com/server/ManiaplanetServer_Latest.zip)
 2. Download the titlepacks you want to host your server for, and put them in the `Packs` folder. See below for links.
-3. Create a dedicated server login on your [PlayerPage](https://maniaplanet.com/account/dedicated-servers)
+3. Create a dedicated server login on your [Player page](https://maniaplanet.com/account/dedicated-servers)
 4. Create a Dedicated Config File named `dedicated_cfg.txt` in the folder `UserData\Config` by using the file `UserData\Config\dedicated_cfg.default.txt` as a template. For more info, see below.
 5. Create a new MatchSettings (also called GameSettings) file called `matchsettings.txt` in the folder `UserData\Maps\MatchSettings`. You should use [a template](https://www.maniaplanet.com/account/dedicated-servers/helper) corresponding to your title in this folder. For more info, as well as how to add maps to this file, see below.
 6. Start your server with the mininal options: `ManiaPlanetServer /nodaemon /dedicated_cfg=dedicated_cfg.txt /game_settings=MatchSettings/matchsettings.txt`
@@ -22,7 +22,7 @@ Using Debian/Ubuntu? You can use our [APT repository](../references/apt-reposito
 
 ### Download
 
-The archive containing both Linux and Windows server is located at http://files.v04.maniaplanet.com/server/ManiaplanetServer_Latest.zip
+The archive containing both Linux and Windows server is located at [http://files.v04.maniaplanet.com/server/ManiaplanetServer_Latest.zip](http://files.v04.maniaplanet.com/server/ManiaplanetServer_Latest.zip)
 
 ### Title packs
 
@@ -44,7 +44,7 @@ Download the titlepack file you want to host a server for, and put it in the `Pa
 ### Dedicated Server Login
 A dedicated server login is required for internet servers. You can start LAN servers without login.
 
-The **dedicated login** can be created on your [PlayerPage](https://maniaplanet.com/account/dedicated-servers) and you can have multiple dedicated server logins. Just fill in the desired login-name, password, and server location which you want it to bind to.
+The **dedicated login** can be created on your [Player page](https://maniaplanet.com/account/dedicated-servers) and you can have multiple dedicated server logins. Just fill in the desired login-name, password, and server location which you want it to bind to.
 
 ### DedicatedConfig file
 

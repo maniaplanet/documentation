@@ -81,5 +81,4 @@ Some of these editors have a syntax highlight (or even auto-completion) plugins 
 
 * [ManiaScript syntax highlighting and auto-completion for Microsoft Visual Code](https://marketplace.visualstudio.com/items?itemName=mmcfarland.vscode-maniascript) by tonechild
 * [ManiaScript syntax highlighting and auto-completion for Sublime Text 2/3](https://github.com/ManiaPlanet/Sublime-ManiaScript) by Cerovan
-* [ManiaScript syntax highlighting and auto-completion for Sublime Text 2](https://github.com/Tgys/ST2-ManiaScript) by TGYoshi
 * [Maniascript syntax highlighting for Notepad++](https://github.com/ManiaPlanet/notepadplusplus-maniascript) by Magnetik

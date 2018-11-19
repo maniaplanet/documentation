@@ -136,8 +136,7 @@ Dès lors que vous avez utilisé le Service en ligne et ses services, vous êtes
 Il est recommandé aux utilisateurs de prendre des précautions particulières dans le cadre de la divulgation de leurs propres informations personnelles.
 PAR LES PRESENTES, VOUS RECONNAISSEZ AVOIR PRIS CONNAISSANCE ET COMPRIS LE CONTRAT DE LICENCE ET AVOIR ACCEPTE QUE L'ACTION D'INSTALLER LE PROGRAMME EST UNE CONFIRMATION DE VOTRE ACCEPTATION D’ETRE LIE PAR LES MODALITES ET CONDITIONS DU CONTRAT DE LICENCE DEFINIES DANS LES PRESENTES. VOUS RECONNAISSEZ ET ACCEPTEZ QUE LE PRESENT CONTRAT DE LICENCE STIPULE L’INTEGRALITE ET L’EXCLUSIVITE DE L’ACCORD INTERVENU ENTRE UBISOFT ET VOUS ET QUE LE CONTRAT DE LICENCE REMPLACE TOUT ACCORD ANTERIEUR OU ACTUEL, ORAL OU ECRIT, AINSI QUE TOUTE AUTRE COMMUNICATION ENTRE UBISOFT ET VOUS, NOTAMMENT TOUT CONTRAT DE LICENCE ECRIT INCOMPATIBLE ACCOMPAGNANT LE PROGRAMME.
 
-UBISOFT peut, de temps à autre, apporter des modifications aux modalités et conditions applicables à l'utilisation du Service en ligne et ces adaptations prendront effet, immédiatement, une fois rendues disponibles par mise à jour ou à l’adresse suivante: http://www.maniaplanet.com/eula 
-
+UBISOFT peut, de temps à autre, apporter des modifications aux modalités et conditions applicables à l'utilisation du Service en ligne et ces adaptations prendront effet, immédiatement, une fois rendues disponibles par mise à jour
 UBISOFT peut aussi, à tout moment et pour quelque raison que ce soit, supprimer ou suspendre l’accès du Service en ligne, sans préavis et sans obligation.
 
 

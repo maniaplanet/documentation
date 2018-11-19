@@ -21,7 +21,7 @@ But don´t forget that you have to work on two files to set up a custom light:
 
 Both files need the same light design/outfit that the illumination will look good. Inside the DetailsIllum.dds you can set up the light a bit different (same outfit but other light effect is possible, f.e. a highly illuminated brake light or similar).
 
-Take as reference for that action the Nadeo specifications > http://www.maniapark.com/forum/viewtopic.php?f=14&t=19105 and the Nadeo Original Canyon Car files > http://www.maniapark.com/ressource.php?id=1 (I used this file in the picture here)
+Take as reference for that action the [Nadeo specifications](http://www.maniapark.com/forum/viewtopic.php?f=14&t=19105) and the [Nadeo Original Canyon Car files](http://www.maniapark.com/ressource.php?id=1) (I used this file in the picture here)
 
 ![](http://trackmania-carpark.com/imagespark/up3/4f57413c5e36c.jpg)
 
@@ -46,6 +46,6 @@ DDS settings for export:
 
 Don´t forget to save as DXT5 with interpolated alpha DDS with mipmaps and your custom brake lights/other light parts will work.
 
-As example i used this technique on my "Black Sheep" skin to light up the rims and other custom lights (only possible because the rims are included inside the DetailsDiffuse.dds) > http://www.maniapark.com/ressource.php?id=287 or another example for custom back and brake lights are my "Ultimax" skin > http://www.maniapark.com/ressource.php?id=253
+As example i used this technique on my ["Black Sheep" skin](http://www.maniapark.com/ressource.php?id=287) to light up the rims and other custom lights (only possible because the rims are included inside the DetailsDiffuse.dds) or another example for custom back and brake lights are my ["Ultimax" skin](http://www.maniapark.com/ressource.php?id=253).
 
 >>>> Alpha channel must be correct that the lights will work correctly. Remember that for the light part all files have to match/fit together: DetailsDiffuse.dds // DetailsIllum.dds

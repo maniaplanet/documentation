@@ -55,4 +55,4 @@ Here is a cheatsheet:
 
 ## Resources
 
-- [Nickr](http://nickr.brun.pl/) is a Website to help you compose your custom nickname.
+- [TMU KrazyColors](http://kc.jfreu.com/) is a Website to help you compose your custom nickname.

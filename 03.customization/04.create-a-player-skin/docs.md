@@ -82,9 +82,9 @@ At this point remember that you don't steal images or characters made by other p
 
 
 # Share Your Skin
-Feel free to pm and I will upload your skin on our site ([http://the-team-mystery.com/][8])however I will probably just do that until the [maniapark][9] Shootmania section is online.
+You can share your skin easily with [Maniapark][8], which has a dedicated section (Shootmania => Skins).
 
-Once you have your skin somewhere online you will have to ensure that other players also see it and therefore you will have to create a locator file.  Create an empty txt file and open it. Enter the link to your uploaded skin (for example [http://the-team-mystery.com/tm2/JokerMan.zip][10]) Now save the file and rename the txt file to the same name as your zip file plus adding the .loc ending. So if your file is called mycoolskin.zip then you name your locatorfile mycoolskin.zip.loc
+Once you have your skin somewhere online you will have to ensure that other players also see it and therefore you will have to create a locator file.  Create an empty txt file and open it. Enter the link to your uploaded skin (for example [http://the-team-mystery.com/tm2/JokerMan.zip](#)) Now save the file and rename the txt file to the same name as your zip file plus adding the .loc ending. So if your file is called mycoolskin.zip then you name your locatorfile mycoolskin.zip.loc
 
 Now you only have to move that loc file into the same directory you put your skin file. If you don't remember it then here it is again: `username/my documents/maniaplanet/skins/vehicles/arenaplayer/`
 
@@ -99,9 +99,7 @@ You are done! I hope you found this helpful and have fun being creative!
 [2]: http://code.google.com/p/gimp-dds/
 [3]: http://www.adobe.com/products/photoshop.html
 [4]: http://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop
-[5]: http://www.mnwright.btinternet.co.uk/programs/dxtbmp.htm
-[6]: http://sourceforge.net/projects/sevenzip/
-[7]: http://www.rarlab.com/
-[8]: http://the-team-mystery.com/
-[9]: http://www.maniapark.com/
-[10]: http://the-team-mystery.com/tm2/JokerMan.zip
+[5]: http://www.mwgfx.co.uk/programs/dxtbmp.htm
+[6]: https://www.7-zip.org/
+[7]: https://www.win-rar.com/
+[8]: http://www.maniapark.com/

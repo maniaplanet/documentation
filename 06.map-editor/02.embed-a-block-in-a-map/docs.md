@@ -33,13 +33,12 @@ And here what I worked out so far:
 
 * [An overview of blender-shortcuts][7] (alphabetically)
 * [The Canyon Materials alphabetically + PhysicsIds + Textures][8]
-* [The PhysicsIds alphabetically][9]
+* The PhysicsIds alphabetically
 * An overview-picture of Canyon-Textures
 
 ![](Canyon_D-textures-overview.jpg)
 
-* [A HowTo for NadeoImporter][11]
-* [Some example files for the howTo][12] (blender-file, work-files & ready item)
+* [Some example files][9] (blender-file, work-files & ready item)
 
 Hope this is useful for anyone :)
 ***
@@ -47,13 +46,11 @@ Hope this is useful for anyone :)
 
 
 [1]: http://forum.maniaplanet.com/viewtopic.php?f=321&t=13673&hilit=importer&start=870
-[2]: ../nadeo-importer/getting-started
+[2]: ../../nadeo-importer/getting-started
 [3]: http://www.maniapark.com/liste_object.php?game=1
 [4]: http://vinummusik.de/Maxi031/ConvertAssistant/Welcome.html
 [5]: http://blender-tutorial.de/inhaltsverzeichnis-zum-blender-tutorial-11934/
 [6]: http://www.littlewebhut.com/blender/
 [7]: blender-shorcuts.pdf
 [8]: CanyonMaterials+Textures.pdf
-[9]: physicsIds.pdf
-[11]: HowTo_NadeoImporter.pdf
-[12]: arrow-example-files.zip
+[9]: arrow-example-files.zip

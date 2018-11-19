@@ -1402,4 +1402,3 @@ taxonomy:
 <td>Start a server on internet, using the current configuration. Only available to SuperAdmin.</td>
 </tr>
 </table>
-[older versions](https://github.com/maniaplanet/documentation/tree/gh-pages/dedicated-server/xmlrpc/methods)

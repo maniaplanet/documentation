@@ -5,7 +5,7 @@ taxonomy:
         - docs
 ---
 
-!!! Tutorial from ***xrayjay*** from this address: http://www.maniapark.com/forum/viewtopic.php?f=87&t=19101
+!!! Tutorial from ***xrayjay*** from [this address](http://www.maniapark.com/forum/viewtopic.php?f=87&t=19101)
 
 TM² arrives with an massive screenshot render engine which makes it possible to render very nice screens.
 I will show you how to use this tool.
@@ -16,7 +16,7 @@ You also have to check your game graphics settings, example configuration screen
 
 >>>>> It´s important that the track you drive for the screenshots is rendered with High or Ultra Quality shadows!
 
-You can however get premade replays for screenshots from here: http://www.maniapark.com/forum/viewtopic.php?p=177724#p177724
+You can however get premade replays for screenshots [from here](http://www.maniapark.com/forum/viewtopic.php?p=177724#p177724).
 
 Hit the `Editors` button in the menu
 ![](./mp4_home_canyon_edited.jpg)

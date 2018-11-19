@@ -7,19 +7,15 @@ taxonomy:
     category: docs
 ---
 
->>>>>> Note: Tutorial from **Zazibar** from [VineSauce forums][1]
->>>>> This tutorial works for all Trackmania² environments (Canyon, Stadium, Valley)
-
-
 You will need:
 
 * An image that you want to use as a sticker
 * Photoshop
 * NVIDIA Plugin for Photoshop
 
-Alternatively you can use [GIMP][2] and [this plugin][3] but it's not covered in this tutorial.
+Alternatively you can use [GIMP][1] and [this plugin][2] but it's not covered in this tutorial.
 
-First, download the [NVIDIA Plugin][4] and install it.
+First, download the [NVIDIA Plugin][3] and install it.
 
 Open Photoshop and open the image you want to use as a sticker. For this tutorial, I will be using this image of Snoop Dogg.
 
@@ -68,7 +64,6 @@ Now open Trackmania², select `Editors` -> `Paint` a car and select a car to pai
 
 
 
-[1]: http://vinesaucevidya.com/vinetalk/index.php?topic=850.msg13646#msg13646
-[2]: http://www.gimp.org/
-[3]: http://code.google.com/p/gimp-dds/
-[4]: http://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop#downloads
+[1]: http://www.gimp.org/
+[2]: http://code.google.com/p/gimp-dds/
+[3]: http://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop#downloads

@@ -26,10 +26,10 @@ What are the system requirements for Maniaplanet:
 * Drivers: DirectX® 11.0 with video drivers
 
 ## I want to redownload the Maniaplanet client
-If you want to redownload the Maniaplanet client, go at this address: [https://www.maniaplanet.com/download/](https://www.maniaplanet.com/download/)
+If you want to redownload the Maniaplanet client, go at this address: [https://www.maniaplanet.com/download](https://www.maniaplanet.com/download)
 
 ## I have lost my validation code
-You can generate a new validation code at this address: [https://www.maniaplanet.com/account/validation-code/](https://www.maniaplanet.com/account/validation-code/). You need to provide the key of one of your Maniaplanet title(s) to be able to generate a new one.
+You can generate a new validation code at this address: [https://www.maniaplanet.com/account/validation-code](https://www.maniaplanet.com/account/validation-code). You need to provide the key of one of your Maniaplanet title(s) to be able to generate a new one.
 
 
 # Technical
@@ -72,7 +72,7 @@ Always get the latest drivers of your graphics card from the manufacturer’s we
 
 * [NVidia](https://www.nvidia.com/Download/index.aspx)
 * [AMD (Radeon)](https://support.amd.com/en-us/download/)
-* [Intel](http://support.intel.com/support/) (Click Download Center then Graphics).
+* [Intel](http://support.intel.com/support/) (Click Download Drivers and Software then Graphics Drivers).
 
 Laptops can cause problems since most graphic chips manufacturers (including AMD and NVidia) don't support them in their drivers. Laptops often use proprietary drivers (supported by the assembler, but rarely updated). Some other, more complex manipulations can help: disable Fastwrite in the advanced properties of your card, reduce AGP aperture to 64 Mo, set AGP to 4X. Some display problems are linked to advanced functions (shadows, reflections...) that you can disable in the game's launcher.
 
@@ -87,10 +87,11 @@ In the game settings, you can lower the quality of the opponents.
 The sound may also cause lag on some machines (set in the audio settings).
 
 ## I have a 0xc150002 error code at launch
-You have to download and install the latest [Visual C++ Redistributable Package](http://www.microsoft.com/download/en/details.aspx?id==5555).
+You have to download and install the latest [Visual C++ Redistributable Package](http://www.microsoft.com/download/en/details.aspx?id=5555).
 
 ## I have another technical issue with one of the Maniaplanet titles
 >>> Please contact the Ubisoft Support at the following address: [http://support.ubisoft.com](http://support.ubisoft.com). If for any reason you do not find the answer to your question, you can click on the Ask a question link in the FAQ to send them an email, ensuring that they get all the important information on your system and your problem so they can answer correctly the first time.
 
 ## How can I create a dedicated server for a Maniaplanet game ?
-Everything is explained on [this page](https://www.maniaplanet.com/documentation/dedicated-server/getting-started) The files of the dedicated server are located in [this page](http://forum.maniaplanet.com/viewforum.php?f=261).
+Everything is explained on [this page](../../dedicated-server/getting-started).
+You can also consult the [dedicated section on the forum](http://forum.maniaplanet.com/viewforum.php?f=261).

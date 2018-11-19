@@ -135,7 +135,7 @@ By using the Online Service and its services you accept that this is the case an
 Users must take particular care in relation to the disclosure of their own personal information.
 You hereby acknowledge that you have read and understand the foregoing License Agreement and agree that the action of installing the Program is an acknowledgement of your agreement to be bound by the terms and conditions of the License Agreement contained herein. You also acknowledge and agree that this License Agreement is the complete and exclusive statement of the agreement between UBISOFT and you and that the License Agreement supersedes any prior or contemporaneous agreement, either oral or written, and any other communications between UBISOFT and you, including any inconsistent written license agreement accompanying the Program.
 
-UBISOFT may make alterations to the terms and conditions applicable to the use of the Online Service from time to time and these variations shall become effective immediately upon being accessible from an update or at: http://www.maniaplanet.com/eula 
+UBISOFT may make alterations to the terms and conditions applicable to the use of the Online Service from time to time and these variations shall become effective immediately upon being accessible from an update
 
 UBISOFT may also remove or suspend access to the Online Service at any time.
 
@@ -290,7 +290,7 @@ By using the Online Service and its services you accept that this is the case an
 Users must take particular care in relation to the disclosure of their own personal information.
 You hereby acknowledge that you have read and understand the foregoing License Agreement and agree that the action of installing the Program is an acknowledgement of your agreement to be bound by the terms and conditions of the License Agreement contained herein. You also acknowledge and agree that this License Agreement is the complete and exclusive statement of the agreement between UBISOFT and you and that the License Agreement supersedes any prior or contemporaneous agreement, either oral or written, and any other communications between UBISOFT and you, including any inconsistent written license agreement accompanying the Program.
 
-UBISOFT may make alterations to the terms and conditions applicable to the use of the Online Service from time to time and these variations shall become effective immediately upon being accessible from an update or at: http://www.maniaplanet.com/eula 
+UBISOFT may make alterations to the terms and conditions applicable to the use of the Online Service from time to time and these variations shall become effective immediately upon being accessible from an update
 
 UBISOFT may also remove or suspend access to the Online Service at any time.
 

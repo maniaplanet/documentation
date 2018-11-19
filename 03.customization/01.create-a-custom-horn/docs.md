@@ -7,20 +7,17 @@ taxonomy:
     category: docs
 ---
 
->>>>>> Tutorial from **Zazibar** from [VineSauce forums][1]
->>>>> This tutorial works for all Maniaplanet environments (Trackmania² Canyon, Trackmania² Stadium, Trackmania² Valley and Shootmania Storm)
-
 You will need:
 
 * A sound that you want to use as your horn
 * Audacity
 
-First, download and install [Audacity][2] if you don't already have it.
+First, download and install [Audacity][1] if you don't already have it.
 
-I usually get sounds/music from Youtube using [this website][3]. For this tutorial, I'll be using the .mp3 of this.
+I usually get sounds/music from Youtube using [this website][2]. For this tutorial, I'll be using the .mp3 of this.
 
 Dr Dre - The Next Episode
->>>> Note from Nadeo: the link has been removed for copyright reasons, we advise you to use *Creative Commons* (free) musics or sounds. You can find some on [Jamendo][4] for example
+>>>> Note from Nadeo: the link has been removed for copyright reasons, we advise you to use *Creative Commons* (free) musics or sounds. You can find some on [Jamendo][3] for example
 
 >>>> Please note that the maximum length your horn can be is 10 seconds. So obviously, I won't be using the entire song.
 
@@ -56,7 +53,6 @@ Here's a video of my result.
 
 
 
-[1]: http://vinesauce.com/vinetalk/index.php?topic=850.msg13647#msg13647
-[2]: http://audacity.sourceforge.net/
-[3]: http://www.youtube-mp3.org/
-[4]: http://www.jamendo.com/
+[1]: http://audacity.sourceforge.net/
+[2]: https://mp3-youtube.download
+[3]: http://www.jamendo.com/

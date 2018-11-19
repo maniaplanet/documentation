@@ -13,7 +13,7 @@ We provide an official implementation for PHP: https://github.com/maniaplanet/oa
 
 ### Auth code flow (or explicit flow, or server side flow)
 
-1. Redirect the user to [https://v4.live.maniaplanet.com/login/oauth2/authorize](https://v4.live.maniaplanet.com/login/oauth2/authorize) with the query parameters:
+1. Redirect the user to [https://prod.live.maniaplanet.com/login/oauth2/authorize](https://prod.live.maniaplanet.com/login/oauth2/authorize) with the query parameters:
   * `response_type`: the value `code`
   * `client_id`
   * `scope`: space separated list of scopes
@@ -22,7 +22,7 @@ We provide an official implementation for PHP: https://github.com/maniaplanet/oa
 2. The use authorize your application, they are redirected to the `redirect_uri` with the query parameters:
   * `code`
   * `state`: the state you provided at stage 1
-3. Your application should send the POST request to [https://v4.live.maniaplanet.com/login/oauth2/access_token](https://v4.live.maniaplanet.com/login/oauth2/access_token) with the parameters:
+3. Your application should send the POST request to [https://prod.live.maniaplanet.com/login/oauth2/access_token](https://prod.live.maniaplanet.com/login/oauth2/access_token) with the parameters:
   * `grant_type` the value `authorization_code`
   * `client_id`
   * `client_secret`
@@ -37,7 +37,7 @@ The answer will contain the keys:
 
 ### Refresh token flow
 
-1. Send a POST request to [https://v4.live.maniaplanet.com/login/oauth2/access_token](https://v4.live.maniaplanet.com/login/oauth2/access_token) with the parameters:
+1. Send a POST request to [https://prod.live.maniaplanet.com/login/oauth2/access_token](https://prod.live.maniaplanet.com/login/oauth2/access_token) with the parameters:
   * `grant_type`: the value `refresh_token`
   * `refresh_token`: a refresh token
   * `client_id`
@@ -55,7 +55,7 @@ The answer will contain the keys:
 
 To be used with user-agent-based clients that cannot keeps a secret.
 
-1. Redirect the user to [https://v4.live.maniaplanet.com/login/oauth2/authorize](https://v4.live.maniaplanet.com/login/oauth2/authorize) with the query parameters:
+1. Redirect the user to [https://prod.live.maniaplanet.com/login/oauth2/authorize](https://prod.live.maniaplanet.com/login/oauth2/authorize) with the query parameters:
    * `response_type`: the value `token`
    * `client_id`
    * `client_secret`
@@ -71,7 +71,7 @@ To be used with user-agent-based clients that cannot keeps a secret.
 
 It should be used for machine to machine authentication. 
 
-1. Send a POST request to [https://v4.live.maniaplanet.com/login/oauth2/access_token](https://v4.live.maniaplanet.com/login/oauth2/access_token) with the parameters:
+1. Send a POST request to [https://prod.live.maniaplanet.com/login/oauth2/access_token](https://prod.live.maniaplanet.com/login/oauth2/access_token) with the parameters:
   * `grant_type`: the value `client_credentials`
   * `refresh_token`: a refresh token
   * `client_id`

@@ -9,7 +9,7 @@ taxonomy:
 
 ManiaLinks are the "web pages" of ManiaPlanet.
 
-ManiaLinks also refer to a short alias for a web page (like a domain name) in Maniaplanet. You can register for one on the [on the PlayerPage](https://v4.live.maniaplanet.com/account/manialinks).
+ManiaLinks also refer to a short alias for a web page (like a domain name) in Maniaplanet. You can register for one on the [on the Player page](https://prod.live.maniaplanet.com/account/manialinks).
 
 ## The structure of Manialinks
 ManiaLinks are very similar to the XML language except it's using specific tags. Manialink tag indicate what we're going to see on the screen. 

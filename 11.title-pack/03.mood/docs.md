@@ -149,13 +149,3 @@ These will change how the camera will adapt to the changes of lighting (going in
 
 
 **`<ColorGrading FileName="" Intensity="1"/>`** You can force a colorgrading effect for your mood, instead of using a MediaTrack. Add the name of the .png located in the mood folder. explanations of how it works [here](http://forum.maniaplanet.com/viewtopic.php?f=264&t=17358&p=157049&hilit=color+grading&sid=d7aed22430188f6bbcb8716ef5fadb38#p157049)
-
-
-# Settings of the moods
-
-* [Shootmania][1]
-* [Trackmania][2]
-
-
-[1]: ./shootmania_moods.html
-[2]: ./trackmania_moods.html

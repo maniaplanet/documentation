@@ -37,10 +37,10 @@ To recover lost activation keys please contact your retailer.
 If you continue to have a problem please contact the Ubisoft support at [http://support.ubi.com](http://support.ubi.com) and submit a question to retrieve your lost activation key. You must include your account details and e-mail address attached to the account.
 
 ## I have lost my validation code
-You can generate a new validation code through the Player Page at this address: [https://www.maniaplanet.com/account/validation-code/](https://www.maniaplanet.com/account/validation-code/)
+You can generate a new validation code through the Player Page at this address: [https://www.maniaplanet.com/account/validation-code](https://www.maniaplanet.com/account/validation-code)
 
 ## I want to redownload the Maniaplanet client
-You can redownload the Maniaplanet client at this address: [https://www.maniaplanet.com/download/](https://www.maniaplanet.com/download/)
+You can redownload the Maniaplanet client at this address: [https://www.maniaplanet.com/download](https://www.maniaplanet.com/download)
 
 ## I want to report bad language or bad behavior in the game from a player, how can I do that?
 While in game, if you suspect a player from any unauthorized behavior (cheating, bad language, etc), you can report them easily through in game:
@@ -75,7 +75,7 @@ You can unload a station by pressing the “Del” key on a station but note tha
 # Demo accounts
 
 ## What do i have access with a Maniaplanet demo account?
-From *Maniaplanet 4* you have access to the ***channels***. A channel is a place where are run programs created by Ubisoft Nadeo and the community based on Trackmania² or Shootmania Storm.  A program can feature a special map playlist, maps with custom items, modded environnement or almost total conversion from the Maniaplanet games. These programs are cycled at fixed times, like a tv show on a tv channel. To know what is currently live, you can check [this page](https://www.maniaplanet.com/channels).
+From *Maniaplanet 4* you have access to the ***channels***. A channel is a place where are run programs created by Ubisoft Nadeo and the community based on Trackmania² or Shootmania Storm.  A program can feature a special map playlist, maps with custom items, modded environnement or almost total conversion from the Maniaplanet games. These programs are cycled at fixed times, like a tv show on a tv channel. To know what is currently live, you can check these pages for [Trackmania](https://www.maniaplanet.com/channels/trackmania) and [Shootmania](https://www.maniaplanet.com/channels/shootmania).
 
 You have no playtime limit when playing on the channels on demo mode and you have access to all the programs of the channels.
 

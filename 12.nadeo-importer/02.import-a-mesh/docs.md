@@ -5,10 +5,8 @@ taxonomy:
         - docs
 ---
 
-[TOC]
-
 You can import meshes from the fbx file format (**maximum version 2014.1**)  
-Importer has been tested with files exported from Blender and 3dsMax (with Fbx 2012.2 exporter, available at http://usa.autodesk.com/fbx/)  
+Importer has been tested with files exported from Blender and 3dsMax (with Fbx 2012.2 exporter, [available here](https://www.autodesk.com/products/fbx/overview))
 3d file must contain meshes with materials.
 
 We distinguish 3 types of meshes : **static meshes**, **dynamic meshes** and **characters meshes**  
