@@ -5,13 +5,6 @@ taxonomy:
         - docs
 ---
 
----
-title: 'Dedicated config'
-taxonomy:
-    category:
-        - docs
----
-
 Dedicated cfg                                                                               
 --           
 ```                                                                               
