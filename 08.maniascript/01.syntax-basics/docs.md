@@ -24,19 +24,15 @@ Beware: Case is important, always!
 * Text: any character sequence between double quotes: "plop" "gouzi" or "456.32".
 
 **Protips**:
-- Inside a Text, the usual escape sequences such as "\n" or "\\" are supported.
-- You can also declare a Text value between 3 double quotes. When doing so, you won't need to escape chars, and it can expand on many lines. """plop="452.12.22" toto"""
+- Inside a Text, the usual escape sequences such as `"\n"` or `"\\"` are supported.
+- You can also declare a Text value between 3 double quotes. When doing so, you won't need to escape chars, and it can expand on many lines. `"""plop="452.12.22" toto"""`
 
 ## Variables
 
 ### Variable declaration
 In Maniascript, variables must be declared, either by specifying a Type, or an initial value:
 
-`declare Integer MyVariable;`
-
-or
-
-`declare MyVariable = 42.;`
+`declare Integer MyVariable;` or `declare MyVariable = 42;`
 
 After having declared a variable, you'll be able to use it to store data, but the type can't be changed afterwards.
 If the variable is defined as an Integer, you will never be able to store anything else inside. The same goes for other types.
@@ -89,8 +85,8 @@ declare Text hello = "world" // this text here will be ignored and is a comment
 /*
 all this text here is a comment, and is being ignored by the maniascript engine
 if (hello == "world") {
-    do something
-    }
+    doSomething();
+}
 */
 ```
 
@@ -198,9 +194,9 @@ foreach( /*Element*/  in /*Array*/ ) /*Instructions;*/
 foreach( /*Key*/ =>/*Element*/ in /*Array*/ ) /*Instructions;*/
 
 switch(/*Expression*/) {
-case Expression1: /*Instructions;*/
-case Expression2: /*Instructions;*/ .....
-default : /*Instructions;*/
+    case Expression1: /*Instructions;*/
+    case Expression2: /*Instructions;*/ .....
+    default : /*Instructions;*/
 }
 ```
 
@@ -212,7 +208,7 @@ Most Maniascripts are too complicated to fit in one set of instructions. That's 
 ```
 [TypeOfTheReturnedValue] [NameOfTheFunction] ([TypeArg1] [NameArg1], [TypeArg2] [NameArg2] .... )
 {
- [Instructions];
+    [Instructions];
 }
 ```
 
@@ -221,8 +217,8 @@ Here's an example:
 ```
 Integer Minimum (Integer A, Integer B)
 {
-if (A<B) return A;
-return B;
+    if (A<B) return A;
+    return B;
 }
 ```
 
@@ -285,7 +281,7 @@ List.remove(ValueToBeRemoved);
 declare DoesExist1 = List.existskey(Index); // equivalent to 0 <= Index <  List.count
 declare DoesExist2 = List.exists(ValueToBeFound);
 declare Index = List.keyof(ValueToBeFound); // such as List[Index] == ValueToBeFound
-List.clear();
+List.clear(); //Empty the list
 ```
 
 You can also declare an associative Array with keys of any type:
@@ -319,15 +315,13 @@ There's an array of players, sorted by descending score, called Players.
 One can write :
 
 ```
-declare BestPlayer <=> Players[0];  
-   // Alice is the best player, so BestPlayer "points" to Alice
+declare BestPlayer <=> Players[0];   // Alice is the best player, so BestPlayer "points" to Alice
 ```
 
 You would expect that :
 
 ```
-declare BestPlayer <=> Players[0];  
-   // Alice is the best player, so BestPlayer "points" to Alice
+declare BestPlayer <=> Players[0];   // Alice is the best player, so BestPlayer "points" to Alice
 {
     ... // Some code doing stuff
 }
@@ -338,8 +332,7 @@ log(BestPlayer.Login);
 *In ManiaScript, BestPlayer is an alias. So BestPlayer means "The player in first position in the array Players". That's why, if scores have been changed, maybe it does not mean Alice anymore.*
 
 ```
-declare BestPlayer <=> Players[0];  
-   // Alice is the best player, so BestPlayer "points" to Alice
+declare BestPlayer <=> Players[0];    // Alice is the best player, so BestPlayer "points" to Alice
 Players[1].Score += 1000;
    // Gives 1000 points to the 2nd best player, which is Bob
 
@@ -363,9 +356,9 @@ Players[1].Score += 1000;                   // Gives 1000 points to the 2nd best
 log(Players[BestPlayerId].Login);           // Will log Alice
 ```
 
-!!! The "log" will be a bit more time-consuming than the previous way : we have to find Alice in the array of players, from the Ident
+The "log" will be a bit more time-consuming than the previous way : we have to find Alice in the array of players, from the Ident
 
-!!! Yes, this can also be written
+Yes, this can also be written:
 
 ```
 declare BestPlayer <=> Players[Players[0].Id];  // will be an alias to Players[AliceId] and not Players[0]. Huge difference!
@@ -373,7 +366,7 @@ Players[1].Score += 1000;                       // Gives 1000 points to the 2nd 
 log(BestPlayer.Login);                          // Will log Alice. Will also cost more CPU, for the alias has to be resolved.  
 ```
 
-But there's a simpler way to do something similar
+But there's a simpler way to do something similar:
 
 ```
 declare BestPlayer = Players[0];    // Note the difference: I used = instead of <=>
@@ -382,7 +375,7 @@ Players[1].Score += 1000;           // Gives 1000 points to the 2nd best player,
 log(BestPlayer.Login);              // Will log Alice. Will also cost more CPU, for the alias has to be resolved.  
 ```
 
-Since we have unique idents for every class, this will result in having "real pointers". But they cost a bit more when set and accessed. Performance should not be an issue though. When in doubt, you should probably use =
+Since we have unique idents for every class, this will result in having "real pointers". But they cost a bit more when set and accessed. Performance should not be an issue though. When in doubt, you should probably use `=`.
 
 ### Tricky alias cases
 
@@ -413,7 +406,7 @@ When you call an API function, the result will be a "simplified" alias. Those ar
 
 ```
 declare MyLabel <=> GetFirstChild("Label");
-   // MyLabel is an alias to Page.MainFrame.Controls[IdOfTheFirstChildFound]
+// MyLabel is an alias to Page.MainFrame.Controls[IdOfTheFirstChildFound]
 ```
 Is behaving exactly like
 
