@@ -5,16 +5,8 @@ taxonomy:
         - docs
 ---
 
-It's possible to generate a simple documentation (functions and variables listing) for the ManiaScript API using a command of ManiaPlanet.exe.
 
-1. Locate the folder containing ManiaPlanet.exe.
-2. Create a new file in this folder and name it "GenerateDoc.bat".
-3. Edit the file and paste this line inside: `ManiaPlanet.exe  /generatescriptdoc=C:\Path\To\Folder\doc.h`.
-4. Replace `C:\Path\To\Folder\doc.h` by the path to the folder where you want the documentation file to be created.
-5. Save the file and execute it by double clicking on it.
-6. A command prompt window will be displayed and ManiaPlanet will start.
-7. You can close ManiaPlanet right after that.
-8. Check the folder you specified in the command line, you should see a doc.h file inside it. If you open it you will see a listing of all the functions and variables accessible in ManiaScript.
+>>>>>> The latest Maniaplanet reference generation can be found here: [https://maniaplanet.github.io/maniascript-reference/](https://maniaplanet.github.io/maniascript-reference/)
 
 Generate an html version of the documentation
 ======================
