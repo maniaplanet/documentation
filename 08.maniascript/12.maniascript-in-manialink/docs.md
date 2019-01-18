@@ -7,14 +7,12 @@ taxonomy:
 
 You can use some ManiaScript in your Manialink too and even have access to few script elements directly in your Manialink or in the ManiaScript of the Manialink.
 
-Please note that you can't use some of the ManiaScript functions and variables while you're in a Manialink.
-
 First to use some ManiaScript in your Manialink, you have to write the ManiaScript code after the Manialink code like this:
 
 ```
 Text MyManialink() {
 	declare Text MLText = """
-		<quad id="aQuad" pos="0 0" z-index="0" size="360 180" halign="center" image="file://Media/Manialinks/MyImage.dds"/>
+		<quad id="aQuad" pos="0 0" z-index="0" size="360 180" halign="center" scriptevents="1" image="file://Media/Manialinks/MyImage.dds"/>
 		<script><!--
 		main() {
 			declare Integer aVar = 0;
@@ -43,6 +41,8 @@ Text MyManialink() {
 	Layers::Attach("ExampleUI", Player);
 }
 ```
+
+>>>>> Please note the `scriptevents="1"` attribute on the quad that is mandatory to receive the events in your script.
 
 In this example you can see how the ManiaScript works in the Manialink. Once you've written your ManiaLink you can start writing your script between the tag `<script><!-- //code --></script>`. In this portion of code you can use the ManiaScript present in the `CSmMlScriptIngame`, `CMlControl` and `CMlPage` classes.
 
