@@ -20,7 +20,7 @@ taxonomy:
 ```
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <manialink version="3"/>
-<quad pos="0 0" z-index="1" size="24 24" image="file://ZoneFlags/Path/Login/<PLAYER LOGIN>/World|<CONTINENT>|<COUNTRY>" />
+<quad pos="0 0" z-index="1" size="24 24" image="file://ZoneFlags/Login/<PLAYER LOGIN>/country" />
 </manialink>
 ```
 ![](player_country.jpg)
