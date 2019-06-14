@@ -13,11 +13,11 @@ Once you have created or download a custom content it's normal to use it, to do 
 >>>>>> By default `[User Data]` is `C:\Users\***USERNAME***\Documents\ManiaPlanet` yet you can specify the location yourself when you install Maniaplanet or via the Maniaplanet Launcher (with the `Help` button).
 
 !!! **For skins & 3D models:**
-!!!* Trackmania² Canyon: `[User Data]/Skins/Vehicles/CanyonCar/`
-!!!* Trackmania² Valley: `[User Data]/Skins/Vehicles/ValleyCar/`
-!!!* Trackmania² Lagoon: `[User Data]/Skins/Vehicles/LagoonCar/`
-!!!* Trackmania² Stadium: `[User Data]/Skins/Vehicles/StadiumCar/`
-!!!* Shootmania Storm: `[User Data]/Skins/Vehicles/ArenaPlayer/`
+!!!* Trackmania² Canyon: `[User Data]/Skins/Models/CanyonCar/`
+!!!* Trackmania² Valley: `[User Data]/Skins/Models/ValleyCar/`
+!!!* Trackmania² Lagoon: `[User Data]/Skins/Models/LagoonCar/`
+!!!* Trackmania² Stadium: `[User Data]/Skins/Models/StadiumCar/`
+!!!* Shootmania Storm: `[User Data]/Skins/Models/ArenaPlayer/`
 
 !!! **For mods:**
 !!!* Trackmania² Canyon: `[User Data]/Skins/Canyon/Mod/`
