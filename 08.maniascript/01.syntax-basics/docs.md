@@ -229,7 +229,7 @@ If your code is simple enough to fit entirely in the main() function, you can om
 ## Directives
 At the top of a script, some special code may be required: those special lines start with the `#` character. Note that directives are *not* finished with a semicolon `;`
 
-* `#RequiredContext XXX`: the context of a script. This is meant to avoid trying to use an EditorPlugin as a GameMode, because it will always fail
+* `#RequireContext XXX`: the context of a script. This is meant to avoid trying to use an EditorPlugin as a GameMode, because it will always fail
 * `#Const XXX YYYY`: declares a constant named XXX, with value YYYY. This value can not be modified.
 * `#Setting XXX YYYY`: from the script's scope, `#Setting` behaves exactly as `#Const`. But this value can be modified from "outside" the script
 * `#Include "XXX" as YYYY`: loads a library or includes a file, and binds the functions to the namespace YYYY.
