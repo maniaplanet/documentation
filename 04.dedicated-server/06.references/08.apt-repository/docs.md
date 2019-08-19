@@ -27,6 +27,10 @@ Install our packages:
     
 This will install `maniaplanet-server`, `maniaplanet-server-trackmania` and `maniaplanet-server-shootmania`
 
+Then add yourself to the `games` group (wich is required) to run the server:
+
+	sudo usermod -a -G games $(whoami)
+
 ## Advanced usage
 
 If you plan to use only Trackmania or Shootmania server, you can use:
