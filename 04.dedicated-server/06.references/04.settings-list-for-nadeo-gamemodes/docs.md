@@ -54,6 +54,7 @@ taxonomy:
 |:-:|:-:|:-:|
 |**S_AllowRespawn**|True|Allow the players to respawn or not|
 |**S_RespawnBehaviour**|0|This setting control the behavior of the respawn button. It overrides the respawn behavior set by the game mode script and the S_AllowRespawn setting. It can takes one of the following values: 0 -> use the game mode value , 1 -> normal (respawn when pressing the button), 2 -> do nothing, 3 -> give up before first checkpoint, respawn after, 4 -> always give up|
+|**S_HideOpponents**|False|Do not display the opponents cars|
 |**S_UseLegacyXmlRpcCallbacks**|True|Turn on/off the legacy xmlrpc callbacks|
 
 ## RoundsBase
@@ -65,6 +66,7 @@ taxonomy:
 |**S_UseAlternateRules**|False|Use alternate rules|
 |**S_ForceLapsNb**|-1|Force number of laps (-1 to use the map default)|
 |**S_DisplayTimeDiff**|False|Display time difference at checkpoint|
+|**S_PointsRepartition**|""|Comma separated points distribution. eg: "10,6,4,3,2,1"
 
 ## Chase (+Matchmaking)
 
@@ -88,6 +90,18 @@ taxonomy:
 |**S_NbPlayersPerTeamMax**|3|Maximum number of players per team in matchmaking|
 |**S_NbPlayersPerTeamMin**|3|Minimum number of players per team in matchmaking|
 
+## Chase Attack
+
+|Setting|Default value|Description|
+|:-:|:-:|:-:|
+|**S_TimeLimit**|300|Time limit (0 to disable, -1 automatic based on author time)|
+|**S_ForceLapsNb**|-1|Number of Laps (-1 to use the map default, 0 to disable laps limit)|
+|**S_FinishTimeout**|5|Finish timeout (-1 automatic based on author time)|
+|**S_DisplayWarning**|True|Display a big red message in the middle of the screen of the player that crosses a checkpoint when it wasn't it's turn|
+|**S_WaypointEventDelay**|300|Waypoint event buffer delay|
+|**S_WarmUpNb**|0|Number of warm up|
+|**S_WarmUpDuration**|0|Duration of one warm up|
+
 ## Cup (+RoundsBase) (+Matchmaking)
 
 |Setting|Default value|Description|
@@ -108,6 +122,7 @@ taxonomy:
 |**S_FinishTimeout**|-1|Finish timeout (-1 automatic based on author time)|
 |**S_WarmUpNb**|0|Number of warm up|
 |**S_WarmUpDuration**|0|Duration of one warm up|
+|**S_DisableGiveUp**|False|Prevent players from giving up the race|
 
 ## Rounds (+RoundsBase)
 
@@ -127,6 +142,11 @@ taxonomy:
 |**S_PointsLimit**|5|Points limit|
 |**S_MaxPointsPerRound**|6|The maximum number of points attributed to the first player to cross the finish line|
 |**S_PointsGap**|1|The number of points lead a team must have to win the map|
+|**S_UseCustomPointsRepartition**|False|Use a custom points repartition defined with xmlrpc|
+|**S_CumulatePoints**|False|At the end of the round both teams win their players points|
+|**S_RoundsPerMap**|-1|Number of rounds to play on one map before going to the next one (0 or less to disable)|
+|**S_MapsPerMatch**|-1|Number of maps to play before finishing the match (0 or less to disable)|
+|**S_UseTieBreak**|True|Continue to play the map until the tie is broken|
 |**S_WarmUpNb**|0|Number of warm up|
 |**S_WarmUpDuration**|0|Duration of one warm up|
 |**S_NbPlayersPerTeamMax**|3|Maximum number of players per team in matchmaking|
@@ -139,6 +159,7 @@ taxonomy:
 |**S_TimeLimit**|300|Time limit|
 |**S_WarmUpNb**|0|Number of warm up|
 |**S_WarmUpDuration**|0|Duration of one warm up|
+|**S_ForceLapsNb**|0|Number of Laps (-1 to use the map default, 0 to disable laps limit)|
 
 # ShootMania
 
@@ -275,7 +296,30 @@ taxonomy:
 |**S_NbPlayersMin**|2|Minimum number of players in a matchmaking match|
 |**S_MapsPerMatch**|5|Number of maps before the end of the matchmaking match|
 
-## Royal Fun (+Matchmaking)
+## Royal Squad
+
+|Setting|Default value|Description|
+|:-:|:-:|:-:|
+|**S_UseRoundLimit**|False|Use the rounds limit to end match|
+|**S_MapPointsLimit**|400|Points to win a map|
+|**S_MapRoundsLimit**|5|Rounds after map ends|
+|**S_OffZoneActivationTime**|4|Tornado activation duration|
+|**S_OffZoneAutoStartTime**|90|Time before auto activation of the tornado|
+|**S_OffZoneTimeLimit**|70|Tornado shrink duration|
+|**S_OffZoneMaxSpeed**|1.|Maximum speed multiplier for the tornado|
+|**S_OffZoneMinRadius**|13.|Minimum size of the OffZone at the end|
+|**S_EndRoundTimeLimit**|60|Time limit after the tornado is completly shrunk|
+|**S_SpawnInterval**|0|Time between each wave of spawns|
+|**S_UseEarlyRespawn**|True|Allow early respawn|
+|**S_RegenPerHit**|100|Amount of armor restored when healing a teamate|
+|**S_ReloadRocketGain**|3.|Rocket reload speed multiplier|
+|**S_RocketAmmo**|4|Rocket ammo number|
+|**S_HitComboForBonus**|3|The numbers of hit recquired to rise the hit value|
+|**S_TeamCreationTimer**|30|Time for the team creation sequence|
+|**S_ResetScoreLeavers**|False|Reset the score of the players that left the game|
+|**S_DisableWidgets**|False|Disable the UI widgets (tops and players remaining)|
+
+## Royal XP (+Matchmaking)
 
 |Setting|Default value|Description|
 |:-:|:-:|:-:|
