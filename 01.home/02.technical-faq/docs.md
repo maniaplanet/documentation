@@ -8,17 +8,15 @@ taxonomy:
         - docs
 ---
 
-[TOC]
-
 # General
 
-## On which plateform Maniaplanet is available
+## On which platforms can I play Maniaplanet?
 
-Maniaplanet and Maniaplanet games (Shootmania Storm, Trackmania² Canyon, Trackmania² Valley, Trackmania² Lagoon and Trackmania² Stadium) are available exclusively on Microsoft Windows.
+Maniaplanet and its games (Shootmania Storm, Trackmania² Canyon, Trackmania² Valley, Trackmania² Lagoon, and Trackmania² Stadium) are available exclusively on Microsoft Windows.
 
-What are the system requirements for Maniaplanet:
+The system requirements for Maniaplanet are:
 
-* OS: Windows Vista SP2/7 SP1/8.1/10
+* OS: Windows Vista SP2, Windows 7 SP1, Windows 8.1, or Windows 10
 * CPU: Dual core from Intel or AMD at 2GHz
 * RAM: 2 GB
 * HD: 2GB free space
@@ -26,21 +24,21 @@ What are the system requirements for Maniaplanet:
 * Drivers: DirectX® 11.0 with video drivers
 
 ## I want to redownload the Maniaplanet client
-If you want to redownload the Maniaplanet client, go at this address: [https://www.maniaplanet.com/download](https://www.maniaplanet.com/download)
+[Click here](https://www.maniaplanet.com/download) to redownload the Maniaplanet client.
 
 ## I have lost my validation code
-You can generate a new validation code at this address: [https://www.maniaplanet.com/account/validation-code](https://www.maniaplanet.com/account/validation-code). You need to provide the key of one of your Maniaplanet title(s) to be able to generate a new one.
+[Click here](https://www.maniaplanet.com/account/validation-code) to generate a new validation code. You will need to provide the key of one of your Maniaplanet title(s) to be able to generate a new validation code.
 
 
 # Technical
 
 ## How to configure your firewall for use with Maniaplanet
-A software firewall is an application installed on the computer or provided by the Operating System that actively blocks communication between the computer and the internet. ManiaPlanet/TrackMania² Canyon requires TCP ports 80 & 443. Important note: Modifying your firewall settings may reduce the security of the computer it affects. Most of the dedicated servers use ports in the `2350-2450` and `3450-3550` range, for both **TCP** and **UDP**.
+A software firewall is an application installed on the computer or provided by the Operating System that actively blocks communication between the computer and the internet. Maniaplanet requires TCP ports 80 & 443. Important note: Modifying your firewall settings may reduce the security of the computer it affects. Most of the dedicated servers use ports in the `2350-2450` and `3450-3550` range, for both **TCP** and **UDP**.
 
-## Why do I have some difference time when i touch a command and the reaction ingame (i.e lag)?
-The primary cause of lag is to play on a server which is located very far of your location (for example you try to play in France on a server located in China). You will usually notice lag when you try to turn right or left and you have one second or more between your action and the result on screen, it's also visible when you see your car which . Another cause of lag is high latency.
+## Why are actions in-game delayed? (i.e lag)
+The primary cause of lag is due to playing on a server which is located very far away from your location (for example, when you try to play in France on a server located in China). You will usually notice lag when you try to turn right or left and you have one second or more between your action and the result on screen. Another cause of lag is high latency.
 
-Be also sure that your network configuration in the Maniaplanet launcher are correct `Configure -> Advanced -> Network -> Network upload & Network Download`.
+Also be sure that your network configuration in the Maniaplanet launcher is set correctly via `Configure -> Advanced -> Network -> Network upload & Network Download`.
 
 ## Network card issues.
 
