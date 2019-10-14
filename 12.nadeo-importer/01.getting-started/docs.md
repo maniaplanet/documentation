@@ -21,9 +21,9 @@ and so on.
 
 Current Release
 -
-importer : [http://files.maniaplanet.com/tools/NadeoImporter_2017_05_18.zip](http://files.maniaplanet.com/tools/NadeoImporter_2017_05_18.zip)
+importer : [http://files.v04.maniaplanet.com/setups/NadeoImporter_2019_10_09.zip](http://files.v04.maniaplanet.com/setups/NadeoImporter_2019_10_09.zip)
 
-sample files : [http://files.maniaplanet.com/tools/NadeoImporterSamples_2017_05_05.zip](http://files.maniaplanet.com/tools/NadeoImporterSamples_2017_05_05.zip)
+sample files : [http://files.v04.maniaplanet.com/setups/NadeoImporter_2019_10_09.zip](http://files.v04.maniaplanet.com/setups/NadeoImporter_2019_10_09.zip)
 
 
 the importer must be unzipped in the `{Maniaplanet_exe_dir}` folder (the same folder that contains `ManiaPlanet.exe`, typically `c:/program files/Maniaplanet` or `c:/Program files (x86)/Maniaplanet` )  
@@ -103,6 +103,7 @@ ChangeLog
 
 All releases
 
+- [http://files.v04.maniaplanet.com/setups/NadeoImporter_2019_10_09.zip](http://files.v04.maniaplanet.com/setups/NadeoImporter_2019_10_09.zip)
 - [http://files.maniaplanet.com/tools/NadeoImporter_2017_05_18.zip](http://files.maniaplanet.com/tools/NadeoImporter_2017_05_18.zip)
 - [http://files.maniaplanet.com/tools/NadeoImporter_2017_05_05.zip](http://files.maniaplanet.com/tools/NadeoImporter_2017_05_05.zip)
 - [http://files.maniaplanet.com/tools/NadeoImporter_2014_10_22.zip](http://files.maniaplanet.com/tools/NadeoImporter_2014_10_22.zip)
@@ -115,6 +116,7 @@ All releases
 
 sample files :
 
+- [http://files.v04.maniaplanet.com/setups/NadeoImporter_2019_10_09.zip](http://files.v04.maniaplanet.com/setups/NadeoImporter_2019_10_09.zip)
 - [http://files.maniaplanet.com/tools/NadeoImporterSamples_2017_05_05.zip](http://files.maniaplanet.com/tools/NadeoImporterSamples_2017_05_05.zip)
 - [http://files.maniaplanet.com/tools/NadeoImporterSamples_2014_04_09.zip](http://files.maniaplanet.com/tools/NadeoImporterSamples_2014_04_09.zip)
 - [http://files.maniaplanet.com/tools/NadeoImporterSamples2014.zip](http://files.maniaplanet.com/tools/NadeoImporterSamples2014.zip)
