@@ -1,5 +1,6 @@
 ---
 title: 'Trackmania and Shootmania games code of conduct'
+menu: 'Code of conduct'
 process:
     markdown: true
     twig: true
