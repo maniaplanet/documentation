@@ -31,34 +31,32 @@ When you play any of the Games, you must respect other Users and their user righ
 
 The following actions are forbidden, and can lead to a disciplinary action in accordance with the Disciplinary Policy outlined below.
 
--
-  - Harassing or bullying other players via verbal or written communications.
-  - Any language or content deemed illegal, dangerous, threatening, abusive, obscene, vulgar, defamatory, hateful, racist, sexist, ethically offensive or constituting harassment.
-  - Impersonation of any other player or Ubisoft employee.
-  - Any conduct which interrupts the general flow of Gameplay in the Game client, forum, or any other Ubisoft medium.
-  - Verbal or written abuse targeted toward a Ubisoft employee.
-  - Use of macros.
-  - Any attempt to edit, corrupt or change Games or server code. Any such behavior will result in the immediate cancellation of the Account, and may even give rise to personal liability and/or penal penalties.
-  - Use of third-party hacking, cheating or botting clients.
-  - The purchase of in Games benefits, including but not limited to &quot;MMR boosting services&quot; from unlicensed vendors, as well as the promotion of such services.
-  - Exploitation of any new or known bug or glitch for personal gain is strictly forbidden and may result in character rollback, Account suspension or revocation.
+- Harassing or bullying other players via verbal or written communications.
+- Any language or content deemed illegal, dangerous, threatening, abusive, obscene, vulgar, defamatory, hateful, racist, sexist, ethically offensive or constituting harassment.
+- Impersonation of any other player or Ubisoft employee.
+- Any conduct which interrupts the general flow of Gameplay in the Game client, forum, or any other Ubisoft medium.
+- Verbal or written abuse targeted toward a Ubisoft employee.
+- Use of macros.
+- Any attempt to edit, corrupt or change Games or server code. Any such behavior will result in the immediate cancellation of the Account, and may even give rise to personal liability and/or penal penalties.
+- Use of third-party hacking, cheating or botting clients.
+- The purchase of in Games benefits, including but not limited to &quot;MMR boosting services&quot; from unlicensed vendors, as well as the promotion of such services.
+- Exploitation of any new or known bug or glitch for personal gain is strictly forbidden and may result in character rollback, Account suspension or revocation.
 
 **USER NAMES**
 
 The following rules clarify the types of names that you may not use:
 
--
-  - You may not use a name that is contrary to the Code of Conduct. This includes the use of names of a hateful, racist, defamatory, ethnically offensive, obscene, vulgar or sexually explicit nature, as well as any other offensive wording.
-  - You may not use names that lead to the harassment or slander of other Users.
-  - You may not use the name of any Ubisoft employee.
-  - You may not use a name of a character, object or product covered by copyright or trademark.
-  - You may not use a name from popular culture or the media.
-  - You may not use a name with a religious or historical connotation.
-  - You may not use a name linked to a terrorist organization or activity.
-  - Ubisoft strictly reserves the right to use the names linked to the Games license.
-  - You may not use a name that refers to an illness, medicine, drug or alcohol.
-  - You may not use any name that breaks any of the aforementioned rules via the association of the first name and surname.
-  - You may not use a name containing spelling mistakes or written in such a way as to break one of the aforementioned rules.
+- You may not use a name that is contrary to the Code of Conduct. This includes the use of names of a hateful, racist, defamatory, ethnically offensive, obscene, vulgar or sexually explicit nature, as well as any other offensive wording.
+- You may not use names that lead to the harassment or slander of other Users.
+- You may not use the name of any Ubisoft employee.
+- You may not use a name of a character, object or product covered by copyright or trademark.
+- You may not use a name from popular culture or the media.
+- You may not use a name with a religious or historical connotation.
+- You may not use a name linked to a terrorist organization or activity.
+- Ubisoft strictly reserves the right to use the names linked to the Games license.
+- You may not use a name that refers to an illness, medicine, drug or alcohol.
+- You may not use any name that breaks any of the aforementioned rules via the association of the first name and surname.
+- You may not use a name containing spelling mistakes or written in such a way as to break one of the aforementioned rules.
 
 ### DISCIPLINARY POLICY:
 
@@ -66,12 +64,11 @@ In the event of a Code of Conduct violation, disciplinary action will be taken. 
 
 Below are examples of behavior that could lead to your Account being banned from playing online or restricting your access in other ways from the Games:
 
--
-  - Cheating / Modding / Hacking: Player is running a modified or otherwise unauthorized version of the Game client or a third party software which provides any sort of unfair advantage or causing detriment to other players&#39; experience.
-  - Offensive Language or Behavior / Threats: Posting or publishing (public forums, private chats or VOIP) any language or content that is in violation of this Code of Conduct.
-  - Harassment: Harassing or serious bullying other players via verbal or written communications in the in-Game chat, and outside the Games (public forum).
-  - Advertising / Spamming: Disrupting the conversation flow for personal or commercial purposes with repeated posting of a similar nature.
-  - Phishing / Scamming: Any attempt to fraud or mislead other players to gain personal or financial advantage, including but not limited to: personal information, credit cards etc.
+- Cheating / Modding / Hacking: Player is running a modified or otherwise unauthorized version of the Game client or a third party software which provides any sort of unfair advantage or causing detriment to other players&#39; experience.
+- Offensive Language or Behavior / Threats: Posting or publishing (public forums, private chats or VOIP) any language or content that is in violation of this Code of Conduct.
+- Harassment: Harassing or serious bullying other players via verbal or written communications in the in-Game chat, and outside the Games (public forum).
+- Advertising / Spamming: Disrupting the conversation flow for personal or commercial purposes with repeated posting of a similar nature.
+- Phishing / Scamming: Any attempt to fraud or mislead other players to gain personal or financial advantage, including but not limited to: personal information, credit cards etc.
 
 ### DISPUTING ACCOUNT SANCTIONS:
 
