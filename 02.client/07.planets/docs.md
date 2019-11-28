@@ -17,7 +17,7 @@ You can see your current total of Planets on the ManiaPlanet navigation toolbar 
 ## Gain Planets
 There is many ways to gain Planets in ManiaPlanet:
 
-* 20 Planets at the first connexion of the day (per environment owned, i.e: Trackmania² Canyon, Trackmania² Valley, Trackmania² Lagoon, Trackmania² Stadium, Shootmania Storm)
+* 20 Planets at the first connexion of the day (per environment owned, i.e: Trackmania² Canyon, Trackmania² Valley, Trackmania² Lagoon, , Shootmania Storm) and 10 planets for Trackmania² Stadium
 * 10, 20 or/and 30 Planets following the medals that you earn in official mode in the solo campaigns of the environments (Trackmania² Canyon, Trackmania² Valley, Trackmania² Lagoon, Trackmania² Stadium)
 * 100 Planets when you win 1000 Ladder Points
 * Bonus month (20 Planets by title/day but it's not implemented yet)
