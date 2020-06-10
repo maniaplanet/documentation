@@ -7,9 +7,9 @@ taxonomy:
 
 [TOC]
 
-ManiaLinks are the "web pages" of ManiaPlanet.
+ManiaLinks are the "web pages" of ManiaPlanet. It's sort of like HTML, but different. They can exist in multiple different contexts, for example in the Manialink browser, in servers through XMLRPC, in scripted gamemodes, etc.
 
-ManiaLinks also refer to a short alias for a web page (like a domain name) in Maniaplanet. You can register for one on the [on the Player page](https://prod.live.maniaplanet.com/account/manialinks).
+ManiaLinks also refer to a short alias for a web page (like a domain name) in Maniaplanet. You can register one on the [on the Player page](https://prod.live.maniaplanet.com/account/manialinks).
 
 ## The structure of Manialinks
 ManiaLinks are very similar to the XML language except it's using specific tags. Manialink tag indicate what we're going to see on the screen. 
@@ -37,8 +37,20 @@ The manialink had several versions during its life. From Maniaplanet 4, you shou
 This line allow to write a text. In that case, it'll be written Hello World. As there is no parameters added in this line, the text will be centered in height and the letter "H" will be centered on the width. `<label>` is called a tag in Manialink, like in XML.
 ```<label text="Hello World!" />```
 
-
 This means that we'll finish our ManiaLink page.```</manialink>```
+
+## Testing your Manialink
+It's easy to test Manialinks locally in the Manialink browser without having to host a webserver. Simply place your XML file in your user folder (typically located at `C:/Users/Hylis/Documents/Maniaplanet/`). The best place to put it is in `Media/Manialinks`.
+
+For example, if you have a Manialink `Test.xml` that you want to quickly test, put it in `C:/Users/Hylis/Documents/Maniaplanet/Media/Manialinks/Test.xml`.
+
+Then, in Maniaplanet, open the Manialink browser by clicking this button:
+
+![](browser.png)
+
+And typing the following URL into the URL bar: `file://Media/Manialinks/Test.xml`
+
+![](urlbar.png)
 
 ## Place an element in Manialink
 Let see now the cooordinates to place the elements on our page.
