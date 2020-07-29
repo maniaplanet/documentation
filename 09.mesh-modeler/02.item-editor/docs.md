@@ -6,24 +6,22 @@ taxonomy:
 visible: true
 ---
 
-[TOC]
-
-The Item Editor allows you to edit items (.Item.Gbx files) that can be placed in maps. It can be accessed directly from the *Title tools* menu, but it is recommended to open it from the map editor, via the *Item Edition* panel, at the left bottom corner of the screen in Item mode.
+The Item Editor allows you to edit items (`.Item.Gbx` files) that can be placed in maps. It can be accessed directly from the *Title tools* menu, but it is recommended to open it from the map editor, via the *Item Edition* panel, at the left bottom corner of the screen in Item mode.
 
 Let's go through the list of parameters you can set.
 
 
 ## Pivots
 
-When you place an item in the map, the mouse cursor is aiming at a particular point in the map. But how to place the item around this point? If your item is a cube, should the editor place the item so that the cursor point is at the center of the cube ? Or the center of the bottom face? Or one corner of the cube?
+When you place an item in the map, the mouse cursor is aiming at a particular point in the map. But how should the item be placed compared to this point? If your item is a cube, should the editor place the item so that the cursor point is at the center of the cube ? Or the center of the bottom face? Or one corner of the cube?
 
 Pivots are here to answer that question: a pivot is a point of the item that will coincide with the point of the map that is aimed by the cursor.
 
-An item can have multiple pivots. In that case, the map editor might choose automatically one pivot according to the context, or you might be able to press the 'Q' key ('A' with azerty keyboards) to cycle through the pivots of the current item: see the placement parameter *Switch pivot manually* for more information.
+An item can have multiple pivots. In that case, the map editor might choose automatically one pivot according to the context, or you might be able to press the `Q` key (`A` with azerty keyboards) to cycle through the pivots of the current item: see the placement parameter *Switch pivot manually* for more information.
 
 If an item has no pivot, the map editor will consider that it has one pivot at the coordinate (0,0,0).
 
-Note: Pivots can also be used as magnets to help align items when you place them on each other: see *Pivot Snap Distance* for more information.
+>>>>> Pivots can also be used as magnets to help align items when you place them on each other: see *Pivot Snap Distance* for more information.
 
 
 ## Placement parameters
@@ -44,15 +42,15 @@ They are numerous and sometimes a bit difficult to understand. Just leave the de
 
 ### Advanced placement parameters
 
-**Switch pivot manually** If activated, the only way to change the pivot to use will be the 'Q' key ('A' with azerty keyboard). If deactivated, the map editor will automatically change the pivot according to the direction of the surface you are aiming with the cursor (for example it may select the lowest pivot if you are aiming at the floor, and the highest pivot if you are aiming at a ceiling). If the editor selects several pivot candidates, you can cycle through them with the 'Q' key.
+**Switch pivot manually** If activated, the only way to change the pivot to use will be the `Q` key (`A` with azerty keyboard). If deactivated, the map editor will automatically change the pivot according to the direction of the surface you are aiming with the cursor (for example it may select the lowest pivot if you are aiming at the floor, and the highest pivot if you are aiming at a ceiling). If the editor selects several pivot candidates, you can cycle through them with the `Q` key.
 
-**Fly Offset** Offsets vertically the invisible horizontal planes on which the cursor moves when it is in the air. For example, if the *Fly Step* parameter is 4 meters and the the *Fly Offset* is 0 meter, when you scroll with the mouse wheel, the cursor will move to the coordinates y = 0, 4, 8, 12, 16... m. But if you set the *Fly Offset* to 1 meter, then the cursor will be placed at y = 1, 5, 9, 13, 17... m. This parameter has no effect if *Fly Step* is 0.
+**Fly Offset** Offsets vertically the invisible horizontal planes on which the cursor moves when it is in the air. For example, if the *Fly Step* parameter is 4 meters and the the *Fly Offset* is 0 meter, when you scroll with the mouse wheel, the cursor will move to the coordinates `y = 0, 4, 8, 12, 16... m`. But if you set the *Fly Offset* to 1 meter, then the cursor will be placed at `y = 1, 5, 9, 13, 17... m`. This parameter has no effect if *Fly Step* is 0.
 
 **Grid Horizontal Offset** It is recommended to leave this parameter to 0, unless you really know what you are doing. It offsets the horizontal grid by this amount of meters, in both horizontal axis (x and z). The only value that might be useful sometimes would be half of *Grid Horizontal Size*, but even in that case it is probably a better idea to divide *Grid Horizontal Size* by 2 instead.
 
 **Grid Vertical Size** If greater than 0, the item will be snapped on the vertical axis, and the value is the step of this snapping in meters. In other words, it sets the snapping along the y axis, just as the *Grid Horizontal Size* sets the snapping along the x and z axis. The difference with *Fly Step* is subtle: unlike *Fly Step*, *Grid Vertical Size* does not enable the item to fly. For instance, it can be used for an item which is meant to be placed on walls, to limit the available heights and then make it easy to align them. But if your item's *Fly Step* and *Grid Vertical Size* are both greater than 0, it is recommended to set the same value on both parameters.
 
-**Grid Vertical Offset** No effect if *Grid Vertical Size* equals 0. Otherwise, it offsets the available heights by this value in meters. For example, if *Grid Vertical Size* is 8 and *Grid Vertical Offset* is 2, the available heights are y = 2, 10, 18, 26, 34... m. If the item's *Fly Offset* is different from zero, it is recommended to put the same value in *Grid Vertical Offset*.
+**Grid Vertical Offset** No effect if *Grid Vertical Size* equals 0. Otherwise, it offsets the available heights by this value in meters. For example, if *Grid Vertical Size* is 8 and *Grid Vertical Offset* is 2, the available heights are `y = 2, 10, 18, 26, 34... m`. If the item's *Fly Offset* is different from zero, it is recommended to put the same value in *Grid Vertical Offset*.
 
 **Cube Size** Obsolete feature, it will disappear in a future update.
 
@@ -74,7 +72,7 @@ When you are already in Item mode in the Map Editor, you can activate the Free i
 
 ## Mesh
 
-Click on the wrench icon to edit the crystal embedded in the item file. This will open the Mesh Modeler.
+Click on the wrench icon to edit the *crystal* embedded in the item file. This will open the Mesh Modeler.
 
 
 ## Icon
@@ -86,5 +84,4 @@ Set the icon that will be displayed in the inventory of the map editor. You have
 In both case the result will be a 64x64 image embedded in the item file.
 
 If you import an image with another resolution it will be automatically scaled to 64x64.
-
 

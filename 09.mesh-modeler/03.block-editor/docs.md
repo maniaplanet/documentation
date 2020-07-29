@@ -6,9 +6,7 @@ taxonomy:
 visible: true
 ---
 
-[TOC]
-
-The Block Editor allows you to edit custom blocks (.Block.Gbx files) that can be placed in maps. It can be accessed only from the map editor, via the *Custom blocks* panel, at the left bottom corner of the screen in Block mode.
+The Block Editor allows you to edit custom blocks (`.Block.Gbx` files) that can be placed in maps. It can be accessed only from the map editor, via the *Custom blocks* panel, at the left bottom corner of the screen in Block mode.
 
 We will go through the list of parameters you can set, after a quick introduction about the difference between custom blocks and Nadeo blocks.
 
@@ -38,6 +36,6 @@ Works exactly as in the Item Editor.
 
 Add one element in this list for each variant you want to customize. You must define:
 - which variant is overriden: a variant is represented by a *Variant type* (generally *Ground* or *Air*), a *Variant group* (an integer) and a *Random variant* (another integer). Tick the option *Show original variant* to see the original geometry of the variant you are about to override.
-- which crystal will replace the original geometry for this variant. Click on the button at the end of the parameter line (with a *New* or *Edit* icon) to edit this embedded crystal in the Mesh Modeler.
+- which *crystal* will replace the original geometry for this variant. Click on the button at the end of the parameter line (with a *New* or *Edit* icon) to edit this embedded *crystal* in the Mesh Modeler.
 
-Note: When you first create a line of customized variant, it is marked as *(empty)*: it means that there is no crystal yet, and then the map editor will still use the original geometry for this variant.
+>>>>> When you first create a line of customized variant, it is marked as *(empty)*: it means that there is no *crystal* yet, and then the map editor will still use the original geometry for this variant.
