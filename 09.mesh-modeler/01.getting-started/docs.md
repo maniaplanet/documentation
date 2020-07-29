@@ -16,4 +16,4 @@ So here is the recommended way to use the Mesh Modeler:
 - those options will take you to the Item editor or the Block editor, where you can set a few parameters, including the geometry of your item or block (*Mesh* in Item editor, *Customized variants* in Block editor)
 - if you try to edit this geometry, you will switch to the Mesh Modeler, which has all the tools you need to build 3d models
 - when you save your work in the Mesh Modeler opened from the Item Editor or the Block Editor, it will not save a `.Crystal.Gbx` file but a `.Item.Gbx` or `.Block.Gbx` file.
-- when you go back to the map editor, you can find your item or custom block in the corresponding inventory (in Item mode or Block mode) and place it in the map.
+- when you go back to the Map Editor, you can find your item or custom block in the corresponding inventory (in Item mode or Block mode) and place it in the map.
