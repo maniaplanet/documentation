@@ -4,6 +4,7 @@ taxonomy:
     category:
         - docs
 ---
+Edited and fixed by BestNoob
 
 !!! Tutorial from ***xrayjay*** from this address: [http://www.maniapark.com/forum/viewtopic.php?f=85&t=22289](http://www.maniapark.com/forum/viewtopic.php?f=85&t=22289)
 
@@ -15,8 +16,27 @@ I will explain very quickly what are the specifications and how to save them in 
 
 ## What you need
 
-* a graphic manipulation software (ps, gimp etc.)
+* a graphic manipulation software (Adobe Photoshop (PS), Gimp etc.)
+Free & Open Source: https://www.gimp.org/
+Free Trial: https://www.adobe.com/products/photoshop.html
+
 * a dds converter which allows you to set the specific output format (like the nvidia dds tools)
+For the Gimp .dds plugin search google.
+PS Plugin: https://developer.nvidia.com/nvidia-texture-tools-adobe-photoshop
+
+
+## Compare files with originals
+
+Sometimes it is useful to see what nadeo used, so you need the original files.
+They are stored as .zip file in C:\ProgramData\ManiaPlanet\PacksCache
+You need TMValley_HD.zip or TMValley.zip and the Updated files e.g. for Valley,Stadium,Canyon...
+Unzip them at the destination of your choice.
+
+!Info! You have to download the Title in TM before the files are stored there.
+
+I recommend MediaInfo Lite to view Data informations. This tool support a lot file formats.
+http://codecguide.com/download_other.htm
+
 
 ## File specifications
 For selfmade textures on objects we need _TDNS_ textures:
@@ -29,11 +49,13 @@ For selfmade textures on objects we need _TDNS_ textures:
 
 ![](http://trackmania-carpark.com/imagespark/up4/52cea5bd6a098.jpg)
 
-* DXT1 RGB 4bpp no alpha
+* DXT1 RGB 4bpp no alpha (care exceptions)
 * 2D texture
 * Generate MIP maps
 
-This is the base texture which is visible, no alpha channel here! Save as `filename_D`.
+This is the base texture which is visible, normally there is no alpha channel. Save as `filename_D`.
+To check the exceptions open the original file in Photoshop or Gimp and check for alpha channel.
+If there is a alpha channel you need it also for your modified/created file !
 
 ## The NormalMap - filename_N
 See this tutorial how to do this on this **[page](../how-to-make-a-normalmap)**.
