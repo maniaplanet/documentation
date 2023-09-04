@@ -134,6 +134,8 @@ This isn't a software limit, you're free to create maps way heavier than that, b
 
 * BACKSPACE: Delete all blocks placed in this mode. Landscape and items are not affected.
 * X + left mouse click: deletes block at the cursor position
+* Right mouse click: clicking any block folder will collapse the view to that one. Left mouse click the arrow on the left of the folders will bring the view back to show all block folders
+* Shift + Left mouse click: after skinning a sign, you can use this shortcut to quickly apply the same sign to additional sign blocks
 
 ## Item mode
 
@@ -142,11 +144,13 @@ This isn't a software limit, you're free to create maps way heavier than that, b
 * X + left mouse click: deletes block at the cursor position
 * Arrow keys (not those on the Numeric pad!), as well as Numpad- and Numpad+: rotate item along x, y and z axes. Some items only allow rotation along vertical axis.
 * Numpad/: reset item orientation to default
+* Right mouse click: clicking any item folder will collapse the view to that one. Left mouse click the arrow on the left of the folders will bring the view back to show all item folders
 
 ## Macroblock mode
 
 * BACKSPACE: Delete all blocks in the selection
 * Ctrl + left mouse click: selects block type at the cursor position
+* Right mouse click: clicking any macroblock folder will collapse the view to that one. Left mouse click the arrow on the left of the folders will bring the view back to show all macroblock folders
 
 ## Test Mode
 
